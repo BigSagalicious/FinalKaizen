@@ -96,7 +96,7 @@
             this.label28 = new System.Windows.Forms.Label();
             this.textBox27 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.listViewEquip = new System.Windows.Forms.ListView();
             this.tabDisplay = new System.Windows.Forms.TabPage();
             this.textBox26 = new System.Windows.Forms.TextBox();
@@ -133,7 +133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.tabDisplay.SuspendLayout();
             this.tabSearch.SuspendLayout();
             this.tabCustomer.SuspendLayout();
@@ -540,6 +540,7 @@
             this.txtAddTel.Name = "txtAddTel";
             this.txtAddTel.Size = new System.Drawing.Size(394, 25);
             this.txtAddTel.TabIndex = 53;
+            this.txtAddTel.TextChanged += new System.EventHandler(this.txtAddTel_TextChanged);
             // 
             // label1
             // 
@@ -558,6 +559,7 @@
             this.txtAddEmail.Name = "txtAddEmail";
             this.txtAddEmail.Size = new System.Drawing.Size(394, 25);
             this.txtAddEmail.TabIndex = 51;
+            this.txtAddEmail.TextChanged += new System.EventHandler(this.txtAddEmail_TextChanged);
             // 
             // label2
             // 
@@ -576,6 +578,7 @@
             this.txtAddPostcode.Name = "txtAddPostcode";
             this.txtAddPostcode.Size = new System.Drawing.Size(394, 25);
             this.txtAddPostcode.TabIndex = 49;
+            this.txtAddPostcode.TextChanged += new System.EventHandler(this.txtAddPostcode_TextChanged);
             // 
             // label3
             // 
@@ -605,6 +608,7 @@
             this.txtAddCounty.Name = "txtAddCounty";
             this.txtAddCounty.Size = new System.Drawing.Size(394, 25);
             this.txtAddCounty.TabIndex = 47;
+            this.txtAddCounty.TextChanged += new System.EventHandler(this.txtAddCounty_TextChanged);
             // 
             // errP
             // 
@@ -616,6 +620,7 @@
             this.txtAddTown.Name = "txtAddTown";
             this.txtAddTown.Size = new System.Drawing.Size(394, 25);
             this.txtAddTown.TabIndex = 45;
+            this.txtAddTown.TextChanged += new System.EventHandler(this.txtAddTown_TextChanged);
             // 
             // label5
             // 
@@ -634,6 +639,7 @@
             this.txtAddAddress.Name = "txtAddAddress";
             this.txtAddAddress.Size = new System.Drawing.Size(394, 25);
             this.txtAddAddress.TabIndex = 43;
+            this.txtAddAddress.TextChanged += new System.EventHandler(this.txtAddAddress_TextChanged);
             // 
             // label6
             // 
@@ -652,6 +658,7 @@
             this.txtAddSurname.Name = "txtAddSurname";
             this.txtAddSurname.Size = new System.Drawing.Size(143, 25);
             this.txtAddSurname.TabIndex = 41;
+            this.txtAddSurname.TextChanged += new System.EventHandler(this.txtAddSurname_TextChanged);
             // 
             // label25
             // 
@@ -670,6 +677,7 @@
             this.txtAddForename.Name = "txtAddForename";
             this.txtAddForename.Size = new System.Drawing.Size(143, 25);
             this.txtAddForename.TabIndex = 39;
+            this.txtAddForename.TextChanged += new System.EventHandler(this.txtAddForename_TextChanged);
             // 
             // label29
             // 
@@ -767,13 +775,13 @@
             this.label27.TabIndex = 50;
             this.label27.Text = "E-Mail";
             // 
-            // dataGridView1
+            // dgvCustomers
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 157);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(551, 413);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomers.Location = new System.Drawing.Point(21, 112);
+            this.dgvCustomers.Name = "dgvCustomers";
+            this.dgvCustomers.Size = new System.Drawing.Size(551, 413);
+            this.dgvCustomers.TabIndex = 1;
             // 
             // listViewEquip
             // 
@@ -787,7 +795,7 @@
             // tabDisplay
             // 
             this.tabDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(103)))), ((int)(((byte)(147)))));
-            this.tabDisplay.Controls.Add(this.dataGridView1);
+            this.tabDisplay.Controls.Add(this.dgvCustomers);
             this.tabDisplay.Controls.Add(this.listViewEquip);
             this.tabDisplay.Location = new System.Drawing.Point(4, 29);
             this.tabDisplay.Name = "tabDisplay";
@@ -1068,6 +1076,7 @@
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // tabEdit
             // 
@@ -1170,7 +1179,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.tabDisplay.ResumeLayout(false);
             this.tabSearch.ResumeLayout(false);
             this.tabSearch.PerformLayout();
@@ -1237,7 +1246,7 @@
         private System.Windows.Forms.ErrorProvider errP;
         private System.Windows.Forms.TabControl tabCustomer;
         private System.Windows.Forms.TabPage tabDisplay;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCustomers;
         private System.Windows.Forms.ListView listViewEquip;
         private System.Windows.Forms.TabPage tabSearch;
         private System.Windows.Forms.PictureBox pBIcon;

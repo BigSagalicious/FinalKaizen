@@ -112,6 +112,9 @@
     <Compile Include="frmSuppliers.Designer.cs">
       <DependentUpon>frmSuppliers.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyCustomer.cs" />
+    <Compile Include="MyException.cs" />
+    <Compile Include="MyValidation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCustomers.resx">
