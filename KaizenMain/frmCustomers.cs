@@ -39,17 +39,21 @@ namespace KaizenMain
                 {
                     case 0:
                         {
-                            dsKaizen.Tables["Customer"].Clear();
-                            daCustomer.Fill(dsKaizen, "Customer");
+                            //dsKaizen.Tables["Customer"].Clear();
+                            //daCustomer.Fill(dsKaizen, "Customer");
 
                             break;
                         }
                     case 1:
                         {
+                            break;
+                        }
+                    case 2:
+                        {
                             int noRows = dsKaizen.Tables["Customer"].Rows.Count;
 
                             if (noRows == 0)
-                                lblAddCustNo.Text = "10000";
+                                lblAdCustNo.Text = "10000";
                             else
                             {
                                 getNumber(noRows);
@@ -60,7 +64,7 @@ namespace KaizenMain
                             break;
 
                         }
-                    case 2:
+                    case 3:
                         {
                             if (custNoSelected == 0)
                             {
@@ -85,8 +89,14 @@ namespace KaizenMain
 
                             }
 
+                          
 
 
+
+                        }
+                    case 4:
+                        {
+                            break;
                         }
 
 
@@ -189,25 +199,16 @@ namespace KaizenMain
             errP.Clear();
             try
             {
-                myCustomer.CustomerNo = Convert.ToInt32(lblAddCustNo.Text.Trim());
+                myCustomer.CustomerNo = Convert.ToInt32(lblAdCustNo.Text.Trim());
 
             }
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(lblAddCustNo, MyEx.toString());
+                errP.SetError(lblID, MyEx.toString());
             }
 
-            try
-            {
-                myCustomer.Title = cmbAdTitle.Text.Trim();
-            }
-
-            catch (MyException MyEx)
-            {
-                ok = false;
-                errP.SetError(cmbAdTitle, MyEx.toString());
-            }
+            
             try
             {
                 myCustomer.Surname = txtAddSurname.Text.Trim();
@@ -221,77 +222,76 @@ namespace KaizenMain
 
             try
             {
-                myCustomer.Forename = txtAdFore.Text.Trim();
+                myCustomer.Forename = txtAddForename.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtAdFore, MyEx.toString());
+                errP.SetError(txtAddForename, MyEx.toString());
             }
 
             try
             {
-                myCustomer.Street = txtAdStreet.Text.Trim();
+                myCustomer.Street = txtAddAddress.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtAdStreet, MyEx.toString());
+                errP.SetError(txtAddAddress, MyEx.toString());
             }
 
             try
             {
-                myCustomer.Town = txtAdTown.Text.Trim();
+                myCustomer.Town = txtAddTown.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtAdTown, MyEx.toString());
+                errP.SetError(txtAddTown, MyEx.toString());
             }
 
             try
             {
-                myCustomer.County = txtAdCounty.Text.Trim();
+                myCustomer.County = txtAddCounty.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtAdCounty, MyEx.toString());
+                errP.SetError(txtAddCounty, MyEx.toString());
             }
 
             try
             {
-                myCustomer.Postcode = txtAdPost.Text.Trim();
+                myCustomer.Postcode = txtAddPostcode.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtAdPost, MyEx.toString());
+                errP.SetError(txtAddPostcode, MyEx.toString());
             }
 
             try
             {
-                myCustomer.TelNo = txtAdTel.Text.Trim();
+                myCustomer.TelNo = txtAddTel.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtAdTel, MyEx.toString());
+                errP.SetError(txtAddTel, MyEx.toString());
             }
 
             try
             {
                 if (ok)
                 {
-                    drCustomer = dsInTheDogHouse.Tables["Customer"].NewRow();
+                    drCustomer = dsKaizen.Tables["Customer"].NewRow();
                     drCustomer["CustomerNo"] = myCustomer.CustomerNo;
-                    drCustomer["Title"] = myCustomer.Title;
                     drCustomer["Forename"] = myCustomer.Forename;
                     drCustomer["Surname"] = myCustomer.Surname;
                     drCustomer["Street"] = myCustomer.Street;
@@ -300,8 +300,8 @@ namespace KaizenMain
                     drCustomer["Postcode"] = myCustomer.Postcode;
                     drCustomer["TelNo"] = myCustomer.TelNo;
 
-                    dsInTheDogHouse.Tables["Customer"].Rows.Add(drCustomer);
-                    daCustomer.Update(dsInTheDogHouse, "Customer");
+                    dsKaizen.Tables["Customer"].Rows.Add(drCustomer);
+                    daCustomer.Update(dsKaizen, "Customer");
 
                     MessageBox.Show("Customer Added");
 
@@ -309,7 +309,7 @@ namespace KaizenMain
                     {
                         clearAddForm();
 
-                        getNumber(dsInTheDogHouse.Tables["Customer"].Rows.Count);
+                        getNumber(dsKaizen.Tables["Customer"].Rows.Count);
                     }
                     else
                         tabCustomer.SelectedIndex = 0;
@@ -337,7 +337,28 @@ namespace KaizenMain
             txtAddEmail.Clear();
 
         }
+
+
+        private void Customer_Load(object sender, EventArgs e)
+        {
+            connStr = @"Data Source = .\SQLEXPRESS; Initial Catalog = Kaizen;Integrated Security = true ";
+            //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+            sqlCustomer = @"select * from Customer";
+            daCustomer = new SqlDataAdapter(sqlCustomer, connStr);
+            cmdBCustomer = new SqlCommandBuilder(daCustomer);
+
+            daCustomer.FillSchema(dsKaizen, SchemaType.Source, "Customer");
+            daCustomer.Fill(dsKaizen, "Customer");
+            dgvCustomers.DataSource = dsKaizen.Tables["Customer"];
+            dgvCustomers.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
+            tabCustomer.SelectedIndex = 1;
+            tabCustomer.SelectedIndex = 0;
+
+
+
+        }
     }
 }
 
-}
+

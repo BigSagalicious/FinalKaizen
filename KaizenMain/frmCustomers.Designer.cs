@@ -128,6 +128,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.txtEdEmail = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lblAdCustNo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -1026,6 +1028,8 @@
             // tabAdd
             // 
             this.tabAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.tabAdd.Controls.Add(this.lblAdCustNo);
+            this.tabAdd.Controls.Add(this.lblID);
             this.tabAdd.Controls.Add(this.lblAddCustNo);
             this.tabAdd.Controls.Add(this.pictureBox1);
             this.tabAdd.Controls.Add(this.txtAddTel);
@@ -1165,6 +1169,23 @@
             this.label18.TabIndex = 68;
             this.label18.Text = "E-Mail";
             // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(152, 45);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(0, 18);
+            this.lblID.TabIndex = 57;
+            // 
+            // lblAdCustNo
+            // 
+            this.lblAdCustNo.AutoSize = true;
+            this.lblAdCustNo.Location = new System.Drawing.Point(166, 45);
+            this.lblAdCustNo.Name = "lblAdCustNo";
+            this.lblAdCustNo.Size = new System.Drawing.Size(12, 18);
+            this.lblAdCustNo.TabIndex = 58;
+            this.lblAdCustNo.Text = "-";
+            // 
             // frmCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1293,5 +1314,7 @@
         private System.Windows.Forms.TextBox txtEdEmail;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtEdPostcode;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Label lblAdCustNo;
     }
 }

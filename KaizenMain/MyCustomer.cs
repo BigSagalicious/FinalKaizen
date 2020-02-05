@@ -8,13 +8,12 @@ namespace KaizenMain
 {
     class MyCustomer
     {
-        private int customerNo;
         private String surname, forename, street, town, county, postcode, telNo, email;
 
         public MyCustomer()
         {
 
-            this.customerNo = 0;
+            this.CustomerNo = 0;
             this.email = "";this.surname = ""; this.forename = ""; this.street = ""; this.town = ""; this.county = "";
             this.postcode = ""; this.telNo = "";
         }
@@ -22,19 +21,15 @@ namespace KaizenMain
         public MyCustomer(int customerNo, string title, string surname, string forename, string street, string town, string county,
            string postcode, string telNo, string email)
         {
-            this.customerNo = customerNo;
+            this.CustomerNo = customerNo;
             this.surname = surname; this.forename = forename; this.street = street; this.town = town; this.county = county;
             this.postcode = postcode; this.telNo = telNo; this.email = email;
 
         }
 
-        public int CustomerNo
-        {
-            get { return customerNo; }
-            set { customerNo = value; }
-        }
+        public int CustomerNo { get; set; }
 
-       
+
 
         public string Forename
         {
