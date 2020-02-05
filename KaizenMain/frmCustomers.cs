@@ -16,5 +16,10 @@ namespace KaizenMain
         {
             InitializeComponent();
         }
+
+        private void tabCustomer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
