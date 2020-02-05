@@ -122,7 +122,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.tabEdit = new System.Windows.Forms.TabPage();
-            this.lblEdCustNo = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtEdTelNo = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -1085,7 +1084,6 @@
             // tabEdit
             // 
             this.tabEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
-            this.tabEdit.Controls.Add(this.lblEdCustNo);
             this.tabEdit.Controls.Add(this.pictureBox2);
             this.tabEdit.Controls.Add(this.txtEdTelNo);
             this.tabEdit.Controls.Add(this.label17);
@@ -1112,15 +1110,6 @@
             this.tabEdit.Size = new System.Drawing.Size(731, 563);
             this.tabEdit.TabIndex = 3;
             this.tabEdit.Text = "EDIT";
-            // 
-            // lblEdCustNo
-            // 
-            this.lblEdCustNo.AutoSize = true;
-            this.lblEdCustNo.Location = new System.Drawing.Point(147, 29);
-            this.lblEdCustNo.Name = "lblEdCustNo";
-            this.lblEdCustNo.Size = new System.Drawing.Size(53, 18);
-            this.lblEdCustNo.TabIndex = 73;
-            this.lblEdCustNo.Text = "label36";
             // 
             // pictureBox2
             // 
@@ -1307,7 +1296,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TabPage tabEdit;
-        private System.Windows.Forms.Label lblEdCustNo;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txtEdTelNo;
         private System.Windows.Forms.Label label17;

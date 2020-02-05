@@ -499,11 +499,12 @@
             // 
             // pnlForms
             // 
-            this.pnlForms.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
-            this.pnlForms.Location = new System.Drawing.Point(69, 41);
+            this.pnlForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlForms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlForms.Location = new System.Drawing.Point(200, 43);
             this.pnlForms.Name = "pnlForms";
-            this.pnlForms.Size = new System.Drawing.Size(730, 715);
+            this.pnlForms.Size = new System.Drawing.Size(600, 717);
             this.pnlForms.TabIndex = 2;
             // 
             // timer1
@@ -518,9 +519,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(800, 760);
             this.ControlBox = false;
+            this.Controls.Add(this.pnlForms);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pnlForms);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmKaizen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

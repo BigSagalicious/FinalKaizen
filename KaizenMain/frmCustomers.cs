@@ -73,9 +73,9 @@ namespace KaizenMain
                             }
                             else
                             {
-                                lblEdCustNo.Text = custNoSelected.ToString();
+                                //lblEdCustNo.Text = custNoSelected.ToString();
 
-                                drCustomer = dsKaizen.Tables["Customer"].Rows.Find(lblEdCustNo.Text);
+                                //drCustomer = dsKaizen.Tables["Customer"].Rows.Find(lblEdCustNo.Text);
 
                                 txtEdForename.Text = drCustomer["Forename"].ToString();
                                 txtEdSurname.Text = drCustomer["Surname"].ToString();
