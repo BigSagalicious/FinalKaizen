@@ -27,7 +27,82 @@ namespace KaizenMain
 
         private void tabCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            selectedTab = tabCustomer.SelectedIndex;
+            tabCustomer.TabPages[tabCustomer.SelectedIndex].Focus();
+            tabCustomer.TabPages[tabCustomer.SelectedIndex].CausesValidation = true;
+
+            if (dgvCustomers.SelectedRows.Count == 0 && tabCustomer.SelectedIndex == 2)
+                tabCustomer.TabPages[tabCustomer.SelectedIndex].CausesValidation = true;
+            else
+            {
+                switch (tabCustomer.SelectedIndex)
+                {
+                    case 0:
+                        {
+                            //dsKaizen.Tables["Customer"].Clear();
+                            //daCustomer.Fill(dsKaizen, "Customer");
+
+                            break;
+                        }
+                    case 1:
+                        {
+                            break;
+                        }
+                    case 2:
+                        {
+                            int noRows = dsKaizen.Tables["Customer"].Rows.Count;
+
+                            if (noRows == 0)
+                                lblAdCustNo.Text = "10000";
+                            else
+                            {
+                                getNumber(noRows);
+                            }
+
+                            errP.Clear();
+                            clearAddForm();
+                            break;
+
+                        }
+                    case 3:
+                        {
+                            if (custNoSelected == 0)
+                            {
+                                tabCustomer.SelectedIndex = 0;
+                                break;
+                            }
+                            else
+                            {
+                                //lblEdCustNo.Text = custNoSelected.ToString();
+
+                                //drCustomer = dsKaizen.Tables["Customer"].Rows.Find(lblEdCustNo.Text);
+
+                                txtEdForename.Text = drCustomer["Forename"].ToString();
+                                txtEdSurname.Text = drCustomer["Surname"].ToString();
+                                txtEdAddress.Text = drCustomer["Street"].ToString();
+                                txtEdTown.Text = drCustomer["Town"].ToString();
+                                txtEdCounty.Text = drCustomer["County"].ToString();
+                                txtEdPostcode.Text = drCustomer["Postcode"].ToString();
+                                txtEdTelNo.Text = drCustomer["TelNo"].ToString();
+                                txtEdEmail.Text = drCustomer["Email"].ToString();
+                                break;
+
+                            }
+
+                          
+
+
+
+                        }
+                    case 4:
+                        {
+                            break;
+                        }
+
+
+
+                }
+            }
         }
         //Get Forename data
         private void txtAddForename_TextChanged(object sender, EventArgs e)

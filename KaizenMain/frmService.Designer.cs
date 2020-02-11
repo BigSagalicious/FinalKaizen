@@ -163,7 +163,7 @@
             // 
             // tabDisplay
             // 
-            this.tabDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.tabDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(103)))), ((int)(((byte)(147)))));
             this.tabDisplay.Controls.Add(this.button18);
             this.tabDisplay.Controls.Add(this.label26);
             this.tabDisplay.Controls.Add(this.button17);
@@ -215,7 +215,6 @@
             // 
             // listViewEquip
             // 
-            this.listViewEquip.HideSelection = false;
             this.listViewEquip.Location = new System.Drawing.Point(6, 39);
             this.listViewEquip.Name = "listViewEquip";
             this.listViewEquip.Size = new System.Drawing.Size(546, 510);
@@ -224,7 +223,7 @@
             // 
             // tabSearch
             // 
-            this.tabSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.tabSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(103)))), ((int)(((byte)(147)))));
             this.tabSearch.Controls.Add(this.dataGridView2);
             this.tabSearch.Controls.Add(this.label7);
             this.tabSearch.Controls.Add(this.dataGridView1);
@@ -262,7 +261,6 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(44, 315);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 13);
@@ -310,7 +308,6 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label8.Location = new System.Drawing.Point(44, 216);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(102, 13);
@@ -328,7 +325,6 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label9.Location = new System.Drawing.Point(44, 173);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 13);
@@ -345,7 +341,6 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label10.Location = new System.Drawing.Point(44, 136);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(82, 13);
@@ -362,7 +357,6 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label11.Location = new System.Drawing.Point(44, 97);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(81, 13);
@@ -379,7 +373,6 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label12.Location = new System.Drawing.Point(44, 60);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(56, 13);
@@ -388,7 +381,7 @@
             // 
             // tabAdd
             // 
-            this.tabAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.tabAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(103)))), ((int)(((byte)(147)))));
             this.tabAdd.Controls.Add(this.button21);
             this.tabAdd.Controls.Add(this.textBox23);
             this.tabAdd.Controls.Add(this.label32);
@@ -432,7 +425,6 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label32.Location = new System.Drawing.Point(341, 55);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(34, 13);
@@ -480,7 +472,6 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label27.Location = new System.Drawing.Point(44, 124);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(76, 13);
@@ -490,7 +481,6 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label29.Location = new System.Drawing.Point(44, 90);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(81, 13);
@@ -548,7 +538,6 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(44, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 13);
@@ -594,7 +583,6 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(296, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
@@ -611,7 +599,6 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(3, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 13);
@@ -621,7 +608,6 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(49, 103);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 13);
@@ -638,7 +624,6 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(16, 64);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 13);
@@ -662,7 +647,7 @@
             // 
             // tabEdit
             // 
-            this.tabEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.tabEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(103)))), ((int)(((byte)(147)))));
             this.tabEdit.Controls.Add(this.button22);
             this.tabEdit.Controls.Add(this.textBox24);
             this.tabEdit.Controls.Add(this.label33);
@@ -704,7 +689,6 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label33.Location = new System.Drawing.Point(337, 73);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(34, 13);
@@ -714,7 +698,6 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label13.Location = new System.Drawing.Point(235, 502);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(14, 13);
@@ -724,7 +707,6 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label14.Location = new System.Drawing.Point(140, 502);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 13);
@@ -744,7 +726,6 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label15.Location = new System.Drawing.Point(40, 107);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(76, 13);
@@ -754,7 +735,6 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label16.Location = new System.Drawing.Point(40, 73);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(81, 13);
@@ -813,7 +793,6 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label17.Location = new System.Drawing.Point(40, 35);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(56, 13);
@@ -859,7 +838,6 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label18.Location = new System.Drawing.Point(272, 103);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(63, 13);
@@ -876,7 +854,6 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label28.Location = new System.Drawing.Point(3, 25);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(120, 13);
@@ -886,7 +863,6 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label30.Location = new System.Drawing.Point(49, 103);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(26, 13);
@@ -903,7 +879,6 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label31.Location = new System.Drawing.Point(16, 64);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(82, 13);
@@ -926,7 +901,7 @@
             // 
             // tabDelete
             // 
-            this.tabDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.tabDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(103)))), ((int)(((byte)(147)))));
             this.tabDelete.Controls.Add(this.button14);
             this.tabDelete.Controls.Add(this.dataGridView6);
             this.tabDelete.Controls.Add(this.label19);
@@ -971,7 +946,6 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label19.Location = new System.Drawing.Point(47, 310);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(93, 13);
@@ -1019,7 +993,6 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label20.Location = new System.Drawing.Point(47, 211);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(102, 13);
@@ -1036,7 +1009,6 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label21.Location = new System.Drawing.Point(47, 168);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(76, 13);
@@ -1053,7 +1025,6 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label22.Location = new System.Drawing.Point(47, 131);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(82, 13);
@@ -1070,7 +1041,6 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label23.Location = new System.Drawing.Point(47, 92);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(81, 13);
@@ -1087,7 +1057,6 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label24.Location = new System.Drawing.Point(47, 55);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(56, 13);
