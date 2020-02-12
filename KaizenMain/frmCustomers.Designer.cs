@@ -33,6 +33,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
             this.tabDelete = new System.Windows.Forms.TabPage();
+            this.lblDCustID = new System.Windows.Forms.Label();
             this.textBox35 = new System.Windows.Forms.TextBox();
             this.textBox34 = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -84,12 +84,9 @@
             this.txtAddAddress = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtAddSurname = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.txtAddForename = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.txtEdPostcode = new System.Windows.Forms.TextBox();
             this.pBIcon = new System.Windows.Forms.PictureBox();
             this.textBox28 = new System.Windows.Forms.TextBox();
@@ -108,27 +105,35 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tabSearch = new System.Windows.Forms.TabPage();
+            this.lblSCustID = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.tabCustomer = new System.Windows.Forms.TabControl();
             this.tabAdd = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label36 = new System.Windows.Forms.Label();
+            this.lblAdCustNo = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.tabEdit = new System.Windows.Forms.TabPage();
+            this.lblECustID = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtEdTelNo = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtEdEmail = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
-            this.lblAdCustNo = new System.Windows.Forms.Label();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label39 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -168,6 +173,7 @@
             // tabDelete
             // 
             this.tabDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.tabDelete.Controls.Add(this.lblDCustID);
             this.tabDelete.Controls.Add(this.pictureBox3);
             this.tabDelete.Controls.Add(this.textBox35);
             this.tabDelete.Controls.Add(this.label35);
@@ -185,7 +191,6 @@
             this.tabDelete.Controls.Add(this.label20);
             this.tabDelete.Controls.Add(this.textBox20);
             this.tabDelete.Controls.Add(this.label21);
-            this.tabDelete.Controls.Add(this.textBox19);
             this.tabDelete.Controls.Add(this.label19);
             this.tabDelete.Controls.Add(this.button10);
             this.tabDelete.Controls.Add(this.button11);
@@ -195,6 +200,16 @@
             this.tabDelete.Size = new System.Drawing.Size(731, 563);
             this.tabDelete.TabIndex = 4;
             this.tabDelete.Text = "DELETE";
+            // 
+            // lblDCustID
+            // 
+            this.lblDCustID.AutoSize = true;
+            this.lblDCustID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblDCustID.Location = new System.Drawing.Point(159, 29);
+            this.lblDCustID.Name = "lblDCustID";
+            this.lblDCustID.Size = new System.Drawing.Size(12, 18);
+            this.lblDCustID.TabIndex = 76;
+            this.lblDCustID.Text = "-";
             // 
             // textBox35
             // 
@@ -328,13 +343,6 @@
             this.label21.Size = new System.Drawing.Size(105, 26);
             this.label21.TabIndex = 59;
             this.label21.Text = "Forename";
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(141, 23);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(143, 25);
-            this.textBox19.TabIndex = 57;
             // 
             // label19
             // 
@@ -528,7 +536,7 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(560, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(116, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -537,7 +545,7 @@
             // 
             // txtAddTel
             // 
-            this.txtAddTel.Location = new System.Drawing.Point(144, 396);
+            this.txtAddTel.Location = new System.Drawing.Point(142, 477);
             this.txtAddTel.Name = "txtAddTel";
             this.txtAddTel.Size = new System.Drawing.Size(394, 25);
             this.txtAddTel.TabIndex = 53;
@@ -547,8 +555,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(26, 396);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label1.Location = new System.Drawing.Point(24, 477);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 26);
             this.label1.TabIndex = 52;
@@ -556,7 +564,7 @@
             // 
             // txtAddEmail
             // 
-            this.txtAddEmail.Location = new System.Drawing.Point(144, 343);
+            this.txtAddEmail.Location = new System.Drawing.Point(142, 424);
             this.txtAddEmail.Name = "txtAddEmail";
             this.txtAddEmail.Size = new System.Drawing.Size(394, 25);
             this.txtAddEmail.TabIndex = 51;
@@ -566,8 +574,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(26, 343);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label2.Location = new System.Drawing.Point(24, 424);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 26);
             this.label2.TabIndex = 50;
@@ -575,7 +583,7 @@
             // 
             // txtAddPostcode
             // 
-            this.txtAddPostcode.Location = new System.Drawing.Point(144, 294);
+            this.txtAddPostcode.Location = new System.Drawing.Point(142, 375);
             this.txtAddPostcode.Name = "txtAddPostcode";
             this.txtAddPostcode.Size = new System.Drawing.Size(394, 25);
             this.txtAddPostcode.TabIndex = 49;
@@ -585,8 +593,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(26, 294);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label3.Location = new System.Drawing.Point(24, 375);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 26);
             this.label3.TabIndex = 48;
@@ -596,8 +604,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(26, 239);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label4.Location = new System.Drawing.Point(24, 320);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 26);
             this.label4.TabIndex = 46;
@@ -605,7 +613,7 @@
             // 
             // txtAddCounty
             // 
-            this.txtAddCounty.Location = new System.Drawing.Point(144, 239);
+            this.txtAddCounty.Location = new System.Drawing.Point(142, 320);
             this.txtAddCounty.Name = "txtAddCounty";
             this.txtAddCounty.Size = new System.Drawing.Size(394, 25);
             this.txtAddCounty.TabIndex = 47;
@@ -617,7 +625,7 @@
             // 
             // txtAddTown
             // 
-            this.txtAddTown.Location = new System.Drawing.Point(144, 191);
+            this.txtAddTown.Location = new System.Drawing.Point(142, 272);
             this.txtAddTown.Name = "txtAddTown";
             this.txtAddTown.Size = new System.Drawing.Size(394, 25);
             this.txtAddTown.TabIndex = 45;
@@ -627,8 +635,8 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(26, 191);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label5.Location = new System.Drawing.Point(24, 272);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 26);
             this.label5.TabIndex = 44;
@@ -636,7 +644,7 @@
             // 
             // txtAddAddress
             // 
-            this.txtAddAddress.Location = new System.Drawing.Point(144, 146);
+            this.txtAddAddress.Location = new System.Drawing.Point(142, 227);
             this.txtAddAddress.Name = "txtAddAddress";
             this.txtAddAddress.Size = new System.Drawing.Size(394, 25);
             this.txtAddAddress.TabIndex = 43;
@@ -646,8 +654,8 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(25, 146);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label6.Location = new System.Drawing.Point(23, 227);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 26);
             this.label6.TabIndex = 42;
@@ -655,26 +663,15 @@
             // 
             // txtAddSurname
             // 
-            this.txtAddSurname.Location = new System.Drawing.Point(395, 92);
+            this.txtAddSurname.Location = new System.Drawing.Point(393, 173);
             this.txtAddSurname.Name = "txtAddSurname";
             this.txtAddSurname.Size = new System.Drawing.Size(143, 25);
             this.txtAddSurname.TabIndex = 41;
             this.txtAddSurname.TextChanged += new System.EventHandler(this.txtAddSurname_TextChanged);
             // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label25.Location = new System.Drawing.Point(295, 92);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(94, 26);
-            this.label25.TabIndex = 40;
-            this.label25.Text = "Surname";
-            // 
             // txtAddForename
             // 
-            this.txtAddForename.Location = new System.Drawing.Point(146, 92);
+            this.txtAddForename.Location = new System.Drawing.Point(144, 173);
             this.txtAddForename.Name = "txtAddForename";
             this.txtAddForename.Size = new System.Drawing.Size(143, 25);
             this.txtAddForename.TabIndex = 39;
@@ -683,9 +680,10 @@
             // label29
             // 
             this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label29.Location = new System.Drawing.Point(25, 89);
+            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label29.Location = new System.Drawing.Point(23, 170);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(105, 26);
             this.label29.TabIndex = 38;
@@ -694,33 +692,14 @@
             // label30
             // 
             this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.White;
             this.label30.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label30.Location = new System.Drawing.Point(19, 39);
+            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label30.Location = new System.Drawing.Point(23, 120);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(126, 26);
             this.label30.TabIndex = 36;
             this.label30.Text = "Customer ID";
-            // 
-            // button15
-            // 
-            this.button15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button15.Location = new System.Drawing.Point(352, 473);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(130, 53);
-            this.button15.TabIndex = 19;
-            this.button15.Text = "Add Customer Order";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(517, 473);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 53);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "HOME";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // txtEdPostcode
             // 
@@ -733,16 +712,17 @@
             // 
             this.pBIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pBIcon.Image = ((System.Drawing.Image)(resources.GetObject("pBIcon.Image")));
-            this.pBIcon.Location = new System.Drawing.Point(562, 507);
+            this.pBIcon.Location = new System.Drawing.Point(2, -1);
             this.pBIcon.Name = "pBIcon";
             this.pBIcon.Size = new System.Drawing.Size(117, 98);
             this.pBIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBIcon.TabIndex = 54;
             this.pBIcon.TabStop = false;
+            this.pBIcon.Click += new System.EventHandler(this.pBIcon_Click);
             // 
             // textBox28
             // 
-            this.textBox28.Location = new System.Drawing.Point(147, 444);
+            this.textBox28.Location = new System.Drawing.Point(161, 493);
             this.textBox28.Name = "textBox28";
             this.textBox28.Size = new System.Drawing.Size(395, 25);
             this.textBox28.TabIndex = 53;
@@ -750,9 +730,10 @@
             // label28
             // 
             this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label28.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label28.Location = new System.Drawing.Point(31, 443);
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label28.Location = new System.Drawing.Point(39, 493);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(71, 26);
             this.label28.TabIndex = 52;
@@ -760,7 +741,7 @@
             // 
             // textBox27
             // 
-            this.textBox27.Location = new System.Drawing.Point(147, 383);
+            this.textBox27.Location = new System.Drawing.Point(161, 432);
             this.textBox27.Name = "textBox27";
             this.textBox27.Size = new System.Drawing.Size(395, 25);
             this.textBox27.TabIndex = 51;
@@ -768,11 +749,12 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label27.Location = new System.Drawing.Point(27, 382);
+            this.label27.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label27.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label27.Location = new System.Drawing.Point(39, 432);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(70, 26);
+            this.label27.Size = new System.Drawing.Size(68, 26);
             this.label27.TabIndex = 50;
             this.label27.Text = "E-Mail";
             // 
@@ -807,7 +789,7 @@
             // 
             // textBox26
             // 
-            this.textBox26.Location = new System.Drawing.Point(147, 326);
+            this.textBox26.Location = new System.Drawing.Point(161, 375);
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(395, 25);
             this.textBox26.TabIndex = 49;
@@ -815,9 +797,10 @@
             // label26
             // 
             this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label26.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label26.Location = new System.Drawing.Point(25, 326);
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label26.Location = new System.Drawing.Point(39, 375);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(96, 26);
             this.label26.TabIndex = 48;
@@ -825,7 +808,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(147, 271);
+            this.textBox7.Location = new System.Drawing.Point(161, 320);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(395, 25);
             this.textBox7.TabIndex = 47;
@@ -833,9 +816,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(25, 270);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label7.Location = new System.Drawing.Point(39, 319);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 26);
             this.label7.TabIndex = 46;
@@ -843,7 +827,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(147, 217);
+            this.textBox8.Location = new System.Drawing.Point(161, 266);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(395, 25);
             this.textBox8.TabIndex = 45;
@@ -851,9 +835,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label8.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(25, 216);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label8.Location = new System.Drawing.Point(39, 265);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(104, 26);
             this.label8.TabIndex = 44;
@@ -861,7 +846,7 @@
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(147, 166);
+            this.textBox9.Location = new System.Drawing.Point(161, 215);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(395, 25);
             this.textBox9.TabIndex = 43;
@@ -869,9 +854,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label9.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(28, 165);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label9.Location = new System.Drawing.Point(42, 214);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(86, 26);
             this.label9.TabIndex = 42;
@@ -880,7 +866,15 @@
             // tabSearch
             // 
             this.tabSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.tabSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabSearch.BackgroundImage")));
             this.tabSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabSearch.Controls.Add(this.label39);
+            this.tabSearch.Controls.Add(this.button5);
+            this.tabSearch.Controls.Add(this.button4);
+            this.tabSearch.Controls.Add(this.label25);
+            this.tabSearch.Controls.Add(this.button6);
+            this.tabSearch.Controls.Add(this.lblSearch);
+            this.tabSearch.Controls.Add(this.lblSCustID);
             this.tabSearch.Controls.Add(this.pBIcon);
             this.tabSearch.Controls.Add(this.textBox28);
             this.tabSearch.Controls.Add(this.label28);
@@ -898,11 +892,7 @@
             this.tabSearch.Controls.Add(this.label10);
             this.tabSearch.Controls.Add(this.textBox11);
             this.tabSearch.Controls.Add(this.label11);
-            this.tabSearch.Controls.Add(this.textBox12);
             this.tabSearch.Controls.Add(this.label12);
-            this.tabSearch.Controls.Add(this.button4);
-            this.tabSearch.Controls.Add(this.button5);
-            this.tabSearch.Controls.Add(this.button6);
             this.tabSearch.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabSearch.Location = new System.Drawing.Point(4, 29);
@@ -912,9 +902,20 @@
             this.tabSearch.TabIndex = 1;
             this.tabSearch.Text = "SEARCH";
             // 
+            // lblSCustID
+            // 
+            this.lblSCustID.AutoSize = true;
+            this.lblSCustID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSCustID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.lblSCustID.Location = new System.Drawing.Point(181, 116);
+            this.lblSCustID.Name = "lblSCustID";
+            this.lblSCustID.Size = new System.Drawing.Size(12, 18);
+            this.lblSCustID.TabIndex = 55;
+            this.lblSCustID.Text = "-";
+            // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(399, 110);
+            this.textBox10.Location = new System.Drawing.Point(413, 159);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(143, 25);
             this.textBox10.TabIndex = 41;
@@ -922,9 +923,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label10.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(299, 110);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label10.Location = new System.Drawing.Point(313, 159);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(94, 26);
             this.label10.TabIndex = 40;
@@ -932,7 +934,7 @@
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(147, 113);
+            this.textBox11.Location = new System.Drawing.Point(161, 162);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(143, 25);
             this.textBox11.TabIndex = 39;
@@ -940,67 +942,26 @@
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label11.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(28, 110);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label11.Location = new System.Drawing.Point(42, 159);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(105, 26);
             this.label11.TabIndex = 38;
             this.label11.Text = "Forename";
             // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(146, 30);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(143, 25);
-            this.textBox12.TabIndex = 37;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label12.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(26, 30);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label12.Location = new System.Drawing.Point(39, 116);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(126, 26);
             this.label12.TabIndex = 36;
             this.label12.Text = "Customer ID";
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Location = new System.Drawing.Point(425, 486);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(105, 41);
-            this.button4.TabIndex = 29;
-            this.button4.Text = "HOME";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button5.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(146, 486);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(107, 41);
-            this.button5.TabIndex = 28;
-            this.button5.Text = "CLEAR";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button6.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(321, 24);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(112, 37);
-            this.button6.TabIndex = 27;
-            this.button6.Text = "SEARCH";
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // tabCustomer
             // 
@@ -1026,7 +987,15 @@
             // 
             // tabAdd
             // 
-            this.tabAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.tabAdd.BackColor = System.Drawing.Color.White;
+            this.tabAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabAdd.BackgroundImage")));
+            this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.tabAdd.Controls.Add(this.button3);
+            this.tabAdd.Controls.Add(this.button2);
+            this.tabAdd.Controls.Add(this.label40);
+            this.tabAdd.Controls.Add(this.label38);
+            this.tabAdd.Controls.Add(this.button1);
+            this.tabAdd.Controls.Add(this.label36);
             this.tabAdd.Controls.Add(this.lblAdCustNo);
             this.tabAdd.Controls.Add(this.lblID);
             this.tabAdd.Controls.Add(this.lblAddCustNo);
@@ -1044,46 +1013,103 @@
             this.tabAdd.Controls.Add(this.txtAddAddress);
             this.tabAdd.Controls.Add(this.label6);
             this.tabAdd.Controls.Add(this.txtAddSurname);
-            this.tabAdd.Controls.Add(this.label25);
             this.tabAdd.Controls.Add(this.txtAddForename);
             this.tabAdd.Controls.Add(this.label29);
             this.tabAdd.Controls.Add(this.label30);
-            this.tabAdd.Controls.Add(this.button15);
-            this.tabAdd.Controls.Add(this.button3);
-            this.tabAdd.Controls.Add(this.button2);
-            this.tabAdd.Controls.Add(this.btnAdd);
             this.tabAdd.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tabAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
             this.tabAdd.Location = new System.Drawing.Point(4, 29);
             this.tabAdd.Name = "tabAdd";
             this.tabAdd.Size = new System.Drawing.Size(731, 563);
             this.tabAdd.TabIndex = 2;
             this.tabAdd.Text = "ADD";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.button3.Location = new System.Drawing.Point(667, 169);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(36, 33);
+            this.button3.TabIndex = 68;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // button2
             // 
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(192, 473);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.button2.Location = new System.Drawing.Point(667, 120);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 53);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "CLEAR";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Size = new System.Drawing.Size(36, 33);
+            this.button2.TabIndex = 67;
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // btnAdd
+            // label40
             // 
-            this.btnAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAdd.Location = new System.Drawing.Point(30, 473);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(130, 53);
-            this.btnAdd.TabIndex = 12;
-            this.btnAdd.Text = "ADD";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label40.Location = new System.Drawing.Point(576, 180);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(59, 22);
+            this.label40.TabIndex = 65;
+            this.label40.Text = "HOME";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label38.Location = new System.Drawing.Point(576, 124);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(59, 22);
+            this.label38.TabIndex = 61;
+            this.label38.Text = "CLEAR";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.button1.Location = new System.Drawing.Point(667, 66);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(36, 33);
+            this.button1.TabIndex = 60;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label36.Location = new System.Drawing.Point(576, 70);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(45, 22);
+            this.label36.TabIndex = 59;
+            this.label36.Text = "ADD";
+            this.label36.Click += new System.EventHandler(this.label36_Click);
+            // 
+            // lblAdCustNo
+            // 
+            this.lblAdCustNo.AutoSize = true;
+            this.lblAdCustNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.lblAdCustNo.Location = new System.Drawing.Point(163, 126);
+            this.lblAdCustNo.Name = "lblAdCustNo";
+            this.lblAdCustNo.Size = new System.Drawing.Size(12, 18);
+            this.lblAdCustNo.TabIndex = 58;
+            this.lblAdCustNo.Text = "-";
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(152, 45);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(0, 18);
+            this.lblID.TabIndex = 57;
             // 
             // tabEdit
             // 
             this.tabEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.tabEdit.Controls.Add(this.lblECustID);
             this.tabEdit.Controls.Add(this.pictureBox2);
             this.tabEdit.Controls.Add(this.txtEdTelNo);
             this.tabEdit.Controls.Add(this.label17);
@@ -1110,6 +1136,16 @@
             this.tabEdit.Size = new System.Drawing.Size(731, 563);
             this.tabEdit.TabIndex = 3;
             this.tabEdit.Text = "EDIT";
+            // 
+            // lblECustID
+            // 
+            this.lblECustID.AutoSize = true;
+            this.lblECustID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblECustID.Location = new System.Drawing.Point(147, 26);
+            this.lblECustID.Name = "lblECustID";
+            this.lblECustID.Size = new System.Drawing.Size(12, 18);
+            this.lblECustID.TabIndex = 73;
+            this.lblECustID.Text = "-";
             // 
             // pictureBox2
             // 
@@ -1158,22 +1194,68 @@
             this.label18.TabIndex = 68;
             this.label18.Text = "E-Mail";
             // 
-            // lblID
+            // lblSearch
             // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(152, 45);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(0, 18);
-            this.lblID.TabIndex = 57;
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.lblSearch.Location = new System.Drawing.Point(589, 122);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(57, 18);
+            this.lblSearch.TabIndex = 56;
+            this.lblSearch.Text = "SEARCH";
             // 
-            // lblAdCustNo
+            // button6
             // 
-            this.lblAdCustNo.AutoSize = true;
-            this.lblAdCustNo.Location = new System.Drawing.Point(166, 45);
-            this.lblAdCustNo.Name = "lblAdCustNo";
-            this.lblAdCustNo.Size = new System.Drawing.Size(12, 18);
-            this.lblAdCustNo.TabIndex = 58;
-            this.lblAdCustNo.Text = "-";
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.button6.Location = new System.Drawing.Point(666, 117);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(36, 33);
+            this.button6.TabIndex = 68;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label25.Location = new System.Drawing.Point(599, 187);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(47, 18);
+            this.label25.TabIndex = 69;
+            this.label25.Text = "CLEAR";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.button4.Location = new System.Drawing.Point(666, 244);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(36, 33);
+            this.button4.TabIndex = 70;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.button5.Location = new System.Drawing.Point(666, 180);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(36, 33);
+            this.button5.TabIndex = 71;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.label39.Location = new System.Drawing.Point(599, 251);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(47, 18);
+            this.label39.TabIndex = 72;
+            this.label39.Text = "HOME";
             // 
             // frmCustomers
             // 
@@ -1223,7 +1305,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
@@ -1276,25 +1357,16 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TabPage tabAdd;
         private System.Windows.Forms.TextBox txtAddTown;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtAddAddress;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtAddSurname;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox txtAddForename;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TabPage tabEdit;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txtEdTelNo;
@@ -1304,5 +1376,20 @@
         private System.Windows.Forms.TextBox txtEdPostcode;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblAdCustNo;
+        private System.Windows.Forms.Label lblDCustID;
+        private System.Windows.Forms.Label lblSCustID;
+        private System.Windows.Forms.Label lblECustID;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label lblSearch;
     }
 }

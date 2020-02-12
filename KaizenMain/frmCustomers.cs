@@ -338,6 +338,15 @@ namespace KaizenMain
 
         }
 
+        private void label36_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pBIcon_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void Customer_Load(object sender, EventArgs e)
         {
