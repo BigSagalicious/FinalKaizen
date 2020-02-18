@@ -30,10 +30,6 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
-            this.button18 = new System.Windows.Forms.Button();
-            this.label26 = new System.Windows.Forms.Label();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
             this.listViewEquip = new System.Windows.Forms.ListView();
             this.tabSearch = new System.Windows.Forms.TabPage();
             this.label10 = new System.Windows.Forms.Label();
@@ -123,6 +119,10 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.label41 = new System.Windows.Forms.Label();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             this.tabSearch.SuspendLayout();
@@ -151,12 +151,12 @@
             this.tabControl1.Controls.Add(this.tabEdit);
             this.tabControl1.Controls.Add(this.tabDelete);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.ItemSize = new System.Drawing.Size(110, 25);
-            this.tabControl1.Location = new System.Drawing.Point(-3, 12);
+            this.tabControl1.ItemSize = new System.Drawing.Size(145, 25);
+            this.tabControl1.Location = new System.Drawing.Point(3, 6);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(566, 585);
+            this.tabControl1.Size = new System.Drawing.Size(742, 721);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 8;
             this.tabControl1.TabStop = false;
@@ -165,60 +165,23 @@
             // 
             this.tabDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
             this.tabDisplay.Controls.Add(this.button18);
-            this.tabDisplay.Controls.Add(this.label26);
+            this.tabDisplay.Controls.Add(this.label41);
             this.tabDisplay.Controls.Add(this.button17);
             this.tabDisplay.Controls.Add(this.button16);
             this.tabDisplay.Controls.Add(this.listViewEquip);
             this.tabDisplay.Location = new System.Drawing.Point(4, 29);
             this.tabDisplay.Name = "tabDisplay";
             this.tabDisplay.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDisplay.Size = new System.Drawing.Size(558, 552);
+            this.tabDisplay.Size = new System.Drawing.Size(734, 688);
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "DISPLAY";
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(265, 9);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(75, 23);
-            this.button18.TabIndex = 8;
-            this.button18.Text = "Type";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label26.Location = new System.Drawing.Point(26, 14);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(48, 13);
-            this.label26.TabIndex = 7;
-            this.label26.Text = "Sort By";
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(184, 9);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(75, 23);
-            this.button17.TabIndex = 6;
-            this.button17.Text = "ID";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(103, 9);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 23);
-            this.button16.TabIndex = 5;
-            this.button16.Text = "A - Z";
-            this.button16.UseVisualStyleBackColor = true;
             // 
             // listViewEquip
             // 
             this.listViewEquip.HideSelection = false;
             this.listViewEquip.Location = new System.Drawing.Point(6, 39);
             this.listViewEquip.Name = "listViewEquip";
-            this.listViewEquip.Size = new System.Drawing.Size(546, 510);
+            this.listViewEquip.Size = new System.Drawing.Size(718, 637);
             this.listViewEquip.TabIndex = 0;
             this.listViewEquip.UseCompatibleStateImageBehavior = false;
             // 
@@ -243,7 +206,7 @@
             this.tabSearch.Location = new System.Drawing.Point(4, 29);
             this.tabSearch.Name = "tabSearch";
             this.tabSearch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSearch.Size = new System.Drawing.Size(558, 552);
+            this.tabSearch.Size = new System.Drawing.Size(734, 688);
             this.tabSearch.TabIndex = 1;
             this.tabSearch.Text = "SEARCH";
             // 
@@ -407,7 +370,7 @@
             this.tabAdd.Controls.Add(this.panel1);
             this.tabAdd.Location = new System.Drawing.Point(4, 29);
             this.tabAdd.Name = "tabAdd";
-            this.tabAdd.Size = new System.Drawing.Size(558, 552);
+            this.tabAdd.Size = new System.Drawing.Size(734, 688);
             this.tabAdd.TabIndex = 2;
             this.tabAdd.Text = "ADD";
             // 
@@ -678,7 +641,7 @@
             this.tabEdit.Controls.Add(this.panel2);
             this.tabEdit.Location = new System.Drawing.Point(4, 29);
             this.tabEdit.Name = "tabEdit";
-            this.tabEdit.Size = new System.Drawing.Size(558, 552);
+            this.tabEdit.Size = new System.Drawing.Size(734, 688);
             this.tabEdit.TabIndex = 3;
             this.tabEdit.Text = "EDIT";
             // 
@@ -941,7 +904,7 @@
             this.tabDelete.Controls.Add(this.button12);
             this.tabDelete.Location = new System.Drawing.Point(4, 29);
             this.tabDelete.Name = "tabDelete";
-            this.tabDelete.Size = new System.Drawing.Size(558, 552);
+            this.tabDelete.Size = new System.Drawing.Size(734, 688);
             this.tabDelete.TabIndex = 4;
             this.tabDelete.Text = "DELETE";
             // 
@@ -1092,14 +1055,58 @@
             this.button12.Text = "SEARCH";
             this.button12.UseVisualStyleBackColor = true;
             // 
+            // button18
+            // 
+            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button18.Location = new System.Drawing.Point(404, 6);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(75, 31);
+            this.button18.TabIndex = 16;
+            this.button18.Text = "TYPE";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label41.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label41.Location = new System.Drawing.Point(165, 11);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(76, 24);
+            this.label41.TabIndex = 15;
+            this.label41.Text = "Sort By";
+            // 
+            // button17
+            // 
+            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button17.Location = new System.Drawing.Point(323, 6);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(75, 31);
+            this.button17.TabIndex = 14;
+            this.button17.Text = "ID";
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button16.Location = new System.Drawing.Point(242, 6);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(75, 31);
+            this.button16.TabIndex = 13;
+            this.button16.Text = "A - Z";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
             // frmEquip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 608);
+            this.ClientSize = new System.Drawing.Size(743, 723);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmEquip";
-            this.Text = "Form2";
+            this.Text = "frmEquipment";
             this.Load += new System.EventHandler(this.frmEquip_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabDisplay.ResumeLayout(false);
@@ -1131,10 +1138,6 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabDisplay;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button16;
         private System.Windows.Forms.ListView listViewEquip;
         private System.Windows.Forms.TabPage tabSearch;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -1224,5 +1227,9 @@
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button16;
     }
 }

@@ -57,7 +57,7 @@ namespace KaizenMain
             if (MenuVisable is false)
             {
 
-                pnlMenu.Width = pnlMenu.Width + 8;
+                pnlMenu.Width = pnlMenu.Width + 7;
                //              pnlForms.Width = pnlForms.Width - 8;
                 if (pnlMenu.Width > 195)
                 {
@@ -69,7 +69,7 @@ namespace KaizenMain
             }
 
             else {
-                pnlMenu.Width = pnlMenu.Width - 8;
+                pnlMenu.Width = pnlMenu.Width - 7;
               //  pnlForms.Width = pnlForms.Width + 8;
                 if (pnlMenu.Width <= 78)
                 {

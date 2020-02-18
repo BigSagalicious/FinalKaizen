@@ -434,7 +434,7 @@
             this.pBEquip.Image = ((System.Drawing.Image)(resources.GetObject("pBEquip.Image")));
             this.pBEquip.Location = new System.Drawing.Point(6, 148);
             this.pBEquip.Name = "pBEquip";
-            this.pBEquip.Size = new System.Drawing.Size(60, 47);
+            this.pBEquip.Size = new System.Drawing.Size(57, 47);
             this.pBEquip.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBEquip.TabIndex = 2;
             this.pBEquip.TabStop = false;
@@ -501,10 +501,9 @@
             // 
             this.pnlForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
             this.pnlForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlForms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlForms.Location = new System.Drawing.Point(200, 43);
+            this.pnlForms.Location = new System.Drawing.Point(72, 43);
             this.pnlForms.Name = "pnlForms";
-            this.pnlForms.Size = new System.Drawing.Size(600, 717);
+            this.pnlForms.Size = new System.Drawing.Size(728, 717);
             this.pnlForms.TabIndex = 2;
             // 
             // timer1
@@ -519,8 +518,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(800, 760);
             this.ControlBox = false;
-            this.Controls.Add(this.pnlForms);
             this.Controls.Add(this.pnlMenu);
+            this.Controls.Add(this.pnlForms);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmKaizen";
