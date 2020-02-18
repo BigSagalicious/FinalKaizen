@@ -97,7 +97,7 @@ namespace KaizenMain
         private void getNumber(int noRows)
         {
             drCustomer = dsKaizen.Tables["Customer"].Rows[noRows - 1];
-            lblAddCustNo.Text = (int.Parse(drCustomer["CustomerNo"].ToString()) + 1).ToString();
+            //lblAddCustNo.Text = (int.Parse(drCustomer["CustomerNo"].ToString()) + 1).ToString();
         }
 
         void AddTabValidate(object sender, CancelEventArgs e)
@@ -130,7 +130,7 @@ namespace KaizenMain
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(lblID, MyEx.toString());
+                errP.SetError(lblAdCustNo, MyEx.toString());
             }
 
             
@@ -263,6 +263,10 @@ namespace KaizenMain
 
         }
 
+        private void tabEdit_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void Customer_Load(object sender, EventArgs e)
         {
