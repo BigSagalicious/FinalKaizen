@@ -269,7 +269,9 @@
             // 
             // tabSearch
             // 
-            this.tabSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.tabSearch.BackColor = System.Drawing.Color.White;
+            this.tabSearch.BackgroundImage = global::KaizenMain.Properties.Resources._53160265_2410346355864115_4176677497166888960_o;
+            this.tabSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabSearch.Controls.Add(this.button4);
             this.tabSearch.Controls.Add(this.button13);
             this.tabSearch.Controls.Add(this.label7);
@@ -322,7 +324,7 @@
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label34.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label34.Location = new System.Drawing.Point(476, 52);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(52, 24);
@@ -353,7 +355,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label27.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label27.Location = new System.Drawing.Point(35, 109);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(124, 24);
@@ -364,8 +366,8 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(41, 52);
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(35, 48);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(92, 24);
             this.label9.TabIndex = 41;
@@ -373,6 +375,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.textBox12);
@@ -439,7 +442,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label10.Location = new System.Drawing.Point(444, 105);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(66, 24);
@@ -457,7 +460,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label11.Location = new System.Drawing.Point(9, 20);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(136, 24);
@@ -468,8 +471,8 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(3, 100);
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label12.Location = new System.Drawing.Point(9, 101);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(41, 24);
             this.label12.TabIndex = 10;
@@ -479,7 +482,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label28.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label28.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label28.Location = new System.Drawing.Point(9, 59);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(172, 24);
@@ -1113,7 +1116,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(359, 580);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(21, 24);
@@ -1124,7 +1127,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label8.Location = new System.Drawing.Point(256, 580);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(106, 24);
