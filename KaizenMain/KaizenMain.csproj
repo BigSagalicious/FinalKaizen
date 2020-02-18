@@ -182,5 +182,8 @@
   <ItemGroup>
     <None Include="Resources\calendar-512.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\53160265_2410346355864115_4176677497166888960_o.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

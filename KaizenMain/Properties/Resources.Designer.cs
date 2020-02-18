@@ -63,6 +63,16 @@ namespace KaizenMain.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _53160265_2410346355864115_4176677497166888960_o {
+            get {
+                object obj = ResourceManager.GetObject("53160265_2410346355864115_4176677497166888960_o", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar_512 {
             get {
                 object obj = ResourceManager.GetObject("calendar-512", resourceCulture);
