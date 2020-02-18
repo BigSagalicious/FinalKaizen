@@ -31,5 +31,20 @@ namespace KaizenMain
         {
 
         }
+
+        private void tabAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
