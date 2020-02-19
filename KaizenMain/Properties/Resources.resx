@@ -127,4 +127,10 @@
   <data name="53160265_2410346355864115_4176677497166888960_o" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\53160265_2410346355864115_4176677497166888960_o.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Faded_logo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Faded_logo3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Faded_logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Faded_logo2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

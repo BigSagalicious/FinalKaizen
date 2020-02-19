@@ -33,7 +33,6 @@
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.pnlIndSuppliers = new System.Windows.Forms.Panel();
             this.richTextBox10 = new System.Windows.Forms.RichTextBox();
-            this.pBSuppliers = new System.Windows.Forms.PictureBox();
             this.pnlIndRentals = new System.Windows.Forms.Panel();
             this.pnlIndStock = new System.Windows.Forms.Panel();
             this.pnlIndReports = new System.Windows.Forms.Panel();
@@ -43,15 +42,20 @@
             this.pnlIndService = new System.Windows.Forms.Panel();
             this.pnlIndEquipment = new System.Windows.Forms.Panel();
             this.richTextBox9 = new System.Windows.Forms.RichTextBox();
-            this.pBStock = new System.Windows.Forms.PictureBox();
             this.richTextBox8 = new System.Windows.Forms.RichTextBox();
-            this.pBReports = new System.Windows.Forms.PictureBox();
             this.richTextBox6 = new System.Windows.Forms.RichTextBox();
             this.richTextBox5 = new System.Windows.Forms.RichTextBox();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pBSuppliers = new System.Windows.Forms.PictureBox();
+            this.pBStock = new System.Windows.Forms.PictureBox();
+            this.pBReports = new System.Windows.Forms.PictureBox();
             this.pBQuotes = new System.Windows.Forms.PictureBox();
             this.pBInvoice = new System.Windows.Forms.PictureBox();
             this.pBRentals = new System.Windows.Forms.PictureBox();
@@ -59,14 +63,12 @@
             this.pBService = new System.Windows.Forms.PictureBox();
             this.pBIcon = new System.Windows.Forms.PictureBox();
             this.pBEquip = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.pBClose = new System.Windows.Forms.PictureBox();
-            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
-            this.pBMenu = new System.Windows.Forms.PictureBox();
             this.pnlForms = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pBClose = new System.Windows.Forms.PictureBox();
+            this.pBMenu = new System.Windows.Forms.PictureBox();
             this.pnlMenu.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBSuppliers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReports)).BeginInit();
@@ -77,8 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBService)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBEquip)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBMenu)).BeginInit();
             this.SuspendLayout();
@@ -145,18 +145,6 @@
             this.richTextBox10.TabIndex = 27;
             this.richTextBox10.Text = "Suppliers";
             this.richTextBox10.Click += new System.EventHandler(this.pBSuppliers_Click);
-            // 
-            // pBSuppliers
-            // 
-            this.pBSuppliers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pBSuppliers.Image = ((System.Drawing.Image)(resources.GetObject("pBSuppliers.Image")));
-            this.pBSuppliers.Location = new System.Drawing.Point(6, 652);
-            this.pBSuppliers.Name = "pBSuppliers";
-            this.pBSuppliers.Size = new System.Drawing.Size(57, 47);
-            this.pBSuppliers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBSuppliers.TabIndex = 26;
-            this.pBSuppliers.TabStop = false;
-            this.pBSuppliers.Click += new System.EventHandler(this.pBSuppliers_Click);
             // 
             // pnlIndRentals
             // 
@@ -261,18 +249,6 @@
             this.richTextBox9.Text = "Stock";
             this.richTextBox9.Click += new System.EventHandler(this.pBStock_Click);
             // 
-            // pBStock
-            // 
-            this.pBStock.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pBStock.Image = ((System.Drawing.Image)(resources.GetObject("pBStock.Image")));
-            this.pBStock.Location = new System.Drawing.Point(6, 586);
-            this.pBStock.Name = "pBStock";
-            this.pBStock.Size = new System.Drawing.Size(57, 47);
-            this.pBStock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBStock.TabIndex = 23;
-            this.pBStock.TabStop = false;
-            this.pBStock.Click += new System.EventHandler(this.pBStock_Click);
-            // 
             // richTextBox8
             // 
             this.richTextBox8.BackColor = System.Drawing.Color.White;
@@ -287,18 +263,6 @@
             this.richTextBox8.Text = "Reports";
             this.richTextBox8.Click += new System.EventHandler(this.pBReports_Click);
             this.richTextBox8.TextChanged += new System.EventHandler(this.richTextBox8_TextChanged);
-            // 
-            // pBReports
-            // 
-            this.pBReports.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pBReports.Image = ((System.Drawing.Image)(resources.GetObject("pBReports.Image")));
-            this.pBReports.Location = new System.Drawing.Point(9, 516);
-            this.pBReports.Name = "pBReports";
-            this.pBReports.Size = new System.Drawing.Size(57, 47);
-            this.pBReports.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBReports.TabIndex = 20;
-            this.pBReports.TabStop = false;
-            this.pBReports.Click += new System.EventHandler(this.pBReports_Click);
             // 
             // richTextBox6
             // 
@@ -384,6 +348,80 @@
             this.richTextBox1.Text = "Equipment";
             this.richTextBox1.Click += new System.EventHandler(this.pBEquip_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.panel2.Controls.Add(this.panel11);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 43);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.pBClose);
+            this.panel11.Controls.Add(this.richTextBox7);
+            this.panel11.Controls.Add(this.pBMenu);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(800, 43);
+            this.panel11.TabIndex = 3;
+            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
+            // 
+            // richTextBox7
+            // 
+            this.richTextBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.richTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox7.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox7.ForeColor = System.Drawing.SystemColors.Window;
+            this.richTextBox7.Location = new System.Drawing.Point(601, 12);
+            this.richTextBox7.Name = "richTextBox7";
+            this.richTextBox7.Size = new System.Drawing.Size(167, 23);
+            this.richTextBox7.TabIndex = 0;
+            this.richTextBox7.Text = "Managment Software";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pBSuppliers
+            // 
+            this.pBSuppliers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pBSuppliers.Image = ((System.Drawing.Image)(resources.GetObject("pBSuppliers.Image")));
+            this.pBSuppliers.Location = new System.Drawing.Point(6, 652);
+            this.pBSuppliers.Name = "pBSuppliers";
+            this.pBSuppliers.Size = new System.Drawing.Size(57, 47);
+            this.pBSuppliers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBSuppliers.TabIndex = 26;
+            this.pBSuppliers.TabStop = false;
+            this.pBSuppliers.Click += new System.EventHandler(this.pBSuppliers_Click);
+            // 
+            // pBStock
+            // 
+            this.pBStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pBStock.Image = ((System.Drawing.Image)(resources.GetObject("pBStock.Image")));
+            this.pBStock.Location = new System.Drawing.Point(6, 586);
+            this.pBStock.Name = "pBStock";
+            this.pBStock.Size = new System.Drawing.Size(57, 47);
+            this.pBStock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBStock.TabIndex = 23;
+            this.pBStock.TabStop = false;
+            this.pBStock.Click += new System.EventHandler(this.pBStock_Click);
+            // 
+            // pBReports
+            // 
+            this.pBReports.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pBReports.Image = ((System.Drawing.Image)(resources.GetObject("pBReports.Image")));
+            this.pBReports.Location = new System.Drawing.Point(9, 516);
+            this.pBReports.Name = "pBReports";
+            this.pBReports.Size = new System.Drawing.Size(57, 47);
+            this.pBReports.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBReports.TabIndex = 20;
+            this.pBReports.TabStop = false;
+            this.pBReports.Click += new System.EventHandler(this.pBReports_Click);
+            // 
             // pBQuotes
             // 
             this.pBQuotes.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -467,27 +505,15 @@
             this.pBEquip.TabStop = false;
             this.pBEquip.Click += new System.EventHandler(this.pBEquip_Click);
             // 
-            // panel2
+            // pnlForms
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.panel2.Controls.Add(this.panel11);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 43);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.pBClose);
-            this.panel11.Controls.Add(this.richTextBox7);
-            this.panel11.Controls.Add(this.pBMenu);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(800, 43);
-            this.panel11.TabIndex = 3;
-            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
+            this.pnlForms.BackColor = System.Drawing.Color.White;
+            this.pnlForms.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
+            this.pnlForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlForms.Location = new System.Drawing.Point(72, 43);
+            this.pnlForms.Name = "pnlForms";
+            this.pnlForms.Size = new System.Drawing.Size(728, 717);
+            this.pnlForms.TabIndex = 2;
             // 
             // pBClose
             // 
@@ -501,18 +527,6 @@
             this.pBClose.TabStop = false;
             this.pBClose.Click += new System.EventHandler(this.pBClose_Click);
             // 
-            // richTextBox7
-            // 
-            this.richTextBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.richTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox7.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox7.ForeColor = System.Drawing.SystemColors.Window;
-            this.richTextBox7.Location = new System.Drawing.Point(601, 12);
-            this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(167, 23);
-            this.richTextBox7.TabIndex = 0;
-            this.richTextBox7.Text = "Managment Software";
-            // 
             // pBMenu
             // 
             this.pBMenu.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -525,20 +539,6 @@
             this.pBMenu.TabIndex = 1;
             this.pBMenu.TabStop = false;
             this.pBMenu.Click += new System.EventHandler(this.pBMenu_Click);
-            // 
-            // pnlForms
-            // 
-            this.pnlForms.BackColor = System.Drawing.Color.White;
-            this.pnlForms.BackgroundImage = global::KaizenMain.Properties.Resources._53160265_2410346355864115_4176677497166888960_o;
-            this.pnlForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlForms.Location = new System.Drawing.Point(72, 43);
-            this.pnlForms.Name = "pnlForms";
-            this.pnlForms.Size = new System.Drawing.Size(728, 717);
-            this.pnlForms.TabIndex = 2;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmKaizen
             // 
@@ -557,6 +557,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmKaizen_Load);
             this.pnlMenu.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pBSuppliers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReports)).EndInit();
@@ -567,8 +569,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBService)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBEquip)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pBClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBMenu)).EndInit();
             this.ResumeLayout(false);
