@@ -125,6 +125,7 @@
             // 
             this.pnlIndSuppliers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndSuppliers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
+            this.pnlIndSuppliers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlIndSuppliers.Location = new System.Drawing.Point(188, 652);
             this.pnlIndSuppliers.Name = "pnlIndSuppliers";
             this.pnlIndSuppliers.Size = new System.Drawing.Size(12, 47);
@@ -135,6 +136,7 @@
             // 
             this.richTextBox10.BackColor = System.Drawing.Color.White;
             this.richTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.richTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.richTextBox10.Location = new System.Drawing.Point(65, 657);
@@ -146,6 +148,7 @@
             // 
             // pBSuppliers
             // 
+            this.pBSuppliers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBSuppliers.Image = ((System.Drawing.Image)(resources.GetObject("pBSuppliers.Image")));
             this.pBSuppliers.Location = new System.Drawing.Point(6, 652);
             this.pBSuppliers.Name = "pBSuppliers";
@@ -159,6 +162,7 @@
             // 
             this.pnlIndRentals.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndRentals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
+            this.pnlIndRentals.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlIndRentals.Location = new System.Drawing.Point(188, 266);
             this.pnlIndRentals.Name = "pnlIndRentals";
             this.pnlIndRentals.Size = new System.Drawing.Size(12, 52);
@@ -169,6 +173,7 @@
             // 
             this.pnlIndStock.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
+            this.pnlIndStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlIndStock.Location = new System.Drawing.Point(188, 583);
             this.pnlIndStock.Name = "pnlIndStock";
             this.pnlIndStock.Size = new System.Drawing.Size(12, 52);
@@ -179,6 +184,7 @@
             // 
             this.pnlIndReports.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
+            this.pnlIndReports.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlIndReports.Location = new System.Drawing.Point(188, 516);
             this.pnlIndReports.Name = "pnlIndReports";
             this.pnlIndReports.Size = new System.Drawing.Size(12, 52);
@@ -190,6 +196,7 @@
             // 
             this.pnlIndQuotes.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndQuotes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
+            this.pnlIndQuotes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlIndQuotes.Location = new System.Drawing.Point(188, 452);
             this.pnlIndQuotes.Name = "pnlIndQuotes";
             this.pnlIndQuotes.Size = new System.Drawing.Size(12, 52);
@@ -200,6 +207,7 @@
             // 
             this.pnlIndInvoicing.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndInvoicing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
+            this.pnlIndInvoicing.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlIndInvoicing.Location = new System.Drawing.Point(188, 387);
             this.pnlIndInvoicing.Name = "pnlIndInvoicing";
             this.pnlIndInvoicing.Size = new System.Drawing.Size(12, 52);
@@ -210,6 +218,7 @@
             // 
             this.pnlIndCustomers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
+            this.pnlIndCustomers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlIndCustomers.Location = new System.Drawing.Point(188, 326);
             this.pnlIndCustomers.Name = "pnlIndCustomers";
             this.pnlIndCustomers.Size = new System.Drawing.Size(12, 52);
@@ -220,6 +229,7 @@
             // 
             this.pnlIndService.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
+            this.pnlIndService.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlIndService.Location = new System.Drawing.Point(188, 205);
             this.pnlIndService.Name = "pnlIndService";
             this.pnlIndService.Size = new System.Drawing.Size(12, 52);
@@ -230,6 +240,7 @@
             // 
             this.pnlIndEquipment.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndEquipment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
+            this.pnlIndEquipment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlIndEquipment.Location = new System.Drawing.Point(188, 143);
             this.pnlIndEquipment.Name = "pnlIndEquipment";
             this.pnlIndEquipment.Size = new System.Drawing.Size(12, 52);
@@ -240,6 +251,7 @@
             // 
             this.richTextBox9.BackColor = System.Drawing.Color.White;
             this.richTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.richTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.richTextBox9.Location = new System.Drawing.Point(65, 591);
@@ -251,6 +263,7 @@
             // 
             // pBStock
             // 
+            this.pBStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBStock.Image = ((System.Drawing.Image)(resources.GetObject("pBStock.Image")));
             this.pBStock.Location = new System.Drawing.Point(6, 586);
             this.pBStock.Name = "pBStock";
@@ -264,6 +277,7 @@
             // 
             this.richTextBox8.BackColor = System.Drawing.Color.White;
             this.richTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.richTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.richTextBox8.Location = new System.Drawing.Point(68, 521);
@@ -276,6 +290,7 @@
             // 
             // pBReports
             // 
+            this.pBReports.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBReports.Image = ((System.Drawing.Image)(resources.GetObject("pBReports.Image")));
             this.pBReports.Location = new System.Drawing.Point(9, 516);
             this.pBReports.Name = "pBReports";
@@ -289,6 +304,7 @@
             // 
             this.richTextBox6.BackColor = System.Drawing.Color.White;
             this.richTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.richTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.richTextBox6.Location = new System.Drawing.Point(68, 457);
@@ -302,6 +318,7 @@
             // 
             this.richTextBox5.BackColor = System.Drawing.Color.White;
             this.richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.richTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.richTextBox5.Location = new System.Drawing.Point(65, 392);
@@ -315,6 +332,7 @@
             // 
             this.richTextBox4.BackColor = System.Drawing.Color.White;
             this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.richTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.richTextBox4.Location = new System.Drawing.Point(65, 274);
@@ -328,6 +346,7 @@
             // 
             this.richTextBox3.BackColor = System.Drawing.Color.White;
             this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.richTextBox3.Location = new System.Drawing.Point(65, 335);
@@ -341,6 +360,7 @@
             // 
             this.richTextBox2.BackColor = System.Drawing.Color.White;
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.richTextBox2.Location = new System.Drawing.Point(68, 213);
@@ -354,6 +374,7 @@
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.White;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.richTextBox1.Location = new System.Drawing.Point(68, 151);
@@ -365,6 +386,7 @@
             // 
             // pBQuotes
             // 
+            this.pBQuotes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBQuotes.Image = ((System.Drawing.Image)(resources.GetObject("pBQuotes.Image")));
             this.pBQuotes.Location = new System.Drawing.Point(9, 452);
             this.pBQuotes.Name = "pBQuotes";
@@ -376,6 +398,7 @@
             // 
             // pBInvoice
             // 
+            this.pBInvoice.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBInvoice.Image = ((System.Drawing.Image)(resources.GetObject("pBInvoice.Image")));
             this.pBInvoice.Location = new System.Drawing.Point(9, 387);
             this.pBInvoice.Name = "pBInvoice";
@@ -387,6 +410,7 @@
             // 
             // pBRentals
             // 
+            this.pBRentals.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBRentals.Image = ((System.Drawing.Image)(resources.GetObject("pBRentals.Image")));
             this.pBRentals.Location = new System.Drawing.Point(9, 268);
             this.pBRentals.Name = "pBRentals";
@@ -398,6 +422,7 @@
             // 
             // pBCustomer
             // 
+            this.pBCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBCustomer.Image = ((System.Drawing.Image)(resources.GetObject("pBCustomer.Image")));
             this.pBCustomer.Location = new System.Drawing.Point(9, 328);
             this.pBCustomer.Name = "pBCustomer";
@@ -409,6 +434,7 @@
             // 
             // pBService
             // 
+            this.pBService.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBService.Image = ((System.Drawing.Image)(resources.GetObject("pBService.Image")));
             this.pBService.Location = new System.Drawing.Point(9, 207);
             this.pBService.Name = "pBService";
@@ -431,6 +457,7 @@
             // 
             // pBEquip
             // 
+            this.pBEquip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBEquip.Image = ((System.Drawing.Image)(resources.GetObject("pBEquip.Image")));
             this.pBEquip.Location = new System.Drawing.Point(6, 148);
             this.pBEquip.Name = "pBEquip";
@@ -464,6 +491,7 @@
             // 
             // pBClose
             // 
+            this.pBClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBClose.Image = ((System.Drawing.Image)(resources.GetObject("pBClose.Image")));
             this.pBClose.Location = new System.Drawing.Point(765, 7);
             this.pBClose.Name = "pBClose";
@@ -488,6 +516,7 @@
             // pBMenu
             // 
             this.pBMenu.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pBMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBMenu.Image = ((System.Drawing.Image)(resources.GetObject("pBMenu.Image")));
             this.pBMenu.Location = new System.Drawing.Point(0, 0);
             this.pBMenu.Name = "pBMenu";

@@ -32,18 +32,18 @@ namespace KaizenMain
         //Get Forename data
         private void txtAddForename_TextChanged(object sender, EventArgs e)
         {
-            if (txtAddForename.Text.Length >= 2 && txtAddForename.Text.Length <= 15)
-                txtAddForename.BackColor = Color.White;
+            if (textBox34.Text.Length >= 2 && textBox34.Text.Length <= 15)
+                textBox34.BackColor = Color.White;
             else
-                txtAddForename.BackColor = Color.LightCoral;
+                textBox34.BackColor = Color.LightCoral;
         }
         //get Surname data
         private void txtAddSurname_TextChanged(object sender, EventArgs e)
         {
-            if (txtAddSurname.Text.Length >= 2 && txtAddSurname.Text.Length <= 15)
-                txtAddSurname.BackColor = Color.White;
+            if (txtAddForename.Text.Length >= 2 && txtAddForename.Text.Length <= 15)
+                txtAddForename.BackColor = Color.White;
             else
-                txtAddSurname.BackColor = Color.LightCoral;
+                txtAddForename.BackColor = Color.LightCoral;
         }
         //get Address data
         private void txtAddAddress_TextChanged(object sender, EventArgs e)
@@ -136,24 +136,24 @@ namespace KaizenMain
             
             try
             {
-                myCustomer.Surname = txtAddSurname.Text.Trim();
-            }
-
-            catch (MyException MyEx)
-            {
-                ok = false;
-                errP.SetError(txtAddSurname, MyEx.toString());
-            }
-
-            try
-            {
-                myCustomer.Forename = txtAddForename.Text.Trim();
+                myCustomer.Surname = txtAddForename.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
                 errP.SetError(txtAddForename, MyEx.toString());
+            }
+
+            try
+            {
+                myCustomer.Forename = textBox34.Text.Trim();
+            }
+
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(textBox34, MyEx.toString());
             }
 
             try
@@ -252,8 +252,8 @@ namespace KaizenMain
         void clearAddForm()
         {
 
+            textBox34.Clear();
             txtAddForename.Clear();
-            txtAddSurname.Clear();
             txtAddAddress.Clear();
             txtAddTown.Clear();
             txtAddCounty.Clear();
