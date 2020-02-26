@@ -31,7 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmService));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
+            this.roundButton3 = new KaizenMain.RoundButton();
+            this.roundButton2 = new KaizenMain.RoundButton();
+            this.roundButton1 = new KaizenMain.RoundButton();
+            this.label26 = new System.Windows.Forms.Label();
+            this.listViewEquip = new System.Windows.Forms.ListView();
             this.tabSearch = new System.Windows.Forms.TabPage();
+            this.roundButton7 = new KaizenMain.RoundButton();
+            this.roundButton4 = new KaizenMain.RoundButton();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -46,6 +54,11 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabAdd = new System.Windows.Forms.TabPage();
+            this.roundButton10 = new KaizenMain.RoundButton();
+            this.roundButton9 = new KaizenMain.RoundButton();
+            this.roundButton5 = new KaizenMain.RoundButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -59,6 +72,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.roundButton6 = new KaizenMain.RoundButton();
+            this.roundButton8 = new KaizenMain.RoundButton();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -68,6 +83,12 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.tabEdit = new System.Windows.Forms.TabPage();
+            this.roundButton15 = new KaizenMain.RoundButton();
+            this.roundButton14 = new KaizenMain.RoundButton();
+            this.roundButton11 = new KaizenMain.RoundButton();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -81,6 +102,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.roundButton13 = new KaizenMain.RoundButton();
+            this.roundButton12 = new KaizenMain.RoundButton();
             this.label28 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -90,6 +113,9 @@
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox24 = new System.Windows.Forms.TextBox();
             this.tabDelete = new System.Windows.Forms.TabPage();
+            this.roundButton17 = new KaizenMain.RoundButton();
+            this.roundButton16 = new KaizenMain.RoundButton();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -103,55 +129,29 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.roundButton3 = new KaizenMain.RoundButton();
-            this.roundButton2 = new KaizenMain.RoundButton();
-            this.roundButton1 = new KaizenMain.RoundButton();
-            this.label26 = new System.Windows.Forms.Label();
-            this.listViewEquip = new System.Windows.Forms.ListView();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.roundButton4 = new KaizenMain.RoundButton();
-            this.roundButton7 = new KaizenMain.RoundButton();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.roundButton5 = new KaizenMain.RoundButton();
-            this.roundButton6 = new KaizenMain.RoundButton();
-            this.roundButton8 = new KaizenMain.RoundButton();
-            this.roundButton9 = new KaizenMain.RoundButton();
-            this.roundButton10 = new KaizenMain.RoundButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.roundButton11 = new KaizenMain.RoundButton();
-            this.roundButton12 = new KaizenMain.RoundButton();
-            this.roundButton13 = new KaizenMain.RoundButton();
-            this.roundButton14 = new KaizenMain.RoundButton();
-            this.roundButton15 = new KaizenMain.RoundButton();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.roundButton16 = new KaizenMain.RoundButton();
-            this.roundButton17 = new KaizenMain.RoundButton();
             this.tabControl1.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             this.tabSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabAdd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabEdit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabDelete.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -191,10 +191,89 @@
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "DISPLAY";
             // 
+            // roundButton3
+            // 
+            this.roundButton3.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton3.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton3.FlatAppearance.BorderSize = 0;
+            this.roundButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton3.Location = new System.Drawing.Point(423, 6);
+            this.roundButton3.Name = "roundButton3";
+            this.roundButton3.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton3.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton3.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton3.Size = new System.Drawing.Size(104, 40);
+            this.roundButton3.TabIndex = 24;
+            this.roundButton3.Text = "TYPE";
+            this.roundButton3.TextColor = System.Drawing.Color.White;
+            this.roundButton3.UseVisualStyleBackColor = true;
+            // 
+            // roundButton2
+            // 
+            this.roundButton2.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton2.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton2.FlatAppearance.BorderSize = 0;
+            this.roundButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton2.Location = new System.Drawing.Point(313, 6);
+            this.roundButton2.Name = "roundButton2";
+            this.roundButton2.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton2.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton2.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton2.Size = new System.Drawing.Size(104, 40);
+            this.roundButton2.TabIndex = 23;
+            this.roundButton2.Text = "ID";
+            this.roundButton2.TextColor = System.Drawing.Color.White;
+            this.roundButton2.UseVisualStyleBackColor = true;
+            // 
+            // roundButton1
+            // 
+            this.roundButton1.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton1.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton1.FlatAppearance.BorderSize = 0;
+            this.roundButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton1.Location = new System.Drawing.Point(203, 6);
+            this.roundButton1.Name = "roundButton1";
+            this.roundButton1.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton1.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton1.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton1.Size = new System.Drawing.Size(104, 40);
+            this.roundButton1.TabIndex = 22;
+            this.roundButton1.Text = "A - Z";
+            this.roundButton1.TextColor = System.Drawing.Color.White;
+            this.roundButton1.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label26.Location = new System.Drawing.Point(121, 13);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(76, 24);
+            this.label26.TabIndex = 21;
+            this.label26.Text = "Sort By";
+            // 
+            // listViewEquip
+            // 
+            this.listViewEquip.HideSelection = false;
+            this.listViewEquip.Location = new System.Drawing.Point(6, 55);
+            this.listViewEquip.Name = "listViewEquip";
+            this.listViewEquip.Size = new System.Drawing.Size(722, 637);
+            this.listViewEquip.TabIndex = 20;
+            this.listViewEquip.UseCompatibleStateImageBehavior = false;
+            // 
             // tabSearch
             // 
             this.tabSearch.BackColor = System.Drawing.Color.White;
-            this.tabSearch.BackgroundImage = global::KaizenMain.Properties.Resources._53160265_2410346355864115_4176677497166888960_o;
+            this.tabSearch.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabSearch.Controls.Add(this.roundButton7);
             this.tabSearch.Controls.Add(this.roundButton4);
@@ -220,6 +299,60 @@
             this.tabSearch.TabIndex = 1;
             this.tabSearch.Text = "SEARCH";
             this.tabSearch.Click += new System.EventHandler(this.tabSearch_Click);
+            // 
+            // roundButton7
+            // 
+            this.roundButton7.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton7.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton7.FlatAppearance.BorderSize = 0;
+            this.roundButton7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton7.Location = new System.Drawing.Point(270, 636);
+            this.roundButton7.Name = "roundButton7";
+            this.roundButton7.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton7.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton7.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton7.Size = new System.Drawing.Size(189, 40);
+            this.roundButton7.TabIndex = 187;
+            this.roundButton7.Text = "E-MAIL SERVICE";
+            this.roundButton7.TextColor = System.Drawing.Color.White;
+            this.roundButton7.UseVisualStyleBackColor = true;
+            // 
+            // roundButton4
+            // 
+            this.roundButton4.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton4.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton4.FlatAppearance.BorderSize = 0;
+            this.roundButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton4.Location = new System.Drawing.Point(568, 71);
+            this.roundButton4.Name = "roundButton4";
+            this.roundButton4.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton4.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton4.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton4.Size = new System.Drawing.Size(115, 40);
+            this.roundButton4.TabIndex = 186;
+            this.roundButton4.Text = "CLEAR";
+            this.roundButton4.TextColor = System.Drawing.Color.White;
+            this.roundButton4.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox7.Location = new System.Drawing.Point(359, 20);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(43, 31);
+            this.pictureBox7.TabIndex = 185;
+            this.pictureBox7.TabStop = false;
             // 
             // label7
             // 
@@ -376,6 +509,93 @@
             this.tabAdd.Text = "ADD";
             this.tabAdd.Click += new System.EventHandler(this.tabAdd_Click);
             // 
+            // roundButton10
+            // 
+            this.roundButton10.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton10.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton10.FlatAppearance.BorderSize = 0;
+            this.roundButton10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton10.Location = new System.Drawing.Point(156, 631);
+            this.roundButton10.Name = "roundButton10";
+            this.roundButton10.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton10.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton10.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton10.Size = new System.Drawing.Size(189, 40);
+            this.roundButton10.TabIndex = 165;
+            this.roundButton10.Text = "COMPLETE SERVICE";
+            this.roundButton10.TextColor = System.Drawing.Color.White;
+            this.roundButton10.UseVisualStyleBackColor = true;
+            // 
+            // roundButton9
+            // 
+            this.roundButton9.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton9.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton9.FlatAppearance.BorderSize = 0;
+            this.roundButton9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton9.Location = new System.Drawing.Point(356, 631);
+            this.roundButton9.Name = "roundButton9";
+            this.roundButton9.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton9.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton9.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton9.Size = new System.Drawing.Size(189, 40);
+            this.roundButton9.TabIndex = 164;
+            this.roundButton9.Text = "E-MAIL SERVICE";
+            this.roundButton9.TextColor = System.Drawing.Color.White;
+            this.roundButton9.UseVisualStyleBackColor = true;
+            // 
+            // roundButton5
+            // 
+            this.roundButton5.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton5.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton5.FlatAppearance.BorderSize = 0;
+            this.roundButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton5.Location = new System.Drawing.Point(568, 73);
+            this.roundButton5.Name = "roundButton5";
+            this.roundButton5.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton5.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton5.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton5.Size = new System.Drawing.Size(115, 40);
+            this.roundButton5.TabIndex = 163;
+            this.roundButton5.Text = "CLEAR";
+            this.roundButton5.TextColor = System.Drawing.Color.White;
+            this.roundButton5.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Location = new System.Drawing.Point(364, 130);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 31);
+            this.pictureBox2.TabIndex = 153;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox6.Location = new System.Drawing.Point(364, 76);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(43, 31);
+            this.pictureBox6.TabIndex = 134;
+            this.pictureBox6.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -507,6 +727,48 @@
             this.panel1.Size = new System.Drawing.Size(680, 174);
             this.panel1.TabIndex = 119;
             // 
+            // roundButton6
+            // 
+            this.roundButton6.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton6.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton6.FlatAppearance.BorderSize = 0;
+            this.roundButton6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton6.Location = new System.Drawing.Point(539, 18);
+            this.roundButton6.Name = "roundButton6";
+            this.roundButton6.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton6.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton6.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton6.Size = new System.Drawing.Size(115, 40);
+            this.roundButton6.TabIndex = 166;
+            this.roundButton6.Text = "ADD";
+            this.roundButton6.TextColor = System.Drawing.Color.White;
+            this.roundButton6.UseVisualStyleBackColor = true;
+            // 
+            // roundButton8
+            // 
+            this.roundButton8.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton8.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton8.FlatAppearance.BorderSize = 0;
+            this.roundButton8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton8.Location = new System.Drawing.Point(539, 63);
+            this.roundButton8.Name = "roundButton8";
+            this.roundButton8.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton8.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton8.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton8.Size = new System.Drawing.Size(115, 40);
+            this.roundButton8.TabIndex = 165;
+            this.roundButton8.Text = "CLEAR";
+            this.roundButton8.TextColor = System.Drawing.Color.White;
+            this.roundButton8.UseVisualStyleBackColor = true;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -605,6 +867,106 @@
             this.tabEdit.Size = new System.Drawing.Size(734, 688);
             this.tabEdit.TabIndex = 3;
             this.tabEdit.Text = "EDIT";
+            // 
+            // roundButton15
+            // 
+            this.roundButton15.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton15.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton15.FlatAppearance.BorderSize = 0;
+            this.roundButton15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton15.Location = new System.Drawing.Point(156, 629);
+            this.roundButton15.Name = "roundButton15";
+            this.roundButton15.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton15.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton15.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton15.Size = new System.Drawing.Size(189, 40);
+            this.roundButton15.TabIndex = 165;
+            this.roundButton15.Text = "EDIT SERVICE";
+            this.roundButton15.TextColor = System.Drawing.Color.White;
+            this.roundButton15.UseVisualStyleBackColor = true;
+            // 
+            // roundButton14
+            // 
+            this.roundButton14.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton14.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton14.FlatAppearance.BorderSize = 0;
+            this.roundButton14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton14.Location = new System.Drawing.Point(369, 629);
+            this.roundButton14.Name = "roundButton14";
+            this.roundButton14.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton14.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton14.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton14.Size = new System.Drawing.Size(189, 40);
+            this.roundButton14.TabIndex = 164;
+            this.roundButton14.Text = "E-MAIL SERVICE";
+            this.roundButton14.TextColor = System.Drawing.Color.White;
+            this.roundButton14.UseVisualStyleBackColor = true;
+            // 
+            // roundButton11
+            // 
+            this.roundButton11.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton11.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton11.FlatAppearance.BorderSize = 0;
+            this.roundButton11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton11.Location = new System.Drawing.Point(568, 73);
+            this.roundButton11.Name = "roundButton11";
+            this.roundButton11.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton11.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton11.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton11.Size = new System.Drawing.Size(115, 40);
+            this.roundButton11.TabIndex = 163;
+            this.roundButton11.Text = "CLEAR";
+            this.roundButton11.TextColor = System.Drawing.Color.White;
+            this.roundButton11.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Location = new System.Drawing.Point(361, 18);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(43, 31);
+            this.pictureBox4.TabIndex = 156;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Location = new System.Drawing.Point(361, 129);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 31);
+            this.pictureBox1.TabIndex = 155;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Location = new System.Drawing.Point(361, 75);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 31);
+            this.pictureBox3.TabIndex = 154;
+            this.pictureBox3.TabStop = false;
             // 
             // label13
             // 
@@ -736,6 +1098,48 @@
             this.panel2.Size = new System.Drawing.Size(680, 174);
             this.panel2.TabIndex = 119;
             // 
+            // roundButton13
+            // 
+            this.roundButton13.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton13.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton13.FlatAppearance.BorderSize = 0;
+            this.roundButton13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton13.Location = new System.Drawing.Point(539, 21);
+            this.roundButton13.Name = "roundButton13";
+            this.roundButton13.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton13.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton13.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton13.Size = new System.Drawing.Size(115, 40);
+            this.roundButton13.TabIndex = 164;
+            this.roundButton13.Text = "EDIT";
+            this.roundButton13.TextColor = System.Drawing.Color.White;
+            this.roundButton13.UseVisualStyleBackColor = true;
+            // 
+            // roundButton12
+            // 
+            this.roundButton12.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton12.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton12.FlatAppearance.BorderSize = 0;
+            this.roundButton12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton12.Location = new System.Drawing.Point(539, 67);
+            this.roundButton12.Name = "roundButton12";
+            this.roundButton12.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton12.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton12.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton12.Size = new System.Drawing.Size(115, 40);
+            this.roundButton12.TabIndex = 163;
+            this.roundButton12.Text = "CLEAR";
+            this.roundButton12.TextColor = System.Drawing.Color.White;
+            this.roundButton12.UseVisualStyleBackColor = true;
+            // 
             // label28
             // 
             this.label28.AutoSize = true;
@@ -831,6 +1235,60 @@
             this.tabDelete.Size = new System.Drawing.Size(734, 688);
             this.tabDelete.TabIndex = 4;
             this.tabDelete.Text = "DELETE";
+            // 
+            // roundButton17
+            // 
+            this.roundButton17.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton17.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton17.FlatAppearance.BorderSize = 0;
+            this.roundButton17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton17.Location = new System.Drawing.Point(276, 636);
+            this.roundButton17.Name = "roundButton17";
+            this.roundButton17.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton17.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton17.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton17.Size = new System.Drawing.Size(189, 40);
+            this.roundButton17.TabIndex = 203;
+            this.roundButton17.Text = "DELETE RENTAL";
+            this.roundButton17.TextColor = System.Drawing.Color.White;
+            this.roundButton17.UseVisualStyleBackColor = true;
+            // 
+            // roundButton16
+            // 
+            this.roundButton16.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton16.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton16.FlatAppearance.BorderSize = 0;
+            this.roundButton16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton16.Location = new System.Drawing.Point(568, 101);
+            this.roundButton16.Name = "roundButton16";
+            this.roundButton16.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton16.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton16.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton16.Size = new System.Drawing.Size(115, 40);
+            this.roundButton16.TabIndex = 202;
+            this.roundButton16.Text = "CLEAR";
+            this.roundButton16.TextColor = System.Drawing.Color.White;
+            this.roundButton16.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pictureBox5.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Location = new System.Drawing.Point(360, 50);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(43, 31);
+            this.pictureBox5.TabIndex = 201;
+            this.pictureBox5.TabStop = false;
             // 
             // label19
             // 
@@ -956,464 +1414,6 @@
             this.label35.TabIndex = 185;
             this.label35.Text = "Trans ID";
             // 
-            // roundButton3
-            // 
-            this.roundButton3.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton3.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton3.FlatAppearance.BorderSize = 0;
-            this.roundButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton3.Location = new System.Drawing.Point(423, 6);
-            this.roundButton3.Name = "roundButton3";
-            this.roundButton3.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton3.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton3.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton3.Size = new System.Drawing.Size(104, 40);
-            this.roundButton3.TabIndex = 24;
-            this.roundButton3.Text = "TYPE";
-            this.roundButton3.TextColor = System.Drawing.Color.White;
-            this.roundButton3.UseVisualStyleBackColor = true;
-            // 
-            // roundButton2
-            // 
-            this.roundButton2.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton2.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton2.FlatAppearance.BorderSize = 0;
-            this.roundButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton2.Location = new System.Drawing.Point(313, 6);
-            this.roundButton2.Name = "roundButton2";
-            this.roundButton2.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton2.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton2.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton2.Size = new System.Drawing.Size(104, 40);
-            this.roundButton2.TabIndex = 23;
-            this.roundButton2.Text = "ID";
-            this.roundButton2.TextColor = System.Drawing.Color.White;
-            this.roundButton2.UseVisualStyleBackColor = true;
-            // 
-            // roundButton1
-            // 
-            this.roundButton1.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton1.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton1.FlatAppearance.BorderSize = 0;
-            this.roundButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton1.Location = new System.Drawing.Point(203, 6);
-            this.roundButton1.Name = "roundButton1";
-            this.roundButton1.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton1.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton1.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton1.Size = new System.Drawing.Size(104, 40);
-            this.roundButton1.TabIndex = 22;
-            this.roundButton1.Text = "A - Z";
-            this.roundButton1.TextColor = System.Drawing.Color.White;
-            this.roundButton1.UseVisualStyleBackColor = true;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label26.Location = new System.Drawing.Point(121, 13);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(76, 24);
-            this.label26.TabIndex = 21;
-            this.label26.Text = "Sort By";
-            // 
-            // listViewEquip
-            // 
-            this.listViewEquip.HideSelection = false;
-            this.listViewEquip.Location = new System.Drawing.Point(6, 55);
-            this.listViewEquip.Name = "listViewEquip";
-            this.listViewEquip.Size = new System.Drawing.Size(722, 637);
-            this.listViewEquip.TabIndex = 20;
-            this.listViewEquip.UseCompatibleStateImageBehavior = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pictureBox7.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Location = new System.Drawing.Point(359, 20);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox7.TabIndex = 185;
-            this.pictureBox7.TabStop = false;
-            // 
-            // roundButton4
-            // 
-            this.roundButton4.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton4.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton4.FlatAppearance.BorderSize = 0;
-            this.roundButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton4.Location = new System.Drawing.Point(568, 71);
-            this.roundButton4.Name = "roundButton4";
-            this.roundButton4.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton4.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton4.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton4.Size = new System.Drawing.Size(115, 40);
-            this.roundButton4.TabIndex = 186;
-            this.roundButton4.Text = "CLEAR";
-            this.roundButton4.TextColor = System.Drawing.Color.White;
-            this.roundButton4.UseVisualStyleBackColor = true;
-            // 
-            // roundButton7
-            // 
-            this.roundButton7.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton7.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton7.FlatAppearance.BorderSize = 0;
-            this.roundButton7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton7.Location = new System.Drawing.Point(270, 636);
-            this.roundButton7.Name = "roundButton7";
-            this.roundButton7.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton7.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton7.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton7.Size = new System.Drawing.Size(189, 40);
-            this.roundButton7.TabIndex = 187;
-            this.roundButton7.Text = "E-MAIL SERVICE";
-            this.roundButton7.TextColor = System.Drawing.Color.White;
-            this.roundButton7.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Location = new System.Drawing.Point(364, 76);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox6.TabIndex = 134;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pictureBox2.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(364, 130);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox2.TabIndex = 153;
-            this.pictureBox2.TabStop = false;
-            // 
-            // roundButton5
-            // 
-            this.roundButton5.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton5.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton5.FlatAppearance.BorderSize = 0;
-            this.roundButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton5.Location = new System.Drawing.Point(568, 73);
-            this.roundButton5.Name = "roundButton5";
-            this.roundButton5.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton5.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton5.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton5.Size = new System.Drawing.Size(115, 40);
-            this.roundButton5.TabIndex = 163;
-            this.roundButton5.Text = "CLEAR";
-            this.roundButton5.TextColor = System.Drawing.Color.White;
-            this.roundButton5.UseVisualStyleBackColor = true;
-            // 
-            // roundButton6
-            // 
-            this.roundButton6.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton6.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton6.FlatAppearance.BorderSize = 0;
-            this.roundButton6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton6.Location = new System.Drawing.Point(539, 18);
-            this.roundButton6.Name = "roundButton6";
-            this.roundButton6.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton6.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton6.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton6.Size = new System.Drawing.Size(115, 40);
-            this.roundButton6.TabIndex = 166;
-            this.roundButton6.Text = "ADD";
-            this.roundButton6.TextColor = System.Drawing.Color.White;
-            this.roundButton6.UseVisualStyleBackColor = true;
-            // 
-            // roundButton8
-            // 
-            this.roundButton8.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton8.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton8.FlatAppearance.BorderSize = 0;
-            this.roundButton8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton8.Location = new System.Drawing.Point(539, 63);
-            this.roundButton8.Name = "roundButton8";
-            this.roundButton8.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton8.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton8.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton8.Size = new System.Drawing.Size(115, 40);
-            this.roundButton8.TabIndex = 165;
-            this.roundButton8.Text = "CLEAR";
-            this.roundButton8.TextColor = System.Drawing.Color.White;
-            this.roundButton8.UseVisualStyleBackColor = true;
-            // 
-            // roundButton9
-            // 
-            this.roundButton9.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton9.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton9.FlatAppearance.BorderSize = 0;
-            this.roundButton9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton9.Location = new System.Drawing.Point(356, 631);
-            this.roundButton9.Name = "roundButton9";
-            this.roundButton9.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton9.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton9.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton9.Size = new System.Drawing.Size(189, 40);
-            this.roundButton9.TabIndex = 164;
-            this.roundButton9.Text = "E-MAIL SERVICE";
-            this.roundButton9.TextColor = System.Drawing.Color.White;
-            this.roundButton9.UseVisualStyleBackColor = true;
-            // 
-            // roundButton10
-            // 
-            this.roundButton10.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton10.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton10.FlatAppearance.BorderSize = 0;
-            this.roundButton10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton10.Location = new System.Drawing.Point(156, 631);
-            this.roundButton10.Name = "roundButton10";
-            this.roundButton10.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton10.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton10.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton10.Size = new System.Drawing.Size(189, 40);
-            this.roundButton10.TabIndex = 165;
-            this.roundButton10.Text = "COMPLETE SERVICE";
-            this.roundButton10.TextColor = System.Drawing.Color.White;
-            this.roundButton10.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pictureBox1.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(361, 129);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox1.TabIndex = 155;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Location = new System.Drawing.Point(361, 75);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox3.TabIndex = 154;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pictureBox4.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Location = new System.Drawing.Point(361, 18);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox4.TabIndex = 156;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // roundButton11
-            // 
-            this.roundButton11.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton11.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton11.FlatAppearance.BorderSize = 0;
-            this.roundButton11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton11.Location = new System.Drawing.Point(568, 73);
-            this.roundButton11.Name = "roundButton11";
-            this.roundButton11.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton11.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton11.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton11.Size = new System.Drawing.Size(115, 40);
-            this.roundButton11.TabIndex = 163;
-            this.roundButton11.Text = "CLEAR";
-            this.roundButton11.TextColor = System.Drawing.Color.White;
-            this.roundButton11.UseVisualStyleBackColor = true;
-            // 
-            // roundButton12
-            // 
-            this.roundButton12.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton12.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton12.FlatAppearance.BorderSize = 0;
-            this.roundButton12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton12.Location = new System.Drawing.Point(539, 67);
-            this.roundButton12.Name = "roundButton12";
-            this.roundButton12.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton12.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton12.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton12.Size = new System.Drawing.Size(115, 40);
-            this.roundButton12.TabIndex = 163;
-            this.roundButton12.Text = "CLEAR";
-            this.roundButton12.TextColor = System.Drawing.Color.White;
-            this.roundButton12.UseVisualStyleBackColor = true;
-            // 
-            // roundButton13
-            // 
-            this.roundButton13.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton13.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton13.FlatAppearance.BorderSize = 0;
-            this.roundButton13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton13.Location = new System.Drawing.Point(539, 21);
-            this.roundButton13.Name = "roundButton13";
-            this.roundButton13.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton13.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton13.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton13.Size = new System.Drawing.Size(115, 40);
-            this.roundButton13.TabIndex = 164;
-            this.roundButton13.Text = "EDIT";
-            this.roundButton13.TextColor = System.Drawing.Color.White;
-            this.roundButton13.UseVisualStyleBackColor = true;
-            // 
-            // roundButton14
-            // 
-            this.roundButton14.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton14.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton14.FlatAppearance.BorderSize = 0;
-            this.roundButton14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton14.Location = new System.Drawing.Point(369, 629);
-            this.roundButton14.Name = "roundButton14";
-            this.roundButton14.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton14.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton14.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton14.Size = new System.Drawing.Size(189, 40);
-            this.roundButton14.TabIndex = 164;
-            this.roundButton14.Text = "E-MAIL SERVICE";
-            this.roundButton14.TextColor = System.Drawing.Color.White;
-            this.roundButton14.UseVisualStyleBackColor = true;
-            // 
-            // roundButton15
-            // 
-            this.roundButton15.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton15.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton15.FlatAppearance.BorderSize = 0;
-            this.roundButton15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton15.Location = new System.Drawing.Point(156, 629);
-            this.roundButton15.Name = "roundButton15";
-            this.roundButton15.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton15.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton15.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton15.Size = new System.Drawing.Size(189, 40);
-            this.roundButton15.TabIndex = 165;
-            this.roundButton15.Text = "EDIT SERVICE";
-            this.roundButton15.TextColor = System.Drawing.Color.White;
-            this.roundButton15.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pictureBox5.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Location = new System.Drawing.Point(360, 50);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox5.TabIndex = 201;
-            this.pictureBox5.TabStop = false;
-            // 
-            // roundButton16
-            // 
-            this.roundButton16.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton16.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton16.FlatAppearance.BorderSize = 0;
-            this.roundButton16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton16.Location = new System.Drawing.Point(568, 101);
-            this.roundButton16.Name = "roundButton16";
-            this.roundButton16.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton16.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton16.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton16.Size = new System.Drawing.Size(115, 40);
-            this.roundButton16.TabIndex = 202;
-            this.roundButton16.Text = "CLEAR";
-            this.roundButton16.TextColor = System.Drawing.Color.White;
-            this.roundButton16.UseVisualStyleBackColor = true;
-            // 
-            // roundButton17
-            // 
-            this.roundButton17.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton17.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton17.FlatAppearance.BorderSize = 0;
-            this.roundButton17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton17.Location = new System.Drawing.Point(276, 636);
-            this.roundButton17.Name = "roundButton17";
-            this.roundButton17.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton17.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton17.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton17.Size = new System.Drawing.Size(189, 40);
-            this.roundButton17.TabIndex = 203;
-            this.roundButton17.Text = "DELETE RENTAL";
-            this.roundButton17.TextColor = System.Drawing.Color.White;
-            this.roundButton17.UseVisualStyleBackColor = true;
-            // 
             // frmService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1427,31 +1427,31 @@
             this.tabDisplay.PerformLayout();
             this.tabSearch.ResumeLayout(false);
             this.tabSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabAdd.ResumeLayout(false);
             this.tabAdd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabEdit.ResumeLayout(false);
             this.tabEdit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tabDelete.ResumeLayout(false);
             this.tabDelete.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }

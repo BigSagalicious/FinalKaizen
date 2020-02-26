@@ -51,5 +51,15 @@ namespace KaizenMain
         {
 
         }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
