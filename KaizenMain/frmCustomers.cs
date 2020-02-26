@@ -32,10 +32,10 @@ namespace KaizenMain
         //Get Forename data
         private void txtAddForename_TextChanged(object sender, EventArgs e)
         {
-            if (textBox34.Text.Length >= 2 && textBox34.Text.Length <= 15)
-                textBox34.BackColor = Color.White;
+            if (txtDeleteForename.Text.Length >= 2 && txtDeleteForename.Text.Length <= 15)
+                txtDeleteForename.BackColor = Color.White;
             else
-                textBox34.BackColor = Color.LightCoral;
+                txtDeleteForename.BackColor = Color.LightCoral;
         }
         //get Surname data
         private void txtAddSurname_TextChanged(object sender, EventArgs e)
@@ -147,13 +147,13 @@ namespace KaizenMain
 
             try
             {
-                myCustomer.Forename = textBox34.Text.Trim();
+                myCustomer.Forename = txtDeleteForename.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(textBox34, MyEx.toString());
+                errP.SetError(txtDeleteForename, MyEx.toString());
             }
 
             try
@@ -252,7 +252,7 @@ namespace KaizenMain
         void clearAddForm()
         {
 
-            textBox34.Clear();
+            txtDeleteForename.Clear();
             txtAddForename.Clear();
             txtAddAddress.Clear();
             txtAddTown.Clear();
@@ -268,10 +268,19 @@ namespace KaizenMain
 
         }
 
+        private void dgvCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void Customer_Load(object sender, EventArgs e)
         {
-            connStr = @"Data Source = .\SQLEXPRESS; Initial Catalog = Kaizen;Integrated Security = true ";
-            //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+            //connStr = @"Data Source = .\SQLEXPRESS; Initial Catalog = Kaizen;Integrated Security = true ";
+
+            connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+
+            //connStr = "Server=[.];Database=[Kaizen];Trusted_Connection=true";
+
             sqlCustomer = @"select * from Customer";
             daCustomer = new SqlDataAdapter(sqlCustomer, connStr);
             cmdBCustomer = new SqlCommandBuilder(daCustomer);
