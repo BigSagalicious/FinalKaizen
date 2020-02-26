@@ -36,6 +36,9 @@
             this.label41 = new System.Windows.Forms.Label();
             this.listViewEquip = new System.Windows.Forms.ListView();
             this.tabSearch = new System.Windows.Forms.TabPage();
+            this.roundButton17 = new KaizenMain.RoundButton();
+            this.roundButton16 = new KaizenMain.RoundButton();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label37 = new System.Windows.Forms.Label();
             this.textBox37 = new System.Windows.Forms.TextBox();
             this.textBox28 = new System.Windows.Forms.TextBox();
@@ -57,11 +60,6 @@
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tabAdd = new System.Windows.Forms.TabPage();
-            this.tabEdit = new System.Windows.Forms.TabPage();
-            this.tabDelete = new System.Windows.Forms.TabPage();
-            this.roundButton16 = new KaizenMain.RoundButton();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.roundButton17 = new KaizenMain.RoundButton();
             this.roundButton4 = new KaizenMain.RoundButton();
             this.roundButton5 = new KaizenMain.RoundButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -84,6 +82,7 @@
             this.label30 = new System.Windows.Forms.Label();
             this.textBox38 = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
+            this.tabEdit = new System.Windows.Forms.TabPage();
             this.roundButton6 = new KaizenMain.RoundButton();
             this.roundButton7 = new KaizenMain.RoundButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -107,6 +106,7 @@
             this.label33 = new System.Windows.Forms.Label();
             this.textBox39 = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
+            this.tabDelete = new System.Windows.Forms.TabPage();
             this.roundButton8 = new KaizenMain.RoundButton();
             this.roundButton9 = new KaizenMain.RoundButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -133,11 +133,11 @@
             this.tabControl1.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             this.tabSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tabAdd.SuspendLayout();
             this.tabEdit.SuspendLayout();
-            this.tabDelete.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -261,7 +261,7 @@
             // tabSearch
             // 
             this.tabSearch.BackColor = System.Drawing.Color.White;
-            this.tabSearch.BackgroundImage = global::KaizenMain.Properties.Resources._53160265_2410346355864115_4176677497166888960_o;
+            this.tabSearch.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabSearch.Controls.Add(this.roundButton17);
             this.tabSearch.Controls.Add(this.roundButton16);
@@ -295,6 +295,60 @@
             this.tabSearch.TabIndex = 1;
             this.tabSearch.Text = "SEARCH";
             this.tabSearch.Click += new System.EventHandler(this.tabSearch_Click);
+            // 
+            // roundButton17
+            // 
+            this.roundButton17.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton17.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton17.FlatAppearance.BorderSize = 0;
+            this.roundButton17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton17.Location = new System.Drawing.Point(273, 592);
+            this.roundButton17.Name = "roundButton17";
+            this.roundButton17.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton17.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton17.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton17.Size = new System.Drawing.Size(189, 40);
+            this.roundButton17.TabIndex = 224;
+            this.roundButton17.Text = "PRINT SUPPLIER";
+            this.roundButton17.TextColor = System.Drawing.Color.White;
+            this.roundButton17.UseVisualStyleBackColor = true;
+            // 
+            // roundButton16
+            // 
+            this.roundButton16.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton16.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton16.FlatAppearance.BorderSize = 0;
+            this.roundButton16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton16.Location = new System.Drawing.Point(582, 37);
+            this.roundButton16.Name = "roundButton16";
+            this.roundButton16.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton16.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton16.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton16.Size = new System.Drawing.Size(115, 40);
+            this.roundButton16.TabIndex = 223;
+            this.roundButton16.Text = "CLEAR";
+            this.roundButton16.TextColor = System.Drawing.Color.White;
+            this.roundButton16.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Location = new System.Drawing.Point(379, 39);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(43, 31);
+            this.pictureBox5.TabIndex = 222;
+            this.pictureBox5.TabStop = false;
             // 
             // label37
             // 
@@ -469,7 +523,7 @@
             // tabAdd
             // 
             this.tabAdd.BackColor = System.Drawing.Color.White;
-            this.tabAdd.BackgroundImage = global::KaizenMain.Properties.Resources._53160265_2410346355864115_4176677497166888960_o;
+            this.tabAdd.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabAdd.Controls.Add(this.roundButton4);
             this.tabAdd.Controls.Add(this.roundButton5);
@@ -500,132 +554,6 @@
             this.tabAdd.Size = new System.Drawing.Size(734, 688);
             this.tabAdd.TabIndex = 2;
             this.tabAdd.Text = "ADD";
-            // 
-            // tabEdit
-            // 
-            this.tabEdit.BackColor = System.Drawing.Color.White;
-            this.tabEdit.BackgroundImage = global::KaizenMain.Properties.Resources._53160265_2410346355864115_4176677497166888960_o;
-            this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabEdit.Controls.Add(this.roundButton6);
-            this.tabEdit.Controls.Add(this.roundButton7);
-            this.tabEdit.Controls.Add(this.pictureBox1);
-            this.tabEdit.Controls.Add(this.label13);
-            this.tabEdit.Controls.Add(this.textBox13);
-            this.tabEdit.Controls.Add(this.textBox14);
-            this.tabEdit.Controls.Add(this.label14);
-            this.tabEdit.Controls.Add(this.textBox15);
-            this.tabEdit.Controls.Add(this.label15);
-            this.tabEdit.Controls.Add(this.textBox16);
-            this.tabEdit.Controls.Add(this.label16);
-            this.tabEdit.Controls.Add(this.textBox17);
-            this.tabEdit.Controls.Add(this.label17);
-            this.tabEdit.Controls.Add(this.textBox18);
-            this.tabEdit.Controls.Add(this.label18);
-            this.tabEdit.Controls.Add(this.textBox31);
-            this.tabEdit.Controls.Add(this.label31);
-            this.tabEdit.Controls.Add(this.textBox32);
-            this.tabEdit.Controls.Add(this.label32);
-            this.tabEdit.Controls.Add(this.textBox33);
-            this.tabEdit.Controls.Add(this.label33);
-            this.tabEdit.Controls.Add(this.textBox39);
-            this.tabEdit.Controls.Add(this.label39);
-            this.tabEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.tabEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tabEdit.Location = new System.Drawing.Point(4, 29);
-            this.tabEdit.Name = "tabEdit";
-            this.tabEdit.Size = new System.Drawing.Size(734, 688);
-            this.tabEdit.TabIndex = 3;
-            this.tabEdit.Text = "EDIT";
-            // 
-            // tabDelete
-            // 
-            this.tabDelete.BackColor = System.Drawing.Color.White;
-            this.tabDelete.BackgroundImage = global::KaizenMain.Properties.Resources._53160265_2410346355864115_4176677497166888960_o;
-            this.tabDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabDelete.Controls.Add(this.roundButton8);
-            this.tabDelete.Controls.Add(this.roundButton9);
-            this.tabDelete.Controls.Add(this.pictureBox2);
-            this.tabDelete.Controls.Add(this.label19);
-            this.tabDelete.Controls.Add(this.textBox19);
-            this.tabDelete.Controls.Add(this.textBox20);
-            this.tabDelete.Controls.Add(this.label20);
-            this.tabDelete.Controls.Add(this.textBox21);
-            this.tabDelete.Controls.Add(this.label21);
-            this.tabDelete.Controls.Add(this.textBox22);
-            this.tabDelete.Controls.Add(this.label22);
-            this.tabDelete.Controls.Add(this.textBox23);
-            this.tabDelete.Controls.Add(this.label23);
-            this.tabDelete.Controls.Add(this.textBox24);
-            this.tabDelete.Controls.Add(this.label24);
-            this.tabDelete.Controls.Add(this.textBox34);
-            this.tabDelete.Controls.Add(this.label34);
-            this.tabDelete.Controls.Add(this.textBox35);
-            this.tabDelete.Controls.Add(this.label35);
-            this.tabDelete.Controls.Add(this.textBox36);
-            this.tabDelete.Controls.Add(this.label36);
-            this.tabDelete.Controls.Add(this.textBox40);
-            this.tabDelete.Controls.Add(this.label40);
-            this.tabDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.tabDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tabDelete.Location = new System.Drawing.Point(4, 29);
-            this.tabDelete.Name = "tabDelete";
-            this.tabDelete.Size = new System.Drawing.Size(734, 688);
-            this.tabDelete.TabIndex = 4;
-            this.tabDelete.Text = "DELETE";
-            // 
-            // roundButton16
-            // 
-            this.roundButton16.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton16.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton16.FlatAppearance.BorderSize = 0;
-            this.roundButton16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton16.Location = new System.Drawing.Point(582, 37);
-            this.roundButton16.Name = "roundButton16";
-            this.roundButton16.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton16.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton16.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton16.Size = new System.Drawing.Size(115, 40);
-            this.roundButton16.TabIndex = 223;
-            this.roundButton16.Text = "CLEAR";
-            this.roundButton16.TextColor = System.Drawing.Color.White;
-            this.roundButton16.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pictureBox5.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Location = new System.Drawing.Point(379, 39);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox5.TabIndex = 222;
-            this.pictureBox5.TabStop = false;
-            // 
-            // roundButton17
-            // 
-            this.roundButton17.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton17.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton17.FlatAppearance.BorderSize = 0;
-            this.roundButton17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton17.Location = new System.Drawing.Point(273, 592);
-            this.roundButton17.Name = "roundButton17";
-            this.roundButton17.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton17.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton17.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton17.Size = new System.Drawing.Size(189, 40);
-            this.roundButton17.TabIndex = 224;
-            this.roundButton17.Text = "PRINT SUPPLIER";
-            this.roundButton17.TextColor = System.Drawing.Color.White;
-            this.roundButton17.UseVisualStyleBackColor = true;
             // 
             // roundButton4
             // 
@@ -839,6 +767,42 @@
             this.label38.TabIndex = 225;
             this.label38.Text = "Supplier ID";
             // 
+            // tabEdit
+            // 
+            this.tabEdit.BackColor = System.Drawing.Color.White;
+            this.tabEdit.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
+            this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabEdit.Controls.Add(this.roundButton6);
+            this.tabEdit.Controls.Add(this.roundButton7);
+            this.tabEdit.Controls.Add(this.pictureBox1);
+            this.tabEdit.Controls.Add(this.label13);
+            this.tabEdit.Controls.Add(this.textBox13);
+            this.tabEdit.Controls.Add(this.textBox14);
+            this.tabEdit.Controls.Add(this.label14);
+            this.tabEdit.Controls.Add(this.textBox15);
+            this.tabEdit.Controls.Add(this.label15);
+            this.tabEdit.Controls.Add(this.textBox16);
+            this.tabEdit.Controls.Add(this.label16);
+            this.tabEdit.Controls.Add(this.textBox17);
+            this.tabEdit.Controls.Add(this.label17);
+            this.tabEdit.Controls.Add(this.textBox18);
+            this.tabEdit.Controls.Add(this.label18);
+            this.tabEdit.Controls.Add(this.textBox31);
+            this.tabEdit.Controls.Add(this.label31);
+            this.tabEdit.Controls.Add(this.textBox32);
+            this.tabEdit.Controls.Add(this.label32);
+            this.tabEdit.Controls.Add(this.textBox33);
+            this.tabEdit.Controls.Add(this.label33);
+            this.tabEdit.Controls.Add(this.textBox39);
+            this.tabEdit.Controls.Add(this.label39);
+            this.tabEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.tabEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tabEdit.Location = new System.Drawing.Point(4, 29);
+            this.tabEdit.Name = "tabEdit";
+            this.tabEdit.Size = new System.Drawing.Size(734, 688);
+            this.tabEdit.TabIndex = 3;
+            this.tabEdit.Text = "EDIT";
+            // 
             // roundButton6
             // 
             this.roundButton6.BorderColor = System.Drawing.Color.Silver;
@@ -883,7 +847,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1063,6 +1027,42 @@
             this.label39.TabIndex = 225;
             this.label39.Text = "Supplier ID";
             // 
+            // tabDelete
+            // 
+            this.tabDelete.BackColor = System.Drawing.Color.White;
+            this.tabDelete.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
+            this.tabDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabDelete.Controls.Add(this.roundButton8);
+            this.tabDelete.Controls.Add(this.roundButton9);
+            this.tabDelete.Controls.Add(this.pictureBox2);
+            this.tabDelete.Controls.Add(this.label19);
+            this.tabDelete.Controls.Add(this.textBox19);
+            this.tabDelete.Controls.Add(this.textBox20);
+            this.tabDelete.Controls.Add(this.label20);
+            this.tabDelete.Controls.Add(this.textBox21);
+            this.tabDelete.Controls.Add(this.label21);
+            this.tabDelete.Controls.Add(this.textBox22);
+            this.tabDelete.Controls.Add(this.label22);
+            this.tabDelete.Controls.Add(this.textBox23);
+            this.tabDelete.Controls.Add(this.label23);
+            this.tabDelete.Controls.Add(this.textBox24);
+            this.tabDelete.Controls.Add(this.label24);
+            this.tabDelete.Controls.Add(this.textBox34);
+            this.tabDelete.Controls.Add(this.label34);
+            this.tabDelete.Controls.Add(this.textBox35);
+            this.tabDelete.Controls.Add(this.label35);
+            this.tabDelete.Controls.Add(this.textBox36);
+            this.tabDelete.Controls.Add(this.label36);
+            this.tabDelete.Controls.Add(this.textBox40);
+            this.tabDelete.Controls.Add(this.label40);
+            this.tabDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.tabDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tabDelete.Location = new System.Drawing.Point(4, 29);
+            this.tabDelete.Name = "tabDelete";
+            this.tabDelete.Size = new System.Drawing.Size(734, 688);
+            this.tabDelete.TabIndex = 4;
+            this.tabDelete.Text = "DELETE";
+            // 
             // roundButton8
             // 
             this.roundButton8.BorderColor = System.Drawing.Color.Silver;
@@ -1107,7 +1107,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1300,14 +1300,14 @@
             this.tabDisplay.PerformLayout();
             this.tabSearch.ResumeLayout(false);
             this.tabSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tabAdd.ResumeLayout(false);
             this.tabAdd.PerformLayout();
             this.tabEdit.ResumeLayout(false);
             this.tabEdit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabDelete.ResumeLayout(false);
             this.tabDelete.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 

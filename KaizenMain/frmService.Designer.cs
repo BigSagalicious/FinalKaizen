@@ -481,7 +481,7 @@
             // tabAdd
             // 
             this.tabAdd.BackColor = System.Drawing.Color.White;
-            this.tabAdd.BackgroundImage = global::KaizenMain.Properties.Resources._53160265_2410346355864115_4176677497166888960_o;
+            this.tabAdd.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabAdd.Controls.Add(this.roundButton10);
             this.tabAdd.Controls.Add(this.roundButton9);
@@ -840,7 +840,7 @@
             // tabEdit
             // 
             this.tabEdit.BackColor = System.Drawing.Color.White;
-            this.tabEdit.BackgroundImage = global::KaizenMain.Properties.Resources._53160265_2410346355864115_4176677497166888960_o;
+            this.tabEdit.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabEdit.Controls.Add(this.roundButton15);
             this.tabEdit.Controls.Add(this.roundButton14);
@@ -1081,6 +1081,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.roundButton13);
             this.panel2.Controls.Add(this.roundButton12);
@@ -1211,7 +1212,7 @@
             // tabDelete
             // 
             this.tabDelete.BackColor = System.Drawing.Color.White;
-            this.tabDelete.BackgroundImage = global::KaizenMain.Properties.Resources._53160265_2410346355864115_4176677497166888960_o;
+            this.tabDelete.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabDelete.Controls.Add(this.roundButton17);
             this.tabDelete.Controls.Add(this.roundButton16);
@@ -1280,7 +1281,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
