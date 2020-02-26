@@ -25,9 +25,115 @@ namespace KaizenMain
             InitializeComponent();
         }
 
+
+
         private void tabCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            selectedTab = tabCustomer.SelectedIndex;
+            tabCustomer.TabPages[tabCustomer.SelectedIndex].Focus();
+            tabCustomer.TabPages[tabCustomer.SelectedIndex].CausesValidation = true;
+
+            if (dgvCustomers.SelectedRows.Count == 0 && tabCustomer.SelectedIndex == 2)
+                tabCustomer.TabPages[tabCustomer.SelectedIndex].CausesValidation = true;
+            else
+            {
+                switch (tabCustomer.SelectedIndex)
+                {
+                    case 0:
+                        {
+                            dsKaizen.Tables["Customer"].Clear();
+                            daCustomer.Fill(dsKaizen, "Customer");
+
+                            break;
+                        }
+                    case 1:
+                        {
+                            txtSearchID.Text = custNoSelected.ToString();
+
+                            drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtSearchID.Text);
+
+                            txtSearchForename.Text = drCustomer["CustFName"].ToString();
+                            txtSearchSurname.Text = drCustomer["CustSName"].ToString();
+                            txtSearchAddress.Text = drCustomer["CustAddress"].ToString();
+                            txtSearchTown.Text = drCustomer["TownCity"].ToString();
+                            txtSearchCounty.Text = drCustomer["County"].ToString();
+                            txtSearchPcode.Text = drCustomer["CustPCode"].ToString();
+                            txtSearchEmail.Text = drCustomer["CustEmail"].ToString();
+                            txtSearchTel.Text = drCustomer["CustTel"].ToString();
+                            break;
+                        }
+
+                    case 2:
+                        {
+                            int noRows = dsKaizen.Tables["Customer"].Rows.Count;
+
+                            if (noRows == 0)
+                                lblAdCustNo.Text = "1000";
+                            else
+                            {
+                                getNumber(noRows);
+                            }
+
+                            errP.Clear();
+                            clearAddForm();
+                            break;
+
+                        }
+                    case 3:
+                        {
+                            if (custNoSelected == 0)
+                            {
+                                tabCustomer.SelectedIndex = 0;
+                                break;
+                            }
+                            else
+                            {
+                                txtEditID.Text = custNoSelected.ToString();
+
+                                drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtEditID.Text);
+                                /*  if (drCustomer["Title"].ToString() == "Mr")
+                                      cmbEdit.SelectedIndex = 0;
+                                  if (drCustomer["Title"].ToString() == "Mrs")
+                                      cmbEdit.SelectedIndex = 1;
+                                  if (drCustomer["Title"].ToString() == "Miss")
+                                      cmbEdit.SelectedIndex = 2;
+                                  if (drCustomer["Title"].ToString() == "Ms")
+                                     cmbEdit.SelectedIndex = 3;
+  */
+                                txtEditForename.Text = drCustomer["CustFName"].ToString();
+                                txtEditSurname.Text = drCustomer["CustSName"].ToString();
+                                txtEditAddress.Text = drCustomer["CustAddress"].ToString();
+                                txtEditTown.Text = drCustomer["TownCity"].ToString();
+                                txtEditCounty.Text = drCustomer["County"].ToString();
+                                txtEditPostcode.Text = drCustomer["CustPCode"].ToString();
+                                txtEditEmail.Text = drCustomer["CustEmail"].ToString();
+                                txtEditTel.Text = drCustomer["CustTel"].ToString();
+
+                                break;
+
+                            }
+                        }
+                    case 4:
+                        {
+                            txtDeleteID.Text = custNoSelected.ToString();
+
+                            drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtDeleteID.Text);
+
+                            txtDeleteForename.Text = drCustomer["CustFName"].ToString();
+                            txtDeleteSurname.Text = drCustomer["CustSName"].ToString();
+                            txtDeleteAddress.Text = drCustomer["CustAddress"].ToString();
+                            txtDeleteTown.Text = drCustomer["TownCity"].ToString();
+                            txtDeleteCounty.Text = drCustomer["County"].ToString();
+                            txtDeletePostcode.Text = drCustomer["CustPCode"].ToString();
+                            txtDeleteEmail.Text = drCustomer["CustEmail"].ToString();
+                            txtSearchTel.Text = drCustomer["CustTel"].ToString();
+                            break;
+                        }
+
+
+
+                }
+            }
         }
         //Get Forename data
         private void txtAddForename_TextChanged(object sender, EventArgs e)
@@ -275,7 +381,7 @@ namespace KaizenMain
 
         private void Customer_Load(object sender, EventArgs e)
         {
-            //connStr = @"Data Source = .\SQLEXPRESS; Initial Catalog = Kaizen;Integrated Security = true ";
+           // connStr = @"Data Source = .\SQLEXPRESS; Initial Catalog = Kaizen;Integrated Security = true ";
 
             connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
@@ -294,6 +400,21 @@ namespace KaizenMain
             tabCustomer.SelectedIndex = 0;
 
 
+
+        }
+        void AddTabValidate(object sender, CancelEventArgs e)
+        {
+            if (dgvCustomers.SelectedRows.Count == 0)
+            {
+                custSelected = false;
+                custNoSelected = 0;
+            }
+            else if (dgvCustomers.SelectedRows.Count == 1)
+            {
+
+                custSelected = true;
+                custNoSelected = Convert.ToInt32(dgvCustomers.SelectedRows[0].Cells[0].Value);
+            }
 
         }
     }

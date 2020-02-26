@@ -104,15 +104,15 @@
             this.btnSearchEmailCust = new KaizenMain.RoundButton();
             this.btnSearchPrintCust = new KaizenMain.RoundButton();
             this.btnSearchClearForm = new KaizenMain.RoundButton();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtSearchTel = new System.Windows.Forms.TextBox();
+            this.txtSearchEmail = new System.Windows.Forms.TextBox();
+            this.txtSearchPcode = new System.Windows.Forms.TextBox();
+            this.txtSearchCounty = new System.Windows.Forms.TextBox();
+            this.txtSearchTown = new System.Windows.Forms.TextBox();
+            this.txtSearchAddress = new System.Windows.Forms.TextBox();
+            this.txtSearchSurname = new System.Windows.Forms.TextBox();
+            this.txtSearchForename = new System.Windows.Forms.TextBox();
+            this.txtSearchID = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -123,10 +123,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabDisplay = new System.Windows.Forms.TabPage();
-            this.btnDisplayType = new KaizenMain.RoundButton();
-            this.btnDisplayID = new KaizenMain.RoundButton();
-            this.btnDisplayAZ = new KaizenMain.RoundButton();
-            this.label36 = new System.Windows.Forms.Label();
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.tabCustomer = new System.Windows.Forms.TabControl();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
@@ -991,15 +987,15 @@
             this.tabSearch.Controls.Add(this.btnSearchEmailCust);
             this.tabSearch.Controls.Add(this.btnSearchPrintCust);
             this.tabSearch.Controls.Add(this.btnSearchClearForm);
-            this.tabSearch.Controls.Add(this.textBox28);
-            this.tabSearch.Controls.Add(this.textBox27);
-            this.tabSearch.Controls.Add(this.textBox26);
-            this.tabSearch.Controls.Add(this.textBox7);
-            this.tabSearch.Controls.Add(this.textBox8);
-            this.tabSearch.Controls.Add(this.textBox9);
-            this.tabSearch.Controls.Add(this.textBox10);
-            this.tabSearch.Controls.Add(this.textBox11);
-            this.tabSearch.Controls.Add(this.textBox12);
+            this.tabSearch.Controls.Add(this.txtSearchTel);
+            this.tabSearch.Controls.Add(this.txtSearchEmail);
+            this.tabSearch.Controls.Add(this.txtSearchPcode);
+            this.tabSearch.Controls.Add(this.txtSearchCounty);
+            this.tabSearch.Controls.Add(this.txtSearchTown);
+            this.tabSearch.Controls.Add(this.txtSearchAddress);
+            this.tabSearch.Controls.Add(this.txtSearchSurname);
+            this.tabSearch.Controls.Add(this.txtSearchForename);
+            this.tabSearch.Controls.Add(this.txtSearchID);
             this.tabSearch.Controls.Add(this.label28);
             this.tabSearch.Controls.Add(this.label27);
             this.tabSearch.Controls.Add(this.label26);
@@ -1095,68 +1091,68 @@
             this.btnSearchClearForm.TextColor = System.Drawing.Color.White;
             this.btnSearchClearForm.UseVisualStyleBackColor = true;
             // 
-            // textBox28
+            // txtSearchTel
             // 
-            this.textBox28.Location = new System.Drawing.Point(208, 486);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(437, 29);
-            this.textBox28.TabIndex = 219;
+            this.txtSearchTel.Location = new System.Drawing.Point(208, 486);
+            this.txtSearchTel.Name = "txtSearchTel";
+            this.txtSearchTel.Size = new System.Drawing.Size(437, 29);
+            this.txtSearchTel.TabIndex = 219;
             // 
-            // textBox27
+            // txtSearchEmail
             // 
-            this.textBox27.Location = new System.Drawing.Point(209, 423);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(437, 29);
-            this.textBox27.TabIndex = 217;
+            this.txtSearchEmail.Location = new System.Drawing.Point(209, 423);
+            this.txtSearchEmail.Name = "txtSearchEmail";
+            this.txtSearchEmail.Size = new System.Drawing.Size(437, 29);
+            this.txtSearchEmail.TabIndex = 217;
             // 
-            // textBox26
+            // txtSearchPcode
             // 
-            this.textBox26.Location = new System.Drawing.Point(209, 366);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(437, 29);
-            this.textBox26.TabIndex = 215;
+            this.txtSearchPcode.Location = new System.Drawing.Point(209, 366);
+            this.txtSearchPcode.Name = "txtSearchPcode";
+            this.txtSearchPcode.Size = new System.Drawing.Size(437, 29);
+            this.txtSearchPcode.TabIndex = 215;
             // 
-            // textBox7
+            // txtSearchCounty
             // 
-            this.textBox7.Location = new System.Drawing.Point(209, 311);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(437, 29);
-            this.textBox7.TabIndex = 213;
+            this.txtSearchCounty.Location = new System.Drawing.Point(209, 311);
+            this.txtSearchCounty.Name = "txtSearchCounty";
+            this.txtSearchCounty.Size = new System.Drawing.Size(437, 29);
+            this.txtSearchCounty.TabIndex = 213;
             // 
-            // textBox8
+            // txtSearchTown
             // 
-            this.textBox8.Location = new System.Drawing.Point(209, 257);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(437, 29);
-            this.textBox8.TabIndex = 211;
+            this.txtSearchTown.Location = new System.Drawing.Point(209, 257);
+            this.txtSearchTown.Name = "txtSearchTown";
+            this.txtSearchTown.Size = new System.Drawing.Size(437, 29);
+            this.txtSearchTown.TabIndex = 211;
             // 
-            // textBox9
+            // txtSearchAddress
             // 
-            this.textBox9.Location = new System.Drawing.Point(209, 206);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(437, 29);
-            this.textBox9.TabIndex = 209;
+            this.txtSearchAddress.Location = new System.Drawing.Point(209, 206);
+            this.txtSearchAddress.Name = "txtSearchAddress";
+            this.txtSearchAddress.Size = new System.Drawing.Size(437, 29);
+            this.txtSearchAddress.TabIndex = 209;
             // 
-            // textBox10
+            // txtSearchSurname
             // 
-            this.textBox10.Location = new System.Drawing.Point(209, 160);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(291, 29);
-            this.textBox10.TabIndex = 207;
+            this.txtSearchSurname.Location = new System.Drawing.Point(209, 160);
+            this.txtSearchSurname.Name = "txtSearchSurname";
+            this.txtSearchSurname.Size = new System.Drawing.Size(291, 29);
+            this.txtSearchSurname.TabIndex = 207;
             // 
-            // textBox11
+            // txtSearchForename
             // 
-            this.textBox11.Location = new System.Drawing.Point(208, 114);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(291, 29);
-            this.textBox11.TabIndex = 205;
+            this.txtSearchForename.Location = new System.Drawing.Point(208, 114);
+            this.txtSearchForename.Name = "txtSearchForename";
+            this.txtSearchForename.Size = new System.Drawing.Size(291, 29);
+            this.txtSearchForename.TabIndex = 205;
             // 
-            // textBox12
+            // txtSearchID
             // 
-            this.textBox12.Location = new System.Drawing.Point(208, 70);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(143, 29);
-            this.textBox12.TabIndex = 203;
+            this.txtSearchID.Location = new System.Drawing.Point(208, 70);
+            this.txtSearchID.Name = "txtSearchID";
+            this.txtSearchID.Size = new System.Drawing.Size(143, 29);
+            this.txtSearchID.TabIndex = 203;
             // 
             // label28
             // 
@@ -1260,12 +1256,8 @@
             // tabDisplay
             // 
             this.tabDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
-            this.tabDisplay.Controls.Add(this.btnDisplayType);
-            this.tabDisplay.Controls.Add(this.btnDisplayID);
-            this.tabDisplay.Controls.Add(this.btnDisplayAZ);
-            this.tabDisplay.Controls.Add(this.label36);
             this.tabDisplay.Controls.Add(this.dgvCustomers);
-            this.tabDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.tabDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabDisplay.Location = new System.Drawing.Point(4, 29);
             this.tabDisplay.Name = "tabDisplay";
             this.tabDisplay.Padding = new System.Windows.Forms.Padding(3);
@@ -1273,83 +1265,12 @@
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "DISPLAY";
             // 
-            // btnDisplayType
-            // 
-            this.btnDisplayType.BorderColor = System.Drawing.Color.Silver;
-            this.btnDisplayType.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnDisplayType.FlatAppearance.BorderSize = 0;
-            this.btnDisplayType.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDisplayType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDisplayType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDisplayType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisplayType.Location = new System.Drawing.Point(421, 8);
-            this.btnDisplayType.Name = "btnDisplayType";
-            this.btnDisplayType.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDisplayType.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnDisplayType.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDisplayType.Size = new System.Drawing.Size(104, 40);
-            this.btnDisplayType.TabIndex = 31;
-            this.btnDisplayType.Text = "TYPE";
-            this.btnDisplayType.TextColor = System.Drawing.Color.White;
-            this.btnDisplayType.UseVisualStyleBackColor = true;
-            // 
-            // btnDisplayID
-            // 
-            this.btnDisplayID.BorderColor = System.Drawing.Color.Silver;
-            this.btnDisplayID.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnDisplayID.FlatAppearance.BorderSize = 0;
-            this.btnDisplayID.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDisplayID.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDisplayID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDisplayID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisplayID.Location = new System.Drawing.Point(311, 8);
-            this.btnDisplayID.Name = "btnDisplayID";
-            this.btnDisplayID.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDisplayID.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnDisplayID.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDisplayID.Size = new System.Drawing.Size(104, 40);
-            this.btnDisplayID.TabIndex = 30;
-            this.btnDisplayID.Text = "ID";
-            this.btnDisplayID.TextColor = System.Drawing.Color.White;
-            this.btnDisplayID.UseVisualStyleBackColor = true;
-            // 
-            // btnDisplayAZ
-            // 
-            this.btnDisplayAZ.BorderColor = System.Drawing.Color.Silver;
-            this.btnDisplayAZ.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnDisplayAZ.FlatAppearance.BorderSize = 0;
-            this.btnDisplayAZ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDisplayAZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDisplayAZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDisplayAZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisplayAZ.Location = new System.Drawing.Point(201, 8);
-            this.btnDisplayAZ.Name = "btnDisplayAZ";
-            this.btnDisplayAZ.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDisplayAZ.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnDisplayAZ.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDisplayAZ.Size = new System.Drawing.Size(104, 40);
-            this.btnDisplayAZ.TabIndex = 29;
-            this.btnDisplayAZ.Text = "A - Z";
-            this.btnDisplayAZ.TextColor = System.Drawing.Color.White;
-            this.btnDisplayAZ.UseVisualStyleBackColor = true;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label36.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label36.Location = new System.Drawing.Point(119, 15);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(76, 24);
-            this.label36.TabIndex = 28;
-            this.label36.Text = "Sort By";
-            // 
             // dgvCustomers
             // 
             this.dgvCustomers.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCustomers.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCustomers.Location = new System.Drawing.Point(8, 55);
+            this.dgvCustomers.Location = new System.Drawing.Point(6, 6);
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.Size = new System.Drawing.Size(718, 637);
             this.dgvCustomers.TabIndex = 19;
@@ -1399,7 +1320,6 @@
             this.tabSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconSearchCustID)).EndInit();
             this.tabDisplay.ResumeLayout(false);
-            this.tabDisplay.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.tabCustomer.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1410,24 +1330,20 @@
         private System.Windows.Forms.ErrorProvider errP;
         private System.Windows.Forms.TabControl tabCustomer;
         private System.Windows.Forms.TabPage tabDisplay;
-        private RoundButton btnDisplayType;
-        private RoundButton btnDisplayID;
-        private RoundButton btnDisplayAZ;
-        private System.Windows.Forms.Label label36;
         private System.Windows.Forms.DataGridView dgvCustomers;
         private System.Windows.Forms.TabPage tabSearch;
         private RoundButton btnSearchEmailCust;
         private RoundButton btnSearchPrintCust;
         private RoundButton btnSearchClearForm;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtSearchTel;
+        private System.Windows.Forms.TextBox txtSearchEmail;
+        private System.Windows.Forms.TextBox txtSearchPcode;
+        private System.Windows.Forms.TextBox txtSearchCounty;
+        private System.Windows.Forms.TextBox txtSearchTown;
+        private System.Windows.Forms.TextBox txtSearchAddress;
+        private System.Windows.Forms.TextBox txtSearchSurname;
+        private System.Windows.Forms.TextBox txtSearchForename;
+        private System.Windows.Forms.TextBox txtSearchID;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
