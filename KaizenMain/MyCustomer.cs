@@ -8,26 +8,30 @@ namespace KaizenMain
 {
     class MyCustomer
     {
+        private int custID;
         private String surname, forename, street, town, county, postcode, telNo, email;
 
         public MyCustomer()
         {
 
-            this.CustomerNo = 0;
+            this.custID = 0;
             this.email = "";this.surname = ""; this.forename = ""; this.street = ""; this.town = ""; this.county = "";
             this.postcode = ""; this.telNo = "";
         }
 
-        public MyCustomer(int customerNo, string title, string surname, string forename, string street, string town, string county,
+        public MyCustomer(int custID, string title, string surname, string forename, string street, string town, string county,
            string postcode, string telNo, string email)
         {
-            this.CustomerNo = customerNo;
+            this.custID = custID;
             this.surname = surname; this.forename = forename; this.street = street; this.town = town; this.county = county;
             this.postcode = postcode; this.telNo = telNo; this.email = email;
 
         }
 
-        public int CustomerNo { get; set; }
+        public int CustID {
+            get { return custID; }
+            set { custID = value; }
+        }
 
 
 

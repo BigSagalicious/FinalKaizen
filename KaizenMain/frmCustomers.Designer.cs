@@ -756,6 +756,7 @@
             this.btnAddAddCust.Text = "ADD CUSTOMER";
             this.btnAddAddCust.TextColor = System.Drawing.Color.White;
             this.btnAddAddCust.UseVisualStyleBackColor = false;
+            this.btnAddAddCust.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnAddEmailCust
             // 

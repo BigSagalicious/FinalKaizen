@@ -26,14 +26,13 @@ namespace KaizenMain
         }
 
 
-
         private void tabCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedTab = tabCustomer.SelectedIndex;
             tabCustomer.TabPages[tabCustomer.SelectedIndex].Focus();
             tabCustomer.TabPages[tabCustomer.SelectedIndex].CausesValidation = true;
 
-            if (dgvCustomers.SelectedRows.Count == 0 && tabCustomer.SelectedIndex == 2)
+            if (dgvCustomers.SelectedRows.Count == 0 && tabCustomer.SelectedIndex == 1 && tabCustomer.SelectedIndex == 2 && tabCustomer.SelectedIndex == 3 && tabCustomer.SelectedIndex == 4)
                 tabCustomer.TabPages[tabCustomer.SelectedIndex].CausesValidation = true;
             else
             {
@@ -48,7 +47,7 @@ namespace KaizenMain
                         }
                     case 1:
                         {
-                            txtSearchID.Text = custNoSelected.ToString();
+                           /* txtSearchID.Text = custNoSelected.ToString();
 
                             drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtSearchID.Text);
 
@@ -60,7 +59,9 @@ namespace KaizenMain
                             txtSearchPcode.Text = drCustomer["CustPCode"].ToString();
                             txtSearchEmail.Text = drCustomer["CustEmail"].ToString();
                             txtSearchTel.Text = drCustomer["CustTel"].ToString();
+*/
                             break;
+                            
                         }
 
                     case 2:
@@ -203,7 +204,7 @@ namespace KaizenMain
         private void getNumber(int noRows)
         {
             drCustomer = dsKaizen.Tables["Customer"].Rows[noRows - 1];
-            //lblAddCustNo.Text = (int.Parse(drCustomer["CustomerNo"].ToString()) + 1).ToString();
+            lblAdCustNo.Text = (int.Parse(drCustomer["CustID"].ToString()) + 1).ToString();
         }
 
         void AddTabValidate(object sender, CancelEventArgs e)
@@ -219,8 +220,20 @@ namespace KaizenMain
                 custSelected = true;
                 custNoSelected = Convert.ToInt32(dgvCustomers.SelectedRows[0].Cells[0].Value);
             }
+        }
 
-
+        void EditTabValidate(object sender, EventArgs e)
+        {
+            if (custSelected == false && custNoSelected == 0)
+            {
+                custSelected = false;
+                custNoSelected = 0;
+            }
+            else if (dgvCustomers.SelectedRows.Count == 1)
+            {
+                custSelected = true;
+                custNoSelected = Convert.ToInt32(dgvCustomers.SelectedRows[0].Cells[0].Value);
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -230,7 +243,7 @@ namespace KaizenMain
             errP.Clear();
             try
             {
-                myCustomer.CustomerNo = Convert.ToInt32(lblAdCustNo.Text.Trim());
+                myCustomer.CustID = Convert.ToInt32(lblAdCustNo.Text.Trim());
 
             }
             catch (MyException MyEx)
@@ -322,7 +335,7 @@ namespace KaizenMain
                 if (ok)
                 {
                     drCustomer = dsKaizen.Tables["Customer"].NewRow();
-                    drCustomer["CustomerNo"] = myCustomer.CustomerNo;
+                    drCustomer["CustID"] = myCustomer.CustID;
                     drCustomer["Forename"] = myCustomer.Forename;
                     drCustomer["Surname"] = myCustomer.Surname;
                     drCustomer["Street"] = myCustomer.Street;
@@ -381,11 +394,9 @@ namespace KaizenMain
 
         private void Customer_Load(object sender, EventArgs e)
         {
-           // connStr = @"Data Source = .\SQLEXPRESS; Initial Catalog = Kaizen;Integrated Security = true ";
+            connStr = @"Data Source = .\SQLEXPRESS01; Initial Catalog = Kaizen;Integrated Security = true ";
 
-            connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
-
-            //connStr = "Server=[.];Database=[Kaizen];Trusted_Connection=true";
+           // connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
             sqlCustomer = @"select * from Customer";
             daCustomer = new SqlDataAdapter(sqlCustomer, connStr);
@@ -402,21 +413,16 @@ namespace KaizenMain
 
 
         }
-        void AddTabValidate(object sender, CancelEventArgs e)
+
+        private void frmCustomer_Shown(object sender, EventArgs e)
         {
-            if (dgvCustomers.SelectedRows.Count == 0)
-            {
-                custSelected = false;
-                custNoSelected = 0;
-            }
-            else if (dgvCustomers.SelectedRows.Count == 1)
-            {
+            tabCustomer.TabPages[0].CausesValidation = true;
+            tabCustomer.TabPages[0].Validating += new CancelEventHandler(AddTabValidate);
 
-                custSelected = true;
-                custNoSelected = Convert.ToInt32(dgvCustomers.SelectedRows[0].Cells[0].Value);
-            }
-
+            tabCustomer.TabPages[2].CausesValidation = true;
+            tabCustomer.TabPages[2].Validating += new CancelEventHandler(EditTabValidate);
         }
+        
     }
 }
 
