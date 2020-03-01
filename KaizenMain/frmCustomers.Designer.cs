@@ -50,6 +50,8 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
+            this.btnDeleteDeleteCust = new KaizenMain.RoundButton();
+            this.btnDeleteClearForm = new KaizenMain.RoundButton();
             this.tabEdit = new System.Windows.Forms.TabPage();
             this.iconEditCustID = new System.Windows.Forms.PictureBox();
             this.txtEditTel = new System.Windows.Forms.TextBox();
@@ -70,6 +72,10 @@
             this.label33 = new System.Windows.Forms.Label();
             this.txtEditID = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
+            this.btnEditEditCust = new KaizenMain.RoundButton();
+            this.btnEditEmailCust = new KaizenMain.RoundButton();
+            this.btnEditPrintCust = new KaizenMain.RoundButton();
+            this.btnEditClearForm = new KaizenMain.RoundButton();
             this.tabAdd = new System.Windows.Forms.TabPage();
             this.lblAdCustNo = new System.Windows.Forms.Label();
             this.txtAddTel = new System.Windows.Forms.TextBox();
@@ -89,6 +95,10 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
+            this.btnAddAddCust = new KaizenMain.RoundButton();
+            this.btnAddEmailCust = new KaizenMain.RoundButton();
+            this.btnAddPrintCust = new KaizenMain.RoundButton();
+            this.btnAddClearForm = new KaizenMain.RoundButton();
             this.tabSearch = new System.Windows.Forms.TabPage();
             this.iconSearchCustID = new System.Windows.Forms.PictureBox();
             this.txtSearchTel = new System.Windows.Forms.TextBox();
@@ -109,22 +119,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.tabDisplay = new System.Windows.Forms.TabPage();
-            this.dgvCustomers = new System.Windows.Forms.DataGridView();
-            this.tabCustomer = new System.Windows.Forms.TabControl();
             this.btnSearchEmailCust = new KaizenMain.RoundButton();
             this.btnSearchPrintCust = new KaizenMain.RoundButton();
             this.btnSearchClearForm = new KaizenMain.RoundButton();
-            this.btnAddAddCust = new KaizenMain.RoundButton();
-            this.btnAddEmailCust = new KaizenMain.RoundButton();
-            this.btnAddPrintCust = new KaizenMain.RoundButton();
-            this.btnAddClearForm = new KaizenMain.RoundButton();
-            this.btnEditEditCust = new KaizenMain.RoundButton();
-            this.btnEditEmailCust = new KaizenMain.RoundButton();
-            this.btnEditPrintCust = new KaizenMain.RoundButton();
-            this.btnEditClearForm = new KaizenMain.RoundButton();
-            this.btnDeleteDeleteCust = new KaizenMain.RoundButton();
-            this.btnDeleteClearForm = new KaizenMain.RoundButton();
+            this.tabDisplay = new System.Windows.Forms.TabPage();
+            this.dgvCustomers = new System.Windows.Forms.DataGridView();
+            this.tabCustomer = new System.Windows.Forms.TabControl();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.tabDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconDeleteCustID)).BeginInit();
@@ -186,6 +186,7 @@
             this.iconDeleteCustID.Size = new System.Drawing.Size(43, 31);
             this.iconDeleteCustID.TabIndex = 250;
             this.iconDeleteCustID.TabStop = false;
+            this.iconDeleteCustID.Click += new System.EventHandler(this.btnDeleteIconSearch_Click);
             // 
             // txtDeleteTel
             // 
@@ -349,6 +350,51 @@
             this.label35.TabIndex = 228;
             this.label35.Text = "Customer ID";
             // 
+            // btnDeleteDeleteCust
+            // 
+            this.btnDeleteDeleteCust.BackColor = System.Drawing.Color.White;
+            this.btnDeleteDeleteCust.BorderColor = System.Drawing.Color.Silver;
+            this.btnDeleteDeleteCust.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnDeleteDeleteCust.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteDeleteCust.FlatAppearance.BorderSize = 0;
+            this.btnDeleteDeleteCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteDeleteCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteDeleteCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteDeleteCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteDeleteCust.Location = new System.Drawing.Point(272, 567);
+            this.btnDeleteDeleteCust.Name = "btnDeleteDeleteCust";
+            this.btnDeleteDeleteCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDeleteDeleteCust.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnDeleteDeleteCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDeleteDeleteCust.Size = new System.Drawing.Size(189, 40);
+            this.btnDeleteDeleteCust.TabIndex = 249;
+            this.btnDeleteDeleteCust.Text = "DELETE CUSTOMER";
+            this.btnDeleteDeleteCust.TextColor = System.Drawing.Color.White;
+            this.btnDeleteDeleteCust.UseVisualStyleBackColor = false;
+            this.btnDeleteDeleteCust.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnDeleteClearForm
+            // 
+            this.btnDeleteClearForm.BorderColor = System.Drawing.Color.Silver;
+            this.btnDeleteClearForm.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnDeleteClearForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteClearForm.FlatAppearance.BorderSize = 0;
+            this.btnDeleteClearForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteClearForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteClearForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteClearForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteClearForm.Location = new System.Drawing.Point(520, 71);
+            this.btnDeleteClearForm.Name = "btnDeleteClearForm";
+            this.btnDeleteClearForm.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDeleteClearForm.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnDeleteClearForm.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDeleteClearForm.Size = new System.Drawing.Size(115, 40);
+            this.btnDeleteClearForm.TabIndex = 247;
+            this.btnDeleteClearForm.Text = "CLEAR";
+            this.btnDeleteClearForm.TextColor = System.Drawing.Color.White;
+            this.btnDeleteClearForm.UseVisualStyleBackColor = true;
+            this.btnDeleteClearForm.Click += new System.EventHandler(this.btnDeleteClearForm_Click);
+            // 
             // tabEdit
             // 
             this.tabEdit.BackColor = System.Drawing.Color.White;
@@ -396,6 +442,7 @@
             this.iconEditCustID.Size = new System.Drawing.Size(43, 31);
             this.iconEditCustID.TabIndex = 228;
             this.iconEditCustID.TabStop = false;
+            this.iconEditCustID.Click += new System.EventHandler(this.btnEditIconSearch_Click);
             // 
             // txtEditTel
             // 
@@ -558,6 +605,95 @@
             this.label37.Size = new System.Drawing.Size(124, 24);
             this.label37.TabIndex = 202;
             this.label37.Text = "Customer ID";
+            // 
+            // btnEditEditCust
+            // 
+            this.btnEditEditCust.BackColor = System.Drawing.Color.White;
+            this.btnEditEditCust.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditEditCust.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEditEditCust.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditEditCust.FlatAppearance.BorderSize = 0;
+            this.btnEditEditCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditEditCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditEditCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditEditCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditEditCust.Location = new System.Drawing.Point(74, 558);
+            this.btnEditEditCust.Name = "btnEditEditCust";
+            this.btnEditEditCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditEditCust.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEditEditCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditEditCust.Size = new System.Drawing.Size(189, 40);
+            this.btnEditEditCust.TabIndex = 227;
+            this.btnEditEditCust.Text = "EDIT CUSTOMER";
+            this.btnEditEditCust.TextColor = System.Drawing.Color.White;
+            this.btnEditEditCust.UseVisualStyleBackColor = false;
+            this.btnEditEditCust.Click += new System.EventHandler(this.btnEditEdit_Click);
+            // 
+            // btnEditEmailCust
+            // 
+            this.btnEditEmailCust.BackColor = System.Drawing.Color.White;
+            this.btnEditEmailCust.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditEmailCust.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEditEmailCust.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditEmailCust.FlatAppearance.BorderSize = 0;
+            this.btnEditEmailCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditEmailCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditEmailCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditEmailCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditEmailCust.Location = new System.Drawing.Point(280, 558);
+            this.btnEditEmailCust.Name = "btnEditEmailCust";
+            this.btnEditEmailCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditEmailCust.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEditEmailCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditEmailCust.Size = new System.Drawing.Size(189, 40);
+            this.btnEditEmailCust.TabIndex = 226;
+            this.btnEditEmailCust.Text = "E-MAIL CUSTOMER";
+            this.btnEditEmailCust.TextColor = System.Drawing.Color.White;
+            this.btnEditEmailCust.UseVisualStyleBackColor = false;
+            // 
+            // btnEditPrintCust
+            // 
+            this.btnEditPrintCust.BackColor = System.Drawing.Color.White;
+            this.btnEditPrintCust.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditPrintCust.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEditPrintCust.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditPrintCust.FlatAppearance.BorderSize = 0;
+            this.btnEditPrintCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditPrintCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditPrintCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditPrintCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditPrintCust.Location = new System.Drawing.Point(491, 558);
+            this.btnEditPrintCust.Name = "btnEditPrintCust";
+            this.btnEditPrintCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditPrintCust.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEditPrintCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditPrintCust.Size = new System.Drawing.Size(189, 40);
+            this.btnEditPrintCust.TabIndex = 225;
+            this.btnEditPrintCust.Text = "PRINT CUSTOMER";
+            this.btnEditPrintCust.TextColor = System.Drawing.Color.White;
+            this.btnEditPrintCust.UseVisualStyleBackColor = false;
+            // 
+            // btnEditClearForm
+            // 
+            this.btnEditClearForm.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditClearForm.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEditClearForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditClearForm.FlatAppearance.BorderSize = 0;
+            this.btnEditClearForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditClearForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditClearForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditClearForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditClearForm.Location = new System.Drawing.Point(532, 64);
+            this.btnEditClearForm.Name = "btnEditClearForm";
+            this.btnEditClearForm.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditClearForm.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEditClearForm.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditClearForm.Size = new System.Drawing.Size(115, 40);
+            this.btnEditClearForm.TabIndex = 221;
+            this.btnEditClearForm.Text = "CLEAR";
+            this.btnEditClearForm.TextColor = System.Drawing.Color.White;
+            this.btnEditClearForm.UseVisualStyleBackColor = true;
+            this.btnEditClearForm.Click += new System.EventHandler(this.btnEditClearForm_Click);
             // 
             // tabAdd
             // 
@@ -760,6 +896,95 @@
             this.label30.TabIndex = 202;
             this.label30.Text = "Customer ID";
             // 
+            // btnAddAddCust
+            // 
+            this.btnAddAddCust.BackColor = System.Drawing.Color.White;
+            this.btnAddAddCust.BorderColor = System.Drawing.Color.Silver;
+            this.btnAddAddCust.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnAddAddCust.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddAddCust.FlatAppearance.BorderSize = 0;
+            this.btnAddAddCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAddAddCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAddAddCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAddCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAddCust.Location = new System.Drawing.Point(78, 560);
+            this.btnAddAddCust.Name = "btnAddAddCust";
+            this.btnAddAddCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddAddCust.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnAddAddCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddAddCust.Size = new System.Drawing.Size(189, 40);
+            this.btnAddAddCust.TabIndex = 227;
+            this.btnAddAddCust.Text = "ADD CUSTOMER";
+            this.btnAddAddCust.TextColor = System.Drawing.Color.White;
+            this.btnAddAddCust.UseVisualStyleBackColor = false;
+            this.btnAddAddCust.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnAddEmailCust
+            // 
+            this.btnAddEmailCust.BackColor = System.Drawing.Color.White;
+            this.btnAddEmailCust.BorderColor = System.Drawing.Color.Silver;
+            this.btnAddEmailCust.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnAddEmailCust.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddEmailCust.FlatAppearance.BorderSize = 0;
+            this.btnAddEmailCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAddEmailCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAddEmailCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEmailCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmailCust.Location = new System.Drawing.Point(284, 560);
+            this.btnAddEmailCust.Name = "btnAddEmailCust";
+            this.btnAddEmailCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddEmailCust.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnAddEmailCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddEmailCust.Size = new System.Drawing.Size(189, 40);
+            this.btnAddEmailCust.TabIndex = 226;
+            this.btnAddEmailCust.Text = "E-MAIL CUSTOMER";
+            this.btnAddEmailCust.TextColor = System.Drawing.Color.White;
+            this.btnAddEmailCust.UseVisualStyleBackColor = false;
+            // 
+            // btnAddPrintCust
+            // 
+            this.btnAddPrintCust.BackColor = System.Drawing.Color.White;
+            this.btnAddPrintCust.BorderColor = System.Drawing.Color.Silver;
+            this.btnAddPrintCust.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnAddPrintCust.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddPrintCust.FlatAppearance.BorderSize = 0;
+            this.btnAddPrintCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAddPrintCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAddPrintCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPrintCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPrintCust.Location = new System.Drawing.Point(495, 560);
+            this.btnAddPrintCust.Name = "btnAddPrintCust";
+            this.btnAddPrintCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddPrintCust.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnAddPrintCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddPrintCust.Size = new System.Drawing.Size(189, 40);
+            this.btnAddPrintCust.TabIndex = 225;
+            this.btnAddPrintCust.Text = "PRINT CUSTOMER";
+            this.btnAddPrintCust.TextColor = System.Drawing.Color.White;
+            this.btnAddPrintCust.UseVisualStyleBackColor = false;
+            // 
+            // btnAddClearForm
+            // 
+            this.btnAddClearForm.BorderColor = System.Drawing.Color.Silver;
+            this.btnAddClearForm.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnAddClearForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddClearForm.FlatAppearance.BorderSize = 0;
+            this.btnAddClearForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAddClearForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAddClearForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddClearForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddClearForm.Location = new System.Drawing.Point(532, 64);
+            this.btnAddClearForm.Name = "btnAddClearForm";
+            this.btnAddClearForm.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddClearForm.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnAddClearForm.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddClearForm.Size = new System.Drawing.Size(115, 40);
+            this.btnAddClearForm.TabIndex = 221;
+            this.btnAddClearForm.Text = "CLEAR";
+            this.btnAddClearForm.TextColor = System.Drawing.Color.White;
+            this.btnAddClearForm.UseVisualStyleBackColor = true;
+            this.btnAddClearForm.Click += new System.EventHandler(this.btnAddClearForm_Click);
+            // 
             // tabSearch
             // 
             this.tabSearch.BackColor = System.Drawing.Color.White;
@@ -808,7 +1033,7 @@
             this.iconSearchCustID.Size = new System.Drawing.Size(43, 31);
             this.iconSearchCustID.TabIndex = 224;
             this.iconSearchCustID.TabStop = false;
-            this.iconSearchCustID.Click += new System.EventHandler(this.iconSearchCustID_Click);
+            this.iconSearchCustID.Click += new System.EventHandler(this.btnSearchIconSearch_Click);
             // 
             // txtSearchTel
             // 
@@ -972,53 +1197,6 @@
             this.label12.TabIndex = 202;
             this.label12.Text = "Customer ID";
             // 
-            // tabDisplay
-            // 
-            this.tabDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
-            this.tabDisplay.Controls.Add(this.dgvCustomers);
-            this.tabDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabDisplay.Location = new System.Drawing.Point(4, 29);
-            this.tabDisplay.Name = "tabDisplay";
-            this.tabDisplay.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDisplay.Size = new System.Drawing.Size(734, 688);
-            this.tabDisplay.TabIndex = 0;
-            this.tabDisplay.Text = "DISPLAY";
-            // 
-            // dgvCustomers
-            // 
-            this.dgvCustomers.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomers.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCustomers.Location = new System.Drawing.Point(6, 6);
-            this.dgvCustomers.MultiSelect = false;
-            this.dgvCustomers.Name = "dgvCustomers";
-            this.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomers.Size = new System.Drawing.Size(718, 637);
-            this.dgvCustomers.TabIndex = 19;
-            this.dgvCustomers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellContentClick);
-            // 
-            // tabCustomer
-            // 
-            this.tabCustomer.AllowDrop = true;
-            this.tabCustomer.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tabCustomer.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabCustomer.Controls.Add(this.tabDisplay);
-            this.tabCustomer.Controls.Add(this.tabSearch);
-            this.tabCustomer.Controls.Add(this.tabAdd);
-            this.tabCustomer.Controls.Add(this.tabEdit);
-            this.tabCustomer.Controls.Add(this.tabDelete);
-            this.tabCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabCustomer.ItemSize = new System.Drawing.Size(145, 25);
-            this.tabCustomer.Location = new System.Drawing.Point(3, 2);
-            this.tabCustomer.Multiline = true;
-            this.tabCustomer.Name = "tabCustomer";
-            this.tabCustomer.SelectedIndex = 0;
-            this.tabCustomer.Size = new System.Drawing.Size(742, 721);
-            this.tabCustomer.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabCustomer.TabIndex = 8;
-            this.tabCustomer.TabStop = false;
-            this.tabCustomer.SelectedIndexChanged += new System.EventHandler(this.tabCustomer_SelectedIndexChanged);
-            // 
             // btnSearchEmailCust
             // 
             this.btnSearchEmailCust.BackColor = System.Drawing.Color.White;
@@ -1085,228 +1263,52 @@
             this.btnSearchClearForm.UseVisualStyleBackColor = true;
             this.btnSearchClearForm.Click += new System.EventHandler(this.btnSearchClearForm_Click);
             // 
-            // btnAddAddCust
+            // tabDisplay
             // 
-            this.btnAddAddCust.BackColor = System.Drawing.Color.White;
-            this.btnAddAddCust.BorderColor = System.Drawing.Color.Silver;
-            this.btnAddAddCust.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnAddAddCust.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddAddCust.FlatAppearance.BorderSize = 0;
-            this.btnAddAddCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAddAddCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAddAddCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAddCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAddCust.Location = new System.Drawing.Point(78, 560);
-            this.btnAddAddCust.Name = "btnAddAddCust";
-            this.btnAddAddCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddAddCust.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnAddAddCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddAddCust.Size = new System.Drawing.Size(189, 40);
-            this.btnAddAddCust.TabIndex = 227;
-            this.btnAddAddCust.Text = "ADD CUSTOMER";
-            this.btnAddAddCust.TextColor = System.Drawing.Color.White;
-            this.btnAddAddCust.UseVisualStyleBackColor = false;
-            this.btnAddAddCust.Click += new System.EventHandler(this.btnAdd_Click);
+            this.tabDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.tabDisplay.Controls.Add(this.dgvCustomers);
+            this.tabDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabDisplay.Location = new System.Drawing.Point(4, 29);
+            this.tabDisplay.Name = "tabDisplay";
+            this.tabDisplay.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDisplay.Size = new System.Drawing.Size(734, 688);
+            this.tabDisplay.TabIndex = 0;
+            this.tabDisplay.Text = "DISPLAY";
             // 
-            // btnAddEmailCust
+            // dgvCustomers
             // 
-            this.btnAddEmailCust.BackColor = System.Drawing.Color.White;
-            this.btnAddEmailCust.BorderColor = System.Drawing.Color.Silver;
-            this.btnAddEmailCust.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnAddEmailCust.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddEmailCust.FlatAppearance.BorderSize = 0;
-            this.btnAddEmailCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAddEmailCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAddEmailCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddEmailCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEmailCust.Location = new System.Drawing.Point(284, 560);
-            this.btnAddEmailCust.Name = "btnAddEmailCust";
-            this.btnAddEmailCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddEmailCust.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnAddEmailCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddEmailCust.Size = new System.Drawing.Size(189, 40);
-            this.btnAddEmailCust.TabIndex = 226;
-            this.btnAddEmailCust.Text = "E-MAIL CUSTOMER";
-            this.btnAddEmailCust.TextColor = System.Drawing.Color.White;
-            this.btnAddEmailCust.UseVisualStyleBackColor = false;
+            this.dgvCustomers.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomers.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvCustomers.Location = new System.Drawing.Point(6, 6);
+            this.dgvCustomers.MultiSelect = false;
+            this.dgvCustomers.Name = "dgvCustomers";
+            this.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCustomers.Size = new System.Drawing.Size(718, 637);
+            this.dgvCustomers.TabIndex = 19;
+            this.dgvCustomers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellContentClick);
             // 
-            // btnAddPrintCust
+            // tabCustomer
             // 
-            this.btnAddPrintCust.BackColor = System.Drawing.Color.White;
-            this.btnAddPrintCust.BorderColor = System.Drawing.Color.Silver;
-            this.btnAddPrintCust.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnAddPrintCust.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddPrintCust.FlatAppearance.BorderSize = 0;
-            this.btnAddPrintCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAddPrintCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAddPrintCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddPrintCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPrintCust.Location = new System.Drawing.Point(495, 560);
-            this.btnAddPrintCust.Name = "btnAddPrintCust";
-            this.btnAddPrintCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddPrintCust.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnAddPrintCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddPrintCust.Size = new System.Drawing.Size(189, 40);
-            this.btnAddPrintCust.TabIndex = 225;
-            this.btnAddPrintCust.Text = "PRINT CUSTOMER";
-            this.btnAddPrintCust.TextColor = System.Drawing.Color.White;
-            this.btnAddPrintCust.UseVisualStyleBackColor = false;
-            // 
-            // btnAddClearForm
-            // 
-            this.btnAddClearForm.BorderColor = System.Drawing.Color.Silver;
-            this.btnAddClearForm.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnAddClearForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddClearForm.FlatAppearance.BorderSize = 0;
-            this.btnAddClearForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAddClearForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAddClearForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddClearForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddClearForm.Location = new System.Drawing.Point(532, 64);
-            this.btnAddClearForm.Name = "btnAddClearForm";
-            this.btnAddClearForm.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddClearForm.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnAddClearForm.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddClearForm.Size = new System.Drawing.Size(115, 40);
-            this.btnAddClearForm.TabIndex = 221;
-            this.btnAddClearForm.Text = "CLEAR";
-            this.btnAddClearForm.TextColor = System.Drawing.Color.White;
-            this.btnAddClearForm.UseVisualStyleBackColor = true;
-            this.btnAddClearForm.Click += new System.EventHandler(this.btnAddClearForm_Click);
-            // 
-            // btnEditEditCust
-            // 
-            this.btnEditEditCust.BackColor = System.Drawing.Color.White;
-            this.btnEditEditCust.BorderColor = System.Drawing.Color.Silver;
-            this.btnEditEditCust.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnEditEditCust.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditEditCust.FlatAppearance.BorderSize = 0;
-            this.btnEditEditCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEditEditCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEditEditCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditEditCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditEditCust.Location = new System.Drawing.Point(74, 558);
-            this.btnEditEditCust.Name = "btnEditEditCust";
-            this.btnEditEditCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditEditCust.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnEditEditCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditEditCust.Size = new System.Drawing.Size(189, 40);
-            this.btnEditEditCust.TabIndex = 227;
-            this.btnEditEditCust.Text = "EDIT CUSTOMER";
-            this.btnEditEditCust.TextColor = System.Drawing.Color.White;
-            this.btnEditEditCust.UseVisualStyleBackColor = false;
-            this.btnEditEditCust.Click += new System.EventHandler(this.btnEditEdit_Click);
-            // 
-            // btnEditEmailCust
-            // 
-            this.btnEditEmailCust.BackColor = System.Drawing.Color.White;
-            this.btnEditEmailCust.BorderColor = System.Drawing.Color.Silver;
-            this.btnEditEmailCust.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnEditEmailCust.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditEmailCust.FlatAppearance.BorderSize = 0;
-            this.btnEditEmailCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEditEmailCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEditEmailCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditEmailCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditEmailCust.Location = new System.Drawing.Point(280, 558);
-            this.btnEditEmailCust.Name = "btnEditEmailCust";
-            this.btnEditEmailCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditEmailCust.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnEditEmailCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditEmailCust.Size = new System.Drawing.Size(189, 40);
-            this.btnEditEmailCust.TabIndex = 226;
-            this.btnEditEmailCust.Text = "E-MAIL CUSTOMER";
-            this.btnEditEmailCust.TextColor = System.Drawing.Color.White;
-            this.btnEditEmailCust.UseVisualStyleBackColor = false;
-            // 
-            // btnEditPrintCust
-            // 
-            this.btnEditPrintCust.BackColor = System.Drawing.Color.White;
-            this.btnEditPrintCust.BorderColor = System.Drawing.Color.Silver;
-            this.btnEditPrintCust.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnEditPrintCust.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditPrintCust.FlatAppearance.BorderSize = 0;
-            this.btnEditPrintCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEditPrintCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEditPrintCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditPrintCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditPrintCust.Location = new System.Drawing.Point(491, 558);
-            this.btnEditPrintCust.Name = "btnEditPrintCust";
-            this.btnEditPrintCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditPrintCust.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnEditPrintCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditPrintCust.Size = new System.Drawing.Size(189, 40);
-            this.btnEditPrintCust.TabIndex = 225;
-            this.btnEditPrintCust.Text = "PRINT CUSTOMER";
-            this.btnEditPrintCust.TextColor = System.Drawing.Color.White;
-            this.btnEditPrintCust.UseVisualStyleBackColor = false;
-            // 
-            // btnEditClearForm
-            // 
-            this.btnEditClearForm.BorderColor = System.Drawing.Color.Silver;
-            this.btnEditClearForm.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnEditClearForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditClearForm.FlatAppearance.BorderSize = 0;
-            this.btnEditClearForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEditClearForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEditClearForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditClearForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditClearForm.Location = new System.Drawing.Point(532, 64);
-            this.btnEditClearForm.Name = "btnEditClearForm";
-            this.btnEditClearForm.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditClearForm.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnEditClearForm.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditClearForm.Size = new System.Drawing.Size(115, 40);
-            this.btnEditClearForm.TabIndex = 221;
-            this.btnEditClearForm.Text = "CLEAR";
-            this.btnEditClearForm.TextColor = System.Drawing.Color.White;
-            this.btnEditClearForm.UseVisualStyleBackColor = true;
-            this.btnEditClearForm.Click += new System.EventHandler(this.btnEditClearForm_Click);
-            // 
-            // btnDeleteDeleteCust
-            // 
-            this.btnDeleteDeleteCust.BackColor = System.Drawing.Color.White;
-            this.btnDeleteDeleteCust.BorderColor = System.Drawing.Color.Silver;
-            this.btnDeleteDeleteCust.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnDeleteDeleteCust.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeleteDeleteCust.FlatAppearance.BorderSize = 0;
-            this.btnDeleteDeleteCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDeleteDeleteCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDeleteDeleteCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteDeleteCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteDeleteCust.Location = new System.Drawing.Point(272, 567);
-            this.btnDeleteDeleteCust.Name = "btnDeleteDeleteCust";
-            this.btnDeleteDeleteCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDeleteDeleteCust.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnDeleteDeleteCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDeleteDeleteCust.Size = new System.Drawing.Size(189, 40);
-            this.btnDeleteDeleteCust.TabIndex = 249;
-            this.btnDeleteDeleteCust.Text = "DELETE CUSTOMER";
-            this.btnDeleteDeleteCust.TextColor = System.Drawing.Color.White;
-            this.btnDeleteDeleteCust.UseVisualStyleBackColor = false;
-            this.btnDeleteDeleteCust.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnDeleteClearForm
-            // 
-            this.btnDeleteClearForm.BorderColor = System.Drawing.Color.Silver;
-            this.btnDeleteClearForm.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnDeleteClearForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeleteClearForm.FlatAppearance.BorderSize = 0;
-            this.btnDeleteClearForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDeleteClearForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDeleteClearForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteClearForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteClearForm.Location = new System.Drawing.Point(520, 71);
-            this.btnDeleteClearForm.Name = "btnDeleteClearForm";
-            this.btnDeleteClearForm.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDeleteClearForm.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnDeleteClearForm.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDeleteClearForm.Size = new System.Drawing.Size(115, 40);
-            this.btnDeleteClearForm.TabIndex = 247;
-            this.btnDeleteClearForm.Text = "CLEAR";
-            this.btnDeleteClearForm.TextColor = System.Drawing.Color.White;
-            this.btnDeleteClearForm.UseVisualStyleBackColor = true;
-            this.btnDeleteClearForm.Click += new System.EventHandler(this.btnDeleteClearForm_Click);
+            this.tabCustomer.AllowDrop = true;
+            this.tabCustomer.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tabCustomer.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.tabCustomer.Controls.Add(this.tabDisplay);
+            this.tabCustomer.Controls.Add(this.tabSearch);
+            this.tabCustomer.Controls.Add(this.tabAdd);
+            this.tabCustomer.Controls.Add(this.tabEdit);
+            this.tabCustomer.Controls.Add(this.tabDelete);
+            this.tabCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabCustomer.ItemSize = new System.Drawing.Size(145, 25);
+            this.tabCustomer.Location = new System.Drawing.Point(3, 2);
+            this.tabCustomer.Multiline = true;
+            this.tabCustomer.Name = "tabCustomer";
+            this.tabCustomer.SelectedIndex = 0;
+            this.tabCustomer.Size = new System.Drawing.Size(742, 721);
+            this.tabCustomer.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabCustomer.TabIndex = 8;
+            this.tabCustomer.TabStop = false;
+            this.tabCustomer.SelectedIndexChanged += new System.EventHandler(this.tabCustomer_SelectedIndexChanged);
             // 
             // frmCustomers
             // 

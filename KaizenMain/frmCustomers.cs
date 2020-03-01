@@ -150,6 +150,7 @@ namespace KaizenMain
                 }
             }
         }
+        /*
         //Get Forename data
         private void txtAddForename_TextChanged(object sender, EventArgs e)
         {
@@ -214,6 +215,7 @@ namespace KaizenMain
             else
                 txtAddTel.BackColor = Color.LightCoral;
         }
+        */
 
         private void getNumber(int noRows)
         {
@@ -717,32 +719,124 @@ namespace KaizenMain
             txtEditEmail.Enabled = false;
         }
 
-        private void iconSearchCustID_Click(object sender, EventArgs e)
+        private void btnSearchIconSearch_Click(object sender, EventArgs e)
         {
-            searchCustomericon(txtSearchID.Text);
-            drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtEditID.Text);
-        }
+            string searchValue = txtSearchID.Text;
 
-        private bool searchCustomericon(string txt)
-        {
-            String searchValue = txt;
-            bool searchCustID = false;
-            foreach (DataGridViewRow row in dgvCustomers.Rows)
+            dgvCustomers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
             {
-                if (row.Cells[0].Value.ToString().Equals(searchValue))
+                foreach (DataGridViewRow row in dgvCustomers.Rows)
                 {
-                    searchCustID = true;                   
+                    if (row.Cells[0].Value.ToString().Equals(searchValue))
+                    {
+                        row.Selected = true;
+                        drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtSearchID.Text);
+
+                        txtSearchForename.Text = drCustomer["CustFName"].ToString();
+                        txtSearchSurname.Text = drCustomer["CustSName"].ToString();
+                        txtSearchAddress.Text = drCustomer["CustAddress"].ToString();
+                        txtSearchTown.Text = drCustomer["TownCity"].ToString();
+                        txtSearchCounty.Text = drCustomer["County"].ToString();
+                        txtSearchPcode.Text = drCustomer["CustPCode"].ToString();
+                        txtSearchEmail.Text = drCustomer["CustEmail"].ToString();
+                        txtSearchTel.Text = drCustomer["CustTel"].ToString();
+                        break;
+                    }
                 }
-                else
-                    searchCustID = false
-                        ;
-
-                return searchCustID;
-                
-
             }
-            
+            catch (MyException Exception)
+            {
+                MessageBox.Show("Not found");
+            }
         }
+        private void btnEditIconSearch_Click(object sender, EventArgs e)
+        {
+            string searchValue = txtEditID.Text;
+
+            dgvCustomers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                foreach (DataGridViewRow row in dgvCustomers.Rows)
+                {
+                    if (row.Cells[0].Value.ToString().Equals(searchValue))
+                    {
+                        row.Selected = true;
+                        drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtEditID.Text);
+
+                        txtEditForename.Text = drCustomer["CustFName"].ToString();
+                        txtEditSurname.Text = drCustomer["CustSName"].ToString();
+                        txtEditAddress.Text = drCustomer["CustAddress"].ToString();
+                        txtEditTown.Text = drCustomer["TownCity"].ToString();
+                        txtEditCounty.Text = drCustomer["County"].ToString();
+                        txtEditPostcode.Text = drCustomer["CustPCode"].ToString();
+                        txtEditEmail.Text = drCustomer["CustEmail"].ToString();
+                        txtEditTel.Text = drCustomer["CustTel"].ToString();
+                        break;
+                    }
+                }
+            }
+            catch (MyException Exception)
+            {
+                MessageBox.Show("Not found");
+            }
+        }
+        private void btnDeleteIconSearch_Click(object sender, EventArgs e)
+        {
+            string searchValue = txtDeleteID.Text;
+
+            dgvCustomers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                foreach (DataGridViewRow row in dgvCustomers.Rows)
+                {
+                    if (row.Cells[0].Value.ToString().Equals(searchValue))
+                    {
+                        row.Selected = true;
+                        drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtDeleteID.Text);
+
+                                txtDeleteForename.Text = drCustomer["CustFName"].ToString();
+                                txtDeleteSurname.Text = drCustomer["CustSName"].ToString();
+                                txtDeleteAddress.Text = drCustomer["CustAddress"].ToString();
+                                txtDeleteTown.Text = drCustomer["TownCity"].ToString();
+                                txtDeleteCounty.Text = drCustomer["County"].ToString();
+                                txtDeletePostcode.Text = drCustomer["CustPCode"].ToString();
+                                txtDeleteEmail.Text = drCustomer["CustEmail"].ToString();
+                                txtDeleteTel.Text = drCustomer["CustTel"].ToString();
+                                break;
+                    }
+                }
+            }
+            catch (MyException Exception)
+            {
+                MessageBox.Show("Not found");
+            }
+        }
+        /*
+                private void iconSearchCustID_Click(object sender, EventArgs e)
+                {
+                    searchCustomerFound(txtSearchID.Text);
+                    drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtEditID.Text);
+                }
+
+               private bool searchCustomerFound(string txt)
+                {
+
+                    foreach (DataGridViewRow row in dgvCustomers.Rows)
+                    {
+                        if (row.Cells[0].Value.ToString().Equals(txt))
+                        {
+                            return true;
+                        }
+                        else 
+                            return false;
+
+
+
+                    }
+
+                }
+                */
     }
 
 }
