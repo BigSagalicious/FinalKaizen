@@ -28,24 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.txtDeleteProdID = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
-            this.roundButton3 = new KaizenMain.RoundButton();
-            this.roundButton2 = new KaizenMain.RoundButton();
-            this.roundButton1 = new KaizenMain.RoundButton();
-            this.label26 = new System.Windows.Forms.Label();
-            this.listViewEquip = new System.Windows.Forms.ListView();
             this.tabSearch = new System.Windows.Forms.TabPage();
             this.roundButton17 = new KaizenMain.RoundButton();
             this.roundButton16 = new KaizenMain.RoundButton();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtSearchProdName = new System.Windows.Forms.TextBox();
+            this.txtSearchProdSupplierName = new System.Windows.Forms.TextBox();
+            this.txtSearchProdSupplierID = new System.Windows.Forms.TextBox();
+            this.txtSearchPrice = new System.Windows.Forms.TextBox();
+            this.txtSearchProdDesc = new System.Windows.Forms.TextBox();
+            this.txtSearchQTY = new System.Windows.Forms.TextBox();
+            this.txtSearchProdID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -57,13 +52,13 @@
             this.roundButton4 = new KaizenMain.RoundButton();
             this.roundButton5 = new KaizenMain.RoundButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
+            this.txtAddProdName = new System.Windows.Forms.TextBox();
+            this.txtAddProdSupplierName = new System.Windows.Forms.TextBox();
+            this.txtAddProdSupplierID = new System.Windows.Forms.TextBox();
+            this.txtAddPrice = new System.Windows.Forms.TextBox();
+            this.txtAddProdDesc = new System.Windows.Forms.TextBox();
+            this.txtAddQTY = new System.Windows.Forms.TextBox();
+            this.txtAddProdID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -75,13 +70,13 @@
             this.roundButton6 = new KaizenMain.RoundButton();
             this.roundButton7 = new KaizenMain.RoundButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txtEditProdName = new System.Windows.Forms.TextBox();
+            this.txtEditProdSupplierName = new System.Windows.Forms.TextBox();
+            this.txtEditProdSupplierID = new System.Windows.Forms.TextBox();
+            this.txtEditPrice = new System.Windows.Forms.TextBox();
+            this.txtEditProdDesc = new System.Windows.Forms.TextBox();
+            this.txtEditQTY = new System.Windows.Forms.TextBox();
+            this.txtEditProdID = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -93,12 +88,12 @@
             this.roundButton8 = new KaizenMain.RoundButton();
             this.roundButton9 = new KaizenMain.RoundButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.txtDeleteProdName = new System.Windows.Forms.TextBox();
+            this.txtDeleteProdSupplierName = new System.Windows.Forms.TextBox();
+            this.txtDeleteProdSupplierID = new System.Windows.Forms.TextBox();
+            this.txtDeletePrice = new System.Windows.Forms.TextBox();
+            this.txtDeleteProdDesc = new System.Windows.Forms.TextBox();
+            this.txtDeleteQTY = new System.Windows.Forms.TextBox();
             this.textBox26 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -107,7 +102,20 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.listViewEquip = new System.Windows.Forms.ListView();
+            this.roundButton3 = new KaizenMain.RoundButton();
+            this.roundButton2 = new KaizenMain.RoundButton();
+            this.roundButton1 = new KaizenMain.RoundButton();
+            this.label26 = new System.Windows.Forms.Label();
+            this.cmbSearchProdType = new System.Windows.Forms.ComboBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.cmbAddProdType = new System.Windows.Forms.ComboBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.cmbEditProdType = new System.Windows.Forms.ComboBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.cmbDeleteProdType = new System.Windows.Forms.ComboBox();
+            this.txtDeleteProdID.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             this.tabSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -119,26 +127,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // txtDeleteProdID
             // 
-            this.tabControl1.AllowDrop = true;
-            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabControl1.Controls.Add(this.tabDisplay);
-            this.tabControl1.Controls.Add(this.tabSearch);
-            this.tabControl1.Controls.Add(this.tabAdd);
-            this.tabControl1.Controls.Add(this.tabEdit);
-            this.tabControl1.Controls.Add(this.tabDelete);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.ItemSize = new System.Drawing.Size(145, 25);
-            this.tabControl1.Location = new System.Drawing.Point(3, 6);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(742, 721);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 7;
-            this.tabControl1.TabStop = false;
+            this.txtDeleteProdID.AllowDrop = true;
+            this.txtDeleteProdID.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtDeleteProdID.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.txtDeleteProdID.Controls.Add(this.tabDisplay);
+            this.txtDeleteProdID.Controls.Add(this.tabSearch);
+            this.txtDeleteProdID.Controls.Add(this.tabAdd);
+            this.txtDeleteProdID.Controls.Add(this.tabEdit);
+            this.txtDeleteProdID.Controls.Add(this.tabDelete);
+            this.txtDeleteProdID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDeleteProdID.ItemSize = new System.Drawing.Size(145, 25);
+            this.txtDeleteProdID.Location = new System.Drawing.Point(3, 6);
+            this.txtDeleteProdID.Multiline = true;
+            this.txtDeleteProdID.Name = "txtDeleteProdID";
+            this.txtDeleteProdID.SelectedIndex = 0;
+            this.txtDeleteProdID.Size = new System.Drawing.Size(742, 721);
+            this.txtDeleteProdID.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.txtDeleteProdID.TabIndex = 7;
+            this.txtDeleteProdID.TabStop = false;
             // 
             // tabDisplay
             // 
@@ -157,100 +165,23 @@
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "DISPLAY";
             // 
-            // roundButton3
-            // 
-            this.roundButton3.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton3.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton3.FlatAppearance.BorderSize = 0;
-            this.roundButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton3.Location = new System.Drawing.Point(424, 9);
-            this.roundButton3.Name = "roundButton3";
-            this.roundButton3.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton3.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton3.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton3.Size = new System.Drawing.Size(104, 40);
-            this.roundButton3.TabIndex = 24;
-            this.roundButton3.Text = "TYPE";
-            this.roundButton3.TextColor = System.Drawing.Color.White;
-            this.roundButton3.UseVisualStyleBackColor = true;
-            // 
-            // roundButton2
-            // 
-            this.roundButton2.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton2.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton2.FlatAppearance.BorderSize = 0;
-            this.roundButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton2.Location = new System.Drawing.Point(314, 9);
-            this.roundButton2.Name = "roundButton2";
-            this.roundButton2.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton2.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton2.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton2.Size = new System.Drawing.Size(104, 40);
-            this.roundButton2.TabIndex = 23;
-            this.roundButton2.Text = "ID";
-            this.roundButton2.TextColor = System.Drawing.Color.White;
-            this.roundButton2.UseVisualStyleBackColor = true;
-            // 
-            // roundButton1
-            // 
-            this.roundButton1.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton1.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton1.FlatAppearance.BorderSize = 0;
-            this.roundButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton1.Location = new System.Drawing.Point(204, 9);
-            this.roundButton1.Name = "roundButton1";
-            this.roundButton1.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton1.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton1.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton1.Size = new System.Drawing.Size(104, 40);
-            this.roundButton1.TabIndex = 22;
-            this.roundButton1.Text = "A - Z";
-            this.roundButton1.TextColor = System.Drawing.Color.White;
-            this.roundButton1.UseVisualStyleBackColor = true;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label26.Location = new System.Drawing.Point(122, 16);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(76, 24);
-            this.label26.TabIndex = 21;
-            this.label26.Text = "Sort By";
-            // 
-            // listViewEquip
-            // 
-            this.listViewEquip.HideSelection = false;
-            this.listViewEquip.Location = new System.Drawing.Point(6, 55);
-            this.listViewEquip.Name = "listViewEquip";
-            this.listViewEquip.Size = new System.Drawing.Size(722, 637);
-            this.listViewEquip.TabIndex = 20;
-            this.listViewEquip.UseCompatibleStateImageBehavior = false;
-            // 
             // tabSearch
             // 
             this.tabSearch.BackColor = System.Drawing.Color.White;
             this.tabSearch.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabSearch.Controls.Add(this.label30);
+            this.tabSearch.Controls.Add(this.cmbSearchProdType);
             this.tabSearch.Controls.Add(this.roundButton17);
             this.tabSearch.Controls.Add(this.roundButton16);
             this.tabSearch.Controls.Add(this.pictureBox5);
-            this.tabSearch.Controls.Add(this.textBox2);
-            this.tabSearch.Controls.Add(this.textBox3);
-            this.tabSearch.Controls.Add(this.textBox7);
-            this.tabSearch.Controls.Add(this.textBox8);
-            this.tabSearch.Controls.Add(this.textBox9);
-            this.tabSearch.Controls.Add(this.textBox10);
-            this.tabSearch.Controls.Add(this.textBox11);
+            this.tabSearch.Controls.Add(this.txtSearchProdName);
+            this.tabSearch.Controls.Add(this.txtSearchProdSupplierName);
+            this.tabSearch.Controls.Add(this.txtSearchProdSupplierID);
+            this.tabSearch.Controls.Add(this.txtSearchPrice);
+            this.tabSearch.Controls.Add(this.txtSearchProdDesc);
+            this.tabSearch.Controls.Add(this.txtSearchQTY);
+            this.tabSearch.Controls.Add(this.txtSearchProdID);
             this.tabSearch.Controls.Add(this.label7);
             this.tabSearch.Controls.Add(this.label8);
             this.tabSearch.Controls.Add(this.label9);
@@ -321,55 +252,55 @@
             this.pictureBox5.TabIndex = 220;
             this.pictureBox5.TabStop = false;
             // 
-            // textBox2
+            // txtSearchProdName
             // 
-            this.textBox2.Location = new System.Drawing.Point(200, 117);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(494, 29);
-            this.textBox2.TabIndex = 219;
+            this.txtSearchProdName.Location = new System.Drawing.Point(200, 117);
+            this.txtSearchProdName.Name = "txtSearchProdName";
+            this.txtSearchProdName.Size = new System.Drawing.Size(494, 29);
+            this.txtSearchProdName.TabIndex = 219;
             // 
-            // textBox3
+            // txtSearchProdSupplierName
             // 
-            this.textBox3.Location = new System.Drawing.Point(200, 427);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(294, 29);
-            this.textBox3.TabIndex = 218;
+            this.txtSearchProdSupplierName.Location = new System.Drawing.Point(200, 427);
+            this.txtSearchProdSupplierName.Name = "txtSearchProdSupplierName";
+            this.txtSearchProdSupplierName.Size = new System.Drawing.Size(294, 29);
+            this.txtSearchProdSupplierName.TabIndex = 218;
             // 
-            // textBox7
+            // txtSearchProdSupplierID
             // 
-            this.textBox7.Location = new System.Drawing.Point(200, 372);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(157, 29);
-            this.textBox7.TabIndex = 217;
+            this.txtSearchProdSupplierID.Location = new System.Drawing.Point(200, 372);
+            this.txtSearchProdSupplierID.Name = "txtSearchProdSupplierID";
+            this.txtSearchProdSupplierID.Size = new System.Drawing.Size(157, 29);
+            this.txtSearchProdSupplierID.TabIndex = 217;
             // 
-            // textBox8
+            // txtSearchPrice
             // 
-            this.textBox8.Location = new System.Drawing.Point(200, 317);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(157, 29);
-            this.textBox8.TabIndex = 216;
+            this.txtSearchPrice.Location = new System.Drawing.Point(200, 317);
+            this.txtSearchPrice.Name = "txtSearchPrice";
+            this.txtSearchPrice.Size = new System.Drawing.Size(157, 29);
+            this.txtSearchPrice.TabIndex = 216;
             // 
-            // textBox9
+            // txtSearchProdDesc
             // 
-            this.textBox9.Location = new System.Drawing.Point(200, 228);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(494, 63);
-            this.textBox9.TabIndex = 215;
+            this.txtSearchProdDesc.Location = new System.Drawing.Point(200, 228);
+            this.txtSearchProdDesc.Multiline = true;
+            this.txtSearchProdDesc.Name = "txtSearchProdDesc";
+            this.txtSearchProdDesc.Size = new System.Drawing.Size(494, 63);
+            this.txtSearchProdDesc.TabIndex = 215;
             // 
-            // textBox10
+            // txtSearchQTY
             // 
-            this.textBox10.Location = new System.Drawing.Point(200, 172);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(157, 29);
-            this.textBox10.TabIndex = 214;
+            this.txtSearchQTY.Location = new System.Drawing.Point(200, 172);
+            this.txtSearchQTY.Name = "txtSearchQTY";
+            this.txtSearchQTY.Size = new System.Drawing.Size(157, 29);
+            this.txtSearchQTY.TabIndex = 214;
             // 
-            // textBox11
+            // txtSearchProdID
             // 
-            this.textBox11.Location = new System.Drawing.Point(200, 62);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(157, 29);
-            this.textBox11.TabIndex = 213;
+            this.txtSearchProdID.Location = new System.Drawing.Point(200, 62);
+            this.txtSearchProdID.Name = "txtSearchProdID";
+            this.txtSearchProdID.Size = new System.Drawing.Size(157, 29);
+            this.txtSearchProdID.TabIndex = 213;
             // 
             // label7
             // 
@@ -446,16 +377,18 @@
             this.tabAdd.BackColor = System.Drawing.Color.White;
             this.tabAdd.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabAdd.Controls.Add(this.label31);
+            this.tabAdd.Controls.Add(this.cmbAddProdType);
             this.tabAdd.Controls.Add(this.roundButton4);
             this.tabAdd.Controls.Add(this.roundButton5);
             this.tabAdd.Controls.Add(this.pictureBox1);
-            this.tabAdd.Controls.Add(this.textBox1);
-            this.tabAdd.Controls.Add(this.textBox4);
-            this.tabAdd.Controls.Add(this.textBox5);
-            this.tabAdd.Controls.Add(this.textBox6);
-            this.tabAdd.Controls.Add(this.textBox25);
-            this.tabAdd.Controls.Add(this.textBox28);
-            this.tabAdd.Controls.Add(this.textBox29);
+            this.tabAdd.Controls.Add(this.txtAddProdName);
+            this.tabAdd.Controls.Add(this.txtAddProdSupplierName);
+            this.tabAdd.Controls.Add(this.txtAddProdSupplierID);
+            this.tabAdd.Controls.Add(this.txtAddPrice);
+            this.tabAdd.Controls.Add(this.txtAddProdDesc);
+            this.tabAdd.Controls.Add(this.txtAddQTY);
+            this.tabAdd.Controls.Add(this.txtAddProdID);
             this.tabAdd.Controls.Add(this.label1);
             this.tabAdd.Controls.Add(this.label2);
             this.tabAdd.Controls.Add(this.label3);
@@ -525,55 +458,55 @@
             this.pictureBox1.TabIndex = 220;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // txtAddProdName
             // 
-            this.textBox1.Location = new System.Drawing.Point(200, 117);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(494, 29);
-            this.textBox1.TabIndex = 219;
+            this.txtAddProdName.Location = new System.Drawing.Point(200, 117);
+            this.txtAddProdName.Name = "txtAddProdName";
+            this.txtAddProdName.Size = new System.Drawing.Size(494, 29);
+            this.txtAddProdName.TabIndex = 219;
             // 
-            // textBox4
+            // txtAddProdSupplierName
             // 
-            this.textBox4.Location = new System.Drawing.Point(200, 427);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(294, 29);
-            this.textBox4.TabIndex = 218;
+            this.txtAddProdSupplierName.Location = new System.Drawing.Point(200, 427);
+            this.txtAddProdSupplierName.Name = "txtAddProdSupplierName";
+            this.txtAddProdSupplierName.Size = new System.Drawing.Size(294, 29);
+            this.txtAddProdSupplierName.TabIndex = 218;
             // 
-            // textBox5
+            // txtAddProdSupplierID
             // 
-            this.textBox5.Location = new System.Drawing.Point(200, 372);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(157, 29);
-            this.textBox5.TabIndex = 217;
+            this.txtAddProdSupplierID.Location = new System.Drawing.Point(200, 372);
+            this.txtAddProdSupplierID.Name = "txtAddProdSupplierID";
+            this.txtAddProdSupplierID.Size = new System.Drawing.Size(157, 29);
+            this.txtAddProdSupplierID.TabIndex = 217;
             // 
-            // textBox6
+            // txtAddPrice
             // 
-            this.textBox6.Location = new System.Drawing.Point(200, 317);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(157, 29);
-            this.textBox6.TabIndex = 216;
+            this.txtAddPrice.Location = new System.Drawing.Point(200, 317);
+            this.txtAddPrice.Name = "txtAddPrice";
+            this.txtAddPrice.Size = new System.Drawing.Size(157, 29);
+            this.txtAddPrice.TabIndex = 216;
             // 
-            // textBox25
+            // txtAddProdDesc
             // 
-            this.textBox25.Location = new System.Drawing.Point(200, 228);
-            this.textBox25.Multiline = true;
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(494, 63);
-            this.textBox25.TabIndex = 215;
+            this.txtAddProdDesc.Location = new System.Drawing.Point(200, 228);
+            this.txtAddProdDesc.Multiline = true;
+            this.txtAddProdDesc.Name = "txtAddProdDesc";
+            this.txtAddProdDesc.Size = new System.Drawing.Size(494, 63);
+            this.txtAddProdDesc.TabIndex = 215;
             // 
-            // textBox28
+            // txtAddQTY
             // 
-            this.textBox28.Location = new System.Drawing.Point(200, 172);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(157, 29);
-            this.textBox28.TabIndex = 214;
+            this.txtAddQTY.Location = new System.Drawing.Point(200, 172);
+            this.txtAddQTY.Name = "txtAddQTY";
+            this.txtAddQTY.Size = new System.Drawing.Size(157, 29);
+            this.txtAddQTY.TabIndex = 214;
             // 
-            // textBox29
+            // txtAddProdID
             // 
-            this.textBox29.Location = new System.Drawing.Point(200, 62);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(157, 29);
-            this.textBox29.TabIndex = 213;
+            this.txtAddProdID.Location = new System.Drawing.Point(200, 62);
+            this.txtAddProdID.Name = "txtAddProdID";
+            this.txtAddProdID.Size = new System.Drawing.Size(157, 29);
+            this.txtAddProdID.TabIndex = 213;
             // 
             // label1
             // 
@@ -650,16 +583,18 @@
             this.tabEdit.BackColor = System.Drawing.Color.White;
             this.tabEdit.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabEdit.Controls.Add(this.label32);
+            this.tabEdit.Controls.Add(this.cmbEditProdType);
             this.tabEdit.Controls.Add(this.roundButton6);
             this.tabEdit.Controls.Add(this.roundButton7);
             this.tabEdit.Controls.Add(this.pictureBox3);
-            this.tabEdit.Controls.Add(this.textBox12);
-            this.tabEdit.Controls.Add(this.textBox13);
-            this.tabEdit.Controls.Add(this.textBox14);
-            this.tabEdit.Controls.Add(this.textBox15);
-            this.tabEdit.Controls.Add(this.textBox16);
-            this.tabEdit.Controls.Add(this.textBox17);
-            this.tabEdit.Controls.Add(this.textBox18);
+            this.tabEdit.Controls.Add(this.txtEditProdName);
+            this.tabEdit.Controls.Add(this.txtEditProdSupplierName);
+            this.tabEdit.Controls.Add(this.txtEditProdSupplierID);
+            this.tabEdit.Controls.Add(this.txtEditPrice);
+            this.tabEdit.Controls.Add(this.txtEditProdDesc);
+            this.tabEdit.Controls.Add(this.txtEditQTY);
+            this.tabEdit.Controls.Add(this.txtEditProdID);
             this.tabEdit.Controls.Add(this.label13);
             this.tabEdit.Controls.Add(this.label14);
             this.tabEdit.Controls.Add(this.label15);
@@ -729,55 +664,55 @@
             this.pictureBox3.TabIndex = 220;
             this.pictureBox3.TabStop = false;
             // 
-            // textBox12
+            // txtEditProdName
             // 
-            this.textBox12.Location = new System.Drawing.Point(200, 117);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(494, 29);
-            this.textBox12.TabIndex = 219;
+            this.txtEditProdName.Location = new System.Drawing.Point(200, 117);
+            this.txtEditProdName.Name = "txtEditProdName";
+            this.txtEditProdName.Size = new System.Drawing.Size(494, 29);
+            this.txtEditProdName.TabIndex = 219;
             // 
-            // textBox13
+            // txtEditProdSupplierName
             // 
-            this.textBox13.Location = new System.Drawing.Point(200, 427);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(294, 29);
-            this.textBox13.TabIndex = 218;
+            this.txtEditProdSupplierName.Location = new System.Drawing.Point(200, 427);
+            this.txtEditProdSupplierName.Name = "txtEditProdSupplierName";
+            this.txtEditProdSupplierName.Size = new System.Drawing.Size(294, 29);
+            this.txtEditProdSupplierName.TabIndex = 218;
             // 
-            // textBox14
+            // txtEditProdSupplierID
             // 
-            this.textBox14.Location = new System.Drawing.Point(200, 372);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(157, 29);
-            this.textBox14.TabIndex = 217;
+            this.txtEditProdSupplierID.Location = new System.Drawing.Point(200, 372);
+            this.txtEditProdSupplierID.Name = "txtEditProdSupplierID";
+            this.txtEditProdSupplierID.Size = new System.Drawing.Size(157, 29);
+            this.txtEditProdSupplierID.TabIndex = 217;
             // 
-            // textBox15
+            // txtEditPrice
             // 
-            this.textBox15.Location = new System.Drawing.Point(200, 317);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(157, 29);
-            this.textBox15.TabIndex = 216;
+            this.txtEditPrice.Location = new System.Drawing.Point(200, 317);
+            this.txtEditPrice.Name = "txtEditPrice";
+            this.txtEditPrice.Size = new System.Drawing.Size(157, 29);
+            this.txtEditPrice.TabIndex = 216;
             // 
-            // textBox16
+            // txtEditProdDesc
             // 
-            this.textBox16.Location = new System.Drawing.Point(200, 228);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(494, 63);
-            this.textBox16.TabIndex = 215;
+            this.txtEditProdDesc.Location = new System.Drawing.Point(200, 228);
+            this.txtEditProdDesc.Multiline = true;
+            this.txtEditProdDesc.Name = "txtEditProdDesc";
+            this.txtEditProdDesc.Size = new System.Drawing.Size(494, 63);
+            this.txtEditProdDesc.TabIndex = 215;
             // 
-            // textBox17
+            // txtEditQTY
             // 
-            this.textBox17.Location = new System.Drawing.Point(200, 172);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(157, 29);
-            this.textBox17.TabIndex = 214;
+            this.txtEditQTY.Location = new System.Drawing.Point(200, 172);
+            this.txtEditQTY.Name = "txtEditQTY";
+            this.txtEditQTY.Size = new System.Drawing.Size(157, 29);
+            this.txtEditQTY.TabIndex = 214;
             // 
-            // textBox18
+            // txtEditProdID
             // 
-            this.textBox18.Location = new System.Drawing.Point(200, 62);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(157, 29);
-            this.textBox18.TabIndex = 213;
+            this.txtEditProdID.Location = new System.Drawing.Point(200, 62);
+            this.txtEditProdID.Name = "txtEditProdID";
+            this.txtEditProdID.Size = new System.Drawing.Size(157, 29);
+            this.txtEditProdID.TabIndex = 213;
             // 
             // label13
             // 
@@ -854,15 +789,17 @@
             this.tabDelete.BackColor = System.Drawing.Color.White;
             this.tabDelete.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabDelete.Controls.Add(this.label33);
+            this.tabDelete.Controls.Add(this.cmbDeleteProdType);
             this.tabDelete.Controls.Add(this.roundButton8);
             this.tabDelete.Controls.Add(this.roundButton9);
             this.tabDelete.Controls.Add(this.pictureBox2);
-            this.tabDelete.Controls.Add(this.textBox19);
-            this.tabDelete.Controls.Add(this.textBox20);
-            this.tabDelete.Controls.Add(this.textBox21);
-            this.tabDelete.Controls.Add(this.textBox22);
-            this.tabDelete.Controls.Add(this.textBox23);
-            this.tabDelete.Controls.Add(this.textBox24);
+            this.tabDelete.Controls.Add(this.txtDeleteProdName);
+            this.tabDelete.Controls.Add(this.txtDeleteProdSupplierName);
+            this.tabDelete.Controls.Add(this.txtDeleteProdSupplierID);
+            this.tabDelete.Controls.Add(this.txtDeletePrice);
+            this.tabDelete.Controls.Add(this.txtDeleteProdDesc);
+            this.tabDelete.Controls.Add(this.txtDeleteQTY);
             this.tabDelete.Controls.Add(this.textBox26);
             this.tabDelete.Controls.Add(this.label19);
             this.tabDelete.Controls.Add(this.label20);
@@ -933,48 +870,48 @@
             this.pictureBox2.TabIndex = 220;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox19
+            // txtDeleteProdName
             // 
-            this.textBox19.Location = new System.Drawing.Point(200, 117);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(494, 29);
-            this.textBox19.TabIndex = 219;
+            this.txtDeleteProdName.Location = new System.Drawing.Point(200, 117);
+            this.txtDeleteProdName.Name = "txtDeleteProdName";
+            this.txtDeleteProdName.Size = new System.Drawing.Size(494, 29);
+            this.txtDeleteProdName.TabIndex = 219;
             // 
-            // textBox20
+            // txtDeleteProdSupplierName
             // 
-            this.textBox20.Location = new System.Drawing.Point(200, 427);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(294, 29);
-            this.textBox20.TabIndex = 218;
+            this.txtDeleteProdSupplierName.Location = new System.Drawing.Point(200, 427);
+            this.txtDeleteProdSupplierName.Name = "txtDeleteProdSupplierName";
+            this.txtDeleteProdSupplierName.Size = new System.Drawing.Size(294, 29);
+            this.txtDeleteProdSupplierName.TabIndex = 218;
             // 
-            // textBox21
+            // txtDeleteProdSupplierID
             // 
-            this.textBox21.Location = new System.Drawing.Point(200, 372);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(157, 29);
-            this.textBox21.TabIndex = 217;
+            this.txtDeleteProdSupplierID.Location = new System.Drawing.Point(200, 372);
+            this.txtDeleteProdSupplierID.Name = "txtDeleteProdSupplierID";
+            this.txtDeleteProdSupplierID.Size = new System.Drawing.Size(157, 29);
+            this.txtDeleteProdSupplierID.TabIndex = 217;
             // 
-            // textBox22
+            // txtDeletePrice
             // 
-            this.textBox22.Location = new System.Drawing.Point(200, 317);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(157, 29);
-            this.textBox22.TabIndex = 216;
+            this.txtDeletePrice.Location = new System.Drawing.Point(200, 317);
+            this.txtDeletePrice.Name = "txtDeletePrice";
+            this.txtDeletePrice.Size = new System.Drawing.Size(157, 29);
+            this.txtDeletePrice.TabIndex = 216;
             // 
-            // textBox23
+            // txtDeleteProdDesc
             // 
-            this.textBox23.Location = new System.Drawing.Point(200, 228);
-            this.textBox23.Multiline = true;
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(494, 63);
-            this.textBox23.TabIndex = 215;
+            this.txtDeleteProdDesc.Location = new System.Drawing.Point(200, 228);
+            this.txtDeleteProdDesc.Multiline = true;
+            this.txtDeleteProdDesc.Name = "txtDeleteProdDesc";
+            this.txtDeleteProdDesc.Size = new System.Drawing.Size(494, 63);
+            this.txtDeleteProdDesc.TabIndex = 215;
             // 
-            // textBox24
+            // txtDeleteQTY
             // 
-            this.textBox24.Location = new System.Drawing.Point(200, 172);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(157, 29);
-            this.textBox24.TabIndex = 214;
+            this.txtDeleteQTY.Location = new System.Drawing.Point(200, 172);
+            this.txtDeleteQTY.Name = "txtDeleteQTY";
+            this.txtDeleteQTY.Size = new System.Drawing.Size(157, 29);
+            this.txtDeleteQTY.TabIndex = 214;
             // 
             // textBox26
             // 
@@ -1053,15 +990,166 @@
             this.label29.TabIndex = 206;
             this.label29.Text = "Product ID";
             // 
+            // listViewEquip
+            // 
+            this.listViewEquip.HideSelection = false;
+            this.listViewEquip.Location = new System.Drawing.Point(6, 55);
+            this.listViewEquip.Name = "listViewEquip";
+            this.listViewEquip.Size = new System.Drawing.Size(722, 637);
+            this.listViewEquip.TabIndex = 20;
+            this.listViewEquip.UseCompatibleStateImageBehavior = false;
+            // 
+            // roundButton3
+            // 
+            this.roundButton3.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton3.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton3.FlatAppearance.BorderSize = 0;
+            this.roundButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton3.Location = new System.Drawing.Point(424, 9);
+            this.roundButton3.Name = "roundButton3";
+            this.roundButton3.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton3.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton3.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton3.Size = new System.Drawing.Size(104, 40);
+            this.roundButton3.TabIndex = 24;
+            this.roundButton3.Text = "TYPE";
+            this.roundButton3.TextColor = System.Drawing.Color.White;
+            this.roundButton3.UseVisualStyleBackColor = true;
+            // 
+            // roundButton2
+            // 
+            this.roundButton2.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton2.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton2.FlatAppearance.BorderSize = 0;
+            this.roundButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton2.Location = new System.Drawing.Point(314, 9);
+            this.roundButton2.Name = "roundButton2";
+            this.roundButton2.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton2.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton2.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton2.Size = new System.Drawing.Size(104, 40);
+            this.roundButton2.TabIndex = 23;
+            this.roundButton2.Text = "ID";
+            this.roundButton2.TextColor = System.Drawing.Color.White;
+            this.roundButton2.UseVisualStyleBackColor = true;
+            // 
+            // roundButton1
+            // 
+            this.roundButton1.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton1.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton1.FlatAppearance.BorderSize = 0;
+            this.roundButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton1.Location = new System.Drawing.Point(204, 9);
+            this.roundButton1.Name = "roundButton1";
+            this.roundButton1.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton1.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton1.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton1.Size = new System.Drawing.Size(104, 40);
+            this.roundButton1.TabIndex = 22;
+            this.roundButton1.Text = "A - Z";
+            this.roundButton1.TextColor = System.Drawing.Color.White;
+            this.roundButton1.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label26.Location = new System.Drawing.Point(122, 16);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(76, 24);
+            this.label26.TabIndex = 21;
+            this.label26.Text = "Sort By";
+            // 
+            // cmbSearchProdType
+            // 
+            this.cmbSearchProdType.FormattingEnabled = true;
+            this.cmbSearchProdType.Location = new System.Drawing.Point(491, 172);
+            this.cmbSearchProdType.Name = "cmbSearchProdType";
+            this.cmbSearchProdType.Size = new System.Drawing.Size(203, 32);
+            this.cmbSearchProdType.TabIndex = 223;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label30.Location = new System.Drawing.Point(428, 175);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(57, 24);
+            this.label30.TabIndex = 224;
+            this.label30.Text = "Type";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label31.Location = new System.Drawing.Point(428, 172);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(57, 24);
+            this.label31.TabIndex = 226;
+            this.label31.Text = "Type";
+            // 
+            // cmbAddProdType
+            // 
+            this.cmbAddProdType.FormattingEnabled = true;
+            this.cmbAddProdType.Location = new System.Drawing.Point(491, 169);
+            this.cmbAddProdType.Name = "cmbAddProdType";
+            this.cmbAddProdType.Size = new System.Drawing.Size(203, 32);
+            this.cmbAddProdType.TabIndex = 225;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label32.Location = new System.Drawing.Point(428, 172);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(57, 24);
+            this.label32.TabIndex = 226;
+            this.label32.Text = "Type";
+            // 
+            // cmbEditProdType
+            // 
+            this.cmbEditProdType.FormattingEnabled = true;
+            this.cmbEditProdType.Location = new System.Drawing.Point(491, 169);
+            this.cmbEditProdType.Name = "cmbEditProdType";
+            this.cmbEditProdType.Size = new System.Drawing.Size(203, 32);
+            this.cmbEditProdType.TabIndex = 225;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label33.Location = new System.Drawing.Point(428, 175);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(57, 24);
+            this.label33.TabIndex = 226;
+            this.label33.Text = "Type";
+            // 
+            // cmbDeleteProdType
+            // 
+            this.cmbDeleteProdType.FormattingEnabled = true;
+            this.cmbDeleteProdType.Location = new System.Drawing.Point(491, 172);
+            this.cmbDeleteProdType.Name = "cmbDeleteProdType";
+            this.cmbDeleteProdType.Size = new System.Drawing.Size(203, 32);
+            this.cmbDeleteProdType.TabIndex = 225;
+            // 
             // frmStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 723);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.txtDeleteProdID);
             this.Name = "frmStock";
             this.Text = "frmStock";
-            this.tabControl1.ResumeLayout(false);
+            this.txtDeleteProdID.ResumeLayout(false);
             this.tabDisplay.ResumeLayout(false);
             this.tabDisplay.PerformLayout();
             this.tabSearch.ResumeLayout(false);
@@ -1082,27 +1170,22 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl txtDeleteProdID;
         private System.Windows.Forms.TabPage tabDisplay;
         private System.Windows.Forms.TabPage tabSearch;
         private System.Windows.Forms.TabPage tabAdd;
         private System.Windows.Forms.TabPage tabEdit;
         private System.Windows.Forms.TabPage tabDelete;
-        private RoundButton roundButton3;
-        private RoundButton roundButton2;
-        private RoundButton roundButton1;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.ListView listViewEquip;
         private RoundButton roundButton17;
         private RoundButton roundButton16;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtSearchProdName;
+        private System.Windows.Forms.TextBox txtSearchProdSupplierName;
+        private System.Windows.Forms.TextBox txtSearchProdSupplierID;
+        private System.Windows.Forms.TextBox txtSearchPrice;
+        private System.Windows.Forms.TextBox txtSearchProdDesc;
+        private System.Windows.Forms.TextBox txtSearchQTY;
+        private System.Windows.Forms.TextBox txtSearchProdID;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -1113,13 +1196,13 @@
         private RoundButton roundButton4;
         private RoundButton roundButton5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox29;
+        private System.Windows.Forms.TextBox txtAddProdName;
+        private System.Windows.Forms.TextBox txtAddProdSupplierName;
+        private System.Windows.Forms.TextBox txtAddProdSupplierID;
+        private System.Windows.Forms.TextBox txtAddPrice;
+        private System.Windows.Forms.TextBox txtAddProdDesc;
+        private System.Windows.Forms.TextBox txtAddQTY;
+        private System.Windows.Forms.TextBox txtAddProdID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -1130,13 +1213,13 @@
         private RoundButton roundButton6;
         private RoundButton roundButton7;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txtEditProdName;
+        private System.Windows.Forms.TextBox txtEditProdSupplierName;
+        private System.Windows.Forms.TextBox txtEditProdSupplierID;
+        private System.Windows.Forms.TextBox txtEditPrice;
+        private System.Windows.Forms.TextBox txtEditProdDesc;
+        private System.Windows.Forms.TextBox txtEditQTY;
+        private System.Windows.Forms.TextBox txtEditProdID;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
@@ -1147,12 +1230,12 @@
         private RoundButton roundButton8;
         private RoundButton roundButton9;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox txtDeleteProdName;
+        private System.Windows.Forms.TextBox txtDeleteProdSupplierName;
+        private System.Windows.Forms.TextBox txtDeleteProdSupplierID;
+        private System.Windows.Forms.TextBox txtDeletePrice;
+        private System.Windows.Forms.TextBox txtDeleteProdDesc;
+        private System.Windows.Forms.TextBox txtDeleteQTY;
         private System.Windows.Forms.TextBox textBox26;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
@@ -1161,5 +1244,18 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label29;
+        private RoundButton roundButton3;
+        private RoundButton roundButton2;
+        private RoundButton roundButton1;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.ListView listViewEquip;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.ComboBox cmbSearchProdType;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.ComboBox cmbAddProdType;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.ComboBox cmbEditProdType;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.ComboBox cmbDeleteProdType;
     }
 }

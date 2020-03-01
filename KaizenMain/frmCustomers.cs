@@ -719,6 +719,7 @@ namespace KaizenMain
             txtEditEmail.Enabled = false;
         }
 
+        // Searching and populating feilds for customers
         private void btnSearchIconSearch_Click(object sender, EventArgs e)
         {
             string searchValue = txtSearchID.Text;
@@ -812,33 +813,7 @@ namespace KaizenMain
                 MessageBox.Show("Not found");
             }
         }
-        /*
-                private void iconSearchCustID_Click(object sender, EventArgs e)
-                {
-                    searchCustomerFound(txtSearchID.Text);
-                    drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtEditID.Text);
-                }
-
-               private bool searchCustomerFound(string txt)
-                {
-
-                    foreach (DataGridViewRow row in dgvCustomers.Rows)
-                    {
-                        if (row.Cells[0].Value.ToString().Equals(txt))
-                        {
-                            return true;
-                        }
-                        else 
-                            return false;
-
-
-
-                    }
-
-                }
-                */
     }
-
 }
 
 
