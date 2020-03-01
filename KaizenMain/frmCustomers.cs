@@ -19,7 +19,7 @@ namespace KaizenMain
         String connStr, sqlCustomer;
         int selectedTab = 0;
         bool custSelected = false;
-        int custNoSelected = 0;
+        int custIDSelected = 0;
         public frmCustomers()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace KaizenMain
             tabCustomer.TabPages[tabCustomer.SelectedIndex].Focus();
             tabCustomer.TabPages[tabCustomer.SelectedIndex].CausesValidation = true;
 
-            if (dgvCustomers.SelectedRows.Count == 0 && tabCustomer.SelectedIndex == 1 && tabCustomer.SelectedIndex == 2 && tabCustomer.SelectedIndex == 3 && tabCustomer.SelectedIndex == 4)
+            if (dgvCustomers.SelectedRows.Count == 0 && ( tabCustomer.SelectedIndex == 1  || tabCustomer.SelectedIndex == 3 || tabCustomer.SelectedIndex == 4))
                 tabCustomer.TabPages[tabCustomer.SelectedIndex].CausesValidation = true;
             else
             {
@@ -47,19 +47,26 @@ namespace KaizenMain
                         }
                     case 1:
                         {
-                           /* txtSearchID.Text = custNoSelected.ToString();
+                            if (custIDSelected == 0)
+                            {
+                                tabCustomer.SelectedIndex = 0;
+                                break;
+                            }
+                            else
+                            {
+                                txtSearchID.Text = custIDSelected.ToString();
 
-                            drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtSearchID.Text);
+                                drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtSearchID.Text);
 
-                            txtSearchForename.Text = drCustomer["CustFName"].ToString();
-                            txtSearchSurname.Text = drCustomer["CustSName"].ToString();
-                            txtSearchAddress.Text = drCustomer["CustAddress"].ToString();
-                            txtSearchTown.Text = drCustomer["TownCity"].ToString();
-                            txtSearchCounty.Text = drCustomer["County"].ToString();
-                            txtSearchPcode.Text = drCustomer["CustPCode"].ToString();
-                            txtSearchEmail.Text = drCustomer["CustEmail"].ToString();
-                            txtSearchTel.Text = drCustomer["CustTel"].ToString();
-*/
+                                txtSearchForename.Text = drCustomer["CustFName"].ToString();
+                                txtSearchSurname.Text = drCustomer["CustSName"].ToString();
+                                txtSearchAddress.Text = drCustomer["CustAddress"].ToString();
+                                txtSearchTown.Text = drCustomer["TownCity"].ToString();
+                                txtSearchCounty.Text = drCustomer["County"].ToString();
+                                txtSearchPcode.Text = drCustomer["CustPCode"].ToString();
+                                txtSearchEmail.Text = drCustomer["CustEmail"].ToString();
+                                txtSearchTel.Text = drCustomer["CustTel"].ToString();
+                            }
                             break;
                             
                         }
@@ -82,14 +89,14 @@ namespace KaizenMain
                         }
                     case 3:
                         {
-                            if (custNoSelected == 0)
+                            if (custIDSelected == 0)
                             {
                                 tabCustomer.SelectedIndex = 0;
                                 break;
                             }
                             else
                             {
-                                txtEditID.Text = custNoSelected.ToString();
+                                txtEditID.Text = custIDSelected.ToString();
 
                                 drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtEditID.Text);
                                 /*  if (drCustomer["Title"].ToString() == "Mr")
@@ -116,7 +123,12 @@ namespace KaizenMain
                         }
                     case 4:
                         {
-                            txtDeleteID.Text = custNoSelected.ToString();
+                            if (custIDSelected == 0)
+                            {
+                                tabCustomer.SelectedIndex = 0;
+                                break;
+                            }
+                            txtDeleteID.Text = custIDSelected.ToString();
 
                             drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtDeleteID.Text);
 
@@ -127,7 +139,7 @@ namespace KaizenMain
                             txtDeleteCounty.Text = drCustomer["County"].ToString();
                             txtDeletePostcode.Text = drCustomer["CustPCode"].ToString();
                             txtDeleteEmail.Text = drCustomer["CustEmail"].ToString();
-                            txtSearchTel.Text = drCustomer["CustTel"].ToString();
+                            txtDeleteTel.Text = drCustomer["CustTel"].ToString();
                             break;
                         }
 
@@ -212,27 +224,40 @@ namespace KaizenMain
             if (dgvCustomers.SelectedRows.Count == 0)
             {
                 custSelected = false;
-                custNoSelected = 0;
+                custIDSelected = 0;
             }
             else if (dgvCustomers.SelectedRows.Count == 1)
             {
 
                 custSelected = true;
-                custNoSelected = Convert.ToInt32(dgvCustomers.SelectedRows[0].Cells[0].Value);
+                custIDSelected = Convert.ToInt32(dgvCustomers.SelectedRows[0].Cells[0].Value);
             }
         }
 
-        void EditTabValidate(object sender, EventArgs e)
+        void DispTabValidate(object sender, EventArgs e)
         {
-            if (custSelected == false && custNoSelected == 0)
+            if (custSelected == false && custIDSelected == 0)
             {
                 custSelected = false;
-                custNoSelected = 0;
+                custIDSelected = 0;
             }
             else if (dgvCustomers.SelectedRows.Count == 1)
             {
                 custSelected = true;
-                custNoSelected = Convert.ToInt32(dgvCustomers.SelectedRows[0].Cells[0].Value);
+                custIDSelected = Convert.ToInt32(dgvCustomers.SelectedRows[0].Cells[0].Value);
+            }
+        }
+        void EditTabValidate(object sender, EventArgs e)
+        {
+            if (custSelected == false && custIDSelected == 0)
+            {
+                custSelected = false;
+                custIDSelected = 0;
+            }
+            else if (dgvCustomers.SelectedRows.Count == 1)
+            {
+                custSelected = true;
+                custIDSelected = Convert.ToInt32(dgvCustomers.SelectedRows[0].Cells[0].Value);
             }
         }
 
@@ -266,13 +291,13 @@ namespace KaizenMain
 
             try
             {
-                myCustomer.Forename = txtDeleteForename.Text.Trim();
+                myCustomer.Forename = txtAddForename.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtDeleteForename, MyEx.toString());
+                errP.SetError(txtAddForename, MyEx.toString());
             }
 
             try
@@ -332,17 +357,29 @@ namespace KaizenMain
 
             try
             {
+                myCustomer.Email = txtAddEmail.Text.Trim();
+            }
+
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(txtAddEmail, MyEx.toString());
+            }
+
+            try
+            {
                 if (ok)
                 {
                     drCustomer = dsKaizen.Tables["Customer"].NewRow();
                     drCustomer["CustID"] = myCustomer.CustID;
-                    drCustomer["Forename"] = myCustomer.Forename;
-                    drCustomer["Surname"] = myCustomer.Surname;
-                    drCustomer["Street"] = myCustomer.Street;
-                    drCustomer["Town"] = myCustomer.Town;
+                    drCustomer["CustFname"] = myCustomer.Forename;
+                    drCustomer["CustSname"] = myCustomer.Surname;
+                    drCustomer["CustAddress"] = myCustomer.Street;
+                    drCustomer["TownCity"] = myCustomer.Town;
                     drCustomer["County"] = myCustomer.County;
-                    drCustomer["Postcode"] = myCustomer.Postcode;
-                    drCustomer["TelNo"] = myCustomer.TelNo;
+                    drCustomer["CustPCode"] = myCustomer.Postcode;
+                    drCustomer["CustTel"] = myCustomer.TelNo;
+                    drCustomer["CustEmail"] = myCustomer.Email;
 
                     dsKaizen.Tables["Customer"].Rows.Add(drCustomer);
                     daCustomer.Update(dsKaizen, "Customer");
@@ -371,8 +408,8 @@ namespace KaizenMain
         void clearAddForm()
         {
 
-            txtDeleteForename.Clear();
             txtAddForename.Clear();
+            txtAddSurname.Clear();
             txtAddAddress.Clear();
             txtAddTown.Clear();
             txtAddCounty.Clear();
@@ -382,6 +419,49 @@ namespace KaizenMain
 
         }
 
+        void clearSearchForm()
+        {
+            txtSearchID.Clear();
+            txtSearchForename.Clear();
+            txtSearchSurname.Clear();
+            txtSearchAddress.Clear();
+            txtSearchTown.Clear();
+            txtSearchCounty.Clear();
+            txtSearchPcode.Clear();
+            txtSearchTel.Clear();
+            txtSearchEmail.Clear();
+
+        }
+
+        void clearEditForm()
+        {
+            txtEditID.Clear();
+            txtEditForename.Clear();
+            txtEditSurname.Clear();
+            txtEditAddress.Clear();
+            txtEditTown.Clear();
+            txtEditCounty.Clear();
+            txtEditPostcode.Clear();
+            txtEditTel.Clear();
+            txtEditEmail.Clear();
+
+        }
+
+        void clearDeleteForm()
+        {
+
+            txtDeleteID.Clear();
+            txtDeleteForename.Clear();
+            txtDeleteSurname.Clear();
+            txtDeleteAddress.Clear();
+            txtDeleteTown.Clear();
+            txtDeleteCounty.Clear();
+            txtDeletePostcode.Clear();
+            txtDeleteTel.Clear();
+            txtDeleteEmail.Clear();
+
+        }
+       
         private void tabEdit_Click(object sender, EventArgs e)
         {
 
@@ -412,6 +492,26 @@ namespace KaizenMain
 
 
 
+        }
+
+        private void btnSearchClearForm_Click(object sender, EventArgs e)
+        {
+            clearSearchForm();
+        }
+
+        private void btnAddClearForm_Click(object sender, EventArgs e)
+        {
+            clearAddForm();
+        }
+
+        private void btnEditClearForm_Click(object sender, EventArgs e)
+        {
+            clearEditForm();
+        }
+
+        private void btnDeleteClearForm_Click(object sender, EventArgs e)
+        {
+            clearDeleteForm();
         }
 
         private void frmCustomer_Shown(object sender, EventArgs e)
