@@ -808,6 +808,7 @@
             this.iconSearchCustID.Size = new System.Drawing.Size(43, 31);
             this.iconSearchCustID.TabIndex = 224;
             this.iconSearchCustID.TabStop = false;
+            this.iconSearchCustID.Click += new System.EventHandler(this.iconSearchCustID_Click);
             // 
             // txtSearchTel
             // 
@@ -1194,6 +1195,7 @@
             this.btnEditEditCust.Text = "EDIT CUSTOMER";
             this.btnEditEditCust.TextColor = System.Drawing.Color.White;
             this.btnEditEditCust.UseVisualStyleBackColor = false;
+            this.btnEditEditCust.Click += new System.EventHandler(this.btnEditEdit_Click);
             // 
             // btnEditEmailCust
             // 
@@ -1282,6 +1284,7 @@
             this.btnDeleteDeleteCust.Text = "DELETE CUSTOMER";
             this.btnDeleteDeleteCust.TextColor = System.Drawing.Color.White;
             this.btnDeleteDeleteCust.UseVisualStyleBackColor = false;
+            this.btnDeleteDeleteCust.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnDeleteClearForm
             // 

@@ -104,7 +104,7 @@ namespace KaizenMain
             get { return county; }
             set
             {
-                if (MyValidation.validLength(value, 2, 20) && MyValidation.validLetter(value))
+                if (MyValidation.validLength(value, 2, 20) && MyValidation.validLetterWhitespace(value))
                 {
                     county = MyValidation.firstLetterEachWordToUpper(value);
                 }
@@ -120,7 +120,7 @@ namespace KaizenMain
             get { return email; }
             set
             {
-                if (MyValidation.validLength(value, 2, 40) && MyValidation.validLetter(value))
+                if (MyValidation.validEmail(value))
                 {
                     email = MyValidation.firstLetterEachWordToUpper(value);
                 }

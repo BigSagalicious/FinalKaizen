@@ -88,6 +88,19 @@ namespace KaizenMain
 
         }
 
+        public static bool validEmail(string txt)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(txt);
+                return addr.Address == txt;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public static bool validLetterNumberWhitespace(string txt)
         {
             bool ok = true;
@@ -159,50 +172,6 @@ namespace KaizenMain
             return ok;
 
         }
-        public static bool validEmail(string txt)
-        {
-            bool ok = true;
-
-            if (txt.Trim().Length == 0)
-            {
-                ok = false;
-            }
-            else
-            {
-                for (int x = 0; x < txt.Length; x++)
-                {
-                    if (!(char.IsLetter(txt[x])) && !(char.IsNumber(txt[x])) && !((txt[x].Equals('@'))) && !((txt[x].Equals('-'))) && !((txt[x].Equals('_'))) && !((txt[x].Equals('.'))))
-                    {
-                        ok = false;
-                    }
-
-                }
-            }
-            return ok;
-
-        }
-
-        public static bool validDogDOB2(DateTime dogDOB)
-        {
-            DateTime currentDate = DateTime.Now;
-            //DateTime dogDOB = Convert.ToDateTime(txt);
-
-            TimeSpan t = currentDate - dogDOB;
-            double NoOfDays = t.TotalDays;
-
-            bool ok = true;
-
-            //if (txt.Trim().Length == 0)
-            //{
-            //    ok = false;
-            //}
-            //else
-
-            if (NoOfDays <= 56)
-                ok = false;
-
-            return ok;
-        }
 
         public static String firstLetterEachWordToUpper(string word)
         {
@@ -243,29 +212,6 @@ namespace KaizenMain
             }
 
             return new string(array);
-        }
-
-        public static bool validBreedName(string txt)
-        {
-            bool ok = true;
-
-            if (txt.Trim().Length == 0)
-            {
-                ok = false;
-            }
-            else
-            {
-                for (int x = 0; x < txt.Length; x++)
-                {
-                    if (!(char.IsLetter(txt[x])) && !(char.IsWhiteSpace(txt[x])) && !(txt[x].Equals('-')))
-                    {
-                        ok = false;
-                    }
-
-                }
-            }
-            return ok;
-
         }
 
         public static bool validColour(string txt)

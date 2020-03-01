@@ -32,7 +32,7 @@ namespace KaizenMain
             tabCustomer.TabPages[tabCustomer.SelectedIndex].Focus();
             tabCustomer.TabPages[tabCustomer.SelectedIndex].CausesValidation = true;
 
-            if (dgvCustomers.SelectedRows.Count == 0 && ( tabCustomer.SelectedIndex == 1  || tabCustomer.SelectedIndex == 3 || tabCustomer.SelectedIndex == 4))
+            if (dgvCustomers.SelectedRows.Count == 0 && (tabCustomer.SelectedIndex == 1 || tabCustomer.SelectedIndex == 3 || tabCustomer.SelectedIndex == 4))
                 tabCustomer.TabPages[tabCustomer.SelectedIndex].CausesValidation = true;
             else
             {
@@ -68,7 +68,7 @@ namespace KaizenMain
                                 txtSearchTel.Text = drCustomer["CustTel"].ToString();
                             }
                             break;
-                            
+
                         }
 
                     case 2:
@@ -116,6 +116,8 @@ namespace KaizenMain
                                 txtEditPostcode.Text = drCustomer["CustPCode"].ToString();
                                 txtEditEmail.Text = drCustomer["CustEmail"].ToString();
                                 txtEditTel.Text = drCustomer["CustTel"].ToString();
+
+                                disableEditTxtboxes();
 
                                 break;
 
@@ -277,7 +279,7 @@ namespace KaizenMain
                 errP.SetError(lblAdCustNo, MyEx.toString());
             }
 
-            
+
             try
             {
                 myCustomer.Surname = txtAddForename.Text.Trim();
@@ -291,13 +293,13 @@ namespace KaizenMain
 
             try
             {
-                myCustomer.Forename = txtAddForename.Text.Trim();
+                myCustomer.Forename = txtAddSurname.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtAddForename, MyEx.toString());
+                errP.SetError(txtAddSurname, MyEx.toString());
             }
 
             try
@@ -405,6 +407,174 @@ namespace KaizenMain
             }
         }
 
+        private void btnEditEdit_Click(object sender, EventArgs e)
+        {
+            if (btnEditEditCust.Text == "EDIT CUSTOMER")
+            {
+                enableEditTxtboxes();
+
+                btnEditEditCust.Text = "Save";
+            }
+            else
+            {
+                MyCustomer myCustomer = new MyCustomer();
+                bool ok = true;
+                errP.Clear();
+
+                try
+                {
+                    myCustomer.Surname = txtEditForename.Text.Trim();
+                }
+
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(txtEditForename, MyEx.toString());
+                }
+
+                try
+                {
+                    myCustomer.Forename = txtEditSurname.Text.Trim();
+                }
+
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(txtEditSurname, MyEx.toString());
+                }
+
+                try
+                {
+                    myCustomer.Street = txtEditAddress.Text.Trim();
+                }
+
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(txtEditAddress, MyEx.toString());
+                }
+
+                try
+                {
+                    myCustomer.Town = txtEditTown.Text.Trim();
+                }
+
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(txtEditTown, MyEx.toString());
+                }
+
+                try
+                {
+                    myCustomer.County = txtEditCounty.Text.Trim();
+                }
+
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(txtEditCounty, MyEx.toString());
+                }
+
+                try
+                {
+                    myCustomer.Postcode = txtEditPostcode.Text.Trim();
+                }
+
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(txtEditPostcode, MyEx.toString());
+                }
+
+                try
+                {
+                    myCustomer.TelNo = txtEditTel.Text.Trim();
+                }
+
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(txtEditTel, MyEx.toString());
+                }
+
+                try
+                {
+                    myCustomer.Email = txtEditEmail.Text.Trim();
+                }
+
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(txtEditEmail, MyEx.toString());
+                }
+
+                try
+                {
+                    if (ok)
+                    {
+                        drCustomer.BeginEdit();
+                        drCustomer["CustFname"] = myCustomer.Forename;
+                        drCustomer["CustSname"] = myCustomer.Surname;
+                        drCustomer["CustAddress"] = myCustomer.Street;
+                        drCustomer["TownCity"] = myCustomer.Town;
+                        drCustomer["County"] = myCustomer.County;
+                        drCustomer["CustPCode"] = myCustomer.Postcode;
+                        drCustomer["CustTel"] = myCustomer.TelNo;
+                        drCustomer["CustEmail"] = myCustomer.Email;
+
+                        drCustomer.EndEdit();
+                        daCustomer.Update(dsKaizen, "Customer");
+
+                        MessageBox.Show("Customer Details Updated", "Customer");
+
+                        disableEditTxtboxes();
+
+                        btnEditEditCust.Text = "EDIT CUSTOMER";
+                        tabCustomer.SelectedIndex = 0;
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Error !", MessageBoxButtons.AbortRetryIgnore,
+                        MessageBoxIcon.Error);
+                }
+
+
+            }
+
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgvCustomers.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a customer from the list.", "Select Customer");
+
+            }
+            else
+            {
+                drCustomer = dsKaizen.Tables["Customer"].Rows.
+                    Find(dgvCustomers.SelectedRows[0].Cells[0].Value);
+
+                string tempName = drCustomer["CustFname"].ToString() + " " +
+                    drCustomer["CustSname"].ToString() + "\'s";
+                if (MessageBox.Show("Are you sure you want to delete " + tempName + "details?",
+                    "Add Customer", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    drCustomer.Delete();
+                    daCustomer.Update(dsKaizen, "Customer");
+                    MessageBox.Show("Details Removed for " + tempName);
+                    clearDeleteForm();
+
+                }
+
+            }
+        }
+
         void clearAddForm()
         {
 
@@ -461,7 +631,7 @@ namespace KaizenMain
             txtDeleteEmail.Clear();
 
         }
-       
+
         private void tabEdit_Click(object sender, EventArgs e)
         {
 
@@ -476,7 +646,7 @@ namespace KaizenMain
         {
             connStr = @"Data Source = .\SQLEXPRESS01; Initial Catalog = Kaizen;Integrated Security = true ";
 
-           // connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+            // connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
             sqlCustomer = @"select * from Customer";
             daCustomer = new SqlDataAdapter(sqlCustomer, connStr);
@@ -522,8 +692,59 @@ namespace KaizenMain
             tabCustomer.TabPages[2].CausesValidation = true;
             tabCustomer.TabPages[2].Validating += new CancelEventHandler(EditTabValidate);
         }
-        
+
+        private void enableEditTxtboxes()
+        {
+            txtEditForename.Enabled = true;
+            txtEditSurname.Enabled = true;
+            txtEditAddress.Enabled = true;
+            txtEditTown.Enabled = true;
+            txtEditCounty.Enabled = true;
+            txtEditPostcode.Enabled = true;
+            txtEditTel.Enabled = true;
+            txtEditEmail.Enabled = true;
+        }
+
+        private void disableEditTxtboxes()
+        {
+            txtEditForename.Enabled = false;
+            txtEditSurname.Enabled = false;
+            txtEditAddress.Enabled = false;
+            txtEditTown.Enabled = false;
+            txtEditCounty.Enabled = false;
+            txtEditPostcode.Enabled = false;
+            txtEditTel.Enabled = false;
+            txtEditEmail.Enabled = false;
+        }
+
+        private void iconSearchCustID_Click(object sender, EventArgs e)
+        {
+            searchCustomericon(txtSearchID.Text);
+            drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtEditID.Text);
+        }
+
+        private bool searchCustomericon(string txt)
+        {
+            String searchValue = txt;
+            bool searchCustID = false;
+            foreach (DataGridViewRow row in dgvCustomers.Rows)
+            {
+                if (row.Cells[0].Value.ToString().Equals(searchValue))
+                {
+                    searchCustID = true;                   
+                }
+                else
+                    searchCustID = false
+                        ;
+
+                return searchCustID;
+                
+
+            }
+            
+        }
     }
+
 }
 
 
