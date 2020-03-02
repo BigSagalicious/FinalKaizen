@@ -150,7 +150,7 @@ namespace KaizenMain
                 }
             }
         }
-        /*
+
         //Get Forename data
         private void txtAddForename_TextChanged(object sender, EventArgs e)
         {
@@ -215,7 +215,7 @@ namespace KaizenMain
             else
                 txtAddTel.BackColor = Color.LightCoral;
         }
-        */
+
 
         private void getNumber(int noRows)
         {
