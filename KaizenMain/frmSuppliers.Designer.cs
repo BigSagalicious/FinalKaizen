@@ -36,100 +36,100 @@
             this.label41 = new System.Windows.Forms.Label();
             this.listViewEquip = new System.Windows.Forms.ListView();
             this.tabSearch = new System.Windows.Forms.TabPage();
-            this.roundButton17 = new KaizenMain.RoundButton();
-            this.roundButton16 = new KaizenMain.RoundButton();
+            this.btnPrintSupplier = new KaizenMain.RoundButton();
+            this.btnSeSuppClear = new KaizenMain.RoundButton();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblSeCompName = new System.Windows.Forms.Label();
+            this.txtSeCompName = new System.Windows.Forms.TextBox();
+            this.txtSeSuppTel = new System.Windows.Forms.TextBox();
+            this.lblSeSuppTel = new System.Windows.Forms.Label();
+            this.txtSeSuppEmail = new System.Windows.Forms.TextBox();
+            this.lblSeSuppEmail = new System.Windows.Forms.Label();
+            this.txtSeSuppPost = new System.Windows.Forms.TextBox();
+            this.lblSeSuppPost = new System.Windows.Forms.Label();
+            this.txtSeSuppCounty = new System.Windows.Forms.TextBox();
+            this.lblSeSuppCounty = new System.Windows.Forms.Label();
+            this.txtSeSuppTown = new System.Windows.Forms.TextBox();
+            this.lblSeSuppTown = new System.Windows.Forms.Label();
+            this.txtSeSuppAddress = new System.Windows.Forms.TextBox();
+            this.lblSeSuppAddress = new System.Windows.Forms.Label();
+            this.txtSeSuppSurname = new System.Windows.Forms.TextBox();
+            this.lblSeSur = new System.Windows.Forms.Label();
+            this.txtSeFore = new System.Windows.Forms.TextBox();
+            this.lblSeSuppFore = new System.Windows.Forms.Label();
+            this.txtSeSuppID = new System.Windows.Forms.TextBox();
+            this.lblSeSuppID = new System.Windows.Forms.Label();
             this.tabAdd = new System.Windows.Forms.TabPage();
-            this.roundButton4 = new KaizenMain.RoundButton();
-            this.roundButton5 = new KaizenMain.RoundButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.textBox38 = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
+            this.BtnSaveSup = new KaizenMain.RoundButton();
+            this.btnClearSup = new KaizenMain.RoundButton();
+            this.lblCompName = new System.Windows.Forms.Label();
+            this.txtCompName = new System.Windows.Forms.TextBox();
+            this.txtSupTel = new System.Windows.Forms.TextBox();
+            this.lblTel = new System.Windows.Forms.Label();
+            this.txtSupEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtSupPost = new System.Windows.Forms.TextBox();
+            this.lblPost = new System.Windows.Forms.Label();
+            this.txtCounty = new System.Windows.Forms.TextBox();
+            this.lblCounty = new System.Windows.Forms.Label();
+            this.txtSupTown = new System.Windows.Forms.TextBox();
+            this.lblTown = new System.Windows.Forms.Label();
+            this.txtSupAddress = new System.Windows.Forms.TextBox();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.txtSupSurname = new System.Windows.Forms.TextBox();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.txtSupForename = new System.Windows.Forms.TextBox();
+            this.lblForename = new System.Windows.Forms.Label();
+            this.txtSuppID = new System.Windows.Forms.TextBox();
+            this.lblSupID = new System.Windows.Forms.Label();
             this.tabEdit = new System.Windows.Forms.TabPage();
-            this.roundButton6 = new KaizenMain.RoundButton();
-            this.roundButton7 = new KaizenMain.RoundButton();
+            this.btnEditSupp = new KaizenMain.RoundButton();
+            this.btnEdSuppClear = new KaizenMain.RoundButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.label39 = new System.Windows.Forms.Label();
+            this.lblEdCompName = new System.Windows.Forms.Label();
+            this.txtEdCompName = new System.Windows.Forms.TextBox();
+            this.txtEDSuppTel = new System.Windows.Forms.TextBox();
+            this.lblTelNo = new System.Windows.Forms.Label();
+            this.txtEdSuppEmail = new System.Windows.Forms.TextBox();
+            this.lblEdSupEmail = new System.Windows.Forms.Label();
+            this.txtEdSuppPost = new System.Windows.Forms.TextBox();
+            this.lblEdSuppPost = new System.Windows.Forms.Label();
+            this.txtEdSuppCounty = new System.Windows.Forms.TextBox();
+            this.lblEdSuppCounty = new System.Windows.Forms.Label();
+            this.txtEdSuppTown = new System.Windows.Forms.TextBox();
+            this.lblEdSuppTown = new System.Windows.Forms.Label();
+            this.txtEdSuppAddress = new System.Windows.Forms.TextBox();
+            this.lblEdSuppAddress = new System.Windows.Forms.Label();
+            this.txtEdSuppSurname = new System.Windows.Forms.TextBox();
+            this.lblEdSuppSurname = new System.Windows.Forms.Label();
+            this.txtEdSuppForeName = new System.Windows.Forms.TextBox();
+            this.lblEdSuppForename = new System.Windows.Forms.Label();
+            this.txtEdSuppID = new System.Windows.Forms.TextBox();
+            this.lblEdSupID = new System.Windows.Forms.Label();
             this.tabDelete = new System.Windows.Forms.TabPage();
-            this.roundButton8 = new KaizenMain.RoundButton();
-            this.roundButton9 = new KaizenMain.RoundButton();
+            this.btnDeleteSupp = new KaizenMain.RoundButton();
+            this.btnDlClearSupp = new KaizenMain.RoundButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
+            this.lblDlCompName = new System.Windows.Forms.Label();
+            this.txtDlCompName = new System.Windows.Forms.TextBox();
+            this.txtDlSuppTel = new System.Windows.Forms.TextBox();
+            this.lblDlSuppTel = new System.Windows.Forms.Label();
+            this.txtDlSuppEmail = new System.Windows.Forms.TextBox();
+            this.lblDlSuppEmail = new System.Windows.Forms.Label();
+            this.txtDlSuppPost = new System.Windows.Forms.TextBox();
+            this.lblDlSuppPost = new System.Windows.Forms.Label();
+            this.txtDlSuppCounty = new System.Windows.Forms.TextBox();
+            this.lblDlSuppCounty = new System.Windows.Forms.Label();
+            this.txtDlSuppTown = new System.Windows.Forms.TextBox();
+            this.lblDlSuppTown = new System.Windows.Forms.Label();
+            this.txtDlSuppAddress = new System.Windows.Forms.TextBox();
+            this.lblDlSupAddress = new System.Windows.Forms.Label();
             this.textBox35 = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.textBox40 = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
+            this.lblDlSuppSur = new System.Windows.Forms.Label();
+            this.txtDlSuppFore = new System.Windows.Forms.TextBox();
+            this.lblDlSuppFore = new System.Windows.Forms.Label();
+            this.txtDlSuppID = new System.Windows.Forms.TextBox();
+            this.lblDelSuppID = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             this.tabSearch.SuspendLayout();
@@ -161,6 +161,7 @@
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 7;
             this.tabControl1.TabStop = false;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabDisplay
             // 
@@ -263,29 +264,29 @@
             this.tabSearch.BackColor = System.Drawing.Color.White;
             this.tabSearch.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabSearch.Controls.Add(this.roundButton17);
-            this.tabSearch.Controls.Add(this.roundButton16);
+            this.tabSearch.Controls.Add(this.btnPrintSupplier);
+            this.tabSearch.Controls.Add(this.btnSeSuppClear);
             this.tabSearch.Controls.Add(this.pictureBox5);
-            this.tabSearch.Controls.Add(this.label37);
-            this.tabSearch.Controls.Add(this.textBox37);
-            this.tabSearch.Controls.Add(this.textBox28);
-            this.tabSearch.Controls.Add(this.label28);
-            this.tabSearch.Controls.Add(this.textBox27);
-            this.tabSearch.Controls.Add(this.label27);
-            this.tabSearch.Controls.Add(this.textBox26);
-            this.tabSearch.Controls.Add(this.label26);
-            this.tabSearch.Controls.Add(this.textBox7);
-            this.tabSearch.Controls.Add(this.label7);
-            this.tabSearch.Controls.Add(this.textBox8);
-            this.tabSearch.Controls.Add(this.label8);
-            this.tabSearch.Controls.Add(this.textBox9);
-            this.tabSearch.Controls.Add(this.label9);
-            this.tabSearch.Controls.Add(this.textBox10);
-            this.tabSearch.Controls.Add(this.label10);
-            this.tabSearch.Controls.Add(this.textBox11);
-            this.tabSearch.Controls.Add(this.label11);
-            this.tabSearch.Controls.Add(this.textBox12);
-            this.tabSearch.Controls.Add(this.label12);
+            this.tabSearch.Controls.Add(this.lblSeCompName);
+            this.tabSearch.Controls.Add(this.txtSeCompName);
+            this.tabSearch.Controls.Add(this.txtSeSuppTel);
+            this.tabSearch.Controls.Add(this.lblSeSuppTel);
+            this.tabSearch.Controls.Add(this.txtSeSuppEmail);
+            this.tabSearch.Controls.Add(this.lblSeSuppEmail);
+            this.tabSearch.Controls.Add(this.txtSeSuppPost);
+            this.tabSearch.Controls.Add(this.lblSeSuppPost);
+            this.tabSearch.Controls.Add(this.txtSeSuppCounty);
+            this.tabSearch.Controls.Add(this.lblSeSuppCounty);
+            this.tabSearch.Controls.Add(this.txtSeSuppTown);
+            this.tabSearch.Controls.Add(this.lblSeSuppTown);
+            this.tabSearch.Controls.Add(this.txtSeSuppAddress);
+            this.tabSearch.Controls.Add(this.lblSeSuppAddress);
+            this.tabSearch.Controls.Add(this.txtSeSuppSurname);
+            this.tabSearch.Controls.Add(this.lblSeSur);
+            this.tabSearch.Controls.Add(this.txtSeFore);
+            this.tabSearch.Controls.Add(this.lblSeSuppFore);
+            this.tabSearch.Controls.Add(this.txtSeSuppID);
+            this.tabSearch.Controls.Add(this.lblSeSuppID);
             this.tabSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tabSearch.Location = new System.Drawing.Point(4, 29);
@@ -296,47 +297,47 @@
             this.tabSearch.Text = "SEARCH";
             this.tabSearch.Click += new System.EventHandler(this.tabSearch_Click);
             // 
-            // roundButton17
+            // btnPrintSupplier
             // 
-            this.roundButton17.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton17.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton17.FlatAppearance.BorderSize = 0;
-            this.roundButton17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton17.Location = new System.Drawing.Point(273, 592);
-            this.roundButton17.Name = "roundButton17";
-            this.roundButton17.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton17.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton17.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton17.Size = new System.Drawing.Size(189, 40);
-            this.roundButton17.TabIndex = 224;
-            this.roundButton17.Text = "PRINT SUPPLIER";
-            this.roundButton17.TextColor = System.Drawing.Color.White;
-            this.roundButton17.UseVisualStyleBackColor = true;
+            this.btnPrintSupplier.BorderColor = System.Drawing.Color.Silver;
+            this.btnPrintSupplier.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnPrintSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrintSupplier.FlatAppearance.BorderSize = 0;
+            this.btnPrintSupplier.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPrintSupplier.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPrintSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintSupplier.Location = new System.Drawing.Point(273, 592);
+            this.btnPrintSupplier.Name = "btnPrintSupplier";
+            this.btnPrintSupplier.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnPrintSupplier.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnPrintSupplier.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnPrintSupplier.Size = new System.Drawing.Size(189, 40);
+            this.btnPrintSupplier.TabIndex = 224;
+            this.btnPrintSupplier.Text = "PRINT SUPPLIER";
+            this.btnPrintSupplier.TextColor = System.Drawing.Color.White;
+            this.btnPrintSupplier.UseVisualStyleBackColor = true;
             // 
-            // roundButton16
+            // btnSeSuppClear
             // 
-            this.roundButton16.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton16.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton16.FlatAppearance.BorderSize = 0;
-            this.roundButton16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton16.Location = new System.Drawing.Point(582, 37);
-            this.roundButton16.Name = "roundButton16";
-            this.roundButton16.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton16.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton16.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton16.Size = new System.Drawing.Size(115, 40);
-            this.roundButton16.TabIndex = 223;
-            this.roundButton16.Text = "CLEAR";
-            this.roundButton16.TextColor = System.Drawing.Color.White;
-            this.roundButton16.UseVisualStyleBackColor = true;
+            this.btnSeSuppClear.BorderColor = System.Drawing.Color.Silver;
+            this.btnSeSuppClear.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnSeSuppClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeSuppClear.FlatAppearance.BorderSize = 0;
+            this.btnSeSuppClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSeSuppClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSeSuppClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeSuppClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeSuppClear.Location = new System.Drawing.Point(582, 37);
+            this.btnSeSuppClear.Name = "btnSeSuppClear";
+            this.btnSeSuppClear.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnSeSuppClear.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnSeSuppClear.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnSeSuppClear.Size = new System.Drawing.Size(115, 40);
+            this.btnSeSuppClear.TabIndex = 223;
+            this.btnSeSuppClear.Text = "CLEAR";
+            this.btnSeSuppClear.TextColor = System.Drawing.Color.White;
+            this.btnSeSuppClear.UseVisualStyleBackColor = true;
             // 
             // pictureBox5
             // 
@@ -350,203 +351,203 @@
             this.pictureBox5.TabIndex = 222;
             this.pictureBox5.TabStop = false;
             // 
-            // label37
+            // lblSeCompName
             // 
-            this.label37.AutoSize = true;
-            this.label37.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label37.Location = new System.Drawing.Point(37, 99);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(159, 24);
-            this.label37.TabIndex = 61;
-            this.label37.Text = "Company Name";
+            this.lblSeCompName.AutoSize = true;
+            this.lblSeCompName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSeCompName.Location = new System.Drawing.Point(37, 99);
+            this.lblSeCompName.Name = "lblSeCompName";
+            this.lblSeCompName.Size = new System.Drawing.Size(159, 24);
+            this.lblSeCompName.TabIndex = 61;
+            this.lblSeCompName.Text = "Company Name";
             // 
-            // textBox37
+            // txtSeCompName
             // 
-            this.textBox37.Location = new System.Drawing.Point(203, 96);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(494, 29);
-            this.textBox37.TabIndex = 60;
+            this.txtSeCompName.Location = new System.Drawing.Point(203, 96);
+            this.txtSeCompName.Name = "txtSeCompName";
+            this.txtSeCompName.Size = new System.Drawing.Size(494, 29);
+            this.txtSeCompName.TabIndex = 60;
             // 
-            // textBox28
+            // txtSeSuppTel
             // 
-            this.textBox28.Location = new System.Drawing.Point(203, 482);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(294, 29);
-            this.textBox28.TabIndex = 59;
+            this.txtSeSuppTel.Location = new System.Drawing.Point(203, 482);
+            this.txtSeSuppTel.Name = "txtSeSuppTel";
+            this.txtSeSuppTel.Size = new System.Drawing.Size(294, 29);
+            this.txtSeSuppTel.TabIndex = 59;
             // 
-            // label28
+            // lblSeSuppTel
             // 
-            this.label28.AutoSize = true;
-            this.label28.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label28.Location = new System.Drawing.Point(37, 485);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(73, 24);
-            this.label28.TabIndex = 58;
-            this.label28.Text = "Tel No";
+            this.lblSeSuppTel.AutoSize = true;
+            this.lblSeSuppTel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSeSuppTel.Location = new System.Drawing.Point(37, 485);
+            this.lblSeSuppTel.Name = "lblSeSuppTel";
+            this.lblSeSuppTel.Size = new System.Drawing.Size(73, 24);
+            this.lblSeSuppTel.TabIndex = 58;
+            this.lblSeSuppTel.Text = "Tel No";
             // 
-            // textBox27
+            // txtSeSuppEmail
             // 
-            this.textBox27.Location = new System.Drawing.Point(203, 427);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(294, 29);
-            this.textBox27.TabIndex = 57;
+            this.txtSeSuppEmail.Location = new System.Drawing.Point(203, 427);
+            this.txtSeSuppEmail.Name = "txtSeSuppEmail";
+            this.txtSeSuppEmail.Size = new System.Drawing.Size(294, 29);
+            this.txtSeSuppEmail.TabIndex = 57;
             // 
-            // label27
+            // lblSeSuppEmail
             // 
-            this.label27.AutoSize = true;
-            this.label27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label27.Location = new System.Drawing.Point(37, 430);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(69, 24);
-            this.label27.TabIndex = 56;
-            this.label27.Text = "E-Mail";
+            this.lblSeSuppEmail.AutoSize = true;
+            this.lblSeSuppEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSeSuppEmail.Location = new System.Drawing.Point(37, 430);
+            this.lblSeSuppEmail.Name = "lblSeSuppEmail";
+            this.lblSeSuppEmail.Size = new System.Drawing.Size(69, 24);
+            this.lblSeSuppEmail.TabIndex = 56;
+            this.lblSeSuppEmail.Text = "E-Mail";
             // 
-            // textBox26
+            // txtSeSuppPost
             // 
-            this.textBox26.Location = new System.Drawing.Point(203, 372);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(294, 29);
-            this.textBox26.TabIndex = 55;
+            this.txtSeSuppPost.Location = new System.Drawing.Point(203, 372);
+            this.txtSeSuppPost.Name = "txtSeSuppPost";
+            this.txtSeSuppPost.Size = new System.Drawing.Size(294, 29);
+            this.txtSeSuppPost.TabIndex = 55;
             // 
-            // label26
+            // lblSeSuppPost
             // 
-            this.label26.AutoSize = true;
-            this.label26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label26.Location = new System.Drawing.Point(37, 375);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(97, 24);
-            this.label26.TabIndex = 54;
-            this.label26.Text = "Postcode";
+            this.lblSeSuppPost.AutoSize = true;
+            this.lblSeSuppPost.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSeSuppPost.Location = new System.Drawing.Point(37, 375);
+            this.lblSeSuppPost.Name = "lblSeSuppPost";
+            this.lblSeSuppPost.Size = new System.Drawing.Size(97, 24);
+            this.lblSeSuppPost.TabIndex = 54;
+            this.lblSeSuppPost.Text = "Postcode";
             // 
-            // textBox7
+            // txtSeSuppCounty
             // 
-            this.textBox7.Location = new System.Drawing.Point(203, 317);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(294, 29);
-            this.textBox7.TabIndex = 50;
+            this.txtSeSuppCounty.Location = new System.Drawing.Point(203, 317);
+            this.txtSeSuppCounty.Name = "txtSeSuppCounty";
+            this.txtSeSuppCounty.Size = new System.Drawing.Size(294, 29);
+            this.txtSeSuppCounty.TabIndex = 50;
             // 
-            // label7
+            // lblSeSuppCounty
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(37, 320);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 24);
-            this.label7.TabIndex = 49;
-            this.label7.Text = "County";
+            this.lblSeSuppCounty.AutoSize = true;
+            this.lblSeSuppCounty.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSeSuppCounty.Location = new System.Drawing.Point(37, 320);
+            this.lblSeSuppCounty.Name = "lblSeSuppCounty";
+            this.lblSeSuppCounty.Size = new System.Drawing.Size(75, 24);
+            this.lblSeSuppCounty.TabIndex = 49;
+            this.lblSeSuppCounty.Text = "County";
             // 
-            // textBox8
+            // txtSeSuppTown
             // 
-            this.textBox8.Location = new System.Drawing.Point(203, 262);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(294, 29);
-            this.textBox8.TabIndex = 48;
+            this.txtSeSuppTown.Location = new System.Drawing.Point(203, 262);
+            this.txtSeSuppTown.Name = "txtSeSuppTown";
+            this.txtSeSuppTown.Size = new System.Drawing.Size(294, 29);
+            this.txtSeSuppTown.TabIndex = 48;
             // 
-            // label8
+            // lblSeSuppTown
             // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(37, 265);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(102, 24);
-            this.label8.TabIndex = 47;
-            this.label8.Text = "Town/City";
+            this.lblSeSuppTown.AutoSize = true;
+            this.lblSeSuppTown.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSeSuppTown.Location = new System.Drawing.Point(37, 265);
+            this.lblSeSuppTown.Name = "lblSeSuppTown";
+            this.lblSeSuppTown.Size = new System.Drawing.Size(102, 24);
+            this.lblSeSuppTown.TabIndex = 47;
+            this.lblSeSuppTown.Text = "Town/City";
             // 
-            // textBox9
+            // txtSeSuppAddress
             // 
-            this.textBox9.Location = new System.Drawing.Point(203, 207);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(494, 29);
-            this.textBox9.TabIndex = 46;
+            this.txtSeSuppAddress.Location = new System.Drawing.Point(203, 207);
+            this.txtSeSuppAddress.Name = "txtSeSuppAddress";
+            this.txtSeSuppAddress.Size = new System.Drawing.Size(494, 29);
+            this.txtSeSuppAddress.TabIndex = 46;
             // 
-            // label9
+            // lblSeSuppAddress
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(37, 214);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 24);
-            this.label9.TabIndex = 45;
-            this.label9.Text = "Address";
+            this.lblSeSuppAddress.AutoSize = true;
+            this.lblSeSuppAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSeSuppAddress.Location = new System.Drawing.Point(37, 214);
+            this.lblSeSuppAddress.Name = "lblSeSuppAddress";
+            this.lblSeSuppAddress.Size = new System.Drawing.Size(87, 24);
+            this.lblSeSuppAddress.TabIndex = 45;
+            this.lblSeSuppAddress.Text = "Address";
             // 
-            // textBox10
+            // txtSeSuppSurname
             // 
-            this.textBox10.Location = new System.Drawing.Point(499, 151);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(198, 29);
-            this.textBox10.TabIndex = 44;
+            this.txtSeSuppSurname.Location = new System.Drawing.Point(499, 151);
+            this.txtSeSuppSurname.Name = "txtSeSuppSurname";
+            this.txtSeSuppSurname.Size = new System.Drawing.Size(198, 29);
+            this.txtSeSuppSurname.TabIndex = 44;
             // 
-            // label10
+            // lblSeSur
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(386, 154);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 24);
-            this.label10.TabIndex = 43;
-            this.label10.Text = "Surname";
+            this.lblSeSur.AutoSize = true;
+            this.lblSeSur.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSeSur.Location = new System.Drawing.Point(386, 154);
+            this.lblSeSur.Name = "lblSeSur";
+            this.lblSeSur.Size = new System.Drawing.Size(94, 24);
+            this.lblSeSur.TabIndex = 43;
+            this.lblSeSur.Text = "Surname";
             // 
-            // textBox11
+            // txtSeFore
             // 
-            this.textBox11.Location = new System.Drawing.Point(203, 151);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(157, 29);
-            this.textBox11.TabIndex = 42;
+            this.txtSeFore.Location = new System.Drawing.Point(203, 151);
+            this.txtSeFore.Name = "txtSeFore";
+            this.txtSeFore.Size = new System.Drawing.Size(157, 29);
+            this.txtSeFore.TabIndex = 42;
             // 
-            // label11
+            // lblSeSuppFore
             // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(37, 151);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(106, 24);
-            this.label11.TabIndex = 41;
-            this.label11.Text = "Forename";
+            this.lblSeSuppFore.AutoSize = true;
+            this.lblSeSuppFore.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSeSuppFore.Location = new System.Drawing.Point(37, 151);
+            this.lblSeSuppFore.Name = "lblSeSuppFore";
+            this.lblSeSuppFore.Size = new System.Drawing.Size(106, 24);
+            this.lblSeSuppFore.TabIndex = 41;
+            this.lblSeSuppFore.Text = "Forename";
             // 
-            // textBox12
+            // txtSeSuppID
             // 
-            this.textBox12.Location = new System.Drawing.Point(203, 41);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(157, 29);
-            this.textBox12.TabIndex = 40;
+            this.txtSeSuppID.Location = new System.Drawing.Point(203, 41);
+            this.txtSeSuppID.Name = "txtSeSuppID";
+            this.txtSeSuppID.Size = new System.Drawing.Size(157, 29);
+            this.txtSeSuppID.TabIndex = 40;
             // 
-            // label12
+            // lblSeSuppID
             // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(37, 44);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(113, 24);
-            this.label12.TabIndex = 39;
-            this.label12.Text = "Supplier ID";
+            this.lblSeSuppID.AutoSize = true;
+            this.lblSeSuppID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSeSuppID.Location = new System.Drawing.Point(37, 44);
+            this.lblSeSuppID.Name = "lblSeSuppID";
+            this.lblSeSuppID.Size = new System.Drawing.Size(113, 24);
+            this.lblSeSuppID.TabIndex = 39;
+            this.lblSeSuppID.Text = "Supplier ID";
             // 
             // tabAdd
             // 
             this.tabAdd.BackColor = System.Drawing.Color.White;
             this.tabAdd.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabAdd.Controls.Add(this.roundButton4);
-            this.tabAdd.Controls.Add(this.roundButton5);
-            this.tabAdd.Controls.Add(this.label1);
-            this.tabAdd.Controls.Add(this.textBox1);
-            this.tabAdd.Controls.Add(this.textBox2);
-            this.tabAdd.Controls.Add(this.label2);
-            this.tabAdd.Controls.Add(this.textBox3);
-            this.tabAdd.Controls.Add(this.label3);
-            this.tabAdd.Controls.Add(this.textBox4);
-            this.tabAdd.Controls.Add(this.label4);
-            this.tabAdd.Controls.Add(this.textBox5);
-            this.tabAdd.Controls.Add(this.label5);
-            this.tabAdd.Controls.Add(this.textBox6);
-            this.tabAdd.Controls.Add(this.label6);
-            this.tabAdd.Controls.Add(this.textBox25);
-            this.tabAdd.Controls.Add(this.label25);
-            this.tabAdd.Controls.Add(this.textBox29);
-            this.tabAdd.Controls.Add(this.label29);
-            this.tabAdd.Controls.Add(this.textBox30);
-            this.tabAdd.Controls.Add(this.label30);
-            this.tabAdd.Controls.Add(this.textBox38);
-            this.tabAdd.Controls.Add(this.label38);
+            this.tabAdd.Controls.Add(this.BtnSaveSup);
+            this.tabAdd.Controls.Add(this.btnClearSup);
+            this.tabAdd.Controls.Add(this.lblCompName);
+            this.tabAdd.Controls.Add(this.txtCompName);
+            this.tabAdd.Controls.Add(this.txtSupTel);
+            this.tabAdd.Controls.Add(this.lblTel);
+            this.tabAdd.Controls.Add(this.txtSupEmail);
+            this.tabAdd.Controls.Add(this.lblEmail);
+            this.tabAdd.Controls.Add(this.txtSupPost);
+            this.tabAdd.Controls.Add(this.lblPost);
+            this.tabAdd.Controls.Add(this.txtCounty);
+            this.tabAdd.Controls.Add(this.lblCounty);
+            this.tabAdd.Controls.Add(this.txtSupTown);
+            this.tabAdd.Controls.Add(this.lblTown);
+            this.tabAdd.Controls.Add(this.txtSupAddress);
+            this.tabAdd.Controls.Add(this.lblAddress);
+            this.tabAdd.Controls.Add(this.txtSupSurname);
+            this.tabAdd.Controls.Add(this.lblSurname);
+            this.tabAdd.Controls.Add(this.txtSupForename);
+            this.tabAdd.Controls.Add(this.lblForename);
+            this.tabAdd.Controls.Add(this.txtSuppID);
+            this.tabAdd.Controls.Add(this.lblSupID);
             this.tabAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabAdd.Location = new System.Drawing.Point(4, 29);
@@ -555,246 +556,248 @@
             this.tabAdd.TabIndex = 2;
             this.tabAdd.Text = "ADD";
             // 
-            // roundButton4
+            // BtnSaveSup
             // 
-            this.roundButton4.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton4.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton4.FlatAppearance.BorderSize = 0;
-            this.roundButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton4.Location = new System.Drawing.Point(273, 602);
-            this.roundButton4.Name = "roundButton4";
-            this.roundButton4.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton4.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton4.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton4.Size = new System.Drawing.Size(189, 40);
-            this.roundButton4.TabIndex = 247;
-            this.roundButton4.Text = "SAVE SUPPLIER";
-            this.roundButton4.TextColor = System.Drawing.Color.White;
-            this.roundButton4.UseVisualStyleBackColor = true;
+            this.BtnSaveSup.BorderColor = System.Drawing.Color.Silver;
+            this.BtnSaveSup.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.BtnSaveSup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSaveSup.FlatAppearance.BorderSize = 0;
+            this.BtnSaveSup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnSaveSup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnSaveSup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSaveSup.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSaveSup.Location = new System.Drawing.Point(273, 602);
+            this.BtnSaveSup.Name = "BtnSaveSup";
+            this.BtnSaveSup.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.BtnSaveSup.onHoverButtonColor = System.Drawing.Color.White;
+            this.BtnSaveSup.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.BtnSaveSup.Size = new System.Drawing.Size(189, 40);
+            this.BtnSaveSup.TabIndex = 247;
+            this.BtnSaveSup.Text = "SAVE SUPPLIER";
+            this.BtnSaveSup.TextColor = System.Drawing.Color.White;
+            this.BtnSaveSup.UseVisualStyleBackColor = true;
+            this.BtnSaveSup.Click += new System.EventHandler(this.BtnSaveSup_Click);
             // 
-            // roundButton5
+            // btnClearSup
             // 
-            this.roundButton5.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton5.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton5.FlatAppearance.BorderSize = 0;
-            this.roundButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton5.Location = new System.Drawing.Point(582, 47);
-            this.roundButton5.Name = "roundButton5";
-            this.roundButton5.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton5.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton5.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton5.Size = new System.Drawing.Size(115, 40);
-            this.roundButton5.TabIndex = 246;
-            this.roundButton5.Text = "CLEAR";
-            this.roundButton5.TextColor = System.Drawing.Color.White;
-            this.roundButton5.UseVisualStyleBackColor = true;
+            this.btnClearSup.BorderColor = System.Drawing.Color.Silver;
+            this.btnClearSup.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnClearSup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearSup.FlatAppearance.BorderSize = 0;
+            this.btnClearSup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnClearSup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnClearSup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearSup.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearSup.Location = new System.Drawing.Point(582, 47);
+            this.btnClearSup.Name = "btnClearSup";
+            this.btnClearSup.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnClearSup.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnClearSup.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnClearSup.Size = new System.Drawing.Size(115, 40);
+            this.btnClearSup.TabIndex = 246;
+            this.btnClearSup.Text = "CLEAR";
+            this.btnClearSup.TextColor = System.Drawing.Color.White;
+            this.btnClearSup.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblCompName
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(37, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 24);
-            this.label1.TabIndex = 244;
-            this.label1.Text = "Company Name";
+            this.lblCompName.AutoSize = true;
+            this.lblCompName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblCompName.Location = new System.Drawing.Point(37, 109);
+            this.lblCompName.Name = "lblCompName";
+            this.lblCompName.Size = new System.Drawing.Size(159, 24);
+            this.lblCompName.TabIndex = 244;
+            this.lblCompName.Text = "Company Name";
             // 
-            // textBox1
+            // txtCompName
             // 
-            this.textBox1.Location = new System.Drawing.Point(203, 106);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(494, 29);
-            this.textBox1.TabIndex = 243;
+            this.txtCompName.Location = new System.Drawing.Point(203, 106);
+            this.txtCompName.Name = "txtCompName";
+            this.txtCompName.Size = new System.Drawing.Size(494, 29);
+            this.txtCompName.TabIndex = 243;
             // 
-            // textBox2
+            // txtSupTel
             // 
-            this.textBox2.Location = new System.Drawing.Point(203, 492);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(294, 29);
-            this.textBox2.TabIndex = 242;
+            this.txtSupTel.Location = new System.Drawing.Point(203, 492);
+            this.txtSupTel.Name = "txtSupTel";
+            this.txtSupTel.Size = new System.Drawing.Size(294, 29);
+            this.txtSupTel.TabIndex = 242;
             // 
-            // label2
+            // lblTel
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(37, 495);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 24);
-            this.label2.TabIndex = 241;
-            this.label2.Text = "Tel No";
+            this.lblTel.AutoSize = true;
+            this.lblTel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTel.Location = new System.Drawing.Point(37, 495);
+            this.lblTel.Name = "lblTel";
+            this.lblTel.Size = new System.Drawing.Size(73, 24);
+            this.lblTel.TabIndex = 241;
+            this.lblTel.Text = "Tel No";
             // 
-            // textBox3
+            // txtSupEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(203, 437);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(294, 29);
-            this.textBox3.TabIndex = 240;
+            this.txtSupEmail.Location = new System.Drawing.Point(203, 437);
+            this.txtSupEmail.Name = "txtSupEmail";
+            this.txtSupEmail.Size = new System.Drawing.Size(294, 29);
+            this.txtSupEmail.TabIndex = 240;
             // 
-            // label3
+            // lblEmail
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(37, 440);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 24);
-            this.label3.TabIndex = 239;
-            this.label3.Text = "E-Mail";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEmail.Location = new System.Drawing.Point(37, 440);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(69, 24);
+            this.lblEmail.TabIndex = 239;
+            this.lblEmail.Text = "E-Mail";
             // 
-            // textBox4
+            // txtSupPost
             // 
-            this.textBox4.Location = new System.Drawing.Point(203, 382);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(294, 29);
-            this.textBox4.TabIndex = 238;
+            this.txtSupPost.Location = new System.Drawing.Point(203, 382);
+            this.txtSupPost.Name = "txtSupPost";
+            this.txtSupPost.Size = new System.Drawing.Size(294, 29);
+            this.txtSupPost.TabIndex = 238;
             // 
-            // label4
+            // lblPost
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(37, 385);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 24);
-            this.label4.TabIndex = 237;
-            this.label4.Text = "Postcode";
+            this.lblPost.AutoSize = true;
+            this.lblPost.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPost.Location = new System.Drawing.Point(37, 385);
+            this.lblPost.Name = "lblPost";
+            this.lblPost.Size = new System.Drawing.Size(97, 24);
+            this.lblPost.TabIndex = 237;
+            this.lblPost.Text = "Postcode";
             // 
-            // textBox5
+            // txtCounty
             // 
-            this.textBox5.Location = new System.Drawing.Point(203, 327);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(294, 29);
-            this.textBox5.TabIndex = 236;
+            this.txtCounty.Location = new System.Drawing.Point(203, 327);
+            this.txtCounty.Name = "txtCounty";
+            this.txtCounty.Size = new System.Drawing.Size(294, 29);
+            this.txtCounty.TabIndex = 236;
             // 
-            // label5
+            // lblCounty
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(37, 330);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 24);
-            this.label5.TabIndex = 235;
-            this.label5.Text = "County";
+            this.lblCounty.AutoSize = true;
+            this.lblCounty.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblCounty.Location = new System.Drawing.Point(37, 330);
+            this.lblCounty.Name = "lblCounty";
+            this.lblCounty.Size = new System.Drawing.Size(75, 24);
+            this.lblCounty.TabIndex = 235;
+            this.lblCounty.Text = "County";
             // 
-            // textBox6
+            // txtSupTown
             // 
-            this.textBox6.Location = new System.Drawing.Point(203, 272);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(294, 29);
-            this.textBox6.TabIndex = 234;
+            this.txtSupTown.Location = new System.Drawing.Point(203, 272);
+            this.txtSupTown.Name = "txtSupTown";
+            this.txtSupTown.Size = new System.Drawing.Size(294, 29);
+            this.txtSupTown.TabIndex = 234;
             // 
-            // label6
+            // lblTown
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(37, 275);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 24);
-            this.label6.TabIndex = 233;
-            this.label6.Text = "Town/City";
+            this.lblTown.AutoSize = true;
+            this.lblTown.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTown.Location = new System.Drawing.Point(37, 275);
+            this.lblTown.Name = "lblTown";
+            this.lblTown.Size = new System.Drawing.Size(102, 24);
+            this.lblTown.TabIndex = 233;
+            this.lblTown.Text = "Town/City";
             // 
-            // textBox25
+            // txtSupAddress
             // 
-            this.textBox25.Location = new System.Drawing.Point(203, 217);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(494, 29);
-            this.textBox25.TabIndex = 232;
+            this.txtSupAddress.Location = new System.Drawing.Point(203, 217);
+            this.txtSupAddress.Name = "txtSupAddress";
+            this.txtSupAddress.Size = new System.Drawing.Size(494, 29);
+            this.txtSupAddress.TabIndex = 232;
             // 
-            // label25
+            // lblAddress
             // 
-            this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label25.Location = new System.Drawing.Point(37, 224);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(87, 24);
-            this.label25.TabIndex = 231;
-            this.label25.Text = "Address";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblAddress.Location = new System.Drawing.Point(37, 224);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(87, 24);
+            this.lblAddress.TabIndex = 231;
+            this.lblAddress.Text = "Address";
             // 
-            // textBox29
+            // txtSupSurname
             // 
-            this.textBox29.Location = new System.Drawing.Point(499, 161);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(198, 29);
-            this.textBox29.TabIndex = 230;
+            this.txtSupSurname.Location = new System.Drawing.Point(499, 161);
+            this.txtSupSurname.Name = "txtSupSurname";
+            this.txtSupSurname.Size = new System.Drawing.Size(198, 29);
+            this.txtSupSurname.TabIndex = 230;
             // 
-            // label29
+            // lblSurname
             // 
-            this.label29.AutoSize = true;
-            this.label29.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label29.Location = new System.Drawing.Point(386, 164);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(94, 24);
-            this.label29.TabIndex = 229;
-            this.label29.Text = "Surname";
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSurname.Location = new System.Drawing.Point(386, 164);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(94, 24);
+            this.lblSurname.TabIndex = 229;
+            this.lblSurname.Text = "Surname";
             // 
-            // textBox30
+            // txtSupForename
             // 
-            this.textBox30.Location = new System.Drawing.Point(203, 161);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(157, 29);
-            this.textBox30.TabIndex = 228;
+            this.txtSupForename.Location = new System.Drawing.Point(203, 161);
+            this.txtSupForename.Name = "txtSupForename";
+            this.txtSupForename.Size = new System.Drawing.Size(157, 29);
+            this.txtSupForename.TabIndex = 228;
             // 
-            // label30
+            // lblForename
             // 
-            this.label30.AutoSize = true;
-            this.label30.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label30.Location = new System.Drawing.Point(37, 161);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(106, 24);
-            this.label30.TabIndex = 227;
-            this.label30.Text = "Forename";
+            this.lblForename.AutoSize = true;
+            this.lblForename.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblForename.Location = new System.Drawing.Point(37, 161);
+            this.lblForename.Name = "lblForename";
+            this.lblForename.Size = new System.Drawing.Size(106, 24);
+            this.lblForename.TabIndex = 227;
+            this.lblForename.Text = "Forename";
             // 
-            // textBox38
+            // txtSuppID
             // 
-            this.textBox38.Location = new System.Drawing.Point(203, 51);
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(157, 29);
-            this.textBox38.TabIndex = 226;
+            this.txtSuppID.Location = new System.Drawing.Point(203, 51);
+            this.txtSuppID.Name = "txtSuppID";
+            this.txtSuppID.Size = new System.Drawing.Size(157, 29);
+            this.txtSuppID.TabIndex = 226;
+            this.txtSuppID.TextChanged += new System.EventHandler(this.txtSuppID_TextChanged);
             // 
-            // label38
+            // lblSupID
             // 
-            this.label38.AutoSize = true;
-            this.label38.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label38.Location = new System.Drawing.Point(37, 54);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(113, 24);
-            this.label38.TabIndex = 225;
-            this.label38.Text = "Supplier ID";
+            this.lblSupID.AutoSize = true;
+            this.lblSupID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSupID.Location = new System.Drawing.Point(37, 54);
+            this.lblSupID.Name = "lblSupID";
+            this.lblSupID.Size = new System.Drawing.Size(113, 24);
+            this.lblSupID.TabIndex = 225;
+            this.lblSupID.Text = "Supplier ID";
             // 
             // tabEdit
             // 
             this.tabEdit.BackColor = System.Drawing.Color.White;
             this.tabEdit.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabEdit.Controls.Add(this.roundButton6);
-            this.tabEdit.Controls.Add(this.roundButton7);
+            this.tabEdit.Controls.Add(this.btnEditSupp);
+            this.tabEdit.Controls.Add(this.btnEdSuppClear);
             this.tabEdit.Controls.Add(this.pictureBox1);
-            this.tabEdit.Controls.Add(this.label13);
-            this.tabEdit.Controls.Add(this.textBox13);
-            this.tabEdit.Controls.Add(this.textBox14);
-            this.tabEdit.Controls.Add(this.label14);
-            this.tabEdit.Controls.Add(this.textBox15);
-            this.tabEdit.Controls.Add(this.label15);
-            this.tabEdit.Controls.Add(this.textBox16);
-            this.tabEdit.Controls.Add(this.label16);
-            this.tabEdit.Controls.Add(this.textBox17);
-            this.tabEdit.Controls.Add(this.label17);
-            this.tabEdit.Controls.Add(this.textBox18);
-            this.tabEdit.Controls.Add(this.label18);
-            this.tabEdit.Controls.Add(this.textBox31);
-            this.tabEdit.Controls.Add(this.label31);
-            this.tabEdit.Controls.Add(this.textBox32);
-            this.tabEdit.Controls.Add(this.label32);
-            this.tabEdit.Controls.Add(this.textBox33);
-            this.tabEdit.Controls.Add(this.label33);
-            this.tabEdit.Controls.Add(this.textBox39);
-            this.tabEdit.Controls.Add(this.label39);
+            this.tabEdit.Controls.Add(this.lblEdCompName);
+            this.tabEdit.Controls.Add(this.txtEdCompName);
+            this.tabEdit.Controls.Add(this.txtEDSuppTel);
+            this.tabEdit.Controls.Add(this.lblTelNo);
+            this.tabEdit.Controls.Add(this.txtEdSuppEmail);
+            this.tabEdit.Controls.Add(this.lblEdSupEmail);
+            this.tabEdit.Controls.Add(this.txtEdSuppPost);
+            this.tabEdit.Controls.Add(this.lblEdSuppPost);
+            this.tabEdit.Controls.Add(this.txtEdSuppCounty);
+            this.tabEdit.Controls.Add(this.lblEdSuppCounty);
+            this.tabEdit.Controls.Add(this.txtEdSuppTown);
+            this.tabEdit.Controls.Add(this.lblEdSuppTown);
+            this.tabEdit.Controls.Add(this.txtEdSuppAddress);
+            this.tabEdit.Controls.Add(this.lblEdSuppAddress);
+            this.tabEdit.Controls.Add(this.txtEdSuppSurname);
+            this.tabEdit.Controls.Add(this.lblEdSuppSurname);
+            this.tabEdit.Controls.Add(this.txtEdSuppForeName);
+            this.tabEdit.Controls.Add(this.lblEdSuppForename);
+            this.tabEdit.Controls.Add(this.txtEdSuppID);
+            this.tabEdit.Controls.Add(this.lblEdSupID);
             this.tabEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabEdit.Location = new System.Drawing.Point(4, 29);
@@ -803,47 +806,47 @@
             this.tabEdit.TabIndex = 3;
             this.tabEdit.Text = "EDIT";
             // 
-            // roundButton6
+            // btnEditSupp
             // 
-            this.roundButton6.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton6.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton6.FlatAppearance.BorderSize = 0;
-            this.roundButton6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton6.Location = new System.Drawing.Point(273, 602);
-            this.roundButton6.Name = "roundButton6";
-            this.roundButton6.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton6.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton6.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton6.Size = new System.Drawing.Size(189, 40);
-            this.roundButton6.TabIndex = 247;
-            this.roundButton6.Text = "EDIT SUPPLIER";
-            this.roundButton6.TextColor = System.Drawing.Color.White;
-            this.roundButton6.UseVisualStyleBackColor = true;
+            this.btnEditSupp.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditSupp.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEditSupp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditSupp.FlatAppearance.BorderSize = 0;
+            this.btnEditSupp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditSupp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditSupp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditSupp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditSupp.Location = new System.Drawing.Point(273, 602);
+            this.btnEditSupp.Name = "btnEditSupp";
+            this.btnEditSupp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditSupp.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEditSupp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditSupp.Size = new System.Drawing.Size(189, 40);
+            this.btnEditSupp.TabIndex = 247;
+            this.btnEditSupp.Text = "EDIT SUPPLIER";
+            this.btnEditSupp.TextColor = System.Drawing.Color.White;
+            this.btnEditSupp.UseVisualStyleBackColor = true;
             // 
-            // roundButton7
+            // btnEdSuppClear
             // 
-            this.roundButton7.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton7.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton7.FlatAppearance.BorderSize = 0;
-            this.roundButton7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton7.Location = new System.Drawing.Point(582, 47);
-            this.roundButton7.Name = "roundButton7";
-            this.roundButton7.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton7.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton7.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton7.Size = new System.Drawing.Size(115, 40);
-            this.roundButton7.TabIndex = 246;
-            this.roundButton7.Text = "CLEAR";
-            this.roundButton7.TextColor = System.Drawing.Color.White;
-            this.roundButton7.UseVisualStyleBackColor = true;
+            this.btnEdSuppClear.BorderColor = System.Drawing.Color.Silver;
+            this.btnEdSuppClear.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEdSuppClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdSuppClear.FlatAppearance.BorderSize = 0;
+            this.btnEdSuppClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEdSuppClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEdSuppClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdSuppClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdSuppClear.Location = new System.Drawing.Point(582, 47);
+            this.btnEdSuppClear.Name = "btnEdSuppClear";
+            this.btnEdSuppClear.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEdSuppClear.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEdSuppClear.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEdSuppClear.Size = new System.Drawing.Size(115, 40);
+            this.btnEdSuppClear.TabIndex = 246;
+            this.btnEdSuppClear.Text = "CLEAR";
+            this.btnEdSuppClear.TextColor = System.Drawing.Color.White;
+            this.btnEdSuppClear.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -857,204 +860,204 @@
             this.pictureBox1.TabIndex = 245;
             this.pictureBox1.TabStop = false;
             // 
-            // label13
+            // lblEdCompName
             // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(37, 109);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(159, 24);
-            this.label13.TabIndex = 244;
-            this.label13.Text = "Company Name";
+            this.lblEdCompName.AutoSize = true;
+            this.lblEdCompName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEdCompName.Location = new System.Drawing.Point(37, 109);
+            this.lblEdCompName.Name = "lblEdCompName";
+            this.lblEdCompName.Size = new System.Drawing.Size(159, 24);
+            this.lblEdCompName.TabIndex = 244;
+            this.lblEdCompName.Text = "Company Name";
             // 
-            // textBox13
+            // txtEdCompName
             // 
-            this.textBox13.Location = new System.Drawing.Point(203, 106);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(494, 29);
-            this.textBox13.TabIndex = 243;
+            this.txtEdCompName.Location = new System.Drawing.Point(203, 106);
+            this.txtEdCompName.Name = "txtEdCompName";
+            this.txtEdCompName.Size = new System.Drawing.Size(494, 29);
+            this.txtEdCompName.TabIndex = 243;
             // 
-            // textBox14
+            // txtEDSuppTel
             // 
-            this.textBox14.Location = new System.Drawing.Point(203, 492);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(294, 29);
-            this.textBox14.TabIndex = 242;
+            this.txtEDSuppTel.Location = new System.Drawing.Point(203, 492);
+            this.txtEDSuppTel.Name = "txtEDSuppTel";
+            this.txtEDSuppTel.Size = new System.Drawing.Size(294, 29);
+            this.txtEDSuppTel.TabIndex = 242;
             // 
-            // label14
+            // lblTelNo
             // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(37, 495);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 24);
-            this.label14.TabIndex = 241;
-            this.label14.Text = "Tel No";
+            this.lblTelNo.AutoSize = true;
+            this.lblTelNo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTelNo.Location = new System.Drawing.Point(37, 495);
+            this.lblTelNo.Name = "lblTelNo";
+            this.lblTelNo.Size = new System.Drawing.Size(73, 24);
+            this.lblTelNo.TabIndex = 241;
+            this.lblTelNo.Text = "Tel No";
             // 
-            // textBox15
+            // txtEdSuppEmail
             // 
-            this.textBox15.Location = new System.Drawing.Point(203, 437);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(294, 29);
-            this.textBox15.TabIndex = 240;
+            this.txtEdSuppEmail.Location = new System.Drawing.Point(203, 437);
+            this.txtEdSuppEmail.Name = "txtEdSuppEmail";
+            this.txtEdSuppEmail.Size = new System.Drawing.Size(294, 29);
+            this.txtEdSuppEmail.TabIndex = 240;
             // 
-            // label15
+            // lblEdSupEmail
             // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label15.Location = new System.Drawing.Point(37, 440);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(69, 24);
-            this.label15.TabIndex = 239;
-            this.label15.Text = "E-Mail";
+            this.lblEdSupEmail.AutoSize = true;
+            this.lblEdSupEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEdSupEmail.Location = new System.Drawing.Point(37, 440);
+            this.lblEdSupEmail.Name = "lblEdSupEmail";
+            this.lblEdSupEmail.Size = new System.Drawing.Size(69, 24);
+            this.lblEdSupEmail.TabIndex = 239;
+            this.lblEdSupEmail.Text = "E-Mail";
             // 
-            // textBox16
+            // txtEdSuppPost
             // 
-            this.textBox16.Location = new System.Drawing.Point(203, 382);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(294, 29);
-            this.textBox16.TabIndex = 238;
+            this.txtEdSuppPost.Location = new System.Drawing.Point(203, 382);
+            this.txtEdSuppPost.Name = "txtEdSuppPost";
+            this.txtEdSuppPost.Size = new System.Drawing.Size(294, 29);
+            this.txtEdSuppPost.TabIndex = 238;
             // 
-            // label16
+            // lblEdSuppPost
             // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Location = new System.Drawing.Point(37, 385);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(97, 24);
-            this.label16.TabIndex = 237;
-            this.label16.Text = "Postcode";
+            this.lblEdSuppPost.AutoSize = true;
+            this.lblEdSuppPost.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEdSuppPost.Location = new System.Drawing.Point(37, 385);
+            this.lblEdSuppPost.Name = "lblEdSuppPost";
+            this.lblEdSuppPost.Size = new System.Drawing.Size(97, 24);
+            this.lblEdSuppPost.TabIndex = 237;
+            this.lblEdSuppPost.Text = "Postcode";
             // 
-            // textBox17
+            // txtEdSuppCounty
             // 
-            this.textBox17.Location = new System.Drawing.Point(203, 327);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(294, 29);
-            this.textBox17.TabIndex = 236;
+            this.txtEdSuppCounty.Location = new System.Drawing.Point(203, 327);
+            this.txtEdSuppCounty.Name = "txtEdSuppCounty";
+            this.txtEdSuppCounty.Size = new System.Drawing.Size(294, 29);
+            this.txtEdSuppCounty.TabIndex = 236;
             // 
-            // label17
+            // lblEdSuppCounty
             // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(37, 330);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(75, 24);
-            this.label17.TabIndex = 235;
-            this.label17.Text = "County";
+            this.lblEdSuppCounty.AutoSize = true;
+            this.lblEdSuppCounty.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEdSuppCounty.Location = new System.Drawing.Point(37, 330);
+            this.lblEdSuppCounty.Name = "lblEdSuppCounty";
+            this.lblEdSuppCounty.Size = new System.Drawing.Size(75, 24);
+            this.lblEdSuppCounty.TabIndex = 235;
+            this.lblEdSuppCounty.Text = "County";
             // 
-            // textBox18
+            // txtEdSuppTown
             // 
-            this.textBox18.Location = new System.Drawing.Point(203, 272);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(294, 29);
-            this.textBox18.TabIndex = 234;
+            this.txtEdSuppTown.Location = new System.Drawing.Point(203, 272);
+            this.txtEdSuppTown.Name = "txtEdSuppTown";
+            this.txtEdSuppTown.Size = new System.Drawing.Size(294, 29);
+            this.txtEdSuppTown.TabIndex = 234;
             // 
-            // label18
+            // lblEdSuppTown
             // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Location = new System.Drawing.Point(37, 275);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(102, 24);
-            this.label18.TabIndex = 233;
-            this.label18.Text = "Town/City";
+            this.lblEdSuppTown.AutoSize = true;
+            this.lblEdSuppTown.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEdSuppTown.Location = new System.Drawing.Point(37, 275);
+            this.lblEdSuppTown.Name = "lblEdSuppTown";
+            this.lblEdSuppTown.Size = new System.Drawing.Size(102, 24);
+            this.lblEdSuppTown.TabIndex = 233;
+            this.lblEdSuppTown.Text = "Town/City";
             // 
-            // textBox31
+            // txtEdSuppAddress
             // 
-            this.textBox31.Location = new System.Drawing.Point(203, 217);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(494, 29);
-            this.textBox31.TabIndex = 232;
+            this.txtEdSuppAddress.Location = new System.Drawing.Point(203, 217);
+            this.txtEdSuppAddress.Name = "txtEdSuppAddress";
+            this.txtEdSuppAddress.Size = new System.Drawing.Size(494, 29);
+            this.txtEdSuppAddress.TabIndex = 232;
             // 
-            // label31
+            // lblEdSuppAddress
             // 
-            this.label31.AutoSize = true;
-            this.label31.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label31.Location = new System.Drawing.Point(37, 224);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(87, 24);
-            this.label31.TabIndex = 231;
-            this.label31.Text = "Address";
+            this.lblEdSuppAddress.AutoSize = true;
+            this.lblEdSuppAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEdSuppAddress.Location = new System.Drawing.Point(37, 224);
+            this.lblEdSuppAddress.Name = "lblEdSuppAddress";
+            this.lblEdSuppAddress.Size = new System.Drawing.Size(87, 24);
+            this.lblEdSuppAddress.TabIndex = 231;
+            this.lblEdSuppAddress.Text = "Address";
             // 
-            // textBox32
+            // txtEdSuppSurname
             // 
-            this.textBox32.Location = new System.Drawing.Point(499, 161);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(198, 29);
-            this.textBox32.TabIndex = 230;
+            this.txtEdSuppSurname.Location = new System.Drawing.Point(499, 161);
+            this.txtEdSuppSurname.Name = "txtEdSuppSurname";
+            this.txtEdSuppSurname.Size = new System.Drawing.Size(198, 29);
+            this.txtEdSuppSurname.TabIndex = 230;
             // 
-            // label32
+            // lblEdSuppSurname
             // 
-            this.label32.AutoSize = true;
-            this.label32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label32.Location = new System.Drawing.Point(386, 164);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(94, 24);
-            this.label32.TabIndex = 229;
-            this.label32.Text = "Surname";
+            this.lblEdSuppSurname.AutoSize = true;
+            this.lblEdSuppSurname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEdSuppSurname.Location = new System.Drawing.Point(386, 164);
+            this.lblEdSuppSurname.Name = "lblEdSuppSurname";
+            this.lblEdSuppSurname.Size = new System.Drawing.Size(94, 24);
+            this.lblEdSuppSurname.TabIndex = 229;
+            this.lblEdSuppSurname.Text = "Surname";
             // 
-            // textBox33
+            // txtEdSuppForeName
             // 
-            this.textBox33.Location = new System.Drawing.Point(203, 161);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(157, 29);
-            this.textBox33.TabIndex = 228;
+            this.txtEdSuppForeName.Location = new System.Drawing.Point(203, 161);
+            this.txtEdSuppForeName.Name = "txtEdSuppForeName";
+            this.txtEdSuppForeName.Size = new System.Drawing.Size(157, 29);
+            this.txtEdSuppForeName.TabIndex = 228;
             // 
-            // label33
+            // lblEdSuppForename
             // 
-            this.label33.AutoSize = true;
-            this.label33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label33.Location = new System.Drawing.Point(37, 161);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(106, 24);
-            this.label33.TabIndex = 227;
-            this.label33.Text = "Forename";
+            this.lblEdSuppForename.AutoSize = true;
+            this.lblEdSuppForename.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEdSuppForename.Location = new System.Drawing.Point(37, 161);
+            this.lblEdSuppForename.Name = "lblEdSuppForename";
+            this.lblEdSuppForename.Size = new System.Drawing.Size(106, 24);
+            this.lblEdSuppForename.TabIndex = 227;
+            this.lblEdSuppForename.Text = "Forename";
             // 
-            // textBox39
+            // txtEdSuppID
             // 
-            this.textBox39.Location = new System.Drawing.Point(203, 51);
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(157, 29);
-            this.textBox39.TabIndex = 226;
+            this.txtEdSuppID.Location = new System.Drawing.Point(203, 51);
+            this.txtEdSuppID.Name = "txtEdSuppID";
+            this.txtEdSuppID.Size = new System.Drawing.Size(157, 29);
+            this.txtEdSuppID.TabIndex = 226;
             // 
-            // label39
+            // lblEdSupID
             // 
-            this.label39.AutoSize = true;
-            this.label39.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label39.Location = new System.Drawing.Point(37, 54);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(113, 24);
-            this.label39.TabIndex = 225;
-            this.label39.Text = "Supplier ID";
+            this.lblEdSupID.AutoSize = true;
+            this.lblEdSupID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEdSupID.Location = new System.Drawing.Point(37, 54);
+            this.lblEdSupID.Name = "lblEdSupID";
+            this.lblEdSupID.Size = new System.Drawing.Size(113, 24);
+            this.lblEdSupID.TabIndex = 225;
+            this.lblEdSupID.Text = "Supplier ID";
             // 
             // tabDelete
             // 
             this.tabDelete.BackColor = System.Drawing.Color.White;
             this.tabDelete.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabDelete.Controls.Add(this.roundButton8);
-            this.tabDelete.Controls.Add(this.roundButton9);
+            this.tabDelete.Controls.Add(this.btnDeleteSupp);
+            this.tabDelete.Controls.Add(this.btnDlClearSupp);
             this.tabDelete.Controls.Add(this.pictureBox2);
-            this.tabDelete.Controls.Add(this.label19);
-            this.tabDelete.Controls.Add(this.textBox19);
-            this.tabDelete.Controls.Add(this.textBox20);
-            this.tabDelete.Controls.Add(this.label20);
-            this.tabDelete.Controls.Add(this.textBox21);
-            this.tabDelete.Controls.Add(this.label21);
-            this.tabDelete.Controls.Add(this.textBox22);
-            this.tabDelete.Controls.Add(this.label22);
-            this.tabDelete.Controls.Add(this.textBox23);
-            this.tabDelete.Controls.Add(this.label23);
-            this.tabDelete.Controls.Add(this.textBox24);
-            this.tabDelete.Controls.Add(this.label24);
-            this.tabDelete.Controls.Add(this.textBox34);
-            this.tabDelete.Controls.Add(this.label34);
+            this.tabDelete.Controls.Add(this.lblDlCompName);
+            this.tabDelete.Controls.Add(this.txtDlCompName);
+            this.tabDelete.Controls.Add(this.txtDlSuppTel);
+            this.tabDelete.Controls.Add(this.lblDlSuppTel);
+            this.tabDelete.Controls.Add(this.txtDlSuppEmail);
+            this.tabDelete.Controls.Add(this.lblDlSuppEmail);
+            this.tabDelete.Controls.Add(this.txtDlSuppPost);
+            this.tabDelete.Controls.Add(this.lblDlSuppPost);
+            this.tabDelete.Controls.Add(this.txtDlSuppCounty);
+            this.tabDelete.Controls.Add(this.lblDlSuppCounty);
+            this.tabDelete.Controls.Add(this.txtDlSuppTown);
+            this.tabDelete.Controls.Add(this.lblDlSuppTown);
+            this.tabDelete.Controls.Add(this.txtDlSuppAddress);
+            this.tabDelete.Controls.Add(this.lblDlSupAddress);
             this.tabDelete.Controls.Add(this.textBox35);
-            this.tabDelete.Controls.Add(this.label35);
-            this.tabDelete.Controls.Add(this.textBox36);
-            this.tabDelete.Controls.Add(this.label36);
-            this.tabDelete.Controls.Add(this.textBox40);
-            this.tabDelete.Controls.Add(this.label40);
+            this.tabDelete.Controls.Add(this.lblDlSuppSur);
+            this.tabDelete.Controls.Add(this.txtDlSuppFore);
+            this.tabDelete.Controls.Add(this.lblDlSuppFore);
+            this.tabDelete.Controls.Add(this.txtDlSuppID);
+            this.tabDelete.Controls.Add(this.lblDelSuppID);
             this.tabDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabDelete.Location = new System.Drawing.Point(4, 29);
@@ -1063,47 +1066,47 @@
             this.tabDelete.TabIndex = 4;
             this.tabDelete.Text = "DELETE";
             // 
-            // roundButton8
+            // btnDeleteSupp
             // 
-            this.roundButton8.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton8.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton8.FlatAppearance.BorderSize = 0;
-            this.roundButton8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton8.Location = new System.Drawing.Point(273, 602);
-            this.roundButton8.Name = "roundButton8";
-            this.roundButton8.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton8.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton8.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton8.Size = new System.Drawing.Size(189, 40);
-            this.roundButton8.TabIndex = 247;
-            this.roundButton8.Text = "DELETE SUPPLIER";
-            this.roundButton8.TextColor = System.Drawing.Color.White;
-            this.roundButton8.UseVisualStyleBackColor = true;
+            this.btnDeleteSupp.BorderColor = System.Drawing.Color.Silver;
+            this.btnDeleteSupp.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnDeleteSupp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteSupp.FlatAppearance.BorderSize = 0;
+            this.btnDeleteSupp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteSupp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteSupp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteSupp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteSupp.Location = new System.Drawing.Point(273, 602);
+            this.btnDeleteSupp.Name = "btnDeleteSupp";
+            this.btnDeleteSupp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDeleteSupp.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnDeleteSupp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDeleteSupp.Size = new System.Drawing.Size(189, 40);
+            this.btnDeleteSupp.TabIndex = 247;
+            this.btnDeleteSupp.Text = "DELETE SUPPLIER";
+            this.btnDeleteSupp.TextColor = System.Drawing.Color.White;
+            this.btnDeleteSupp.UseVisualStyleBackColor = true;
             // 
-            // roundButton9
+            // btnDlClearSupp
             // 
-            this.roundButton9.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton9.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton9.FlatAppearance.BorderSize = 0;
-            this.roundButton9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton9.Location = new System.Drawing.Point(582, 47);
-            this.roundButton9.Name = "roundButton9";
-            this.roundButton9.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton9.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton9.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton9.Size = new System.Drawing.Size(115, 40);
-            this.roundButton9.TabIndex = 246;
-            this.roundButton9.Text = "CLEAR";
-            this.roundButton9.TextColor = System.Drawing.Color.White;
-            this.roundButton9.UseVisualStyleBackColor = true;
+            this.btnDlClearSupp.BorderColor = System.Drawing.Color.Silver;
+            this.btnDlClearSupp.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnDlClearSupp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDlClearSupp.FlatAppearance.BorderSize = 0;
+            this.btnDlClearSupp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDlClearSupp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDlClearSupp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDlClearSupp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDlClearSupp.Location = new System.Drawing.Point(582, 47);
+            this.btnDlClearSupp.Name = "btnDlClearSupp";
+            this.btnDlClearSupp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDlClearSupp.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnDlClearSupp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDlClearSupp.Size = new System.Drawing.Size(115, 40);
+            this.btnDlClearSupp.TabIndex = 246;
+            this.btnDlClearSupp.Text = "CLEAR";
+            this.btnDlClearSupp.TextColor = System.Drawing.Color.White;
+            this.btnDlClearSupp.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -1117,124 +1120,124 @@
             this.pictureBox2.TabIndex = 245;
             this.pictureBox2.TabStop = false;
             // 
-            // label19
+            // lblDlCompName
             // 
-            this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label19.Location = new System.Drawing.Point(37, 109);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(159, 24);
-            this.label19.TabIndex = 244;
-            this.label19.Text = "Company Name";
+            this.lblDlCompName.AutoSize = true;
+            this.lblDlCompName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDlCompName.Location = new System.Drawing.Point(37, 109);
+            this.lblDlCompName.Name = "lblDlCompName";
+            this.lblDlCompName.Size = new System.Drawing.Size(159, 24);
+            this.lblDlCompName.TabIndex = 244;
+            this.lblDlCompName.Text = "Company Name";
             // 
-            // textBox19
+            // txtDlCompName
             // 
-            this.textBox19.Location = new System.Drawing.Point(203, 106);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(494, 29);
-            this.textBox19.TabIndex = 243;
+            this.txtDlCompName.Location = new System.Drawing.Point(203, 106);
+            this.txtDlCompName.Name = "txtDlCompName";
+            this.txtDlCompName.Size = new System.Drawing.Size(494, 29);
+            this.txtDlCompName.TabIndex = 243;
             // 
-            // textBox20
+            // txtDlSuppTel
             // 
-            this.textBox20.Location = new System.Drawing.Point(203, 492);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(294, 29);
-            this.textBox20.TabIndex = 242;
+            this.txtDlSuppTel.Location = new System.Drawing.Point(203, 492);
+            this.txtDlSuppTel.Name = "txtDlSuppTel";
+            this.txtDlSuppTel.Size = new System.Drawing.Size(294, 29);
+            this.txtDlSuppTel.TabIndex = 242;
             // 
-            // label20
+            // lblDlSuppTel
             // 
-            this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label20.Location = new System.Drawing.Point(37, 495);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(73, 24);
-            this.label20.TabIndex = 241;
-            this.label20.Text = "Tel No";
+            this.lblDlSuppTel.AutoSize = true;
+            this.lblDlSuppTel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDlSuppTel.Location = new System.Drawing.Point(37, 495);
+            this.lblDlSuppTel.Name = "lblDlSuppTel";
+            this.lblDlSuppTel.Size = new System.Drawing.Size(73, 24);
+            this.lblDlSuppTel.TabIndex = 241;
+            this.lblDlSuppTel.Text = "Tel No";
             // 
-            // textBox21
+            // txtDlSuppEmail
             // 
-            this.textBox21.Location = new System.Drawing.Point(203, 437);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(294, 29);
-            this.textBox21.TabIndex = 240;
+            this.txtDlSuppEmail.Location = new System.Drawing.Point(203, 437);
+            this.txtDlSuppEmail.Name = "txtDlSuppEmail";
+            this.txtDlSuppEmail.Size = new System.Drawing.Size(294, 29);
+            this.txtDlSuppEmail.TabIndex = 240;
             // 
-            // label21
+            // lblDlSuppEmail
             // 
-            this.label21.AutoSize = true;
-            this.label21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label21.Location = new System.Drawing.Point(37, 440);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(69, 24);
-            this.label21.TabIndex = 239;
-            this.label21.Text = "E-Mail";
+            this.lblDlSuppEmail.AutoSize = true;
+            this.lblDlSuppEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDlSuppEmail.Location = new System.Drawing.Point(37, 440);
+            this.lblDlSuppEmail.Name = "lblDlSuppEmail";
+            this.lblDlSuppEmail.Size = new System.Drawing.Size(69, 24);
+            this.lblDlSuppEmail.TabIndex = 239;
+            this.lblDlSuppEmail.Text = "E-Mail";
             // 
-            // textBox22
+            // txtDlSuppPost
             // 
-            this.textBox22.Location = new System.Drawing.Point(203, 382);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(294, 29);
-            this.textBox22.TabIndex = 238;
+            this.txtDlSuppPost.Location = new System.Drawing.Point(203, 382);
+            this.txtDlSuppPost.Name = "txtDlSuppPost";
+            this.txtDlSuppPost.Size = new System.Drawing.Size(294, 29);
+            this.txtDlSuppPost.TabIndex = 238;
             // 
-            // label22
+            // lblDlSuppPost
             // 
-            this.label22.AutoSize = true;
-            this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label22.Location = new System.Drawing.Point(37, 385);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(97, 24);
-            this.label22.TabIndex = 237;
-            this.label22.Text = "Postcode";
+            this.lblDlSuppPost.AutoSize = true;
+            this.lblDlSuppPost.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDlSuppPost.Location = new System.Drawing.Point(37, 385);
+            this.lblDlSuppPost.Name = "lblDlSuppPost";
+            this.lblDlSuppPost.Size = new System.Drawing.Size(97, 24);
+            this.lblDlSuppPost.TabIndex = 237;
+            this.lblDlSuppPost.Text = "Postcode";
             // 
-            // textBox23
+            // txtDlSuppCounty
             // 
-            this.textBox23.Location = new System.Drawing.Point(203, 327);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(294, 29);
-            this.textBox23.TabIndex = 236;
+            this.txtDlSuppCounty.Location = new System.Drawing.Point(203, 327);
+            this.txtDlSuppCounty.Name = "txtDlSuppCounty";
+            this.txtDlSuppCounty.Size = new System.Drawing.Size(294, 29);
+            this.txtDlSuppCounty.TabIndex = 236;
             // 
-            // label23
+            // lblDlSuppCounty
             // 
-            this.label23.AutoSize = true;
-            this.label23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label23.Location = new System.Drawing.Point(37, 330);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(75, 24);
-            this.label23.TabIndex = 235;
-            this.label23.Text = "County";
+            this.lblDlSuppCounty.AutoSize = true;
+            this.lblDlSuppCounty.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDlSuppCounty.Location = new System.Drawing.Point(37, 330);
+            this.lblDlSuppCounty.Name = "lblDlSuppCounty";
+            this.lblDlSuppCounty.Size = new System.Drawing.Size(75, 24);
+            this.lblDlSuppCounty.TabIndex = 235;
+            this.lblDlSuppCounty.Text = "County";
             // 
-            // textBox24
+            // txtDlSuppTown
             // 
-            this.textBox24.Location = new System.Drawing.Point(203, 272);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(294, 29);
-            this.textBox24.TabIndex = 234;
+            this.txtDlSuppTown.Location = new System.Drawing.Point(203, 272);
+            this.txtDlSuppTown.Name = "txtDlSuppTown";
+            this.txtDlSuppTown.Size = new System.Drawing.Size(294, 29);
+            this.txtDlSuppTown.TabIndex = 234;
             // 
-            // label24
+            // lblDlSuppTown
             // 
-            this.label24.AutoSize = true;
-            this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label24.Location = new System.Drawing.Point(37, 275);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(102, 24);
-            this.label24.TabIndex = 233;
-            this.label24.Text = "Town/City";
+            this.lblDlSuppTown.AutoSize = true;
+            this.lblDlSuppTown.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDlSuppTown.Location = new System.Drawing.Point(37, 275);
+            this.lblDlSuppTown.Name = "lblDlSuppTown";
+            this.lblDlSuppTown.Size = new System.Drawing.Size(102, 24);
+            this.lblDlSuppTown.TabIndex = 233;
+            this.lblDlSuppTown.Text = "Town/City";
             // 
-            // textBox34
+            // txtDlSuppAddress
             // 
-            this.textBox34.Location = new System.Drawing.Point(203, 217);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(494, 29);
-            this.textBox34.TabIndex = 232;
+            this.txtDlSuppAddress.Location = new System.Drawing.Point(203, 217);
+            this.txtDlSuppAddress.Name = "txtDlSuppAddress";
+            this.txtDlSuppAddress.Size = new System.Drawing.Size(494, 29);
+            this.txtDlSuppAddress.TabIndex = 232;
             // 
-            // label34
+            // lblDlSupAddress
             // 
-            this.label34.AutoSize = true;
-            this.label34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label34.Location = new System.Drawing.Point(37, 224);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(87, 24);
-            this.label34.TabIndex = 231;
-            this.label34.Text = "Address";
+            this.lblDlSupAddress.AutoSize = true;
+            this.lblDlSupAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDlSupAddress.Location = new System.Drawing.Point(37, 224);
+            this.lblDlSupAddress.Name = "lblDlSupAddress";
+            this.lblDlSupAddress.Size = new System.Drawing.Size(87, 24);
+            this.lblDlSupAddress.TabIndex = 231;
+            this.lblDlSupAddress.Text = "Address";
             // 
             // textBox35
             // 
@@ -1243,49 +1246,50 @@
             this.textBox35.Size = new System.Drawing.Size(198, 29);
             this.textBox35.TabIndex = 230;
             // 
-            // label35
+            // lblDlSuppSur
             // 
-            this.label35.AutoSize = true;
-            this.label35.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label35.Location = new System.Drawing.Point(386, 164);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(94, 24);
-            this.label35.TabIndex = 229;
-            this.label35.Text = "Surname";
+            this.lblDlSuppSur.AutoSize = true;
+            this.lblDlSuppSur.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDlSuppSur.Location = new System.Drawing.Point(386, 164);
+            this.lblDlSuppSur.Name = "lblDlSuppSur";
+            this.lblDlSuppSur.Size = new System.Drawing.Size(94, 24);
+            this.lblDlSuppSur.TabIndex = 229;
+            this.lblDlSuppSur.Text = "Surname";
+            this.lblDlSuppSur.Click += new System.EventHandler(this.label35_Click);
             // 
-            // textBox36
+            // txtDlSuppFore
             // 
-            this.textBox36.Location = new System.Drawing.Point(203, 161);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(157, 29);
-            this.textBox36.TabIndex = 228;
+            this.txtDlSuppFore.Location = new System.Drawing.Point(203, 161);
+            this.txtDlSuppFore.Name = "txtDlSuppFore";
+            this.txtDlSuppFore.Size = new System.Drawing.Size(157, 29);
+            this.txtDlSuppFore.TabIndex = 228;
             // 
-            // label36
+            // lblDlSuppFore
             // 
-            this.label36.AutoSize = true;
-            this.label36.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label36.Location = new System.Drawing.Point(37, 161);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(106, 24);
-            this.label36.TabIndex = 227;
-            this.label36.Text = "Forename";
+            this.lblDlSuppFore.AutoSize = true;
+            this.lblDlSuppFore.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDlSuppFore.Location = new System.Drawing.Point(37, 161);
+            this.lblDlSuppFore.Name = "lblDlSuppFore";
+            this.lblDlSuppFore.Size = new System.Drawing.Size(106, 24);
+            this.lblDlSuppFore.TabIndex = 227;
+            this.lblDlSuppFore.Text = "Forename";
             // 
-            // textBox40
+            // txtDlSuppID
             // 
-            this.textBox40.Location = new System.Drawing.Point(203, 51);
-            this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new System.Drawing.Size(157, 29);
-            this.textBox40.TabIndex = 226;
+            this.txtDlSuppID.Location = new System.Drawing.Point(203, 51);
+            this.txtDlSuppID.Name = "txtDlSuppID";
+            this.txtDlSuppID.Size = new System.Drawing.Size(157, 29);
+            this.txtDlSuppID.TabIndex = 226;
             // 
-            // label40
+            // lblDelSuppID
             // 
-            this.label40.AutoSize = true;
-            this.label40.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label40.Location = new System.Drawing.Point(37, 54);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(113, 24);
-            this.label40.TabIndex = 225;
-            this.label40.Text = "Supplier ID";
+            this.lblDelSuppID.AutoSize = true;
+            this.lblDelSuppID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDelSuppID.Location = new System.Drawing.Point(37, 54);
+            this.lblDelSuppID.Name = "lblDelSuppID";
+            this.lblDelSuppID.Size = new System.Drawing.Size(113, 24);
+            this.lblDelSuppID.TabIndex = 225;
+            this.lblDelSuppID.Text = "Supplier ID";
             // 
             // frmSuppliers
             // 
@@ -1323,99 +1327,99 @@
         private System.Windows.Forms.TabPage tabEdit;
         private System.Windows.Forms.TabPage tabDelete;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblSeCompName;
+        private System.Windows.Forms.TextBox txtSeCompName;
+        private System.Windows.Forms.TextBox txtSeSuppTel;
+        private System.Windows.Forms.Label lblSeSuppTel;
+        private System.Windows.Forms.TextBox txtSeSuppEmail;
+        private System.Windows.Forms.Label lblSeSuppEmail;
+        private System.Windows.Forms.TextBox txtSeSuppPost;
+        private System.Windows.Forms.Label lblSeSuppPost;
+        private System.Windows.Forms.TextBox txtSeSuppCounty;
+        private System.Windows.Forms.Label lblSeSuppCounty;
+        private System.Windows.Forms.TextBox txtSeSuppTown;
+        private System.Windows.Forms.Label lblSeSuppTown;
+        private System.Windows.Forms.TextBox txtSeSuppAddress;
+        private System.Windows.Forms.Label lblSeSuppAddress;
+        private System.Windows.Forms.TextBox txtSeSuppSurname;
+        private System.Windows.Forms.Label lblSeSur;
+        private System.Windows.Forms.TextBox txtSeFore;
+        private System.Windows.Forms.Label lblSeSuppFore;
+        private System.Windows.Forms.TextBox txtSeSuppID;
+        private System.Windows.Forms.Label lblSeSuppID;
         private RoundButton roundButton3;
         private RoundButton roundButton2;
         private RoundButton roundButton1;
-        private RoundButton roundButton16;
+        private RoundButton btnSeSuppClear;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private RoundButton roundButton17;
-        private RoundButton roundButton4;
-        private RoundButton roundButton5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox38;
-        private System.Windows.Forms.Label label38;
-        private RoundButton roundButton6;
-        private RoundButton roundButton7;
+        private RoundButton btnPrintSupplier;
+        private RoundButton BtnSaveSup;
+        private RoundButton btnClearSup;
+        private System.Windows.Forms.Label lblCompName;
+        private System.Windows.Forms.TextBox txtCompName;
+        private System.Windows.Forms.TextBox txtSupTel;
+        private System.Windows.Forms.Label lblTel;
+        private System.Windows.Forms.TextBox txtSupEmail;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox txtSupPost;
+        private System.Windows.Forms.Label lblPost;
+        private System.Windows.Forms.TextBox txtCounty;
+        private System.Windows.Forms.Label lblCounty;
+        private System.Windows.Forms.TextBox txtSupTown;
+        private System.Windows.Forms.Label lblTown;
+        private System.Windows.Forms.TextBox txtSupAddress;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.TextBox txtSupSurname;
+        private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.TextBox txtSupForename;
+        private System.Windows.Forms.Label lblForename;
+        private System.Windows.Forms.TextBox txtSuppID;
+        private System.Windows.Forms.Label lblSupID;
+        private RoundButton btnEditSupp;
+        private RoundButton btnEdSuppClear;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBox33;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox textBox39;
-        private System.Windows.Forms.Label label39;
-        private RoundButton roundButton8;
-        private RoundButton roundButton9;
+        private System.Windows.Forms.Label lblEdCompName;
+        private System.Windows.Forms.TextBox txtEdCompName;
+        private System.Windows.Forms.TextBox txtEDSuppTel;
+        private System.Windows.Forms.Label lblTelNo;
+        private System.Windows.Forms.TextBox txtEdSuppEmail;
+        private System.Windows.Forms.Label lblEdSupEmail;
+        private System.Windows.Forms.TextBox txtEdSuppPost;
+        private System.Windows.Forms.Label lblEdSuppPost;
+        private System.Windows.Forms.TextBox txtEdSuppCounty;
+        private System.Windows.Forms.Label lblEdSuppCounty;
+        private System.Windows.Forms.TextBox txtEdSuppTown;
+        private System.Windows.Forms.Label lblEdSuppTown;
+        private System.Windows.Forms.TextBox txtEdSuppAddress;
+        private System.Windows.Forms.Label lblEdSuppAddress;
+        private System.Windows.Forms.TextBox txtEdSuppSurname;
+        private System.Windows.Forms.Label lblEdSuppSurname;
+        private System.Windows.Forms.TextBox txtEdSuppForeName;
+        private System.Windows.Forms.Label lblEdSuppForename;
+        private System.Windows.Forms.TextBox txtEdSuppID;
+        private System.Windows.Forms.Label lblEdSupID;
+        private RoundButton btnDeleteSupp;
+        private RoundButton btnDlClearSupp;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox34;
-        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label lblDlCompName;
+        private System.Windows.Forms.TextBox txtDlCompName;
+        private System.Windows.Forms.TextBox txtDlSuppTel;
+        private System.Windows.Forms.Label lblDlSuppTel;
+        private System.Windows.Forms.TextBox txtDlSuppEmail;
+        private System.Windows.Forms.Label lblDlSuppEmail;
+        private System.Windows.Forms.TextBox txtDlSuppPost;
+        private System.Windows.Forms.Label lblDlSuppPost;
+        private System.Windows.Forms.TextBox txtDlSuppCounty;
+        private System.Windows.Forms.Label lblDlSuppCounty;
+        private System.Windows.Forms.TextBox txtDlSuppTown;
+        private System.Windows.Forms.Label lblDlSuppTown;
+        private System.Windows.Forms.TextBox txtDlSuppAddress;
+        private System.Windows.Forms.Label lblDlSupAddress;
         private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox textBox40;
-        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label lblDlSuppSur;
+        private System.Windows.Forms.TextBox txtDlSuppFore;
+        private System.Windows.Forms.Label lblDlSuppFore;
+        private System.Windows.Forms.TextBox txtDlSuppID;
+        private System.Windows.Forms.Label lblDelSuppID;
     }
 }
