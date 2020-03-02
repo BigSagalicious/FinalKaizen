@@ -72,7 +72,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.tabEdit = new System.Windows.Forms.TabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEditStockID = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.cmbEditProdType = new System.Windows.Forms.ComboBox();
@@ -92,7 +92,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.tabDelete = new System.Windows.Forms.TabPage();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtDeleteStockID = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.cmbDeleteProdType = new System.Windows.Forms.ComboBox();
@@ -145,6 +145,7 @@
             this.tabStock.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabStock.TabIndex = 7;
             this.tabStock.TabStop = false;
+            this.tabStock.SelectedIndexChanged += new System.EventHandler(this.tabStock_SelectedIndexChanged);
             // 
             // tabDisplay
             // 
@@ -615,7 +616,7 @@
             this.tabEdit.BackColor = System.Drawing.Color.White;
             this.tabEdit.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabEdit.Controls.Add(this.textBox2);
+            this.tabEdit.Controls.Add(this.txtEditStockID);
             this.tabEdit.Controls.Add(this.label35);
             this.tabEdit.Controls.Add(this.label32);
             this.tabEdit.Controls.Add(this.cmbEditProdType);
@@ -643,12 +644,12 @@
             this.tabEdit.Text = "EDIT";
             this.tabEdit.Click += new System.EventHandler(this.tabEdit_Click);
             // 
-            // textBox2
+            // txtEditStockID
             // 
-            this.textBox2.Location = new System.Drawing.Point(200, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(157, 29);
-            this.textBox2.TabIndex = 228;
+            this.txtEditStockID.Location = new System.Drawing.Point(200, 62);
+            this.txtEditStockID.Name = "txtEditStockID";
+            this.txtEditStockID.Size = new System.Drawing.Size(157, 29);
+            this.txtEditStockID.TabIndex = 228;
             // 
             // label35
             // 
@@ -840,7 +841,7 @@
             this.tabDelete.BackColor = System.Drawing.Color.White;
             this.tabDelete.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabDelete.Controls.Add(this.textBox3);
+            this.tabDelete.Controls.Add(this.txtDeleteStockID);
             this.tabDelete.Controls.Add(this.label36);
             this.tabDelete.Controls.Add(this.label33);
             this.tabDelete.Controls.Add(this.cmbDeleteProdType);
@@ -867,12 +868,12 @@
             this.tabDelete.TabIndex = 4;
             this.tabDelete.Text = "REMOVE";
             // 
-            // textBox3
+            // txtDeleteStockID
             // 
-            this.textBox3.Location = new System.Drawing.Point(200, 62);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 29);
-            this.textBox3.TabIndex = 228;
+            this.txtDeleteStockID.Location = new System.Drawing.Point(200, 62);
+            this.txtDeleteStockID.Name = "txtDeleteStockID";
+            this.txtDeleteStockID.Size = new System.Drawing.Size(157, 29);
+            this.txtDeleteStockID.TabIndex = 228;
             // 
             // label36
             // 
@@ -1071,6 +1072,8 @@
             this.Controls.Add(this.tabStock);
             this.Name = "frmStock";
             this.Text = "frmStock";
+            this.Load += new System.EventHandler(this.Stock_Load);
+            this.Shown += new System.EventHandler(this.frmStock_Shown);
             this.tabStock.ResumeLayout(false);
             this.tabDisplay.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).EndInit();
@@ -1170,9 +1173,9 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label lblAddStockID;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEditStockID;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDeleteStockID;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.ErrorProvider errP;
     }
