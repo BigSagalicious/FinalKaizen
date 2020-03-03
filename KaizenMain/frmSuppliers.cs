@@ -19,8 +19,8 @@ namespace KaizenMain
         DataRow drSupplier;
         String connStr, sqlSupplier;
         int selectedTab = 0;
-        bool custSelected = false;
-        int custIDSelected = 0;
+        bool suppSelected = false;
+        string suppIDSelected = "";
         public frmSuppliers()
         {
             InitializeComponent();
@@ -58,7 +58,127 @@ namespace KaizenMain
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            selectedTab = tabSupplier.SelectedIndex;
+            tabSupplier.TabPages[tabSupplier.SelectedIndex].Focus();
+            tabSupplier.TabPages[tabSupplier.SelectedIndex].CausesValidation = true;
 
+            if (dgvSuppliers.SelectedRows.Count == 0 && (tabSupplier.SelectedIndex == 1 || tabSupplier.SelectedIndex == 3 || tabSupplier.SelectedIndex == 4))
+                tabSupplier.TabPages[tabSupplier.SelectedIndex].CausesValidation = true;
+            else
+            {
+                switch (tabSupplier.SelectedIndex)
+                {
+                    case 0:
+                        {
+                            dsKaizen.Tables["Supplier"].Clear();
+                            daSupplier.Fill(dsKaizen, "Supplier");
+
+                            break;
+                        }
+                    case 1:
+                        {
+                            if (suppIDSelected == "")
+                            {
+                                tabSupplier.SelectedIndex = 0;
+                                break;
+                            }
+                            else
+                            {
+                                txtSeSuppID.Text = suppIDSelected.ToString();
+
+                                drSupplier = dsKaizen.Tables["Supplier"].Rows.Find(txtSeSuppID.Text);
+
+                                //txtSeFore.Text = drSupplier["CustFName"].ToString();
+                               // txtSearchSurname.Text = drCustomer["CustSName"].ToString();
+                                txtSeCompName.Text = drSupplier["SuppName"].ToString();
+                                txtSeSuppAddress.Text = drSupplier["SuppAddress"].ToString();
+                               // txtSearchCounty.Text = drSupplier["County"].ToString();
+                                //txtSearchPcode.Text = drSupplier["CustPCode"].ToString();
+                                txtSeSuppEmail.Text = drSupplier["SuppEmail"].ToString();
+                                txtSeSuppTel.Text = drSupplier["SuppTel"].ToString();
+                            }
+                            break;
+
+                        }
+
+                    case 2:
+                        {
+                            int noRows = dsKaizen.Tables["Supplier"].Rows.Count;
+
+                            if (noRows == 0)
+                                lblSuppID.Text = "SU1000";
+                            else
+                            {
+                                getNumber(noRows);
+                            }
+
+                            errP.Clear();
+                            clearAddForm();
+                            break;
+
+                        }
+                    case 3:
+                        {
+                            if (suppIDSelected == "")
+                            {
+                                tabSupplier.SelectedIndex = 0;
+                                break;
+                            }
+                            else
+                            {
+                                txtEdSuppID.Text = suppIDSelected.ToString();
+
+                                drSupplier = dsKaizen.Tables["Supplier"].Rows.Find(txtEdSuppID.Text);
+                                /*  if (drCustomer["Title"].ToString() == "Mr")
+                                      cmbEdit.SelectedIndex = 0;
+                                  if (drCustomer["Title"].ToString() == "Mrs")
+                                      cmbEdit.SelectedIndex = 1;
+                                  if (drCustomer["Title"].ToString() == "Miss")
+                                      cmbEdit.SelectedIndex = 2;
+                                  if (drCustomer["Title"].ToString() == "Ms")
+                                     cmbEdit.SelectedIndex = 3;
+  */
+                                //txtSeFore.Text = drSupplier["CustFName"].ToString();
+                                // txtSearchSurname.Text = drCustomer["CustSName"].ToString();
+                                txtEdCompName.Text = drSupplier["SuppName"].ToString();
+                                txtEdSuppAddress.Text = drSupplier["SuppAddress"].ToString();
+                                // txtSearchCounty.Text = drSupplier["County"].ToString();
+                                //txtSearchPcode.Text = drSupplier["CustPCode"].ToString();
+                                txtEdSuppEmail.Text = drSupplier["SuppEmail"].ToString();
+                                txtEDSuppTel.Text = drSupplier["SuppTel"].ToString();
+
+                                //disableEditTxtboxes();
+
+                                break;
+
+                            }
+                        }
+                    case 4:
+                        {
+                            if (suppIDSelected == "")
+                            {
+                                tabSupplier.SelectedIndex = 0;
+                                break;
+                            }
+                            txtEdSuppID.Text = suppIDSelected.ToString();
+
+                            drSupplier = dsKaizen.Tables["Supplier"].Rows.Find(txtEdSuppID.Text);
+
+                            //txtSeFore.Text = drSupplier["CustFName"].ToString();
+                            // txtSearchSurname.Text = drCustomer["CustSName"].ToString();
+                            txtDlCompName.Text = drSupplier["SuppName"].ToString();
+                            txtDlSuppAddress.Text = drSupplier["SuppAddress"].ToString();
+                            // txtSearchCounty.Text = drSupplier["County"].ToString();
+                            //txtSearchPcode.Text = drSupplier["CustPCode"].ToString();
+                            txtDlSuppEmail.Text = drSupplier["SuppEmail"].ToString();
+                            txtDlSuppTel.Text = drSupplier["SuppTel"].ToString();
+                            break;
+                        }
+
+
+
+                }
+            }
         }
 
         private void txtSuppID_TextChanged(object sender, EventArgs e)
@@ -206,12 +326,12 @@ namespace KaizenMain
 
                     if (MessageBox.Show("Do you wish to add another Supplier?", "Add Supplier", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                     {
-                        //clearAddForm();
+                        clearAddForm();
 
                         getNumber(dsKaizen.Tables["Supplier"].Rows.Count);
                     }
                     else
-                        tabSuppliers.SelectedIndex = 0;
+                        tabSupplier.SelectedIndex = 0;
 
                 }
 
@@ -228,7 +348,42 @@ namespace KaizenMain
             //lblAdCustNo.Text = (int.Parse(drCustomer["CustID"].ToString()) + 1).ToString();
         }
 
+        void clearAddForm()
+        {
+            txtSuppID.Clear();
+            txtSupForename.Clear();
+            txtSupSurname.Clear();
+            txtSupAddress.Clear();
+            txtSupTown.Clear();
+            txtCounty.Clear();
+            txtSupPost.Clear();
+            txtSupTel.Clear();
+            txtSupEmail.Clear();
+            txtCompName.Clear();
 
+        }
+
+        private void Supplier_Load(object sender, EventArgs e)
+        {
+            connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
+
+            // connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+
+            sqlSupplier = @"select * from Supplier";
+            daSupplier = new SqlDataAdapter(sqlSupplier, connStr);
+            cmdBSupplier = new SqlCommandBuilder(daSupplier);
+
+            daSupplier.FillSchema(dsKaizen, SchemaType.Source, "Customer");
+            daSupplier.Fill(dsKaizen, "Customer");
+            dgvSuppliers.DataSource = dsKaizen.Tables["Supplier"];
+            dgvSuppliers.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
+            tabSupplier.SelectedIndex = 1;
+            tabSupplier.SelectedIndex = 0;
+
+
+
+        }
     }
 
 }
