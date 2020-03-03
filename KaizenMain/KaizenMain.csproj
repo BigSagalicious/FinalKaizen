@@ -114,6 +114,7 @@
     </Compile>
     <Compile Include="MyCustomer.cs" />
     <Compile Include="MyException.cs" />
+    <Compile Include="MyStock.cs" />
     <Compile Include="MySupplier.cs" />
     <Compile Include="MyValidation.cs" />
     <Compile Include="Program.cs" />

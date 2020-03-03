@@ -25,7 +25,6 @@ namespace KaizenMain
             this.custID = custID;
             this.surname = surname; this.forename = forename; this.street = street; this.town = town; this.county = county;
             this.postcode = postcode; this.telNo = telNo; this.email = email;
-
         }
 
         public int CustID {
@@ -125,7 +124,7 @@ namespace KaizenMain
                     email = MyValidation.firstLetterEachWordToUpper(value);
                 }
                 else
-                    throw new MyException("Email must be 2-40 letters");
+                    throw new MyException("Email must be a valid email address");
             }
 
 

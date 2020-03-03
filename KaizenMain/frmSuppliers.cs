@@ -206,12 +206,12 @@ namespace KaizenMain
 
                     if (MessageBox.Show("Do you wish to add another Supplier?", "Add Supplier", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                     {
-                        clearAddForm();
+                        //clearAddForm();
 
                         getNumber(dsKaizen.Tables["Supplier"].Rows.Count);
                     }
                     else
-                        tabCustomer.SelectedIndex = 0;
+                        tabSuppliers.SelectedIndex = 0;
 
                 }
 

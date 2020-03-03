@@ -151,8 +151,8 @@
             // 
             this.tabDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
             this.tabDisplay.Controls.Add(this.dgvStock);
-            this.tabDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.tabDisplay.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tabDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.tabDisplay.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tabDisplay.Location = new System.Drawing.Point(4, 29);
             this.tabDisplay.Name = "tabDisplay";
             this.tabDisplay.Padding = new System.Windows.Forms.Padding(3);

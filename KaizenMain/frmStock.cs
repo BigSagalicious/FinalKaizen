@@ -55,15 +55,15 @@ namespace KaizenMain
                             }
                             else
                             {
-                                txtSearchStockID.Text = stockIDSelected.ToString();
+                                txtSearchStockID.Text = "ST-" + stockIDSelected.ToString();
 
                                 drStock = dsKaizen.Tables["Stock"].Rows.Find(txtSearchStockID.Text);
 
                                 txtSearchProdID.Text = drStock["ProdID"].ToString();
-                                cmbSearchProdType.Text = drStock["CustSName"].ToString();
+                                //cmbSearchProdType.Text = drStock["CustSName"].ToString();
                                 txtSearchQTY.Text = drStock["QtyInStock"].ToString();
                                 txtSearchProdDesc.Text = drStock["StockDesc"].ToString();
-                                txtSearchPrice.Text = drStock["SellingPrice"].ToString();
+                                txtSearchPrice.Text = drStock["RecomendedPrice"].ToString();
                                 txtSearchProdSupplierID.Text = drStock["SuppID"].ToString();
                             }
                             break;
@@ -75,7 +75,7 @@ namespace KaizenMain
                             int noRows = dsKaizen.Tables["Stock"].Rows.Count;
 
                             if (noRows == 0)
-                                lblAddStockID.Text = "ST1000";
+                                lblAddStockID.Text = "ST-1000";
                             else
                             {
                                 getStockID(noRows);
@@ -159,6 +159,149 @@ namespace KaizenMain
 
         }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            MyCustomer myCustomer = new MyCustomer();
+            bool ok = true;
+            errP.Clear();
+            try
+            {
+                myCustomer.CustID = Convert.ToInt32(lblAdCustNo.Text.Trim());
+
+            }
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(lblAdCustNo, MyEx.toString());
+            }
+
+
+            try
+            {
+                myCustomer.Surname = txtAddForename.Text.Trim();
+            }
+
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(txtAddForename, MyEx.toString());
+            }
+
+            try
+            {
+                myCustomer.Forename = txtAddSurname.Text.Trim();
+            }
+
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(txtAddSurname, MyEx.toString());
+            }
+
+            try
+            {
+                myCustomer.Street = txtAddAddress.Text.Trim();
+            }
+
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(txtAddAddress, MyEx.toString());
+            }
+
+            try
+            {
+                myCustomer.Town = txtAddTown.Text.Trim();
+            }
+
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(txtAddTown, MyEx.toString());
+            }
+
+            try
+            {
+                myCustomer.County = txtAddCounty.Text.Trim();
+            }
+
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(txtAddCounty, MyEx.toString());
+            }
+
+            try
+            {
+                myCustomer.Postcode = txtAddPostcode.Text.Trim();
+            }
+
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(txtAddPostcode, MyEx.toString());
+            }
+
+            try
+            {
+                myCustomer.TelNo = txtAddTel.Text.Trim();
+            }
+
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(txtAddTel, MyEx.toString());
+            }
+
+            try
+            {
+                myCustomer.Email = txtAddEmail.Text.Trim();
+            }
+
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(txtAddEmail, MyEx.toString());
+            }
+
+            try
+            {
+                if (ok)
+                {
+                    drCustomer = dsKaizen.Tables["Customer"].NewRow();
+                    drCustomer["CustID"] = myCustomer.CustID;
+                    drCustomer["CustFname"] = myCustomer.Forename;
+                    drCustomer["CustSname"] = myCustomer.Surname;
+                    drCustomer["CustAddress"] = myCustomer.Street;
+                    drCustomer["TownCity"] = myCustomer.Town;
+                    drCustomer["County"] = myCustomer.County;
+                    drCustomer["CustPCode"] = myCustomer.Postcode;
+                    drCustomer["CustTel"] = myCustomer.TelNo;
+                    drCustomer["CustEmail"] = myCustomer.Email;
+
+                    dsKaizen.Tables["Customer"].Rows.Add(drCustomer);
+                    daCustomer.Update(dsKaizen, "Customer");
+
+                    MessageBox.Show("Customer Added");
+
+                    if (MessageBox.Show("Do you wish to add more stock items?", "Add Stock", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                    {
+                        clearAddForm();
+
+                        getNumber(dsKaizen.Tables["Customer"].Rows.Count);
+                    }
+                    else
+                        tabCustomer.SelectedIndex = 0;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Error !", MessageBoxButtons.AbortRetryIgnore,
+                    MessageBoxIcon.Error);
+            }
+        }
         void clearAddForm()
         {
 
@@ -248,7 +391,8 @@ namespace KaizenMain
             {
 
                 stockSelected = true;
-                stockIDSelected = Convert.ToInt32(dgvStock.SelectedRows[0].Cells[0].Value);
+                seperateNumber(dgvStock.SelectedRows[0].Cells[0].Value.ToString());
+                stockIDSelected = IDNumber;
             }
         }
 

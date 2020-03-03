@@ -214,29 +214,28 @@ namespace KaizenMain
             return new string(array);
         }
 
-        public static bool validColour(string txt)
+        public static bool VailidIDCode(string code, string iD)
         {
-            bool ok = true;
+            bool ok;
 
-            if (txt.Trim().Length == 0)
+            char[] spearator = { '-' };
+
+            String[] strlist = iD.Split(spearator);
+
+            char[] array = iD.ToCharArray();
+
+            if ((strlist[0] == code) && (array[2].Equals("-"))) 
             {
-                ok = false;
+                ok = true;
             }
             else
             {
-                for (int x = 0; x < txt.Length; x++)
-                {
-                    if (!(char.IsLetter(txt[x])) && !(char.IsWhiteSpace(txt[x])) && !(txt[x].Equals('&')))
-                    {
-                        ok = false;
-                    }
-
-                }
+                ok = false;
             }
+
             return ok;
 
         }
-
     }
 
 

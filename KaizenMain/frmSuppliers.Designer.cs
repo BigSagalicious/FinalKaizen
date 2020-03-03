@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabSuppliers = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
             this.roundButton3 = new KaizenMain.RoundButton();
             this.roundButton2 = new KaizenMain.RoundButton();
@@ -130,7 +130,7 @@
             this.lblDlSuppFore = new System.Windows.Forms.Label();
             this.txtDlSuppID = new System.Windows.Forms.TextBox();
             this.lblDelSuppID = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.tabSuppliers.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             this.tabSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -141,27 +141,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabSuppliers
             // 
-            this.tabControl1.AllowDrop = true;
-            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabControl1.Controls.Add(this.tabDisplay);
-            this.tabControl1.Controls.Add(this.tabSearch);
-            this.tabControl1.Controls.Add(this.tabAdd);
-            this.tabControl1.Controls.Add(this.tabEdit);
-            this.tabControl1.Controls.Add(this.tabDelete);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.ItemSize = new System.Drawing.Size(145, 25);
-            this.tabControl1.Location = new System.Drawing.Point(3, 6);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(742, 721);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 7;
-            this.tabControl1.TabStop = false;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabSuppliers.AllowDrop = true;
+            this.tabSuppliers.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tabSuppliers.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.tabSuppliers.Controls.Add(this.tabDisplay);
+            this.tabSuppliers.Controls.Add(this.tabSearch);
+            this.tabSuppliers.Controls.Add(this.tabAdd);
+            this.tabSuppliers.Controls.Add(this.tabEdit);
+            this.tabSuppliers.Controls.Add(this.tabDelete);
+            this.tabSuppliers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabSuppliers.ItemSize = new System.Drawing.Size(145, 25);
+            this.tabSuppliers.Location = new System.Drawing.Point(3, 6);
+            this.tabSuppliers.Multiline = true;
+            this.tabSuppliers.Name = "tabSuppliers";
+            this.tabSuppliers.SelectedIndex = 0;
+            this.tabSuppliers.Size = new System.Drawing.Size(742, 721);
+            this.tabSuppliers.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabSuppliers.TabIndex = 7;
+            this.tabSuppliers.TabStop = false;
+            this.tabSuppliers.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabDisplay
             // 
@@ -1296,10 +1296,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 723);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabSuppliers);
             this.Name = "frmSuppliers";
             this.Text = "frmSuppliers";
-            this.tabControl1.ResumeLayout(false);
+            this.tabSuppliers.ResumeLayout(false);
             this.tabDisplay.ResumeLayout(false);
             this.tabDisplay.PerformLayout();
             this.tabSearch.ResumeLayout(false);
@@ -1319,7 +1319,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabSuppliers;
         private System.Windows.Forms.TabPage tabDisplay;
         private System.Windows.Forms.ListView listViewEquip;
         private System.Windows.Forms.TabPage tabSearch;
