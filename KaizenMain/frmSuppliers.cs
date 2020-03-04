@@ -365,16 +365,16 @@ namespace KaizenMain
 
         private void Supplier_Load(object sender, EventArgs e)
         {
-            connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
+            //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
 
-            // connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+            connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
             sqlSupplier = @"select * from Supplier";
             daSupplier = new SqlDataAdapter(sqlSupplier, connStr);
             cmdBSupplier = new SqlCommandBuilder(daSupplier);
 
-            daSupplier.FillSchema(dsKaizen, SchemaType.Source, "Customer");
-            daSupplier.Fill(dsKaizen, "Customer");
+            daSupplier.FillSchema(dsKaizen, SchemaType.Source, "Supplier");
+            daSupplier.Fill(dsKaizen, "Supplier");
             dgvSuppliers.DataSource = dsKaizen.Tables["Supplier"];
             dgvSuppliers.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
