@@ -9,13 +9,13 @@ namespace KaizenMain
     class MyCustomer
     {
         private int custID;
-        private String surname, forename, street, town, county, postcode, telNo, email;
+        private String title ,surname, forename, street, town, county, postcode, telNo, email;
 
         public MyCustomer()
         {
 
             this.custID = 0;
-            this.email = "";this.surname = ""; this.forename = ""; this.street = ""; this.town = ""; this.county = "";
+            this.email = "";this.title = ""; this.surname = ""; this.forename = ""; this.street = ""; this.town = ""; this.county = "";
             this.postcode = ""; this.telNo = "";
         }
 
@@ -23,7 +23,7 @@ namespace KaizenMain
            string postcode, string telNo, string email)
         {
             this.custID = custID;
-            this.surname = surname; this.forename = forename; this.street = street; this.town = town; this.county = county;
+            this.title = title; this.surname = surname; this.forename = forename; this.street = street; this.town = town; this.county = county;
             this.postcode = postcode; this.telNo = telNo; this.email = email;
         }
 
@@ -32,7 +32,19 @@ namespace KaizenMain
             set { custID = value; }
         }
 
-
+        public String Title
+        {
+            get { return title; }
+            set
+            {
+                if (title != "Title")
+                {
+                    title = value;
+                }
+                else
+                    throw new MyException("Please select a title");
+            }
+        }
 
         public string Forename
         {

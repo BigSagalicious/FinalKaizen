@@ -161,137 +161,89 @@ namespace KaizenMain
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            MyCustomer myCustomer = new MyCustomer();
+            MyStock myStock = new MyStock();
             bool ok = true;
             errP.Clear();
             try
             {
-                myCustomer.CustID = Convert.ToInt32(lblAdCustNo.Text.Trim());
+                myStock.StockID = lblAddStockID.Text.Trim();
 
             }
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(lblAdCustNo, MyEx.toString());
-            }
-
-
-            try
-            {
-                myCustomer.Surname = txtAddForename.Text.Trim();
-            }
-
-            catch (MyException MyEx)
-            {
-                ok = false;
-                errP.SetError(txtAddForename, MyEx.toString());
+                errP.SetError(lblAddStockID, MyEx.toString());
             }
 
             try
             {
-                myCustomer.Forename = txtAddSurname.Text.Trim();
+                myStock.ProdID = txtAddProdID.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtAddSurname, MyEx.toString());
+                errP.SetError(txtAddProdID, MyEx.toString());
             }
 
             try
             {
-                myCustomer.Street = txtAddAddress.Text.Trim();
+                myStock.QtyInStock = Convert.ToInt32(txtAddQTY.Text.Trim());
             }
-
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtAddAddress, MyEx.toString());
+                errP.SetError(txtAddQTY, MyEx.toString());
             }
 
             try
             {
-                myCustomer.Town = txtAddTown.Text.Trim();
+                myStock.StockDesc = txtAddProdDesc.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtAddTown, MyEx.toString());
+                errP.SetError(txtAddProdDesc, MyEx.toString());
             }
 
             try
             {
-                myCustomer.County = txtAddCounty.Text.Trim();
+                myStock.RecPrice = double.Parse(txtAddPrice.Text);
             }
-
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtAddCounty, MyEx.toString());
+                errP.SetError(txtAddPrice, MyEx.toString());
             }
 
-            try
-            {
-                myCustomer.Postcode = txtAddPostcode.Text.Trim();
-            }
-
-            catch (MyException MyEx)
-            {
-                ok = false;
-                errP.SetError(txtAddPostcode, MyEx.toString());
-            }
-
-            try
-            {
-                myCustomer.TelNo = txtAddTel.Text.Trim();
-            }
-
-            catch (MyException MyEx)
-            {
-                ok = false;
-                errP.SetError(txtAddTel, MyEx.toString());
-            }
-
-            try
-            {
-                myCustomer.Email = txtAddEmail.Text.Trim();
-            }
-
-            catch (MyException MyEx)
-            {
-                ok = false;
-                errP.SetError(txtAddEmail, MyEx.toString());
-            }
 
             try
             {
                 if (ok)
                 {
-                    drCustomer = dsKaizen.Tables["Customer"].NewRow();
-                    drCustomer["CustID"] = myCustomer.CustID;
-                    drCustomer["CustFname"] = myCustomer.Forename;
-                    drCustomer["CustSname"] = myCustomer.Surname;
-                    drCustomer["CustAddress"] = myCustomer.Street;
-                    drCustomer["TownCity"] = myCustomer.Town;
-                    drCustomer["County"] = myCustomer.County;
-                    drCustomer["CustPCode"] = myCustomer.Postcode;
-                    drCustomer["CustTel"] = myCustomer.TelNo;
-                    drCustomer["CustEmail"] = myCustomer.Email;
+                    drStock = dsKaizen.Tables["Stock"].NewRow();
+                    drStock["StockID"] = myStock.StockID;
+                    drStock["ProdID"] = myStock.ProdID;
+                    drStock["QtyInStock"] = myStock.QtyInStock;
+                    drStock["StockDesc"] = myStock.StockDesc;
+                    drStock["RecomendedPrice"] = myStock.RecPrice;
+                    drStock["SuppID"] = myStock.SuppID;
+    
 
-                    dsKaizen.Tables["Customer"].Rows.Add(drCustomer);
-                    daCustomer.Update(dsKaizen, "Customer");
+                    dsKaizen.Tables["Stock"].Rows.Add(drStock);
+                    daStock.Update(dsKaizen, "Stock");
 
-                    MessageBox.Show("Customer Added");
+                    MessageBox.Show("Stock Item/s Added");
 
                     if (MessageBox.Show("Do you wish to add more stock items?", "Add Stock", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                     {
                         clearAddForm();
 
-                        getNumber(dsKaizen.Tables["Customer"].Rows.Count);
+                        getStockID(dsKaizen.Tables["Stock"].Rows.Count);
                     }
                     else
-                        tabCustomer.SelectedIndex = 0;
+                        tabStock.SelectedIndex = 0;
 
                 }
 

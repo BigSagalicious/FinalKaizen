@@ -125,6 +125,10 @@
             this.tabDisplay = new System.Windows.Forms.TabPage();
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.tabCustomer = new System.Windows.Forms.TabControl();
+            this.cmbSearchTitle = new System.Windows.Forms.ComboBox();
+            this.cmbAddTitle = new System.Windows.Forms.ComboBox();
+            this.cmbEditTitle = new System.Windows.Forms.ComboBox();
+            this.cmbDeleteTitle = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.tabDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconDeleteCustID)).BeginInit();
@@ -147,6 +151,7 @@
             this.tabDelete.BackColor = System.Drawing.Color.White;
             this.tabDelete.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabDelete.Controls.Add(this.cmbDeleteTitle);
             this.tabDelete.Controls.Add(this.iconDeleteCustID);
             this.tabDelete.Controls.Add(this.txtDeleteTel);
             this.tabDelete.Controls.Add(this.txtDeleteEmail);
@@ -181,7 +186,7 @@
             this.iconDeleteCustID.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
             this.iconDeleteCustID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.iconDeleteCustID.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconDeleteCustID.Location = new System.Drawing.Point(356, 76);
+            this.iconDeleteCustID.Location = new System.Drawing.Point(318, 78);
             this.iconDeleteCustID.Name = "iconDeleteCustID";
             this.iconDeleteCustID.Size = new System.Drawing.Size(43, 31);
             this.iconDeleteCustID.TabIndex = 250;
@@ -248,7 +253,7 @@
             // 
             this.txtDeleteID.Location = new System.Drawing.Point(197, 78);
             this.txtDeleteID.Name = "txtDeleteID";
-            this.txtDeleteID.Size = new System.Drawing.Size(143, 29);
+            this.txtDeleteID.Size = new System.Drawing.Size(110, 29);
             this.txtDeleteID.TabIndex = 229;
             // 
             // label19
@@ -400,6 +405,7 @@
             this.tabEdit.BackColor = System.Drawing.Color.White;
             this.tabEdit.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabEdit.Controls.Add(this.cmbEditTitle);
             this.tabEdit.Controls.Add(this.iconEditCustID);
             this.tabEdit.Controls.Add(this.txtEditTel);
             this.tabEdit.Controls.Add(this.label13);
@@ -437,7 +443,7 @@
             this.iconEditCustID.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
             this.iconEditCustID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.iconEditCustID.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconEditCustID.Location = new System.Drawing.Point(368, 69);
+            this.iconEditCustID.Location = new System.Drawing.Point(325, 69);
             this.iconEditCustID.Name = "iconEditCustID";
             this.iconEditCustID.Size = new System.Drawing.Size(43, 31);
             this.iconEditCustID.TabIndex = 228;
@@ -592,7 +598,7 @@
             // 
             this.txtEditID.Location = new System.Drawing.Point(209, 71);
             this.txtEditID.Name = "txtEditID";
-            this.txtEditID.Size = new System.Drawing.Size(143, 29);
+            this.txtEditID.Size = new System.Drawing.Size(110, 29);
             this.txtEditID.TabIndex = 203;
             // 
             // label37
@@ -700,6 +706,7 @@
             this.tabAdd.BackColor = System.Drawing.Color.White;
             this.tabAdd.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabAdd.Controls.Add(this.cmbAddTitle);
             this.tabAdd.Controls.Add(this.lblAdCustNo);
             this.tabAdd.Controls.Add(this.txtAddTel);
             this.tabAdd.Controls.Add(this.txtAddEmail);
@@ -991,6 +998,7 @@
             this.tabSearch.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabSearch.Controls.Add(this.cmbSearchTitle);
             this.tabSearch.Controls.Add(this.iconSearchCustID);
             this.tabSearch.Controls.Add(this.txtSearchTel);
             this.tabSearch.Controls.Add(this.txtSearchEmail);
@@ -1028,7 +1036,7 @@
             this.iconSearchCustID.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
             this.iconSearchCustID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.iconSearchCustID.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconSearchCustID.Location = new System.Drawing.Point(370, 68);
+            this.iconSearchCustID.Location = new System.Drawing.Point(324, 68);
             this.iconSearchCustID.Name = "iconSearchCustID";
             this.iconSearchCustID.Size = new System.Drawing.Size(43, 31);
             this.iconSearchCustID.TabIndex = 224;
@@ -1095,7 +1103,7 @@
             // 
             this.txtSearchID.Location = new System.Drawing.Point(208, 70);
             this.txtSearchID.Name = "txtSearchID";
-            this.txtSearchID.Size = new System.Drawing.Size(143, 29);
+            this.txtSearchID.Size = new System.Drawing.Size(110, 29);
             this.txtSearchID.TabIndex = 203;
             // 
             // label28
@@ -1310,6 +1318,62 @@
             this.tabCustomer.TabStop = false;
             this.tabCustomer.SelectedIndexChanged += new System.EventHandler(this.tabCustomer_SelectedIndexChanged);
             // 
+            // cmbSearchTitle
+            // 
+            this.cmbSearchTitle.FormattingEnabled = true;
+            this.cmbSearchTitle.Items.AddRange(new object[] {
+            "Title",
+            "Mr",
+            "Mrs",
+            "Miss",
+            "Ms"});
+            this.cmbSearchTitle.Location = new System.Drawing.Point(378, 67);
+            this.cmbSearchTitle.Name = "cmbSearchTitle";
+            this.cmbSearchTitle.Size = new System.Drawing.Size(121, 32);
+            this.cmbSearchTitle.TabIndex = 225;
+            // 
+            // cmbAddTitle
+            // 
+            this.cmbAddTitle.FormattingEnabled = true;
+            this.cmbAddTitle.Items.AddRange(new object[] {
+            "Title",
+            "Mr",
+            "Mrs",
+            "Miss",
+            "Ms"});
+            this.cmbAddTitle.Location = new System.Drawing.Point(379, 68);
+            this.cmbAddTitle.Name = "cmbAddTitle";
+            this.cmbAddTitle.Size = new System.Drawing.Size(121, 32);
+            this.cmbAddTitle.TabIndex = 229;
+            // 
+            // cmbEditTitle
+            // 
+            this.cmbEditTitle.FormattingEnabled = true;
+            this.cmbEditTitle.Items.AddRange(new object[] {
+            "Title",
+            "Mr",
+            "Mrs",
+            "Miss",
+            "Ms"});
+            this.cmbEditTitle.Location = new System.Drawing.Point(380, 68);
+            this.cmbEditTitle.Name = "cmbEditTitle";
+            this.cmbEditTitle.Size = new System.Drawing.Size(121, 32);
+            this.cmbEditTitle.TabIndex = 229;
+            // 
+            // cmbDeleteTitle
+            // 
+            this.cmbDeleteTitle.FormattingEnabled = true;
+            this.cmbDeleteTitle.Items.AddRange(new object[] {
+            "Title",
+            "Mr",
+            "Mrs",
+            "Miss",
+            "Ms"});
+            this.cmbDeleteTitle.Location = new System.Drawing.Point(367, 78);
+            this.cmbDeleteTitle.Name = "cmbDeleteTitle";
+            this.cmbDeleteTitle.Size = new System.Drawing.Size(121, 32);
+            this.cmbDeleteTitle.TabIndex = 251;
+            // 
             // frmCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1436,5 +1500,9 @@
         private System.Windows.Forms.PictureBox iconDeleteCustID;
         private System.Windows.Forms.PictureBox iconSearchCustID;
         private System.Windows.Forms.PictureBox iconEditCustID;
+        private System.Windows.Forms.ComboBox cmbSearchTitle;
+        private System.Windows.Forms.ComboBox cmbAddTitle;
+        private System.Windows.Forms.ComboBox cmbEditTitle;
+        private System.Windows.Forms.ComboBox cmbDeleteTitle;
     }
 }

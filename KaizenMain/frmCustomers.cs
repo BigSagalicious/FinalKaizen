@@ -57,6 +57,14 @@ namespace KaizenMain
                                 txtSearchID.Text = custIDSelected.ToString();
 
                                 drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtSearchID.Text);
+                                if (drCustomer["CustTitle"].ToString() == "Mr")
+                                    cmbSearchTitle.SelectedIndex = 1;
+                                if (drCustomer["CustTitle"].ToString() == "Mrs")
+                                    cmbSearchTitle.SelectedIndex = 2;
+                                if (drCustomer["CustTitle"].ToString() == "Miss")
+                                    cmbSearchTitle.SelectedIndex = 3;
+                                if (drCustomer["CustTitle"].ToString() == "Ms")
+                                    cmbSearchTitle.SelectedIndex = 4;
 
                                 txtSearchForename.Text = drCustomer["CustFName"].ToString();
                                 txtSearchSurname.Text = drCustomer["CustSName"].ToString();
@@ -99,15 +107,16 @@ namespace KaizenMain
                                 txtEditID.Text = custIDSelected.ToString();
 
                                 drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtEditID.Text);
-                                /*  if (drCustomer["Title"].ToString() == "Mr")
-                                      cmbEdit.SelectedIndex = 0;
-                                  if (drCustomer["Title"].ToString() == "Mrs")
-                                      cmbEdit.SelectedIndex = 1;
-                                  if (drCustomer["Title"].ToString() == "Miss")
-                                      cmbEdit.SelectedIndex = 2;
-                                  if (drCustomer["Title"].ToString() == "Ms")
-                                     cmbEdit.SelectedIndex = 3;
-  */
+
+                                  if (drCustomer["CustTitle"].ToString() == "Mr")
+                                    cmbEditTitle.SelectedIndex = 1;
+                                  if (drCustomer["CustTitle"].ToString() == "Mrs")
+                                    cmbEditTitle.SelectedIndex = 2;
+                                  if (drCustomer["CustTitle"].ToString() == "Miss")
+                                    cmbEditTitle.SelectedIndex = 3;
+                                  if (drCustomer["CustTitle"].ToString() == "Ms")
+                                    cmbEditTitle.SelectedIndex = 4;
+  
                                 txtEditForename.Text = drCustomer["CustFName"].ToString();
                                 txtEditSurname.Text = drCustomer["CustSName"].ToString();
                                 txtEditAddress.Text = drCustomer["CustAddress"].ToString();
@@ -133,6 +142,15 @@ namespace KaizenMain
                             txtDeleteID.Text = custIDSelected.ToString();
 
                             drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtDeleteID.Text);
+
+                            if (drCustomer["CustTitle"].ToString() == "Mr")
+                                cmbDeleteTitle.SelectedIndex = 1;
+                            if (drCustomer["CustTitle"].ToString() == "Mrs")
+                                cmbDeleteTitle.SelectedIndex = 2;
+                            if (drCustomer["CustTitle"].ToString() == "Miss")
+                                cmbDeleteTitle.SelectedIndex = 3;
+                            if (drCustomer["CustTitle"].ToString() == "Ms")
+                                cmbDeleteTitle.SelectedIndex = 4;
 
                             txtDeleteForename.Text = drCustomer["CustFName"].ToString();
                             txtDeleteSurname.Text = drCustomer["CustSName"].ToString();
@@ -281,6 +299,25 @@ namespace KaizenMain
                 errP.SetError(lblAdCustNo, MyEx.toString());
             }
 
+            try
+            {
+                
+                if (cmbAddTitle.SelectedIndex == 1)
+                    myCustomer.Title = "Mr" ;
+                if (cmbAddTitle.SelectedIndex == 2)
+                    myCustomer.Title = "Mrs";
+                if (cmbAddTitle.SelectedIndex == 3)
+                    myCustomer.Title = "Miss";
+                if (cmbAddTitle.SelectedIndex == 4)
+                    myCustomer.Title = "Ms";
+
+            }
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(cmbAddTitle, MyEx.toString());
+            }
+
 
             try
             {
@@ -376,6 +413,7 @@ namespace KaizenMain
                 {
                     drCustomer = dsKaizen.Tables["Customer"].NewRow();
                     drCustomer["CustID"] = myCustomer.CustID;
+                    drCustomer["CustTitle"] = myCustomer.Title;
                     drCustomer["CustFname"] = myCustomer.Forename;
                     drCustomer["CustSname"] = myCustomer.Surname;
                     drCustomer["CustAddress"] = myCustomer.Street;
@@ -422,6 +460,25 @@ namespace KaizenMain
                 MyCustomer myCustomer = new MyCustomer();
                 bool ok = true;
                 errP.Clear();
+
+                try
+                {
+
+                    if (cmbEditTitle.SelectedIndex == 1)
+                        myCustomer.Title = "Mr";
+                    if (cmbEditTitle.SelectedIndex == 2)
+                        myCustomer.Title = "Mrs";
+                    if (cmbEditTitle.SelectedIndex == 3)
+                        myCustomer.Title = "Miss";
+                    if (cmbEditTitle.SelectedIndex == 4)
+                        myCustomer.Title = "Ms";
+
+                }
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(cmbAddTitle, MyEx.toString());
+                }
 
                 try
                 {
@@ -515,7 +572,8 @@ namespace KaizenMain
                 {
                     if (ok)
                     {
-                        drCustomer.BeginEdit();
+                        drCustomer.BeginEdit();                       
+                        drCustomer["CustTitle"] = myCustomer.Title;
                         drCustomer["CustFname"] = myCustomer.Forename;
                         drCustomer["CustSname"] = myCustomer.Surname;
                         drCustomer["CustAddress"] = myCustomer.Street;
@@ -580,6 +638,7 @@ namespace KaizenMain
         void clearAddForm()
         {
 
+            cmbAddTitle.SelectedIndex = 0;
             txtAddForename.Clear();
             txtAddSurname.Clear();
             txtAddAddress.Clear();
@@ -593,7 +652,9 @@ namespace KaizenMain
 
         void clearSearchForm()
         {
+
             txtSearchID.Clear();
+            cmbSearchTitle.SelectedIndex = 0;
             txtSearchForename.Clear();
             txtSearchSurname.Clear();
             txtSearchAddress.Clear();
@@ -608,6 +669,7 @@ namespace KaizenMain
         void clearEditForm()
         {
             txtEditID.Clear();
+            cmbEditTitle.SelectedIndex = 0;
             txtEditForename.Clear();
             txtEditSurname.Clear();
             txtEditAddress.Clear();
@@ -623,6 +685,7 @@ namespace KaizenMain
         {
 
             txtDeleteID.Clear();
+            cmbDeleteTitle.SelectedIndex = 0;
             txtDeleteForename.Clear();
             txtDeleteSurname.Clear();
             txtDeleteAddress.Clear();
@@ -646,7 +709,7 @@ namespace KaizenMain
 
         private void Customer_Load(object sender, EventArgs e)
         {
-            connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
+            connStr = @"Data Source = .\SQLEXPRESS01; Initial Catalog = Kaizen;Integrated Security = true ";
 
             // connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
@@ -697,6 +760,7 @@ namespace KaizenMain
 
         private void enableEditTxtboxes()
         {
+            cmbEditTitle.Enabled = true;
             txtEditForename.Enabled = true;
             txtEditSurname.Enabled = true;
             txtEditAddress.Enabled = true;
@@ -709,6 +773,7 @@ namespace KaizenMain
 
         private void disableEditTxtboxes()
         {
+            cmbEditTitle.Enabled = false;
             txtEditForename.Enabled = false;
             txtEditSurname.Enabled = false;
             txtEditAddress.Enabled = false;
@@ -734,6 +799,7 @@ namespace KaizenMain
                         row.Selected = true;
                         drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtSearchID.Text);
 
+                        cmbSearchTitle.Text = drCustomer["CustTitle"].ToString();
                         txtSearchForename.Text = drCustomer["CustFName"].ToString();
                         txtSearchSurname.Text = drCustomer["CustSName"].ToString();
                         txtSearchAddress.Text = drCustomer["CustAddress"].ToString();
@@ -746,9 +812,9 @@ namespace KaizenMain
                     }
                 }
             }
-            catch (MyException Exception)
+            catch (MyException ex)
             {
-                MessageBox.Show("Not found");
+                MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Not Found!");
             }
         }
         private void btnEditIconSearch_Click(object sender, EventArgs e)
@@ -765,6 +831,7 @@ namespace KaizenMain
                         row.Selected = true;
                         drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtEditID.Text);
 
+                        cmbEditTitle.Text = drCustomer["CustTitle"].ToString();
                         txtEditForename.Text = drCustomer["CustFName"].ToString();
                         txtEditSurname.Text = drCustomer["CustSName"].ToString();
                         txtEditAddress.Text = drCustomer["CustAddress"].ToString();
@@ -777,9 +844,9 @@ namespace KaizenMain
                     }
                 }
             }
-            catch (MyException Exception)
+            catch (MyException ex)
             {
-                MessageBox.Show("Not found");
+                MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Not Found!");
             }
         }
         private void btnDeleteIconSearch_Click(object sender, EventArgs e)
@@ -796,6 +863,7 @@ namespace KaizenMain
                         row.Selected = true;
                         drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtDeleteID.Text);
 
+                                cmbDeleteTitle.Text = drCustomer["CustTitle"].ToString();
                                 txtDeleteForename.Text = drCustomer["CustFName"].ToString();
                                 txtDeleteSurname.Text = drCustomer["CustSName"].ToString();
                                 txtDeleteAddress.Text = drCustomer["CustAddress"].ToString();
@@ -808,9 +876,9 @@ namespace KaizenMain
                     }
                 }
             }
-            catch (MyException Exception)
+            catch (MyException ex)
             {
-                MessageBox.Show("Not found");
+                MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Not Found!");
             }
         }
     }

@@ -106,7 +106,7 @@ namespace KaizenMain
                             int noRows = dsKaizen.Tables["Supplier"].Rows.Count;
 
                             if (noRows == 0)
-                                lblSuppID.Text = "SU1000";
+                                txtSuppID.Text = "SU-1000";
                             else
                             {
                                 getNumber(noRows);

@@ -486,6 +486,7 @@
             this.roundButton4.Text = "ADD STOCK";
             this.roundButton4.TextColor = System.Drawing.Color.White;
             this.roundButton4.UseVisualStyleBackColor = true;
+            this.roundButton4.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // roundButton5
             // 
