@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabDelete = new System.Windows.Forms.TabPage();
+            this.cmbDeleteTitle = new System.Windows.Forms.ComboBox();
             this.iconDeleteCustID = new System.Windows.Forms.PictureBox();
             this.txtDeleteTel = new System.Windows.Forms.TextBox();
             this.txtDeleteEmail = new System.Windows.Forms.TextBox();
@@ -53,6 +54,7 @@
             this.btnDeleteDeleteCust = new KaizenMain.RoundButton();
             this.btnDeleteClearForm = new KaizenMain.RoundButton();
             this.tabEdit = new System.Windows.Forms.TabPage();
+            this.cmbEditTitle = new System.Windows.Forms.ComboBox();
             this.iconEditCustID = new System.Windows.Forms.PictureBox();
             this.txtEditTel = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -77,6 +79,7 @@
             this.btnEditPrintCust = new KaizenMain.RoundButton();
             this.btnEditClearForm = new KaizenMain.RoundButton();
             this.tabAdd = new System.Windows.Forms.TabPage();
+            this.cmbAddTitle = new System.Windows.Forms.ComboBox();
             this.lblAdCustNo = new System.Windows.Forms.Label();
             this.txtAddTel = new System.Windows.Forms.TextBox();
             this.txtAddEmail = new System.Windows.Forms.TextBox();
@@ -100,6 +103,7 @@
             this.btnAddPrintCust = new KaizenMain.RoundButton();
             this.btnAddClearForm = new KaizenMain.RoundButton();
             this.tabSearch = new System.Windows.Forms.TabPage();
+            this.cmbSearchTitle = new System.Windows.Forms.ComboBox();
             this.iconSearchCustID = new System.Windows.Forms.PictureBox();
             this.txtSearchTel = new System.Windows.Forms.TextBox();
             this.txtSearchEmail = new System.Windows.Forms.TextBox();
@@ -125,10 +129,6 @@
             this.tabDisplay = new System.Windows.Forms.TabPage();
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.tabCustomer = new System.Windows.Forms.TabControl();
-            this.cmbSearchTitle = new System.Windows.Forms.ComboBox();
-            this.cmbAddTitle = new System.Windows.Forms.ComboBox();
-            this.cmbEditTitle = new System.Windows.Forms.ComboBox();
-            this.cmbDeleteTitle = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.tabDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconDeleteCustID)).BeginInit();
@@ -179,6 +179,20 @@
             this.tabDelete.Size = new System.Drawing.Size(734, 688);
             this.tabDelete.TabIndex = 4;
             this.tabDelete.Text = "DELETE";
+            // 
+            // cmbDeleteTitle
+            // 
+            this.cmbDeleteTitle.FormattingEnabled = true;
+            this.cmbDeleteTitle.Items.AddRange(new object[] {
+            "Title",
+            "Mr",
+            "Mrs",
+            "Miss",
+            "Ms"});
+            this.cmbDeleteTitle.Location = new System.Drawing.Point(367, 78);
+            this.cmbDeleteTitle.Name = "cmbDeleteTitle";
+            this.cmbDeleteTitle.Size = new System.Drawing.Size(121, 32);
+            this.cmbDeleteTitle.TabIndex = 251;
             // 
             // iconDeleteCustID
             // 
@@ -436,6 +450,20 @@
             this.tabEdit.TabIndex = 3;
             this.tabEdit.Text = "EDIT";
             this.tabEdit.Click += new System.EventHandler(this.tabEdit_Click);
+            // 
+            // cmbEditTitle
+            // 
+            this.cmbEditTitle.FormattingEnabled = true;
+            this.cmbEditTitle.Items.AddRange(new object[] {
+            "Title",
+            "Mr",
+            "Mrs",
+            "Miss",
+            "Ms"});
+            this.cmbEditTitle.Location = new System.Drawing.Point(380, 68);
+            this.cmbEditTitle.Name = "cmbEditTitle";
+            this.cmbEditTitle.Size = new System.Drawing.Size(121, 32);
+            this.cmbEditTitle.TabIndex = 229;
             // 
             // iconEditCustID
             // 
@@ -736,6 +764,21 @@
             this.tabAdd.Size = new System.Drawing.Size(734, 688);
             this.tabAdd.TabIndex = 2;
             this.tabAdd.Text = "ADD";
+            this.tabAdd.Click += new System.EventHandler(this.tabAdd_Click);
+            // 
+            // cmbAddTitle
+            // 
+            this.cmbAddTitle.FormattingEnabled = true;
+            this.cmbAddTitle.Items.AddRange(new object[] {
+            "Title",
+            "Mr",
+            "Mrs",
+            "Miss",
+            "Ms"});
+            this.cmbAddTitle.Location = new System.Drawing.Point(379, 68);
+            this.cmbAddTitle.Name = "cmbAddTitle";
+            this.cmbAddTitle.Size = new System.Drawing.Size(121, 32);
+            this.cmbAddTitle.TabIndex = 229;
             // 
             // lblAdCustNo
             // 
@@ -1030,6 +1073,20 @@
             this.tabSearch.TabIndex = 1;
             this.tabSearch.Text = "SEARCH";
             // 
+            // cmbSearchTitle
+            // 
+            this.cmbSearchTitle.FormattingEnabled = true;
+            this.cmbSearchTitle.Items.AddRange(new object[] {
+            "Title",
+            "Mr",
+            "Mrs",
+            "Miss",
+            "Ms"});
+            this.cmbSearchTitle.Location = new System.Drawing.Point(378, 67);
+            this.cmbSearchTitle.Name = "cmbSearchTitle";
+            this.cmbSearchTitle.Size = new System.Drawing.Size(121, 32);
+            this.cmbSearchTitle.TabIndex = 225;
+            // 
             // iconSearchCustID
             // 
             this.iconSearchCustID.BackColor = System.Drawing.Color.Transparent;
@@ -1317,62 +1374,6 @@
             this.tabCustomer.TabIndex = 8;
             this.tabCustomer.TabStop = false;
             this.tabCustomer.SelectedIndexChanged += new System.EventHandler(this.tabCustomer_SelectedIndexChanged);
-            // 
-            // cmbSearchTitle
-            // 
-            this.cmbSearchTitle.FormattingEnabled = true;
-            this.cmbSearchTitle.Items.AddRange(new object[] {
-            "Title",
-            "Mr",
-            "Mrs",
-            "Miss",
-            "Ms"});
-            this.cmbSearchTitle.Location = new System.Drawing.Point(378, 67);
-            this.cmbSearchTitle.Name = "cmbSearchTitle";
-            this.cmbSearchTitle.Size = new System.Drawing.Size(121, 32);
-            this.cmbSearchTitle.TabIndex = 225;
-            // 
-            // cmbAddTitle
-            // 
-            this.cmbAddTitle.FormattingEnabled = true;
-            this.cmbAddTitle.Items.AddRange(new object[] {
-            "Title",
-            "Mr",
-            "Mrs",
-            "Miss",
-            "Ms"});
-            this.cmbAddTitle.Location = new System.Drawing.Point(379, 68);
-            this.cmbAddTitle.Name = "cmbAddTitle";
-            this.cmbAddTitle.Size = new System.Drawing.Size(121, 32);
-            this.cmbAddTitle.TabIndex = 229;
-            // 
-            // cmbEditTitle
-            // 
-            this.cmbEditTitle.FormattingEnabled = true;
-            this.cmbEditTitle.Items.AddRange(new object[] {
-            "Title",
-            "Mr",
-            "Mrs",
-            "Miss",
-            "Ms"});
-            this.cmbEditTitle.Location = new System.Drawing.Point(380, 68);
-            this.cmbEditTitle.Name = "cmbEditTitle";
-            this.cmbEditTitle.Size = new System.Drawing.Size(121, 32);
-            this.cmbEditTitle.TabIndex = 229;
-            // 
-            // cmbDeleteTitle
-            // 
-            this.cmbDeleteTitle.FormattingEnabled = true;
-            this.cmbDeleteTitle.Items.AddRange(new object[] {
-            "Title",
-            "Mr",
-            "Mrs",
-            "Miss",
-            "Ms"});
-            this.cmbDeleteTitle.Location = new System.Drawing.Point(367, 78);
-            this.cmbDeleteTitle.Name = "cmbDeleteTitle";
-            this.cmbDeleteTitle.Size = new System.Drawing.Size(121, 32);
-            this.cmbDeleteTitle.TabIndex = 251;
             // 
             // frmCustomers
             // 

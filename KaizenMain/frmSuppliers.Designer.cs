@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabSupplier = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
             this.dgvSuppliers = new System.Windows.Forms.DataGridView();
@@ -37,98 +39,66 @@
             this.roundButton1 = new KaizenMain.RoundButton();
             this.label41 = new System.Windows.Forms.Label();
             this.tabSearch = new System.Windows.Forms.TabPage();
+            this.txtSeContactName = new System.Windows.Forms.TextBox();
             this.btnPrintSupplier = new KaizenMain.RoundButton();
             this.btnSeSuppClear = new KaizenMain.RoundButton();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.SearchIconSE = new System.Windows.Forms.PictureBox();
             this.lblSeCompName = new System.Windows.Forms.Label();
             this.txtSeCompName = new System.Windows.Forms.TextBox();
             this.txtSeSuppTel = new System.Windows.Forms.TextBox();
             this.lblSeSuppTel = new System.Windows.Forms.Label();
             this.txtSeSuppEmail = new System.Windows.Forms.TextBox();
             this.lblSeSuppEmail = new System.Windows.Forms.Label();
-            this.txtSeSuppPost = new System.Windows.Forms.TextBox();
-            this.lblSeSuppPost = new System.Windows.Forms.Label();
-            this.txtSeSuppCounty = new System.Windows.Forms.TextBox();
-            this.lblSeSuppCounty = new System.Windows.Forms.Label();
-            this.txtSeSuppTown = new System.Windows.Forms.TextBox();
-            this.lblSeSuppTown = new System.Windows.Forms.Label();
             this.txtSeSuppAddress = new System.Windows.Forms.TextBox();
             this.lblSeSuppAddress = new System.Windows.Forms.Label();
-            this.txtSeSuppSurname = new System.Windows.Forms.TextBox();
-            this.lblSeSur = new System.Windows.Forms.Label();
-            this.txtSeFore = new System.Windows.Forms.TextBox();
-            this.lblSeSuppFore = new System.Windows.Forms.Label();
+            this.lblSeSuppContact = new System.Windows.Forms.Label();
             this.txtSeSuppID = new System.Windows.Forms.TextBox();
             this.lblSeSuppID = new System.Windows.Forms.Label();
             this.tabAdd = new System.Windows.Forms.TabPage();
+            this.lblSuppID = new System.Windows.Forms.Label();
+            this.txtSupEmail = new System.Windows.Forms.TextBox();
+            this.txtContact = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.BtnSaveSup = new KaizenMain.RoundButton();
             this.btnClearSup = new KaizenMain.RoundButton();
             this.lblCompName = new System.Windows.Forms.Label();
             this.txtCompName = new System.Windows.Forms.TextBox();
             this.txtSupTel = new System.Windows.Forms.TextBox();
             this.lblTel = new System.Windows.Forms.Label();
-            this.txtSupEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.txtSupPost = new System.Windows.Forms.TextBox();
-            this.lblPost = new System.Windows.Forms.Label();
-            this.txtCounty = new System.Windows.Forms.TextBox();
-            this.lblCounty = new System.Windows.Forms.Label();
-            this.txtSupTown = new System.Windows.Forms.TextBox();
-            this.lblTown = new System.Windows.Forms.Label();
             this.txtSupAddress = new System.Windows.Forms.TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
-            this.txtSupSurname = new System.Windows.Forms.TextBox();
-            this.lblSurname = new System.Windows.Forms.Label();
-            this.txtSupForename = new System.Windows.Forms.TextBox();
-            this.lblForename = new System.Windows.Forms.Label();
-            this.txtSuppID = new System.Windows.Forms.TextBox();
             this.lblSupID = new System.Windows.Forms.Label();
             this.tabEdit = new System.Windows.Forms.TabPage();
+            this.txtEdContact = new System.Windows.Forms.TextBox();
             this.btnEditSupp = new KaizenMain.RoundButton();
             this.btnEdSuppClear = new KaizenMain.RoundButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnEdSearchIcon = new System.Windows.Forms.PictureBox();
             this.lblEdCompName = new System.Windows.Forms.Label();
             this.txtEdCompName = new System.Windows.Forms.TextBox();
             this.txtEDSuppTel = new System.Windows.Forms.TextBox();
             this.lblTelNo = new System.Windows.Forms.Label();
             this.txtEdSuppEmail = new System.Windows.Forms.TextBox();
             this.lblEdSupEmail = new System.Windows.Forms.Label();
-            this.txtEdSuppPost = new System.Windows.Forms.TextBox();
-            this.lblEdSuppPost = new System.Windows.Forms.Label();
-            this.txtEdSuppCounty = new System.Windows.Forms.TextBox();
-            this.lblEdSuppCounty = new System.Windows.Forms.Label();
-            this.txtEdSuppTown = new System.Windows.Forms.TextBox();
-            this.lblEdSuppTown = new System.Windows.Forms.Label();
             this.txtEdSuppAddress = new System.Windows.Forms.TextBox();
             this.lblEdSuppAddress = new System.Windows.Forms.Label();
-            this.txtEdSuppSurname = new System.Windows.Forms.TextBox();
-            this.lblEdSuppSurname = new System.Windows.Forms.Label();
-            this.txtEdSuppForeName = new System.Windows.Forms.TextBox();
-            this.lblEdSuppForename = new System.Windows.Forms.Label();
+            this.lblEdContact = new System.Windows.Forms.Label();
             this.txtEdSuppID = new System.Windows.Forms.TextBox();
             this.lblEdSupID = new System.Windows.Forms.Label();
             this.tabDelete = new System.Windows.Forms.TabPage();
+            this.txtDlContact = new System.Windows.Forms.TextBox();
             this.btnDeleteSupp = new KaizenMain.RoundButton();
             this.btnDlClearSupp = new KaizenMain.RoundButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnDeleteSearchIcon = new System.Windows.Forms.PictureBox();
             this.lblDlCompName = new System.Windows.Forms.Label();
             this.txtDlCompName = new System.Windows.Forms.TextBox();
             this.txtDlSuppTel = new System.Windows.Forms.TextBox();
             this.lblDlSuppTel = new System.Windows.Forms.Label();
             this.txtDlSuppEmail = new System.Windows.Forms.TextBox();
             this.lblDlSuppEmail = new System.Windows.Forms.Label();
-            this.txtDlSuppPost = new System.Windows.Forms.TextBox();
-            this.lblDlSuppPost = new System.Windows.Forms.Label();
-            this.txtDlSuppCounty = new System.Windows.Forms.TextBox();
-            this.lblDlSuppCounty = new System.Windows.Forms.Label();
-            this.txtDlSuppTown = new System.Windows.Forms.TextBox();
-            this.lblDlSuppTown = new System.Windows.Forms.Label();
             this.txtDlSuppAddress = new System.Windows.Forms.TextBox();
             this.lblDlSupAddress = new System.Windows.Forms.Label();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.lblDlSuppSur = new System.Windows.Forms.Label();
-            this.txtDlSuppFore = new System.Windows.Forms.TextBox();
-            this.lblDlSuppFore = new System.Windows.Forms.Label();
+            this.lblDContact = new System.Windows.Forms.Label();
             this.txtDlSuppID = new System.Windows.Forms.TextBox();
             this.lblDelSuppID = new System.Windows.Forms.Label();
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
@@ -136,12 +106,12 @@
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliers)).BeginInit();
             this.tabSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchIconSE)).BeginInit();
             this.tabAdd.SuspendLayout();
             this.tabEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdSearchIcon)).BeginInit();
             this.tabDelete.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteSearchIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,7 +135,7 @@
             this.tabSupplier.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabSupplier.TabIndex = 7;
             this.tabSupplier.TabStop = false;
-            this.tabSupplier.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabSupplier.SelectedIndexChanged += new System.EventHandler(this.tabSupplier_SelectedIndexChanged);
             // 
             // tabDisplay
             // 
@@ -186,11 +156,29 @@
             // 
             // dgvSuppliers
             // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.dgvSuppliers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvSuppliers.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSuppliers.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSuppliers.Location = new System.Drawing.Point(23, 70);
+            this.dgvSuppliers.MultiSelect = false;
             this.dgvSuppliers.Name = "dgvSuppliers";
+            this.dgvSuppliers.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.dgvSuppliers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSuppliers.Size = new System.Drawing.Size(678, 595);
-            this.dgvSuppliers.TabIndex = 16;
+            this.dgvSuppliers.TabIndex = 19;
+            this.dgvSuppliers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSuppliers_CellContentClick);
+            this.dgvSuppliers.Scroll += new System.Windows.Forms.ScrollEventHandler(this.both);
             // 
             // roundButton3
             // 
@@ -267,27 +255,19 @@
             this.tabSearch.BackColor = System.Drawing.Color.White;
             this.tabSearch.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabSearch.Controls.Add(this.txtSeContactName);
             this.tabSearch.Controls.Add(this.btnPrintSupplier);
             this.tabSearch.Controls.Add(this.btnSeSuppClear);
-            this.tabSearch.Controls.Add(this.pictureBox5);
+            this.tabSearch.Controls.Add(this.SearchIconSE);
             this.tabSearch.Controls.Add(this.lblSeCompName);
             this.tabSearch.Controls.Add(this.txtSeCompName);
             this.tabSearch.Controls.Add(this.txtSeSuppTel);
             this.tabSearch.Controls.Add(this.lblSeSuppTel);
             this.tabSearch.Controls.Add(this.txtSeSuppEmail);
             this.tabSearch.Controls.Add(this.lblSeSuppEmail);
-            this.tabSearch.Controls.Add(this.txtSeSuppPost);
-            this.tabSearch.Controls.Add(this.lblSeSuppPost);
-            this.tabSearch.Controls.Add(this.txtSeSuppCounty);
-            this.tabSearch.Controls.Add(this.lblSeSuppCounty);
-            this.tabSearch.Controls.Add(this.txtSeSuppTown);
-            this.tabSearch.Controls.Add(this.lblSeSuppTown);
             this.tabSearch.Controls.Add(this.txtSeSuppAddress);
             this.tabSearch.Controls.Add(this.lblSeSuppAddress);
-            this.tabSearch.Controls.Add(this.txtSeSuppSurname);
-            this.tabSearch.Controls.Add(this.lblSeSur);
-            this.tabSearch.Controls.Add(this.txtSeFore);
-            this.tabSearch.Controls.Add(this.lblSeSuppFore);
+            this.tabSearch.Controls.Add(this.lblSeSuppContact);
             this.tabSearch.Controls.Add(this.txtSeSuppID);
             this.tabSearch.Controls.Add(this.lblSeSuppID);
             this.tabSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
@@ -299,6 +279,14 @@
             this.tabSearch.TabIndex = 1;
             this.tabSearch.Text = "SEARCH";
             this.tabSearch.Click += new System.EventHandler(this.tabSearch_Click);
+            // 
+            // txtSeContactName
+            // 
+            this.txtSeContactName.Location = new System.Drawing.Point(217, 151);
+            this.txtSeContactName.Name = "txtSeContactName";
+            this.txtSeContactName.Size = new System.Drawing.Size(494, 29);
+            this.txtSeContactName.TabIndex = 225;
+            this.txtSeContactName.TextChanged += new System.EventHandler(this.txtSeContactName_TextChanged);
             // 
             // btnPrintSupplier
             // 
@@ -341,18 +329,20 @@
             this.btnSeSuppClear.Text = "CLEAR";
             this.btnSeSuppClear.TextColor = System.Drawing.Color.White;
             this.btnSeSuppClear.UseVisualStyleBackColor = true;
+            this.btnSeSuppClear.Click += new System.EventHandler(this.btnSeSuppClear_Click);
             // 
-            // pictureBox5
+            // SearchIconSE
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Location = new System.Drawing.Point(379, 39);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox5.TabIndex = 222;
-            this.pictureBox5.TabStop = false;
+            this.SearchIconSE.BackColor = System.Drawing.Color.Transparent;
+            this.SearchIconSE.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.SearchIconSE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SearchIconSE.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SearchIconSE.Location = new System.Drawing.Point(403, 41);
+            this.SearchIconSE.Name = "SearchIconSE";
+            this.SearchIconSE.Size = new System.Drawing.Size(43, 31);
+            this.SearchIconSE.TabIndex = 222;
+            this.SearchIconSE.TabStop = false;
+            this.SearchIconSE.Click += new System.EventHandler(this.SearchIconSE_Click);
             // 
             // lblSeCompName
             // 
@@ -366,14 +356,14 @@
             // 
             // txtSeCompName
             // 
-            this.txtSeCompName.Location = new System.Drawing.Point(203, 96);
+            this.txtSeCompName.Location = new System.Drawing.Point(217, 99);
             this.txtSeCompName.Name = "txtSeCompName";
             this.txtSeCompName.Size = new System.Drawing.Size(494, 29);
             this.txtSeCompName.TabIndex = 60;
             // 
             // txtSeSuppTel
             // 
-            this.txtSeSuppTel.Location = new System.Drawing.Point(203, 482);
+            this.txtSeSuppTel.Location = new System.Drawing.Point(217, 319);
             this.txtSeSuppTel.Name = "txtSeSuppTel";
             this.txtSeSuppTel.Size = new System.Drawing.Size(294, 29);
             this.txtSeSuppTel.TabIndex = 59;
@@ -382,7 +372,7 @@
             // 
             this.lblSeSuppTel.AutoSize = true;
             this.lblSeSuppTel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSeSuppTel.Location = new System.Drawing.Point(37, 485);
+            this.lblSeSuppTel.Location = new System.Drawing.Point(37, 324);
             this.lblSeSuppTel.Name = "lblSeSuppTel";
             this.lblSeSuppTel.Size = new System.Drawing.Size(73, 24);
             this.lblSeSuppTel.TabIndex = 58;
@@ -390,7 +380,7 @@
             // 
             // txtSeSuppEmail
             // 
-            this.txtSeSuppEmail.Location = new System.Drawing.Point(203, 427);
+            this.txtSeSuppEmail.Location = new System.Drawing.Point(217, 259);
             this.txtSeSuppEmail.Name = "txtSeSuppEmail";
             this.txtSeSuppEmail.Size = new System.Drawing.Size(294, 29);
             this.txtSeSuppEmail.TabIndex = 57;
@@ -399,69 +389,19 @@
             // 
             this.lblSeSuppEmail.AutoSize = true;
             this.lblSeSuppEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSeSuppEmail.Location = new System.Drawing.Point(37, 430);
+            this.lblSeSuppEmail.Location = new System.Drawing.Point(37, 264);
             this.lblSeSuppEmail.Name = "lblSeSuppEmail";
             this.lblSeSuppEmail.Size = new System.Drawing.Size(69, 24);
             this.lblSeSuppEmail.TabIndex = 56;
             this.lblSeSuppEmail.Text = "E-Mail";
             // 
-            // txtSeSuppPost
-            // 
-            this.txtSeSuppPost.Location = new System.Drawing.Point(203, 372);
-            this.txtSeSuppPost.Name = "txtSeSuppPost";
-            this.txtSeSuppPost.Size = new System.Drawing.Size(294, 29);
-            this.txtSeSuppPost.TabIndex = 55;
-            // 
-            // lblSeSuppPost
-            // 
-            this.lblSeSuppPost.AutoSize = true;
-            this.lblSeSuppPost.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSeSuppPost.Location = new System.Drawing.Point(37, 375);
-            this.lblSeSuppPost.Name = "lblSeSuppPost";
-            this.lblSeSuppPost.Size = new System.Drawing.Size(97, 24);
-            this.lblSeSuppPost.TabIndex = 54;
-            this.lblSeSuppPost.Text = "Postcode";
-            // 
-            // txtSeSuppCounty
-            // 
-            this.txtSeSuppCounty.Location = new System.Drawing.Point(203, 317);
-            this.txtSeSuppCounty.Name = "txtSeSuppCounty";
-            this.txtSeSuppCounty.Size = new System.Drawing.Size(294, 29);
-            this.txtSeSuppCounty.TabIndex = 50;
-            // 
-            // lblSeSuppCounty
-            // 
-            this.lblSeSuppCounty.AutoSize = true;
-            this.lblSeSuppCounty.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSeSuppCounty.Location = new System.Drawing.Point(37, 320);
-            this.lblSeSuppCounty.Name = "lblSeSuppCounty";
-            this.lblSeSuppCounty.Size = new System.Drawing.Size(75, 24);
-            this.lblSeSuppCounty.TabIndex = 49;
-            this.lblSeSuppCounty.Text = "County";
-            // 
-            // txtSeSuppTown
-            // 
-            this.txtSeSuppTown.Location = new System.Drawing.Point(203, 262);
-            this.txtSeSuppTown.Name = "txtSeSuppTown";
-            this.txtSeSuppTown.Size = new System.Drawing.Size(294, 29);
-            this.txtSeSuppTown.TabIndex = 48;
-            // 
-            // lblSeSuppTown
-            // 
-            this.lblSeSuppTown.AutoSize = true;
-            this.lblSeSuppTown.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSeSuppTown.Location = new System.Drawing.Point(37, 265);
-            this.lblSeSuppTown.Name = "lblSeSuppTown";
-            this.lblSeSuppTown.Size = new System.Drawing.Size(102, 24);
-            this.lblSeSuppTown.TabIndex = 47;
-            this.lblSeSuppTown.Text = "Town/City";
-            // 
             // txtSeSuppAddress
             // 
-            this.txtSeSuppAddress.Location = new System.Drawing.Point(203, 207);
+            this.txtSeSuppAddress.Location = new System.Drawing.Point(217, 209);
             this.txtSeSuppAddress.Name = "txtSeSuppAddress";
             this.txtSeSuppAddress.Size = new System.Drawing.Size(494, 29);
             this.txtSeSuppAddress.TabIndex = 46;
+            this.txtSeSuppAddress.TextChanged += new System.EventHandler(this.txtSeSuppAddress_TextChanged);
             // 
             // lblSeSuppAddress
             // 
@@ -472,44 +412,22 @@
             this.lblSeSuppAddress.Size = new System.Drawing.Size(87, 24);
             this.lblSeSuppAddress.TabIndex = 45;
             this.lblSeSuppAddress.Text = "Address";
+            this.lblSeSuppAddress.Click += new System.EventHandler(this.lblSeSuppAddress_Click);
             // 
-            // txtSeSuppSurname
+            // lblSeSuppContact
             // 
-            this.txtSeSuppSurname.Location = new System.Drawing.Point(499, 151);
-            this.txtSeSuppSurname.Name = "txtSeSuppSurname";
-            this.txtSeSuppSurname.Size = new System.Drawing.Size(198, 29);
-            this.txtSeSuppSurname.TabIndex = 44;
-            // 
-            // lblSeSur
-            // 
-            this.lblSeSur.AutoSize = true;
-            this.lblSeSur.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSeSur.Location = new System.Drawing.Point(386, 154);
-            this.lblSeSur.Name = "lblSeSur";
-            this.lblSeSur.Size = new System.Drawing.Size(94, 24);
-            this.lblSeSur.TabIndex = 43;
-            this.lblSeSur.Text = "Surname";
-            // 
-            // txtSeFore
-            // 
-            this.txtSeFore.Location = new System.Drawing.Point(203, 151);
-            this.txtSeFore.Name = "txtSeFore";
-            this.txtSeFore.Size = new System.Drawing.Size(157, 29);
-            this.txtSeFore.TabIndex = 42;
-            // 
-            // lblSeSuppFore
-            // 
-            this.lblSeSuppFore.AutoSize = true;
-            this.lblSeSuppFore.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSeSuppFore.Location = new System.Drawing.Point(37, 151);
-            this.lblSeSuppFore.Name = "lblSeSuppFore";
-            this.lblSeSuppFore.Size = new System.Drawing.Size(106, 24);
-            this.lblSeSuppFore.TabIndex = 41;
-            this.lblSeSuppFore.Text = "Forename";
+            this.lblSeSuppContact.AutoSize = true;
+            this.lblSeSuppContact.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSeSuppContact.Location = new System.Drawing.Point(37, 151);
+            this.lblSeSuppContact.Name = "lblSeSuppContact";
+            this.lblSeSuppContact.Size = new System.Drawing.Size(174, 24);
+            this.lblSeSuppContact.TabIndex = 41;
+            this.lblSeSuppContact.Text = "Company Contact";
+            this.lblSeSuppContact.Click += new System.EventHandler(this.lblSeSuppContact_Click);
             // 
             // txtSeSuppID
             // 
-            this.txtSeSuppID.Location = new System.Drawing.Point(203, 41);
+            this.txtSeSuppID.Location = new System.Drawing.Point(217, 41);
             this.txtSeSuppID.Name = "txtSeSuppID";
             this.txtSeSuppID.Size = new System.Drawing.Size(157, 29);
             this.txtSeSuppID.TabIndex = 40;
@@ -529,27 +447,19 @@
             this.tabAdd.BackColor = System.Drawing.Color.White;
             this.tabAdd.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabAdd.Controls.Add(this.lblSuppID);
+            this.tabAdd.Controls.Add(this.txtSupEmail);
+            this.tabAdd.Controls.Add(this.txtContact);
+            this.tabAdd.Controls.Add(this.label1);
             this.tabAdd.Controls.Add(this.BtnSaveSup);
             this.tabAdd.Controls.Add(this.btnClearSup);
             this.tabAdd.Controls.Add(this.lblCompName);
             this.tabAdd.Controls.Add(this.txtCompName);
             this.tabAdd.Controls.Add(this.txtSupTel);
             this.tabAdd.Controls.Add(this.lblTel);
-            this.tabAdd.Controls.Add(this.txtSupEmail);
             this.tabAdd.Controls.Add(this.lblEmail);
-            this.tabAdd.Controls.Add(this.txtSupPost);
-            this.tabAdd.Controls.Add(this.lblPost);
-            this.tabAdd.Controls.Add(this.txtCounty);
-            this.tabAdd.Controls.Add(this.lblCounty);
-            this.tabAdd.Controls.Add(this.txtSupTown);
-            this.tabAdd.Controls.Add(this.lblTown);
             this.tabAdd.Controls.Add(this.txtSupAddress);
             this.tabAdd.Controls.Add(this.lblAddress);
-            this.tabAdd.Controls.Add(this.txtSupSurname);
-            this.tabAdd.Controls.Add(this.lblSurname);
-            this.tabAdd.Controls.Add(this.txtSupForename);
-            this.tabAdd.Controls.Add(this.lblForename);
-            this.tabAdd.Controls.Add(this.txtSuppID);
             this.tabAdd.Controls.Add(this.lblSupID);
             this.tabAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -558,6 +468,42 @@
             this.tabAdd.Size = new System.Drawing.Size(734, 688);
             this.tabAdd.TabIndex = 2;
             this.tabAdd.Text = "ADD";
+            // 
+            // lblSuppID
+            // 
+            this.lblSuppID.AutoSize = true;
+            this.lblSuppID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSuppID.Location = new System.Drawing.Point(222, 54);
+            this.lblSuppID.Name = "lblSuppID";
+            this.lblSuppID.Size = new System.Drawing.Size(17, 24);
+            this.lblSuppID.TabIndex = 251;
+            this.lblSuppID.Text = "-";
+            // 
+            // txtSupEmail
+            // 
+            this.txtSupEmail.Location = new System.Drawing.Point(217, 334);
+            this.txtSupEmail.Name = "txtSupEmail";
+            this.txtSupEmail.Size = new System.Drawing.Size(294, 29);
+            this.txtSupEmail.TabIndex = 250;
+            this.txtSupEmail.TextChanged += new System.EventHandler(this.txtSupEmail_TextChanged);
+            // 
+            // txtContact
+            // 
+            this.txtContact.Location = new System.Drawing.Point(217, 157);
+            this.txtContact.Name = "txtContact";
+            this.txtContact.Size = new System.Drawing.Size(494, 29);
+            this.txtContact.TabIndex = 249;
+            this.txtContact.TextChanged += new System.EventHandler(this.txtContact_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(41, 160);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(174, 24);
+            this.label1.TabIndex = 248;
+            this.label1.Text = "Company Contact";
             // 
             // BtnSaveSup
             // 
@@ -601,12 +547,13 @@
             this.btnClearSup.Text = "CLEAR";
             this.btnClearSup.TextColor = System.Drawing.Color.White;
             this.btnClearSup.UseVisualStyleBackColor = true;
+            this.btnClearSup.Click += new System.EventHandler(this.btnClearSup_Click);
             // 
             // lblCompName
             // 
             this.lblCompName.AutoSize = true;
             this.lblCompName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCompName.Location = new System.Drawing.Point(37, 109);
+            this.lblCompName.Location = new System.Drawing.Point(41, 109);
             this.lblCompName.Name = "lblCompName";
             this.lblCompName.Size = new System.Drawing.Size(159, 24);
             this.lblCompName.TabIndex = 244;
@@ -614,160 +561,63 @@
             // 
             // txtCompName
             // 
-            this.txtCompName.Location = new System.Drawing.Point(203, 106);
+            this.txtCompName.Location = new System.Drawing.Point(217, 104);
             this.txtCompName.Name = "txtCompName";
             this.txtCompName.Size = new System.Drawing.Size(494, 29);
             this.txtCompName.TabIndex = 243;
+            this.txtCompName.TextChanged += new System.EventHandler(this.txtCompName_TextChanged);
             // 
             // txtSupTel
             // 
-            this.txtSupTel.Location = new System.Drawing.Point(203, 492);
+            this.txtSupTel.Location = new System.Drawing.Point(217, 271);
             this.txtSupTel.Name = "txtSupTel";
             this.txtSupTel.Size = new System.Drawing.Size(294, 29);
             this.txtSupTel.TabIndex = 242;
+            this.txtSupTel.TextChanged += new System.EventHandler(this.txtSupTel_TextChanged);
             // 
             // lblTel
             // 
             this.lblTel.AutoSize = true;
             this.lblTel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTel.Location = new System.Drawing.Point(37, 495);
+            this.lblTel.Location = new System.Drawing.Point(41, 276);
             this.lblTel.Name = "lblTel";
             this.lblTel.Size = new System.Drawing.Size(73, 24);
             this.lblTel.TabIndex = 241;
             this.lblTel.Text = "Tel No";
             // 
-            // txtSupEmail
-            // 
-            this.txtSupEmail.Location = new System.Drawing.Point(203, 437);
-            this.txtSupEmail.Name = "txtSupEmail";
-            this.txtSupEmail.Size = new System.Drawing.Size(294, 29);
-            this.txtSupEmail.TabIndex = 240;
-            // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEmail.Location = new System.Drawing.Point(37, 440);
+            this.lblEmail.Location = new System.Drawing.Point(41, 334);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(69, 24);
             this.lblEmail.TabIndex = 239;
             this.lblEmail.Text = "E-Mail";
             // 
-            // txtSupPost
-            // 
-            this.txtSupPost.Location = new System.Drawing.Point(203, 382);
-            this.txtSupPost.Name = "txtSupPost";
-            this.txtSupPost.Size = new System.Drawing.Size(294, 29);
-            this.txtSupPost.TabIndex = 238;
-            // 
-            // lblPost
-            // 
-            this.lblPost.AutoSize = true;
-            this.lblPost.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPost.Location = new System.Drawing.Point(37, 385);
-            this.lblPost.Name = "lblPost";
-            this.lblPost.Size = new System.Drawing.Size(97, 24);
-            this.lblPost.TabIndex = 237;
-            this.lblPost.Text = "Postcode";
-            // 
-            // txtCounty
-            // 
-            this.txtCounty.Location = new System.Drawing.Point(203, 327);
-            this.txtCounty.Name = "txtCounty";
-            this.txtCounty.Size = new System.Drawing.Size(294, 29);
-            this.txtCounty.TabIndex = 236;
-            // 
-            // lblCounty
-            // 
-            this.lblCounty.AutoSize = true;
-            this.lblCounty.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCounty.Location = new System.Drawing.Point(37, 330);
-            this.lblCounty.Name = "lblCounty";
-            this.lblCounty.Size = new System.Drawing.Size(75, 24);
-            this.lblCounty.TabIndex = 235;
-            this.lblCounty.Text = "County";
-            // 
-            // txtSupTown
-            // 
-            this.txtSupTown.Location = new System.Drawing.Point(203, 272);
-            this.txtSupTown.Name = "txtSupTown";
-            this.txtSupTown.Size = new System.Drawing.Size(294, 29);
-            this.txtSupTown.TabIndex = 234;
-            // 
-            // lblTown
-            // 
-            this.lblTown.AutoSize = true;
-            this.lblTown.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTown.Location = new System.Drawing.Point(37, 275);
-            this.lblTown.Name = "lblTown";
-            this.lblTown.Size = new System.Drawing.Size(102, 24);
-            this.lblTown.TabIndex = 233;
-            this.lblTown.Text = "Town/City";
-            // 
             // txtSupAddress
             // 
-            this.txtSupAddress.Location = new System.Drawing.Point(203, 217);
+            this.txtSupAddress.Location = new System.Drawing.Point(217, 212);
             this.txtSupAddress.Name = "txtSupAddress";
             this.txtSupAddress.Size = new System.Drawing.Size(494, 29);
             this.txtSupAddress.TabIndex = 232;
+            this.txtSupAddress.TextChanged += new System.EventHandler(this.txtSupAddress_TextChanged);
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAddress.Location = new System.Drawing.Point(37, 224);
+            this.lblAddress.Location = new System.Drawing.Point(41, 215);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(87, 24);
             this.lblAddress.TabIndex = 231;
             this.lblAddress.Text = "Address";
             // 
-            // txtSupSurname
-            // 
-            this.txtSupSurname.Location = new System.Drawing.Point(499, 161);
-            this.txtSupSurname.Name = "txtSupSurname";
-            this.txtSupSurname.Size = new System.Drawing.Size(198, 29);
-            this.txtSupSurname.TabIndex = 230;
-            // 
-            // lblSurname
-            // 
-            this.lblSurname.AutoSize = true;
-            this.lblSurname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSurname.Location = new System.Drawing.Point(386, 164);
-            this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(94, 24);
-            this.lblSurname.TabIndex = 229;
-            this.lblSurname.Text = "Surname";
-            // 
-            // txtSupForename
-            // 
-            this.txtSupForename.Location = new System.Drawing.Point(203, 161);
-            this.txtSupForename.Name = "txtSupForename";
-            this.txtSupForename.Size = new System.Drawing.Size(157, 29);
-            this.txtSupForename.TabIndex = 228;
-            // 
-            // lblForename
-            // 
-            this.lblForename.AutoSize = true;
-            this.lblForename.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblForename.Location = new System.Drawing.Point(37, 161);
-            this.lblForename.Name = "lblForename";
-            this.lblForename.Size = new System.Drawing.Size(106, 24);
-            this.lblForename.TabIndex = 227;
-            this.lblForename.Text = "Forename";
-            // 
-            // txtSuppID
-            // 
-            this.txtSuppID.Location = new System.Drawing.Point(203, 51);
-            this.txtSuppID.Name = "txtSuppID";
-            this.txtSuppID.Size = new System.Drawing.Size(157, 29);
-            this.txtSuppID.TabIndex = 226;
-            this.txtSuppID.TextChanged += new System.EventHandler(this.txtSuppID_TextChanged);
-            // 
             // lblSupID
             // 
             this.lblSupID.AutoSize = true;
             this.lblSupID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSupID.Location = new System.Drawing.Point(37, 54);
+            this.lblSupID.Location = new System.Drawing.Point(41, 54);
             this.lblSupID.Name = "lblSupID";
             this.lblSupID.Size = new System.Drawing.Size(113, 24);
             this.lblSupID.TabIndex = 225;
@@ -778,27 +628,19 @@
             this.tabEdit.BackColor = System.Drawing.Color.White;
             this.tabEdit.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabEdit.Controls.Add(this.txtEdContact);
             this.tabEdit.Controls.Add(this.btnEditSupp);
             this.tabEdit.Controls.Add(this.btnEdSuppClear);
-            this.tabEdit.Controls.Add(this.pictureBox1);
+            this.tabEdit.Controls.Add(this.btnEdSearchIcon);
             this.tabEdit.Controls.Add(this.lblEdCompName);
             this.tabEdit.Controls.Add(this.txtEdCompName);
             this.tabEdit.Controls.Add(this.txtEDSuppTel);
             this.tabEdit.Controls.Add(this.lblTelNo);
             this.tabEdit.Controls.Add(this.txtEdSuppEmail);
             this.tabEdit.Controls.Add(this.lblEdSupEmail);
-            this.tabEdit.Controls.Add(this.txtEdSuppPost);
-            this.tabEdit.Controls.Add(this.lblEdSuppPost);
-            this.tabEdit.Controls.Add(this.txtEdSuppCounty);
-            this.tabEdit.Controls.Add(this.lblEdSuppCounty);
-            this.tabEdit.Controls.Add(this.txtEdSuppTown);
-            this.tabEdit.Controls.Add(this.lblEdSuppTown);
             this.tabEdit.Controls.Add(this.txtEdSuppAddress);
             this.tabEdit.Controls.Add(this.lblEdSuppAddress);
-            this.tabEdit.Controls.Add(this.txtEdSuppSurname);
-            this.tabEdit.Controls.Add(this.lblEdSuppSurname);
-            this.tabEdit.Controls.Add(this.txtEdSuppForeName);
-            this.tabEdit.Controls.Add(this.lblEdSuppForename);
+            this.tabEdit.Controls.Add(this.lblEdContact);
             this.tabEdit.Controls.Add(this.txtEdSuppID);
             this.tabEdit.Controls.Add(this.lblEdSupID);
             this.tabEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
@@ -808,6 +650,13 @@
             this.tabEdit.Size = new System.Drawing.Size(734, 688);
             this.tabEdit.TabIndex = 3;
             this.tabEdit.Text = "EDIT";
+            // 
+            // txtEdContact
+            // 
+            this.txtEdContact.Location = new System.Drawing.Point(217, 161);
+            this.txtEdContact.Name = "txtEdContact";
+            this.txtEdContact.Size = new System.Drawing.Size(494, 29);
+            this.txtEdContact.TabIndex = 248;
             // 
             // btnEditSupp
             // 
@@ -829,6 +678,7 @@
             this.btnEditSupp.Text = "EDIT SUPPLIER";
             this.btnEditSupp.TextColor = System.Drawing.Color.White;
             this.btnEditSupp.UseVisualStyleBackColor = true;
+            this.btnEditSupp.Click += new System.EventHandler(this.btnEditSupp_Click);
             // 
             // btnEdSuppClear
             // 
@@ -840,7 +690,7 @@
             this.btnEdSuppClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEdSuppClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdSuppClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdSuppClear.Location = new System.Drawing.Point(582, 47);
+            this.btnEdSuppClear.Location = new System.Drawing.Point(582, 40);
             this.btnEdSuppClear.Name = "btnEdSuppClear";
             this.btnEdSuppClear.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
             this.btnEdSuppClear.onHoverButtonColor = System.Drawing.Color.White;
@@ -850,18 +700,20 @@
             this.btnEdSuppClear.Text = "CLEAR";
             this.btnEdSuppClear.TextColor = System.Drawing.Color.White;
             this.btnEdSuppClear.UseVisualStyleBackColor = true;
+            this.btnEdSuppClear.Click += new System.EventHandler(this.btnEdSuppClear_Click);
             // 
-            // pictureBox1
+            // btnEdSearchIcon
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(379, 49);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox1.TabIndex = 245;
-            this.pictureBox1.TabStop = false;
+            this.btnEdSearchIcon.BackColor = System.Drawing.Color.Transparent;
+            this.btnEdSearchIcon.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.btnEdSearchIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEdSearchIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdSearchIcon.Location = new System.Drawing.Point(379, 49);
+            this.btnEdSearchIcon.Name = "btnEdSearchIcon";
+            this.btnEdSearchIcon.Size = new System.Drawing.Size(43, 31);
+            this.btnEdSearchIcon.TabIndex = 245;
+            this.btnEdSearchIcon.TabStop = false;
+            this.btnEdSearchIcon.Click += new System.EventHandler(this.btnEdSearchIcon_Click);
             // 
             // lblEdCompName
             // 
@@ -875,14 +727,14 @@
             // 
             // txtEdCompName
             // 
-            this.txtEdCompName.Location = new System.Drawing.Point(203, 106);
+            this.txtEdCompName.Location = new System.Drawing.Point(217, 109);
             this.txtEdCompName.Name = "txtEdCompName";
             this.txtEdCompName.Size = new System.Drawing.Size(494, 29);
             this.txtEdCompName.TabIndex = 243;
             // 
             // txtEDSuppTel
             // 
-            this.txtEDSuppTel.Location = new System.Drawing.Point(203, 492);
+            this.txtEDSuppTel.Location = new System.Drawing.Point(217, 337);
             this.txtEDSuppTel.Name = "txtEDSuppTel";
             this.txtEDSuppTel.Size = new System.Drawing.Size(294, 29);
             this.txtEDSuppTel.TabIndex = 242;
@@ -891,7 +743,7 @@
             // 
             this.lblTelNo.AutoSize = true;
             this.lblTelNo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTelNo.Location = new System.Drawing.Point(37, 495);
+            this.lblTelNo.Location = new System.Drawing.Point(37, 340);
             this.lblTelNo.Name = "lblTelNo";
             this.lblTelNo.Size = new System.Drawing.Size(73, 24);
             this.lblTelNo.TabIndex = 241;
@@ -899,7 +751,7 @@
             // 
             // txtEdSuppEmail
             // 
-            this.txtEdSuppEmail.Location = new System.Drawing.Point(203, 437);
+            this.txtEdSuppEmail.Location = new System.Drawing.Point(217, 282);
             this.txtEdSuppEmail.Name = "txtEdSuppEmail";
             this.txtEdSuppEmail.Size = new System.Drawing.Size(294, 29);
             this.txtEdSuppEmail.TabIndex = 240;
@@ -908,66 +760,15 @@
             // 
             this.lblEdSupEmail.AutoSize = true;
             this.lblEdSupEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEdSupEmail.Location = new System.Drawing.Point(37, 440);
+            this.lblEdSupEmail.Location = new System.Drawing.Point(37, 287);
             this.lblEdSupEmail.Name = "lblEdSupEmail";
             this.lblEdSupEmail.Size = new System.Drawing.Size(69, 24);
             this.lblEdSupEmail.TabIndex = 239;
             this.lblEdSupEmail.Text = "E-Mail";
             // 
-            // txtEdSuppPost
-            // 
-            this.txtEdSuppPost.Location = new System.Drawing.Point(203, 382);
-            this.txtEdSuppPost.Name = "txtEdSuppPost";
-            this.txtEdSuppPost.Size = new System.Drawing.Size(294, 29);
-            this.txtEdSuppPost.TabIndex = 238;
-            // 
-            // lblEdSuppPost
-            // 
-            this.lblEdSuppPost.AutoSize = true;
-            this.lblEdSuppPost.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEdSuppPost.Location = new System.Drawing.Point(37, 385);
-            this.lblEdSuppPost.Name = "lblEdSuppPost";
-            this.lblEdSuppPost.Size = new System.Drawing.Size(97, 24);
-            this.lblEdSuppPost.TabIndex = 237;
-            this.lblEdSuppPost.Text = "Postcode";
-            // 
-            // txtEdSuppCounty
-            // 
-            this.txtEdSuppCounty.Location = new System.Drawing.Point(203, 327);
-            this.txtEdSuppCounty.Name = "txtEdSuppCounty";
-            this.txtEdSuppCounty.Size = new System.Drawing.Size(294, 29);
-            this.txtEdSuppCounty.TabIndex = 236;
-            // 
-            // lblEdSuppCounty
-            // 
-            this.lblEdSuppCounty.AutoSize = true;
-            this.lblEdSuppCounty.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEdSuppCounty.Location = new System.Drawing.Point(37, 330);
-            this.lblEdSuppCounty.Name = "lblEdSuppCounty";
-            this.lblEdSuppCounty.Size = new System.Drawing.Size(75, 24);
-            this.lblEdSuppCounty.TabIndex = 235;
-            this.lblEdSuppCounty.Text = "County";
-            // 
-            // txtEdSuppTown
-            // 
-            this.txtEdSuppTown.Location = new System.Drawing.Point(203, 272);
-            this.txtEdSuppTown.Name = "txtEdSuppTown";
-            this.txtEdSuppTown.Size = new System.Drawing.Size(294, 29);
-            this.txtEdSuppTown.TabIndex = 234;
-            // 
-            // lblEdSuppTown
-            // 
-            this.lblEdSuppTown.AutoSize = true;
-            this.lblEdSuppTown.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEdSuppTown.Location = new System.Drawing.Point(37, 275);
-            this.lblEdSuppTown.Name = "lblEdSuppTown";
-            this.lblEdSuppTown.Size = new System.Drawing.Size(102, 24);
-            this.lblEdSuppTown.TabIndex = 233;
-            this.lblEdSuppTown.Text = "Town/City";
-            // 
             // txtEdSuppAddress
             // 
-            this.txtEdSuppAddress.Location = new System.Drawing.Point(203, 217);
+            this.txtEdSuppAddress.Location = new System.Drawing.Point(217, 221);
             this.txtEdSuppAddress.Name = "txtEdSuppAddress";
             this.txtEdSuppAddress.Size = new System.Drawing.Size(494, 29);
             this.txtEdSuppAddress.TabIndex = 232;
@@ -982,43 +783,19 @@
             this.lblEdSuppAddress.TabIndex = 231;
             this.lblEdSuppAddress.Text = "Address";
             // 
-            // txtEdSuppSurname
+            // lblEdContact
             // 
-            this.txtEdSuppSurname.Location = new System.Drawing.Point(499, 161);
-            this.txtEdSuppSurname.Name = "txtEdSuppSurname";
-            this.txtEdSuppSurname.Size = new System.Drawing.Size(198, 29);
-            this.txtEdSuppSurname.TabIndex = 230;
-            // 
-            // lblEdSuppSurname
-            // 
-            this.lblEdSuppSurname.AutoSize = true;
-            this.lblEdSuppSurname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEdSuppSurname.Location = new System.Drawing.Point(386, 164);
-            this.lblEdSuppSurname.Name = "lblEdSuppSurname";
-            this.lblEdSuppSurname.Size = new System.Drawing.Size(94, 24);
-            this.lblEdSuppSurname.TabIndex = 229;
-            this.lblEdSuppSurname.Text = "Surname";
-            // 
-            // txtEdSuppForeName
-            // 
-            this.txtEdSuppForeName.Location = new System.Drawing.Point(203, 161);
-            this.txtEdSuppForeName.Name = "txtEdSuppForeName";
-            this.txtEdSuppForeName.Size = new System.Drawing.Size(157, 29);
-            this.txtEdSuppForeName.TabIndex = 228;
-            // 
-            // lblEdSuppForename
-            // 
-            this.lblEdSuppForename.AutoSize = true;
-            this.lblEdSuppForename.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEdSuppForename.Location = new System.Drawing.Point(37, 161);
-            this.lblEdSuppForename.Name = "lblEdSuppForename";
-            this.lblEdSuppForename.Size = new System.Drawing.Size(106, 24);
-            this.lblEdSuppForename.TabIndex = 227;
-            this.lblEdSuppForename.Text = "Forename";
+            this.lblEdContact.AutoSize = true;
+            this.lblEdContact.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblEdContact.Location = new System.Drawing.Point(37, 161);
+            this.lblEdContact.Name = "lblEdContact";
+            this.lblEdContact.Size = new System.Drawing.Size(174, 24);
+            this.lblEdContact.TabIndex = 227;
+            this.lblEdContact.Text = "Company Contact";
             // 
             // txtEdSuppID
             // 
-            this.txtEdSuppID.Location = new System.Drawing.Point(203, 51);
+            this.txtEdSuppID.Location = new System.Drawing.Point(216, 51);
             this.txtEdSuppID.Name = "txtEdSuppID";
             this.txtEdSuppID.Size = new System.Drawing.Size(157, 29);
             this.txtEdSuppID.TabIndex = 226;
@@ -1038,27 +815,19 @@
             this.tabDelete.BackColor = System.Drawing.Color.White;
             this.tabDelete.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabDelete.Controls.Add(this.txtDlContact);
             this.tabDelete.Controls.Add(this.btnDeleteSupp);
             this.tabDelete.Controls.Add(this.btnDlClearSupp);
-            this.tabDelete.Controls.Add(this.pictureBox2);
+            this.tabDelete.Controls.Add(this.btnDeleteSearchIcon);
             this.tabDelete.Controls.Add(this.lblDlCompName);
             this.tabDelete.Controls.Add(this.txtDlCompName);
             this.tabDelete.Controls.Add(this.txtDlSuppTel);
             this.tabDelete.Controls.Add(this.lblDlSuppTel);
             this.tabDelete.Controls.Add(this.txtDlSuppEmail);
             this.tabDelete.Controls.Add(this.lblDlSuppEmail);
-            this.tabDelete.Controls.Add(this.txtDlSuppPost);
-            this.tabDelete.Controls.Add(this.lblDlSuppPost);
-            this.tabDelete.Controls.Add(this.txtDlSuppCounty);
-            this.tabDelete.Controls.Add(this.lblDlSuppCounty);
-            this.tabDelete.Controls.Add(this.txtDlSuppTown);
-            this.tabDelete.Controls.Add(this.lblDlSuppTown);
             this.tabDelete.Controls.Add(this.txtDlSuppAddress);
             this.tabDelete.Controls.Add(this.lblDlSupAddress);
-            this.tabDelete.Controls.Add(this.textBox35);
-            this.tabDelete.Controls.Add(this.lblDlSuppSur);
-            this.tabDelete.Controls.Add(this.txtDlSuppFore);
-            this.tabDelete.Controls.Add(this.lblDlSuppFore);
+            this.tabDelete.Controls.Add(this.lblDContact);
             this.tabDelete.Controls.Add(this.txtDlSuppID);
             this.tabDelete.Controls.Add(this.lblDelSuppID);
             this.tabDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
@@ -1068,6 +837,13 @@
             this.tabDelete.Size = new System.Drawing.Size(734, 688);
             this.tabDelete.TabIndex = 4;
             this.tabDelete.Text = "DELETE";
+            // 
+            // txtDlContact
+            // 
+            this.txtDlContact.Location = new System.Drawing.Point(218, 161);
+            this.txtDlContact.Name = "txtDlContact";
+            this.txtDlContact.Size = new System.Drawing.Size(494, 29);
+            this.txtDlContact.TabIndex = 248;
             // 
             // btnDeleteSupp
             // 
@@ -1089,6 +865,7 @@
             this.btnDeleteSupp.Text = "DELETE SUPPLIER";
             this.btnDeleteSupp.TextColor = System.Drawing.Color.White;
             this.btnDeleteSupp.UseVisualStyleBackColor = true;
+            this.btnDeleteSupp.Click += new System.EventHandler(this.btnDeleteSupp_Click);
             // 
             // btnDlClearSupp
             // 
@@ -1110,18 +887,20 @@
             this.btnDlClearSupp.Text = "CLEAR";
             this.btnDlClearSupp.TextColor = System.Drawing.Color.White;
             this.btnDlClearSupp.UseVisualStyleBackColor = true;
+            this.btnDlClearSupp.Click += new System.EventHandler(this.btnDlClearSupp_Click);
             // 
-            // pictureBox2
+            // btnDeleteSearchIcon
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(379, 49);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox2.TabIndex = 245;
-            this.pictureBox2.TabStop = false;
+            this.btnDeleteSearchIcon.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteSearchIcon.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.btnDeleteSearchIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDeleteSearchIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteSearchIcon.Location = new System.Drawing.Point(395, 49);
+            this.btnDeleteSearchIcon.Name = "btnDeleteSearchIcon";
+            this.btnDeleteSearchIcon.Size = new System.Drawing.Size(43, 31);
+            this.btnDeleteSearchIcon.TabIndex = 245;
+            this.btnDeleteSearchIcon.TabStop = false;
+            this.btnDeleteSearchIcon.Click += new System.EventHandler(this.btnDeleteSearchIcon_Click);
             // 
             // lblDlCompName
             // 
@@ -1135,14 +914,14 @@
             // 
             // txtDlCompName
             // 
-            this.txtDlCompName.Location = new System.Drawing.Point(203, 106);
+            this.txtDlCompName.Location = new System.Drawing.Point(218, 106);
             this.txtDlCompName.Name = "txtDlCompName";
             this.txtDlCompName.Size = new System.Drawing.Size(494, 29);
             this.txtDlCompName.TabIndex = 243;
             // 
             // txtDlSuppTel
             // 
-            this.txtDlSuppTel.Location = new System.Drawing.Point(203, 492);
+            this.txtDlSuppTel.Location = new System.Drawing.Point(218, 342);
             this.txtDlSuppTel.Name = "txtDlSuppTel";
             this.txtDlSuppTel.Size = new System.Drawing.Size(294, 29);
             this.txtDlSuppTel.TabIndex = 242;
@@ -1151,7 +930,7 @@
             // 
             this.lblDlSuppTel.AutoSize = true;
             this.lblDlSuppTel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDlSuppTel.Location = new System.Drawing.Point(37, 495);
+            this.lblDlSuppTel.Location = new System.Drawing.Point(33, 345);
             this.lblDlSuppTel.Name = "lblDlSuppTel";
             this.lblDlSuppTel.Size = new System.Drawing.Size(73, 24);
             this.lblDlSuppTel.TabIndex = 241;
@@ -1159,7 +938,7 @@
             // 
             // txtDlSuppEmail
             // 
-            this.txtDlSuppEmail.Location = new System.Drawing.Point(203, 437);
+            this.txtDlSuppEmail.Location = new System.Drawing.Point(218, 287);
             this.txtDlSuppEmail.Name = "txtDlSuppEmail";
             this.txtDlSuppEmail.Size = new System.Drawing.Size(294, 29);
             this.txtDlSuppEmail.TabIndex = 240;
@@ -1168,66 +947,15 @@
             // 
             this.lblDlSuppEmail.AutoSize = true;
             this.lblDlSuppEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDlSuppEmail.Location = new System.Drawing.Point(37, 440);
+            this.lblDlSuppEmail.Location = new System.Drawing.Point(37, 290);
             this.lblDlSuppEmail.Name = "lblDlSuppEmail";
             this.lblDlSuppEmail.Size = new System.Drawing.Size(69, 24);
             this.lblDlSuppEmail.TabIndex = 239;
             this.lblDlSuppEmail.Text = "E-Mail";
             // 
-            // txtDlSuppPost
-            // 
-            this.txtDlSuppPost.Location = new System.Drawing.Point(203, 382);
-            this.txtDlSuppPost.Name = "txtDlSuppPost";
-            this.txtDlSuppPost.Size = new System.Drawing.Size(294, 29);
-            this.txtDlSuppPost.TabIndex = 238;
-            // 
-            // lblDlSuppPost
-            // 
-            this.lblDlSuppPost.AutoSize = true;
-            this.lblDlSuppPost.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDlSuppPost.Location = new System.Drawing.Point(37, 385);
-            this.lblDlSuppPost.Name = "lblDlSuppPost";
-            this.lblDlSuppPost.Size = new System.Drawing.Size(97, 24);
-            this.lblDlSuppPost.TabIndex = 237;
-            this.lblDlSuppPost.Text = "Postcode";
-            // 
-            // txtDlSuppCounty
-            // 
-            this.txtDlSuppCounty.Location = new System.Drawing.Point(203, 327);
-            this.txtDlSuppCounty.Name = "txtDlSuppCounty";
-            this.txtDlSuppCounty.Size = new System.Drawing.Size(294, 29);
-            this.txtDlSuppCounty.TabIndex = 236;
-            // 
-            // lblDlSuppCounty
-            // 
-            this.lblDlSuppCounty.AutoSize = true;
-            this.lblDlSuppCounty.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDlSuppCounty.Location = new System.Drawing.Point(37, 330);
-            this.lblDlSuppCounty.Name = "lblDlSuppCounty";
-            this.lblDlSuppCounty.Size = new System.Drawing.Size(75, 24);
-            this.lblDlSuppCounty.TabIndex = 235;
-            this.lblDlSuppCounty.Text = "County";
-            // 
-            // txtDlSuppTown
-            // 
-            this.txtDlSuppTown.Location = new System.Drawing.Point(203, 272);
-            this.txtDlSuppTown.Name = "txtDlSuppTown";
-            this.txtDlSuppTown.Size = new System.Drawing.Size(294, 29);
-            this.txtDlSuppTown.TabIndex = 234;
-            // 
-            // lblDlSuppTown
-            // 
-            this.lblDlSuppTown.AutoSize = true;
-            this.lblDlSuppTown.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDlSuppTown.Location = new System.Drawing.Point(37, 275);
-            this.lblDlSuppTown.Name = "lblDlSuppTown";
-            this.lblDlSuppTown.Size = new System.Drawing.Size(102, 24);
-            this.lblDlSuppTown.TabIndex = 233;
-            this.lblDlSuppTown.Text = "Town/City";
-            // 
             // txtDlSuppAddress
             // 
-            this.txtDlSuppAddress.Location = new System.Drawing.Point(203, 217);
+            this.txtDlSuppAddress.Location = new System.Drawing.Point(218, 219);
             this.txtDlSuppAddress.Name = "txtDlSuppAddress";
             this.txtDlSuppAddress.Size = new System.Drawing.Size(494, 29);
             this.txtDlSuppAddress.TabIndex = 232;
@@ -1242,44 +970,19 @@
             this.lblDlSupAddress.TabIndex = 231;
             this.lblDlSupAddress.Text = "Address";
             // 
-            // textBox35
+            // lblDContact
             // 
-            this.textBox35.Location = new System.Drawing.Point(499, 161);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(198, 29);
-            this.textBox35.TabIndex = 230;
-            // 
-            // lblDlSuppSur
-            // 
-            this.lblDlSuppSur.AutoSize = true;
-            this.lblDlSuppSur.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDlSuppSur.Location = new System.Drawing.Point(386, 164);
-            this.lblDlSuppSur.Name = "lblDlSuppSur";
-            this.lblDlSuppSur.Size = new System.Drawing.Size(94, 24);
-            this.lblDlSuppSur.TabIndex = 229;
-            this.lblDlSuppSur.Text = "Surname";
-            this.lblDlSuppSur.Click += new System.EventHandler(this.label35_Click);
-            // 
-            // txtDlSuppFore
-            // 
-            this.txtDlSuppFore.Location = new System.Drawing.Point(203, 161);
-            this.txtDlSuppFore.Name = "txtDlSuppFore";
-            this.txtDlSuppFore.Size = new System.Drawing.Size(157, 29);
-            this.txtDlSuppFore.TabIndex = 228;
-            // 
-            // lblDlSuppFore
-            // 
-            this.lblDlSuppFore.AutoSize = true;
-            this.lblDlSuppFore.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDlSuppFore.Location = new System.Drawing.Point(37, 161);
-            this.lblDlSuppFore.Name = "lblDlSuppFore";
-            this.lblDlSuppFore.Size = new System.Drawing.Size(106, 24);
-            this.lblDlSuppFore.TabIndex = 227;
-            this.lblDlSuppFore.Text = "Forename";
+            this.lblDContact.AutoSize = true;
+            this.lblDContact.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDContact.Location = new System.Drawing.Point(37, 161);
+            this.lblDContact.Name = "lblDContact";
+            this.lblDContact.Size = new System.Drawing.Size(174, 24);
+            this.lblDContact.TabIndex = 227;
+            this.lblDContact.Text = "Company Contact";
             // 
             // txtDlSuppID
             // 
-            this.txtDlSuppID.Location = new System.Drawing.Point(203, 51);
+            this.txtDlSuppID.Location = new System.Drawing.Point(218, 47);
             this.txtDlSuppID.Name = "txtDlSuppID";
             this.txtDlSuppID.Size = new System.Drawing.Size(157, 29);
             this.txtDlSuppID.TabIndex = 226;
@@ -1306,21 +1009,23 @@
             this.Controls.Add(this.tabSupplier);
             this.Name = "frmSuppliers";
             this.Text = "frmSuppliers";
+            this.Load += new System.EventHandler(this.Supplier_load);
+            this.Shown += new System.EventHandler(this.frmSuppliers_Shown);
             this.tabSupplier.ResumeLayout(false);
             this.tabDisplay.ResumeLayout(false);
             this.tabDisplay.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliers)).EndInit();
             this.tabSearch.ResumeLayout(false);
             this.tabSearch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchIconSE)).EndInit();
             this.tabAdd.ResumeLayout(false);
             this.tabAdd.PerformLayout();
             this.tabEdit.ResumeLayout(false);
             this.tabEdit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdSearchIcon)).EndInit();
             this.tabDelete.ResumeLayout(false);
             this.tabDelete.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteSearchIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).EndInit();
             this.ResumeLayout(false);
 
@@ -1341,25 +1046,16 @@
         private System.Windows.Forms.Label lblSeSuppTel;
         private System.Windows.Forms.TextBox txtSeSuppEmail;
         private System.Windows.Forms.Label lblSeSuppEmail;
-        private System.Windows.Forms.TextBox txtSeSuppPost;
-        private System.Windows.Forms.Label lblSeSuppPost;
-        private System.Windows.Forms.TextBox txtSeSuppCounty;
-        private System.Windows.Forms.Label lblSeSuppCounty;
-        private System.Windows.Forms.TextBox txtSeSuppTown;
-        private System.Windows.Forms.Label lblSeSuppTown;
         private System.Windows.Forms.TextBox txtSeSuppAddress;
         private System.Windows.Forms.Label lblSeSuppAddress;
-        private System.Windows.Forms.TextBox txtSeSuppSurname;
-        private System.Windows.Forms.Label lblSeSur;
-        private System.Windows.Forms.TextBox txtSeFore;
-        private System.Windows.Forms.Label lblSeSuppFore;
+        private System.Windows.Forms.Label lblSeSuppContact;
         private System.Windows.Forms.TextBox txtSeSuppID;
         private System.Windows.Forms.Label lblSeSuppID;
         private RoundButton roundButton3;
         private RoundButton roundButton2;
         private RoundButton roundButton1;
         private RoundButton btnSeSuppClear;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox SearchIconSE;
         private RoundButton btnPrintSupplier;
         private RoundButton BtnSaveSup;
         private RoundButton btnClearSup;
@@ -1367,69 +1063,46 @@
         private System.Windows.Forms.TextBox txtCompName;
         private System.Windows.Forms.TextBox txtSupTel;
         private System.Windows.Forms.Label lblTel;
-        private System.Windows.Forms.TextBox txtSupEmail;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtSupPost;
-        private System.Windows.Forms.Label lblPost;
-        private System.Windows.Forms.TextBox txtCounty;
-        private System.Windows.Forms.Label lblCounty;
-        private System.Windows.Forms.TextBox txtSupTown;
-        private System.Windows.Forms.Label lblTown;
         private System.Windows.Forms.TextBox txtSupAddress;
         private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.TextBox txtSupSurname;
-        private System.Windows.Forms.Label lblSurname;
-        private System.Windows.Forms.TextBox txtSupForename;
-        private System.Windows.Forms.Label lblForename;
-        private System.Windows.Forms.TextBox txtSuppID;
         private System.Windows.Forms.Label lblSupID;
         private RoundButton btnEditSupp;
         private RoundButton btnEdSuppClear;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnEdSearchIcon;
         private System.Windows.Forms.Label lblEdCompName;
         private System.Windows.Forms.TextBox txtEdCompName;
         private System.Windows.Forms.TextBox txtEDSuppTel;
         private System.Windows.Forms.Label lblTelNo;
         private System.Windows.Forms.TextBox txtEdSuppEmail;
         private System.Windows.Forms.Label lblEdSupEmail;
-        private System.Windows.Forms.TextBox txtEdSuppPost;
-        private System.Windows.Forms.Label lblEdSuppPost;
-        private System.Windows.Forms.TextBox txtEdSuppCounty;
-        private System.Windows.Forms.Label lblEdSuppCounty;
-        private System.Windows.Forms.TextBox txtEdSuppTown;
-        private System.Windows.Forms.Label lblEdSuppTown;
         private System.Windows.Forms.TextBox txtEdSuppAddress;
         private System.Windows.Forms.Label lblEdSuppAddress;
-        private System.Windows.Forms.TextBox txtEdSuppSurname;
-        private System.Windows.Forms.Label lblEdSuppSurname;
-        private System.Windows.Forms.TextBox txtEdSuppForeName;
-        private System.Windows.Forms.Label lblEdSuppForename;
+        private System.Windows.Forms.Label lblEdContact;
         private System.Windows.Forms.TextBox txtEdSuppID;
         private System.Windows.Forms.Label lblEdSupID;
         private RoundButton btnDeleteSupp;
         private RoundButton btnDlClearSupp;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox btnDeleteSearchIcon;
         private System.Windows.Forms.Label lblDlCompName;
         private System.Windows.Forms.TextBox txtDlCompName;
         private System.Windows.Forms.TextBox txtDlSuppTel;
         private System.Windows.Forms.Label lblDlSuppTel;
         private System.Windows.Forms.TextBox txtDlSuppEmail;
         private System.Windows.Forms.Label lblDlSuppEmail;
-        private System.Windows.Forms.TextBox txtDlSuppPost;
-        private System.Windows.Forms.Label lblDlSuppPost;
-        private System.Windows.Forms.TextBox txtDlSuppCounty;
-        private System.Windows.Forms.Label lblDlSuppCounty;
-        private System.Windows.Forms.TextBox txtDlSuppTown;
-        private System.Windows.Forms.Label lblDlSuppTown;
         private System.Windows.Forms.TextBox txtDlSuppAddress;
         private System.Windows.Forms.Label lblDlSupAddress;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.Label lblDlSuppSur;
-        private System.Windows.Forms.TextBox txtDlSuppFore;
-        private System.Windows.Forms.Label lblDlSuppFore;
         private System.Windows.Forms.TextBox txtDlSuppID;
         private System.Windows.Forms.Label lblDelSuppID;
         private System.Windows.Forms.DataGridView dgvSuppliers;
         private System.Windows.Forms.ErrorProvider errP;
+        private System.Windows.Forms.TextBox txtSeContactName;
+        private System.Windows.Forms.TextBox txtSupEmail;
+        private System.Windows.Forms.TextBox txtContact;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSuppID;
+        private System.Windows.Forms.TextBox txtEdContact;
+        private System.Windows.Forms.TextBox txtDlContact;
+        private System.Windows.Forms.Label lblDContact;
     }
 }
