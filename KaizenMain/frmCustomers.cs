@@ -646,8 +646,8 @@ namespace KaizenMain
 
         private void Customer_Load(object sender, EventArgs e)
         {
-            connStr = @"Data Source = .\SQLEXPRESS01; Initial Catalog = Kaizen;Integrated Security = true ";
-
+            //connStr = @"Data Source = .\SQLEXPRESS01; Initial Catalog = Kaizen;Integrated Security = true ";
+            connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
             // connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
             sqlCustomer = @"select * from Customer";
@@ -786,6 +786,12 @@ namespace KaizenMain
                 MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Not Found!");
             }
         }
+
+        private void tabAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnDeleteIconSearch_Click(object sender, EventArgs e)
         {
             string searchValue = txtDeleteID.Text;

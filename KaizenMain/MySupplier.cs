@@ -9,22 +9,19 @@ namespace KaizenMain
     class MySupplier
     {
 
-        private String suppID, surname, forename, street, town, county, postcode, telNo, email,companyName;
+        private String suppID,address, telNo, email,companyName,companyContact;
 
         public MySupplier()
         {
 
             this.suppID = "";
-            this.email = ""; this.surname = ""; this.forename = ""; this.street = ""; this.town = ""; this.county = "";
-            this.postcode = ""; this.telNo = "";this.companyName = "";
+            this.email = ""; this.companyContact = ""; this.address = ""; this.telNo = "";this.companyName = "";
         }
 
-        public MySupplier(string suppID, string title, string surname, string forename, string street, string town, string county,
-           string postcode, string telNo, string email,string companyName)
+        public MySupplier(string suppID, string title, string address, string companyContact,string telNo, string email,string companyName)
         {
             this.suppID = suppID;
-            this.surname = surname; this.forename = forename; this.street = street; this.town = town; this.county = county;
-            this.postcode = postcode; this.telNo = telNo; this.email = email;this.companyName = companyName;
+            this.companyContact = companyContact; this.address = address; this.telNo = telNo; this.email = email;this.companyName = companyName;
 
         }
 
@@ -45,85 +42,56 @@ namespace KaizenMain
 
 
 
-        public string Forename
+        public string CompanyName
         {
-            get { return forename; }
+            get { return companyName; }
             set
             {
-                if (MyValidation.validLength(value, 2, 15) && MyValidation.validForename(value))
+                if (MyValidation.validLength(value, 2, 100) && MyValidation.validForename(value))
                 {
-                    forename = MyValidation.firstLetterEachWordToUpper(value);
+                    companyName = MyValidation.firstLetterEachWordToUpper(value);
                 }
                 else
-                    throw new MyException("Forename must be 2-15 letters");
+                    throw new MyException("Forename must be 2-20 letters");
 
             }
 
         }
 
-        public string Surname
+        public string CompanyContact
         {
-            get { return surname; }
+            get { return companyContact; }
+            set
+            {
+                if (MyValidation.validLength(value, 2, 100) && MyValidation.validForename(value))
+                {
+                    companyContact = MyValidation.firstLetterEachWordToUpper(value);
+                }
+                else
+                    throw new MyException("Company Contact must be 2-20 letters");
+
+            }
+
+        }
+        public string Address
+        {
+            get { return address; }
             set
             {
                 if (MyValidation.validLength(value, 2, 15) && MyValidation.validSurname(value))
                 {
-                    surname = MyValidation.firstLetterEachWordToUpper(value);
+                    address = MyValidation.firstLetterEachWordToUpper(value);
                 }
                 else
-                    throw new MyException("Forename must be 2-15 letters");
+                    throw new MyException("Address must be 2-50 letters");
 
             }
 
         }
 
-        public string Street
-        {
-            get { return street; }
-            set
-            {
-                if (MyValidation.validLength(value, 5, 40) && MyValidation.validLetterNumberWhitespace(value))
-                {
-                    street = MyValidation.firstLetterEachWordToUpper(value);
-                }
-                else
-                    throw new MyException("Street must be 5-40 letters");
-            }
+        
 
-
-        }
-
-        public string Town
-        {
-            get { return town; }
-            set
-            {
-                if (MyValidation.validLength(value, 2, 20) && MyValidation.validLetterWhitespace(value))
-                {
-                    town = MyValidation.firstLetterEachWordToUpper(value);
-                }
-                else
-                    throw new MyException("Town must be 2-20 letters");
-            }
-
-
-        }
-
-        public string County
-        {
-            get { return county; }
-            set
-            {
-                if (MyValidation.validLength(value, 2, 20) && MyValidation.validLetterWhitespace(value))
-                {
-                    county = MyValidation.firstLetterEachWordToUpper(value);
-                }
-                else
-                    throw new MyException("Street must be 2-20 letters");
-            }
-
-
-        }
+        
 
         public string Email
         {
@@ -141,19 +109,7 @@ namespace KaizenMain
 
         }
 
-        public string Postcode
-        {
-            get { return postcode; }
-            set
-            {
-                if (MyValidation.validLength(value, 7, 8) && MyValidation.validLetterNumberWhitespace(value))
-                {
-                    postcode = MyValidation.firstLetterEachWordToUpper(value);
-                }
-                else
-                    throw new MyException("Postcode must be 7-8 letters and alphanumeric only");
-            }
-        }
+        
 
         public string TelNo
         {
@@ -170,21 +126,7 @@ namespace KaizenMain
 
 
         }
-        public string CompanyName
-        {
-            get { return companyName; }
-            set
-            {
-                if (MyValidation.validLength(value, 2, 40) && MyValidation.validLetterWhitespace(value))
-                {
-                    companyName = MyValidation.firstLetterEachWordToUpper(value);
-                }
-                else
-                    throw new MyException("Company Name must be 2-40 letters");
-            }
-
-
-        }
+      
 
     }
 }
