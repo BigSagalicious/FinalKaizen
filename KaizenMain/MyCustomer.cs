@@ -149,7 +149,7 @@ namespace KaizenMain
             {
                 if (MyValidation.validLength(value, 7, 8) && MyValidation.validLetterNumberWhitespace(value))
                 {
-                    postcode = MyValidation.firstLetterEachWordToUpper(value);
+                    postcode = MyValidation.EachLetterToUpper(value);
                 }
                 else
                     throw new MyException("Postcode must be 7-8 letters and alphanumeric only");

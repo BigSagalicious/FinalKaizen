@@ -169,70 +169,7 @@ namespace KaizenMain
             }
         }
 
-        //Get Forename data
-        private void txtAddForename_TextChanged(object sender, EventArgs e)
-        {
-            if (txtDeleteForename.Text.Length >= 2 && txtDeleteForename.Text.Length <= 15)
-                txtDeleteForename.BackColor = Color.White;
-            else
-                txtDeleteForename.BackColor = Color.LightCoral;
-        }
-        //get Surname data
-        private void txtAddSurname_TextChanged(object sender, EventArgs e)
-        {
-            if (txtAddForename.Text.Length >= 2 && txtAddForename.Text.Length <= 15)
-                txtAddForename.BackColor = Color.White;
-            else
-                txtAddForename.BackColor = Color.LightCoral;
-        }
-        //get Address data
-        private void txtAddAddress_TextChanged(object sender, EventArgs e)
-        {
-            if (txtAddAddress.Text.Length >= 2 && txtAddAddress.Text.Length <= 15)
-                txtAddAddress.BackColor = Color.White;
-            else
-                txtAddAddress.BackColor = Color.LightCoral;
-        }
-        //Get town data
-        private void txtAddTown_TextChanged(object sender, EventArgs e)
-        {
-            if (txtAddTown.Text.Length >= 2 && txtAddTown.Text.Length <= 15)
-                txtAddTown.BackColor = Color.White;
-            else
-                txtAddTown.BackColor = Color.LightCoral;
-        }
-        //Get County Data
-        private void txtAddCounty_TextChanged(object sender, EventArgs e)
-        {
-            if (txtAddCounty.Text.Length >= 2 && txtAddCounty.Text.Length <= 15)
-                txtAddCounty.BackColor = Color.White;
-            else
-                txtAddCounty.BackColor = Color.LightCoral;
-        }
-        //Get Postcode data
-        private void txtAddPostcode_TextChanged(object sender, EventArgs e)
-        {
-            if (txtAddPostcode.Text.Length >= 2 && txtAddPostcode.Text.Length <= 15)
-                txtAddPostcode.BackColor = Color.White;
-            else
-                txtAddPostcode.BackColor = Color.LightCoral;
-        }
-        //Get Email Data 
-        private void txtAddEmail_TextChanged(object sender, EventArgs e)
-        {
-            if (txtAddEmail.Text.Length >= 2 && txtAddEmail.Text.Length <= 40)
-                txtAddEmail.BackColor = Color.White;
-            else
-                txtAddEmail.BackColor = Color.LightCoral;
-        }
-        // Get Telephone Number data 
-        private void txtAddTel_TextChanged(object sender, EventArgs e)
-        {
-            if (txtAddTel.Text.Length >= 2 && txtAddTel.Text.Length <= 15)
-                txtAddTel.BackColor = Color.White;
-            else
-                txtAddTel.BackColor = Color.LightCoral;
-        }
+       
 
 
         private void getNumber(int noRows)
