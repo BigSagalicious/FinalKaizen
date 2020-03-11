@@ -30,12 +30,12 @@ namespace KaizenMain
             get { return suppID; }
             set
             {
-                if (MyValidation.validLength(value, 6, 6) && MyValidation.validLetterNumberWhitespace(value))
+                if (MyValidation.VailidIDCode("SU", suppID))
                 {
-                    suppID = MyValidation.firstLetterEachWordToUpper(value);
+                    suppID = value;
                 }
                 else
-                    throw new MyException("SuppID must be 6 characters long");
+                    throw new MyException("Stock ID must contain 'SU-' ");
             }
 
         }
@@ -47,12 +47,12 @@ namespace KaizenMain
             get { return companyName; }
             set
             {
-                if (MyValidation.validLength(value, 2, 100) && MyValidation.validForename(value))
+                if (MyValidation.validLength(value, 2, 100) && MyValidation.validLetterWhitespace(value))
                 {
                     companyName = MyValidation.firstLetterEachWordToUpper(value);
                 }
                 else
-                    throw new MyException("Forename must be 2-20 letters");
+                    throw new MyException("Company name must be 2-100 letters");
 
             }
 

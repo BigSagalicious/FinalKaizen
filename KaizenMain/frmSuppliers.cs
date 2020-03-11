@@ -95,8 +95,10 @@ namespace KaizenMain
                             }
                             else
                             {
-                                txtEdSuppID.Text = suppIDSelected.ToString();
 
+
+                                txtEdSuppID.Text = "SU-" + suppIDSelected.ToString();
+                                
                                 drSupplier = dsKaizen.Tables["Supplier"].Rows.Find(txtEdSuppID.Text);
 
                                 txtEdCompName.Text = drSupplier["SuppName"].ToString();
@@ -118,13 +120,14 @@ namespace KaizenMain
                                 tabSupplier.SelectedIndex = 0;
                                 break;
                             }
-                            txtDlSuppID.Text = suppIDSelected.ToString();
+                            txtDlSuppID.Text = "SU-" + suppIDSelected.ToString();
+                          
 
                             drSupplier = dsKaizen.Tables["Supplier"].Rows.Find(txtDlSuppID.Text);
 
 
                             txtDlCompName.Text = drSupplier["SuppName"].ToString();
-                            txtDlContact.Text = drSupplier["SuppCon"].ToString();
+                            txtDlContact.Text = drSupplier["SuppCont"].ToString();
                             txtDlSuppAddress.Text = drSupplier["SuppAddress"].ToString();
                             txtDlSuppEmail.Text = drSupplier["SuppEmail"].ToString();
                             txtDlSuppTel.Text = drSupplier["SuppTel"].ToString();
@@ -365,8 +368,9 @@ namespace KaizenMain
             else if (dgvSuppliers.SelectedRows.Count == 1)
             {
                 suppSelected = true;
-               // suppIDSelected = Convert.ToInt32(dgvSuppliers.SelectedRows[0].Cells[0].Value);
-                suppIDSelected = Convert.ToInt32(cmdBSupplier.ToString());
+                seperateNumber(dgvSuppliers.SelectedRows[0].Cells[0].Value.ToString());
+                suppIDSelected = IDNumber;
+             
             }
         }
         void EditTabValidate(object sender, EventArgs e)
@@ -379,8 +383,9 @@ namespace KaizenMain
             else if (dgvSuppliers.SelectedRows.Count == 1)
             {
                 suppSelected = true;
-                //suppIDSelected = Convert.ToInt32(dgvSuppliers.SelectedRows[0].Cells[0].Value);
-                suppIDSelected = Convert.ToInt32(cmdBSupplier.ToString());
+                seperateNumber(dgvSuppliers.SelectedRows[0].Cells[0].Value.ToString());
+                suppIDSelected = IDNumber;
+                
 
             }
         }
