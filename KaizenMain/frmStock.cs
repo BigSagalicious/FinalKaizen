@@ -291,51 +291,53 @@ namespace KaizenMain
         }
         void clearAddForm()
         {
-
-            txtAddProdID.Clear();
+            txtAddDesc.Clear();
             cmbAddProdType.SelectedIndex = 0;
             txtAddQTY.Clear();
-            txtAddProdDesc.Clear();
-            txtAddPrice.Clear();
+            txtAddPurchase.Clear();
+            txtAddRental.Clear();
+            txtAddService.Clear();
             txtAddProdSupplierID.Clear();
-
+            txtAddProdSupplierName.Clear();
         }
 
         void clearSearchForm()
         {
             txtSearchStockID.Clear();
-            txtSearchProdID.Clear();
+            txtSearchDesc.Clear();
             cmbSearchProdType.SelectedIndex = 0;
             txtSearchQTY.Clear();
-            txtSearchProdDesc.Clear();
             txtSearchPurchase.Clear();
+            txtSearchRental.Clear();
+            txtSearchService.Clear();
             txtSearchProdSupplierID.Clear();
-
+            txtSearchProdSupplierName.Clear();
         }
 
         void clearEditForm()
         {
             txtEditStockID.Clear();
-            txtEditProdID.Clear();
+            txtEditDesc.Clear();
             cmbEditProdType.SelectedIndex = 0;
             txtEditQTY.Clear();
-            txtEditProdDesc.Clear();
-            txtEditPrice.Clear();
+            txtEditPurchase.Clear();
+            txtEditRental.Clear();
+            txtEditService.Clear();
             txtEditProdSupplierID.Clear();
-
+            txtEditProdSupplierName.Clear();
         }
 
         void clearDeleteForm()
         {
-
             txtDeleteStockID.Clear();
-            txtDeleteProdID.Clear();
+            txtDeleteDesc.Clear();
             cmbDeleteProdType.SelectedIndex = 0;
             txtDeleteQTY.Clear();
-            txtDeleteProdDesc.Clear();
-            txtDeletePrice.Clear();
+            txtDeletePurchase.Clear();
+            txtDeleteRental.Clear();
+            txtDeleteService.Clear();
             txtDeleteProdSupplierID.Clear();
-
+            txtDeleteProdSupplierName.Clear();
         }
 
         private void Stock_Load(object sender, EventArgs e)
