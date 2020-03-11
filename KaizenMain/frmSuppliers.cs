@@ -557,9 +557,9 @@ namespace KaizenMain
 
         private void Supplier_load(object sender, EventArgs e)
         {
-            connStr = @"Data Source = .\SQLEXPRESS01; Initial Catalog = Kaizen;Integrated Security = true ";
+            //connStr = @"Data Source = .\SQLEXPRESS01; Initial Catalog = Kaizen;Integrated Security = true ";
             //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-            //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+            connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
             
 
             sqlSupplier = @"select * from Supplier";
