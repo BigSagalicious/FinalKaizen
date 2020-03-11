@@ -55,15 +55,16 @@ namespace KaizenMain
                             }
                             else
                             {
-                                txtSearchStockID.Text = "ST-" + stockIDSelected.ToString();
+                                txtSearchStockID.Text = "EQ-" + stockIDSelected.ToString();
 
                                 drStock = dsKaizen.Tables["Stock"].Rows.Find(txtSearchStockID.Text);
 
-                                txtSearchProdID.Text = drStock["ProdID"].ToString();
-                                //cmbSearchProdType.Text = drStock["CustSName"].ToString();
+                                txtSearchDesc.Text = drStock["StockDescription"].ToString();
+                                cmbSearchProdType.Text = drStock["EquipType"].ToString();
                                 txtSearchQTY.Text = drStock["QtyInStock"].ToString();
-                                txtSearchProdDesc.Text = drStock["StockDesc"].ToString();
-                                txtSearchPrice.Text = drStock["RecomendedPrice"].ToString();
+                                txtSearchPurchase.Text = drStock["PurPrice"].ToString();
+                                txtSearchRental.Text = drStock["RentPrice"].ToString();
+                                txtSearchService.Text = drStock["ServPrice"].ToString();
                                 txtSearchProdSupplierID.Text = drStock["SuppID"].ToString();
                             }
                             break;
@@ -75,7 +76,7 @@ namespace KaizenMain
                             int noRows = dsKaizen.Tables["Stock"].Rows.Count;
 
                             if (noRows == 0)
-                                lblAddStockID.Text = "ST-1000";
+                                lblAddStockID.Text = "EQ-1000";
                             else
                             {
                                 getStockID(noRows);
@@ -100,11 +101,12 @@ namespace KaizenMain
                                 drStock = dsKaizen.Tables["Stock"].Rows.Find(txtEditStockID.Text);
 
                                 txtEditStockID.Text = drStock["StockID"].ToString();
-                                txtEditProdID.Text = drStock["ProdID"].ToString();
-                                cmbEditProdType.Text = drStock["CustSName"].ToString();
+                                txtEditDesc.Text = drStock["StockDescription"].ToString();
+                                cmbEditProdType.Text = drStock["EquipType"].ToString();
                                 txtEditQTY.Text = drStock["QtyInStock"].ToString();
-                                txtEditProdDesc.Text = drStock["StockDesc"].ToString();
-                                txtEditPrice.Text = drStock["SellingPrice"].ToString();
+                                txtEditPurchase.Text = drStock["PurPrice"].ToString();
+                                txtEditRental.Text = drStock["RentPrice"].ToString();
+                                txtEditService.Text = drStock["ServPrice"].ToString();
                                 txtEditProdSupplierID.Text = drStock["SuppID"].ToString();
 
                                 //disableEditTxtboxes();
@@ -125,12 +127,13 @@ namespace KaizenMain
                             drStock = dsKaizen.Tables["Stock"].Rows.Find(txtDeleteStockID.Text);
 
                             txtDeleteStockID.Text = drStock["StockID"].ToString();
-                            txtEditProdID.Text = drStock["ProdID"].ToString();
-                            cmbEditProdType.Text = drStock["CustSName"].ToString();
-                            txtEditQTY.Text = drStock["QtyInStock"].ToString();
-                            txtEditProdDesc.Text = drStock["StockDesc"].ToString();
-                            txtEditPrice.Text = drStock["SellingPrice"].ToString();
-                            txtEditProdSupplierID.Text = drStock["SuppID"].ToString();
+                            txtDeleteDesc.Text = drStock["StockDescription"].ToString();
+                            cmbDeleteProdType.Text = drStock["EquipType"].ToString();
+                            txtDeleteQTY.Text = drStock["QtyInStock"].ToString();
+                            txtDeletePurchase.Text = drStock["PurPrice"].ToString();
+                            txtDeleteRental.Text = drStock["RentPrice"].ToString();
+                            txtDeleteService.Text = drStock["ServPrice"].ToString();
+                            txtDeleteProdSupplierID.Text = drStock["SuppID"].ToString();
                             break;
                         }
 
@@ -173,17 +176,17 @@ namespace KaizenMain
             {
                 ok = false;
                 errP.SetError(lblAddStockID, MyEx.toString());
-            }
+            }          
 
             try
             {
-                myStock.ProdID = txtAddProdID.Text.Trim();
+                myStock.StockDesc = txtAddDesc.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtAddProdID, MyEx.toString());
+                errP.SetError(txtAddDesc, MyEx.toString());
             }
 
             try
@@ -198,25 +201,55 @@ namespace KaizenMain
 
             try
             {
-                myStock.StockDesc = txtAddProdDesc.Text.Trim();
-            }
+                myStock.EquipType = cmbAddProdType.Text.Trim();
 
+            }
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtAddProdDesc, MyEx.toString());
+                errP.SetError(cmbAddProdType, MyEx.toString());
             }
 
             try
             {
-                myStock.RecPrice = double.Parse(txtAddPrice.Text);
+                myStock.PurPrice = double.Parse(txtAddPurchase.Text);
             }
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtAddPrice, MyEx.toString());
+                errP.SetError(txtAddPurchase, MyEx.toString());
             }
 
+            try
+            {
+                myStock.RentalPrice = double.Parse(txtAddRental.Text);
+            }
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(txtAddRental, MyEx.toString());
+            }
+
+            try
+            {
+                myStock.ServicePrice = double.Parse(txtAddService.Text);
+            }
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(txtAddService, MyEx.toString());
+            }
+
+            try
+            {
+                myStock.SuppID = txtAddProdSupplierID.Text.Trim();
+
+            }
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(txtAddProdSupplierID, MyEx.toString());
+            }
 
             try
             {
@@ -224,10 +257,12 @@ namespace KaizenMain
                 {
                     drStock = dsKaizen.Tables["Stock"].NewRow();
                     drStock["StockID"] = myStock.StockID;
-                    drStock["ProdID"] = myStock.ProdID;
+                    drStock["StockDescription"] = myStock.StockDesc;
+                    drStock["Equiptype"] = myStock.EquipType;
+                    drStock["PurPrice"] = myStock.PurPrice;
+                    drStock["RentPrice"] = myStock.RentalPrice;
+                    drStock["SurvPrice"] = myStock.ServicePrice;
                     drStock["QtyInStock"] = myStock.QtyInStock;
-                    drStock["StockDesc"] = myStock.StockDesc;
-                    drStock["RecomendedPrice"] = myStock.RecPrice;
                     drStock["SuppID"] = myStock.SuppID;
     
 
@@ -273,7 +308,7 @@ namespace KaizenMain
             cmbSearchProdType.SelectedIndex = 0;
             txtSearchQTY.Clear();
             txtSearchProdDesc.Clear();
-            txtSearchPrice.Clear();
+            txtSearchPurchase.Clear();
             txtSearchProdSupplierID.Clear();
 
         }
@@ -373,6 +408,21 @@ namespace KaizenMain
                 stockSelected = true;
                 stockIDSelected = Convert.ToInt32(dgvStock.SelectedRows[0].Cells[0].Value);
             }
+        }
+
+        private void txtSearchProdSupplierName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearchProdSupplierID_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         void seperateNumber(string ID)
