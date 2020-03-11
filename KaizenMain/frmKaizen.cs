@@ -63,7 +63,7 @@ namespace KaizenMain
                 {
                     timer1.Stop();
                     MenuVisable = true;
-                    pBIcon.Visible = true;
+                    pBicon.Visible = true;
                     this.Refresh();
                 }
             }
@@ -74,7 +74,7 @@ namespace KaizenMain
                 if (pnlMenu.Width <= 78)
                 {
                     timer1.Stop();
-                    pBIcon.Visible = false;
+                    pBicon.Visible = false;
                     MenuVisable = false;
                 }
             }
@@ -202,6 +202,11 @@ namespace KaizenMain
         }
 
         private void pnlIndReports_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
