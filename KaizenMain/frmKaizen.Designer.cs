@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKaizen));
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.pBicon = new System.Windows.Forms.PictureBox();
+            this.menuLogo = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.richTextBox11 = new System.Windows.Forms.RichTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlIndSuppliers = new System.Windows.Forms.Panel();
             this.richTextBox10 = new System.Windows.Forms.RichTextBox();
             this.pBSuppliers = new System.Windows.Forms.PictureBox();
@@ -65,13 +70,11 @@
             this.pBMenu = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlForms = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.richTextBox11 = new System.Windows.Forms.RichTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pBIconClosed = new System.Windows.Forms.PictureBox();
-            this.pBicon = new System.Windows.Forms.PictureBox();
             this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBicon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBSuppliers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReports)).BeginInit();
@@ -86,17 +89,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBMenu)).BeginInit();
             this.pnlForms.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBIconClosed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBicon)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.White;
             this.pnlMenu.Controls.Add(this.pBicon);
-            this.pnlMenu.Controls.Add(this.pBIconClosed);
+            this.pnlMenu.Controls.Add(this.menuLogo);
             this.pnlMenu.Controls.Add(this.panel1);
             this.pnlMenu.Controls.Add(this.richTextBox11);
             this.pnlMenu.Controls.Add(this.pictureBox1);
@@ -133,6 +133,62 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(200, 717);
             this.pnlMenu.TabIndex = 0;
+            // 
+            // pBicon
+            // 
+            this.pBicon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pBicon.BackgroundImage")));
+            this.pBicon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pBicon.Location = new System.Drawing.Point(6, 20);
+            this.pBicon.Name = "pBicon";
+            this.pBicon.Size = new System.Drawing.Size(191, 50);
+            this.pBicon.TabIndex = 1;
+            this.pBicon.TabStop = false;
+            // 
+            // menuLogo
+            // 
+            this.menuLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menuLogo.BackgroundImage")));
+            this.menuLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menuLogo.Location = new System.Drawing.Point(3, 6);
+            this.menuLogo.Name = "menuLogo";
+            this.menuLogo.Size = new System.Drawing.Size(73, 64);
+            this.menuLogo.TabIndex = 32;
+            this.menuLogo.TabStop = false;
+            this.menuLogo.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel1.Location = new System.Drawing.Point(188, 81);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(12, 52);
+            this.panel1.TabIndex = 31;
+            // 
+            // richTextBox11
+            // 
+            this.richTextBox11.BackColor = System.Drawing.Color.White;
+            this.richTextBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.richTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.richTextBox11.Location = new System.Drawing.Point(68, 95);
+            this.richTextBox11.Name = "richTextBox11";
+            this.richTextBox11.Size = new System.Drawing.Size(130, 38);
+            this.richTextBox11.TabIndex = 30;
+            this.richTextBox11.Text = "Schedule";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pnlIndSuppliers
             // 
@@ -394,7 +450,7 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(130, 38);
             this.richTextBox1.TabIndex = 8;
-            this.richTextBox1.Text = "Equipment";
+            this.richTextBox1.Text = "Purchase";
             this.richTextBox1.Click += new System.EventHandler(this.pBEquip_Click);
             // 
             // pBQuotes
@@ -449,7 +505,7 @@
             // 
             this.pBService.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBService.Image = ((System.Drawing.Image)(resources.GetObject("pBService.Image")));
-            this.pBService.Location = new System.Drawing.Point(9, 207);
+            this.pBService.Location = new System.Drawing.Point(9, 204);
             this.pBService.Name = "pBService";
             this.pBService.Size = new System.Drawing.Size(57, 47);
             this.pBService.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -461,7 +517,7 @@
             // 
             this.pBEquip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBEquip.Image = ((System.Drawing.Image)(resources.GetObject("pBEquip.Image")));
-            this.pBEquip.Location = new System.Drawing.Point(6, 148);
+            this.pBEquip.Location = new System.Drawing.Point(6, 142);
             this.pBEquip.Name = "pBEquip";
             this.pBEquip.Size = new System.Drawing.Size(57, 47);
             this.pBEquip.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -543,41 +599,6 @@
             this.pnlForms.Size = new System.Drawing.Size(728, 717);
             this.pnlForms.TabIndex = 2;
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
-            this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel1.Location = new System.Drawing.Point(188, 81);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(12, 52);
-            this.panel1.TabIndex = 31;
-            // 
-            // richTextBox11
-            // 
-            this.richTextBox11.BackColor = System.Drawing.Color.White;
-            this.richTextBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.richTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.richTextBox11.Location = new System.Drawing.Point(68, 89);
-            this.richTextBox11.Name = "richTextBox11";
-            this.richTextBox11.Size = new System.Drawing.Size(130, 38);
-            this.richTextBox11.TabIndex = 30;
-            this.richTextBox11.Text = "Schedule";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 86);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 29;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
@@ -585,26 +606,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(100, 50);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            // 
-            // pBIconClosed
-            // 
-            this.pBIconClosed.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.pBIconClosed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pBIconClosed.Location = new System.Drawing.Point(6, 20);
-            this.pBIconClosed.Name = "pBIconClosed";
-            this.pBIconClosed.Size = new System.Drawing.Size(60, 50);
-            this.pBIconClosed.TabIndex = 32;
-            this.pBIconClosed.TabStop = false;
-            // 
-            // pBicon
-            // 
-            this.pBicon.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
-            this.pBicon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pBicon.Location = new System.Drawing.Point(6, 20);
-            this.pBicon.Name = "pBicon";
-            this.pBicon.Size = new System.Drawing.Size(191, 50);
-            this.pBicon.TabIndex = 1;
-            this.pBicon.TabStop = false;
             // 
             // frmKaizen
             // 
@@ -623,6 +624,9 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmKaizen_Load);
             this.pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pBicon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBSuppliers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReports)).EndInit();
@@ -637,10 +641,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBMenu)).EndInit();
             this.pnlForms.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBIconClosed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBicon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -686,7 +687,7 @@
         private System.Windows.Forms.RichTextBox richTextBox11;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pBicon;
-        private System.Windows.Forms.PictureBox pBIconClosed;
+        private System.Windows.Forms.PictureBox menuLogo;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

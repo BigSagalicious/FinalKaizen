@@ -13,11 +13,12 @@ namespace KaizenMain
 {
     public partial class frmStock : Form
     {
-        SqlDataAdapter daStock;
+        SqlDataAdapter daStock, daEquiptype;
+        SqlConnection sqlConnectionEqT;
         DataSet dsKaizen = new DataSet();
         SqlCommandBuilder cmdBStock;
         DataRow drStock;
-        String connStr, sqlStock;
+        String connStr, sqlStock, sqlEquiptype ,fillcombo;
         int selectedTab = 0;
         bool stockSelected = false;
         int stockIDSelected = 0;
@@ -96,11 +97,11 @@ namespace KaizenMain
                             }
                             else
                             {
-                                txtEditStockID.Text = stockIDSelected.ToString();
+                                txtEditStockID.Text = "EQ-" + stockIDSelected.ToString();
 
                                 drStock = dsKaizen.Tables["Stock"].Rows.Find(txtEditStockID.Text);
 
-                                txtEditStockID.Text = drStock["StockID"].ToString();
+                                
                                 txtEditDesc.Text = drStock["StockDescription"].ToString();
                                 cmbEditProdType.Text = drStock["EquipType"].ToString();
                                 txtEditQTY.Text = drStock["QtyInStock"].ToString();
@@ -342,18 +343,26 @@ namespace KaizenMain
 
         private void Stock_Load(object sender, EventArgs e)
         {
-            //connStr = @"Data Source = .\SQLEXPRESS01; Initial Catalog = Kaizen;Integrated Security = true ";
+            connStr = @"Data Source = .\SQLEXPRESS01; Initial Catalog = Kaizen;Integrated Security = true ";
             //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-             connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+             //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
             sqlStock = @"select * from Stock";
+            //sqlEquiptype = @"select * from EquipmentType";
             daStock = new SqlDataAdapter(sqlStock, connStr);
+            //daEquiptype = new SqlDataAdapter(sqlEquiptype, connStr);
             cmdBStock = new SqlCommandBuilder(daStock);
+
 
             daStock.FillSchema(dsKaizen, SchemaType.Source, "Stock");
             daStock.Fill(dsKaizen, "Stock");
             dgvStock.DataSource = dsKaizen.Tables["Stock"];
             dgvStock.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
+            populateEquipTypeCmb(cmbSearchProdType);
+            populateEquipTypeCmb(cmbAddProdType);
+            populateEquipTypeCmb(cmbEditProdType);
+            populateEquipTypeCmb(cmbDeleteProdType);
 
             tabStock.SelectedIndex = 1;
             tabStock.SelectedIndex = 0;
@@ -395,7 +404,8 @@ namespace KaizenMain
             else if (dgvStock.SelectedRows.Count == 1)
             {
                 stockSelected = true;
-                stockIDSelected = Convert.ToInt32(dgvStock.SelectedRows[0].Cells[0].Value);
+                seperateNumber(dgvStock.SelectedRows[0].Cells[0].Value.ToString());
+                stockIDSelected = IDNumber;
             }
         }
         void EditTabValidate(object sender, EventArgs e)
@@ -436,6 +446,23 @@ namespace KaizenMain
 
             IDNumber = Convert.ToInt32(strlist[1]);
 
+        }
+
+        void populateEquipTypeCmb (ComboBox comboBox)
+        {
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .\SQLEXPRESS01; Initial Catalog = Kaizen;Integrated Security = true "))
+            {
+                SqlCommand sqlCmd = new SqlCommand("SELECT * FROM EquipmentType", sqlConnectionEqT);
+                sqlConnectionEqT.Open();
+                SqlDataReader sqlReader = sqlCmd.ExecuteReader();
+
+                while (sqlReader.Read())
+                {
+                    comboBox.Items.Add(sqlReader["EquipType"].ToString());
+                }
+
+                sqlReader.Close();
+            }
         }
     }
 }

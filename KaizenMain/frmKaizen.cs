@@ -19,12 +19,13 @@ namespace KaizenMain
             InitializeComponent();
             MenuWidth = pnlMenu.Width;
             MenuVisable = true;
+           
 
         }
 
         private void frmKaizen_Load(object sender, EventArgs e)
         {
-            
+            DoubleBuffered = true;
         }
 
         private void pBEquip_Click(object sender, EventArgs e)
@@ -63,7 +64,9 @@ namespace KaizenMain
                 {
                     timer1.Stop();
                     MenuVisable = true;
+                    menuLogo.Visible = false;
                     pBicon.Visible = true;
+                   
                     this.Refresh();
                 }
             }
@@ -75,6 +78,7 @@ namespace KaizenMain
                 {
                     timer1.Stop();
                     pBicon.Visible = false;
+                    menuLogo.Visible = true;
                     MenuVisable = false;
                 }
             }
