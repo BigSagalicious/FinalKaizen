@@ -33,10 +33,15 @@
             this.tabDisplay = new System.Windows.Forms.TabPage();
             this.dgvStock = new System.Windows.Forms.DataGridView();
             this.tabSearch = new System.Windows.Forms.TabPage();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtSearchRental = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtSearchService = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtSearchDesc = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.cmbSearchProdType = new System.Windows.Forms.ComboBox();
-            this.roundButton17 = new KaizenMain.RoundButton();
-            this.roundButton16 = new KaizenMain.RoundButton();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.txtSearchProdSupplierName = new System.Windows.Forms.TextBox();
             this.txtSearchProdSupplierID = new System.Windows.Forms.TextBox();
@@ -49,30 +54,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.tabAdd = new System.Windows.Forms.TabPage();
-            this.lblAddStockID = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.roundButton4 = new KaizenMain.RoundButton();
-            this.roundButton5 = new KaizenMain.RoundButton();
-            this.tabEdit = new System.Windows.Forms.TabPage();
-            this.txtEditStockID = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.roundButton6 = new KaizenMain.RoundButton();
-            this.roundButton7 = new KaizenMain.RoundButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.tabDelete = new System.Windows.Forms.TabPage();
-            this.txtDeleteStockID = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.roundButton8 = new KaizenMain.RoundButton();
-            this.roundButton9 = new KaizenMain.RoundButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.errP = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtSearchDesc = new System.Windows.Forms.TextBox();
-            this.txtSearchService = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtSearchRental = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtAddRental = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -90,6 +71,9 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
+            this.lblAddStockID = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.tabEdit = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
             this.txtEditRental = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -107,6 +91,10 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
+            this.txtEditStockID = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.tabDelete = new System.Windows.Forms.TabPage();
             this.label19 = new System.Windows.Forms.Label();
             this.txtDeleteRental = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -124,6 +112,20 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
+            this.txtDeleteStockID = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.errP = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.roundButton17 = new KaizenMain.RoundButton();
+            this.btnSearchClear = new KaizenMain.RoundButton();
+            this.roundButton4 = new KaizenMain.RoundButton();
+            this.btnAddClear = new KaizenMain.RoundButton();
+            this.btnEditStock = new KaizenMain.RoundButton();
+            this.btnEditClear = new KaizenMain.RoundButton();
+            this.roundButton8 = new KaizenMain.RoundButton();
+            this.btnDeleteClear = new KaizenMain.RoundButton();
             this.tabStock.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
@@ -135,6 +137,8 @@
             this.tabDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // tabStock
@@ -199,7 +203,7 @@
             this.tabSearch.Controls.Add(this.label30);
             this.tabSearch.Controls.Add(this.cmbSearchProdType);
             this.tabSearch.Controls.Add(this.roundButton17);
-            this.tabSearch.Controls.Add(this.roundButton16);
+            this.tabSearch.Controls.Add(this.btnSearchClear);
             this.tabSearch.Controls.Add(this.pictureBox5);
             this.tabSearch.Controls.Add(this.txtSearchProdSupplierName);
             this.tabSearch.Controls.Add(this.txtSearchProdSupplierID);
@@ -220,6 +224,70 @@
             this.tabSearch.TabIndex = 1;
             this.tabSearch.Text = "SEARCH";
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label18.Location = new System.Drawing.Point(593, 266);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(80, 24);
+            this.label18.TabIndex = 233;
+            this.label18.Text = "Service";
+            // 
+            // txtSearchRental
+            // 
+            this.txtSearchRental.Enabled = false;
+            this.txtSearchRental.Location = new System.Drawing.Point(376, 310);
+            this.txtSearchRental.Name = "txtSearchRental";
+            this.txtSearchRental.Size = new System.Drawing.Size(157, 29);
+            this.txtSearchRental.TabIndex = 232;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(386, 266);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(139, 24);
+            this.label11.TabIndex = 231;
+            this.label11.Text = "Rental/\\Month";
+            // 
+            // txtSearchService
+            // 
+            this.txtSearchService.Enabled = false;
+            this.txtSearchService.Location = new System.Drawing.Point(552, 310);
+            this.txtSearchService.Name = "txtSearchService";
+            this.txtSearchService.Size = new System.Drawing.Size(157, 29);
+            this.txtSearchService.TabIndex = 230;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label12.Location = new System.Drawing.Point(230, 266);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(98, 24);
+            this.label12.TabIndex = 229;
+            this.label12.Text = "Purchase";
+            // 
+            // txtSearchDesc
+            // 
+            this.txtSearchDesc.Enabled = false;
+            this.txtSearchDesc.Location = new System.Drawing.Point(200, 119);
+            this.txtSearchDesc.Name = "txtSearchDesc";
+            this.txtSearchDesc.Size = new System.Drawing.Size(509, 29);
+            this.txtSearchDesc.TabIndex = 228;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(386, 177);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 24);
+            this.label6.TabIndex = 227;
+            this.label6.Text = "Type";
+            // 
             // label30
             // 
             this.label30.AutoSize = true;
@@ -232,53 +300,12 @@
             // 
             // cmbSearchProdType
             // 
+            this.cmbSearchProdType.Enabled = false;
             this.cmbSearchProdType.FormattingEnabled = true;
             this.cmbSearchProdType.Location = new System.Drawing.Point(475, 174);
             this.cmbSearchProdType.Name = "cmbSearchProdType";
             this.cmbSearchProdType.Size = new System.Drawing.Size(234, 32);
             this.cmbSearchProdType.TabIndex = 223;
-            // 
-            // roundButton17
-            // 
-            this.roundButton17.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton17.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton17.FlatAppearance.BorderSize = 0;
-            this.roundButton17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton17.Location = new System.Drawing.Point(296, 590);
-            this.roundButton17.Name = "roundButton17";
-            this.roundButton17.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton17.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton17.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton17.Size = new System.Drawing.Size(189, 40);
-            this.roundButton17.TabIndex = 222;
-            this.roundButton17.Text = "PRINT STOCK";
-            this.roundButton17.TextColor = System.Drawing.Color.White;
-            this.roundButton17.UseVisualStyleBackColor = true;
-            // 
-            // roundButton16
-            // 
-            this.roundButton16.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton16.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton16.FlatAppearance.BorderSize = 0;
-            this.roundButton16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton16.Location = new System.Drawing.Point(579, 58);
-            this.roundButton16.Name = "roundButton16";
-            this.roundButton16.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton16.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton16.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton16.Size = new System.Drawing.Size(115, 40);
-            this.roundButton16.TabIndex = 221;
-            this.roundButton16.Text = "CLEAR";
-            this.roundButton16.TextColor = System.Drawing.Color.White;
-            this.roundButton16.UseVisualStyleBackColor = true;
             // 
             // pictureBox5
             // 
@@ -294,6 +321,7 @@
             // 
             // txtSearchProdSupplierName
             // 
+            this.txtSearchProdSupplierName.Enabled = false;
             this.txtSearchProdSupplierName.Location = new System.Drawing.Point(200, 475);
             this.txtSearchProdSupplierName.Name = "txtSearchProdSupplierName";
             this.txtSearchProdSupplierName.Size = new System.Drawing.Size(494, 29);
@@ -302,6 +330,7 @@
             // 
             // txtSearchProdSupplierID
             // 
+            this.txtSearchProdSupplierID.Enabled = false;
             this.txtSearchProdSupplierID.Location = new System.Drawing.Point(200, 409);
             this.txtSearchProdSupplierID.Name = "txtSearchProdSupplierID";
             this.txtSearchProdSupplierID.Size = new System.Drawing.Size(157, 29);
@@ -310,6 +339,7 @@
             // 
             // txtSearchPurchase
             // 
+            this.txtSearchPurchase.Enabled = false;
             this.txtSearchPurchase.Location = new System.Drawing.Point(200, 310);
             this.txtSearchPurchase.Name = "txtSearchPurchase";
             this.txtSearchPurchase.Size = new System.Drawing.Size(157, 29);
@@ -317,6 +347,7 @@
             // 
             // txtSearchQTY
             // 
+            this.txtSearchQTY.Enabled = false;
             this.txtSearchQTY.Location = new System.Drawing.Point(200, 174);
             this.txtSearchQTY.Name = "txtSearchQTY";
             this.txtSearchQTY.Size = new System.Drawing.Size(157, 29);
@@ -385,6 +416,7 @@
             this.tabAdd.BackColor = System.Drawing.Color.White;
             this.tabAdd.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabAdd.Controls.Add(this.pictureBox6);
             this.tabAdd.Controls.Add(this.label1);
             this.tabAdd.Controls.Add(this.txtAddRental);
             this.tabAdd.Controls.Add(this.label2);
@@ -405,7 +437,7 @@
             this.tabAdd.Controls.Add(this.lblAddStockID);
             this.tabAdd.Controls.Add(this.label34);
             this.tabAdd.Controls.Add(this.roundButton4);
-            this.tabAdd.Controls.Add(this.roundButton5);
+            this.tabAdd.Controls.Add(this.btnAddClear);
             this.tabAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabAdd.Location = new System.Drawing.Point(4, 29);
@@ -413,347 +445,6 @@
             this.tabAdd.Size = new System.Drawing.Size(734, 688);
             this.tabAdd.TabIndex = 2;
             this.tabAdd.Text = "ADD";
-            // 
-            // lblAddStockID
-            // 
-            this.lblAddStockID.AutoSize = true;
-            this.lblAddStockID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAddStockID.Location = new System.Drawing.Point(215, 65);
-            this.lblAddStockID.Name = "lblAddStockID";
-            this.lblAddStockID.Size = new System.Drawing.Size(17, 24);
-            this.lblAddStockID.TabIndex = 228;
-            this.lblAddStockID.Text = "-";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label34.Location = new System.Drawing.Point(45, 65);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(86, 24);
-            this.label34.TabIndex = 227;
-            this.label34.Text = "Stock ID";
-            // 
-            // roundButton4
-            // 
-            this.roundButton4.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton4.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton4.FlatAppearance.BorderSize = 0;
-            this.roundButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton4.Location = new System.Drawing.Point(296, 590);
-            this.roundButton4.Name = "roundButton4";
-            this.roundButton4.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton4.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton4.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton4.Size = new System.Drawing.Size(189, 40);
-            this.roundButton4.TabIndex = 222;
-            this.roundButton4.Text = "ADD STOCK";
-            this.roundButton4.TextColor = System.Drawing.Color.White;
-            this.roundButton4.UseVisualStyleBackColor = true;
-            this.roundButton4.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // roundButton5
-            // 
-            this.roundButton5.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton5.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton5.FlatAppearance.BorderSize = 0;
-            this.roundButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton5.Location = new System.Drawing.Point(579, 58);
-            this.roundButton5.Name = "roundButton5";
-            this.roundButton5.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton5.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton5.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton5.Size = new System.Drawing.Size(115, 40);
-            this.roundButton5.TabIndex = 221;
-            this.roundButton5.Text = "CLEAR";
-            this.roundButton5.TextColor = System.Drawing.Color.White;
-            this.roundButton5.UseVisualStyleBackColor = true;
-            // 
-            // tabEdit
-            // 
-            this.tabEdit.BackColor = System.Drawing.Color.White;
-            this.tabEdit.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
-            this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabEdit.Controls.Add(this.label13);
-            this.tabEdit.Controls.Add(this.txtEditRental);
-            this.tabEdit.Controls.Add(this.label14);
-            this.tabEdit.Controls.Add(this.txtEditService);
-            this.tabEdit.Controls.Add(this.label15);
-            this.tabEdit.Controls.Add(this.txtEditDesc);
-            this.tabEdit.Controls.Add(this.label16);
-            this.tabEdit.Controls.Add(this.label17);
-            this.tabEdit.Controls.Add(this.cmbEditProdType);
-            this.tabEdit.Controls.Add(this.txtEditProdSupplierName);
-            this.tabEdit.Controls.Add(this.txtEditProdSupplierID);
-            this.tabEdit.Controls.Add(this.txtEditPurchase);
-            this.tabEdit.Controls.Add(this.txtEditQTY);
-            this.tabEdit.Controls.Add(this.label28);
-            this.tabEdit.Controls.Add(this.label32);
-            this.tabEdit.Controls.Add(this.label37);
-            this.tabEdit.Controls.Add(this.label38);
-            this.tabEdit.Controls.Add(this.txtEditStockID);
-            this.tabEdit.Controls.Add(this.label35);
-            this.tabEdit.Controls.Add(this.roundButton6);
-            this.tabEdit.Controls.Add(this.roundButton7);
-            this.tabEdit.Controls.Add(this.pictureBox3);
-            this.tabEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.tabEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tabEdit.Location = new System.Drawing.Point(4, 29);
-            this.tabEdit.Name = "tabEdit";
-            this.tabEdit.Size = new System.Drawing.Size(734, 688);
-            this.tabEdit.TabIndex = 3;
-            this.tabEdit.Text = "EDIT";
-            this.tabEdit.Click += new System.EventHandler(this.tabEdit_Click);
-            // 
-            // txtEditStockID
-            // 
-            this.txtEditStockID.Location = new System.Drawing.Point(200, 62);
-            this.txtEditStockID.Name = "txtEditStockID";
-            this.txtEditStockID.Size = new System.Drawing.Size(157, 29);
-            this.txtEditStockID.TabIndex = 228;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label35.Location = new System.Drawing.Point(41, 65);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(86, 24);
-            this.label35.TabIndex = 227;
-            this.label35.Text = "Stock ID";
-            // 
-            // roundButton6
-            // 
-            this.roundButton6.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton6.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton6.FlatAppearance.BorderSize = 0;
-            this.roundButton6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton6.Location = new System.Drawing.Point(296, 590);
-            this.roundButton6.Name = "roundButton6";
-            this.roundButton6.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton6.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton6.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton6.Size = new System.Drawing.Size(189, 40);
-            this.roundButton6.TabIndex = 222;
-            this.roundButton6.Text = "EDIT STOCK";
-            this.roundButton6.TextColor = System.Drawing.Color.White;
-            this.roundButton6.UseVisualStyleBackColor = true;
-            // 
-            // roundButton7
-            // 
-            this.roundButton7.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton7.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton7.FlatAppearance.BorderSize = 0;
-            this.roundButton7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton7.Location = new System.Drawing.Point(579, 58);
-            this.roundButton7.Name = "roundButton7";
-            this.roundButton7.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton7.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton7.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton7.Size = new System.Drawing.Size(115, 40);
-            this.roundButton7.TabIndex = 221;
-            this.roundButton7.Text = "CLEAR";
-            this.roundButton7.TextColor = System.Drawing.Color.White;
-            this.roundButton7.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Location = new System.Drawing.Point(376, 60);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox3.TabIndex = 220;
-            this.pictureBox3.TabStop = false;
-            // 
-            // tabDelete
-            // 
-            this.tabDelete.BackColor = System.Drawing.Color.White;
-            this.tabDelete.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
-            this.tabDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabDelete.Controls.Add(this.label19);
-            this.tabDelete.Controls.Add(this.txtDeleteRental);
-            this.tabDelete.Controls.Add(this.label20);
-            this.tabDelete.Controls.Add(this.txtDeleteService);
-            this.tabDelete.Controls.Add(this.label21);
-            this.tabDelete.Controls.Add(this.txtDeleteDesc);
-            this.tabDelete.Controls.Add(this.label22);
-            this.tabDelete.Controls.Add(this.label23);
-            this.tabDelete.Controls.Add(this.cmbDeleteProdType);
-            this.tabDelete.Controls.Add(this.txtDeleteProdSupplierName);
-            this.tabDelete.Controls.Add(this.txtDeleteProdSupplierID);
-            this.tabDelete.Controls.Add(this.txtDeletePurchase);
-            this.tabDelete.Controls.Add(this.txtDeleteQTY);
-            this.tabDelete.Controls.Add(this.label29);
-            this.tabDelete.Controls.Add(this.label33);
-            this.tabDelete.Controls.Add(this.label39);
-            this.tabDelete.Controls.Add(this.label40);
-            this.tabDelete.Controls.Add(this.txtDeleteStockID);
-            this.tabDelete.Controls.Add(this.label36);
-            this.tabDelete.Controls.Add(this.roundButton8);
-            this.tabDelete.Controls.Add(this.roundButton9);
-            this.tabDelete.Controls.Add(this.pictureBox2);
-            this.tabDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.tabDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tabDelete.Location = new System.Drawing.Point(4, 29);
-            this.tabDelete.Name = "tabDelete";
-            this.tabDelete.Size = new System.Drawing.Size(734, 688);
-            this.tabDelete.TabIndex = 4;
-            this.tabDelete.Text = "REMOVE";
-            // 
-            // txtDeleteStockID
-            // 
-            this.txtDeleteStockID.Location = new System.Drawing.Point(200, 62);
-            this.txtDeleteStockID.Name = "txtDeleteStockID";
-            this.txtDeleteStockID.Size = new System.Drawing.Size(157, 29);
-            this.txtDeleteStockID.TabIndex = 228;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label36.Location = new System.Drawing.Point(41, 65);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(86, 24);
-            this.label36.TabIndex = 227;
-            this.label36.Text = "Stock ID";
-            // 
-            // roundButton8
-            // 
-            this.roundButton8.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton8.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton8.FlatAppearance.BorderSize = 0;
-            this.roundButton8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton8.Location = new System.Drawing.Point(296, 590);
-            this.roundButton8.Name = "roundButton8";
-            this.roundButton8.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton8.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton8.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton8.Size = new System.Drawing.Size(189, 40);
-            this.roundButton8.TabIndex = 222;
-            this.roundButton8.Text = "REMOVE STOCK";
-            this.roundButton8.TextColor = System.Drawing.Color.White;
-            this.roundButton8.UseVisualStyleBackColor = true;
-            // 
-            // roundButton9
-            // 
-            this.roundButton9.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton9.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton9.FlatAppearance.BorderSize = 0;
-            this.roundButton9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton9.Location = new System.Drawing.Point(579, 58);
-            this.roundButton9.Name = "roundButton9";
-            this.roundButton9.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton9.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton9.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton9.Size = new System.Drawing.Size(115, 40);
-            this.roundButton9.TabIndex = 221;
-            this.roundButton9.Text = "CLEAR";
-            this.roundButton9.TextColor = System.Drawing.Color.White;
-            this.roundButton9.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(376, 60);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox2.TabIndex = 220;
-            this.pictureBox2.TabStop = false;
-            // 
-            // errP
-            // 
-            this.errP.ContainerControl = this;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(386, 177);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 24);
-            this.label6.TabIndex = 227;
-            this.label6.Text = "Type";
-            // 
-            // txtSearchDesc
-            // 
-            this.txtSearchDesc.Location = new System.Drawing.Point(200, 119);
-            this.txtSearchDesc.Name = "txtSearchDesc";
-            this.txtSearchDesc.Size = new System.Drawing.Size(509, 29);
-            this.txtSearchDesc.TabIndex = 228;
-            // 
-            // txtSearchService
-            // 
-            this.txtSearchService.Location = new System.Drawing.Point(552, 310);
-            this.txtSearchService.Name = "txtSearchService";
-            this.txtSearchService.Size = new System.Drawing.Size(157, 29);
-            this.txtSearchService.TabIndex = 230;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(230, 266);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(98, 24);
-            this.label12.TabIndex = 229;
-            this.label12.Text = "Purchase";
-            // 
-            // txtSearchRental
-            // 
-            this.txtSearchRental.Location = new System.Drawing.Point(376, 310);
-            this.txtSearchRental.Name = "txtSearchRental";
-            this.txtSearchRental.Size = new System.Drawing.Size(157, 29);
-            this.txtSearchRental.TabIndex = 232;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(386, 266);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(139, 24);
-            this.label11.TabIndex = 231;
-            this.label11.Text = "Rental/\\Month";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Location = new System.Drawing.Point(593, 266);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(80, 24);
-            this.label18.TabIndex = 233;
-            this.label18.Text = "Service";
             // 
             // label1
             // 
@@ -836,6 +527,7 @@
             // 
             // txtAddProdSupplierName
             // 
+            this.txtAddProdSupplierName.Enabled = false;
             this.txtAddProdSupplierName.Location = new System.Drawing.Point(205, 474);
             this.txtAddProdSupplierName.Name = "txtAddProdSupplierName";
             this.txtAddProdSupplierName.Size = new System.Drawing.Size(494, 29);
@@ -901,6 +593,63 @@
             this.label31.Size = new System.Drawing.Size(51, 24);
             this.label31.TabIndex = 234;
             this.label31.Text = "Cost";
+            // 
+            // lblAddStockID
+            // 
+            this.lblAddStockID.AutoSize = true;
+            this.lblAddStockID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblAddStockID.Location = new System.Drawing.Point(215, 65);
+            this.lblAddStockID.Name = "lblAddStockID";
+            this.lblAddStockID.Size = new System.Drawing.Size(17, 24);
+            this.lblAddStockID.TabIndex = 228;
+            this.lblAddStockID.Text = "-";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label34.Location = new System.Drawing.Point(45, 65);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(86, 24);
+            this.label34.TabIndex = 227;
+            this.label34.Text = "Stock ID";
+            // 
+            // tabEdit
+            // 
+            this.tabEdit.BackColor = System.Drawing.Color.White;
+            this.tabEdit.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
+            this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabEdit.Controls.Add(this.pictureBox1);
+            this.tabEdit.Controls.Add(this.label13);
+            this.tabEdit.Controls.Add(this.txtEditRental);
+            this.tabEdit.Controls.Add(this.label14);
+            this.tabEdit.Controls.Add(this.txtEditService);
+            this.tabEdit.Controls.Add(this.label15);
+            this.tabEdit.Controls.Add(this.txtEditDesc);
+            this.tabEdit.Controls.Add(this.label16);
+            this.tabEdit.Controls.Add(this.label17);
+            this.tabEdit.Controls.Add(this.cmbEditProdType);
+            this.tabEdit.Controls.Add(this.txtEditProdSupplierName);
+            this.tabEdit.Controls.Add(this.txtEditProdSupplierID);
+            this.tabEdit.Controls.Add(this.txtEditPurchase);
+            this.tabEdit.Controls.Add(this.txtEditQTY);
+            this.tabEdit.Controls.Add(this.label28);
+            this.tabEdit.Controls.Add(this.label32);
+            this.tabEdit.Controls.Add(this.label37);
+            this.tabEdit.Controls.Add(this.label38);
+            this.tabEdit.Controls.Add(this.txtEditStockID);
+            this.tabEdit.Controls.Add(this.label35);
+            this.tabEdit.Controls.Add(this.pictureBox3);
+            this.tabEdit.Controls.Add(this.btnEditStock);
+            this.tabEdit.Controls.Add(this.btnEditClear);
+            this.tabEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.tabEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tabEdit.Location = new System.Drawing.Point(4, 29);
+            this.tabEdit.Name = "tabEdit";
+            this.tabEdit.Size = new System.Drawing.Size(734, 688);
+            this.tabEdit.TabIndex = 3;
+            this.tabEdit.Text = "EDIT";
+            this.tabEdit.Click += new System.EventHandler(this.tabEdit_Click);
             // 
             // label13
             // 
@@ -983,6 +732,7 @@
             // 
             // txtEditProdSupplierName
             // 
+            this.txtEditProdSupplierName.Enabled = false;
             this.txtEditProdSupplierName.Location = new System.Drawing.Point(201, 478);
             this.txtEditProdSupplierName.Name = "txtEditProdSupplierName";
             this.txtEditProdSupplierName.Size = new System.Drawing.Size(494, 29);
@@ -1049,6 +799,70 @@
             this.label38.TabIndex = 234;
             this.label38.Text = "Cost";
             // 
+            // txtEditStockID
+            // 
+            this.txtEditStockID.Location = new System.Drawing.Point(200, 62);
+            this.txtEditStockID.Name = "txtEditStockID";
+            this.txtEditStockID.Size = new System.Drawing.Size(157, 29);
+            this.txtEditStockID.TabIndex = 228;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label35.Location = new System.Drawing.Point(41, 65);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(86, 24);
+            this.label35.TabIndex = 227;
+            this.label35.Text = "Stock ID";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Location = new System.Drawing.Point(376, 60);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 31);
+            this.pictureBox3.TabIndex = 220;
+            this.pictureBox3.TabStop = false;
+            // 
+            // tabDelete
+            // 
+            this.tabDelete.BackColor = System.Drawing.Color.White;
+            this.tabDelete.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
+            this.tabDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabDelete.Controls.Add(this.label19);
+            this.tabDelete.Controls.Add(this.txtDeleteRental);
+            this.tabDelete.Controls.Add(this.label20);
+            this.tabDelete.Controls.Add(this.txtDeleteService);
+            this.tabDelete.Controls.Add(this.label21);
+            this.tabDelete.Controls.Add(this.txtDeleteDesc);
+            this.tabDelete.Controls.Add(this.label22);
+            this.tabDelete.Controls.Add(this.label23);
+            this.tabDelete.Controls.Add(this.cmbDeleteProdType);
+            this.tabDelete.Controls.Add(this.txtDeleteProdSupplierName);
+            this.tabDelete.Controls.Add(this.txtDeleteProdSupplierID);
+            this.tabDelete.Controls.Add(this.txtDeletePurchase);
+            this.tabDelete.Controls.Add(this.txtDeleteQTY);
+            this.tabDelete.Controls.Add(this.label29);
+            this.tabDelete.Controls.Add(this.label33);
+            this.tabDelete.Controls.Add(this.label39);
+            this.tabDelete.Controls.Add(this.label40);
+            this.tabDelete.Controls.Add(this.txtDeleteStockID);
+            this.tabDelete.Controls.Add(this.label36);
+            this.tabDelete.Controls.Add(this.pictureBox2);
+            this.tabDelete.Controls.Add(this.roundButton8);
+            this.tabDelete.Controls.Add(this.btnDeleteClear);
+            this.tabDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.tabDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tabDelete.Location = new System.Drawing.Point(4, 29);
+            this.tabDelete.Name = "tabDelete";
+            this.tabDelete.Size = new System.Drawing.Size(734, 688);
+            this.tabDelete.TabIndex = 4;
+            this.tabDelete.Text = "REMOVE";
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -1061,6 +875,7 @@
             // 
             // txtDeleteRental
             // 
+            this.txtDeleteRental.Enabled = false;
             this.txtDeleteRental.Location = new System.Drawing.Point(377, 311);
             this.txtDeleteRental.Name = "txtDeleteRental";
             this.txtDeleteRental.Size = new System.Drawing.Size(157, 29);
@@ -1079,6 +894,7 @@
             // 
             // txtDeleteService
             // 
+            this.txtDeleteService.Enabled = false;
             this.txtDeleteService.Location = new System.Drawing.Point(553, 311);
             this.txtDeleteService.Name = "txtDeleteService";
             this.txtDeleteService.Size = new System.Drawing.Size(157, 29);
@@ -1096,6 +912,7 @@
             // 
             // txtDeleteDesc
             // 
+            this.txtDeleteDesc.Enabled = false;
             this.txtDeleteDesc.Location = new System.Drawing.Point(201, 120);
             this.txtDeleteDesc.Name = "txtDeleteDesc";
             this.txtDeleteDesc.Size = new System.Drawing.Size(509, 29);
@@ -1123,6 +940,7 @@
             // 
             // cmbDeleteProdType
             // 
+            this.cmbDeleteProdType.Enabled = false;
             this.cmbDeleteProdType.FormattingEnabled = true;
             this.cmbDeleteProdType.Location = new System.Drawing.Point(476, 175);
             this.cmbDeleteProdType.Name = "cmbDeleteProdType";
@@ -1131,6 +949,7 @@
             // 
             // txtDeleteProdSupplierName
             // 
+            this.txtDeleteProdSupplierName.Enabled = false;
             this.txtDeleteProdSupplierName.Location = new System.Drawing.Point(201, 476);
             this.txtDeleteProdSupplierName.Name = "txtDeleteProdSupplierName";
             this.txtDeleteProdSupplierName.Size = new System.Drawing.Size(494, 29);
@@ -1138,6 +957,7 @@
             // 
             // txtDeleteProdSupplierID
             // 
+            this.txtDeleteProdSupplierID.Enabled = false;
             this.txtDeleteProdSupplierID.Location = new System.Drawing.Point(201, 410);
             this.txtDeleteProdSupplierID.Name = "txtDeleteProdSupplierID";
             this.txtDeleteProdSupplierID.Size = new System.Drawing.Size(157, 29);
@@ -1145,6 +965,7 @@
             // 
             // txtDeletePurchase
             // 
+            this.txtDeletePurchase.Enabled = false;
             this.txtDeletePurchase.Location = new System.Drawing.Point(201, 311);
             this.txtDeletePurchase.Name = "txtDeletePurchase";
             this.txtDeletePurchase.Size = new System.Drawing.Size(157, 29);
@@ -1152,6 +973,7 @@
             // 
             // txtDeleteQTY
             // 
+            this.txtDeleteQTY.Enabled = false;
             this.txtDeleteQTY.Location = new System.Drawing.Point(201, 175);
             this.txtDeleteQTY.Name = "txtDeleteQTY";
             this.txtDeleteQTY.Size = new System.Drawing.Size(157, 29);
@@ -1197,6 +1019,237 @@
             this.label40.TabIndex = 234;
             this.label40.Text = "Cost";
             // 
+            // txtDeleteStockID
+            // 
+            this.txtDeleteStockID.Location = new System.Drawing.Point(200, 62);
+            this.txtDeleteStockID.Name = "txtDeleteStockID";
+            this.txtDeleteStockID.Size = new System.Drawing.Size(157, 29);
+            this.txtDeleteStockID.TabIndex = 228;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label36.Location = new System.Drawing.Point(41, 65);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(86, 24);
+            this.label36.TabIndex = 227;
+            this.label36.Text = "Stock ID";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Location = new System.Drawing.Point(376, 60);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 31);
+            this.pictureBox2.TabIndex = 220;
+            this.pictureBox2.TabStop = false;
+            // 
+            // errP
+            // 
+            this.errP.ContainerControl = this;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Location = new System.Drawing.Point(376, 410);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 31);
+            this.pictureBox1.TabIndex = 251;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox6.Location = new System.Drawing.Point(381, 406);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(43, 31);
+            this.pictureBox6.TabIndex = 251;
+            this.pictureBox6.TabStop = false;
+            // 
+            // roundButton17
+            // 
+            this.roundButton17.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton17.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton17.FlatAppearance.BorderSize = 0;
+            this.roundButton17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton17.Location = new System.Drawing.Point(296, 590);
+            this.roundButton17.Name = "roundButton17";
+            this.roundButton17.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton17.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton17.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton17.Size = new System.Drawing.Size(189, 40);
+            this.roundButton17.TabIndex = 222;
+            this.roundButton17.Text = "PRINT STOCK";
+            this.roundButton17.TextColor = System.Drawing.Color.White;
+            this.roundButton17.UseVisualStyleBackColor = true;
+            // 
+            // btnSearchClear
+            // 
+            this.btnSearchClear.BorderColor = System.Drawing.Color.Silver;
+            this.btnSearchClear.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnSearchClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearchClear.FlatAppearance.BorderSize = 0;
+            this.btnSearchClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSearchClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSearchClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchClear.Location = new System.Drawing.Point(579, 58);
+            this.btnSearchClear.Name = "btnSearchClear";
+            this.btnSearchClear.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnSearchClear.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnSearchClear.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnSearchClear.Size = new System.Drawing.Size(115, 40);
+            this.btnSearchClear.TabIndex = 221;
+            this.btnSearchClear.Text = "CLEAR";
+            this.btnSearchClear.TextColor = System.Drawing.Color.White;
+            this.btnSearchClear.UseVisualStyleBackColor = true;
+            this.btnSearchClear.Click += new System.EventHandler(this.btnSearchClear_Click);
+            // 
+            // roundButton4
+            // 
+            this.roundButton4.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton4.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton4.FlatAppearance.BorderSize = 0;
+            this.roundButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton4.Location = new System.Drawing.Point(296, 590);
+            this.roundButton4.Name = "roundButton4";
+            this.roundButton4.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton4.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton4.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton4.Size = new System.Drawing.Size(189, 40);
+            this.roundButton4.TabIndex = 222;
+            this.roundButton4.Text = "ADD STOCK";
+            this.roundButton4.TextColor = System.Drawing.Color.White;
+            this.roundButton4.UseVisualStyleBackColor = true;
+            this.roundButton4.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnAddClear
+            // 
+            this.btnAddClear.BorderColor = System.Drawing.Color.Silver;
+            this.btnAddClear.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnAddClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddClear.FlatAppearance.BorderSize = 0;
+            this.btnAddClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAddClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAddClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddClear.Location = new System.Drawing.Point(579, 58);
+            this.btnAddClear.Name = "btnAddClear";
+            this.btnAddClear.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddClear.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnAddClear.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddClear.Size = new System.Drawing.Size(115, 40);
+            this.btnAddClear.TabIndex = 221;
+            this.btnAddClear.Text = "CLEAR";
+            this.btnAddClear.TextColor = System.Drawing.Color.White;
+            this.btnAddClear.UseVisualStyleBackColor = true;
+            this.btnAddClear.Click += new System.EventHandler(this.btnAddClear_Click);
+            // 
+            // btnEditStock
+            // 
+            this.btnEditStock.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditStock.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEditStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditStock.FlatAppearance.BorderSize = 0;
+            this.btnEditStock.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditStock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditStock.Location = new System.Drawing.Point(296, 590);
+            this.btnEditStock.Name = "btnEditStock";
+            this.btnEditStock.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditStock.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEditStock.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditStock.Size = new System.Drawing.Size(189, 40);
+            this.btnEditStock.TabIndex = 222;
+            this.btnEditStock.Text = "EDIT STOCK";
+            this.btnEditStock.TextColor = System.Drawing.Color.White;
+            this.btnEditStock.UseVisualStyleBackColor = true;
+            this.btnEditStock.Click += new System.EventHandler(this.btnEditEdit_Click);
+            // 
+            // btnEditClear
+            // 
+            this.btnEditClear.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditClear.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEditClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditClear.FlatAppearance.BorderSize = 0;
+            this.btnEditClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditClear.Location = new System.Drawing.Point(579, 58);
+            this.btnEditClear.Name = "btnEditClear";
+            this.btnEditClear.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditClear.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEditClear.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditClear.Size = new System.Drawing.Size(115, 40);
+            this.btnEditClear.TabIndex = 221;
+            this.btnEditClear.Text = "CLEAR";
+            this.btnEditClear.TextColor = System.Drawing.Color.White;
+            this.btnEditClear.UseVisualStyleBackColor = true;
+            this.btnEditClear.Click += new System.EventHandler(this.roundButton7_Click);
+            // 
+            // roundButton8
+            // 
+            this.roundButton8.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton8.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton8.FlatAppearance.BorderSize = 0;
+            this.roundButton8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton8.Location = new System.Drawing.Point(296, 590);
+            this.roundButton8.Name = "roundButton8";
+            this.roundButton8.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton8.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton8.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton8.Size = new System.Drawing.Size(189, 40);
+            this.roundButton8.TabIndex = 222;
+            this.roundButton8.Text = "REMOVE STOCK";
+            this.roundButton8.TextColor = System.Drawing.Color.White;
+            this.roundButton8.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteClear
+            // 
+            this.btnDeleteClear.BorderColor = System.Drawing.Color.Silver;
+            this.btnDeleteClear.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnDeleteClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteClear.FlatAppearance.BorderSize = 0;
+            this.btnDeleteClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteClear.Location = new System.Drawing.Point(579, 58);
+            this.btnDeleteClear.Name = "btnDeleteClear";
+            this.btnDeleteClear.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDeleteClear.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnDeleteClear.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDeleteClear.Size = new System.Drawing.Size(115, 40);
+            this.btnDeleteClear.TabIndex = 221;
+            this.btnDeleteClear.Text = "CLEAR";
+            this.btnDeleteClear.TextColor = System.Drawing.Color.White;
+            this.btnDeleteClear.UseVisualStyleBackColor = true;
+            this.btnDeleteClear.Click += new System.EventHandler(this.btnDeleteClear_Click);
+            // 
             // frmStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1222,6 +1275,8 @@
             this.tabDelete.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1235,7 +1290,7 @@
         private System.Windows.Forms.TabPage tabEdit;
         private System.Windows.Forms.TabPage tabDelete;
         private RoundButton roundButton17;
-        private RoundButton roundButton16;
+        private RoundButton btnSearchClear;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TextBox txtSearchProdSupplierName;
         private System.Windows.Forms.TextBox txtSearchProdSupplierID;
@@ -1248,12 +1303,12 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label27;
         private RoundButton roundButton4;
-        private RoundButton roundButton5;
-        private RoundButton roundButton6;
-        private RoundButton roundButton7;
+        private RoundButton btnAddClear;
+        private RoundButton btnEditStock;
+        private RoundButton btnEditClear;
         private System.Windows.Forms.PictureBox pictureBox3;
         private RoundButton roundButton8;
-        private RoundButton roundButton9;
+        private RoundButton btnDeleteClear;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.ComboBox cmbSearchProdType;
@@ -1323,5 +1378,7 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

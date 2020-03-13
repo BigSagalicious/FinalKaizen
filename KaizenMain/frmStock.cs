@@ -28,6 +28,8 @@ namespace KaizenMain
             InitializeComponent();
         }
 
+        //TAB PAGES CHANGING
+
         private void tabStock_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedTab = tabStock.SelectedIndex;
@@ -149,7 +151,7 @@ namespace KaizenMain
 
             drStock = dsKaizen.Tables["Stock"].Rows[noRows - 1];
             seperateNumber(drStock["StockID"].ToString());
-            lblAddStockID.Text = "ST-" +(IDNumber + 1).ToString();
+            lblAddStockID.Text = "EQ-" +(IDNumber + 1).ToString();
 
         }
 
@@ -162,6 +164,7 @@ namespace KaizenMain
         {
 
         }
+
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -213,7 +216,7 @@ namespace KaizenMain
 
             try
             {
-                myStock.PurPrice = double.Parse(txtAddPurchase.Text);
+                myStock.PurPrice = Convert.ToDouble(txtAddPurchase.Text.Trim());
             }
             catch (MyException MyEx)
             {
@@ -223,7 +226,7 @@ namespace KaizenMain
 
             try
             {
-                myStock.RentalPrice = double.Parse(txtAddRental.Text);
+                myStock.RentalPrice = Convert.ToDouble(txtAddRental.Text.Trim());
             }
             catch (MyException MyEx)
             {
@@ -233,7 +236,7 @@ namespace KaizenMain
 
             try
             {
-                myStock.ServicePrice = double.Parse(txtAddService.Text);
+                myStock.ServicePrice = Convert.ToDouble(txtAddService.Text.Trim());
             }
             catch (MyException MyEx)
             {
@@ -262,7 +265,7 @@ namespace KaizenMain
                     drStock["Equiptype"] = myStock.EquipType;
                     drStock["PurPrice"] = myStock.PurPrice;
                     drStock["RentPrice"] = myStock.RentalPrice;
-                    drStock["SurvPrice"] = myStock.ServicePrice;
+                    drStock["ServPrice"] = myStock.ServicePrice;
                     drStock["QtyInStock"] = myStock.QtyInStock;
                     drStock["SuppID"] = myStock.SuppID;
     
@@ -290,6 +293,139 @@ namespace KaizenMain
                     MessageBoxIcon.Error);
             }
         }
+
+        private void btnEditEdit_Click(object sender, EventArgs e)
+        {
+            if (btnEditStock.Text == "EDIT STOCK")
+            {
+                enableEditTxtboxes();
+
+                btnEditStock.Text = "Save";
+            }
+            else
+            {
+                MyStock myStock = new MyStock();
+                bool ok = true;
+                errP.Clear();
+
+
+                try
+                {
+                    myStock.StockDesc = txtEditDesc.Text.Trim();
+                }
+
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(txtEditDesc, MyEx.toString());
+                }
+
+                try
+                {
+                    myStock.QtyInStock = Convert.ToInt32(txtEditQTY.Text.Trim());
+                }
+
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(txtEditQTY, MyEx.toString());
+                }
+
+                try
+                {
+                    myStock.EquipType = cmbEditProdType.Text.Trim();
+                }
+
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(cmbEditProdType, MyEx.toString());
+                }
+
+                try
+                {
+                    myStock.PurPrice = Convert.ToDouble(txtEditPurchase.Text.Trim());
+                }
+
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(txtEditPurchase, MyEx.toString());
+                }
+
+                try
+                {
+                    myStock.RentalPrice = Convert.ToDouble(txtEditRental.Text.Trim());
+                }
+
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(txtEditRental, MyEx.toString());
+                }
+
+                try
+                {
+                    myStock.ServicePrice = Convert.ToDouble(txtEditService.Text.Trim());
+                }
+
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(txtEditService, MyEx.toString());
+                }
+
+
+                try
+                {
+                    myStock.SuppID = txtEditProdSupplierID.Text.Trim();
+                }
+
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(txtEditProdSupplierID, MyEx.toString());
+                }
+
+                try
+                {
+                    if (ok)
+                    {
+                        drStock.BeginEdit();
+                        drStock["StockDescription"] = myStock.StockDesc;
+                        drStock["EquipType"] = myStock.EquipType;
+                        drStock["PurPrice"] = myStock.PurPrice;
+                        drStock["RentPrice"] = myStock.RentalPrice;
+                        drStock["ServPrice"] = myStock.ServicePrice;
+                        drStock["QtyInStock"] = myStock.QtyInStock;
+                        drStock["SuppID"] = myStock.SuppID;
+
+                        drStock.EndEdit();
+                        daStock.Update(dsKaizen, "Stock");
+
+                        MessageBox.Show("Stock Details Updated", "Stock");
+
+                        disableEditTxtboxes();
+
+                        btnEditStock.Text = "EDIT STOCK";
+                        tabStock.SelectedIndex = 0;
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Error !", MessageBoxButtons.AbortRetryIgnore,
+                        MessageBoxIcon.Error);
+                }
+
+
+            }
+
+
+        }
+
+
         void clearAddForm()
         {
             txtAddDesc.Clear();
@@ -339,6 +475,28 @@ namespace KaizenMain
             txtDeleteService.Clear();
             txtDeleteProdSupplierID.Clear();
             txtDeleteProdSupplierName.Clear();
+        }
+
+        private void enableEditTxtboxes()
+        {
+            txtEditDesc.Enabled = true;
+            cmbEditProdType.Enabled = true;
+            txtEditQTY.Enabled = true;
+            txtEditPurchase.Enabled = true;
+            txtEditRental.Enabled = true;
+            txtEditService.Enabled = true;
+            txtEditProdSupplierID.Enabled = true;            
+        }
+
+        private void disableEditTxtboxes()
+        {
+            txtEditDesc.Enabled = false;
+            cmbEditProdType.Enabled = false;
+            txtEditQTY.Enabled = false;
+            txtEditPurchase.Enabled = false;
+            txtEditRental.Enabled = false;
+            txtEditService.Enabled = false;
+            txtEditProdSupplierID.Enabled = false;
         }
 
         private void Stock_Load(object sender, EventArgs e)
@@ -418,13 +576,34 @@ namespace KaizenMain
             else if (dgvStock.SelectedRows.Count == 1)
             {
                 stockSelected = true;
-                stockIDSelected = Convert.ToInt32(dgvStock.SelectedRows[0].Cells[0].Value);
+                seperateNumber(dgvStock.SelectedRows[0].Cells[0].Value.ToString());
+                stockIDSelected = IDNumber;
             }
         }
 
         private void txtSearchProdSupplierName_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void roundButton7_Click(object sender, EventArgs e)
+        {
+            clearEditForm();
+        }
+
+        private void btnDeleteClear_Click(object sender, EventArgs e)
+        {
+            clearDeleteForm();
+        }
+
+        private void btnAddClear_Click(object sender, EventArgs e)
+        {
+            clearAddForm();
+        }
+
+        private void btnSearchClear_Click(object sender, EventArgs e)
+        {
+            clearSearchForm();
         }
 
         private void label8_Click(object sender, EventArgs e)
