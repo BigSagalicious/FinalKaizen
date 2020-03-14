@@ -181,6 +181,17 @@ namespace KaizenMain
             pnlForms.Controls.Add(frm);
             frm.Show();
         }
+        private void pBScheduel_Click(object sender, EventArgs e)
+        {
+            resetIndicators();
+            pnlIndSuppliers.BackColor = Color.FromArgb(13, 119, 159);
+            Appointment frm = new Appointment();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            pnlForms.Controls.Add(frm);
+            frm.Show();
+        }
         private void resetIndicators()
         {
             pnlIndEquipment.BackColor = Color.FromArgb(88, 193, 238);
@@ -206,11 +217,6 @@ namespace KaizenMain
         }
 
         private void pnlIndReports_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

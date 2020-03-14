@@ -35,7 +35,7 @@
             this.menuLogo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.richTextBox11 = new System.Windows.Forms.RichTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbSchedule = new System.Windows.Forms.PictureBox();
             this.pnlIndSuppliers = new System.Windows.Forms.Panel();
             this.richTextBox10 = new System.Windows.Forms.RichTextBox();
             this.pBSuppliers = new System.Windows.Forms.PictureBox();
@@ -74,7 +74,7 @@
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBicon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBSuppliers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReports)).BeginInit();
@@ -99,7 +99,7 @@
             this.pnlMenu.Controls.Add(this.menuLogo);
             this.pnlMenu.Controls.Add(this.panel1);
             this.pnlMenu.Controls.Add(this.richTextBox11);
-            this.pnlMenu.Controls.Add(this.pictureBox1);
+            this.pnlMenu.Controls.Add(this.pbSchedule);
             this.pnlMenu.Controls.Add(this.pnlIndSuppliers);
             this.pnlMenu.Controls.Add(this.richTextBox10);
             this.pnlMenu.Controls.Add(this.pBSuppliers);
@@ -178,17 +178,17 @@
             this.richTextBox11.TabIndex = 30;
             this.richTextBox11.Text = "Schedule";
             // 
-            // pictureBox1
+            // pbSchedule
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 80);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 29;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbSchedule.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbSchedule.Image = ((System.Drawing.Image)(resources.GetObject("pbSchedule.Image")));
+            this.pbSchedule.Location = new System.Drawing.Point(6, 80);
+            this.pbSchedule.Name = "pbSchedule";
+            this.pbSchedule.Size = new System.Drawing.Size(57, 47);
+            this.pbSchedule.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSchedule.TabIndex = 29;
+            this.pbSchedule.TabStop = false;
+            this.pbSchedule.Click += new System.EventHandler(this.pBScheduel_Click);
             // 
             // pnlIndSuppliers
             // 
@@ -626,7 +626,7 @@
             this.pnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pBicon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBSuppliers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReports)).EndInit();
@@ -685,7 +685,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RichTextBox richTextBox11;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbSchedule;
         private System.Windows.Forms.PictureBox pBicon;
         private System.Windows.Forms.PictureBox menuLogo;
         private System.Windows.Forms.PictureBox pictureBox2;
