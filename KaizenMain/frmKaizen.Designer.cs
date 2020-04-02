@@ -131,7 +131,7 @@
             this.pnlMenu.ForeColor = System.Drawing.Color.Cornsilk;
             this.pnlMenu.Location = new System.Drawing.Point(0, 43);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(200, 717);
+            this.pnlMenu.Size = new System.Drawing.Size(200, 745);
             this.pnlMenu.TabIndex = 0;
             // 
             // pBicon
@@ -160,7 +160,7 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel1.Location = new System.Drawing.Point(188, 81);
+            this.panel1.Location = new System.Drawing.Point(188, 95);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(12, 52);
             this.panel1.TabIndex = 31;
@@ -195,7 +195,7 @@
             this.pnlIndSuppliers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndSuppliers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
             this.pnlIndSuppliers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlIndSuppliers.Location = new System.Drawing.Point(188, 652);
+            this.pnlIndSuppliers.Location = new System.Drawing.Point(188, 666);
             this.pnlIndSuppliers.Name = "pnlIndSuppliers";
             this.pnlIndSuppliers.Size = new System.Drawing.Size(12, 47);
             this.pnlIndSuppliers.TabIndex = 28;
@@ -232,7 +232,7 @@
             this.pnlIndRentals.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndRentals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
             this.pnlIndRentals.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlIndRentals.Location = new System.Drawing.Point(188, 266);
+            this.pnlIndRentals.Location = new System.Drawing.Point(188, 280);
             this.pnlIndRentals.Name = "pnlIndRentals";
             this.pnlIndRentals.Size = new System.Drawing.Size(12, 52);
             this.pnlIndRentals.TabIndex = 13;
@@ -243,7 +243,7 @@
             this.pnlIndStock.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
             this.pnlIndStock.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlIndStock.Location = new System.Drawing.Point(188, 583);
+            this.pnlIndStock.Location = new System.Drawing.Point(188, 597);
             this.pnlIndStock.Name = "pnlIndStock";
             this.pnlIndStock.Size = new System.Drawing.Size(12, 52);
             this.pnlIndStock.TabIndex = 25;
@@ -254,7 +254,7 @@
             this.pnlIndReports.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
             this.pnlIndReports.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlIndReports.Location = new System.Drawing.Point(188, 516);
+            this.pnlIndReports.Location = new System.Drawing.Point(188, 530);
             this.pnlIndReports.Name = "pnlIndReports";
             this.pnlIndReports.Size = new System.Drawing.Size(12, 52);
             this.pnlIndReports.TabIndex = 22;
@@ -266,7 +266,7 @@
             this.pnlIndQuotes.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndQuotes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
             this.pnlIndQuotes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlIndQuotes.Location = new System.Drawing.Point(188, 452);
+            this.pnlIndQuotes.Location = new System.Drawing.Point(188, 466);
             this.pnlIndQuotes.Name = "pnlIndQuotes";
             this.pnlIndQuotes.Size = new System.Drawing.Size(12, 52);
             this.pnlIndQuotes.TabIndex = 19;
@@ -277,7 +277,7 @@
             this.pnlIndInvoicing.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndInvoicing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
             this.pnlIndInvoicing.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlIndInvoicing.Location = new System.Drawing.Point(188, 387);
+            this.pnlIndInvoicing.Location = new System.Drawing.Point(188, 401);
             this.pnlIndInvoicing.Name = "pnlIndInvoicing";
             this.pnlIndInvoicing.Size = new System.Drawing.Size(12, 52);
             this.pnlIndInvoicing.TabIndex = 17;
@@ -288,7 +288,7 @@
             this.pnlIndCustomers.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
             this.pnlIndCustomers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlIndCustomers.Location = new System.Drawing.Point(188, 326);
+            this.pnlIndCustomers.Location = new System.Drawing.Point(188, 340);
             this.pnlIndCustomers.Name = "pnlIndCustomers";
             this.pnlIndCustomers.Size = new System.Drawing.Size(12, 52);
             this.pnlIndCustomers.TabIndex = 15;
@@ -299,7 +299,7 @@
             this.pnlIndService.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
             this.pnlIndService.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlIndService.Location = new System.Drawing.Point(188, 205);
+            this.pnlIndService.Location = new System.Drawing.Point(188, 219);
             this.pnlIndService.Name = "pnlIndService";
             this.pnlIndService.Size = new System.Drawing.Size(12, 52);
             this.pnlIndService.TabIndex = 11;
@@ -310,7 +310,7 @@
             this.pnlIndEquipment.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlIndEquipment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(193)))), ((int)(((byte)(238)))));
             this.pnlIndEquipment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlIndEquipment.Location = new System.Drawing.Point(188, 143);
+            this.pnlIndEquipment.Location = new System.Drawing.Point(188, 157);
             this.pnlIndEquipment.Name = "pnlIndEquipment";
             this.pnlIndEquipment.Size = new System.Drawing.Size(12, 52);
             this.pnlIndEquipment.TabIndex = 9;
@@ -532,7 +532,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 43);
+            this.panel2.Size = new System.Drawing.Size(950, 43);
             this.panel2.TabIndex = 1;
             // 
             // panel11
@@ -543,7 +543,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(800, 43);
+            this.panel11.Size = new System.Drawing.Size(950, 43);
             this.panel11.TabIndex = 3;
             this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
@@ -576,7 +576,7 @@
             this.pBMenu.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pBMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBMenu.Image = ((System.Drawing.Image)(resources.GetObject("pBMenu.Image")));
-            this.pBMenu.Location = new System.Drawing.Point(0, 0);
+            this.pBMenu.Location = new System.Drawing.Point(150, 0);
             this.pBMenu.Name = "pBMenu";
             this.pBMenu.Size = new System.Drawing.Size(66, 43);
             this.pBMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -596,7 +596,7 @@
             this.pnlForms.Controls.Add(this.pictureBox2);
             this.pnlForms.Location = new System.Drawing.Point(72, 43);
             this.pnlForms.Name = "pnlForms";
-            this.pnlForms.Size = new System.Drawing.Size(728, 717);
+            this.pnlForms.Size = new System.Drawing.Size(878, 745);
             this.pnlForms.TabIndex = 2;
             // 
             // pictureBox2
@@ -613,7 +613,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(103)))), ((int)(((byte)(147)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(800, 760);
+            this.ClientSize = new System.Drawing.Size(950, 788);
             this.ControlBox = false;
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlForms);

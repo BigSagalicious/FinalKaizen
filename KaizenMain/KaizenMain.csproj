@@ -208,5 +208,11 @@
   <ItemGroup>
     <None Include="Resources\Faded_logo2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time banner1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
