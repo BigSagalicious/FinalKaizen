@@ -35,7 +35,7 @@ namespace KaizenMain
                     suppID = value;
                 }
                 else
-                    throw new MyException("Stock ID must contain 'SU-' ");
+                    throw new MyException("Stock ID must start with 'SU-' ");
             }
 
         }
@@ -78,7 +78,7 @@ namespace KaizenMain
             get { return address; }
             set
             {
-                if (MyValidation.validLength(value, 2, 15) && MyValidation.validSurname(value))
+                if (MyValidation.validLength(value, 2, 40) && MyValidation.validLetterNumberWhitespace(value))
                 {
                     address = MyValidation.firstLetterEachWordToUpper(value);
                 }

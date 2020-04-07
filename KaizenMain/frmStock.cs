@@ -629,7 +629,7 @@ namespace KaizenMain
 
         void populateEquipTypeCmb (ComboBox comboBox)
         {
-            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .\SQLEXPRESS01; Initial Catalog = Kaizen;Integrated Security = true "))
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
             {
                 SqlCommand sqlCmd = new SqlCommand("SELECT * FROM EquipmentType", sqlConnectionEqT);
                 sqlConnectionEqT.Open();

@@ -29,8 +29,8 @@ namespace KaizenMain
         public string StockID
         {
             get { return stockID; }
-            set { stockID = value; }
- /*           {
+            set 
+           {
                 if (MyValidation.VailidIDCode("EQ", stockID))
                 {
                     stockID = value;
@@ -38,7 +38,7 @@ namespace KaizenMain
                 else
                     throw new MyException("Stock ID must contain 'EQ-' ");
             }
-            */
+         
         }
 
         public string EquipType
@@ -53,9 +53,7 @@ namespace KaizenMain
         public string SuppID
         {
             get { return suppID; }
-            set { suppID = value;}
-
-            /*            set
+                        set
                         {
                             if (MyValidation.VailidIDCode("SU", suppID))
                             {
@@ -63,8 +61,7 @@ namespace KaizenMain
                             }
                             else
                                 throw new MyException("Stock ID must contain 'SU-' ");
-                        }
-                        */
+                        }                       
         }
 
         public string StockDesc
