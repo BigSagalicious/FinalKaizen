@@ -125,6 +125,8 @@
     </Compile>
     <Compile Include="MyAppointment.cs" />
     <Compile Include="MyCustomer.cs" />
+    <Compile Include="MyTrans.cs" />
+    <Compile Include="MyTransDetails.cs" />
     <Compile Include="MyException.cs" />
     <Compile Include="MyStock.cs" />
     <Compile Include="MySupplier.cs" />
