@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabEquip = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
-            this.listViewEquip = new System.Windows.Forms.ListView();
             this.tabSearch = new System.Windows.Forms.TabPage();
             this.roundButton18 = new KaizenMain.RoundButton();
             this.roundButton16 = new KaizenMain.RoundButton();
@@ -119,7 +118,8 @@
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.dgvEquip = new System.Windows.Forms.DataGridView();
+            this.tabEquip.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             this.tabSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -142,33 +142,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEquip)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabEquip
             // 
-            this.tabControl1.AllowDrop = true;
-            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabControl1.Controls.Add(this.tabDisplay);
-            this.tabControl1.Controls.Add(this.tabSearch);
-            this.tabControl1.Controls.Add(this.tabAdd);
-            this.tabControl1.Controls.Add(this.tabEdit);
-            this.tabControl1.Controls.Add(this.tabDelete);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.ItemSize = new System.Drawing.Size(145, 25);
-            this.tabControl1.Location = new System.Drawing.Point(3, 6);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(742, 721);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 8;
-            this.tabControl1.TabStop = false;
+            this.tabEquip.AllowDrop = true;
+            this.tabEquip.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tabEquip.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.tabEquip.Controls.Add(this.tabDisplay);
+            this.tabEquip.Controls.Add(this.tabSearch);
+            this.tabEquip.Controls.Add(this.tabAdd);
+            this.tabEquip.Controls.Add(this.tabEdit);
+            this.tabEquip.Controls.Add(this.tabDelete);
+            this.tabEquip.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabEquip.ItemSize = new System.Drawing.Size(145, 25);
+            this.tabEquip.Location = new System.Drawing.Point(3, 6);
+            this.tabEquip.Multiline = true;
+            this.tabEquip.Name = "tabEquip";
+            this.tabEquip.SelectedIndex = 0;
+            this.tabEquip.Size = new System.Drawing.Size(742, 721);
+            this.tabEquip.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabEquip.TabIndex = 8;
+            this.tabEquip.TabStop = false;
             // 
             // tabDisplay
             // 
             this.tabDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
-            this.tabDisplay.Controls.Add(this.listViewEquip);
+            this.tabDisplay.Controls.Add(this.dgvEquip);
             this.tabDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabDisplay.Location = new System.Drawing.Point(4, 29);
             this.tabDisplay.Name = "tabDisplay";
@@ -176,15 +177,6 @@
             this.tabDisplay.Size = new System.Drawing.Size(734, 688);
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "DISPLAY";
-            // 
-            // listViewEquip
-            // 
-            this.listViewEquip.HideSelection = false;
-            this.listViewEquip.Location = new System.Drawing.Point(8, 6);
-            this.listViewEquip.Name = "listViewEquip";
-            this.listViewEquip.Size = new System.Drawing.Size(718, 676);
-            this.listViewEquip.TabIndex = 0;
-            this.listViewEquip.UseCompatibleStateImageBehavior = false;
             // 
             // tabSearch
             // 
@@ -1339,16 +1331,26 @@
             this.label24.TabIndex = 158;
             this.label24.Text = "Order ID";
             // 
+            // dgvEquip
+            // 
+            this.dgvEquip.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvEquip.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEquip.Location = new System.Drawing.Point(6, 6);
+            this.dgvEquip.Name = "dgvEquip";
+            this.dgvEquip.Size = new System.Drawing.Size(722, 670);
+            this.dgvEquip.TabIndex = 0;
+            // 
             // frmEquip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 723);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabEquip);
             this.Name = "frmEquip";
             this.Text = "frmEquipment";
-            this.Load += new System.EventHandler(this.frmEquip_Load);
-            this.tabControl1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.Equipment_Load);
+            this.Shown += new System.EventHandler(this.frmEquip_Shown);
+            this.tabEquip.ResumeLayout(false);
             this.tabDisplay.ResumeLayout(false);
             this.tabSearch.ResumeLayout(false);
             this.tabSearch.PerformLayout();
@@ -1377,15 +1379,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEquip)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabEquip;
         private System.Windows.Forms.TabPage tabDisplay;
-        private System.Windows.Forms.ListView listViewEquip;
         private System.Windows.Forms.TabPage tabSearch;
         private System.Windows.Forms.TabPage tabAdd;
         private System.Windows.Forms.TabPage tabEdit;
@@ -1474,5 +1476,6 @@
         private RoundButton roundButton19;
         private RoundButton roundButton20;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.DataGridView dgvEquip;
     }
 }

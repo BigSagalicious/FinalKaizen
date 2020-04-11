@@ -548,6 +548,7 @@
             this.panel11.Size = new System.Drawing.Size(807, 43);
             this.panel11.TabIndex = 3;
             this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
+            this.panel11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmKaizen_MouseDown);
             // 
             // pBClose
             // 
