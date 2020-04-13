@@ -21,6 +21,7 @@ namespace KaizenMain
         int selectedTab = 0;
         bool equipSelected = false;
         int equipIDSelected = 0;
+        int IDNumber = 0;
         public frmEquip()
         {
             InitializeComponent();
@@ -131,6 +132,113 @@ namespace KaizenMain
 
         }
 
+        private void tabEquip_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedTab = tabEquip.SelectedIndex;
+            tabEquip.TabPages[tabEquip.SelectedIndex].Focus();
+            tabEquip.TabPages[tabEquip.SelectedIndex].CausesValidation = true;
+
+            if (dgvEquip.SelectedRows.Count == 0 && (tabEquip.SelectedIndex == 1 || tabEquip.SelectedIndex == 3 || tabEquip.SelectedIndex == 4))
+                tabEquip.TabPages[tabEquip.SelectedIndex].CausesValidation = true;
+            else
+            {
+                switch (tabEquip.SelectedIndex)
+                {
+                    case 0:
+                        {
+                            dsKaizen.Tables["Trans"].Clear();
+                            daEquip.Fill(dsKaizen, "Trans");
+
+                            break;
+                        }
+                    case 1:
+                        {
+                            if (equipIDSelected == 0)
+                            {
+                                tabEquip.SelectedIndex = 0;
+                                break;
+                            }
+                            else
+                            {
+                                txtSearchOrderID.Text = "TR-" + equipIDSelected.ToString();
+
+                                drTrans = dsKaizen.Tables["Trans"].Rows.Find(txtSearchOrderID.Text);
+
+                                dtpSearchDate.Value = (DateTime)drTrans["TransDate"];
+                                txtSearchCustID.Text = drTrans["CustID"].ToString();
+                                populateCustName(drTrans["CustID"].ToString(), txtSearchCustName , txtSearchCustTel);
+                                lblSearchTCost.Text = drTrans["TransTotal"].ToString();
+                                lblSearchOutstanding.Text = drTrans["BalanceOwed"].ToString();
+                            }
+                            break;
+
+                        }
+
+                    case 2:
+                        {
+                            int noRows = dsKaizen.Tables["Trans"].Rows.Count;
+
+                            if (noRows == 0)
+                                lblAddTransID.Text = "TR-9000";
+                            else
+                            {
+                                getTransID(noRows);
+                            }
+
+                            errP.Clear();
+                            //clearAddForm();
+                            break;
+
+                        }
+                    case 3:
+                        {
+                            if (equipIDSelected == 0)
+                            {
+                                tabEquip.SelectedIndex = 0;
+                                break;
+                            }
+                            else
+                            {
+                                txtEditOrderID.Text = "TR-" + equipIDSelected.ToString();
+
+                                drTrans = dsKaizen.Tables["Trans"].Rows.Find(txtEditOrderID.Text);
+
+
+                                dtpEditDate.Value = (DateTime)drTrans["TransDate"];
+                                txtEditCustID.Text = drTrans["CustID"].ToString();
+                                populateCustName(drTrans["CustID"].ToString(), txtSearchCustName, txtSearchCustTel);
+                                lblEditTCost.Text = drTrans["TransTotal"].ToString();
+                                
+                                //disableEditTxtboxes();
+
+                                break;
+
+                            }
+                        }
+                    case 4:
+                        {
+                            if (equipIDSelected == 0)
+                            {
+                                tabEquip.SelectedIndex = 0;
+                                break;
+                            }
+                            txtDeleteOrderID.Text = "TR-" + equipIDSelected.ToString();
+
+                            drTrans = dsKaizen.Tables["Trans"].Rows.Find(txtDeleteOrderID.Text);
+
+                            dtpDeleteDate.Value = (DateTime)drTrans["TransDate"];
+                            txtDeleteCustID.Text = drTrans["CustID"].ToString();
+                            populateCustName(drTrans["CustID"].ToString(), txtDeleteCustName, txtDeleteCustTel);
+                            lblDeleteTCost.Text = drTrans["TransTotal"].ToString();
+
+                            break;
+                        }
+
+
+
+                }
+            }
+        }
         private void frmEquip_Shown(object sender, EventArgs e)
         {
             tabEquip.TabPages[0].CausesValidation = true;
@@ -151,7 +259,8 @@ namespace KaizenMain
             {
 
                 equipSelected = true;
-                equipIDSelected = Convert.ToInt32(dgvEquip.SelectedRows[0].Cells[0].Value);
+                seperateNumber(dgvEquip.SelectedRows[0].Cells[0].Value.ToString());
+                equipIDSelected = IDNumber;
             }
         }
 
@@ -165,7 +274,8 @@ namespace KaizenMain
             else if (dgvEquip.SelectedRows.Count == 1)
             {
                 equipSelected = true;
-                equipIDSelected = Convert.ToInt32(dgvEquip.SelectedRows[0].Cells[0].Value);
+                seperateNumber(dgvEquip.SelectedRows[0].Cells[0].Value.ToString());
+                equipIDSelected = IDNumber;
             }
         }
 
@@ -192,6 +302,53 @@ namespace KaizenMain
 
 
 
+        }
+
+        private void getTransID(int noRows)
+        {
+
+            drTrans = dsKaizen.Tables["Trans"].Rows[noRows - 1];
+            seperateNumber(drTrans["TransID"].ToString());
+            lblAddTransID.Text = "TR-" + (IDNumber + 1).ToString();
+
+        }
+
+        void seperateNumber(string ID)
+        {
+
+            char[] spearator = { '-' };
+
+            String[] strlist = ID.Split(spearator);
+
+            IDNumber = Convert.ToInt32(strlist[1]);
+
+        }
+
+        private void txt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        void populateCustName(String CustID, TextBox textBoxN, TextBox textBoxT)
+        {
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
+            {
+                SqlCommand sqlCmd = new SqlCommand("SELECT * FROM Customer", sqlConnectionEqT);
+                sqlConnectionEqT.Open();
+                SqlDataReader sqlReader = sqlCmd.ExecuteReader();
+
+                while (sqlReader.Read())
+                {
+                    if (sqlReader["CustID"].ToString().Equals(CustID))
+                    {
+                        textBoxN.Text = sqlReader["CustFName"].ToString() + " " + sqlReader["CustSName"].ToString();
+                        textBoxT.Text = sqlReader["CustTel"].ToString();
+
+                    }
+                }
+
+                sqlReader.Close();
+            }
         }
     }
 }
