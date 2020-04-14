@@ -15,10 +15,14 @@ namespace KaizenMain
     {
 
         SqlDataAdapter daAppointment;
+        SqlDataAdapter daStaff;
+        SqlDataAdapter daTrans;
         DataSet dsKaizen = new DataSet();
         SqlCommandBuilder cmdBAppointment;
+        SqlCommandBuilder cmdAStaff;
+        SqlCommandBuilder cmdATrans;
         DataRow drAppointment;
-        String connStr, sqlAppointment;
+        String connStr, sqlAppointment,sqlStaff,sqlTrans;
         int selectedTab = 0;
         bool AppSelected = false;
         int AppIDSelected = 0;
@@ -132,7 +136,11 @@ namespace KaizenMain
 
         private void dgvApp_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            tabApp.SelectedIndex = 2;
+           
+
+
+
+
         }
 
         private void lblAppID_Click(object sender, EventArgs e)
@@ -234,7 +242,7 @@ namespace KaizenMain
 
             try
             {
-                MyAppointment.Duration = Convert.ToInt32(txtDuration.Text);
+                MyAppointment.Duration = MyAppointment.Duration = Convert.ToInt32(txtDuration.Text.Trim());
             }
 
             catch (MyException MyEx)
@@ -267,24 +275,24 @@ namespace KaizenMain
 
             try
             {
-                MyAppointment.TransID = txtTransID.Text.Trim();
+                MyAppointment.TransID = cmbATransID.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtTransID, MyEx.toString());
+                errP.SetError(cmbATransID, MyEx.toString());
             }
 
             try
             {
-                MyAppointment.StaffID = txtStaffID.Text.Trim();
+                MyAppointment.StaffID = cmbAStaffID.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtStaffID, MyEx.toString());
+                errP.SetError(cmbAStaffID, MyEx.toString());
             }
 
 
@@ -371,7 +379,7 @@ namespace KaizenMain
 
         private void Appointment_Shown(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Appointment_Load(object sender, EventArgs e)
@@ -385,51 +393,106 @@ namespace KaizenMain
             daAppointment = new SqlDataAdapter(sqlAppointment, connStr);
             cmdBAppointment = new SqlCommandBuilder(daAppointment);
 
-            //daAppointment.FillSchema(dsKaizen, SchemaType.Source, "Appointment");
-           // daAppointment.Fill(dsKaizen, "Appointment");
-           // dgvApp.DataSource = dsKaizen.Tables["Appointment"];
+            sqlStaff = @"select * from Staff";
+            daStaff= new SqlDataAdapter(sqlStaff, connStr);
+            cmdAStaff = new SqlCommandBuilder(daStaff);
+            daStaff.FillSchema(dsKaizen, SchemaType.Source, "Staff");
+            daStaff.Fill(dsKaizen, "Staff");
+
+            sqlTrans = @"select * from Trans";
+            daTrans = new SqlDataAdapter(sqlTrans, connStr);
+            cmdATrans = new SqlCommandBuilder(daTrans);
+            daTrans.FillSchema(dsKaizen, SchemaType.Source, "Trans");
+            daTrans.Fill(dsKaizen, "Trans");
+
+
+            cmbAStaffID.DataSource = dsKaizen.Tables["Staff"];
+            cmbAStaffID.ValueMember = "StaffID";
+            cmbAStaffID.DisplayMember = "StaffID";
+
+            cmbATransID.DataSource = dsKaizen.Tables["Trans"];
+            cmbATransID.ValueMember = "TransID";
+            cmbATransID.DisplayMember = "TransID";
+
+
+
+           
             dgvApp.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
             //txtDate.Text = DateTime.Now.ToString("dd/M/yyyy");
             txtDate.Text = DateTime.Now.DayOfWeek.ToString();
             txtYear.Text = DateTime.Now.ToShortDateString();
 
                 DateTime dt = DateTime.Now;
+            //dgvApp.Columns[0].HeaderCell.Style.BackColor = Color.White;
+            //dgvApp.Columns[1].HeaderCell.Style.BackColor = Color.White;
+            //dgvApp.Columns[2].HeaderCell.Style.BackColor = Color.White;
+            //dgvApp.Columns[3].HeaderCell.Style.BackColor = Color.White;
+            //dgvApp.Columns[4].HeaderCell.Style.BackColor = Color.White;
+            //dgvApp.Columns[5].HeaderCell.Style.BackColor = Color.White;
+            //dgvApp.Columns[6].HeaderCell.Style.BackColor = Color.White;
+            //dsKaizen.Tables["Appointment"].Clear();
 
-            
-                dgvApp.Columns[0].HeaderCell.Style.BackColor = Color.White;
-                dgvApp.Columns[1].HeaderCell.Style.BackColor = Color.White;
-                dgvApp.Columns[2].HeaderCell.Style.BackColor = Color.White;
-                dgvApp.Columns[3].HeaderCell.Style.BackColor = Color.White;
-                dgvApp.Columns[4].HeaderCell.Style.BackColor = Color.White;
-                dgvApp.Columns[5].HeaderCell.Style.BackColor = Color.White;
-                dgvApp.Columns[6].HeaderCell.Style.BackColor = Color.White;
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    dgvApp.Rows[j].Cells[i].Value = 3; 
+                    dgvApp.Rows[j].Cells[i].Style.BackColor = Color.White;
+
+                }
 
 
 
+            }
 
 
-
-
+            DateTime weekStart = this.dateTimePicker1.Value.Date;
+            DateTime weekEnd = this.dateTimePicker1.Value.AddDays(6);
             dgvApp.Columns[0].HeaderText = dt.AddDays(0).ToShortDateString();
-                dgvApp.Columns[1].HeaderText = dt.AddDays(1).ToShortDateString();
-                dgvApp.Columns[2].HeaderText = dt.AddDays(2).ToShortDateString();
-                dgvApp.Columns[3].HeaderText = dt.AddDays(3).ToShortDateString();
-                dgvApp.Columns[4].HeaderText = dt.AddDays(4).ToShortDateString();
-                dgvApp.Columns[5].HeaderText = dt.AddDays(5).ToShortDateString();
-                dgvApp.Columns[6].HeaderText = dt.AddDays(6).ToShortDateString();
+            dgvApp.Columns[1].HeaderText = dt.AddDays(1).ToShortDateString();
+            dgvApp.Columns[2].HeaderText = dt.AddDays(2).ToShortDateString();
+            dgvApp.Columns[3].HeaderText = dt.AddDays(3).ToShortDateString();
+            dgvApp.Columns[4].HeaderText = dt.AddDays(4).ToShortDateString();
+            dgvApp.Columns[5].HeaderText = dt.AddDays(5).ToShortDateString();
+            dgvApp.Columns[6].HeaderText = dt.AddDays(6).ToShortDateString();
+          
 
-                dgvApp.Columns[0].Width=100;
-                dgvApp.Columns[1].Width = 100;
-                dgvApp.Columns[2].Width = 100;
-                dgvApp.Columns[3].Width = 100;
-                dgvApp.Columns[4].Width = 100;
-                dgvApp.Columns[5].Width = 100;
-                dgvApp.Columns[6].Width = 100;
 
+            daAppointment.FillSchema(dsKaizen, SchemaType.Source, "Appointment");
+            daAppointment.Fill(dsKaizen, "Appointment");
+            dgvApp.DataSource = dsKaizen.Tables["Appointment"];
+
+            //foreach(DataRow dr in dsKaizen.Tables["Appointment"].Rows)
+            //{
+
+            //    string startTime = (dr["AppTime"].ToString());
+
+            //    for(int i=0; i <6; i++)
+            //    {
+            //        if(Convert.ToDateTime(dr["AppDate"]).ToShortDateString().Equals(dgvApp.Columns.HeaderText.ToShortDateString()[i].ToShortDateString))
+            //    }
+
+
+
+            //}
             
-                dgvApp.Rows.Add(9);
 
-                    tabApp.SelectedIndex = 1;
+            //dgvApp.Columns[0].Width = 100;
+            //dgvApp.Columns[1].Width = 100;
+            //dgvApp.Columns[2].Width = 100;
+            //dgvApp.Columns[3].Width = 100;
+            //dgvApp.Columns[4].Width = 100;
+            //dgvApp.Columns[5].Width = 100;
+            //dgvApp.Columns[6].Width = 100;
+
+
+
+            //dgvApp.Rows.Add(9);
+
+
+
+
+            tabApp.SelectedIndex = 1;
                     tabApp.SelectedIndex = 0;
         }
 
@@ -447,8 +510,8 @@ namespace KaizenMain
                 {
                     case 0:
                         {
-                           // dsKaizen.Tables["Appointment"].Clear();
-                           // daAppointment.Fill(dsKaizen, "Appointment");
+                           dsKaizen.Tables["Appointment"].Clear();
+                           daAppointment.Fill(dsKaizen, "Appointment");
 
                             break;
                         }
@@ -618,6 +681,22 @@ namespace KaizenMain
 
         }
 
+        private void btnApp_Click(object sender, EventArgs e)
+        {
+
+            //dgvApp.Rows[0].Cells[0].Style.BackColor = Color.LightGreen;
+            //dgvApp.Rows[2].Cells[1].Style.SelectionBackColor = Color.AliceBlue;
+            //dgvApp.Rows[2].Cells[1].Style.ForeColor = Color.Red;
+
+            
+        }
+
+        private void dgvApp_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tabApp.SelectedIndex = 2;
+            
+        }
+
         private void label1_Click_2(object sender, EventArgs e)
         {
            
@@ -632,11 +711,12 @@ namespace KaizenMain
 
         void clearAddForm()
         {
-            txtStaffID.Clear();
+            txtDuration.Clear();
             dtpAppDate.Value=DateTime.Today;
             dtpDateBooked.Value=DateTime.Today;
             dtpAppTime.Value = DateTime.Now;
-            txtTransID.Clear();
+            cmbATransID.SelectedIndex=0;
+            cmbATransID.SelectedIndex = 0;
             txtDuration.Clear();
         
 
