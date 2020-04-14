@@ -216,25 +216,16 @@ namespace KaizenMain
 
         public static bool VailidIDCode(string code, string iD)
         {
-            bool ok;
+            bool ok= false;
 
-            char[] spearator = { '-' };
+            List<string> strList = iD.Split('-').ToList();
+            string first = strList.First();
 
-            String[] strlist = iD.Split(spearator);
-
-            char[] array = iD.ToCharArray();
-
-            if ((strlist[0] == code) && (array[2].Equals("-"))) 
+            if (iD.Equals(first)) 
             {
                 ok = true;
             }
-            else
-            {
-                ok = false;
-            }
-
             return ok;
-
         }
     }
 

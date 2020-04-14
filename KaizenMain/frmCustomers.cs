@@ -193,19 +193,6 @@ namespace KaizenMain
             }
         }
 
-        void DispTabValidate(object sender, EventArgs e)
-        {
-            if (custSelected == false && custIDSelected == 0)
-            {
-                custSelected = false;
-                custIDSelected = 0;
-            }
-            else if (dgvCustomers.SelectedRows.Count == 1)
-            {
-                custSelected = true;
-                custIDSelected = Convert.ToInt32(dgvCustomers.SelectedRows[0].Cells[0].Value);
-            }
-        }
         void EditTabValidate(object sender, EventArgs e)
         {
             if (custSelected == false && custIDSelected == 0)

@@ -363,9 +363,9 @@
             // 
             this.pBReports.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBReports.Image = ((System.Drawing.Image)(resources.GetObject("pBReports.Image")));
-            this.pBReports.Location = new System.Drawing.Point(9, 516);
+            this.pBReports.Location = new System.Drawing.Point(9, 511);
             this.pBReports.Name = "pBReports";
-            this.pBReports.Size = new System.Drawing.Size(57, 47);
+            this.pBReports.Size = new System.Drawing.Size(57, 48);
             this.pBReports.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBReports.TabIndex = 20;
             this.pBReports.TabStop = false;
@@ -473,7 +473,7 @@
             this.pBInvoice.Image = ((System.Drawing.Image)(resources.GetObject("pBInvoice.Image")));
             this.pBInvoice.Location = new System.Drawing.Point(9, 387);
             this.pBInvoice.Name = "pBInvoice";
-            this.pBInvoice.Size = new System.Drawing.Size(57, 47);
+            this.pBInvoice.Size = new System.Drawing.Size(57, 43);
             this.pBInvoice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBInvoice.TabIndex = 6;
             this.pBInvoice.TabStop = false;
@@ -483,7 +483,7 @@
             // 
             this.pBRentals.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBRentals.Image = ((System.Drawing.Image)(resources.GetObject("pBRentals.Image")));
-            this.pBRentals.Location = new System.Drawing.Point(9, 268);
+            this.pBRentals.Location = new System.Drawing.Point(9, 260);
             this.pBRentals.Name = "pBRentals";
             this.pBRentals.Size = new System.Drawing.Size(57, 47);
             this.pBRentals.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -548,6 +548,7 @@
             this.panel11.Size = new System.Drawing.Size(807, 43);
             this.panel11.TabIndex = 3;
             this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
+            this.panel11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmKaizen_MouseDown);
             // 
             // pBClose
             // 
@@ -622,6 +623,7 @@
             this.Controls.Add(this.pnlForms);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmKaizen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

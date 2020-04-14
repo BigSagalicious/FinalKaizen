@@ -13,12 +13,12 @@ namespace KaizenMain
 {
     public partial class frmStock : Form
     {
-        SqlDataAdapter daStock, daEquiptype;
-        SqlConnection sqlConnectionEqT;
+
+        SqlDataAdapter daStock, daSupplier;
         DataSet dsKaizen = new DataSet();
         SqlCommandBuilder cmdBStock;
         DataRow drStock;
-        String connStr, sqlStock, sqlEquiptype ,fillcombo;
+        String connStr, sqlStock;
         int selectedTab = 0;
         bool stockSelected = false;
         int stockIDSelected = 0;
@@ -69,6 +69,9 @@ namespace KaizenMain
                                 txtSearchRental.Text = drStock["RentPrice"].ToString();
                                 txtSearchService.Text = drStock["ServPrice"].ToString();
                                 txtSearchProdSupplierID.Text = drStock["SuppID"].ToString();
+
+                                populateSuppName(drStock["SuppID"].ToString(), txtSearchProdSupplierName);
+                                    
                             }
                             break;
 
@@ -112,6 +115,8 @@ namespace KaizenMain
                                 txtEditService.Text = drStock["ServPrice"].ToString();
                                 txtEditProdSupplierID.Text = drStock["SuppID"].ToString();
 
+                                populateSuppName(drStock["SuppID"].ToString(), txtEditProdSupplierName);
+
                                 //disableEditTxtboxes();
 
                                 break;
@@ -137,6 +142,9 @@ namespace KaizenMain
                             txtDeleteRental.Text = drStock["RentPrice"].ToString();
                             txtDeleteService.Text = drStock["ServPrice"].ToString();
                             txtDeleteProdSupplierID.Text = drStock["SuppID"].ToString();
+
+                            populateSuppName(drStock["SuppID"].ToString(), txtDeleteProdSupplierName);
+
                             break;
                         }
 
@@ -505,12 +513,10 @@ namespace KaizenMain
             //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
              connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
-            sqlStock = @"select * from Stock";
-            //sqlEquiptype = @"select * from EquipmentType";
-            daStock = new SqlDataAdapter(sqlStock, connStr);
-            //daEquiptype = new SqlDataAdapter(sqlEquiptype, connStr);
-            cmdBStock = new SqlCommandBuilder(daStock);
 
+            sqlStock = @"select * from Stock";
+            daStock = new SqlDataAdapter(sqlStock, connStr);
+            cmdBStock = new SqlCommandBuilder(daStock);
 
             daStock.FillSchema(dsKaizen, SchemaType.Source, "Stock");
             daStock.Fill(dsKaizen, "Stock");
@@ -627,9 +633,52 @@ namespace KaizenMain
 
         }
 
+        private void addSuppSearchIcon_Click(object sender, EventArgs e)
+        {
+            populateSuppName(txtAddProdSupplierID.Text, txtAddProdSupplierName);
+        }
+
+        private void editSuppSearchIcon_Click(object sender, EventArgs e)
+        {
+            populateSuppName(txtEditProdSupplierID.Text, txtEditProdSupplierName);
+        }
+
+        private void btnSearchIconSearch_Click(object sender, EventArgs e)
+        {
+            string searchValue = txtSearchStockID.Text;
+
+            dgvStock.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                foreach (DataGridViewRow row in dgvStock.Rows)
+                {
+                    if (row.Cells[0].Value.ToString().Equals(searchValue))
+                    {
+                        row.Selected = true;
+                        drStock = dsKaizen.Tables["Stock"].Rows.Find(txtSearchStockID.Text);
+
+                        txtSearchDesc.Text = drStock["StockDescription"].ToString();
+                        cmbSearchProdType.Text = drStock["EquipType"].ToString();
+                        txtSearchQTY.Text = drStock["QtyInStock"].ToString();
+                        txtSearchPurchase.Text = drStock["PurPrice"].ToString();
+                        txtSearchRental.Text = drStock["RentPrice"].ToString();
+                        txtSearchService.Text = drStock["ServPrice"].ToString();
+                        txtSearchProdSupplierID.Text = drStock["SuppID"].ToString();
+
+                        populateSuppName(drStock["SuppID"].ToString(), txtSearchProdSupplierName);
+                        break;
+                    }
+                }
+            }
+            catch (MyException ex)
+            {
+                MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Not Found!");
+            }
+        }
+
         void populateEquipTypeCmb (ComboBox comboBox)
         {
-            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .\SQLEXPRESS01; Initial Catalog = Kaizen;Integrated Security = true "))
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
             {
                 SqlCommand sqlCmd = new SqlCommand("SELECT * FROM EquipmentType", sqlConnectionEqT);
                 sqlConnectionEqT.Open();
@@ -638,6 +687,26 @@ namespace KaizenMain
                 while (sqlReader.Read())
                 {
                     comboBox.Items.Add(sqlReader["EquipType"].ToString());
+                }
+
+                sqlReader.Close();
+            }
+        }
+
+        void populateSuppName(String SuppID, TextBox textBox)
+        {
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
+            {
+                SqlCommand sqlCmd = new SqlCommand("SELECT * FROM Supplier", sqlConnectionEqT);
+                sqlConnectionEqT.Open();
+                SqlDataReader sqlReader = sqlCmd.ExecuteReader();
+
+                while (sqlReader.Read())
+                {
+                    if (sqlReader["SuppID"].ToString().Equals(SuppID))
+                    {
+                        textBox.Text = sqlReader["SuppName"].ToString();
+                    }
                 }
 
                 sqlReader.Close();
