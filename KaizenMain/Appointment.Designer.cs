@@ -55,6 +55,13 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtDate = new System.Windows.Forms.TextBox();
             this.dgvApp = new System.Windows.Forms.DataGridView();
+            this.Monday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tues = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Wed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thur = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Friday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sun = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabSearch = new System.Windows.Forms.TabPage();
             this.iconSearchAppID = new System.Windows.Forms.PictureBox();
             this.txtSearchID = new System.Windows.Forms.TextBox();
@@ -118,13 +125,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Monday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tues = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Wed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thur = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Friday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sun = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roundButton3 = new KaizenMain.RoundButton();
             this.roundButton2 = new KaizenMain.RoundButton();
             this.roundButton1 = new KaizenMain.RoundButton();
@@ -268,7 +268,7 @@
             // 
             this.DayLabel3.AutoSize = true;
             this.DayLabel3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.DayLabel3.Location = new System.Drawing.Point(310, 57);
+            this.DayLabel3.Location = new System.Drawing.Point(296, 57);
             this.DayLabel3.Name = "DayLabel3";
             this.DayLabel3.Size = new System.Drawing.Size(15, 20);
             this.DayLabel3.TabIndex = 231;
@@ -442,10 +442,10 @@
             this.Sun});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvApp.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvApp.EnableHeadersVisualStyles = false;
@@ -459,6 +459,76 @@
             this.dgvApp.TabIndex = 0;
             this.dgvApp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvApp_CellClick);
             this.dgvApp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvApp_CellContentClick);
+            // 
+            // Monday
+            // 
+            this.Monday.FillWeight = 2.48731F;
+            this.Monday.HeaderText = "Mon";
+            this.Monday.MinimumWidth = 70;
+            this.Monday.Name = "Monday";
+            this.Monday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Monday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Monday.Width = 70;
+            // 
+            // Tues
+            // 
+            this.Tues.FillWeight = 0.7521151F;
+            this.Tues.HeaderText = "Tues";
+            this.Tues.MinimumWidth = 70;
+            this.Tues.Name = "Tues";
+            this.Tues.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Tues.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Tues.Width = 70;
+            // 
+            // Wed
+            // 
+            this.Wed.FillWeight = 0.7521151F;
+            this.Wed.HeaderText = "Wed";
+            this.Wed.MinimumWidth = 70;
+            this.Wed.Name = "Wed";
+            this.Wed.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Wed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Wed.Width = 70;
+            // 
+            // thur
+            // 
+            this.thur.FillWeight = 0.7521151F;
+            this.thur.HeaderText = "Thur";
+            this.thur.MinimumWidth = 70;
+            this.thur.Name = "thur";
+            this.thur.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.thur.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.thur.Width = 70;
+            // 
+            // Friday
+            // 
+            this.Friday.FillWeight = 0.7521151F;
+            this.Friday.HeaderText = "Fri";
+            this.Friday.MinimumWidth = 70;
+            this.Friday.Name = "Friday";
+            this.Friday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Friday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Friday.Width = 70;
+            // 
+            // Sat
+            // 
+            this.Sat.FillWeight = 0.7521151F;
+            this.Sat.HeaderText = "Sat";
+            this.Sat.MinimumWidth = 70;
+            this.Sat.Name = "Sat";
+            this.Sat.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Sat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Sat.Width = 70;
+            // 
+            // Sun
+            // 
+            this.Sun.FillWeight = 0.7521151F;
+            this.Sun.HeaderText = "Sun";
+            this.Sun.MinimumWidth = 70;
+            this.Sun.Name = "Sun";
+            this.Sun.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Sun.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Sun.Width = 70;
             // 
             // tabSearch
             // 
@@ -1102,76 +1172,6 @@
             // errP
             // 
             this.errP.ContainerControl = this;
-            // 
-            // Monday
-            // 
-            this.Monday.FillWeight = 2.48731F;
-            this.Monday.HeaderText = "Mon";
-            this.Monday.MinimumWidth = 70;
-            this.Monday.Name = "Monday";
-            this.Monday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Monday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Monday.Width = 70;
-            // 
-            // Tues
-            // 
-            this.Tues.FillWeight = 0.7521151F;
-            this.Tues.HeaderText = "Tues";
-            this.Tues.MinimumWidth = 70;
-            this.Tues.Name = "Tues";
-            this.Tues.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Tues.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Tues.Width = 70;
-            // 
-            // Wed
-            // 
-            this.Wed.FillWeight = 0.7521151F;
-            this.Wed.HeaderText = "Wed";
-            this.Wed.MinimumWidth = 70;
-            this.Wed.Name = "Wed";
-            this.Wed.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Wed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Wed.Width = 70;
-            // 
-            // thur
-            // 
-            this.thur.FillWeight = 0.7521151F;
-            this.thur.HeaderText = "Thur";
-            this.thur.MinimumWidth = 70;
-            this.thur.Name = "thur";
-            this.thur.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.thur.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.thur.Width = 70;
-            // 
-            // Friday
-            // 
-            this.Friday.FillWeight = 0.7521151F;
-            this.Friday.HeaderText = "Fri";
-            this.Friday.MinimumWidth = 70;
-            this.Friday.Name = "Friday";
-            this.Friday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Friday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Friday.Width = 70;
-            // 
-            // Sat
-            // 
-            this.Sat.FillWeight = 0.7521151F;
-            this.Sat.HeaderText = "Sat";
-            this.Sat.MinimumWidth = 70;
-            this.Sat.Name = "Sat";
-            this.Sat.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Sat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Sat.Width = 70;
-            // 
-            // Sun
-            // 
-            this.Sun.FillWeight = 0.7521151F;
-            this.Sun.HeaderText = "Sun";
-            this.Sun.MinimumWidth = 70;
-            this.Sun.Name = "Sun";
-            this.Sun.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Sun.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Sun.Width = 70;
             // 
             // roundButton3
             // 
