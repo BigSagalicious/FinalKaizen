@@ -31,8 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Appointment));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabApp = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.DayLabel7 = new System.Windows.Forms.Label();
+            this.DayLabel6 = new System.Windows.Forms.Label();
+            this.DayLabel5 = new System.Windows.Forms.Label();
+            this.DayLabel4 = new System.Windows.Forms.Label();
+            this.DayLabel3 = new System.Windows.Forms.Label();
+            this.DayLabel2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -45,13 +55,13 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtDate = new System.Windows.Forms.TextBox();
             this.dgvApp = new System.Windows.Forms.DataGridView();
-            this.Monday = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Tues = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Wed = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.thur = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Friday = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Sat = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Sun = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Monday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tues = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Wed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thur = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Friday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sun = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabSearch = new System.Windows.Forms.TabPage();
             this.iconSearchAppID = new System.Windows.Forms.PictureBox();
             this.txtSearchID = new System.Windows.Forms.TextBox();
@@ -69,11 +79,11 @@
             this.lblSeDateB = new System.Windows.Forms.Label();
             this.lblSeAppID = new System.Windows.Forms.Label();
             this.tabAdd = new System.Windows.Forms.TabPage();
+            this.cmbATransID = new System.Windows.Forms.ComboBox();
+            this.cmbAStaffID = new System.Windows.Forms.ComboBox();
             this.dtpAppTime = new System.Windows.Forms.DateTimePicker();
             this.dtpDateBooked = new System.Windows.Forms.DateTimePicker();
             this.dtpAppDate = new System.Windows.Forms.DateTimePicker();
-            this.txtTransID = new System.Windows.Forms.TextBox();
-            this.txtStaffID = new System.Windows.Forms.TextBox();
             this.txtDuration = new System.Windows.Forms.TextBox();
             this.lblAddAppID = new System.Windows.Forms.Label();
             this.lblStaffID = new System.Windows.Forms.Label();
@@ -115,15 +125,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.DayLabel2 = new System.Windows.Forms.Label();
-            this.DayLabel3 = new System.Windows.Forms.Label();
-            this.DayLabel4 = new System.Windows.Forms.Label();
-            this.DayLabel5 = new System.Windows.Forms.Label();
-            this.DayLabel6 = new System.Windows.Forms.Label();
-            this.DayLabel7 = new System.Windows.Forms.Label();
-            this.txtYear = new System.Windows.Forms.TextBox();
             this.roundButton3 = new KaizenMain.RoundButton();
             this.roundButton2 = new KaizenMain.RoundButton();
             this.roundButton1 = new KaizenMain.RoundButton();
@@ -208,6 +209,103 @@
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "DISPLAY";
             this.tabDisplay.Click += new System.EventHandler(this.tabDisplay_Click);
+            // 
+            // txtYear
+            // 
+            this.txtYear.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtYear.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtYear.Location = new System.Drawing.Point(348, 9);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(239, 42);
+            this.txtYear.TabIndex = 236;
+            // 
+            // DayLabel7
+            // 
+            this.DayLabel7.AutoSize = true;
+            this.DayLabel7.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.DayLabel7.Location = new System.Drawing.Point(700, 57);
+            this.DayLabel7.Name = "DayLabel7";
+            this.DayLabel7.Size = new System.Drawing.Size(15, 20);
+            this.DayLabel7.TabIndex = 235;
+            this.DayLabel7.Text = "-";
+            this.DayLabel7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // DayLabel6
+            // 
+            this.DayLabel6.AutoSize = true;
+            this.DayLabel6.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.DayLabel6.Location = new System.Drawing.Point(598, 57);
+            this.DayLabel6.Name = "DayLabel6";
+            this.DayLabel6.Size = new System.Drawing.Size(15, 20);
+            this.DayLabel6.TabIndex = 234;
+            this.DayLabel6.Text = "-";
+            this.DayLabel6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // DayLabel5
+            // 
+            this.DayLabel5.AutoSize = true;
+            this.DayLabel5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.DayLabel5.Location = new System.Drawing.Point(491, 57);
+            this.DayLabel5.Name = "DayLabel5";
+            this.DayLabel5.Size = new System.Drawing.Size(15, 20);
+            this.DayLabel5.TabIndex = 233;
+            this.DayLabel5.Text = "-";
+            this.DayLabel5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // DayLabel4
+            // 
+            this.DayLabel4.AutoSize = true;
+            this.DayLabel4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.DayLabel4.Location = new System.Drawing.Point(400, 57);
+            this.DayLabel4.Name = "DayLabel4";
+            this.DayLabel4.Size = new System.Drawing.Size(15, 20);
+            this.DayLabel4.TabIndex = 232;
+            this.DayLabel4.Text = "-";
+            this.DayLabel4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // DayLabel3
+            // 
+            this.DayLabel3.AutoSize = true;
+            this.DayLabel3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.DayLabel3.Location = new System.Drawing.Point(296, 57);
+            this.DayLabel3.Name = "DayLabel3";
+            this.DayLabel3.Size = new System.Drawing.Size(15, 20);
+            this.DayLabel3.TabIndex = 231;
+            this.DayLabel3.Text = "-";
+            this.DayLabel3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // DayLabel2
+            // 
+            this.DayLabel2.AutoSize = true;
+            this.DayLabel2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.DayLabel2.Location = new System.Drawing.Point(203, 57);
+            this.DayLabel2.Name = "DayLabel2";
+            this.DayLabel2.Size = new System.Drawing.Size(15, 20);
+            this.DayLabel2.TabIndex = 230;
+            this.DayLabel2.Text = "-";
+            this.DayLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.DayLabel2.Click += new System.EventHandler(this.DayLabel2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(102, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 20);
+            this.label1.TabIndex = 229;
+            this.label1.Text = "-";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click_2);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(621, 23);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.TabIndex = 228;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
             // 
             // pictureBox11
             // 
@@ -324,8 +422,9 @@
             // 
             this.dgvApp.AllowUserToOrderColumns = true;
             this.dgvApp.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvApp.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -341,6 +440,14 @@
             this.Friday,
             this.Sat,
             this.Sun});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvApp.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvApp.EnableHeadersVisualStyles = false;
             this.dgvApp.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvApp.Location = new System.Drawing.Point(55, 80);
@@ -350,6 +457,7 @@
             this.dgvApp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvApp.Size = new System.Drawing.Size(766, 485);
             this.dgvApp.TabIndex = 0;
+            this.dgvApp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvApp_CellClick);
             this.dgvApp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvApp_CellContentClick);
             // 
             // Monday
@@ -359,7 +467,7 @@
             this.Monday.MinimumWidth = 70;
             this.Monday.Name = "Monday";
             this.Monday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Monday.Text = "";
+            this.Monday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Monday.Width = 70;
             // 
             // Tues
@@ -369,6 +477,7 @@
             this.Tues.MinimumWidth = 70;
             this.Tues.Name = "Tues";
             this.Tues.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Tues.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Tues.Width = 70;
             // 
             // Wed
@@ -378,6 +487,7 @@
             this.Wed.MinimumWidth = 70;
             this.Wed.Name = "Wed";
             this.Wed.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Wed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Wed.Width = 70;
             // 
             // thur
@@ -387,6 +497,7 @@
             this.thur.MinimumWidth = 70;
             this.thur.Name = "thur";
             this.thur.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.thur.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.thur.Width = 70;
             // 
             // Friday
@@ -396,6 +507,7 @@
             this.Friday.MinimumWidth = 70;
             this.Friday.Name = "Friday";
             this.Friday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Friday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Friday.Width = 70;
             // 
             // Sat
@@ -405,6 +517,7 @@
             this.Sat.MinimumWidth = 70;
             this.Sat.Name = "Sat";
             this.Sat.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Sat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Sat.Width = 70;
             // 
             // Sun
@@ -414,6 +527,7 @@
             this.Sun.MinimumWidth = 70;
             this.Sun.Name = "Sun";
             this.Sun.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Sun.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Sun.Width = 70;
             // 
             // tabSearch
@@ -587,12 +701,11 @@
             // 
             this.tabAdd.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabAdd.Controls.Add(this.btnAddApp);
+            this.tabAdd.Controls.Add(this.cmbATransID);
+            this.tabAdd.Controls.Add(this.cmbAStaffID);
             this.tabAdd.Controls.Add(this.dtpAppTime);
             this.tabAdd.Controls.Add(this.dtpDateBooked);
             this.tabAdd.Controls.Add(this.dtpAppDate);
-            this.tabAdd.Controls.Add(this.txtTransID);
-            this.tabAdd.Controls.Add(this.txtStaffID);
             this.tabAdd.Controls.Add(this.txtDuration);
             this.tabAdd.Controls.Add(this.lblAddAppID);
             this.tabAdd.Controls.Add(this.lblStaffID);
@@ -601,6 +714,7 @@
             this.tabAdd.Controls.Add(this.lblAppDate);
             this.tabAdd.Controls.Add(this.lblDateB);
             this.tabAdd.Controls.Add(this.lblAppID);
+            this.tabAdd.Controls.Add(this.btnAddApp);
             this.tabAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabAdd.Location = new System.Drawing.Point(4, 29);
             this.tabAdd.Name = "tabAdd";
@@ -609,6 +723,22 @@
             this.tabAdd.TabIndex = 1;
             this.tabAdd.Text = "ADD";
             this.tabAdd.UseVisualStyleBackColor = true;
+            // 
+            // cmbATransID
+            // 
+            this.cmbATransID.FormattingEnabled = true;
+            this.cmbATransID.Location = new System.Drawing.Point(214, 324);
+            this.cmbATransID.Name = "cmbATransID";
+            this.cmbATransID.Size = new System.Drawing.Size(229, 28);
+            this.cmbATransID.TabIndex = 225;
+            // 
+            // cmbAStaffID
+            // 
+            this.cmbAStaffID.FormattingEnabled = true;
+            this.cmbAStaffID.Location = new System.Drawing.Point(214, 249);
+            this.cmbAStaffID.Name = "cmbAStaffID";
+            this.cmbAStaffID.Size = new System.Drawing.Size(229, 28);
+            this.cmbAStaffID.TabIndex = 224;
             // 
             // dtpAppTime
             // 
@@ -635,28 +765,13 @@
             this.dtpAppDate.Size = new System.Drawing.Size(199, 26);
             this.dtpAppDate.TabIndex = 15;
             // 
-            // txtTransID
-            // 
-            this.txtTransID.Location = new System.Drawing.Point(214, 318);
-            this.txtTransID.Name = "txtTransID";
-            this.txtTransID.Size = new System.Drawing.Size(229, 26);
-            this.txtTransID.TabIndex = 14;
-            // 
-            // txtStaffID
-            // 
-            this.txtStaffID.Location = new System.Drawing.Point(214, 196);
-            this.txtStaffID.Name = "txtStaffID";
-            this.txtStaffID.Size = new System.Drawing.Size(229, 26);
-            this.txtStaffID.TabIndex = 11;
-            this.txtStaffID.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
             // txtDuration
             // 
-            this.txtDuration.Location = new System.Drawing.Point(214, 251);
+            this.txtDuration.Location = new System.Drawing.Point(214, 196);
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.Size = new System.Drawing.Size(229, 26);
-            this.txtDuration.TabIndex = 10;
-            this.txtDuration.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtDuration.TabIndex = 11;
+            this.txtDuration.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // lblAddAppID
             // 
@@ -1058,103 +1173,6 @@
             // 
             this.errP.ContainerControl = this;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(621, 23);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker1.TabIndex = 228;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(102, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 20);
-            this.label1.TabIndex = 229;
-            this.label1.Text = "-";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click_2);
-            // 
-            // DayLabel2
-            // 
-            this.DayLabel2.AutoSize = true;
-            this.DayLabel2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.DayLabel2.Location = new System.Drawing.Point(203, 57);
-            this.DayLabel2.Name = "DayLabel2";
-            this.DayLabel2.Size = new System.Drawing.Size(15, 20);
-            this.DayLabel2.TabIndex = 230;
-            this.DayLabel2.Text = "-";
-            this.DayLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.DayLabel2.Click += new System.EventHandler(this.DayLabel2_Click);
-            // 
-            // DayLabel3
-            // 
-            this.DayLabel3.AutoSize = true;
-            this.DayLabel3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.DayLabel3.Location = new System.Drawing.Point(310, 57);
-            this.DayLabel3.Name = "DayLabel3";
-            this.DayLabel3.Size = new System.Drawing.Size(15, 20);
-            this.DayLabel3.TabIndex = 231;
-            this.DayLabel3.Text = "-";
-            this.DayLabel3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // DayLabel4
-            // 
-            this.DayLabel4.AutoSize = true;
-            this.DayLabel4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.DayLabel4.Location = new System.Drawing.Point(400, 57);
-            this.DayLabel4.Name = "DayLabel4";
-            this.DayLabel4.Size = new System.Drawing.Size(15, 20);
-            this.DayLabel4.TabIndex = 232;
-            this.DayLabel4.Text = "-";
-            this.DayLabel4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // DayLabel5
-            // 
-            this.DayLabel5.AutoSize = true;
-            this.DayLabel5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.DayLabel5.Location = new System.Drawing.Point(491, 57);
-            this.DayLabel5.Name = "DayLabel5";
-            this.DayLabel5.Size = new System.Drawing.Size(15, 20);
-            this.DayLabel5.TabIndex = 233;
-            this.DayLabel5.Text = "-";
-            this.DayLabel5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // DayLabel6
-            // 
-            this.DayLabel6.AutoSize = true;
-            this.DayLabel6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.DayLabel6.Location = new System.Drawing.Point(598, 57);
-            this.DayLabel6.Name = "DayLabel6";
-            this.DayLabel6.Size = new System.Drawing.Size(15, 20);
-            this.DayLabel6.TabIndex = 234;
-            this.DayLabel6.Text = "-";
-            this.DayLabel6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // DayLabel7
-            // 
-            this.DayLabel7.AutoSize = true;
-            this.DayLabel7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.DayLabel7.Location = new System.Drawing.Point(700, 57);
-            this.DayLabel7.Name = "DayLabel7";
-            this.DayLabel7.Size = new System.Drawing.Size(15, 20);
-            this.DayLabel7.TabIndex = 235;
-            this.DayLabel7.Text = "-";
-            this.DayLabel7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtYear
-            // 
-            this.txtYear.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtYear.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtYear.Location = new System.Drawing.Point(348, 9);
-            this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(239, 42);
-            this.txtYear.TabIndex = 236;
-            // 
             // roundButton3
             // 
             this.roundButton3.BorderColor = System.Drawing.Color.Silver;
@@ -1238,6 +1256,7 @@
             this.btnApp.Text = "ADD ";
             this.btnApp.TextColor = System.Drawing.Color.White;
             this.btnApp.UseVisualStyleBackColor = true;
+            this.btnApp.Click += new System.EventHandler(this.btnApp_Click);
             // 
             // btnAddApp
             // 
@@ -1316,8 +1335,6 @@
         private System.Windows.Forms.Label lblTransID;
         private System.Windows.Forms.Label lblAppDate;
         private System.Windows.Forms.Label lblDateB;
-        private System.Windows.Forms.TextBox txtTransID;
-        private System.Windows.Forms.TextBox txtStaffID;
         private System.Windows.Forms.TextBox txtDuration;
         private System.Windows.Forms.Label lblAddAppID;
         private System.Windows.Forms.TextBox txtSeTransID;
@@ -1381,13 +1398,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridViewButtonColumn Monday;
-        private System.Windows.Forms.DataGridViewButtonColumn Tues;
-        private System.Windows.Forms.DataGridViewButtonColumn Wed;
-        private System.Windows.Forms.DataGridViewButtonColumn thur;
-        private System.Windows.Forms.DataGridViewButtonColumn Friday;
-        private System.Windows.Forms.DataGridViewButtonColumn Sat;
-        private System.Windows.Forms.DataGridViewButtonColumn Sun;
         private RoundButton roundButton3;
         private RoundButton roundButton2;
         private RoundButton roundButton1;
@@ -1401,5 +1411,14 @@
         private System.Windows.Forms.Label DayLabel3;
         private System.Windows.Forms.Label DayLabel2;
         private System.Windows.Forms.TextBox txtYear;
+        private System.Windows.Forms.ComboBox cmbATransID;
+        private System.Windows.Forms.ComboBox cmbAStaffID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Monday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tues;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Wed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thur;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Friday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sun;
     }
 }

@@ -634,8 +634,8 @@ namespace KaizenMain
         private void Customer_Load(object sender, EventArgs e)
         {
             //connStr = @"Data Source = C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-            //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-             connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+            connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
+             //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
             sqlCustomer = @"select * from Customer";
             daCustomer = new SqlDataAdapter(sqlCustomer, connStr);
