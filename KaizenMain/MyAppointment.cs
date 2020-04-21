@@ -8,18 +8,18 @@ namespace KaizenMain
 {
     class MyAppointment
     {
-        private String appID, transID, staffID;
+        private String appID, transID, staffID,appTime;
         private int duration;
-        private DateTime appTime, appDate, dateBooked;
+        private DateTime  appDate, dateBooked;
 
 
         public MyAppointment()
         {
 
             this.appID = ""; this.transID = ""; this.staffID = "";
-            this.duration = 0; this.appTime = new DateTime(); this.appDate = new DateTime(); this.dateBooked = new DateTime();
+            this.duration = 0; this.appTime = ""; this.appDate = new DateTime(); this.dateBooked = new DateTime();
         }
-        public MyAppointment(int duration, string appID, string transID, string staffID, DateTime appTime, DateTime appDate, DateTime dateBooked)
+        public MyAppointment(int duration, string appID, string transID, string staffID, string appTime, DateTime appDate, DateTime dateBooked)
         {
             this.duration = duration;this.appID = appID; this.transID = transID;this.staffID = staffID;this.appTime = appTime;this.appDate = appDate;
             this.dateBooked = dateBooked;
@@ -64,7 +64,7 @@ namespace KaizenMain
 
         }
 
-        public DateTime AppTime
+        public String AppTime
         {
             get { return appTime; }
             set { appTime = value; }

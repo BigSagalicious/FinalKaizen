@@ -79,12 +79,12 @@
             this.lblSeDateB = new System.Windows.Forms.Label();
             this.lblSeAppID = new System.Windows.Forms.Label();
             this.tabAdd = new System.Windows.Forms.TabPage();
+            this.cmbAddTime = new System.Windows.Forms.ComboBox();
+            this.cmbDuration = new System.Windows.Forms.ComboBox();
             this.cmbATransID = new System.Windows.Forms.ComboBox();
             this.cmbAStaffID = new System.Windows.Forms.ComboBox();
-            this.dtpAppTime = new System.Windows.Forms.DateTimePicker();
             this.dtpDateBooked = new System.Windows.Forms.DateTimePicker();
             this.dtpAppDate = new System.Windows.Forms.DateTimePicker();
-            this.txtDuration = new System.Windows.Forms.TextBox();
             this.lblAddAppID = new System.Windows.Forms.Label();
             this.lblStaffID = new System.Windows.Forms.Label();
             this.lblDuration = new System.Windows.Forms.Label();
@@ -125,11 +125,13 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtTID = new System.Windows.Forms.TextBox();
             this.roundButton3 = new KaizenMain.RoundButton();
             this.roundButton2 = new KaizenMain.RoundButton();
             this.roundButton1 = new KaizenMain.RoundButton();
             this.btnApp = new KaizenMain.RoundButton();
             this.btnAddApp = new KaizenMain.RoundButton();
+            this.txtSID = new System.Windows.Forms.TextBox();
             this.tabApp.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -170,6 +172,7 @@
             this.tabApp.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabApp.TabIndex = 0;
             this.tabApp.SelectedIndexChanged += new System.EventHandler(this.tabApp_SelectedIndexChanged);
+            this.tabApp.Validated += new System.EventHandler(this.tabApp_Validated);
             // 
             // tabDisplay
             // 
@@ -442,7 +445,7 @@
             this.Sun});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Window;
@@ -701,12 +704,14 @@
             // 
             this.tabAdd.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabAdd.Controls.Add(this.txtSID);
+            this.tabAdd.Controls.Add(this.txtTID);
+            this.tabAdd.Controls.Add(this.cmbAddTime);
+            this.tabAdd.Controls.Add(this.cmbDuration);
             this.tabAdd.Controls.Add(this.cmbATransID);
             this.tabAdd.Controls.Add(this.cmbAStaffID);
-            this.tabAdd.Controls.Add(this.dtpAppTime);
             this.tabAdd.Controls.Add(this.dtpDateBooked);
             this.tabAdd.Controls.Add(this.dtpAppDate);
-            this.tabAdd.Controls.Add(this.txtDuration);
             this.tabAdd.Controls.Add(this.lblAddAppID);
             this.tabAdd.Controls.Add(this.lblStaffID);
             this.tabAdd.Controls.Add(this.lblDuration);
@@ -724,13 +729,50 @@
             this.tabAdd.Text = "ADD";
             this.tabAdd.UseVisualStyleBackColor = true;
             // 
+            // cmbAddTime
+            // 
+            this.cmbAddTime.FormattingEnabled = true;
+            this.cmbAddTime.Items.AddRange(new object[] {
+            "09:00:00",
+            "10:00:00",
+            "11:00:00",
+            "12:00:00",
+            "13:00:00",
+            "14:00:00",
+            "15:00:00",
+            "16:00:00",
+            "17:00:00"});
+            this.cmbAddTime.Location = new System.Drawing.Point(492, 158);
+            this.cmbAddTime.Name = "cmbAddTime";
+            this.cmbAddTime.Size = new System.Drawing.Size(121, 28);
+            this.cmbAddTime.TabIndex = 227;
+            // 
+            // cmbDuration
+            // 
+            this.cmbDuration.FormattingEnabled = true;
+            this.cmbDuration.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.cmbDuration.Location = new System.Drawing.Point(214, 196);
+            this.cmbDuration.Name = "cmbDuration";
+            this.cmbDuration.Size = new System.Drawing.Size(229, 28);
+            this.cmbDuration.TabIndex = 226;
+            // 
             // cmbATransID
             // 
             this.cmbATransID.FormattingEnabled = true;
             this.cmbATransID.Location = new System.Drawing.Point(214, 324);
+            this.cmbATransID.MaxLength = 30;
             this.cmbATransID.Name = "cmbATransID";
             this.cmbATransID.Size = new System.Drawing.Size(229, 28);
             this.cmbATransID.TabIndex = 225;
+            this.cmbATransID.SelectedIndexChanged += new System.EventHandler(this.cmbATransID_SelectedIndexChanged);
             // 
             // cmbAStaffID
             // 
@@ -739,16 +781,6 @@
             this.cmbAStaffID.Name = "cmbAStaffID";
             this.cmbAStaffID.Size = new System.Drawing.Size(229, 28);
             this.cmbAStaffID.TabIndex = 224;
-            // 
-            // dtpAppTime
-            // 
-            this.dtpAppTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpAppTime.Location = new System.Drawing.Point(428, 158);
-            this.dtpAppTime.Name = "dtpAppTime";
-            this.dtpAppTime.ShowUpDown = true;
-            this.dtpAppTime.Size = new System.Drawing.Size(107, 26);
-            this.dtpAppTime.TabIndex = 18;
-            this.dtpAppTime.ValueChanged += new System.EventHandler(this.dtpAppTime_ValueChanged);
             // 
             // dtpDateBooked
             // 
@@ -764,14 +796,6 @@
             this.dtpAppDate.Name = "dtpAppDate";
             this.dtpAppDate.Size = new System.Drawing.Size(199, 26);
             this.dtpAppDate.TabIndex = 15;
-            // 
-            // txtDuration
-            // 
-            this.txtDuration.Location = new System.Drawing.Point(214, 196);
-            this.txtDuration.Name = "txtDuration";
-            this.txtDuration.Size = new System.Drawing.Size(229, 26);
-            this.txtDuration.TabIndex = 11;
-            this.txtDuration.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // lblAddAppID
             // 
@@ -1173,6 +1197,13 @@
             // 
             this.errP.ContainerControl = this;
             // 
+            // txtTID
+            // 
+            this.txtTID.Location = new System.Drawing.Point(524, 326);
+            this.txtTID.Name = "txtTID";
+            this.txtTID.Size = new System.Drawing.Size(100, 26);
+            this.txtTID.TabIndex = 228;
+            // 
             // roundButton3
             // 
             this.roundButton3.BorderColor = System.Drawing.Color.Silver;
@@ -1280,6 +1311,13 @@
             this.btnAddApp.UseVisualStyleBackColor = true;
             this.btnAddApp.Click += new System.EventHandler(this.btnAddApp_Click_1);
             // 
+            // txtSID
+            // 
+            this.txtSID.Location = new System.Drawing.Point(513, 249);
+            this.txtSID.Name = "txtSID";
+            this.txtSID.Size = new System.Drawing.Size(100, 26);
+            this.txtSID.TabIndex = 229;
+            // 
             // Appointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1335,7 +1373,6 @@
         private System.Windows.Forms.Label lblTransID;
         private System.Windows.Forms.Label lblAppDate;
         private System.Windows.Forms.Label lblDateB;
-        private System.Windows.Forms.TextBox txtDuration;
         private System.Windows.Forms.Label lblAddAppID;
         private System.Windows.Forms.TextBox txtSeTransID;
         private System.Windows.Forms.TextBox txtSeAppDate;
@@ -1385,7 +1422,6 @@
         private System.Windows.Forms.ErrorProvider errP;
         private System.Windows.Forms.DateTimePicker dtpAppDate;
         private System.Windows.Forms.DateTimePicker dtpDateBooked;
-        private System.Windows.Forms.DateTimePicker dtpAppTime;
         private RoundButton btnAddApp;
         private System.Windows.Forms.TextBox txtDate;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -1420,5 +1456,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Friday;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sat;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sun;
+        private System.Windows.Forms.ComboBox cmbDuration;
+        private System.Windows.Forms.ComboBox cmbAddTime;
+        private System.Windows.Forms.TextBox txtTID;
+        private System.Windows.Forms.TextBox txtSID;
     }
 }
