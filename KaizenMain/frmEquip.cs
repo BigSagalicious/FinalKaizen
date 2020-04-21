@@ -13,11 +13,11 @@ namespace KaizenMain
 {
     public partial class frmEquip : Form
     {
-        SqlDataAdapter daEquip;
+        SqlDataAdapter daEquip, daTransD;
         DataSet dsKaizen = new DataSet();
-        SqlCommandBuilder cmdBEquip;
-        DataRow drTrans;
-        String connStr, sqlEquip;
+        SqlCommandBuilder cmdBEquip, cmbTransD;
+        DataRow drTrans, drTransD;
+        String connStr, sqlEquip, sqlTransDQuery;
         int selectedTab = 0;
         bool equipSelected = false;
         int equipIDSelected = 0;
@@ -166,7 +166,11 @@ namespace KaizenMain
 
                                 dtpSearchDate.Value = (DateTime)drTrans["TransDate"];
                                 txtSearchCustID.Text = drTrans["CustID"].ToString();
+
                                 populateCustName(drTrans["CustID"].ToString(), txtSearchCustName , txtSearchCustTel);
+
+                                populateOrderSum(txtSearchOrderID, dgvSearch);
+
                                 lblSearchTCost.Text = drTrans["TransTotal"].ToString();
                                 lblSearchOutstanding.Text = drTrans["BalanceOwed"].ToString();
                             }
@@ -294,14 +298,96 @@ namespace KaizenMain
             dgvEquip.DataSource = dsKaizen.Tables["Trans"];
             dgvEquip.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
-            dgvEquip.Columns["StartDate"].Visible = false;
-            dgvEquip.Columns["EndDate"].Visible = false;
 
             tabEquip.SelectedIndex = 1;
             tabEquip.SelectedIndex = 0;
 
 
 
+        }
+
+        private void TransDets_Load(TextBox transIDTB, DataGridView dgvDetails)
+        {
+
+
+            //connStr = @"Data Source = C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
+            //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
+            connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+
+           //sqlTransDQuery = @"select * from TransDetails WHERE TransDetsID = '" + transIDTB.Text.ToString() + "'";
+            sqlTransDQuery = @"SELECT * FROM [TransDetails] WHERE [TransID] = " + transIDTB.Text;
+
+
+            Console.WriteLine(sqlTransDQuery);
+            //sqlTransDQuery = string.Format("SELECT * from TransDetails Where TransDetsID = '{0}'", TextBox1.Text);
+
+            daTransD = new SqlDataAdapter(sqlTransDQuery, connStr);
+            cmbTransD = new SqlCommandBuilder(daTransD);
+
+            daTransD.FillSchema(dsKaizen, SchemaType.Source, "TransDetails");
+            daTransD.Fill(dsKaizen, "TransDetails");
+            dgvDetails.DataSource = dsKaizen.Tables["TransDetails"];
+            dgvDetails.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
+            dgvDetails.Columns["StartDate"].Visible = false;
+            dgvDetails.Columns["EndDate"].Visible = false;
+        }
+
+        void populateOrderSum(TextBox transIDTB, DataGridView dgvDetails)
+        {
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
+            {
+                SqlCommand sqlDetailsCmd = new SqlCommand("select * from TransDetails", sqlConnectionEqT);
+                SqlCommand sqlStockCmd = new SqlCommand("select * from Stock", sqlConnectionEqT);
+
+                sqlConnectionEqT.Open();
+                SqlDataReader sqlReader1 = sqlDetailsCmd.ExecuteReader();
+
+                        DataTable dt = new DataTable();
+                        dt.Columns.Add("StockID");
+                        dt.Columns.Add("StockDesc");
+                        dt.Columns.Add("PPU");  
+                        dt.Columns.Add("Qty");
+                        dt.Columns.Add("Sum");
+
+
+                        while (sqlReader1.Read())
+                        {
+                            if (sqlReader1["TransID"].ToString().Equals(transIDTB.Text))
+                            {
+                                DataRow row = dt.NewRow();
+                                row["StockID"] = sqlReader1["StockID"];
+                                 row["Qty"] = sqlReader1["Qty"];
+                                dt.Rows.Add(row);
+                            }
+                        }
+                                    
+                sqlReader1.Close();
+
+                SqlDataReader sqlReader2 = sqlStockCmd.ExecuteReader();
+
+                while (sqlReader2.Read())
+                {                    
+                    foreach (DataRow row in dt.Rows)
+                    {
+                      if (row["StockID"].Equals(sqlReader2["StockID"].ToString()))
+                        {
+                            row["StockDesc"] = sqlReader2["StockDescription"];
+                            row["PPU"] = sqlReader2["PurPrice"];
+                        }
+                    }
+                    
+                }
+                sqlReader2.Close();
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    row["Sum"] = Convert.ToDouble(row["PPU"]) * Convert.ToDouble(row["Qty"]);
+                }
+
+
+                    dgvDetails.DataSource = dt;
+            }
         }
 
         private void getTransID(int noRows)

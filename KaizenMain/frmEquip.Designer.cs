@@ -40,7 +40,7 @@
             this.txtSearchCustID = new System.Windows.Forms.TextBox();
             this.txtSearchOrderID = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvSearch = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tabAdd = new System.Windows.Forms.TabPage();
@@ -134,7 +134,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquip)).BeginInit();
             this.tabSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
             this.tabAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
@@ -213,7 +213,7 @@
             this.tabSearch.Controls.Add(this.txtSearchCustID);
             this.tabSearch.Controls.Add(this.txtSearchOrderID);
             this.tabSearch.Controls.Add(this.label9);
-            this.tabSearch.Controls.Add(this.dataGridView1);
+            this.tabSearch.Controls.Add(this.dgvSearch);
             this.tabSearch.Controls.Add(this.label10);
             this.tabSearch.Controls.Add(this.label11);
             this.tabSearch.Controls.Add(this.roundButton18);
@@ -297,16 +297,16 @@
             this.label9.TabIndex = 145;
             this.label9.Text = "Date";
             // 
-            // dataGridView1
+            // dgvSearch
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(35, 245);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(664, 247);
-            this.dataGridView1.TabIndex = 144;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvSearch.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSearch.Location = new System.Drawing.Point(35, 245);
+            this.dgvSearch.Name = "dgvSearch";
+            this.dgvSearch.Size = new System.Drawing.Size(664, 247);
+            this.dgvSearch.TabIndex = 144;
+            this.dgvSearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label10
             // 
@@ -1442,7 +1442,7 @@
             this.tabSearch.ResumeLayout(false);
             this.tabSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).EndInit();
             this.tabAdd.ResumeLayout(false);
             this.tabAdd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1496,7 +1496,7 @@
         private System.Windows.Forms.TextBox txtSearchCustID;
         private System.Windows.Forms.TextBox txtSearchOrderID;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvSearch;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label19;
