@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Appointment));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabApp = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
             this.txtYear = new System.Windows.Forms.TextBox();
@@ -125,13 +125,13 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtTID = new System.Windows.Forms.TextBox();
             this.roundButton3 = new KaizenMain.RoundButton();
             this.roundButton2 = new KaizenMain.RoundButton();
             this.roundButton1 = new KaizenMain.RoundButton();
             this.btnApp = new KaizenMain.RoundButton();
             this.btnAddApp = new KaizenMain.RoundButton();
-            this.txtSID = new System.Windows.Forms.TextBox();
+            this.txtTime = new System.Windows.Forms.TextBox();
+            this.txtDur = new System.Windows.Forms.TextBox();
             this.tabApp.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -426,14 +426,14 @@
             this.dgvApp.AllowUserToOrderColumns = true;
             this.dgvApp.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvApp.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvApp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvApp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvApp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvApp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Monday,
@@ -443,14 +443,14 @@
             this.Friday,
             this.Sat,
             this.Sun});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvApp.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvApp.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvApp.EnableHeadersVisualStyles = false;
             this.dgvApp.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvApp.Location = new System.Drawing.Point(55, 80);
@@ -704,8 +704,8 @@
             // 
             this.tabAdd.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabAdd.Controls.Add(this.txtSID);
-            this.tabAdd.Controls.Add(this.txtTID);
+            this.tabAdd.Controls.Add(this.txtDur);
+            this.tabAdd.Controls.Add(this.txtTime);
             this.tabAdd.Controls.Add(this.cmbAddTime);
             this.tabAdd.Controls.Add(this.cmbDuration);
             this.tabAdd.Controls.Add(this.cmbATransID);
@@ -732,16 +732,6 @@
             // cmbAddTime
             // 
             this.cmbAddTime.FormattingEnabled = true;
-            this.cmbAddTime.Items.AddRange(new object[] {
-            "09:00:00",
-            "10:00:00",
-            "11:00:00",
-            "12:00:00",
-            "13:00:00",
-            "14:00:00",
-            "15:00:00",
-            "16:00:00",
-            "17:00:00"});
             this.cmbAddTime.Location = new System.Drawing.Point(492, 158);
             this.cmbAddTime.Name = "cmbAddTime";
             this.cmbAddTime.Size = new System.Drawing.Size(121, 28);
@@ -750,15 +740,6 @@
             // cmbDuration
             // 
             this.cmbDuration.FormattingEnabled = true;
-            this.cmbDuration.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"});
             this.cmbDuration.Location = new System.Drawing.Point(214, 196);
             this.cmbDuration.Name = "cmbDuration";
             this.cmbDuration.Size = new System.Drawing.Size(229, 28);
@@ -1197,13 +1178,6 @@
             // 
             this.errP.ContainerControl = this;
             // 
-            // txtTID
-            // 
-            this.txtTID.Location = new System.Drawing.Point(524, 326);
-            this.txtTID.Name = "txtTID";
-            this.txtTID.Size = new System.Drawing.Size(100, 26);
-            this.txtTID.TabIndex = 228;
-            // 
             // roundButton3
             // 
             this.roundButton3.BorderColor = System.Drawing.Color.Silver;
@@ -1311,12 +1285,20 @@
             this.btnAddApp.UseVisualStyleBackColor = true;
             this.btnAddApp.Click += new System.EventHandler(this.btnAddApp_Click_1);
             // 
-            // txtSID
+            // txtTime
             // 
-            this.txtSID.Location = new System.Drawing.Point(513, 249);
-            this.txtSID.Name = "txtSID";
-            this.txtSID.Size = new System.Drawing.Size(100, 26);
-            this.txtSID.TabIndex = 229;
+            this.txtTime.Location = new System.Drawing.Point(633, 160);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(100, 26);
+            this.txtTime.TabIndex = 228;
+            // 
+            // txtDur
+            // 
+            this.txtDur.Location = new System.Drawing.Point(513, 208);
+            this.txtDur.Name = "txtDur";
+            this.txtDur.Size = new System.Drawing.Size(100, 26);
+            this.txtDur.TabIndex = 229;
+            this.txtDur.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             // 
             // Appointment
             // 
@@ -1458,7 +1440,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Sun;
         private System.Windows.Forms.ComboBox cmbDuration;
         private System.Windows.Forms.ComboBox cmbAddTime;
-        private System.Windows.Forms.TextBox txtTID;
-        private System.Windows.Forms.TextBox txtSID;
+        private System.Windows.Forms.TextBox txtDur;
+        private System.Windows.Forms.TextBox txtTime;
     }
 }

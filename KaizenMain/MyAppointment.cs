@@ -11,13 +11,14 @@ namespace KaizenMain
         private String appID, transID, staffID,appTime;
         private int duration;
         private DateTime  appDate, dateBooked;
+        //private TimeSpan appTime;
 
 
         public MyAppointment()
         {
-
+            
             this.appID = ""; this.transID = ""; this.staffID = "";
-            this.duration = 0; this.appTime = ""; this.appDate = new DateTime(); this.dateBooked = new DateTime();
+            this.duration = 0; this.appTime =""; this.appDate = new DateTime(2020,01,01); this.dateBooked = new DateTime(2020,01,01);
         }
         public MyAppointment(int duration, string appID, string transID, string staffID, string appTime, DateTime appDate, DateTime dateBooked)
         {
@@ -64,7 +65,7 @@ namespace KaizenMain
 
         }
 
-        public String AppTime
+        public string AppTime
         {
             get { return appTime; }
             set { appTime = value; }

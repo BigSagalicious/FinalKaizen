@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace KaizenMain
 {
@@ -36,7 +37,7 @@ namespace KaizenMain
         private bool dateChanged = false;
         DateTime[] thisWeek = new DateTime[7];
         String [] ATime = new String[9];
-       
+        int[] DTime = new int[9];
         public Appointment()
         {
             InitializeComponent();
@@ -224,123 +225,7 @@ namespace KaizenMain
 
         private void btnAddApp_Click(object sender, EventArgs e)
         {
-            MyAppointment MyAppointment = new MyAppointment();
-            bool ok = true;
-            errP.Clear();
-            try
-            {
-                MyAppointment.AppID = lblAddAppID.Text.Trim();
-
-            }
-            catch (MyException MyEx)
-            {
-                ok = false;
-                errP.SetError(lblAddAppID, MyEx.toString());
-            }
-
-            try
-            {
-                MyAppointment.AppTime = (cmbAddTime.Text.Trim());
-            }
-
-            catch (MyException MyEx)
-            {
-                ok = false;
-                errP.SetError(cmbAddTime, MyEx.toString());
-            }
-
-            try
-            {
-                MyAppointment.Duration = MyAppointment.Duration = Convert.ToInt32(cmbDuration.Text.Trim());
-            }
-
-            catch (MyException MyEx)
-            {
-                ok = false;
-                errP.SetError(cmbDuration, MyEx.toString());
-            }
-
-
-            try
-            {
-                MyAppointment.DateBooked = dtpDateBooked.Value.ToUniversalTime();
-            }
-
-            catch (MyException MyEx)
-            {
-                ok = false;
-                errP.SetError(dtpDateBooked, MyEx.toString());
-            }
-            try
-            {
-                MyAppointment.AppTime = cmbAddTime.Text.Trim();
-            }
-
-            catch (MyException MyEx)
-            {
-                ok = false;
-                errP.SetError(cmbAddTime, MyEx.toString());
-            }
-
-            try
-            {
-                MyAppointment.TransID = cmbATransID.Text.Trim();
-            }
-
-            catch (MyException MyEx)
-            {
-                ok = false;
-                errP.SetError(cmbATransID, MyEx.toString());
-            }
-
-            try
-            {
-                MyAppointment.StaffID = cmbAStaffID.Text.Trim();
-            }
-
-            catch (MyException MyEx)
-            {
-                ok = false;
-                errP.SetError(cmbAStaffID, MyEx.toString());
-            }
-
-
-            try
-            {
-                if (ok)
-                {
-                    drAppointment = dsKaizen.Tables["Appointment"].NewRow();
-                    drAppointment["AppID"] = MyAppointment.AppID;
-                    drAppointment["DateBooked"] = MyAppointment.DateBooked;
-                    drAppointment["AppDate"] = MyAppointment.Appdate;
-                    drAppointment["AppTime"] = MyAppointment.AppTime;
-                    drAppointment["Duration"] = MyAppointment.Duration;
-                    drAppointment["StaffID"] = MyAppointment.StaffID;
-                    drAppointment["TransID"] = MyAppointment.TransID;
-                    
-
-                    dsKaizen.Tables["Appointment"].Rows.Add(drAppointment);
-                    daAppointment.Update(dsKaizen, "Appointment");
-
-                    MessageBox.Show("Appointment Added");
-
-                    if (MessageBox.Show("Do you wish to add another Appointment?", "Add Appointment", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
-                    {
-                        clearAddForm();
-
-                        getAppID(dsKaizen.Tables["Appointment"].Rows.Count);
-                    }
-                    else
-                        tabApp.SelectedIndex = 0;
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Error !", MessageBoxButtons.AbortRetryIgnore,
-                    MessageBoxIcon.Error);
-            }
+           
         }
         void seperateNumber(string ID)
         {
@@ -355,7 +240,7 @@ namespace KaizenMain
         private void getAppID(int noRows)
         {
 
-            drAppointment = dsKaizen.Tables["Appointment"].Rows[noRows - 1];
+            drAppointment = dsKaizen.Tables["Appointment"].Rows[noRows-1 ];
             seperateNumber(drAppointment["AppID"].ToString());
             lblAddAppID.Text = "AP-" + (IDNumber + 1).ToString();
 
@@ -403,8 +288,8 @@ namespace KaizenMain
             connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
             //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
-            DateTime dts = new DateTime(2020, 1, 15);
-            DateTime dte = new DateTime(2080, 12, 25);
+            DateTime dts = new DateTime(2020, 2, 10);
+            DateTime dte = new DateTime (2020, 2, 16);
 
             conn = new SqlConnection(connStr);
             sqlAppointment = @"select * from Appointment WHERE AppDate BETWEEN @FrmDT AND @ToDT order by AppDate";
@@ -415,7 +300,7 @@ namespace KaizenMain
             cmdAppointment.Parameters["@ToDt"].Value = dte;
             daAppointment = new SqlDataAdapter(cmdAppointment);
             daAppointment.FillSchema(dsKaizen, SchemaType.Source, "Appointment");
-            //daAppointment.Fill(dsKaizen, "Appointment");
+            daAppointment.Fill(dsKaizen, "Appointment");
 
 
 
@@ -476,10 +361,158 @@ namespace KaizenMain
             ATime[7] = "16:00:00";
             ATime[8] = "17:00:00";
 
-            dsKaizen.Tables["Appointment"].Clear();
+            for(int i=0; i<ATime.Length;i++)
+            {
+                cmbAddTime.Items.Add(ATime[i].ToString());
+
+            }
+
+
+
+            DTime[0] = 1;
+            DTime[1] = 2;
+            DTime[2] = 3;
+            DTime[3] = 4;
+            DTime[4] = 5;
+            DTime[5] = 6;
+            DTime[6] = 7;
+            DTime[7] = 8;
+            DTime[8] = 9;
+
+            for(int k=0; k<DTime.Length;k++)
+            {
+                cmbDuration.Items.Add(DTime[k].ToString());
+
+            }
+
+            //dsKaizen.Tables["Appointment"].Clear();
+            DateTime dt3 = this.dateTimePicker1.Value.Date;
+            label1.Text = dt3.DayOfWeek.ToString();
+
+            DateTime dt4 = this.dateTimePicker1.Value.Date.AddDays(1);
+            DayLabel2.Text = dt4.DayOfWeek.ToString();
+
+            DateTime dt5 = this.dateTimePicker1.Value.Date.AddDays(2);
+            DayLabel3.Text = dt5.DayOfWeek.ToString();
+
+            DateTime dt6 = this.dateTimePicker1.Value.Date.AddDays(3);
+            DayLabel4.Text = dt6.DayOfWeek.ToString();
+
+            DateTime dt7 = this.dateTimePicker1.Value.Date.AddDays(4);
+            DayLabel5.Text = dt7.DayOfWeek.ToString();
+
+            DateTime dt8 = this.dateTimePicker1.Value.Date.AddDays(5);
+            DayLabel6.Text = dt8.DayOfWeek.ToString();
+
+            DateTime dt9 = this.dateTimePicker1.Value.Date.AddDays(6);
+            DayLabel7.Text = dt9.DayOfWeek.ToString();
+
+            DateTime weekStart = this.dateTimePicker1.Value.Date;
+            DateTime weekEnd = this.dateTimePicker1.Value.AddDays(6);
+
+            DateTime dt12 = this.dateTimePicker1.Value.Date;
+
+            dgvApp.Columns[0].HeaderText = dt12.AddDays(0).ToShortDateString();
+            dgvApp.Columns[1].HeaderText = dt12.AddDays(1).ToShortDateString();
+            dgvApp.Columns[2].HeaderText = dt12.AddDays(2).ToShortDateString();
+            dgvApp.Columns[3].HeaderText = dt12.AddDays(3).ToShortDateString();
+            dgvApp.Columns[4].HeaderText = dt12.AddDays(4).ToShortDateString();
+            dgvApp.Columns[5].HeaderText = dt12.AddDays(5).ToShortDateString();
+            dgvApp.Columns[6].HeaderText = dt12.AddDays(6).ToShortDateString();
+
+
+
+
+            //for (int i = 0; i < 7; i++)
+            //{
+            //    for (int j = 0; j < 9; j++)
+            //    {
+            //        dgvApp.Rows[j].Cells[i].Value = null;
+            //        dgvApp.Rows[j].Cells[i].Style.BackColor = Color.White;
+
+            //    }
+
+
+
+            //}
+
+
+
+
+            thisWeek[0] = weekStart.Date;
+            thisWeek[1] = weekStart.AddDays(1).Date;
+            thisWeek[2] = weekStart.AddDays(2).Date;
+            thisWeek[3] = weekStart.AddDays(3).Date;
+            thisWeek[4] = weekStart.AddDays(4).Date;
+            thisWeek[5] = weekStart.AddDays(5).Date;
+            thisWeek[6] = weekStart.AddDays(6).Date;
+
+            cmdAppointment.Parameters["@FrmDt"].Value = weekStart;
+            cmdAppointment.Parameters["@ToDt"].Value = weekEnd.AddDays(6);
+            daAppointment.Fill(dsKaizen, "Appointment");
+
+
+
+
+
+
+
+
+            //daAppointment.FillSchema(dsKaizen, SchemaType.Source, "Appointment");
+            // daAppointment.Fill(dsKaizen, "Appointment");
+            //dgvApp.DataSource = dsKaizen.Tables["Appointment"];
+
+            foreach (DataRow dr in dsKaizen.Tables["Appointment"].Rows)
+            {
+                string startTime = (dr["AppTime"].ToString());
+
+                for (int i = 0; i < 7; i++)
+                {
+                    if ((dr["AppDate"]).Equals(thisWeek[i]))
+                    {
+
+                        for (int j = 0; j < 9; j++)
+                        {
+
+
+                            if (ATime[j].Equals(startTime))
+                            {
+                                dgvApp.Rows[j].Cells[i].Style.BackColor = Color.Blue;
+                                dgvApp.Rows[j].Cells[i].Value = dr["AppID"].ToString();
+                                for (int k = 1; k <= Convert.ToInt32(dr["Duration"]); k++)
+                                {
+                                    dgvApp.Rows[j + k].Cells[i].Style.BackColor = Color.MediumBlue;
+
+                                    if (k.Equals(1))
+                                    {
+                                        dgvApp.Rows[j + k].Cells[i].Value = dr["StaffID"].ToString();
+                                    }
+                                    else if (k.Equals(2))
+                                    {
+                                        dgvApp.Rows[j + k].Cells[i].Value = dr["TransID"].ToString();
+                                    }
+                                    else if (k.Equals(3))
+                                    {
+                                        dgvApp.Rows[j + k].Cells[i].Value = dr["AppDate"].ToString();
+                                    }
+
+                                }
+                            }
+
+
+
+                        }
+                    }
+                }
+
+
+
+            }
+
 
 
             dgvApp.Rows.Add(9);
+
 
 
 
@@ -505,18 +538,18 @@ namespace KaizenMain
                 {
                     case 0:
                         {
-                            for (int i = 0; i < 7; i++)
-                            {
-                                for (int j = 0; j < 9; j++)
-                                {
-                                    dgvApp.Rows[j].Cells[i].Value = null;
-                                    dgvApp.Rows[j].Cells[i].Style.BackColor = Color.White;
+                            //for (int i = 0; i < 7; i++)
+                            //{
+                            //    for (int j = 0; j < 9; j++)
+                            //    {
+                            //        dgvApp.Rows[j].Cells[i].Value = null;
+                            //        dgvApp.Rows[j].Cells[i].Style.BackColor = Color.White;
 
-                                }
+                            //    }
 
 
 
-                            }
+                            //}
 
                             DateTime weekStart = this.dateTimePicker1.Value.Date;
                             DateTime weekEnd = this.dateTimePicker1.Value.AddDays(6);
@@ -539,7 +572,8 @@ namespace KaizenMain
 
                             dsKaizen.Tables["Appointment"].Clear();
                             daAppointment.Fill(dsKaizen, "Appointment");
-                            
+                           
+                           
 
                             break;
                         }
@@ -672,7 +706,10 @@ namespace KaizenMain
 
             try
             {
-                myAppointment.AppTime =cmbAddTime.Text.Trim();
+               
+                
+                myAppointment.AppTime = txtTime.Text.Trim();
+
             }
 
             catch (MyException MyEx)
@@ -683,8 +720,7 @@ namespace KaizenMain
 
             try
             {
-                myAppointment.Duration = Convert.ToInt32(cmbDuration.SelectedValue);
-                
+                myAppointment.Duration = Convert.ToInt32(txtDur.Text.Trim());
             }
 
             catch (MyException MyEx)
@@ -696,8 +732,8 @@ namespace KaizenMain
 
             try
             {
-                myAppointment.DateBooked = DateTime.Parse(dtpDateBooked.Text.ToString());
-              
+                myAppointment.DateBooked = DateTime.Parse(dtpDateBooked.Text.Trim());
+
             }
 
             catch (MyException MyEx)
@@ -705,15 +741,17 @@ namespace KaizenMain
                 ok = false;
                 errP.SetError(dtpDateBooked, MyEx.toString());
             }
+
             try
             {
-                myAppointment.Appdate = DateTime.Parse(dtpAppDate.Text.ToString());
+                myAppointment.Appdate = DateTime.Parse(dtpAppDate.Text.Trim());
+
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(dtpAppDate, MyEx.toString());
+                errP.SetError(dtpDateBooked, MyEx.toString());
             }
 
             try
@@ -724,7 +762,7 @@ namespace KaizenMain
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtTID, MyEx.toString());
+                errP.SetError(cmbATransID, MyEx.toString());
             }
 
             try
@@ -743,19 +781,19 @@ namespace KaizenMain
             {
                 if (ok)
                 {
-                    drAppointment = dsKaizen.Tables["Appointment"].NewRow();
+                    DataRow drAppointment = dsKaizen.Tables["Appointment"].NewRow();
                     drAppointment["AppID"] = myAppointment.AppID;
                     drAppointment["DateBooked"] = myAppointment.DateBooked;
                     drAppointment["AppDate"] = myAppointment.Appdate;
-                    drAppointment["AppTime"] = myAppointment.AppTime;
-                    drAppointment["Duration"] = myAppointment.Duration;
+                    drAppointment["AppTime"] = txtTime.Text;
+                    drAppointment["Duration"] = Convert.ToInt32(txtDur.Text);
                     drAppointment["StaffID"] = myAppointment.StaffID;
                     drAppointment["TransID"] = myAppointment.TransID;
 
-                   
+
                     dsKaizen.Tables["Appointment"].Rows.Add(drAppointment);
-                    
                     daAppointment.Update(dsKaizen, "Appointment");
+                    
 
                     MessageBox.Show("Appointment Added");
 
@@ -973,6 +1011,11 @@ namespace KaizenMain
             cmbATransID.SelectedIndex = 0;
             cmbDuration.SelectedIndex=0;
         
+
+        }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
 
         }
 
