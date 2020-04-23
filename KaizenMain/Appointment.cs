@@ -18,9 +18,9 @@ namespace KaizenMain
         SqlDataAdapter daAppointment;
         SqlDataAdapter daStaff;
         SqlDataAdapter daTrans;
-        SqlDataAdapter daInstance;
+        SqlDataAdapter daAll;
         DataSet dsKaizen = new DataSet();
-        SqlCommandBuilder cmdBAppointment;
+        SqlCommandBuilder cmdAll;
         SqlCommandBuilder cmdAStaff;
         SqlCommandBuilder cmdATrans;
         SqlCommand cmdAppointment;
@@ -28,7 +28,7 @@ namespace KaizenMain
         SqlConnection conn = new SqlConnection();
        
         
-        String connStr, sqlAppointment,sqlStaff,sqlTrans;
+        String connStr, sqlAppointment,sqlStaff,sqlTrans,sqlAll;
 
         int selectedTab = 0;
         bool AppSelected = false;
@@ -225,7 +225,7 @@ namespace KaizenMain
 
         private void btnAddApp_Click(object sender, EventArgs e)
         {
-           
+          
         }
         void seperateNumber(string ID)
         {
@@ -289,18 +289,24 @@ namespace KaizenMain
             //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
             DateTime dts = new DateTime(2020, 2, 10);
-            DateTime dte = new DateTime (2020, 2, 16);
+            DateTime dte = new DateTime (2080, 12, 25);
+            cmbStaff.DataSource = dsKaizen.Tables["Staff"];
+            cmbStaff.ValueMember = "StaffID";
+            cmbStaff.DisplayMember = "StaffID";
 
             conn = new SqlConnection(connStr);
-            sqlAppointment = @"select * from Appointment WHERE AppDate BETWEEN @FrmDT AND @ToDT order by AppDate";
+            sqlAppointment = @"select * from Appointment WHERE Appointment.AppDate BETWEEN @FrmDT AND @ToDT AND Appointment.StaffID= @StaffID";
             cmdAppointment = new SqlCommand(sqlAppointment, conn);
             cmdAppointment.Parameters.Add("@FrmDT", SqlDbType.Date);
             cmdAppointment.Parameters.Add("@ToDT", SqlDbType.Date);
+            cmdAppointment.Parameters.Add("@StaffID", SqlDbType.VarChar);
             cmdAppointment.Parameters["@FrmDt"].Value = dts;
             cmdAppointment.Parameters["@ToDt"].Value = dte;
+            cmdAppointment.Parameters["@StaffID"].Value = cmbStaff.Text;
             daAppointment = new SqlDataAdapter(cmdAppointment);
             daAppointment.FillSchema(dsKaizen, SchemaType.Source, "Appointment");
             daAppointment.Fill(dsKaizen, "Appointment");
+            MessageBox.Show(dsKaizen.Tables["Appointment"].Rows.Count.ToString());
 
 
 
@@ -310,6 +316,12 @@ namespace KaizenMain
             cmdAStaff = new SqlCommandBuilder(daStaff);
             daStaff.FillSchema(dsKaizen, SchemaType.Source, "Staff");
             daStaff.Fill(dsKaizen, "Staff");
+
+            sqlAll = @"select * from Appointment";
+            daAll = new SqlDataAdapter(sqlAll, connStr);
+            cmdAll = new SqlCommandBuilder(daAll);
+            daAll.FillSchema(dsKaizen, SchemaType.Source, "Appointment");
+            daAll.Fill(dsKaizen, "Appointment");
 
             sqlTrans = @"select * from Trans";
             daTrans = new SqlDataAdapter(sqlTrans, connStr);
@@ -326,11 +338,13 @@ namespace KaizenMain
             cmbATransID.ValueMember = "TransID";
             cmbATransID.DisplayMember = "TransID";
 
-            
+            cmbStaff.DataSource = dsKaizen.Tables["Staff"];
+            cmbStaff.ValueMember = "StaffID";
+            cmbStaff.DisplayMember = "StaffID";
 
-           
+
+
             dgvApp.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-            //txtDate.Text = DateTime.Now.ToString("dd/M/yyyy");
             txtDate.Text = DateTime.Now.DayOfWeek.ToString();
             txtYear.Text = DateTime.Now.ToShortDateString();
             DateTime dt = DateTime.Now;
@@ -384,134 +398,10 @@ namespace KaizenMain
                 cmbDuration.Items.Add(DTime[k].ToString());
 
             }
-
-            //dsKaizen.Tables["Appointment"].Clear();
-            DateTime dt3 = this.dateTimePicker1.Value.Date;
-            label1.Text = dt3.DayOfWeek.ToString();
-
-            DateTime dt4 = this.dateTimePicker1.Value.Date.AddDays(1);
-            DayLabel2.Text = dt4.DayOfWeek.ToString();
-
-            DateTime dt5 = this.dateTimePicker1.Value.Date.AddDays(2);
-            DayLabel3.Text = dt5.DayOfWeek.ToString();
-
-            DateTime dt6 = this.dateTimePicker1.Value.Date.AddDays(3);
-            DayLabel4.Text = dt6.DayOfWeek.ToString();
-
-            DateTime dt7 = this.dateTimePicker1.Value.Date.AddDays(4);
-            DayLabel5.Text = dt7.DayOfWeek.ToString();
-
-            DateTime dt8 = this.dateTimePicker1.Value.Date.AddDays(5);
-            DayLabel6.Text = dt8.DayOfWeek.ToString();
-
-            DateTime dt9 = this.dateTimePicker1.Value.Date.AddDays(6);
-            DayLabel7.Text = dt9.DayOfWeek.ToString();
-
-            DateTime weekStart = this.dateTimePicker1.Value.Date;
-            DateTime weekEnd = this.dateTimePicker1.Value.AddDays(6);
-
-            DateTime dt12 = this.dateTimePicker1.Value.Date;
-
-            dgvApp.Columns[0].HeaderText = dt12.AddDays(0).ToShortDateString();
-            dgvApp.Columns[1].HeaderText = dt12.AddDays(1).ToShortDateString();
-            dgvApp.Columns[2].HeaderText = dt12.AddDays(2).ToShortDateString();
-            dgvApp.Columns[3].HeaderText = dt12.AddDays(3).ToShortDateString();
-            dgvApp.Columns[4].HeaderText = dt12.AddDays(4).ToShortDateString();
-            dgvApp.Columns[5].HeaderText = dt12.AddDays(5).ToShortDateString();
-            dgvApp.Columns[6].HeaderText = dt12.AddDays(6).ToShortDateString();
-
-
-
-
-            //for (int i = 0; i < 7; i++)
-            //{
-            //    for (int j = 0; j < 9; j++)
-            //    {
-            //        dgvApp.Rows[j].Cells[i].Value = null;
-            //        dgvApp.Rows[j].Cells[i].Style.BackColor = Color.White;
-
-            //    }
-
-
-
-            //}
-
-
-
-
-            thisWeek[0] = weekStart.Date;
-            thisWeek[1] = weekStart.AddDays(1).Date;
-            thisWeek[2] = weekStart.AddDays(2).Date;
-            thisWeek[3] = weekStart.AddDays(3).Date;
-            thisWeek[4] = weekStart.AddDays(4).Date;
-            thisWeek[5] = weekStart.AddDays(5).Date;
-            thisWeek[6] = weekStart.AddDays(6).Date;
-
-            cmdAppointment.Parameters["@FrmDt"].Value = weekStart;
-            cmdAppointment.Parameters["@ToDt"].Value = weekEnd.AddDays(6);
-            daAppointment.Fill(dsKaizen, "Appointment");
-
-
-
-
-
-
-
-
-            //daAppointment.FillSchema(dsKaizen, SchemaType.Source, "Appointment");
-            // daAppointment.Fill(dsKaizen, "Appointment");
-            //dgvApp.DataSource = dsKaizen.Tables["Appointment"];
-
-            foreach (DataRow dr in dsKaizen.Tables["Appointment"].Rows)
-            {
-                string startTime = (dr["AppTime"].ToString());
-
-                for (int i = 0; i < 7; i++)
-                {
-                    if ((dr["AppDate"]).Equals(thisWeek[i]))
-                    {
-
-                        for (int j = 0; j < 9; j++)
-                        {
-
-
-                            if (ATime[j].Equals(startTime))
-                            {
-                                dgvApp.Rows[j].Cells[i].Style.BackColor = Color.Blue;
-                                dgvApp.Rows[j].Cells[i].Value = dr["AppID"].ToString();
-                                for (int k = 1; k <= Convert.ToInt32(dr["Duration"]); k++)
-                                {
-                                    dgvApp.Rows[j + k].Cells[i].Style.BackColor = Color.MediumBlue;
-
-                                    if (k.Equals(1))
-                                    {
-                                        dgvApp.Rows[j + k].Cells[i].Value = dr["StaffID"].ToString();
-                                    }
-                                    else if (k.Equals(2))
-                                    {
-                                        dgvApp.Rows[j + k].Cells[i].Value = dr["TransID"].ToString();
-                                    }
-                                    else if (k.Equals(3))
-                                    {
-                                        dgvApp.Rows[j + k].Cells[i].Value = dr["AppDate"].ToString();
-                                    }
-
-                                }
-                            }
-
-
-
-                        }
-                    }
-                }
-
-
-
-            }
-
-
-
-            dgvApp.Rows.Add(9);
+            
+            DisplayApps();
+            
+           
 
 
 
@@ -538,42 +428,9 @@ namespace KaizenMain
                 {
                     case 0:
                         {
-                            //for (int i = 0; i < 7; i++)
-                            //{
-                            //    for (int j = 0; j < 9; j++)
-                            //    {
-                            //        dgvApp.Rows[j].Cells[i].Value = null;
-                            //        dgvApp.Rows[j].Cells[i].Style.BackColor = Color.White;
-
-                            //    }
-
-
-
-                            //}
-
-                            DateTime weekStart = this.dateTimePicker1.Value.Date;
-                            DateTime weekEnd = this.dateTimePicker1.Value.AddDays(6);
-
-
-                            thisWeek[0] = weekStart.Date;
-                            thisWeek[1] = weekStart.AddDays(1).Date;
-                            thisWeek[2] = weekStart.AddDays(2).Date;
-                            thisWeek[3] = weekStart.AddDays(3).Date;
-                            thisWeek[4] = weekStart.AddDays(4).Date;
-                            thisWeek[5] = weekStart.AddDays(5).Date;
-                            thisWeek[6] = weekStart.AddDays(6).Date;
-                            DateTime dt = new DateTime(2020,01,15);
-                            DateTime td = new DateTime(2080,12,25);
-                            
-                            cmdAppointment.Parameters["@FrmDt"].Value = dt;
-                            cmdAppointment.Parameters["@ToDt"].Value = td;
-
-
-
-                            dsKaizen.Tables["Appointment"].Clear();
-                            daAppointment.Fill(dsKaizen, "Appointment");
+                            DisplayApps();
                            
-                           
+                            daAll.Fill(dsKaizen, "Appointment");
 
                             break;
                         }
@@ -708,7 +565,7 @@ namespace KaizenMain
             {
                
                 
-                myAppointment.AppTime = txtTime.Text.Trim();
+                myAppointment.AppTime = cmbAddTime.Text.Trim();
 
             }
 
@@ -720,7 +577,7 @@ namespace KaizenMain
 
             try
             {
-                myAppointment.Duration = Convert.ToInt32(txtDur.Text.Trim());
+                myAppointment.Duration = Convert.ToInt32(cmbDuration.Text.Trim());
             }
 
             catch (MyException MyEx)
@@ -785,16 +642,16 @@ namespace KaizenMain
                     drAppointment["AppID"] = myAppointment.AppID;
                     drAppointment["DateBooked"] = myAppointment.DateBooked;
                     drAppointment["AppDate"] = myAppointment.Appdate;
-                    drAppointment["AppTime"] = txtTime.Text;
-                    drAppointment["Duration"] = Convert.ToInt32(txtDur.Text);
+                    drAppointment["AppTime"] = cmbAddTime.Text;
+                    drAppointment["Duration"] = Convert.ToInt32(cmbDuration.Text);
                     drAppointment["StaffID"] = myAppointment.StaffID;
                     drAppointment["TransID"] = myAppointment.TransID;
 
 
                     dsKaizen.Tables["Appointment"].Rows.Add(drAppointment);
-                    daAppointment.Update(dsKaizen, "Appointment");
-                    
-
+                    SqlCommandBuilder daAppoinment = new SqlCommandBuilder(daAppointment);
+                    daAppointment.UpdateCommand = daAppoinment.GetUpdateCommand();
+                    daAppointment.Update(dsKaizen,"Appointment");
                     MessageBox.Show("Appointment Added");
 
                     if (MessageBox.Show("Do you wish to add another Appointment?", "Add Appointment", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
@@ -828,133 +685,7 @@ namespace KaizenMain
 
         private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
-            dateChanged = true;
-            
-          
-            
-
-            DateTime dt3 = this.dateTimePicker1.Value.Date;
-            label1.Text = dt3.DayOfWeek.ToString();
-
-            DateTime dt4 = this.dateTimePicker1.Value.Date.AddDays(1);
-            DayLabel2.Text = dt4.DayOfWeek.ToString();
-
-            DateTime dt5 = this.dateTimePicker1.Value.Date.AddDays(2);
-            DayLabel3.Text = dt5.DayOfWeek.ToString();
-
-            DateTime dt6 = this.dateTimePicker1.Value.Date.AddDays(3);
-            DayLabel4.Text = dt6.DayOfWeek.ToString();
-
-            DateTime dt7 = this.dateTimePicker1.Value.Date.AddDays(4);
-            DayLabel5.Text = dt7.DayOfWeek.ToString();
-
-            DateTime dt8 = this.dateTimePicker1.Value.Date.AddDays(5);
-            DayLabel6.Text = dt8.DayOfWeek.ToString();
-
-            DateTime dt9 = this.dateTimePicker1.Value.Date.AddDays(6);
-            DayLabel7.Text = dt9.DayOfWeek.ToString();
-
-            DateTime weekStart = this.dateTimePicker1.Value.Date;
-            DateTime weekEnd = this.dateTimePicker1.Value.AddDays(6);
-
-            DateTime dt12 = this.dateTimePicker1.Value.Date;
-
-            dgvApp.Columns[0].HeaderText = dt12.AddDays(0).ToShortDateString();
-            dgvApp.Columns[1].HeaderText = dt12.AddDays(1).ToShortDateString();
-            dgvApp.Columns[2].HeaderText = dt12.AddDays(2).ToShortDateString();
-            dgvApp.Columns[3].HeaderText = dt12.AddDays(3).ToShortDateString();
-            dgvApp.Columns[4].HeaderText = dt12.AddDays(4).ToShortDateString();
-            dgvApp.Columns[5].HeaderText = dt12.AddDays(5).ToShortDateString();
-            dgvApp.Columns[6].HeaderText = dt12.AddDays(6).ToShortDateString();
-
-
-
-
-            for (int i = 0; i < 7; i++)
-            {
-                for (int j = 0; j < 9; j++)
-                {
-                    dgvApp.Rows[j].Cells[i].Value = null;
-                    dgvApp.Rows[j].Cells[i].Style.BackColor = Color.White;
-
-                }
-
-
-
-            }
-
-
-
-
-            thisWeek[0] = weekStart.Date;
-            thisWeek[1] = weekStart.AddDays(1).Date;
-            thisWeek[2] = weekStart.AddDays(2).Date;
-            thisWeek[3] = weekStart.AddDays(3).Date;
-            thisWeek[4] = weekStart.AddDays(4).Date;
-            thisWeek[5] = weekStart.AddDays(5).Date;
-            thisWeek[6] = weekStart.AddDays(6).Date;
-
-            cmdAppointment.Parameters["@FrmDt"].Value = weekStart;
-            cmdAppointment.Parameters["@ToDt"].Value = weekEnd.AddDays(6);
-            daAppointment.Fill(dsKaizen, "Appointment");
-
-
-            
-
-
-
-
-
-            //daAppointment.FillSchema(dsKaizen, SchemaType.Source, "Appointment");
-            // daAppointment.Fill(dsKaizen, "Appointment");
-            //dgvApp.DataSource = dsKaizen.Tables["Appointment"];
-
-            foreach (DataRow dr in dsKaizen.Tables["Appointment"].Rows)
-            {
-               string startTime= (dr["AppTime"].ToString());
-
-                for (int i = 0; i < 7; i++)
-                {
-                    if ((dr["AppDate"]).Equals(thisWeek[i]))
-                    {
-
-                        for (int j = 0; j < 9; j++)
-                        {
-
-
-                            if (ATime[j].Equals(startTime))
-                            {
-                                dgvApp.Rows[j].Cells[i].Style.BackColor = Color.Blue;
-                                dgvApp.Rows[j].Cells[i].Value = dr["AppID"].ToString();
-                                for (int k = 1; k <= Convert.ToInt32(dr["Duration"]) ; k++)
-                                {
-                                    dgvApp.Rows[j + k].Cells[i].Style.BackColor = Color.MediumBlue;
-
-                                    if (k.Equals(1))
-                                    {
-                                        dgvApp.Rows[j + k].Cells[i].Value = dr["StaffID"].ToString();
-                                    }
-                                    else if (k.Equals(2))
-                                    {
-                                        dgvApp.Rows[j + k].Cells[i].Value = dr["TransID"].ToString();
-                                    }
-                                    else if (k.Equals(3))
-                                    {
-                                        dgvApp.Rows[j + k].Cells[i].Value = dr["AppDate"].ToString();
-                                    }
-
-                                }
-                            }
-
-
-
-                        }
-                    }
-                }
-
-
-
-            }
+            DisplayApps();
 
 
 
@@ -964,11 +695,8 @@ namespace KaizenMain
         private void btnApp_Click(object sender, EventArgs e)
         {
 
-            //dgvApp.Rows[0].Cells[0].Style.BackColor = Color.LightGreen;
-            //dgvApp.Rows[2].Cells[1].Style.SelectionBackColor = Color.AliceBlue;
-            //dgvApp.Rows[2].Cells[1].Style.ForeColor = Color.Red;
+            tabApp.SelectedIndex = 2;
 
-            
         }
 
         private void tabApp_Validated(object sender, EventArgs e)
@@ -1019,6 +747,19 @@ namespace KaizenMain
 
         }
 
+        private void dtpAppDate_ValueChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cmbStaff_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+            DisplayApps();
+
+        }
+
         void AddTabValidate(object sender, CancelEventArgs e)
         {
             if (dgvApp.SelectedRows.Count == 0)
@@ -1062,5 +803,128 @@ namespace KaizenMain
                 AppIDSelected = IDNumber;
             }
         }
+
+        public void DisplayApps()
+        {
+            DateTime dt3 = this.dateTimePicker1.Value.Date;
+            label1.Text = dt3.DayOfWeek.ToString();
+
+            DateTime dt4 = this.dateTimePicker1.Value.Date.AddDays(1);
+            DayLabel2.Text = dt4.DayOfWeek.ToString();
+
+            DateTime dt5 = this.dateTimePicker1.Value.Date.AddDays(2);
+            DayLabel3.Text = dt5.DayOfWeek.ToString();
+
+            DateTime dt6 = this.dateTimePicker1.Value.Date.AddDays(3);
+            DayLabel4.Text = dt6.DayOfWeek.ToString();
+
+            DateTime dt7 = this.dateTimePicker1.Value.Date.AddDays(4);
+            DayLabel5.Text = dt7.DayOfWeek.ToString();
+
+            DateTime dt8 = this.dateTimePicker1.Value.Date.AddDays(5);
+            DayLabel6.Text = dt8.DayOfWeek.ToString();
+
+            DateTime dt9 = this.dateTimePicker1.Value.Date.AddDays(6);
+            DayLabel7.Text = dt9.DayOfWeek.ToString();
+
+
+
+            DateTime dt12 = this.dateTimePicker1.Value.Date;
+
+            dgvApp.Columns[0].HeaderText = dt12.AddDays(0).ToShortDateString();
+            dgvApp.Columns[1].HeaderText = dt12.AddDays(1).ToShortDateString();
+            dgvApp.Columns[2].HeaderText = dt12.AddDays(2).ToShortDateString();
+            dgvApp.Columns[3].HeaderText = dt12.AddDays(3).ToShortDateString();
+            dgvApp.Columns[4].HeaderText = dt12.AddDays(4).ToShortDateString();
+            dgvApp.Columns[5].HeaderText = dt12.AddDays(5).ToShortDateString();
+            dgvApp.Columns[6].HeaderText = dt12.AddDays(6).ToShortDateString();
+
+
+            dgvApp.Rows.Add(9);
+
+            for (int i = 0; i < 7; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    dgvApp.Rows[j].Cells[i].Value = null;
+                    dgvApp.Rows[j].Cells[i].Style.BackColor = Color.White;
+
+                }
+
+
+
+            }
+            DateTime weekStart = this.dateTimePicker1.Value.Date;
+            DateTime weekEnd = this.dateTimePicker1.Value.AddDays(6);
+
+            thisWeek[0] = weekStart.Date;
+            thisWeek[1] = weekStart.AddDays(1).Date;
+            thisWeek[2] = weekStart.AddDays(2).Date;
+            thisWeek[3] = weekStart.AddDays(3).Date;
+            thisWeek[4] = weekStart.AddDays(4).Date;
+            thisWeek[5] = weekStart.AddDays(5).Date;
+            thisWeek[6] = weekStart.AddDays(6).Date;
+
+            cmdAppointment.Parameters["@FrmDt"].Value = weekStart;
+            cmdAppointment.Parameters["@ToDt"].Value = weekEnd.AddDays(6);
+            cmdAppointment.Parameters["@StaffID"].Value = cmbStaff.SelectedValue;
+            daAppointment.Fill(dsKaizen, "Appointment");
+
+            foreach (DataRow dr in dsKaizen.Tables["Appointment"].Rows)
+            {
+                string startTime = (dr["AppTime"].ToString());
+
+                for (int i = 0; i < 7; i++)
+                {
+                    if ((dr["AppDate"]).Equals(thisWeek[i]) && dr["StaffID"].Equals(cmbStaff.SelectedValue))
+                    {
+
+                        for (int j = 0; j < 9; j++)
+                        {
+
+
+                            if (ATime[j].Equals(startTime))
+                            {
+                                dgvApp.Rows[j].Cells[i].Style.BackColor = Color.Blue;
+                                dgvApp.Rows[j].Cells[i].Value = dr["AppID"].ToString();
+                                for (int k = 1; k <= Convert.ToInt32(dr["Duration"]); k++)
+                                {
+                                    dgvApp.Rows[j + k].Cells[i].Style.BackColor = Color.MediumBlue;
+
+                                    if (k.Equals(1))
+                                    {
+                                        dgvApp.Rows[j + k].Cells[i].Value = dr["StaffID"].ToString();
+                                    }
+                                    else if (k.Equals(2))
+                                    {
+                                        dgvApp.Rows[j + k].Cells[i].Value = dr["TransID"].ToString();
+                                    }
+                                    else if (k.Equals(3))
+                                    {
+                                        dgvApp.Rows[j + k].Cells[i].Value = dr["AppDate"].ToString();
+                                    }
+
+                                }
+                            }
+
+
+
+                        }
+                    }
+                }
+
+
+
+            }
+
+
+
+
+
+
+
+        }
+
+       
     }
 }

@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Appointment));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabApp = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
             this.txtYear = new System.Windows.Forms.TextBox();
@@ -125,13 +125,12 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cmbStaff = new System.Windows.Forms.ComboBox();
             this.roundButton3 = new KaizenMain.RoundButton();
             this.roundButton2 = new KaizenMain.RoundButton();
             this.roundButton1 = new KaizenMain.RoundButton();
             this.btnApp = new KaizenMain.RoundButton();
             this.btnAddApp = new KaizenMain.RoundButton();
-            this.txtTime = new System.Windows.Forms.TextBox();
-            this.txtDur = new System.Windows.Forms.TextBox();
             this.tabApp.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -168,7 +167,7 @@
             this.tabApp.Location = new System.Drawing.Point(4, 2);
             this.tabApp.Name = "tabApp";
             this.tabApp.SelectedIndex = 0;
-            this.tabApp.Size = new System.Drawing.Size(950, 721);
+            this.tabApp.Size = new System.Drawing.Size(968, 721);
             this.tabApp.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabApp.TabIndex = 0;
             this.tabApp.SelectedIndexChanged += new System.EventHandler(this.tabApp_SelectedIndexChanged);
@@ -179,6 +178,7 @@
             this.tabDisplay.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabDisplay.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabDisplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.tabDisplay.Controls.Add(this.cmbStaff);
             this.tabDisplay.Controls.Add(this.txtYear);
             this.tabDisplay.Controls.Add(this.DayLabel7);
             this.tabDisplay.Controls.Add(this.DayLabel6);
@@ -208,7 +208,7 @@
             this.tabDisplay.Location = new System.Drawing.Point(4, 29);
             this.tabDisplay.Name = "tabDisplay";
             this.tabDisplay.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDisplay.Size = new System.Drawing.Size(942, 688);
+            this.tabDisplay.Size = new System.Drawing.Size(960, 688);
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "DISPLAY";
             this.tabDisplay.Click += new System.EventHandler(this.tabDisplay_Click);
@@ -426,14 +426,14 @@
             this.dgvApp.AllowUserToOrderColumns = true;
             this.dgvApp.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvApp.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvApp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvApp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvApp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvApp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Monday,
@@ -443,14 +443,14 @@
             this.Friday,
             this.Sat,
             this.Sun});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvApp.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvApp.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvApp.EnableHeadersVisualStyles = false;
             this.dgvApp.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvApp.Location = new System.Drawing.Point(55, 80);
@@ -556,7 +556,7 @@
             this.tabSearch.Location = new System.Drawing.Point(4, 29);
             this.tabSearch.Name = "tabSearch";
             this.tabSearch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSearch.Size = new System.Drawing.Size(942, 688);
+            this.tabSearch.Size = new System.Drawing.Size(960, 688);
             this.tabSearch.TabIndex = 4;
             this.tabSearch.Text = "SEARCH";
             this.tabSearch.UseVisualStyleBackColor = true;
@@ -704,8 +704,6 @@
             // 
             this.tabAdd.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabAdd.Controls.Add(this.txtDur);
-            this.tabAdd.Controls.Add(this.txtTime);
             this.tabAdd.Controls.Add(this.cmbAddTime);
             this.tabAdd.Controls.Add(this.cmbDuration);
             this.tabAdd.Controls.Add(this.cmbATransID);
@@ -724,7 +722,7 @@
             this.tabAdd.Location = new System.Drawing.Point(4, 29);
             this.tabAdd.Name = "tabAdd";
             this.tabAdd.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAdd.Size = new System.Drawing.Size(942, 688);
+            this.tabAdd.Size = new System.Drawing.Size(960, 688);
             this.tabAdd.TabIndex = 1;
             this.tabAdd.Text = "ADD";
             this.tabAdd.UseVisualStyleBackColor = true;
@@ -777,6 +775,7 @@
             this.dtpAppDate.Name = "dtpAppDate";
             this.dtpAppDate.Size = new System.Drawing.Size(199, 26);
             this.dtpAppDate.TabIndex = 15;
+            this.dtpAppDate.ValueChanged += new System.EventHandler(this.dtpAppDate_ValueChanged);
             // 
             // lblAddAppID
             // 
@@ -878,7 +877,7 @@
             this.tabEdit.Location = new System.Drawing.Point(4, 29);
             this.tabEdit.Name = "tabEdit";
             this.tabEdit.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEdit.Size = new System.Drawing.Size(942, 688);
+            this.tabEdit.Size = new System.Drawing.Size(960, 688);
             this.tabEdit.TabIndex = 2;
             this.tabEdit.Text = "EDIT";
             this.tabEdit.UseVisualStyleBackColor = true;
@@ -1037,7 +1036,7 @@
             this.tabDelete.Location = new System.Drawing.Point(4, 29);
             this.tabDelete.Name = "tabDelete";
             this.tabDelete.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDelete.Size = new System.Drawing.Size(942, 688);
+            this.tabDelete.Size = new System.Drawing.Size(960, 688);
             this.tabDelete.TabIndex = 3;
             this.tabDelete.Text = "DELETE";
             this.tabDelete.UseVisualStyleBackColor = true;
@@ -1178,6 +1177,15 @@
             // 
             this.errP.ContainerControl = this;
             // 
+            // cmbStaff
+            // 
+            this.cmbStaff.FormattingEnabled = true;
+            this.cmbStaff.Location = new System.Drawing.Point(833, 80);
+            this.cmbStaff.Name = "cmbStaff";
+            this.cmbStaff.Size = new System.Drawing.Size(121, 28);
+            this.cmbStaff.TabIndex = 237;
+            this.cmbStaff.SelectedIndexChanged += new System.EventHandler(this.cmbStaff_SelectedIndexChanged);
+            // 
             // roundButton3
             // 
             this.roundButton3.BorderColor = System.Drawing.Color.Silver;
@@ -1188,7 +1196,7 @@
             this.roundButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton3.Location = new System.Drawing.Point(495, 571);
+            this.roundButton3.Location = new System.Drawing.Point(836, 300);
             this.roundButton3.Name = "roundButton3";
             this.roundButton3.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
             this.roundButton3.onHoverButtonColor = System.Drawing.Color.White;
@@ -1209,7 +1217,7 @@
             this.roundButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton2.Location = new System.Drawing.Point(348, 571);
+            this.roundButton2.Location = new System.Drawing.Point(836, 240);
             this.roundButton2.Name = "roundButton2";
             this.roundButton2.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
             this.roundButton2.onHoverButtonColor = System.Drawing.Color.White;
@@ -1230,7 +1238,7 @@
             this.roundButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton1.Location = new System.Drawing.Point(207, 571);
+            this.roundButton1.Location = new System.Drawing.Point(839, 184);
             this.roundButton1.Name = "roundButton1";
             this.roundButton1.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
             this.roundButton1.onHoverButtonColor = System.Drawing.Color.White;
@@ -1251,7 +1259,7 @@
             this.btnApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApp.Location = new System.Drawing.Point(55, 571);
+            this.btnApp.Location = new System.Drawing.Point(836, 129);
             this.btnApp.Name = "btnApp";
             this.btnApp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
             this.btnApp.onHoverButtonColor = System.Drawing.Color.White;
@@ -1285,26 +1293,11 @@
             this.btnAddApp.UseVisualStyleBackColor = true;
             this.btnAddApp.Click += new System.EventHandler(this.btnAddApp_Click_1);
             // 
-            // txtTime
-            // 
-            this.txtTime.Location = new System.Drawing.Point(633, 160);
-            this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(100, 26);
-            this.txtTime.TabIndex = 228;
-            // 
-            // txtDur
-            // 
-            this.txtDur.Location = new System.Drawing.Point(513, 208);
-            this.txtDur.Name = "txtDur";
-            this.txtDur.Size = new System.Drawing.Size(100, 26);
-            this.txtDur.TabIndex = 229;
-            this.txtDur.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
-            // 
             // Appointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 749);
+            this.ClientSize = new System.Drawing.Size(984, 749);
             this.Controls.Add(this.tabApp);
             this.Name = "Appointment";
             this.Text = "Appointment";
@@ -1440,7 +1433,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Sun;
         private System.Windows.Forms.ComboBox cmbDuration;
         private System.Windows.Forms.ComboBox cmbAddTime;
-        private System.Windows.Forms.TextBox txtDur;
-        private System.Windows.Forms.TextBox txtTime;
+        private System.Windows.Forms.ComboBox cmbStaff;
     }
 }
