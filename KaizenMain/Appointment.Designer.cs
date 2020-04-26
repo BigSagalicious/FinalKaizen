@@ -34,6 +34,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabApp = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
+            this.txtDisSur = new System.Windows.Forms.TextBox();
+            this.txtDisFor = new System.Windows.Forms.TextBox();
+            this.lblStaffSelection = new System.Windows.Forms.Label();
+            this.cmbStaff = new System.Windows.Forms.ComboBox();
             this.txtYear = new System.Windows.Forms.TextBox();
             this.DayLabel7 = new System.Windows.Forms.Label();
             this.DayLabel6 = new System.Windows.Forms.Label();
@@ -43,6 +47,10 @@
             this.DayLabel2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.roundButton3 = new KaizenMain.RoundButton();
+            this.roundButton2 = new KaizenMain.RoundButton();
+            this.roundButton1 = new KaizenMain.RoundButton();
+            this.btnApp = new KaizenMain.RoundButton();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -92,19 +100,20 @@
             this.lblAppDate = new System.Windows.Forms.Label();
             this.lblDateB = new System.Windows.Forms.Label();
             this.lblAppID = new System.Windows.Forms.Label();
+            this.btnAddApp = new KaizenMain.RoundButton();
             this.tabEdit = new System.Windows.Forms.TabPage();
+            this.cmbEdTimes = new System.Windows.Forms.ComboBox();
+            this.lblEditAID = new System.Windows.Forms.Label();
+            this.cmbEditTransID = new System.Windows.Forms.ComboBox();
+            this.cmbEdStaffID = new System.Windows.Forms.ComboBox();
+            this.cmbEdDur = new System.Windows.Forms.ComboBox();
+            this.dtpEdAppDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpEdAppBooked = new System.Windows.Forms.DateTimePicker();
+            this.btnEditApp = new KaizenMain.RoundButton();
             this.pbEdSearch = new System.Windows.Forms.PictureBox();
-            this.txtEdSearch = new System.Windows.Forms.TextBox();
-            this.txtEdTransID = new System.Windows.Forms.TextBox();
-            this.txtEDAppDate = new System.Windows.Forms.TextBox();
-            this.txtEDAppTime = new System.Windows.Forms.TextBox();
-            this.txtEDStaffID = new System.Windows.Forms.TextBox();
-            this.txtEdDuration = new System.Windows.Forms.TextBox();
-            this.txtEDDateB = new System.Windows.Forms.TextBox();
             this.lblEDStaffID = new System.Windows.Forms.Label();
             this.lblEDDuration = new System.Windows.Forms.Label();
             this.lblEDTransID = new System.Windows.Forms.Label();
-            this.lblEDAppTime = new System.Windows.Forms.Label();
             this.lblEDAppDate = new System.Windows.Forms.Label();
             this.lblEdDateB = new System.Windows.Forms.Label();
             this.lblEdAppID = new System.Windows.Forms.Label();
@@ -125,12 +134,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cmbStaff = new System.Windows.Forms.ComboBox();
-            this.roundButton3 = new KaizenMain.RoundButton();
-            this.roundButton2 = new KaizenMain.RoundButton();
-            this.roundButton1 = new KaizenMain.RoundButton();
-            this.btnApp = new KaizenMain.RoundButton();
-            this.btnAddApp = new KaizenMain.RoundButton();
             this.tabApp.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -178,6 +181,9 @@
             this.tabDisplay.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabDisplay.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabDisplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.tabDisplay.Controls.Add(this.txtDisSur);
+            this.tabDisplay.Controls.Add(this.txtDisFor);
+            this.tabDisplay.Controls.Add(this.lblStaffSelection);
             this.tabDisplay.Controls.Add(this.cmbStaff);
             this.tabDisplay.Controls.Add(this.txtYear);
             this.tabDisplay.Controls.Add(this.DayLabel7);
@@ -212,6 +218,38 @@
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "DISPLAY";
             this.tabDisplay.Click += new System.EventHandler(this.tabDisplay_Click);
+            // 
+            // txtDisSur
+            // 
+            this.txtDisSur.Location = new System.Drawing.Point(833, 178);
+            this.txtDisSur.Name = "txtDisSur";
+            this.txtDisSur.Size = new System.Drawing.Size(121, 26);
+            this.txtDisSur.TabIndex = 240;
+            // 
+            // txtDisFor
+            // 
+            this.txtDisFor.Location = new System.Drawing.Point(833, 143);
+            this.txtDisFor.Name = "txtDisFor";
+            this.txtDisFor.Size = new System.Drawing.Size(121, 26);
+            this.txtDisFor.TabIndex = 239;
+            // 
+            // lblStaffSelection
+            // 
+            this.lblStaffSelection.AutoSize = true;
+            this.lblStaffSelection.Location = new System.Drawing.Point(832, 80);
+            this.lblStaffSelection.Name = "lblStaffSelection";
+            this.lblStaffSelection.Size = new System.Drawing.Size(129, 20);
+            this.lblStaffSelection.TabIndex = 238;
+            this.lblStaffSelection.Text = "Staff Selection";
+            // 
+            // cmbStaff
+            // 
+            this.cmbStaff.FormattingEnabled = true;
+            this.cmbStaff.Location = new System.Drawing.Point(833, 108);
+            this.cmbStaff.Name = "cmbStaff";
+            this.cmbStaff.Size = new System.Drawing.Size(121, 28);
+            this.cmbStaff.TabIndex = 237;
+            this.cmbStaff.SelectedIndexChanged += new System.EventHandler(this.cmbStaff_SelectedIndexChanged);
             // 
             // txtYear
             // 
@@ -309,6 +347,94 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
             this.dateTimePicker1.TabIndex = 228;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
+            // 
+            // roundButton3
+            // 
+            this.roundButton3.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton3.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton3.FlatAppearance.BorderSize = 0;
+            this.roundButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton3.Location = new System.Drawing.Point(836, 396);
+            this.roundButton3.Name = "roundButton3";
+            this.roundButton3.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton3.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton3.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton3.Size = new System.Drawing.Size(118, 40);
+            this.roundButton3.TabIndex = 227;
+            this.roundButton3.Text = "DELETE";
+            this.roundButton3.TextColor = System.Drawing.Color.White;
+            this.roundButton3.UseVisualStyleBackColor = true;
+            this.roundButton3.Click += new System.EventHandler(this.roundButton3_Click);
+            // 
+            // roundButton2
+            // 
+            this.roundButton2.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton2.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton2.FlatAppearance.BorderSize = 0;
+            this.roundButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton2.Location = new System.Drawing.Point(839, 339);
+            this.roundButton2.Name = "roundButton2";
+            this.roundButton2.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton2.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton2.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton2.Size = new System.Drawing.Size(118, 40);
+            this.roundButton2.TabIndex = 226;
+            this.roundButton2.Text = "SEARCH";
+            this.roundButton2.TextColor = System.Drawing.Color.White;
+            this.roundButton2.UseVisualStyleBackColor = true;
+            this.roundButton2.Click += new System.EventHandler(this.roundButton2_Click);
+            // 
+            // roundButton1
+            // 
+            this.roundButton1.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton1.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton1.FlatAppearance.BorderSize = 0;
+            this.roundButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton1.Location = new System.Drawing.Point(839, 279);
+            this.roundButton1.Name = "roundButton1";
+            this.roundButton1.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton1.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton1.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton1.Size = new System.Drawing.Size(118, 40);
+            this.roundButton1.TabIndex = 225;
+            this.roundButton1.Text = "EDIT";
+            this.roundButton1.TextColor = System.Drawing.Color.White;
+            this.roundButton1.UseVisualStyleBackColor = true;
+            this.roundButton1.Click += new System.EventHandler(this.roundButton1_Click_1);
+            // 
+            // btnApp
+            // 
+            this.btnApp.BorderColor = System.Drawing.Color.Silver;
+            this.btnApp.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnApp.FlatAppearance.BorderSize = 0;
+            this.btnApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApp.Location = new System.Drawing.Point(839, 221);
+            this.btnApp.Name = "btnApp";
+            this.btnApp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnApp.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnApp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnApp.Size = new System.Drawing.Size(118, 40);
+            this.btnApp.TabIndex = 224;
+            this.btnApp.Text = "ADD ";
+            this.btnApp.TextColor = System.Drawing.Color.White;
+            this.btnApp.UseVisualStyleBackColor = true;
+            this.btnApp.Click += new System.EventHandler(this.btnApp_Click);
             // 
             // pictureBox11
             // 
@@ -573,6 +699,7 @@
             this.iconSearchAppID.Size = new System.Drawing.Size(43, 31);
             this.iconSearchAppID.TabIndex = 226;
             this.iconSearchAppID.TabStop = false;
+            this.iconSearchAppID.Click += new System.EventHandler(this.iconSearchAppID_Click);
             // 
             // txtSearchID
             // 
@@ -854,22 +981,44 @@
             this.lblAppID.Text = "AppID";
             this.lblAppID.Click += new System.EventHandler(this.lblAppID_Click);
             // 
+            // btnAddApp
+            // 
+            this.btnAddApp.BorderColor = System.Drawing.Color.Silver;
+            this.btnAddApp.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnAddApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddApp.FlatAppearance.BorderSize = 0;
+            this.btnAddApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAddApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAddApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddApp.Location = new System.Drawing.Point(633, 77);
+            this.btnAddApp.Name = "btnAddApp";
+            this.btnAddApp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddApp.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnAddApp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddApp.Size = new System.Drawing.Size(214, 40);
+            this.btnAddApp.TabIndex = 223;
+            this.btnAddApp.Text = "ADD APPOINTMENT";
+            this.btnAddApp.TextColor = System.Drawing.Color.White;
+            this.btnAddApp.UseVisualStyleBackColor = true;
+            this.btnAddApp.Click += new System.EventHandler(this.btnAddApp_Click_1);
+            // 
             // tabEdit
             // 
             this.tabEdit.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabEdit.Controls.Add(this.cmbEdTimes);
+            this.tabEdit.Controls.Add(this.lblEditAID);
+            this.tabEdit.Controls.Add(this.cmbEditTransID);
+            this.tabEdit.Controls.Add(this.cmbEdStaffID);
+            this.tabEdit.Controls.Add(this.cmbEdDur);
+            this.tabEdit.Controls.Add(this.dtpEdAppDate);
+            this.tabEdit.Controls.Add(this.dtpEdAppBooked);
+            this.tabEdit.Controls.Add(this.btnEditApp);
             this.tabEdit.Controls.Add(this.pbEdSearch);
-            this.tabEdit.Controls.Add(this.txtEdSearch);
-            this.tabEdit.Controls.Add(this.txtEdTransID);
-            this.tabEdit.Controls.Add(this.txtEDAppDate);
-            this.tabEdit.Controls.Add(this.txtEDAppTime);
-            this.tabEdit.Controls.Add(this.txtEDStaffID);
-            this.tabEdit.Controls.Add(this.txtEdDuration);
-            this.tabEdit.Controls.Add(this.txtEDDateB);
             this.tabEdit.Controls.Add(this.lblEDStaffID);
             this.tabEdit.Controls.Add(this.lblEDDuration);
             this.tabEdit.Controls.Add(this.lblEDTransID);
-            this.tabEdit.Controls.Add(this.lblEDAppTime);
             this.tabEdit.Controls.Add(this.lblEDAppDate);
             this.tabEdit.Controls.Add(this.lblEdDateB);
             this.tabEdit.Controls.Add(this.lblEdAppID);
@@ -882,72 +1031,101 @@
             this.tabEdit.Text = "EDIT";
             this.tabEdit.UseVisualStyleBackColor = true;
             // 
+            // cmbEdTimes
+            // 
+            this.cmbEdTimes.FormattingEnabled = true;
+            this.cmbEdTimes.Location = new System.Drawing.Point(521, 155);
+            this.cmbEdTimes.Name = "cmbEdTimes";
+            this.cmbEdTimes.Size = new System.Drawing.Size(133, 28);
+            this.cmbEdTimes.TabIndex = 234;
+            // 
+            // lblEditAID
+            // 
+            this.lblEditAID.AutoSize = true;
+            this.lblEditAID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblEditAID.Location = new System.Drawing.Point(259, 54);
+            this.lblEditAID.Name = "lblEditAID";
+            this.lblEditAID.Size = new System.Drawing.Size(15, 20);
+            this.lblEditAID.TabIndex = 233;
+            this.lblEditAID.Text = "-";
+            // 
+            // cmbEditTransID
+            // 
+            this.cmbEditTransID.FormattingEnabled = true;
+            this.cmbEditTransID.Location = new System.Drawing.Point(259, 288);
+            this.cmbEditTransID.Name = "cmbEditTransID";
+            this.cmbEditTransID.Size = new System.Drawing.Size(229, 28);
+            this.cmbEditTransID.TabIndex = 232;
+            // 
+            // cmbEdStaffID
+            // 
+            this.cmbEdStaffID.FormattingEnabled = true;
+            this.cmbEdStaffID.Location = new System.Drawing.Point(259, 244);
+            this.cmbEdStaffID.Name = "cmbEdStaffID";
+            this.cmbEdStaffID.Size = new System.Drawing.Size(229, 28);
+            this.cmbEdStaffID.TabIndex = 231;
+            // 
+            // cmbEdDur
+            // 
+            this.cmbEdDur.FormattingEnabled = true;
+            this.cmbEdDur.Location = new System.Drawing.Point(259, 193);
+            this.cmbEdDur.Name = "cmbEdDur";
+            this.cmbEdDur.Size = new System.Drawing.Size(229, 28);
+            this.cmbEdDur.TabIndex = 230;
+            // 
+            // dtpEdAppDate
+            // 
+            this.dtpEdAppDate.Location = new System.Drawing.Point(259, 155);
+            this.dtpEdAppDate.Name = "dtpEdAppDate";
+            this.dtpEdAppDate.Size = new System.Drawing.Size(229, 26);
+            this.dtpEdAppDate.TabIndex = 229;
+            // 
+            // dtpEdAppBooked
+            // 
+            this.dtpEdAppBooked.Location = new System.Drawing.Point(259, 103);
+            this.dtpEdAppBooked.Name = "dtpEdAppBooked";
+            this.dtpEdAppBooked.Size = new System.Drawing.Size(229, 26);
+            this.dtpEdAppBooked.TabIndex = 228;
+            // 
+            // btnEditApp
+            // 
+            this.btnEditApp.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditApp.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEditApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditApp.FlatAppearance.BorderSize = 0;
+            this.btnEditApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditApp.Location = new System.Drawing.Point(640, 41);
+            this.btnEditApp.Name = "btnEditApp";
+            this.btnEditApp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditApp.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEditApp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditApp.Size = new System.Drawing.Size(214, 40);
+            this.btnEditApp.TabIndex = 227;
+            this.btnEditApp.Text = "EDIT ";
+            this.btnEditApp.TextColor = System.Drawing.Color.White;
+            this.btnEditApp.UseVisualStyleBackColor = true;
+            this.btnEditApp.Click += new System.EventHandler(this.btnEditApp_Click);
+            // 
             // pbEdSearch
             // 
             this.pbEdSearch.BackColor = System.Drawing.Color.Transparent;
             this.pbEdSearch.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
             this.pbEdSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbEdSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbEdSearch.Location = new System.Drawing.Point(362, 43);
+            this.pbEdSearch.Location = new System.Drawing.Point(416, 48);
             this.pbEdSearch.Name = "pbEdSearch";
             this.pbEdSearch.Size = new System.Drawing.Size(43, 31);
             this.pbEdSearch.TabIndex = 226;
             this.pbEdSearch.TabStop = false;
             // 
-            // txtEdSearch
-            // 
-            this.txtEdSearch.Location = new System.Drawing.Point(235, 48);
-            this.txtEdSearch.Name = "txtEdSearch";
-            this.txtEdSearch.Size = new System.Drawing.Size(110, 26);
-            this.txtEdSearch.TabIndex = 225;
-            // 
-            // txtEdTransID
-            // 
-            this.txtEdTransID.Location = new System.Drawing.Point(235, 333);
-            this.txtEdTransID.Name = "txtEdTransID";
-            this.txtEdTransID.Size = new System.Drawing.Size(229, 26);
-            this.txtEdTransID.TabIndex = 28;
-            // 
-            // txtEDAppDate
-            // 
-            this.txtEDAppDate.Location = new System.Drawing.Point(235, 155);
-            this.txtEDAppDate.Name = "txtEDAppDate";
-            this.txtEDAppDate.Size = new System.Drawing.Size(229, 26);
-            this.txtEDAppDate.TabIndex = 27;
-            // 
-            // txtEDAppTime
-            // 
-            this.txtEDAppTime.Location = new System.Drawing.Point(235, 202);
-            this.txtEDAppTime.Name = "txtEDAppTime";
-            this.txtEDAppTime.Size = new System.Drawing.Size(229, 26);
-            this.txtEDAppTime.TabIndex = 26;
-            // 
-            // txtEDStaffID
-            // 
-            this.txtEDStaffID.Location = new System.Drawing.Point(235, 238);
-            this.txtEDStaffID.Name = "txtEDStaffID";
-            this.txtEDStaffID.Size = new System.Drawing.Size(229, 26);
-            this.txtEDStaffID.TabIndex = 25;
-            // 
-            // txtEdDuration
-            // 
-            this.txtEdDuration.Location = new System.Drawing.Point(235, 280);
-            this.txtEdDuration.Name = "txtEdDuration";
-            this.txtEdDuration.Size = new System.Drawing.Size(229, 26);
-            this.txtEdDuration.TabIndex = 24;
-            // 
-            // txtEDDateB
-            // 
-            this.txtEDDateB.Location = new System.Drawing.Point(235, 109);
-            this.txtEDDateB.Name = "txtEDDateB";
-            this.txtEDDateB.Size = new System.Drawing.Size(229, 26);
-            this.txtEDDateB.TabIndex = 23;
-            // 
             // lblEDStaffID
             // 
             this.lblEDStaffID.AutoSize = true;
             this.lblEDStaffID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEDStaffID.Location = new System.Drawing.Point(54, 241);
+            this.lblEDStaffID.Location = new System.Drawing.Point(53, 252);
             this.lblEDStaffID.Name = "lblEDStaffID";
             this.lblEDStaffID.Size = new System.Drawing.Size(73, 20);
             this.lblEDStaffID.TabIndex = 21;
@@ -957,7 +1135,7 @@
             // 
             this.lblEDDuration.AutoSize = true;
             this.lblEDDuration.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEDDuration.Location = new System.Drawing.Point(54, 283);
+            this.lblEDDuration.Location = new System.Drawing.Point(53, 201);
             this.lblEDDuration.Name = "lblEDDuration";
             this.lblEDDuration.Size = new System.Drawing.Size(78, 20);
             this.lblEDDuration.TabIndex = 20;
@@ -967,21 +1145,11 @@
             // 
             this.lblEDTransID.AutoSize = true;
             this.lblEDTransID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEDTransID.Location = new System.Drawing.Point(59, 333);
+            this.lblEDTransID.Location = new System.Drawing.Point(53, 296);
             this.lblEDTransID.Name = "lblEDTransID";
             this.lblEDTransID.Size = new System.Drawing.Size(73, 20);
             this.lblEDTransID.TabIndex = 19;
             this.lblEDTransID.Text = "TransID";
-            // 
-            // lblEDAppTime
-            // 
-            this.lblEDAppTime.AutoSize = true;
-            this.lblEDAppTime.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEDAppTime.Location = new System.Drawing.Point(54, 202);
-            this.lblEDAppTime.Name = "lblEDAppTime";
-            this.lblEDAppTime.Size = new System.Drawing.Size(154, 20);
-            this.lblEDAppTime.TabIndex = 18;
-            this.lblEDAppTime.Text = "Appointment Time";
             // 
             // lblEDAppDate
             // 
@@ -989,9 +1157,9 @@
             this.lblEDAppDate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblEDAppDate.Location = new System.Drawing.Point(53, 155);
             this.lblEDAppDate.Name = "lblEDAppDate";
-            this.lblEDAppDate.Size = new System.Drawing.Size(155, 20);
+            this.lblEDAppDate.Size = new System.Drawing.Size(200, 20);
             this.lblEDAppDate.TabIndex = 17;
-            this.lblEDAppDate.Text = "Appointment Date";
+            this.lblEDAppDate.Text = "Appointment Date/TIme";
             // 
             // lblEdDateB
             // 
@@ -1177,122 +1345,6 @@
             // 
             this.errP.ContainerControl = this;
             // 
-            // cmbStaff
-            // 
-            this.cmbStaff.FormattingEnabled = true;
-            this.cmbStaff.Location = new System.Drawing.Point(833, 80);
-            this.cmbStaff.Name = "cmbStaff";
-            this.cmbStaff.Size = new System.Drawing.Size(121, 28);
-            this.cmbStaff.TabIndex = 237;
-            this.cmbStaff.SelectedIndexChanged += new System.EventHandler(this.cmbStaff_SelectedIndexChanged);
-            // 
-            // roundButton3
-            // 
-            this.roundButton3.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton3.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton3.FlatAppearance.BorderSize = 0;
-            this.roundButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton3.Location = new System.Drawing.Point(836, 300);
-            this.roundButton3.Name = "roundButton3";
-            this.roundButton3.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton3.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton3.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton3.Size = new System.Drawing.Size(118, 40);
-            this.roundButton3.TabIndex = 227;
-            this.roundButton3.Text = "DELETE";
-            this.roundButton3.TextColor = System.Drawing.Color.White;
-            this.roundButton3.UseVisualStyleBackColor = true;
-            // 
-            // roundButton2
-            // 
-            this.roundButton2.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton2.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton2.FlatAppearance.BorderSize = 0;
-            this.roundButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton2.Location = new System.Drawing.Point(836, 240);
-            this.roundButton2.Name = "roundButton2";
-            this.roundButton2.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton2.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton2.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton2.Size = new System.Drawing.Size(118, 40);
-            this.roundButton2.TabIndex = 226;
-            this.roundButton2.Text = "SEARCH";
-            this.roundButton2.TextColor = System.Drawing.Color.White;
-            this.roundButton2.UseVisualStyleBackColor = true;
-            // 
-            // roundButton1
-            // 
-            this.roundButton1.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton1.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton1.FlatAppearance.BorderSize = 0;
-            this.roundButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton1.Location = new System.Drawing.Point(839, 184);
-            this.roundButton1.Name = "roundButton1";
-            this.roundButton1.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton1.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton1.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton1.Size = new System.Drawing.Size(118, 40);
-            this.roundButton1.TabIndex = 225;
-            this.roundButton1.Text = "EDIT";
-            this.roundButton1.TextColor = System.Drawing.Color.White;
-            this.roundButton1.UseVisualStyleBackColor = true;
-            // 
-            // btnApp
-            // 
-            this.btnApp.BorderColor = System.Drawing.Color.Silver;
-            this.btnApp.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnApp.FlatAppearance.BorderSize = 0;
-            this.btnApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApp.Location = new System.Drawing.Point(836, 129);
-            this.btnApp.Name = "btnApp";
-            this.btnApp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnApp.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnApp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnApp.Size = new System.Drawing.Size(118, 40);
-            this.btnApp.TabIndex = 224;
-            this.btnApp.Text = "ADD ";
-            this.btnApp.TextColor = System.Drawing.Color.White;
-            this.btnApp.UseVisualStyleBackColor = true;
-            this.btnApp.Click += new System.EventHandler(this.btnApp_Click);
-            // 
-            // btnAddApp
-            // 
-            this.btnAddApp.BorderColor = System.Drawing.Color.Silver;
-            this.btnAddApp.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnAddApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddApp.FlatAppearance.BorderSize = 0;
-            this.btnAddApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAddApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAddApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddApp.Location = new System.Drawing.Point(633, 77);
-            this.btnAddApp.Name = "btnAddApp";
-            this.btnAddApp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddApp.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnAddApp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddApp.Size = new System.Drawing.Size(214, 40);
-            this.btnAddApp.TabIndex = 223;
-            this.btnAddApp.Text = "ADD APPOINTMENT";
-            this.btnAddApp.TextColor = System.Drawing.Color.White;
-            this.btnAddApp.UseVisualStyleBackColor = true;
-            this.btnAddApp.Click += new System.EventHandler(this.btnAddApp_Click_1);
-            // 
             // Appointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1361,16 +1413,9 @@
         private System.Windows.Forms.Label lblSeAppDate;
         private System.Windows.Forms.Label lblSeDateB;
         private System.Windows.Forms.Label lblSeAppID;
-        private System.Windows.Forms.TextBox txtEdTransID;
-        private System.Windows.Forms.TextBox txtEDAppDate;
-        private System.Windows.Forms.TextBox txtEDAppTime;
-        private System.Windows.Forms.TextBox txtEDStaffID;
-        private System.Windows.Forms.TextBox txtEdDuration;
-        private System.Windows.Forms.TextBox txtEDDateB;
         private System.Windows.Forms.Label lblEDStaffID;
         private System.Windows.Forms.Label lblEDDuration;
         private System.Windows.Forms.Label lblEDTransID;
-        private System.Windows.Forms.Label lblEDAppTime;
         private System.Windows.Forms.Label lblEDAppDate;
         private System.Windows.Forms.Label lblEdDateB;
         private System.Windows.Forms.Label lblEdAppID;
@@ -1390,8 +1435,6 @@
         private System.Windows.Forms.TextBox txtSeDateB;
         private System.Windows.Forms.PictureBox iconSearchAppID;
         private System.Windows.Forms.TextBox txtSearchID;
-        private System.Windows.Forms.PictureBox pbEdSearch;
-        private System.Windows.Forms.TextBox txtEdSearch;
         private System.Windows.Forms.PictureBox pbDlSearchIcon;
         private System.Windows.Forms.TextBox txtDLSearch;
         private System.Windows.Forms.ErrorProvider errP;
@@ -1434,5 +1477,17 @@
         private System.Windows.Forms.ComboBox cmbDuration;
         private System.Windows.Forms.ComboBox cmbAddTime;
         private System.Windows.Forms.ComboBox cmbStaff;
+        private System.Windows.Forms.TextBox txtDisSur;
+        private System.Windows.Forms.TextBox txtDisFor;
+        private System.Windows.Forms.Label lblStaffSelection;
+        private RoundButton btnEditApp;
+        private System.Windows.Forms.ComboBox cmbEdTimes;
+        private System.Windows.Forms.Label lblEditAID;
+        private System.Windows.Forms.ComboBox cmbEditTransID;
+        private System.Windows.Forms.ComboBox cmbEdStaffID;
+        private System.Windows.Forms.ComboBox cmbEdDur;
+        private System.Windows.Forms.DateTimePicker dtpEdAppDate;
+        private System.Windows.Forms.DateTimePicker dtpEdAppBooked;
+        private System.Windows.Forms.PictureBox pbEdSearch;
     }
 }
