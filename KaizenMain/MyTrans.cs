@@ -9,24 +9,24 @@ namespace KaizenMain
     class MyTrans
     {
         private String transID, transType, custID;
-        private double balOwed;
+        private double balOwed, transTotal;
         private char paid;
-        private DateTime transOn, startDate, endDate;
+        private DateTime transOn;
 
         public MyTrans()
         {
-            this.transID = ""; this.transType = ""; this.custID = "";          
-            this.balOwed = 0.00;
+            this.transID = ""; this.transType = ""; this.custID = "";
+            this.balOwed = 0.00; this.transTotal = 0.00;
             this.paid = '\0';
-            this.transOn = new DateTime(); this.startDate = new DateTime(); this.endDate = new DateTime();
+            this.transOn = new DateTime();
         }
 
-        public MyTrans(string transID, string transType, string custID, double balOwed ,char paid ,DateTime transOn, DateTime startDate, DateTime endDate)
+        public MyTrans(string transID, string transType, string custID, double balOwed, double transTotal, char paid ,DateTime transOn)
         {
             this.transID = transID; this.transType = transType; this.custID = custID;
-            this.balOwed = balOwed;
+            this.balOwed = balOwed; this.transTotal = transTotal;
             this.paid = paid;
-            this.transOn = transOn; this.startDate = startDate; this.endDate = endDate;
+            this.transOn = transOn; 
         }
 
         public string TransID
@@ -53,6 +53,11 @@ namespace KaizenMain
             set { balOwed = value; }
         }
 
+        public double TransTotal
+        {
+            get { return transTotal; }
+            set { transTotal = value; }
+        }
         public char Paid
         {
             get { return paid; }
@@ -65,16 +70,5 @@ namespace KaizenMain
             set { transOn = value; }
         }
 
-        public DateTime StartDate
-        {
-            get { return startDate; }
-            set { startDate = value; }
-        }
-
-        public DateTime EndDate
-        {
-            get { return endDate; }
-            set { endDate = value; }
-        }
     }
 }

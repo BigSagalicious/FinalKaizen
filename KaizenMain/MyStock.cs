@@ -80,26 +80,50 @@ namespace KaizenMain
         public int QtyInStock
         {
             get { return qtyInStock; }
-            set { qtyInStock = value; }
+            set
+            {
+                if (MyValidation.validIntNumber(value))
+                {
+                    qtyInStock = value;
+                }
+                 }
         }
 
 
         public double PurPrice
         {
             get { return purPrice; }
-            set { purPrice = value; }
+            set
+            {
+                if (MyValidation.validDoubNumber(value))
+                {
+                    purPrice = value;
+                }
+            }
         }
 
         public double RentalPrice
         {
             get { return rentalPrice; }
-            set { rentalPrice = value; }
+            set
+            {
+                if (MyValidation.validDoubNumber(value))
+                {
+                    rentalPrice = value;
+                }
+            }
         }
 
         public double ServicePrice
         {
             get { return servicePrice; }
-            set { servicePrice = value; }
+            set
+            {
+                if (MyValidation.validDoubNumber(value))
+                {
+                    servicePrice = value;
+                }
+            }
         }
     }
 }

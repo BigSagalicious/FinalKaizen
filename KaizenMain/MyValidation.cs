@@ -19,7 +19,28 @@ namespace KaizenMain
 
         }
 
+        public static bool validDoubNumber(Double number)
+        {
 
+            bool ok = true;
+            if (number <= 0.00) 
+            {
+                ok = false;
+            }
+            return ok;
+        }
+
+        public static bool validIntNumber(int number)
+        {
+
+            bool ok = true;
+            if (number >= 0)
+            {
+                ok = false;
+            }
+            
+            return ok;
+        }
         public static bool validNumber(string txt)
         {
 
@@ -33,10 +54,11 @@ namespace KaizenMain
 
 
             }
+            if (Convert.ToInt32(txt) <= 0)
+            {
+                ok = false;
+            }
             return ok;
-
-
-
         }
 
         public static bool validLetter(string txt)
@@ -58,6 +80,20 @@ namespace KaizenMain
 
                 }
             }
+            return ok;
+
+        }
+
+        public static bool validTitle(string txt)
+        {
+            bool ok = true;
+
+            if (txt.Trim() == "Title")
+            {
+                ok = false;
+            }
+            else
+                ok = true;
             return ok;
 
         }

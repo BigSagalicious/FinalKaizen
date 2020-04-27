@@ -37,7 +37,7 @@ namespace KaizenMain
             get { return title; }
             set
             {
-                if (title != "Title")
+                if (MyValidation.validTitle(value))
                 {
                     title = value;
                 }

@@ -10,17 +10,19 @@ namespace KaizenMain
     {
 
         private String transDetsID, transID, stockID;
-        private int qty;       
+        private int qty;
+        private DateTime startDate, endDate;
 
         public MyTransDetails()
         {
 
             this.transDetsID = ""; this.transID = ""; this.stockID = "";
             this.qty = 0;
+            this.startDate = new DateTime(); this.endDate = new DateTime();
         }
-        public MyTransDetails(string transDetsID, string transID, string stockID, int qty)
+        public MyTransDetails(string transDetsID, string transID, string stockID, int qty, DateTime startDate, DateTime endDate)
         {
-            this.transDetsID = transDetsID; this.transID = transID; this.stockID = stockID; this.qty = qty;;            
+            this.transDetsID = transDetsID; this.transID = transID; this.stockID = stockID; this.qty = qty; this.startDate = startDate; this.endDate = endDate;
         }
 
         public string TransDetsID
@@ -45,6 +47,18 @@ namespace KaizenMain
         {
             get { return qty; }
             set { qty = value; }
+        }
+
+        public DateTime StartDate
+        {
+            get { return startDate; }
+            set { startDate = value; }
+        }
+
+        public DateTime EndDate
+        {
+            get { return endDate; }
+            set { endDate = value; }
         }
     }
 }

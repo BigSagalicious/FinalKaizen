@@ -581,6 +581,7 @@
             this.cmbAddProdType.Name = "cmbAddProdType";
             this.cmbAddProdType.Size = new System.Drawing.Size(234, 32);
             this.cmbAddProdType.TabIndex = 242;
+            this.cmbAddProdType.SelectedIndexChanged += new System.EventHandler(this.cmbAddProdType_SelectedIndexChanged);
             // 
             // txtAddProdSupplierName
             // 
@@ -941,6 +942,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(43, 31);
             this.pictureBox3.TabIndex = 220;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // btnEditStock
             // 

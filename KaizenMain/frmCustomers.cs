@@ -225,15 +225,7 @@ namespace KaizenMain
 
             try
             {
-                
-                if (cmbAddTitle.SelectedIndex == 1)
-                    myCustomer.Title = "Mr" ;
-                if (cmbAddTitle.SelectedIndex == 2)
-                    myCustomer.Title = "Mrs";
-                if (cmbAddTitle.SelectedIndex == 3)
-                    myCustomer.Title = "Miss";
-                if (cmbAddTitle.SelectedIndex == 4)
-                    myCustomer.Title = "Ms";
+                myCustomer.Title = cmbAddTitle.SelectedItem.ToString();
 
             }
             catch (MyException MyEx)
@@ -385,23 +377,16 @@ namespace KaizenMain
                 bool ok = true;
                 errP.Clear();
 
+
                 try
                 {
-
-                    if (cmbEditTitle.SelectedIndex == 1)
-                        myCustomer.Title = "Mr";
-                    if (cmbEditTitle.SelectedIndex == 2)
-                        myCustomer.Title = "Mrs";
-                    if (cmbEditTitle.SelectedIndex == 3)
-                        myCustomer.Title = "Miss";
-                    if (cmbEditTitle.SelectedIndex == 4)
-                        myCustomer.Title = "Ms";
+                    myCustomer.Title = cmbEditTitle.SelectedItem.ToString();
 
                 }
                 catch (MyException MyEx)
                 {
                     ok = false;
-                    errP.SetError(cmbAddTitle, MyEx.toString());
+                    errP.SetError(cmbEditTitle, MyEx.toString());
                 }
 
                 try
@@ -634,8 +619,8 @@ namespace KaizenMain
         private void Customer_Load(object sender, EventArgs e)
         {
             //connStr = @"Data Source = C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-            connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-             //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+            //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
+             connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
             sqlCustomer = @"select * from Customer";
             daCustomer = new SqlDataAdapter(sqlCustomer, connStr);
@@ -648,8 +633,6 @@ namespace KaizenMain
 
             tabCustomer.SelectedIndex = 1;
             tabCustomer.SelectedIndex = 0;
-
-
 
         }
 

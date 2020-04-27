@@ -203,10 +203,11 @@ namespace KaizenMain
 
             try
             {
-                myStock.QtyInStock = Convert.ToInt32(txtAddQTY.Text.Trim());
+                    myStock.QtyInStock = Convert.ToInt32(txtAddQTY.Text.Trim());                
             }
             catch (MyException MyEx)
             {
+
                 ok = false;
                 errP.SetError(txtAddQTY, MyEx.toString());
             }
@@ -510,8 +511,8 @@ namespace KaizenMain
         private void Stock_Load(object sender, EventArgs e)
         {
             //connStr = @"Data Source = .\SQLEXPRESS01; Initial Catalog = Kaizen;Integrated Security = true ";
-            connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-             //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+            //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
+             connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
 
             sqlStock = @"select * from Stock";
@@ -674,6 +675,16 @@ namespace KaizenMain
             {
                 MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Not Found!");
             }
+        }
+
+        private void cmbAddProdType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
         }
 
         void populateEquipTypeCmb (ComboBox comboBox)
