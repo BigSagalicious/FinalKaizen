@@ -685,6 +685,7 @@
             this.roundButton4.Text = "CLEAR";
             this.roundButton4.TextColor = System.Drawing.Color.White;
             this.roundButton4.UseVisualStyleBackColor = true;
+            this.roundButton4.Click += new System.EventHandler(this.roundButton4_Click);
             // 
             // textBox33
             // 
