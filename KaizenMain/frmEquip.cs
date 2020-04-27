@@ -52,6 +52,7 @@ namespace KaizenMain
                         }
                     case 1:
                         {
+                            dt.Clear();
                             if (equipIDSelected == 0)
                             {
                                 tabEquip.SelectedIndex = 0;
@@ -81,12 +82,18 @@ namespace KaizenMain
                         {
                             dt.Clear();
                             int noRows = dsKaizen.Tables["Trans"].Rows.Count;
+                            int noRowsDets = dsKaizen.Tables["TransDetails"].Rows.Count;
 
                             if (noRows == 0)
                                 lblAddTransID.Text = "TR-9000";
                             else
                             {
                                 getTransID(noRows);
+                            }
+
+                            if (noRowsDets == 0)
+                            {
+                                getTransDetailsID(noRowsDets);
                             }
 
                             errP.Clear();
@@ -96,6 +103,7 @@ namespace KaizenMain
                         }
                     case 3:
                         {
+                            dt.Clear();
                             if (equipIDSelected == 0)
                             {
                                 tabEquip.SelectedIndex = 0;
@@ -121,6 +129,7 @@ namespace KaizenMain
                         }
                     case 4:
                         {
+                            dt.Clear();
                             if (equipIDSelected == 0)
                             {
                                 tabEquip.SelectedIndex = 0;
@@ -163,8 +172,8 @@ namespace KaizenMain
             {
 
                 equipSelected = true;
-                seperateNumber(dgvEquip.SelectedRows[0].Cells[0].Value.ToString());
-                equipIDSelected = IDNumber;
+                
+                equipIDSelected = seperateNumber(dgvEquip.SelectedRows[0].Cells[0].Value.ToString());
             }
         }
 
@@ -178,8 +187,8 @@ namespace KaizenMain
             else if (dgvEquip.SelectedRows.Count == 1)
             {
                 equipSelected = true;
-                seperateNumber(dgvEquip.SelectedRows[0].Cells[0].Value.ToString());
-                equipIDSelected = IDNumber;
+                
+                equipIDSelected = seperateNumber(dgvEquip.SelectedRows[0].Cells[0].Value.ToString());
             }
         }
 
@@ -198,9 +207,17 @@ namespace KaizenMain
             sqlEquip = @"select * from Trans";
             daTrans = new SqlDataAdapter(sqlEquip, connStr);
             cmdBEquip = new SqlCommandBuilder(daTrans);
-
             daTrans.FillSchema(dsKaizen, SchemaType.Source, "Trans");
             daTrans.Fill(dsKaizen, "Trans");
+
+            sqlTransDQuery = @"SELECT * FROM [TransDetails]";
+
+            daTransD = new SqlDataAdapter(sqlTransDQuery, connStr);
+            cmbTransD = new SqlCommandBuilder(daTransD);
+
+            daTransD.FillSchema(dsKaizen, SchemaType.Source, "TransDetails");
+            daTransD.Fill(dsKaizen, "TransDetails");
+
             dgvEquip.DataSource = dsKaizen.Tables["Trans"];
             dgvEquip.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
@@ -211,28 +228,6 @@ namespace KaizenMain
             populateEquipNameCmb(cmbAddEquipName);
             populateEquipNameCmb(cmbEditEquipName);
 
-        }
-
-        private void TransDets_Load(TextBox transIDTB, DataGridView dgvDetails)
-        {
-
-
-            //connStr = @"Data Source = C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-            //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-            connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
-
-            sqlTransDQuery = @"SELECT * FROM [TransDetails]";
-
-            daTransD = new SqlDataAdapter(sqlTransDQuery, connStr);
-            cmbTransD = new SqlCommandBuilder(daTransD);
-
-            daTransD.FillSchema(dsKaizen, SchemaType.Source, "TransDetails");
-            daTransD.Fill(dsKaizen, "TransDetails");
-            dgvDetails.DataSource = dsKaizen.Tables["TransDetails"];
-            dgvDetails.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-
-            dgvDetails.Columns["StartDate"].Visible = false;
-            dgvDetails.Columns["EndDate"].Visible = false;
         }
 
         private void pbSearchSearh_Click(object sender, EventArgs e)
@@ -377,8 +372,8 @@ namespace KaizenMain
         {
 
             drTrans = dsKaizen.Tables["Trans"].Rows[noRows - 1];
-            seperateNumber(drTrans["TransID"].ToString());
-            lblAddTransID.Text = "TR-" + (IDNumber + 1).ToString();
+            
+            lblAddTransID.Text = "TR-" + (seperateNumber(drTrans["TransID"].ToString()) + 1).ToString();
 
         }
 
@@ -386,19 +381,21 @@ namespace KaizenMain
         {
 
             drTrans = dsKaizen.Tables["TransDetails"].Rows[noRows - 1];
-            seperateNumber(drTrans["TransDetsID"].ToString());
-            TansDIDString = "TD-" + (IDNumber + 1).ToString();
+            
+            TansDIDString = "TD-" + (seperateNumber(drTrans["TransDetsID"].ToString()) + 1).ToString();
 
         }
 
-        void seperateNumber(string ID)
+        public static int seperateNumber(string ID)
         {
-
+            int IDNumber = 0;
             char[] spearator = { '-' };
 
             String[] strlist = ID.Split(spearator);
 
             IDNumber = Convert.ToInt32(strlist[1]);
+
+            return IDNumber;
 
         }
 
@@ -502,11 +499,81 @@ namespace KaizenMain
                     drTrans["TransTotal"] = myTrans.TransTotal;
                     drTrans["BalanceOwed"] = myTrans.TransTotal;
                     drTrans["Paid"] = 'N';
-                   
-
 
                     dsKaizen.Tables["Trans"].Rows.Add(drTrans);
                     daTrans.Update(dsKaizen, "Trans");
+
+  //                  getTransDetailsID(dsKaizen.Tables["TransDetails"].Rows.Count);
+                    getTransDetsnum();
+                    int utdDetsNumber = seperateNumber(findTransID);
+
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        MyTransDetails myTransDetails = new MyTransDetails();
+
+                        utdDetsNumber += 1;
+
+                        TansDIDString = "TD-" + utdDetsNumber;
+                         
+                        try
+                        {
+                            myTransDetails.TransDetsID = TansDIDString;
+
+                        }
+                        catch (MyException MyEx)
+                        {
+                            ok = false;
+                        }
+
+                        try
+                        {
+                            myTransDetails.TransID = lblAddTransID.Text.Trim();
+
+                        }
+                        catch (MyException MyEx)
+                        {
+                            ok = false;
+                        }
+
+                        try
+                        {
+                            myTransDetails.StockID = dr["StockID"].ToString();
+
+                        }
+                        catch (MyException MyEx)
+                        {
+                            ok = false;
+                        }
+
+                        try
+                        {
+                            myTransDetails.Qty = Convert.ToInt32(dr["Qty"]);
+
+                        }
+                        catch (MyException MyEx)
+                        {
+                            ok = false;
+                        }
+
+                        if (ok)
+                        {
+                            drTransDets = dsKaizen.Tables["TransDetails"].NewRow();
+
+                            drTransDets["TransDetsID"] = myTransDetails.TransDetsID;
+                            drTransDets["TransID"] = myTransDetails.TransID;
+                            drTransDets["StockID"] = myTransDetails.StockID;
+                            drTransDets["Qty"] = myTransDetails.Qty;
+                            drTransDets["StartDate"] = DBNull.Value;
+                            drTransDets["EndDate"] = DBNull.Value;
+
+                            dsKaizen.Tables["TransDetails"].Rows.Add(drTransDets);
+
+                            new SqlCommandBuilder(daTransD);
+                            daTransD.Update(dsKaizen, "TransDetails");
+                            
+                        }
+                    }
+
 
                             MessageBox.Show("Purchase Order Added");
 
@@ -650,17 +717,18 @@ namespace KaizenMain
                         if (ok)
                         {
                             drTransDets = dsKaizen.Tables["TransDetails"].NewRow();
+
                             drTransDets["TransDetsID"] = myTransDetails.TransDetsID;
                             drTransDets["TransID"] = myTransDetails.TransID;
                             drTransDets["StockID"] = myTransDetails.StockID;
                             drTransDets["Qty"] = myTransDetails.Qty;
-                            drTransDets["StartDate"] = null;
-                            drTransDets["EndDate"] = null;
+                            drTransDets["StartDate"] = DBNull.Value;
+                            drTransDets["EndDate"] = DBNull.Value;
 
                             dsKaizen.Tables["TransDetails"].Rows.Add(drTransDets);
 
                             new SqlCommandBuilder(dataAdapter);
-                            dataAdapter.Update(dsKaizen);
+                            dataAdapter.Update(dsKaizen, "TransDetails");
                             
                         }
                     }

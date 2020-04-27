@@ -211,6 +211,11 @@ namespace KaizenMain
                 ok = false;
                 errP.SetError(txtAddQTY, MyEx.toString());
             }
+            catch (FormatException Formex)
+            {
+                ok = false;
+                errP.SetError(txtAddQTY, "Please Enter a vaild number");
+            }
 
             try
             {
@@ -225,12 +230,18 @@ namespace KaizenMain
 
             try
             {
+
                 myStock.PurPrice = Convert.ToDouble(txtAddPurchase.Text.Trim());
             }
             catch (MyException MyEx)
             {
                 ok = false;
                 errP.SetError(txtAddPurchase, MyEx.toString());
+            }
+            catch (FormatException Formex)
+            {
+                ok = false;
+                errP.SetError(txtAddPurchase, "Please Enter a vaild number");
             }
 
             try
@@ -242,6 +253,11 @@ namespace KaizenMain
                 ok = false;
                 errP.SetError(txtAddRental, MyEx.toString());
             }
+            catch (FormatException Formex)
+            {
+                ok = false;
+                errP.SetError(txtAddRental, "Please Enter a vaild number");
+            }
 
             try
             {
@@ -251,6 +267,11 @@ namespace KaizenMain
             {
                 ok = false;
                 errP.SetError(txtAddService, MyEx.toString());
+            }
+            catch (FormatException Formex)
+            {
+                ok = false;
+                errP.SetError(txtAddService, "Please Enter a vaild number");
             }
 
             try
@@ -339,6 +360,12 @@ namespace KaizenMain
                     ok = false;
                     errP.SetError(txtEditQTY, MyEx.toString());
                 }
+                catch (FormatException Formex)
+                {
+                    ok = false;
+                    errP.SetError(txtEditQTY, "Please Enter a vaild number");
+                }
+
 
                 try
                 {
@@ -361,6 +388,11 @@ namespace KaizenMain
                     ok = false;
                     errP.SetError(txtEditPurchase, MyEx.toString());
                 }
+                catch (FormatException Formex)
+                {
+                    ok = false;
+                    errP.SetError(txtEditPurchase, "Please Enter a vaild number");
+                }
 
                 try
                 {
@@ -372,6 +404,11 @@ namespace KaizenMain
                     ok = false;
                     errP.SetError(txtEditRental, MyEx.toString());
                 }
+                catch (FormatException Formex)
+                {
+                    ok = false;
+                    errP.SetError(txtEditRental, "Please Enter a vaild number");
+                }
 
                 try
                 {
@@ -382,6 +419,11 @@ namespace KaizenMain
                 {
                     ok = false;
                     errP.SetError(txtEditService, MyEx.toString());
+                }
+                catch (FormatException Formex)
+                {
+                    ok = false;
+                    errP.SetError(txtEditService, "Please Enter a vaild number");
                 }
 
 
@@ -437,6 +479,7 @@ namespace KaizenMain
 
         void clearAddForm()
         {
+            errP.Clear();
             txtAddDesc.Clear();
             cmbAddProdType.SelectedIndex = 0;
             txtAddQTY.Clear();
@@ -449,6 +492,7 @@ namespace KaizenMain
 
         void clearSearchForm()
         {
+            errP.Clear();
             txtSearchStockID.Clear();
             txtSearchDesc.Clear();
             cmbSearchProdType.SelectedIndex = 0;
@@ -462,6 +506,7 @@ namespace KaizenMain
 
         void clearEditForm()
         {
+            errP.Clear();
             txtEditStockID.Clear();
             txtEditDesc.Clear();
             cmbEditProdType.SelectedIndex = 0;
@@ -475,6 +520,7 @@ namespace KaizenMain
 
         void clearDeleteForm()
         {
+            errP.Clear();
             txtDeleteStockID.Clear();
             txtDeleteDesc.Clear();
             cmbDeleteProdType.SelectedIndex = 0;
@@ -649,32 +695,40 @@ namespace KaizenMain
             string searchValue = txtSearchStockID.Text;
 
             dgvStock.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            try
-            {
-                foreach (DataGridViewRow row in dgvStock.Rows)
+
+                try
                 {
-                    if (row.Cells[0].Value.ToString().Equals(searchValue))
+
+                    foreach (DataGridViewRow row in dgvStock.Rows)
                     {
-                        row.Selected = true;
-                        drStock = dsKaizen.Tables["Stock"].Rows.Find(txtSearchStockID.Text);
-
-                        txtSearchDesc.Text = drStock["StockDescription"].ToString();
-                        cmbSearchProdType.Text = drStock["EquipType"].ToString();
-                        txtSearchQTY.Text = drStock["QtyInStock"].ToString();
-                        txtSearchPurchase.Text = drStock["PurPrice"].ToString();
-                        txtSearchRental.Text = drStock["RentPrice"].ToString();
-                        txtSearchService.Text = drStock["ServPrice"].ToString();
-                        txtSearchProdSupplierID.Text = drStock["SuppID"].ToString();
-
-                        populateSuppName(drStock["SuppID"].ToString(), txtSearchProdSupplierName);
-                        break;
+                    if (row.Cells[0].Value != null)
+                        {
+                        errP.SetError(txtSearchStockID, "Please Enter a vaild ID");
                     }
+                       else if (txtSearchStockID.Text.Equals(row.Cells[0].Value.ToString()))
+                        {
+                            row.Selected = true;
+                            drStock = dsKaizen.Tables["Stock"].Rows.Find(txtSearchStockID.Text);
+
+                            txtSearchDesc.Text = drStock["StockDescription"].ToString();
+                            cmbSearchProdType.Text = drStock["EquipType"].ToString();
+                            txtSearchQTY.Text = drStock["QtyInStock"].ToString();
+                            txtSearchPurchase.Text = drStock["PurPrice"].ToString();
+                            txtSearchRental.Text = drStock["RentPrice"].ToString();
+                            txtSearchService.Text = drStock["ServPrice"].ToString();
+                            txtSearchProdSupplierID.Text = drStock["SuppID"].ToString();
+
+                            populateSuppName(drStock["SuppID"].ToString(), txtSearchProdSupplierName);
+                            break;
+                        }
+
+                      }
                 }
-            }
-            catch (MyException ex)
-            {
-                MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Not Found!");
-            }
+                catch (MyException ex)
+                {
+                    MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Not Found!");
+                }
+
         }
 
         private void cmbAddProdType_SelectedIndexChanged(object sender, EventArgs e)
@@ -723,5 +777,7 @@ namespace KaizenMain
                 sqlReader.Close();
             }
         }
+
+        
     }
 }
