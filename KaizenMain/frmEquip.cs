@@ -118,9 +118,14 @@ namespace KaizenMain
 
                                 dtpEditDate.Value = (DateTime)drTrans["TransDate"];
                                 txtEditCustID.Text = drTrans["CustID"].ToString();
-                                populateCustName(drTrans["CustID"].ToString(), txtSearchCustName, txtSearchCustTel);
+
+                                populateCustName(drTrans["CustID"].ToString(), txtEditCustName, txtEditCustTel);
+
+                                populateOrderSum(txtEditOrderID, dgvEdit);
+
                                 lblEditTCost.Text = drTrans["TransTotal"].ToString();
-                                
+                                lblEditOutstanding.Text = drTrans["BalanceOwed"].ToString();
+
                                 //disableEditTxtboxes();
 
                                 break;
@@ -220,7 +225,7 @@ namespace KaizenMain
 
             dgvEquip.DataSource = dsKaizen.Tables["Trans"];
             dgvEquip.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-
+            dgvEquip.Columns["TransType"].Visible = false;
 
             tabEquip.SelectedIndex = 1;
             tabEquip.SelectedIndex = 0;
