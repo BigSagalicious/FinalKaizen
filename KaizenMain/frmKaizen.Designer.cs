@@ -382,7 +382,7 @@
             this.richTextBox6.Name = "richTextBox6";
             this.richTextBox6.Size = new System.Drawing.Size(133, 38);
             this.richTextBox6.TabIndex = 18;
-            this.richTextBox6.Text = "Quotes";
+            this.richTextBox6.Text = "Employees";
             this.richTextBox6.Click += new System.EventHandler(this.pBQuotes_Click);
             // 
             // richTextBox5

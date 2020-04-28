@@ -559,7 +559,7 @@ namespace KaizenMain
         private void Stock_Load(object sender, EventArgs e)
         {
             //connStr = @"Data Source = .\SQLEXPRESS01; Initial Catalog = Kaizen;Integrated Security = true ";
-            //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
+           // connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
              connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
 

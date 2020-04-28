@@ -286,8 +286,8 @@ namespace KaizenMain
             
 
             //connStr = @"Data Source = .\SQLEXPRESS01; Initial Catalog = Kaizen;Integrated Security = true ";
-            //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-            connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+            connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
+            //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
             DateTime dts = new DateTime(2020, 2, 10);
             DateTime dte = new DateTime (2080, 12, 25);
@@ -740,9 +740,18 @@ namespace KaizenMain
                     if (dgvApp.CurrentCell.ColumnIndex.Equals(i) && e.RowIndex != -1)
                     {
                         if (dgvApp.CurrentCell != null && dgvApp.CurrentCell.Value != null)
+                        {
                             lblEditAID.Text = dgvApp.CurrentCell.Value.ToString();
                             txtSearchID.Text = dgvApp.CurrentCell.Value.ToString();
                             txtDLSearch.Text = dgvApp.CurrentCell.Value.ToString();
+                        }
+                        else
+                        {
+                            lblEditAID.Text = "AP-6000";
+                            txtSearchID.Text = "AP-6000";
+                            txtDLSearch.Text = "AP-6000";
+                        }
+                           
                         //MessageBox.Show(dgvApp.CurrentCell.Value.ToString());
 
                         foreach (DataRow dr in dsKaizen.Tables["Appointment"].Rows)
@@ -773,12 +782,30 @@ namespace KaizenMain
                                 txtSeStaffID.Text = dr["StaffID"].ToString();
                                 txtSeTransID.Text = dr["TransID"].ToString();
 
-                                // DisplayApps();
+                                
+                            }
+
+
+                        }
+
+                        foreach (DataRow dr in dsKaizen.Tables["Appointment"].Rows)
+                        {
+                            if ((dr["AppID"].Equals(txtDLSearch.Text)))
+                            {
+                                txtDLDateB.Text = dr["DateBooked"].ToString();
+                                txtDLAppDate.Text = dr["AppDate"].ToString();
+                                txtDlAppTime.Text = dr["AppTime"].ToString();
+                                txtDLDuration.Text = dr["Duration"].ToString();
+                                txtDLStaffID.Text = dr["StaffID"].ToString();
+                                txtDLTransID.Text = dr["TransID"].ToString();
+
+                                
                             }
 
 
                         }
                     }
+
 
                 }
 

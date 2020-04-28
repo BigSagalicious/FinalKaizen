@@ -157,7 +157,7 @@ namespace KaizenMain
         {
             resetIndicators();
             pnlIndQuotes.BackColor = Color.FromArgb(13, 119, 159);
-            frmQuotes frm = new frmQuotes();
+            FrmStaff frm = new FrmStaff();
             frm.TopLevel = false;
             frm.FormBorderStyle = FormBorderStyle.None;
             frm.WindowState = FormWindowState.Maximized;

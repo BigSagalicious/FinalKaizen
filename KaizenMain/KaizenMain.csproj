@@ -111,6 +111,12 @@
     <Compile Include="frmService.Designer.cs">
       <DependentUpon>frmService.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStaff.Designer.cs">
+      <DependentUpon>FrmStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,7 @@
     </Compile>
     <Compile Include="MyAppointment.cs" />
     <Compile Include="MyCustomer.cs" />
+    <Compile Include="MyStaff.cs" />
     <Compile Include="MyTrans.cs" />
     <Compile Include="MyTransDetails.cs" />
     <Compile Include="MyException.cs" />
@@ -162,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmService.resx">
       <DependentUpon>frmService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStaff.resx">
+      <DependentUpon>FrmStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStock.resx">
       <DependentUpon>frmStock.cs</DependentUpon>
