@@ -46,7 +46,12 @@ namespace KaizenMain
             get { return equipType; }
             set
             {
-                equipType = value;
+                if (equipType != "")
+                {
+                    equipType = value;
+                }
+                else
+                    throw new MyException("Please Select a Type");
             }
         }
 
