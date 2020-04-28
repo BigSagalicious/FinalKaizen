@@ -1207,6 +1207,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(43, 31);
             this.pictureBox2.TabIndex = 220;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // roundButton8
             // 
@@ -1228,6 +1229,7 @@
             this.roundButton8.Text = "REMOVE STOCK";
             this.roundButton8.TextColor = System.Drawing.Color.White;
             this.roundButton8.UseVisualStyleBackColor = true;
+            this.roundButton8.Click += new System.EventHandler(this.roundButton8_Click);
             // 
             // btnDeleteClear
             // 

@@ -636,7 +636,11 @@ namespace KaizenMain
             {
                 foreach (DataGridViewRow row in dgvSuppliers.Rows)
                 {
-                    if (row.Cells[0].Value.ToString().Equals(searchValue))
+                      if (row.Cells[0].Value == null || row.Cells[0].Value == DBNull.Value || String.IsNullOrWhiteSpace(row.Cells[0].Value.ToString()))
+                    {
+                        errP.SetError(txtSeSuppID, "ID not found");
+                    }
+                    else if (row.Cells[0].Value.ToString().Equals(searchValue))
                     {
                         row.Selected = true;
                         drSupplier = dsKaizen.Tables["Supplier"].Rows.Find(txtSeSuppID.Text);
@@ -668,7 +672,11 @@ namespace KaizenMain
             {
                 foreach (DataGridViewRow row in dgvSuppliers.Rows)
                 {
-                    if (row.Cells[0].Value.ToString().Equals(searchValue))
+                    if (row.Cells[0].Value == null || row.Cells[0].Value == DBNull.Value || String.IsNullOrWhiteSpace(row.Cells[0].Value.ToString()))
+                    {
+                        errP.SetError(txtEdSuppID, "ID not found");
+                    }
+                    else if (row.Cells[0].Value.ToString().Equals(searchValue))
                     {
                         row.Selected = true;
                         drSupplier = dsKaizen.Tables["Supplier"].Rows.Find(txtEdSuppID.Text);
@@ -700,7 +708,11 @@ namespace KaizenMain
             {
                 foreach (DataGridViewRow row in dgvSuppliers.Rows)
                 {
-                    if (row.Cells[0].Value.ToString().Equals(searchValue))
+                    if (row.Cells[0].Value == null || row.Cells[0].Value == DBNull.Value || String.IsNullOrWhiteSpace(row.Cells[0].Value.ToString()))
+                    {
+                        errP.SetError(txtDlSuppID, "ID not found");
+                    }
+                    else if (row.Cells[0].Value.ToString().Equals(searchValue))
                     {
                         row.Selected = true;
                         drSupplier = dsKaizen.Tables["Supplier"].Rows.Find(txtDlSuppID.Text);

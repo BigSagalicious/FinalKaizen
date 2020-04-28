@@ -204,7 +204,7 @@ namespace KaizenMain
             //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
             connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
-            sqlEquip = @"select * from Trans";
+            sqlEquip = @"select * from Trans where TransType = 'Purchase'";
             daTrans = new SqlDataAdapter(sqlEquip, connStr);
             cmdBEquip = new SqlCommandBuilder(daTrans);
             daTrans.FillSchema(dsKaizen, SchemaType.Source, "Trans");
@@ -232,6 +232,7 @@ namespace KaizenMain
 
         private void pbSearchSearh_Click(object sender, EventArgs e)
         {
+            dt.Clear();
             drTrans = dsKaizen.Tables["Trans"].Rows.Find(txtSearchOrderID.Text);
 
             dtpSearchDate.Value = (DateTime)drTrans["TransDate"];

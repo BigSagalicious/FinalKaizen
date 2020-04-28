@@ -130,7 +130,8 @@ namespace KaizenMain
                                 tabStock.SelectedIndex = 0;
                                 break;
                             }
-                            txtDeleteStockID.Text = stockIDSelected.ToString();
+
+                            txtDeleteStockID.Text = "EQ-" + stockIDSelected.ToString(); Text = stockIDSelected.ToString();
 
                             drStock = dsKaizen.Tables["Stock"].Rows.Find(txtDeleteStockID.Text);
 
@@ -219,7 +220,7 @@ namespace KaizenMain
 
             try
             {
-                myStock.EquipType = cmbAddProdType.Text.Trim();
+                myStock.EquipType = this.cmbAddProdType.GetItemText(this.cmbAddProdType.SelectedItem);
 
             }
             catch (MyException MyEx)
@@ -304,14 +305,15 @@ namespace KaizenMain
                     daStock.Update(dsKaizen, "Stock");
 
                     MessageBox.Show("Stock Item/s Added");
-
+                    clearAddForm();
                     if (MessageBox.Show("Do you wish to add more stock items?", "Add Stock", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                     {
-                        clearAddForm();
+
 
                         getStockID(dsKaizen.Tables["Stock"].Rows.Count);
                     }
                     else
+
                         tabStock.SelectedIndex = 0;
 
                 }
@@ -369,7 +371,7 @@ namespace KaizenMain
 
                 try
                 {
-                    myStock.EquipType = cmbEditProdType.Text.Trim();
+                    myStock.EquipType = this.cmbEditProdType.GetItemText(this.cmbEditProdType.SelectedItem);
                 }
 
                 catch (MyException MyEx)
@@ -701,9 +703,9 @@ namespace KaizenMain
 
                     foreach (DataGridViewRow row in dgvStock.Rows)
                     {
-                    if (row.Cells[0].Value != null)
-                        {
-                        errP.SetError(txtSearchStockID, "Please Enter a vaild ID");
+                    if (row.Cells[0].Value == null || row.Cells[0].Value == DBNull.Value || String.IsNullOrWhiteSpace(row.Cells[0].Value.ToString()))
+                    {
+                        errP.SetError(txtSearchStockID, "ID not found");
                     }
                        else if (txtSearchStockID.Text.Equals(row.Cells[0].Value.ToString()))
                         {
@@ -738,7 +740,107 @@ namespace KaizenMain
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            string searchValue = txtEditStockID.Text;
 
+            dgvStock.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            try
+            {
+
+                foreach (DataGridViewRow row in dgvStock.Rows)
+                {
+                    if (row.Cells[0].Value == null || row.Cells[0].Value == DBNull.Value || String.IsNullOrWhiteSpace(row.Cells[0].Value.ToString()))
+                    {
+                        errP.SetError(txtEditStockID, "ID not found");
+                    }
+                    else if (txtEditStockID.Text.Equals(row.Cells[0].Value.ToString()))
+                    {
+                        row.Selected = true;
+                        drStock = dsKaizen.Tables["Stock"].Rows.Find(txtEditStockID.Text);
+
+                        txtEditDesc.Text = drStock["StockDescription"].ToString();
+                        cmbEditProdType.Text = drStock["EquipType"].ToString();
+                        txtEditQTY.Text = drStock["QtyInStock"].ToString();
+                        txtEditPurchase.Text = drStock["PurPrice"].ToString();
+                        txtEditRental.Text = drStock["RentPrice"].ToString();
+                        txtEditService.Text = drStock["ServPrice"].ToString();
+                        txtEditProdSupplierID.Text = drStock["SuppID"].ToString();
+
+                        populateSuppName(drStock["SuppID"].ToString(), txtEditProdSupplierName);
+                        break;
+                    }
+
+                }
+            }
+            catch (MyException ex)
+            {
+                MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Not Found!");
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            string searchValue = txtDeleteStockID.Text;
+
+            dgvStock.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            try
+            {
+
+                foreach (DataGridViewRow row in dgvStock.Rows)
+                {
+                    if (row.Cells[0].Value == null || row.Cells[0].Value == DBNull.Value || String.IsNullOrWhiteSpace(row.Cells[0].Value.ToString()))
+                    {
+                        errP.SetError(txtDeleteStockID, "ID not found");
+                    }
+                    else if (txtDeleteStockID.Text.Equals(row.Cells[0].Value.ToString()))
+                    {
+                        row.Selected = true;
+                        drStock = dsKaizen.Tables["Stock"].Rows.Find(txtDeleteStockID.Text);
+
+                        txtDeleteDesc.Text = drStock["StockDescription"].ToString();
+                        cmbDeleteProdType.Text = drStock["EquipType"].ToString();
+                        txtDeleteQTY.Text = drStock["QtyInStock"].ToString();
+                        txtDeletePurchase.Text = drStock["PurPrice"].ToString();
+                        txtDeleteRental.Text = drStock["RentPrice"].ToString();
+                        txtDeleteService.Text = drStock["ServPrice"].ToString();
+                        txtDeleteProdSupplierID.Text = drStock["SuppID"].ToString();
+
+                        populateSuppName(drStock["SuppID"].ToString(), txtDeleteProdSupplierName);
+                        break;
+                    }
+
+                }
+            }
+            catch (MyException ex)
+            {
+                MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Not Found!");
+            }
+        }
+
+        private void roundButton8_Click(object sender, EventArgs e)
+        {
+            if (dgvStock.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a Stock item from the list.", "Select Stock");
+
+            }
+            else
+            {
+                drStock = dsKaizen.Tables["Stock"].Rows.
+                    Find(dgvStock.SelectedRows[0].Cells[0].Value);
+
+                string tempName = drStock["StockDescription"].ToString();
+                if (MessageBox.Show("Are you sure you want to delete " + tempName + "?",
+                    "Delete Stock", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    drStock.Delete();
+                    daStock.Update(dsKaizen, "Stock");
+                    MessageBox.Show("Removed item " + tempName);
+                    clearDeleteForm();
+
+                }
+            }
         }
 
         void populateEquipTypeCmb (ComboBox comboBox)
