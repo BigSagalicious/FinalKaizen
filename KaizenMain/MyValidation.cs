@@ -54,10 +54,10 @@ namespace KaizenMain
 
 
             }
-            if (Convert.ToInt32(txt) <= 0)
-            {
-                ok = false;
-            }
+            //if (Convert.ToInt32(txt) <= 0)
+            //{
+            //    ok = false;
+            //}
             return ok;
         }
 

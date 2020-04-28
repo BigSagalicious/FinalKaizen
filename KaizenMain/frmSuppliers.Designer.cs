@@ -33,10 +33,9 @@
             this.tabSupplier = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
             this.dgvSuppliers = new System.Windows.Forms.DataGridView();
+            this.errP = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabSearch = new System.Windows.Forms.TabPage();
             this.txtSeContactName = new System.Windows.Forms.TextBox();
-            this.btnPrintSupplier = new KaizenMain.RoundButton();
-            this.btnSeSuppClear = new KaizenMain.RoundButton();
             this.SearchIconSE = new System.Windows.Forms.PictureBox();
             this.lblSeCompName = new System.Windows.Forms.Label();
             this.txtSeCompName = new System.Windows.Forms.TextBox();
@@ -49,13 +48,13 @@
             this.lblSeSuppContact = new System.Windows.Forms.Label();
             this.txtSeSuppID = new System.Windows.Forms.TextBox();
             this.lblSeSuppID = new System.Windows.Forms.Label();
+            this.btnPrintSupplier = new KaizenMain.RoundButton();
+            this.btnSeSuppClear = new KaizenMain.RoundButton();
             this.tabAdd = new System.Windows.Forms.TabPage();
             this.lblSuppID = new System.Windows.Forms.Label();
             this.txtSupEmail = new System.Windows.Forms.TextBox();
             this.txtContact = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnSaveSup = new KaizenMain.RoundButton();
-            this.btnClearSup = new KaizenMain.RoundButton();
             this.lblCompName = new System.Windows.Forms.Label();
             this.txtCompName = new System.Windows.Forms.TextBox();
             this.txtSupTel = new System.Windows.Forms.TextBox();
@@ -64,10 +63,10 @@
             this.txtSupAddress = new System.Windows.Forms.TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblSupID = new System.Windows.Forms.Label();
+            this.BtnSaveSup = new KaizenMain.RoundButton();
+            this.btnClearSup = new KaizenMain.RoundButton();
             this.tabEdit = new System.Windows.Forms.TabPage();
             this.txtEdContact = new System.Windows.Forms.TextBox();
-            this.btnEditSupp = new KaizenMain.RoundButton();
-            this.btnEdSuppClear = new KaizenMain.RoundButton();
             this.btnEdSearchIcon = new System.Windows.Forms.PictureBox();
             this.lblEdCompName = new System.Windows.Forms.Label();
             this.txtEdCompName = new System.Windows.Forms.TextBox();
@@ -80,10 +79,10 @@
             this.lblEdContact = new System.Windows.Forms.Label();
             this.txtEdSuppID = new System.Windows.Forms.TextBox();
             this.lblEdSupID = new System.Windows.Forms.Label();
+            this.btnEditSupp = new KaizenMain.RoundButton();
+            this.btnEdSuppClear = new KaizenMain.RoundButton();
             this.tabDelete = new System.Windows.Forms.TabPage();
             this.txtDlContact = new System.Windows.Forms.TextBox();
-            this.btnDeleteSupp = new KaizenMain.RoundButton();
-            this.btnDlClearSupp = new KaizenMain.RoundButton();
             this.btnDeleteSearchIcon = new System.Windows.Forms.PictureBox();
             this.lblDlCompName = new System.Windows.Forms.Label();
             this.txtDlCompName = new System.Windows.Forms.TextBox();
@@ -96,10 +95,12 @@
             this.lblDContact = new System.Windows.Forms.Label();
             this.txtDlSuppID = new System.Windows.Forms.TextBox();
             this.lblDelSuppID = new System.Windows.Forms.Label();
-            this.errP = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnDeleteSupp = new KaizenMain.RoundButton();
+            this.btnDlClearSupp = new KaizenMain.RoundButton();
             this.tabSupplier.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.tabSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SearchIconSE)).BeginInit();
             this.tabAdd.SuspendLayout();
@@ -107,7 +108,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEdSearchIcon)).BeginInit();
             this.tabDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeleteSearchIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.SuspendLayout();
             // 
             // tabSupplier
@@ -163,14 +163,16 @@
             this.dgvSuppliers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSuppliers_CellContentClick);
             this.dgvSuppliers.Scroll += new System.Windows.Forms.ScrollEventHandler(this.both);
             // 
+            // errP
+            // 
+            this.errP.ContainerControl = this;
+            // 
             // tabSearch
             // 
             this.tabSearch.BackColor = System.Drawing.Color.White;
             this.tabSearch.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabSearch.Controls.Add(this.txtSeContactName);
-            this.tabSearch.Controls.Add(this.btnPrintSupplier);
-            this.tabSearch.Controls.Add(this.btnSeSuppClear);
             this.tabSearch.Controls.Add(this.SearchIconSE);
             this.tabSearch.Controls.Add(this.lblSeCompName);
             this.tabSearch.Controls.Add(this.txtSeCompName);
@@ -183,6 +185,8 @@
             this.tabSearch.Controls.Add(this.lblSeSuppContact);
             this.tabSearch.Controls.Add(this.txtSeSuppID);
             this.tabSearch.Controls.Add(this.lblSeSuppID);
+            this.tabSearch.Controls.Add(this.btnPrintSupplier);
+            this.tabSearch.Controls.Add(this.btnSeSuppClear);
             this.tabSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tabSearch.Location = new System.Drawing.Point(4, 29);
@@ -200,49 +204,6 @@
             this.txtSeContactName.Size = new System.Drawing.Size(494, 29);
             this.txtSeContactName.TabIndex = 225;
             this.txtSeContactName.TextChanged += new System.EventHandler(this.txtSeContactName_TextChanged);
-            // 
-            // btnPrintSupplier
-            // 
-            this.btnPrintSupplier.BorderColor = System.Drawing.Color.Silver;
-            this.btnPrintSupplier.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnPrintSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPrintSupplier.FlatAppearance.BorderSize = 0;
-            this.btnPrintSupplier.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnPrintSupplier.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnPrintSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrintSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintSupplier.Location = new System.Drawing.Point(273, 592);
-            this.btnPrintSupplier.Name = "btnPrintSupplier";
-            this.btnPrintSupplier.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnPrintSupplier.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnPrintSupplier.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnPrintSupplier.Size = new System.Drawing.Size(189, 40);
-            this.btnPrintSupplier.TabIndex = 224;
-            this.btnPrintSupplier.Text = "PRINT SUPPLIER";
-            this.btnPrintSupplier.TextColor = System.Drawing.Color.White;
-            this.btnPrintSupplier.UseVisualStyleBackColor = true;
-            // 
-            // btnSeSuppClear
-            // 
-            this.btnSeSuppClear.BorderColor = System.Drawing.Color.Silver;
-            this.btnSeSuppClear.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnSeSuppClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSeSuppClear.FlatAppearance.BorderSize = 0;
-            this.btnSeSuppClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnSeSuppClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnSeSuppClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeSuppClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeSuppClear.Location = new System.Drawing.Point(582, 37);
-            this.btnSeSuppClear.Name = "btnSeSuppClear";
-            this.btnSeSuppClear.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnSeSuppClear.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnSeSuppClear.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnSeSuppClear.Size = new System.Drawing.Size(115, 40);
-            this.btnSeSuppClear.TabIndex = 223;
-            this.btnSeSuppClear.Text = "CLEAR";
-            this.btnSeSuppClear.TextColor = System.Drawing.Color.White;
-            this.btnSeSuppClear.UseVisualStyleBackColor = true;
-            this.btnSeSuppClear.Click += new System.EventHandler(this.btnSeSuppClear_Click);
             // 
             // SearchIconSE
             // 
@@ -355,6 +316,49 @@
             this.lblSeSuppID.TabIndex = 39;
             this.lblSeSuppID.Text = "Supplier ID";
             // 
+            // btnPrintSupplier
+            // 
+            this.btnPrintSupplier.BorderColor = System.Drawing.Color.Silver;
+            this.btnPrintSupplier.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnPrintSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrintSupplier.FlatAppearance.BorderSize = 0;
+            this.btnPrintSupplier.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPrintSupplier.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPrintSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintSupplier.Location = new System.Drawing.Point(273, 592);
+            this.btnPrintSupplier.Name = "btnPrintSupplier";
+            this.btnPrintSupplier.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnPrintSupplier.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnPrintSupplier.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnPrintSupplier.Size = new System.Drawing.Size(189, 40);
+            this.btnPrintSupplier.TabIndex = 224;
+            this.btnPrintSupplier.Text = "PRINT SUPPLIER";
+            this.btnPrintSupplier.TextColor = System.Drawing.Color.White;
+            this.btnPrintSupplier.UseVisualStyleBackColor = true;
+            // 
+            // btnSeSuppClear
+            // 
+            this.btnSeSuppClear.BorderColor = System.Drawing.Color.Silver;
+            this.btnSeSuppClear.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnSeSuppClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeSuppClear.FlatAppearance.BorderSize = 0;
+            this.btnSeSuppClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSeSuppClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSeSuppClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeSuppClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeSuppClear.Location = new System.Drawing.Point(582, 37);
+            this.btnSeSuppClear.Name = "btnSeSuppClear";
+            this.btnSeSuppClear.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnSeSuppClear.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnSeSuppClear.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnSeSuppClear.Size = new System.Drawing.Size(115, 40);
+            this.btnSeSuppClear.TabIndex = 223;
+            this.btnSeSuppClear.Text = "CLEAR";
+            this.btnSeSuppClear.TextColor = System.Drawing.Color.White;
+            this.btnSeSuppClear.UseVisualStyleBackColor = true;
+            this.btnSeSuppClear.Click += new System.EventHandler(this.btnSeSuppClear_Click);
+            // 
             // tabAdd
             // 
             this.tabAdd.BackColor = System.Drawing.Color.White;
@@ -364,8 +368,6 @@
             this.tabAdd.Controls.Add(this.txtSupEmail);
             this.tabAdd.Controls.Add(this.txtContact);
             this.tabAdd.Controls.Add(this.label1);
-            this.tabAdd.Controls.Add(this.BtnSaveSup);
-            this.tabAdd.Controls.Add(this.btnClearSup);
             this.tabAdd.Controls.Add(this.lblCompName);
             this.tabAdd.Controls.Add(this.txtCompName);
             this.tabAdd.Controls.Add(this.txtSupTel);
@@ -374,6 +376,8 @@
             this.tabAdd.Controls.Add(this.txtSupAddress);
             this.tabAdd.Controls.Add(this.lblAddress);
             this.tabAdd.Controls.Add(this.lblSupID);
+            this.tabAdd.Controls.Add(this.BtnSaveSup);
+            this.tabAdd.Controls.Add(this.btnClearSup);
             this.tabAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabAdd.Location = new System.Drawing.Point(4, 29);
@@ -417,50 +421,6 @@
             this.label1.Size = new System.Drawing.Size(174, 24);
             this.label1.TabIndex = 248;
             this.label1.Text = "Company Contact";
-            // 
-            // BtnSaveSup
-            // 
-            this.BtnSaveSup.BorderColor = System.Drawing.Color.Silver;
-            this.BtnSaveSup.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.BtnSaveSup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSaveSup.FlatAppearance.BorderSize = 0;
-            this.BtnSaveSup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BtnSaveSup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnSaveSup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSaveSup.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSaveSup.Location = new System.Drawing.Point(273, 602);
-            this.BtnSaveSup.Name = "BtnSaveSup";
-            this.BtnSaveSup.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.BtnSaveSup.onHoverButtonColor = System.Drawing.Color.White;
-            this.BtnSaveSup.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.BtnSaveSup.Size = new System.Drawing.Size(189, 40);
-            this.BtnSaveSup.TabIndex = 247;
-            this.BtnSaveSup.Text = "SAVE SUPPLIER";
-            this.BtnSaveSup.TextColor = System.Drawing.Color.White;
-            this.BtnSaveSup.UseVisualStyleBackColor = true;
-            this.BtnSaveSup.Click += new System.EventHandler(this.BtnSaveSup_Click);
-            // 
-            // btnClearSup
-            // 
-            this.btnClearSup.BorderColor = System.Drawing.Color.Silver;
-            this.btnClearSup.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnClearSup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClearSup.FlatAppearance.BorderSize = 0;
-            this.btnClearSup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnClearSup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnClearSup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearSup.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearSup.Location = new System.Drawing.Point(582, 47);
-            this.btnClearSup.Name = "btnClearSup";
-            this.btnClearSup.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnClearSup.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnClearSup.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnClearSup.Size = new System.Drawing.Size(115, 40);
-            this.btnClearSup.TabIndex = 246;
-            this.btnClearSup.Text = "CLEAR";
-            this.btnClearSup.TextColor = System.Drawing.Color.White;
-            this.btnClearSup.UseVisualStyleBackColor = true;
-            this.btnClearSup.Click += new System.EventHandler(this.btnClearSup_Click);
             // 
             // lblCompName
             // 
@@ -536,14 +496,56 @@
             this.lblSupID.TabIndex = 225;
             this.lblSupID.Text = "Supplier ID";
             // 
+            // BtnSaveSup
+            // 
+            this.BtnSaveSup.BorderColor = System.Drawing.Color.Silver;
+            this.BtnSaveSup.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.BtnSaveSup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSaveSup.FlatAppearance.BorderSize = 0;
+            this.BtnSaveSup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnSaveSup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnSaveSup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSaveSup.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSaveSup.Location = new System.Drawing.Point(273, 602);
+            this.BtnSaveSup.Name = "BtnSaveSup";
+            this.BtnSaveSup.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.BtnSaveSup.onHoverButtonColor = System.Drawing.Color.White;
+            this.BtnSaveSup.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.BtnSaveSup.Size = new System.Drawing.Size(189, 40);
+            this.BtnSaveSup.TabIndex = 247;
+            this.BtnSaveSup.Text = "SAVE SUPPLIER";
+            this.BtnSaveSup.TextColor = System.Drawing.Color.White;
+            this.BtnSaveSup.UseVisualStyleBackColor = true;
+            this.BtnSaveSup.Click += new System.EventHandler(this.BtnSaveSup_Click);
+            // 
+            // btnClearSup
+            // 
+            this.btnClearSup.BorderColor = System.Drawing.Color.Silver;
+            this.btnClearSup.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnClearSup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearSup.FlatAppearance.BorderSize = 0;
+            this.btnClearSup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnClearSup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnClearSup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearSup.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearSup.Location = new System.Drawing.Point(582, 47);
+            this.btnClearSup.Name = "btnClearSup";
+            this.btnClearSup.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnClearSup.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnClearSup.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnClearSup.Size = new System.Drawing.Size(115, 40);
+            this.btnClearSup.TabIndex = 246;
+            this.btnClearSup.Text = "CLEAR";
+            this.btnClearSup.TextColor = System.Drawing.Color.White;
+            this.btnClearSup.UseVisualStyleBackColor = true;
+            this.btnClearSup.Click += new System.EventHandler(this.btnClearSup_Click);
+            // 
             // tabEdit
             // 
             this.tabEdit.BackColor = System.Drawing.Color.White;
             this.tabEdit.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabEdit.Controls.Add(this.txtEdContact);
-            this.tabEdit.Controls.Add(this.btnEditSupp);
-            this.tabEdit.Controls.Add(this.btnEdSuppClear);
             this.tabEdit.Controls.Add(this.btnEdSearchIcon);
             this.tabEdit.Controls.Add(this.lblEdCompName);
             this.tabEdit.Controls.Add(this.txtEdCompName);
@@ -556,6 +558,8 @@
             this.tabEdit.Controls.Add(this.lblEdContact);
             this.tabEdit.Controls.Add(this.txtEdSuppID);
             this.tabEdit.Controls.Add(this.lblEdSupID);
+            this.tabEdit.Controls.Add(this.btnEditSupp);
+            this.tabEdit.Controls.Add(this.btnEdSuppClear);
             this.tabEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabEdit.Location = new System.Drawing.Point(4, 29);
@@ -570,50 +574,6 @@
             this.txtEdContact.Name = "txtEdContact";
             this.txtEdContact.Size = new System.Drawing.Size(494, 29);
             this.txtEdContact.TabIndex = 248;
-            // 
-            // btnEditSupp
-            // 
-            this.btnEditSupp.BorderColor = System.Drawing.Color.Silver;
-            this.btnEditSupp.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnEditSupp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditSupp.FlatAppearance.BorderSize = 0;
-            this.btnEditSupp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEditSupp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEditSupp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditSupp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditSupp.Location = new System.Drawing.Point(273, 602);
-            this.btnEditSupp.Name = "btnEditSupp";
-            this.btnEditSupp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditSupp.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnEditSupp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditSupp.Size = new System.Drawing.Size(189, 40);
-            this.btnEditSupp.TabIndex = 247;
-            this.btnEditSupp.Text = "EDIT SUPPLIER";
-            this.btnEditSupp.TextColor = System.Drawing.Color.White;
-            this.btnEditSupp.UseVisualStyleBackColor = true;
-            this.btnEditSupp.Click += new System.EventHandler(this.btnEditSupp_Click);
-            // 
-            // btnEdSuppClear
-            // 
-            this.btnEdSuppClear.BorderColor = System.Drawing.Color.Silver;
-            this.btnEdSuppClear.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnEdSuppClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdSuppClear.FlatAppearance.BorderSize = 0;
-            this.btnEdSuppClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEdSuppClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEdSuppClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdSuppClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdSuppClear.Location = new System.Drawing.Point(582, 40);
-            this.btnEdSuppClear.Name = "btnEdSuppClear";
-            this.btnEdSuppClear.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEdSuppClear.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnEdSuppClear.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEdSuppClear.Size = new System.Drawing.Size(115, 40);
-            this.btnEdSuppClear.TabIndex = 246;
-            this.btnEdSuppClear.Text = "CLEAR";
-            this.btnEdSuppClear.TextColor = System.Drawing.Color.White;
-            this.btnEdSuppClear.UseVisualStyleBackColor = true;
-            this.btnEdSuppClear.Click += new System.EventHandler(this.btnEdSuppClear_Click);
             // 
             // btnEdSearchIcon
             // 
@@ -723,14 +683,56 @@
             this.lblEdSupID.TabIndex = 225;
             this.lblEdSupID.Text = "Supplier ID";
             // 
+            // btnEditSupp
+            // 
+            this.btnEditSupp.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditSupp.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEditSupp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditSupp.FlatAppearance.BorderSize = 0;
+            this.btnEditSupp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditSupp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditSupp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditSupp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditSupp.Location = new System.Drawing.Point(273, 602);
+            this.btnEditSupp.Name = "btnEditSupp";
+            this.btnEditSupp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditSupp.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEditSupp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditSupp.Size = new System.Drawing.Size(189, 40);
+            this.btnEditSupp.TabIndex = 247;
+            this.btnEditSupp.Text = "EDIT SUPPLIER";
+            this.btnEditSupp.TextColor = System.Drawing.Color.White;
+            this.btnEditSupp.UseVisualStyleBackColor = true;
+            this.btnEditSupp.Click += new System.EventHandler(this.btnEditSupp_Click);
+            // 
+            // btnEdSuppClear
+            // 
+            this.btnEdSuppClear.BorderColor = System.Drawing.Color.Silver;
+            this.btnEdSuppClear.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEdSuppClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdSuppClear.FlatAppearance.BorderSize = 0;
+            this.btnEdSuppClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEdSuppClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEdSuppClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdSuppClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdSuppClear.Location = new System.Drawing.Point(582, 40);
+            this.btnEdSuppClear.Name = "btnEdSuppClear";
+            this.btnEdSuppClear.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEdSuppClear.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEdSuppClear.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEdSuppClear.Size = new System.Drawing.Size(115, 40);
+            this.btnEdSuppClear.TabIndex = 246;
+            this.btnEdSuppClear.Text = "CLEAR";
+            this.btnEdSuppClear.TextColor = System.Drawing.Color.White;
+            this.btnEdSuppClear.UseVisualStyleBackColor = true;
+            this.btnEdSuppClear.Click += new System.EventHandler(this.btnEdSuppClear_Click);
+            // 
             // tabDelete
             // 
             this.tabDelete.BackColor = System.Drawing.Color.White;
             this.tabDelete.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabDelete.Controls.Add(this.txtDlContact);
-            this.tabDelete.Controls.Add(this.btnDeleteSupp);
-            this.tabDelete.Controls.Add(this.btnDlClearSupp);
             this.tabDelete.Controls.Add(this.btnDeleteSearchIcon);
             this.tabDelete.Controls.Add(this.lblDlCompName);
             this.tabDelete.Controls.Add(this.txtDlCompName);
@@ -743,6 +745,8 @@
             this.tabDelete.Controls.Add(this.lblDContact);
             this.tabDelete.Controls.Add(this.txtDlSuppID);
             this.tabDelete.Controls.Add(this.lblDelSuppID);
+            this.tabDelete.Controls.Add(this.btnDeleteSupp);
+            this.tabDelete.Controls.Add(this.btnDlClearSupp);
             this.tabDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabDelete.Location = new System.Drawing.Point(4, 29);
@@ -757,50 +761,6 @@
             this.txtDlContact.Name = "txtDlContact";
             this.txtDlContact.Size = new System.Drawing.Size(494, 29);
             this.txtDlContact.TabIndex = 248;
-            // 
-            // btnDeleteSupp
-            // 
-            this.btnDeleteSupp.BorderColor = System.Drawing.Color.Silver;
-            this.btnDeleteSupp.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnDeleteSupp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeleteSupp.FlatAppearance.BorderSize = 0;
-            this.btnDeleteSupp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDeleteSupp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDeleteSupp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteSupp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteSupp.Location = new System.Drawing.Point(273, 602);
-            this.btnDeleteSupp.Name = "btnDeleteSupp";
-            this.btnDeleteSupp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDeleteSupp.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnDeleteSupp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDeleteSupp.Size = new System.Drawing.Size(189, 40);
-            this.btnDeleteSupp.TabIndex = 247;
-            this.btnDeleteSupp.Text = "DELETE SUPPLIER";
-            this.btnDeleteSupp.TextColor = System.Drawing.Color.White;
-            this.btnDeleteSupp.UseVisualStyleBackColor = true;
-            this.btnDeleteSupp.Click += new System.EventHandler(this.btnDeleteSupp_Click);
-            // 
-            // btnDlClearSupp
-            // 
-            this.btnDlClearSupp.BorderColor = System.Drawing.Color.Silver;
-            this.btnDlClearSupp.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnDlClearSupp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDlClearSupp.FlatAppearance.BorderSize = 0;
-            this.btnDlClearSupp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDlClearSupp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDlClearSupp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDlClearSupp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDlClearSupp.Location = new System.Drawing.Point(582, 47);
-            this.btnDlClearSupp.Name = "btnDlClearSupp";
-            this.btnDlClearSupp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDlClearSupp.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnDlClearSupp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDlClearSupp.Size = new System.Drawing.Size(115, 40);
-            this.btnDlClearSupp.TabIndex = 246;
-            this.btnDlClearSupp.Text = "CLEAR";
-            this.btnDlClearSupp.TextColor = System.Drawing.Color.White;
-            this.btnDlClearSupp.UseVisualStyleBackColor = true;
-            this.btnDlClearSupp.Click += new System.EventHandler(this.btnDlClearSupp_Click);
             // 
             // btnDeleteSearchIcon
             // 
@@ -910,9 +870,49 @@
             this.lblDelSuppID.TabIndex = 225;
             this.lblDelSuppID.Text = "Supplier ID";
             // 
-            // errP
+            // btnDeleteSupp
             // 
-            this.errP.ContainerControl = this;
+            this.btnDeleteSupp.BorderColor = System.Drawing.Color.Silver;
+            this.btnDeleteSupp.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnDeleteSupp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteSupp.FlatAppearance.BorderSize = 0;
+            this.btnDeleteSupp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteSupp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteSupp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteSupp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteSupp.Location = new System.Drawing.Point(273, 602);
+            this.btnDeleteSupp.Name = "btnDeleteSupp";
+            this.btnDeleteSupp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDeleteSupp.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnDeleteSupp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDeleteSupp.Size = new System.Drawing.Size(189, 40);
+            this.btnDeleteSupp.TabIndex = 247;
+            this.btnDeleteSupp.Text = "DELETE SUPPLIER";
+            this.btnDeleteSupp.TextColor = System.Drawing.Color.White;
+            this.btnDeleteSupp.UseVisualStyleBackColor = true;
+            this.btnDeleteSupp.Click += new System.EventHandler(this.btnDeleteSupp_Click);
+            // 
+            // btnDlClearSupp
+            // 
+            this.btnDlClearSupp.BorderColor = System.Drawing.Color.Silver;
+            this.btnDlClearSupp.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnDlClearSupp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDlClearSupp.FlatAppearance.BorderSize = 0;
+            this.btnDlClearSupp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDlClearSupp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDlClearSupp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDlClearSupp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDlClearSupp.Location = new System.Drawing.Point(582, 47);
+            this.btnDlClearSupp.Name = "btnDlClearSupp";
+            this.btnDlClearSupp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDlClearSupp.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnDlClearSupp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDlClearSupp.Size = new System.Drawing.Size(115, 40);
+            this.btnDlClearSupp.TabIndex = 246;
+            this.btnDlClearSupp.Text = "CLEAR";
+            this.btnDlClearSupp.TextColor = System.Drawing.Color.White;
+            this.btnDlClearSupp.UseVisualStyleBackColor = true;
+            this.btnDlClearSupp.Click += new System.EventHandler(this.btnDlClearSupp_Click);
             // 
             // frmSuppliers
             // 
@@ -927,6 +927,7 @@
             this.tabSupplier.ResumeLayout(false);
             this.tabDisplay.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errP)).EndInit();
             this.tabSearch.ResumeLayout(false);
             this.tabSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SearchIconSE)).EndInit();
@@ -938,7 +939,6 @@
             this.tabDelete.ResumeLayout(false);
             this.tabDelete.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeleteSearchIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errP)).EndInit();
             this.ResumeLayout(false);
 
         }

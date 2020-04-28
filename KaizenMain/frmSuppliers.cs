@@ -478,7 +478,7 @@ namespace KaizenMain
                     if (ok)
                     {
                         drSupplier.BeginEdit();
-                        drSupplier = dsKaizen.Tables["Supplier"].NewRow();
+                        //drSupplier = dsKaizen.Tables["Supplier"].NewRow();
                         drSupplier["SuppName"] = mySupplier.CompanyName;
                         drSupplier["SuppCont"] = mySupplier.CompanyContact;
                         drSupplier["SuppAddress"] = mySupplier.Address;
@@ -490,7 +490,7 @@ namespace KaizenMain
 
                         MessageBox.Show("Supplier Details Updated", "Supplier");
 
-                        disableEditTxtboxes();
+                        
 
                         btnEditSupp.Text = "EDIT CUSTOMER";
                         tabSupplier.SelectedIndex = 0;
@@ -498,7 +498,7 @@ namespace KaizenMain
 
 
                     }
-
+                    //disableEditTxtboxes();
                 }
                 catch (Exception ex)
                 {
@@ -558,8 +558,8 @@ namespace KaizenMain
         private void Supplier_load(object sender, EventArgs e)
         {
             //connStr = @"Data Source = .\ADAM-PC; Initial Catalog = Kaizen;Integrated Security = true ";
-            //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-            connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+            connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
+            //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
             
 
             sqlSupplier = @"select * from Supplier";
