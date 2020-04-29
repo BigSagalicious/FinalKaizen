@@ -30,10 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabSupplier = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
             this.dgvSuppliers = new System.Windows.Forms.DataGridView();
-            this.errP = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabSearch = new System.Windows.Forms.TabPage();
             this.txtSeContactName = new System.Windows.Forms.TextBox();
             this.SearchIconSE = new System.Windows.Forms.PictureBox();
@@ -97,10 +98,10 @@
             this.lblDelSuppID = new System.Windows.Forms.Label();
             this.btnDeleteSupp = new KaizenMain.RoundButton();
             this.btnDlClearSupp = new KaizenMain.RoundButton();
+            this.errP = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabSupplier.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.tabSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SearchIconSE)).BeginInit();
             this.tabAdd.SuspendLayout();
@@ -108,6 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEdSearchIcon)).BeginInit();
             this.tabDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeleteSearchIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.SuspendLayout();
             // 
             // tabSupplier
@@ -149,10 +151,26 @@
             // 
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvSuppliers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSuppliers.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSuppliers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSuppliers.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSuppliers.Location = new System.Drawing.Point(23, 6);
             this.dgvSuppliers.MultiSelect = false;
             this.dgvSuppliers.Name = "dgvSuppliers";
@@ -162,10 +180,6 @@
             this.dgvSuppliers.TabIndex = 19;
             this.dgvSuppliers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSuppliers_CellContentClick);
             this.dgvSuppliers.Scroll += new System.Windows.Forms.ScrollEventHandler(this.both);
-            // 
-            // errP
-            // 
-            this.errP.ContainerControl = this;
             // 
             // tabSearch
             // 
@@ -914,6 +928,10 @@
             this.btnDlClearSupp.UseVisualStyleBackColor = true;
             this.btnDlClearSupp.Click += new System.EventHandler(this.btnDlClearSupp_Click);
             // 
+            // errP
+            // 
+            this.errP.ContainerControl = this;
+            // 
             // frmSuppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -927,7 +945,6 @@
             this.tabSupplier.ResumeLayout(false);
             this.tabDisplay.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errP)).EndInit();
             this.tabSearch.ResumeLayout(false);
             this.tabSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SearchIconSE)).EndInit();
@@ -939,6 +956,7 @@
             this.tabDelete.ResumeLayout(false);
             this.tabDelete.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeleteSearchIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errP)).EndInit();
             this.ResumeLayout(false);
 
         }
