@@ -51,13 +51,8 @@ namespace KaizenMain
                 {
                     ok = false;
                 }
-
-
             }
-            //if (Convert.ToInt32(txt) <= 0)
-            //{
-            //    ok = false;
-            //}
+
             return ok;
         }
 
@@ -255,7 +250,7 @@ namespace KaizenMain
             bool ok= false;
 
             List<string> strList = iD.Split('-').ToList();
-            string first = strList.First();
+            string first = strList.First().ToString();
 
             if (iD.Equals(first)) 
             {

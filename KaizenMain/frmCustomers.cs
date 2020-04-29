@@ -18,7 +18,7 @@ namespace KaizenMain
         DataRow drCustomer;
         String connStr, sqlCustomer;
         int selectedTab = 0;
-        bool custSelected = false;
+        bool custSelected = false, isNull = false;
         int custIDSelected = 0;
         public frmCustomers()
         {
@@ -532,7 +532,7 @@ namespace KaizenMain
                 string tempName = drCustomer["CustFname"].ToString() + " " +
                     drCustomer["CustSname"].ToString() + "\'s";
                 if (MessageBox.Show("Are you sure you want to delete " + tempName + "details?",
-                    "Add Customer", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                    "Delete Customer", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
                     drCustomer.Delete();
                     daCustomer.Update(dsKaizen, "Customer");
@@ -546,7 +546,7 @@ namespace KaizenMain
 
         void clearAddForm()
         {
-
+            errP.Clear();
             cmbAddTitle.SelectedIndex = 0;
             txtAddForename.Clear();
             txtAddSurname.Clear();
@@ -561,7 +561,7 @@ namespace KaizenMain
 
         void clearSearchForm()
         {
-
+            errP.Clear();
             txtSearchID.Clear();
             cmbSearchTitle.SelectedIndex = 0;
             txtSearchForename.Clear();
@@ -577,6 +577,7 @@ namespace KaizenMain
 
         void clearEditForm()
         {
+            errP.Clear();
             txtEditID.Clear();
             cmbEditTitle.SelectedIndex = 0;
             txtEditForename.Clear();
@@ -592,7 +593,7 @@ namespace KaizenMain
 
         void clearDeleteForm()
         {
-
+            errP.Clear();
             txtDeleteID.Clear();
             cmbDeleteTitle.SelectedIndex = 0;
             txtDeleteForename.Clear();
@@ -695,29 +696,37 @@ namespace KaizenMain
         private void btnSearchIconSearch_Click(object sender, EventArgs e)
         {
             string searchValue = txtSearchID.Text;
+            isNull = false;
 
             dgvCustomers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
             {
-                foreach (DataGridViewRow row in dgvCustomers.Rows)
-                {
-                    if (row.Cells[0].Value.ToString().Equals(searchValue))
-                    {
-                        row.Selected = true;
-                        drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtSearchID.Text);
 
-                        cmbSearchTitle.Text = drCustomer["CustTitle"].ToString();
-                        txtSearchForename.Text = drCustomer["CustFName"].ToString();
-                        txtSearchSurname.Text = drCustomer["CustSName"].ToString();
-                        txtSearchAddress.Text = drCustomer["CustAddress"].ToString();
-                        txtSearchTown.Text = drCustomer["TownCity"].ToString();
-                        txtSearchCounty.Text = drCustomer["County"].ToString();
-                        txtSearchPcode.Text = drCustomer["CustPCode"].ToString();
-                        txtSearchEmail.Text = drCustomer["CustEmail"].ToString();
-                        txtSearchTel.Text = drCustomer["CustTel"].ToString();
-                        break;
+                    foreach (DataGridViewRow row in dgvCustomers.Rows)
+                    {
+                    if (row.Cells[0].Value == null || row.Cells[0].Value == DBNull.Value || String.IsNullOrWhiteSpace(row.Cells[0].Value.ToString()))
+                    {
+                        isNull = true;
+                        errP.SetError(txtSearchID, "ID not found");
                     }
-                }
+                    else if (row.Cells[0].Value.ToString().Equals(searchValue))
+                        {
+                            row.Selected = true;
+                            drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtSearchID.Text);
+
+                            cmbSearchTitle.Text = drCustomer["CustTitle"].ToString();
+                            txtSearchForename.Text = drCustomer["CustFName"].ToString();
+                            txtSearchSurname.Text = drCustomer["CustSName"].ToString();
+                            txtSearchAddress.Text = drCustomer["CustAddress"].ToString();
+                            txtSearchTown.Text = drCustomer["TownCity"].ToString();
+                            txtSearchCounty.Text = drCustomer["County"].ToString();
+                            txtSearchPcode.Text = drCustomer["CustPCode"].ToString();
+                            txtSearchEmail.Text = drCustomer["CustEmail"].ToString();
+                            txtSearchTel.Text = drCustomer["CustTel"].ToString();
+                            break;
+                        }
+                    }
+                
             }
             catch (MyException ex)
             {
@@ -727,13 +736,19 @@ namespace KaizenMain
         private void btnEditIconSearch_Click(object sender, EventArgs e)
         {
             string searchValue = txtEditID.Text;
+            isNull = false;
 
             dgvCustomers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
             {
-                foreach (DataGridViewRow row in dgvCustomers.Rows)
+                    foreach (DataGridViewRow row in dgvCustomers.Rows)
                 {
-                    if (row.Cells[0].Value.ToString().Equals(searchValue))
+                    if (row.Cells[0].Value == null || row.Cells[0].Value == DBNull.Value || String.IsNullOrWhiteSpace(row.Cells[0].Value.ToString()))
+                    {
+                        isNull = true;
+                        errP.SetError(txtEditID, "ID not found");
+                    }
+                    else if (row.Cells[0].Value.ToString().Equals(searchValue))
                     {
                         row.Selected = true;
                         drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtEditID.Text);
@@ -765,13 +780,20 @@ namespace KaizenMain
         private void btnDeleteIconSearch_Click(object sender, EventArgs e)
         {
             string searchValue = txtDeleteID.Text;
+            isNull = false;
 
             dgvCustomers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
             {
-                foreach (DataGridViewRow row in dgvCustomers.Rows)
+
+                    foreach (DataGridViewRow row in dgvCustomers.Rows)
                 {
-                    if (row.Cells[0].Value.ToString().Equals(searchValue))
+                    if (row.Cells[0].Value == null || row.Cells[0].Value == DBNull.Value || String.IsNullOrWhiteSpace(row.Cells[0].Value.ToString()))
+                    {
+                        isNull = true;
+                        errP.SetError(txtDeleteID, "ID not found");
+                    }
+                    else if (row.Cells[0].Value.ToString().Equals(searchValue))
                     {
                         row.Selected = true;
                         drCustomer = dsKaizen.Tables["Customer"].Rows.Find(txtDeleteID.Text);

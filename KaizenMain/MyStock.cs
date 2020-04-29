@@ -46,12 +46,12 @@ namespace KaizenMain
             get { return equipType; }
             set
             {
-                if (equipType != "")
+                if (equipType != null)
                 {
                     equipType = value;
                 }
                 else
-                    throw new MyException("Please Select a Type");
+                    throw new MyException("Stock ID must contain 'SU-' ");
             }
         }
 

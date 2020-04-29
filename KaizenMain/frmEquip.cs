@@ -118,9 +118,14 @@ namespace KaizenMain
 
                                 dtpEditDate.Value = (DateTime)drTrans["TransDate"];
                                 txtEditCustID.Text = drTrans["CustID"].ToString();
-                                populateCustName(drTrans["CustID"].ToString(), txtSearchCustName, txtSearchCustTel);
+
+                                populateCustName(drTrans["CustID"].ToString(), txtEditCustName, txtEditCustTel);
+
+                                populateOrderSum(txtEditOrderID, dgvEdit);
+
                                 lblEditTCost.Text = drTrans["TransTotal"].ToString();
-                                
+                                lblEditOutstanding.Text = drTrans["BalanceOwed"].ToString();
+
                                 //disableEditTxtboxes();
 
                                 break;
@@ -204,7 +209,7 @@ namespace KaizenMain
             //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
             connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
-            sqlEquip = @"select * from Trans";
+            sqlEquip = @"select * from Trans where TransType = 'Purchase'";
             daTrans = new SqlDataAdapter(sqlEquip, connStr);
             cmdBEquip = new SqlCommandBuilder(daTrans);
             daTrans.FillSchema(dsKaizen, SchemaType.Source, "Trans");
@@ -220,7 +225,7 @@ namespace KaizenMain
 
             dgvEquip.DataSource = dsKaizen.Tables["Trans"];
             dgvEquip.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-
+            dgvEquip.Columns["TransType"].Visible = false;
 
             tabEquip.SelectedIndex = 1;
             tabEquip.SelectedIndex = 0;
@@ -232,6 +237,7 @@ namespace KaizenMain
 
         private void pbSearchSearh_Click(object sender, EventArgs e)
         {
+            dt.Clear();
             drTrans = dsKaizen.Tables["Trans"].Rows.Find(txtSearchOrderID.Text);
 
             dtpSearchDate.Value = (DateTime)drTrans["TransDate"];
