@@ -859,25 +859,7 @@ namespace KaizenMain
 
         private void cmbStaff_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //dgvApp.Rows.Add(9);
-
-            //for (int i = 0; i < 7; i++)
-            //{
-            //    for (int j = 0; j < 9; j++)
-            //    {
-            //        dgvApp.Rows[j].Cells[i].Value = null;
-            //        dgvApp.Rows[j].Cells[i].Style.BackColor = Color.White;
-
-            //    }
-
-
-                   //dateTimePicker1.Value = DateTime.Now;
-            //}
-
-            
-            //DisplayApps();
-
-
+           
 
 
         }
@@ -1094,6 +1076,11 @@ namespace KaizenMain
                 }
 
             
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            DisplayApps();
         }
 
         void AddTabValidate(object sender, CancelEventArgs e)
