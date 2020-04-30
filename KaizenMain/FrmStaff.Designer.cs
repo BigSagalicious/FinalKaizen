@@ -49,6 +49,7 @@
             this.lblSeStaff = new System.Windows.Forms.Label();
             this.btnSearchClearForm = new KaizenMain.RoundButton();
             this.tabAdd = new System.Windows.Forms.TabPage();
+            this.btnClearAdd = new KaizenMain.RoundButton();
             this.lblAddStaffID = new System.Windows.Forms.Label();
             this.lblAJobDesc = new System.Windows.Forms.Label();
             this.txtAJobDesc = new System.Windows.Forms.TextBox();
@@ -97,7 +98,7 @@
             this.lblDeStaffID = new System.Windows.Forms.Label();
             this.btnDeDelete = new KaizenMain.RoundButton();
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnClearAdd = new KaizenMain.RoundButton();
+            this.iconSearchStaffID = new System.Windows.Forms.PictureBox();
             this.tabStaff.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
@@ -106,6 +107,7 @@
             this.tabEdit.SuspendLayout();
             this.tabDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconSearchStaffID)).BeginInit();
             this.SuspendLayout();
             // 
             // tabStaff
@@ -160,6 +162,7 @@
             this.tabSearch.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabSearch.Controls.Add(this.iconSearchStaffID);
             this.tabSearch.Controls.Add(this.lblSeJobDesc);
             this.tabSearch.Controls.Add(this.txtJobDesc);
             this.tabSearch.Controls.Add(this.txtSeJobR);
@@ -356,6 +359,28 @@
             this.tabAdd.Size = new System.Drawing.Size(734, 688);
             this.tabAdd.TabIndex = 2;
             this.tabAdd.Text = "ADD";
+            // 
+            // btnClearAdd
+            // 
+            this.btnClearAdd.BorderColor = System.Drawing.Color.Silver;
+            this.btnClearAdd.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnClearAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearAdd.FlatAppearance.BorderSize = 0;
+            this.btnClearAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnClearAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnClearAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearAdd.Location = new System.Drawing.Point(523, 59);
+            this.btnClearAdd.Name = "btnClearAdd";
+            this.btnClearAdd.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnClearAdd.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnClearAdd.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnClearAdd.Size = new System.Drawing.Size(168, 40);
+            this.btnClearAdd.TabIndex = 244;
+            this.btnClearAdd.Text = "CLEAR";
+            this.btnClearAdd.TextColor = System.Drawing.Color.White;
+            this.btnClearAdd.UseVisualStyleBackColor = true;
+            this.btnClearAdd.Click += new System.EventHandler(this.btnClearAdd_Click);
             // 
             // lblAddStaffID
             // 
@@ -854,27 +879,18 @@
             // 
             this.errP.ContainerControl = this;
             // 
-            // btnClearAdd
+            // iconSearchStaffID
             // 
-            this.btnClearAdd.BorderColor = System.Drawing.Color.Silver;
-            this.btnClearAdd.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnClearAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClearAdd.FlatAppearance.BorderSize = 0;
-            this.btnClearAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnClearAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnClearAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearAdd.Location = new System.Drawing.Point(523, 59);
-            this.btnClearAdd.Name = "btnClearAdd";
-            this.btnClearAdd.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnClearAdd.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnClearAdd.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnClearAdd.Size = new System.Drawing.Size(168, 40);
-            this.btnClearAdd.TabIndex = 244;
-            this.btnClearAdd.Text = "CLEAR";
-            this.btnClearAdd.TextColor = System.Drawing.Color.White;
-            this.btnClearAdd.UseVisualStyleBackColor = true;
-            this.btnClearAdd.Click += new System.EventHandler(this.btnClearAdd_Click);
+            this.iconSearchStaffID.BackColor = System.Drawing.Color.Transparent;
+            this.iconSearchStaffID.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.iconSearchStaffID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconSearchStaffID.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconSearchStaffID.Location = new System.Drawing.Point(381, 24);
+            this.iconSearchStaffID.Name = "iconSearchStaffID";
+            this.iconSearchStaffID.Size = new System.Drawing.Size(43, 31);
+            this.iconSearchStaffID.TabIndex = 228;
+            this.iconSearchStaffID.TabStop = false;
+            this.iconSearchStaffID.Click += new System.EventHandler(this.iconSearchStaffID_Click);
             // 
             // FrmStaff
             // 
@@ -898,6 +914,7 @@
             this.tabDelete.ResumeLayout(false);
             this.tabDelete.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconSearchStaffID)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -973,5 +990,6 @@
         private System.Windows.Forms.Label lblEdStaffID;
         private System.Windows.Forms.ErrorProvider errP;
         private RoundButton btnClearAdd;
+        private System.Windows.Forms.PictureBox iconSearchStaffID;
     }
 }

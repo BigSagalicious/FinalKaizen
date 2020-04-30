@@ -548,6 +548,36 @@ namespace KaizenMain
             }
         }
 
+        private void iconSearchStaffID_Click(object sender, EventArgs e)
+        {
+            string searchValue = txtSearchID.Text;
+
+            dgvStaff.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                foreach (DataGridViewRow row in dgvStaff.Rows)
+                {
+                    if (row.Cells[0].Value.ToString().Equals(searchValue))
+                    {
+                        row.Selected = true;
+                        drStaff = dsKaizen.Tables["Staff"].Rows.Find(txtSearchID.Text);
+
+                        txtSeFore.Text = drStaff["StaffFName"].ToString();
+                        txtSeSur.Text = drStaff["StaffSName"].ToString();
+                        txtSeJobR.Text = drStaff["Job"].ToString();
+                        txtJobDesc.Text = drStaff["JobDesc"].ToString();
+                        txtSeEmail.Text = drStaff["StaffEmail"].ToString();
+                        txtSeTel.Text = drStaff["StaffTel"].ToString();
+                        break;
+                    }
+                }
+            }
+            catch (MyException ex)
+            {
+                MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Not Found!");
+            }
+        }
+
         private void enableEditTxtboxes()
         {
             txtEdForeN.Enabled = true;
