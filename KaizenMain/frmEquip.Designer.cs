@@ -94,7 +94,7 @@
             this.txtEditCustName = new System.Windows.Forms.TextBox();
             this.dtpEditDate = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pbEditSearchTrans = new System.Windows.Forms.PictureBox();
             this.txtEditCustID = new System.Windows.Forms.TextBox();
             this.txtEditOrderID = new System.Windows.Forms.TextBox();
             this.dgvEdit = new System.Windows.Forms.DataGridView();
@@ -146,7 +146,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddSearchEquip)).BeginInit();
             this.tabEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEditSearchTrans)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEdit)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditSearchEquip)).BeginInit();
@@ -252,6 +252,7 @@
             this.roundButton3.Text = "BOOK DELIVERY";
             this.roundButton3.TextColor = System.Drawing.Color.White;
             this.roundButton3.UseVisualStyleBackColor = false;
+            this.roundButton3.Click += new System.EventHandler(this.roundButton3_Click);
             // 
             // roundButton4
             // 
@@ -557,6 +558,8 @@
             this.txtAddCustID.Name = "txtAddCustID";
             this.txtAddCustID.Size = new System.Drawing.Size(157, 29);
             this.txtAddCustID.TabIndex = 131;
+            this.txtAddCustID.Text = "      -ENTER-";
+            this.txtAddCustID.TextChanged += new System.EventHandler(this.txtAddCustID_TextChanged);
             // 
             // dgvAddOrder
             // 
@@ -785,6 +788,7 @@
             this.btnAddBookDel.Text = "BOOK DELIVERY";
             this.btnAddBookDel.TextColor = System.Drawing.Color.White;
             this.btnAddBookDel.UseVisualStyleBackColor = false;
+            this.btnAddBookDel.Click += new System.EventHandler(this.btnAddBookDel_Click);
             // 
             // btnAddCompletePay
             // 
@@ -848,7 +852,7 @@
             this.tabEdit.Controls.Add(this.txtEditCustName);
             this.tabEdit.Controls.Add(this.dtpEditDate);
             this.tabEdit.Controls.Add(this.label15);
-            this.tabEdit.Controls.Add(this.pictureBox5);
+            this.tabEdit.Controls.Add(this.pbEditSearchTrans);
             this.tabEdit.Controls.Add(this.txtEditCustID);
             this.tabEdit.Controls.Add(this.txtEditOrderID);
             this.tabEdit.Controls.Add(this.dgvEdit);
@@ -908,6 +912,7 @@
             this.roundButton2.Text = "BOOK DELIVERY";
             this.roundButton2.TextColor = System.Drawing.Color.White;
             this.roundButton2.UseVisualStyleBackColor = false;
+            this.roundButton2.Click += new System.EventHandler(this.roundButton2_Click);
             // 
             // roundButton5
             // 
@@ -1031,17 +1036,18 @@
             this.label15.TabIndex = 230;
             this.label15.Text = "Date";
             // 
-            // pictureBox5
+            // pbEditSearchTrans
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Location = new System.Drawing.Point(355, 32);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox5.TabIndex = 213;
-            this.pictureBox5.TabStop = false;
+            this.pbEditSearchTrans.BackColor = System.Drawing.Color.Transparent;
+            this.pbEditSearchTrans.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.pbEditSearchTrans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbEditSearchTrans.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbEditSearchTrans.Location = new System.Drawing.Point(355, 32);
+            this.pbEditSearchTrans.Name = "pbEditSearchTrans";
+            this.pbEditSearchTrans.Size = new System.Drawing.Size(43, 31);
+            this.pbEditSearchTrans.TabIndex = 213;
+            this.pbEditSearchTrans.TabStop = false;
+            this.pbEditSearchTrans.Click += new System.EventHandler(this.pbEditSearchTrans_Click);
             // 
             // txtEditCustID
             // 
@@ -1409,6 +1415,7 @@
             this.pictureBox7.Size = new System.Drawing.Size(43, 31);
             this.pictureBox7.TabIndex = 218;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // label19
             // 
@@ -1563,7 +1570,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbAddSearchEquip)).EndInit();
             this.tabEdit.ResumeLayout(false);
             this.tabEdit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEditSearchTrans)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEdit)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -1625,7 +1632,7 @@
         private RoundButton btnAddBookDel;
         private RoundButton btnAddCompletePay;
         private RoundButton roundButton9;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pbEditSearchTrans;
         private System.Windows.Forms.TextBox txtEditCustID;
         private System.Windows.Forms.TextBox txtEditOrderID;
         private System.Windows.Forms.DataGridView dgvEdit;

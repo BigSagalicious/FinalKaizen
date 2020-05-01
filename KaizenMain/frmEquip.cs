@@ -17,11 +17,11 @@ namespace KaizenMain
         DataSet dsKaizen = new DataSet();
         SqlCommandBuilder cmdBEquip, cmbTransD;
         DataRow drTrans, drTransDets;
-        String connStr, sqlEquip, sqlTransDQuery, TansDIDString, findTransID;
+        String connStr, sqlEquip, sqlTransDQuery, TansDIDString, findTransID, findTrans;
         int selectedTab = 0;
         bool equipSelected = false;
         int equipIDSelected = 0, ogTransDrows = 0;
-        int IDNumber = 0, transDselected = -1;
+        int IDNumber = 0;
 
         DataTable dt = new DataTable(), EditTransDTable = new DataTable();
 
@@ -81,14 +81,17 @@ namespace KaizenMain
                     case 2:
                         {
                             dt.Clear();
-                            int noRows = dsKaizen.Tables["Trans"].Rows.Count;
+                            getTransnum();
+                            
+
                             int noRowsDets = dsKaizen.Tables["TransDetails"].Rows.Count;
 
-                            if (noRows == 0)
+                            if (findTrans == "")
                                 lblAddTransID.Text = "TR-9000";
                             else
                             {
-                                getTransID(noRows);
+                                lblAddTransID.Text = "TR-" + (seperateNumber(findTrans) +1).ToString();
+
                             }
 
                             if (noRowsDets == 0)
@@ -137,6 +140,7 @@ namespace KaizenMain
                         }
                     case 4:
                         {
+                           
                             dt.Clear();
                             if (equipIDSelected == 0)
                             {
@@ -247,15 +251,23 @@ namespace KaizenMain
             dt.Clear();
             drTrans = dsKaizen.Tables["Trans"].Rows.Find(txtSearchOrderID.Text);
 
-            dtpSearchDate.Value = (DateTime)drTrans["TransDate"];
-            txtSearchCustID.Text = drTrans["CustID"].ToString();
+            if (drTrans == null)
+            {
 
-            populateCustName(drTrans["CustID"].ToString(), txtSearchCustName, txtSearchCustTel);
+                errP.SetError(txtSearchOrderID, "ID not found");
+            }
+            else
+            {
+                dtpSearchDate.Value = (DateTime)drTrans["TransDate"];
+                txtSearchCustID.Text = drTrans["CustID"].ToString();
 
-            populateOrderSum(txtSearchOrderID, dgvSearch);
+                populateCustName(drTrans["CustID"].ToString(), txtSearchCustName, txtSearchCustTel);
 
-            lblSearchTCost.Text = drTrans["TransTotal"].ToString();
-            lblSearchOutstanding.Text = drTrans["BalanceOwed"].ToString();
+                populateOrderSum(txtSearchOrderID, dgvSearch);
+
+                lblSearchTCost.Text = drTrans["TransTotal"].ToString();
+                lblSearchOutstanding.Text = drTrans["BalanceOwed"].ToString();
+            }
         }
 
         private void btnSearchClear_Click(object sender, EventArgs e)
@@ -510,8 +522,13 @@ namespace KaizenMain
                 ok = false;
                 errP.SetError(lblAddTCost, MyEx.toString());
             }
+            catch (FormatException frmex)
+            {
+                ok = false;
+                MessageBox.Show("Please Input Order Details Before Adding", "Order");
+            }
 
-                try
+            try
             {
                 if (ok)
                 {
@@ -625,7 +642,6 @@ namespace KaizenMain
             if (dgvEquip.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Please select a Transaction from the list.", "Select Trans");
-
             }
             else
             {
@@ -804,12 +820,11 @@ namespace KaizenMain
           for (int i = 0; i < ogTransDrows; i++)
                 {
 
-                    MessageBox.Show("" + dt.Rows[i][1].ToString() + "" + EditTransDTable.Rows[i][0].ToString(), "", MessageBoxButtons.AbortRetryIgnore,
-                 MessageBoxIcon.Error);
-
                     if (string.Equals(dt.Rows[i][1].ToString(), "Deleted"))
                     {
-                        deleteTranDRow(EditTransDTable.Rows[i][0].ToString());
+                        string deleteID = EditTransDTable.Rows[i][0].ToString();
+
+                        deleteTranDets(deleteID);
 
                         daTransD.Update(dsKaizen, "TransDetails");
                     }
@@ -1089,6 +1104,96 @@ namespace KaizenMain
             }
         }
 
+        void getTransnum()
+        {
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
+            {
+                SqlCommand sqlCmd = new SqlCommand("SELECT * FROM Trans", sqlConnectionEqT);
+                sqlConnectionEqT.Open();
+                SqlDataReader sqlReader = sqlCmd.ExecuteReader();
+
+
+                while (sqlReader.Read())
+                {
+                    findTrans = sqlReader["TransID"].ToString();
+                    //seperateNumber(sqlReader["TransDetsID"].ToString());
+                }
+
+                
+            }
+        }
+
+        private void txtAddCustID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            dt.Clear();
+
+            drTrans = dsKaizen.Tables["Trans"].Rows.Find(txtDeleteOrderID.Text);
+            if (drTrans == null)
+            {
+
+                errP.SetError(txtDeleteOrderID, "ID not found");
+            }
+            else
+            {
+                dtpDeleteDate.Value = (DateTime)drTrans["TransDate"];
+                txtDeleteCustID.Text = drTrans["CustID"].ToString();
+
+                populateCustName(drTrans["CustID"].ToString(), txtDeleteCustName, txtDeleteCustTel);
+
+                populateOrderSum(txtDeleteOrderID, dgvDelete);
+
+                lblDeleteTCost.Text = drTrans["TransTotal"].ToString();
+            }
+        }
+
+        private void pbEditSearchTrans_Click(object sender, EventArgs e)
+        {
+            dt.Clear();
+
+            drTrans = dsKaizen.Tables["Trans"].Rows.Find(txtEditOrderID.Text);
+            if (drTrans == null)
+            {
+
+                errP.SetError(txtEditOrderID, "ID not found");
+            }
+            else
+            {
+                gatherTransDForEdit(txtEditOrderID.Text);
+
+                dtpEditDate.Value = (DateTime)drTrans["TransDate"];
+                txtEditCustID.Text = drTrans["CustID"].ToString();
+
+                populateCustName(drTrans["CustID"].ToString(), txtEditCustName, txtEditCustTel);
+
+                populateOrderSum(txtEditOrderID, dgvEdit);
+
+                lblEditTCost.Text = drTrans["TransTotal"].ToString();
+                lblEditOutstanding.Text = drTrans["BalanceOwed"].ToString();
+
+                dgvEdit.ClearSelection();
+            }
+        }
+
+        private void roundButton3_Click(object sender, EventArgs e)
+        {
+            Appointment frm = new Appointment();
+        }
+
+        private void btnAddBookDel_Click(object sender, EventArgs e)
+        {
+            Appointment frm = new Appointment();
+        }
+
+        private void roundButton2_Click(object sender, EventArgs e)
+        {
+            Appointment frm = new Appointment();
+        }
+
         void getTransDetsnum()
         {
             using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
@@ -1285,6 +1390,26 @@ namespace KaizenMain
                 {
                     con.Open();
                     using (SqlCommand command = new SqlCommand("DELETE FROM TransDetails WHERE TransID = '" + TransNumber + "'", con))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    con.Close();
+                }
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+            }
+        }
+
+        public static void deleteTranDets(string TransNumber)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
+                {
+                    con.Open();
+                    using (SqlCommand command = new SqlCommand("DELETE FROM TransDetails WHERE TransDetsID = '" + TransNumber + "'", con))
                     {
                         command.ExecuteNonQuery();
                     }

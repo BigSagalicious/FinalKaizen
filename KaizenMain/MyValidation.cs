@@ -93,6 +93,20 @@ namespace KaizenMain
 
         }
 
+        public static bool vaidCustID(string txt)
+        {
+            bool ok = true;
+
+            if (txt.Trim() == "      -ENTER-")
+            {
+                ok = false;
+            }
+            else
+                ok = true;
+            return ok;
+
+        }
+
         public static bool validLetterWhitespace(string txt)
         {
             bool ok = true;

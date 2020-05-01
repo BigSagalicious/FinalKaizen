@@ -179,6 +179,7 @@
             this.richTextBox11.TabIndex = 30;
             this.richTextBox11.Text = "Schedule";
             this.richTextBox11.Click += new System.EventHandler(this.pBScheduel_Click);
+            this.richTextBox11.TextChanged += new System.EventHandler(this.richTextBox11_TextChanged);
             // 
             // pbSchedule
             // 
