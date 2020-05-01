@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -44,19 +45,35 @@ namespace KaizenMain
         public string CustID
         {
             get { return custID; }
-            set { custID = value; }
+            set {
+                if (MyValidation.vaidCustID(custID))
+                { transType = value; }
+                else
+                    throw new MyException("Please Enter Valid Customer ID");
+            }
         }
-
         public double BalOwed
         {
             get { return balOwed; }
-            set { balOwed = value; }
+            set
+            {
+                if (MyValidation.validNumber(transType))
+                { balOwed = value; }
+                else
+                    throw new MyException("Please Add Items to order");
+            }
         }
 
         public double TransTotal
         {
             get { return transTotal; }
-            set { transTotal = value; }
+            set
+            {
+                if (MyValidation.validNumber(transType))
+                { transTotal = value; }
+                else
+                    throw new MyException("Please Add Items to order");
+            }
         }
         public char Paid
         {

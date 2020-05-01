@@ -239,5 +239,10 @@ namespace KaizenMain
         {
 
         }
+
+        private void richTextBox11_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
