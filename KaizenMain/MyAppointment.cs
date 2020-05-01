@@ -30,7 +30,14 @@ namespace KaizenMain
         public string AppID
         {
             get { return appID; }
-            set { appID = value; }
+            set {
+                if (MyValidation.VailidIDCode("AP", AppID))
+                {
+                    AppID = value;
+                }
+                else
+                    throw new MyException("App ID must start with 'AP-' ");
+            }
 
            
         }

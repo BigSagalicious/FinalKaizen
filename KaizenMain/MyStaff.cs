@@ -75,7 +75,14 @@ namespace KaizenMain
         {
             get { return telNo; }
             set
-            { telNo = value; }
+            {
+                if (MyValidation.validLength(value, 11, 15) && MyValidation.validNumber(value))
+                {
+                    telNo = value;
+                }
+                else
+                    throw new MyException("Telephone number must be 11-15 digits");
+            }
 
 
         }

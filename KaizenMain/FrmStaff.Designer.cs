@@ -33,21 +33,16 @@
             this.tabDisplay = new System.Windows.Forms.TabPage();
             this.dgvStaff = new System.Windows.Forms.DataGridView();
             this.tabSearch = new System.Windows.Forms.TabPage();
-            this.lblSeJobDesc = new System.Windows.Forms.Label();
-            this.txtJobDesc = new System.Windows.Forms.TextBox();
-            this.txtSeJobR = new System.Windows.Forms.TextBox();
-            this.lblStaffJob = new System.Windows.Forms.Label();
-            this.txtSeTel = new System.Windows.Forms.TextBox();
-            this.txtSeEmail = new System.Windows.Forms.TextBox();
-            this.txtSeSur = new System.Windows.Forms.TextBox();
-            this.txtSeFore = new System.Windows.Forms.TextBox();
-            this.txtSearchID = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.lblSeStaffSur = new System.Windows.Forms.Label();
-            this.lblStaffFore = new System.Windows.Forms.Label();
-            this.lblSeStaff = new System.Windows.Forms.Label();
-            this.btnSearchClearForm = new KaizenMain.RoundButton();
+            this.lbID = new System.Windows.Forms.ListBox();
+            this.lblSID = new System.Windows.Forms.Label();
+            this.txtSeName = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblSTelNo = new System.Windows.Forms.Label();
+            this.lblSEmail = new System.Windows.Forms.Label();
+            this.lblSJobDesc = new System.Windows.Forms.Label();
+            this.lblSJob = new System.Windows.Forms.Label();
+            this.lbStaff = new System.Windows.Forms.ListBox();
+            this.iconSearchStaffID = new System.Windows.Forms.PictureBox();
             this.tabAdd = new System.Windows.Forms.TabPage();
             this.btnClearAdd = new KaizenMain.RoundButton();
             this.lblAddStaffID = new System.Windows.Forms.Label();
@@ -98,16 +93,19 @@
             this.lblDeStaffID = new System.Windows.Forms.Label();
             this.btnDeDelete = new KaizenMain.RoundButton();
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
-            this.iconSearchStaffID = new System.Windows.Forms.PictureBox();
+            this.lbTel = new System.Windows.Forms.ListBox();
+            this.lbEmail = new System.Windows.Forms.ListBox();
+            this.lbJobDesc = new System.Windows.Forms.ListBox();
+            this.lbJob = new System.Windows.Forms.ListBox();
             this.tabStaff.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.tabSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconSearchStaffID)).BeginInit();
             this.tabAdd.SuspendLayout();
             this.tabEdit.SuspendLayout();
             this.tabDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconSearchStaffID)).BeginInit();
             this.SuspendLayout();
             // 
             // tabStaff
@@ -162,22 +160,20 @@
             this.tabSearch.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabSearch.Controls.Add(this.lbTel);
+            this.tabSearch.Controls.Add(this.lbEmail);
+            this.tabSearch.Controls.Add(this.lbJobDesc);
+            this.tabSearch.Controls.Add(this.lbJob);
+            this.tabSearch.Controls.Add(this.lbID);
+            this.tabSearch.Controls.Add(this.lblSID);
+            this.tabSearch.Controls.Add(this.txtSeName);
+            this.tabSearch.Controls.Add(this.lblName);
+            this.tabSearch.Controls.Add(this.lblSTelNo);
+            this.tabSearch.Controls.Add(this.lblSEmail);
+            this.tabSearch.Controls.Add(this.lblSJobDesc);
+            this.tabSearch.Controls.Add(this.lblSJob);
+            this.tabSearch.Controls.Add(this.lbStaff);
             this.tabSearch.Controls.Add(this.iconSearchStaffID);
-            this.tabSearch.Controls.Add(this.lblSeJobDesc);
-            this.tabSearch.Controls.Add(this.txtJobDesc);
-            this.tabSearch.Controls.Add(this.txtSeJobR);
-            this.tabSearch.Controls.Add(this.lblStaffJob);
-            this.tabSearch.Controls.Add(this.txtSeTel);
-            this.tabSearch.Controls.Add(this.txtSeEmail);
-            this.tabSearch.Controls.Add(this.txtSeSur);
-            this.tabSearch.Controls.Add(this.txtSeFore);
-            this.tabSearch.Controls.Add(this.txtSearchID);
-            this.tabSearch.Controls.Add(this.label28);
-            this.tabSearch.Controls.Add(this.label27);
-            this.tabSearch.Controls.Add(this.lblSeStaffSur);
-            this.tabSearch.Controls.Add(this.lblStaffFore);
-            this.tabSearch.Controls.Add(this.lblSeStaff);
-            this.tabSearch.Controls.Add(this.btnSearchClearForm);
             this.tabSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tabSearch.Location = new System.Drawing.Point(4, 29);
@@ -186,150 +182,104 @@
             this.tabSearch.Size = new System.Drawing.Size(734, 688);
             this.tabSearch.TabIndex = 1;
             this.tabSearch.Text = "SEARCH";
+            this.tabSearch.Click += new System.EventHandler(this.tabSearch_Click);
             // 
-            // lblSeJobDesc
+            // lbID
             // 
-            this.lblSeJobDesc.AutoSize = true;
-            this.lblSeJobDesc.Location = new System.Drawing.Point(36, 236);
-            this.lblSeJobDesc.Name = "lblSeJobDesc";
-            this.lblSeJobDesc.Size = new System.Drawing.Size(155, 24);
-            this.lblSeJobDesc.TabIndex = 227;
-            this.lblSeJobDesc.Text = "Job Description";
+            this.lbID.FormattingEnabled = true;
+            this.lbID.ItemHeight = 24;
+            this.lbID.Location = new System.Drawing.Point(166, 169);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(293, 28);
+            this.lbID.TabIndex = 253;
             // 
-            // txtJobDesc
+            // lblSID
             // 
-            this.txtJobDesc.Location = new System.Drawing.Point(197, 207);
-            this.txtJobDesc.Multiline = true;
-            this.txtJobDesc.Name = "txtJobDesc";
-            this.txtJobDesc.Size = new System.Drawing.Size(291, 104);
-            this.txtJobDesc.TabIndex = 226;
+            this.lblSID.AutoSize = true;
+            this.lblSID.Location = new System.Drawing.Point(7, 173);
+            this.lblSID.Name = "lblSID";
+            this.lblSID.Size = new System.Drawing.Size(74, 24);
+            this.lblSID.TabIndex = 251;
+            this.lblSID.Text = "Staff ID";
             // 
-            // txtSeJobR
+            // txtSeName
             // 
-            this.txtSeJobR.Location = new System.Drawing.Point(197, 160);
-            this.txtSeJobR.Name = "txtSeJobR";
-            this.txtSeJobR.Size = new System.Drawing.Size(291, 29);
-            this.txtSeJobR.TabIndex = 225;
+            this.txtSeName.Location = new System.Drawing.Point(130, 22);
+            this.txtSeName.Name = "txtSeName";
+            this.txtSeName.Size = new System.Drawing.Size(248, 29);
+            this.txtSeName.TabIndex = 250;
             // 
-            // lblStaffJob
+            // lblName
             // 
-            this.lblStaffJob.AutoSize = true;
-            this.lblStaffJob.Location = new System.Drawing.Point(36, 165);
-            this.lblStaffJob.Name = "lblStaffJob";
-            this.lblStaffJob.Size = new System.Drawing.Size(94, 24);
-            this.lblStaffJob.TabIndex = 224;
-            this.lblStaffJob.Text = "Job-Role";
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(30, 22);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(94, 24);
+            this.lblName.TabIndex = 249;
+            this.lblName.Text = "Surname";
             // 
-            // txtSeTel
+            // lblSTelNo
             // 
-            this.txtSeTel.Location = new System.Drawing.Point(196, 409);
-            this.txtSeTel.Name = "txtSeTel";
-            this.txtSeTel.Size = new System.Drawing.Size(437, 29);
-            this.txtSeTel.TabIndex = 219;
+            this.lblSTelNo.AutoSize = true;
+            this.lblSTelNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSTelNo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSTelNo.Location = new System.Drawing.Point(2, 441);
+            this.lblSTelNo.Name = "lblSTelNo";
+            this.lblSTelNo.Size = new System.Drawing.Size(73, 24);
+            this.lblSTelNo.TabIndex = 247;
+            this.lblSTelNo.Text = "Tel No";
             // 
-            // txtSeEmail
+            // lblSEmail
             // 
-            this.txtSeEmail.Location = new System.Drawing.Point(196, 338);
-            this.txtSeEmail.Name = "txtSeEmail";
-            this.txtSeEmail.Size = new System.Drawing.Size(437, 29);
-            this.txtSeEmail.TabIndex = 217;
+            this.lblSEmail.AutoSize = true;
+            this.lblSEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSEmail.Location = new System.Drawing.Point(6, 392);
+            this.lblSEmail.Name = "lblSEmail";
+            this.lblSEmail.Size = new System.Drawing.Size(69, 24);
+            this.lblSEmail.TabIndex = 245;
+            this.lblSEmail.Text = "E-Mail";
             // 
-            // txtSeSur
+            // lblSJobDesc
             // 
-            this.txtSeSur.Location = new System.Drawing.Point(197, 114);
-            this.txtSeSur.Name = "txtSeSur";
-            this.txtSeSur.Size = new System.Drawing.Size(291, 29);
-            this.txtSeSur.TabIndex = 207;
+            this.lblSJobDesc.AutoSize = true;
+            this.lblSJobDesc.Location = new System.Drawing.Point(7, 303);
+            this.lblSJobDesc.Name = "lblSJobDesc";
+            this.lblSJobDesc.Size = new System.Drawing.Size(155, 24);
+            this.lblSJobDesc.TabIndex = 244;
+            this.lblSJobDesc.Text = "Job Description";
             // 
-            // txtSeFore
+            // lblSJob
             // 
-            this.txtSeFore.Location = new System.Drawing.Point(196, 68);
-            this.txtSeFore.Name = "txtSeFore";
-            this.txtSeFore.Size = new System.Drawing.Size(291, 29);
-            this.txtSeFore.TabIndex = 205;
+            this.lblSJob.AutoSize = true;
+            this.lblSJob.Location = new System.Drawing.Point(7, 232);
+            this.lblSJob.Name = "lblSJob";
+            this.lblSJob.Size = new System.Drawing.Size(94, 24);
+            this.lblSJob.TabIndex = 241;
+            this.lblSJob.Text = "Job-Role";
             // 
-            // txtSearchID
+            // lbStaff
             // 
-            this.txtSearchID.Location = new System.Drawing.Point(196, 24);
-            this.txtSearchID.Name = "txtSearchID";
-            this.txtSearchID.Size = new System.Drawing.Size(158, 29);
-            this.txtSearchID.TabIndex = 203;
+            this.lbStaff.FormattingEnabled = true;
+            this.lbStaff.ItemHeight = 24;
+            this.lbStaff.Location = new System.Drawing.Point(30, 65);
+            this.lbStaff.Name = "lbStaff";
+            this.lbStaff.Size = new System.Drawing.Size(348, 76);
+            this.lbStaff.TabIndex = 229;
+            this.lbStaff.SelectedIndexChanged += new System.EventHandler(this.lbStaff_SelectedIndexChanged);
             // 
-            // label28
+            // iconSearchStaffID
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label28.Location = new System.Drawing.Point(32, 414);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(73, 24);
-            this.label28.TabIndex = 218;
-            this.label28.Text = "Tel No";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label27.Location = new System.Drawing.Point(36, 338);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(69, 24);
-            this.label27.TabIndex = 216;
-            this.label27.Text = "E-Mail";
-            // 
-            // lblSeStaffSur
-            // 
-            this.lblSeStaffSur.AutoSize = true;
-            this.lblSeStaffSur.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeStaffSur.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSeStaffSur.Location = new System.Drawing.Point(36, 119);
-            this.lblSeStaffSur.Name = "lblSeStaffSur";
-            this.lblSeStaffSur.Size = new System.Drawing.Size(94, 24);
-            this.lblSeStaffSur.TabIndex = 206;
-            this.lblSeStaffSur.Text = "Surname";
-            // 
-            // lblStaffFore
-            // 
-            this.lblStaffFore.AutoSize = true;
-            this.lblStaffFore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaffFore.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblStaffFore.Location = new System.Drawing.Point(36, 73);
-            this.lblStaffFore.Name = "lblStaffFore";
-            this.lblStaffFore.Size = new System.Drawing.Size(106, 24);
-            this.lblStaffFore.TabIndex = 204;
-            this.lblStaffFore.Text = "Forename";
-            // 
-            // lblSeStaff
-            // 
-            this.lblSeStaff.AutoSize = true;
-            this.lblSeStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeStaff.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSeStaff.Location = new System.Drawing.Point(36, 27);
-            this.lblSeStaff.Name = "lblSeStaff";
-            this.lblSeStaff.Size = new System.Drawing.Size(74, 24);
-            this.lblSeStaff.TabIndex = 202;
-            this.lblSeStaff.Text = "Staff ID";
-            // 
-            // btnSearchClearForm
-            // 
-            this.btnSearchClearForm.BorderColor = System.Drawing.Color.Silver;
-            this.btnSearchClearForm.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnSearchClearForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearchClearForm.FlatAppearance.BorderSize = 0;
-            this.btnSearchClearForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnSearchClearForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnSearchClearForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchClearForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchClearForm.Location = new System.Drawing.Point(519, 17);
-            this.btnSearchClearForm.Name = "btnSearchClearForm";
-            this.btnSearchClearForm.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnSearchClearForm.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnSearchClearForm.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnSearchClearForm.Size = new System.Drawing.Size(115, 40);
-            this.btnSearchClearForm.TabIndex = 221;
-            this.btnSearchClearForm.Text = "CLEAR";
-            this.btnSearchClearForm.TextColor = System.Drawing.Color.White;
-            this.btnSearchClearForm.UseVisualStyleBackColor = true;
+            this.iconSearchStaffID.BackColor = System.Drawing.Color.Transparent;
+            this.iconSearchStaffID.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.iconSearchStaffID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconSearchStaffID.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconSearchStaffID.Location = new System.Drawing.Point(398, 22);
+            this.iconSearchStaffID.Name = "iconSearchStaffID";
+            this.iconSearchStaffID.Size = new System.Drawing.Size(43, 31);
+            this.iconSearchStaffID.TabIndex = 228;
+            this.iconSearchStaffID.TabStop = false;
+            this.iconSearchStaffID.Click += new System.EventHandler(this.iconSearchStaffID_Click);
             // 
             // tabAdd
             // 
@@ -879,18 +829,41 @@
             // 
             this.errP.ContainerControl = this;
             // 
-            // iconSearchStaffID
+            // lbTel
             // 
-            this.iconSearchStaffID.BackColor = System.Drawing.Color.Transparent;
-            this.iconSearchStaffID.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.iconSearchStaffID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.iconSearchStaffID.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconSearchStaffID.Location = new System.Drawing.Point(381, 24);
-            this.iconSearchStaffID.Name = "iconSearchStaffID";
-            this.iconSearchStaffID.Size = new System.Drawing.Size(43, 31);
-            this.iconSearchStaffID.TabIndex = 228;
-            this.iconSearchStaffID.TabStop = false;
-            this.iconSearchStaffID.Click += new System.EventHandler(this.iconSearchStaffID_Click);
+            this.lbTel.FormattingEnabled = true;
+            this.lbTel.ItemHeight = 24;
+            this.lbTel.Location = new System.Drawing.Point(166, 437);
+            this.lbTel.Name = "lbTel";
+            this.lbTel.Size = new System.Drawing.Size(342, 28);
+            this.lbTel.TabIndex = 257;
+            // 
+            // lbEmail
+            // 
+            this.lbEmail.FormattingEnabled = true;
+            this.lbEmail.ItemHeight = 24;
+            this.lbEmail.Location = new System.Drawing.Point(166, 392);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(342, 28);
+            this.lbEmail.TabIndex = 256;
+            // 
+            // lbJobDesc
+            // 
+            this.lbJobDesc.FormattingEnabled = true;
+            this.lbJobDesc.ItemHeight = 24;
+            this.lbJobDesc.Location = new System.Drawing.Point(168, 299);
+            this.lbJobDesc.Name = "lbJobDesc";
+            this.lbJobDesc.Size = new System.Drawing.Size(539, 28);
+            this.lbJobDesc.TabIndex = 255;
+            // 
+            // lbJob
+            // 
+            this.lbJob.FormattingEnabled = true;
+            this.lbJob.ItemHeight = 24;
+            this.lbJob.Location = new System.Drawing.Point(166, 228);
+            this.lbJob.Name = "lbJob";
+            this.lbJob.Size = new System.Drawing.Size(293, 28);
+            this.lbJob.TabIndex = 254;
             // 
             // FrmStaff
             // 
@@ -907,6 +880,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
             this.tabSearch.ResumeLayout(false);
             this.tabSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconSearchStaffID)).EndInit();
             this.tabAdd.ResumeLayout(false);
             this.tabAdd.PerformLayout();
             this.tabEdit.ResumeLayout(false);
@@ -914,7 +888,6 @@
             this.tabDelete.ResumeLayout(false);
             this.tabDelete.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconSearchStaffID)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -925,21 +898,6 @@
         private System.Windows.Forms.TabPage tabDisplay;
         private System.Windows.Forms.DataGridView dgvStaff;
         private System.Windows.Forms.TabPage tabSearch;
-        private System.Windows.Forms.Label lblSeJobDesc;
-        private System.Windows.Forms.TextBox txtJobDesc;
-        private System.Windows.Forms.TextBox txtSeJobR;
-        private System.Windows.Forms.Label lblStaffJob;
-        private System.Windows.Forms.TextBox txtSeTel;
-        private System.Windows.Forms.TextBox txtSeEmail;
-        private System.Windows.Forms.TextBox txtSeSur;
-        private System.Windows.Forms.TextBox txtSeFore;
-        private System.Windows.Forms.TextBox txtSearchID;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label lblSeStaffSur;
-        private System.Windows.Forms.Label lblStaffFore;
-        private System.Windows.Forms.Label lblSeStaff;
-        private RoundButton btnSearchClearForm;
         private System.Windows.Forms.TabPage tabAdd;
         private System.Windows.Forms.Label lblAddStaffID;
         private System.Windows.Forms.Label lblAJobDesc;
@@ -991,5 +949,18 @@
         private System.Windows.Forms.ErrorProvider errP;
         private RoundButton btnClearAdd;
         private System.Windows.Forms.PictureBox iconSearchStaffID;
+        private System.Windows.Forms.ListBox lbStaff;
+        private System.Windows.Forms.Label lblSID;
+        private System.Windows.Forms.TextBox txtSeName;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblSTelNo;
+        private System.Windows.Forms.Label lblSEmail;
+        private System.Windows.Forms.Label lblSJobDesc;
+        private System.Windows.Forms.Label lblSJob;
+        private System.Windows.Forms.ListBox lbID;
+        private System.Windows.Forms.ListBox lbTel;
+        private System.Windows.Forms.ListBox lbEmail;
+        private System.Windows.Forms.ListBox lbJobDesc;
+        private System.Windows.Forms.ListBox lbJob;
     }
 }
