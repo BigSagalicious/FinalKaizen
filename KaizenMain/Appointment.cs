@@ -287,7 +287,7 @@ namespace KaizenMain
 
             //connStr = @"Data Source = .\SQLEXPRESS01; Initial Catalog = Kaizen;Integrated Security = true ";
             connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-            //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+           // connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
             DateTime dts = new DateTime(2020, 2, 10);
             DateTime dte = new DateTime (2080, 12, 25);

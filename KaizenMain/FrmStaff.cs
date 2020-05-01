@@ -13,11 +13,14 @@ namespace KaizenMain
 {
     public partial class FrmStaff : Form
     {
-        SqlDataAdapter daStaff;
+        SqlDataAdapter daStaff,daStaffDetails;
         DataSet dsKaizen = new DataSet();
         SqlCommandBuilder cmdBStaff;
+        SqlCommand cmbStaffDetails;
         DataRow drStaff;
-        String connStr, sqlStaff;
+        DataRow drStaffDetails;
+        SqlConnection conn;
+        String connStr, sqlStaff,sqlStaffDetails;
         int selectedTab = 0;
         bool staffSelected = false;
         int staffIDSelected = 0;
@@ -42,8 +45,14 @@ namespace KaizenMain
             connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
             //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
+            sqlStaffDetails = @"Select StaffID,StaffSName, StaffFName,StaffSName+','+StaffFName as name,Job, JobDesc, StaffTel, StaffEmail from staff where StaffSName LIKE @Name Order by StaffID";
+            conn = new SqlConnection(connStr);
+            cmbStaffDetails = new SqlCommand(sqlStaffDetails, conn);
+            cmbStaffDetails.Parameters.Add("@Name", SqlDbType.VarChar);
+            daStaffDetails = new SqlDataAdapter(cmbStaffDetails);
+            daStaffDetails.FillSchema(dsKaizen, SchemaType.Source, "Staff");
 
-            sqlStaff = @"select * from Staff";
+            sqlStaff = @"select * from Staff order by StaffID";
             daStaff = new SqlDataAdapter(sqlStaff, connStr);
             cmdBStaff = new SqlCommandBuilder(daStaff);
 
@@ -128,21 +137,29 @@ namespace KaizenMain
                             if (staffIDSelected == 0)
                             {
                                 tabStaff.SelectedIndex = 0;
+                                
                                 break;
                             }
                             else
                             {
-                                
-                                txtSearchID.Text = "ST-" + staffIDSelected.ToString();
-                                drStaff = dsKaizen.Tables["Staff"].Rows.Find(txtSearchID.Text);
 
 
-                                txtSeFore.Text = drStaff["StaffFName"].ToString();
-                                txtSeSur.Text = drStaff["StaffSName"].ToString();
-                                txtSeJobR.Text = drStaff["Job"].ToString();
-                                txtJobDesc.Text = drStaff["JobDesc"].ToString();
-                                txtSeEmail.Text = drStaff["StaffEmail"].ToString();
-                                txtSeTel.Text = drStaff["StaffTel"].ToString();
+                                try
+                                {
+                                    
+                                   
+
+                                    dsKaizen.Tables["Staff"].Clear();
+                                    
+
+                                   
+
+
+                                }
+                                catch (MyException ex)
+                                {
+                                    MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Not Found!");
+                                }
 
                             }
                             break;
@@ -548,34 +565,25 @@ namespace KaizenMain
             }
         }
 
+        private void tabSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbStaff_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            
+        }
+
         private void iconSearchStaffID_Click(object sender, EventArgs e)
         {
-            string searchValue = txtSearchID.Text;
+            
+            String str = txtSeName.Text.Trim();
 
-            dgvStaff.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            try
-            {
-                foreach (DataGridViewRow row in dgvStaff.Rows)
-                {
-                    if (row.Cells[0].Value.ToString().Equals(searchValue))
-                    {
-                        row.Selected = true;
-                        drStaff = dsKaizen.Tables["Staff"].Rows.Find(txtSearchID.Text);
-
-                        txtSeFore.Text = drStaff["StaffFName"].ToString();
-                        txtSeSur.Text = drStaff["StaffSName"].ToString();
-                        txtSeJobR.Text = drStaff["Job"].ToString();
-                        txtJobDesc.Text = drStaff["JobDesc"].ToString();
-                        txtSeEmail.Text = drStaff["StaffEmail"].ToString();
-                        txtSeTel.Text = drStaff["StaffTel"].ToString();
-                        break;
-                    }
-                }
-            }
-            catch (MyException ex)
-            {
-                MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Not Found!");
-            }
+            dsKaizen.Tables["Staff"].Clear();
+            fillListboxStaff(str);
+            fillListboxID(str);
         }
 
         private void enableEditTxtboxes()
@@ -586,6 +594,42 @@ namespace KaizenMain
             txtEdJobDesc.Enabled = true;
             txtEdEmail.Enabled = true;
             txtEdTel.Enabled = true;
+        }
+
+        private void fillListboxStaff(String str)
+        {
+            cmbStaffDetails.Parameters["@Name"].Value = str + "%";
+            daStaffDetails.Fill(dsKaizen, "Staff");
+
+            lbStaff.DataSource = dsKaizen.Tables["Staff"];
+            lbStaff.DisplayMember = "name";
+            lbStaff.ValueMember = "StaffID";
+        }
+        private void fillListboxID(String str)
+        {
+            cmbStaffDetails.Parameters["@Name"].Value = str + "%";
+            daStaffDetails.Fill(dsKaizen, "Staff");
+
+            lbID.DataSource = dsKaizen.Tables["Staff"];
+            lbID.DisplayMember = "StaffID";
+            lbID.ValueMember = "StaffID";
+
+            lbJob.DataSource = dsKaizen.Tables["Staff"];
+            lbJob.DisplayMember = "Job";
+            lbJob.ValueMember = "StaffID";
+
+            lbJobDesc.DataSource = dsKaizen.Tables["Staff"];
+            lbJobDesc.DisplayMember = "JobDesc";
+            lbJobDesc.ValueMember = "StaffID";
+
+            lbEmail.DataSource = dsKaizen.Tables["Staff"];
+            lbEmail.DisplayMember = "StaffEmail";
+            lbEmail.ValueMember = "StaffID";
+
+            lbTel.DataSource = dsKaizen.Tables["Staff"];
+            lbTel.DisplayMember = "StaffTel";
+            lbTel.ValueMember = "StaffID";
+
         }
 
 
