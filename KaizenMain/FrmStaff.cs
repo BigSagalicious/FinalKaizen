@@ -39,8 +39,8 @@ namespace KaizenMain
         private void Staff_load(object sender, EventArgs e)
         {
             //connStr = @"Data Source = .\ADAM-PC; Initial Catalog = Kaizen;Integrated Security = true ";
-            connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-            //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+            //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
+            connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
 
             sqlStaff = @"select * from Staff";

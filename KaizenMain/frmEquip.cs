@@ -217,8 +217,8 @@ namespace KaizenMain
             dt.Columns.Add("Cost");
 
             //connStr = @"Data Source = C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-            connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-            //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+            //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
+            connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
             sqlEquip = @"select * from Trans where TransType = 'Purchase'";
             daTrans = new SqlDataAdapter(sqlEquip, connStr);
@@ -291,7 +291,7 @@ namespace KaizenMain
 
         void populateEquipNameCmb(ComboBox comboBox)
         {
-            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true "))
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
             {
                 SqlCommand sqlCmd = new SqlCommand("SELECT * FROM Stock", sqlConnectionEqT);
                 sqlConnectionEqT.Open();
@@ -317,7 +317,7 @@ namespace KaizenMain
         }
         private void pbAddSearchEquip_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true "))
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
             {
                 SqlCommand sqlCmd = new SqlCommand("SELECT * FROM Stock", sqlConnectionEqT);
                 sqlConnectionEqT.Open();
@@ -489,17 +489,7 @@ namespace KaizenMain
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(lblAddTransID, MyEx.toString());
-            }
-
-            try
-            {
-                myTrans.CustID = txtAddCustID.Text.Trim();
-            }
-            catch (MyException MyEx)
-            {
-                ok = false;
-                errP.SetError(lblAddTransID, MyEx.toString());
+                errP.SetError(txtAddCustID, MyEx.toString());
             }
 
             try
@@ -527,7 +517,7 @@ namespace KaizenMain
                 MessageBox.Show("Please Input Order Details Before Adding", "Order");
             }
 
-            try
+         //   try
             {
                 if (ok)
                 {
@@ -629,10 +619,10 @@ namespace KaizenMain
                 }
 
             }
-            catch (Exception ex)
+           // catch (Exception ex)
             {
-                MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Error !", MessageBoxButtons.AbortRetryIgnore,
-                    MessageBoxIcon.Error);
+               // MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Error !", MessageBoxButtons.AbortRetryIgnore,
+                 //   MessageBoxIcon.Error);
             }
         }
 
@@ -1083,7 +1073,7 @@ namespace KaizenMain
 
         void populateCustName(String CustID, TextBox textBoxN, TextBox textBoxT)
         {
-            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true "))
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
             {
                 SqlCommand sqlCmd = new SqlCommand("SELECT * FROM Customer", sqlConnectionEqT);
                 sqlConnectionEqT.Open();
@@ -1120,11 +1110,6 @@ namespace KaizenMain
 
                 
             }
-        }
-
-        private void txtAddCustID_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
@@ -1195,7 +1180,7 @@ namespace KaizenMain
 
         void getTransDetsnum()
         {
-            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true "))
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
             {
                 SqlCommand sqlCmd = new SqlCommand("SELECT * FROM TransDetails", sqlConnectionEqT);
                 sqlConnectionEqT.Open();
@@ -1212,86 +1197,6 @@ namespace KaizenMain
             }
         }
 
-        void addTransDetail()
-        {
-            bool ok = true;
-            using (SqlConnection connection = new SqlConnection(@"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true "))
-            {
-                using (SqlDataAdapter dataAdapter = new SqlDataAdapter())
-                    {
-                    dataAdapter.SelectCommand = new SqlCommand("SELECT * FROM TransDetails", connection);
-                    dataAdapter.InsertCommand = new SqlCommand("insert into TransDetails", connection);
-
-                    getTransDetsnum();
-
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        MyTransDetails myTransDetails = new MyTransDetails();
-
-                        TansDIDString = "TD-" + (IDNumber + 1).ToString();
-
-                        try
-                        {
-                            myTransDetails.TransDetsID = TansDIDString;
-
-                        }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                        }
-
-                        try
-                        {
-                            myTransDetails.TransID = lblAddTransID.Text.Trim();
-
-                        }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                        }
-
-                        try
-                        {
-                            myTransDetails.StockID = dr["StockID"].ToString();
-
-                        }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                        }
-
-                        try
-                        {
-                            myTransDetails.Qty = Convert.ToInt32(dr["Qty"]);
-
-                        }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                        }
-
-                        if (ok)
-                        {
-                            drTransDets = dsKaizen.Tables["TransDetails"].NewRow();
-
-                            drTransDets["TransDetsID"] = myTransDetails.TransDetsID;
-                            drTransDets["TransID"] = myTransDetails.TransID;
-                            drTransDets["StockID"] = myTransDetails.StockID;
-                            drTransDets["Qty"] = myTransDetails.Qty;
-                            drTransDets["StartDate"] = DBNull.Value;
-                            drTransDets["EndDate"] = DBNull.Value;
-
-                            dsKaizen.Tables["TransDetails"].Rows.Add(drTransDets);
-
-                            new SqlCommandBuilder(dataAdapter);
-                            dataAdapter.Update(dsKaizen, "TransDetails");
-                            
-                        }
-                    }
-                }
-
-            }
-        }
 
         private void clearAddForm()
         {

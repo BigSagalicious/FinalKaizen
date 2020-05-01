@@ -47,7 +47,7 @@ namespace KaizenMain
             get { return custID; }
             set {
                 if (MyValidation.vaidCustID(custID))
-                { transType = value; }
+                { custID = value; }
                 else
                     throw new MyException("Please Enter Valid Customer ID");
             }

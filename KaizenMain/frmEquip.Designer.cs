@@ -559,7 +559,6 @@
             this.txtAddCustID.Size = new System.Drawing.Size(157, 29);
             this.txtAddCustID.TabIndex = 131;
             this.txtAddCustID.Text = "      -ENTER-";
-            this.txtAddCustID.TextChanged += new System.EventHandler(this.txtAddCustID_TextChanged);
             // 
             // dgvAddOrder
             // 

@@ -109,7 +109,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.roundButton2 = new KaizenMain.RoundButton();
+            this.btnEditClear = new KaizenMain.RoundButton();
             this.btnEditService = new KaizenMain.RoundButton();
             this.roundButton14 = new KaizenMain.RoundButton();
             this.tabDelete = new System.Windows.Forms.TabPage();
@@ -128,7 +128,7 @@
             this.dgvDelete = new System.Windows.Forms.DataGridView();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.roundButton20 = new KaizenMain.RoundButton();
+            this.btnDeleteClear = new KaizenMain.RoundButton();
             this.roundButton17 = new KaizenMain.RoundButton();
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabService.SuspendLayout();
@@ -800,7 +800,7 @@
             this.tabEdit.Controls.Add(this.label18);
             this.tabEdit.Controls.Add(this.label26);
             this.tabEdit.Controls.Add(this.panel2);
-            this.tabEdit.Controls.Add(this.roundButton2);
+            this.tabEdit.Controls.Add(this.btnEditClear);
             this.tabEdit.Controls.Add(this.btnEditService);
             this.tabEdit.Controls.Add(this.roundButton14);
             this.tabEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
@@ -947,6 +947,7 @@
             this.dgvEdit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEdit.Size = new System.Drawing.Size(664, 188);
             this.dgvEdit.TabIndex = 247;
+            this.dgvEdit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.editgridview_CellClick);
             // 
             // label18
             // 
@@ -1012,6 +1013,7 @@
             this.btnEditDeleteTransD.Text = "DELETE";
             this.btnEditDeleteTransD.TextColor = System.Drawing.Color.White;
             this.btnEditDeleteTransD.UseVisualStyleBackColor = true;
+            this.btnEditDeleteTransD.Click += new System.EventHandler(this.btnEditDeleteTransD_Click);
             // 
             // btnEditEditTransD
             // 
@@ -1033,6 +1035,7 @@
             this.btnEditEditTransD.Text = "EDIT";
             this.btnEditEditTransD.TextColor = System.Drawing.Color.White;
             this.btnEditEditTransD.UseVisualStyleBackColor = true;
+            this.btnEditEditTransD.Click += new System.EventHandler(this.btnEditEditTransD_Click);
             // 
             // cmbEditEquipName
             // 
@@ -1064,6 +1067,7 @@
             this.btnAddTransD.Text = "ADD";
             this.btnAddTransD.TextColor = System.Drawing.Color.White;
             this.btnAddTransD.UseVisualStyleBackColor = true;
+            this.btnAddTransD.Click += new System.EventHandler(this.btnAddTransD_Click);
             // 
             // btnEditTransDClear
             // 
@@ -1085,6 +1089,7 @@
             this.btnEditTransDClear.Text = "CLEAR";
             this.btnEditTransDClear.TextColor = System.Drawing.Color.White;
             this.btnEditTransDClear.UseVisualStyleBackColor = true;
+            this.btnEditTransDClear.Click += new System.EventHandler(this.btnEditTransDClear_Click_1);
             // 
             // pbEditSearchEquip
             // 
@@ -1097,6 +1102,7 @@
             this.pbEditSearchEquip.Size = new System.Drawing.Size(88, 75);
             this.pbEditSearchEquip.TabIndex = 154;
             this.pbEditSearchEquip.TabStop = false;
+            this.pbEditSearchEquip.Click += new System.EventHandler(this.pbEditSearchEquip_Click_1);
             // 
             // txtEditQty
             // 
@@ -1166,26 +1172,26 @@
             this.label31.TabIndex = 8;
             this.label31.Text = "Equipment Name";
             // 
-            // roundButton2
+            // btnEditClear
             // 
-            this.roundButton2.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton2.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton2.FlatAppearance.BorderSize = 0;
-            this.roundButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton2.Location = new System.Drawing.Point(561, 81);
-            this.roundButton2.Name = "roundButton2";
-            this.roundButton2.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton2.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton2.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton2.Size = new System.Drawing.Size(115, 40);
-            this.roundButton2.TabIndex = 251;
-            this.roundButton2.Text = "CLEAR";
-            this.roundButton2.TextColor = System.Drawing.Color.White;
-            this.roundButton2.UseVisualStyleBackColor = true;
+            this.btnEditClear.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditClear.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEditClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditClear.FlatAppearance.BorderSize = 0;
+            this.btnEditClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditClear.Location = new System.Drawing.Point(561, 81);
+            this.btnEditClear.Name = "btnEditClear";
+            this.btnEditClear.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditClear.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEditClear.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditClear.Size = new System.Drawing.Size(115, 40);
+            this.btnEditClear.TabIndex = 251;
+            this.btnEditClear.Text = "CLEAR";
+            this.btnEditClear.TextColor = System.Drawing.Color.White;
+            this.btnEditClear.UseVisualStyleBackColor = true;
             // 
             // btnEditService
             // 
@@ -1207,6 +1213,7 @@
             this.btnEditService.Text = "EDIT SERVICE";
             this.btnEditService.TextColor = System.Drawing.Color.White;
             this.btnEditService.UseVisualStyleBackColor = true;
+            this.btnEditService.Click += new System.EventHandler(this.btnEditTrans_Click);
             // 
             // roundButton14
             // 
@@ -1249,7 +1256,7 @@
             this.tabDelete.Controls.Add(this.dgvDelete);
             this.tabDelete.Controls.Add(this.label23);
             this.tabDelete.Controls.Add(this.label24);
-            this.tabDelete.Controls.Add(this.roundButton20);
+            this.tabDelete.Controls.Add(this.btnDeleteClear);
             this.tabDelete.Controls.Add(this.roundButton17);
             this.tabDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabDelete.Location = new System.Drawing.Point(4, 29);
@@ -1403,26 +1410,26 @@
             this.label24.TabIndex = 236;
             this.label24.Text = "Order ID";
             // 
-            // roundButton20
+            // btnDeleteClear
             // 
-            this.roundButton20.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton20.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton20.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton20.FlatAppearance.BorderSize = 0;
-            this.roundButton20.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton20.Location = new System.Drawing.Point(563, 113);
-            this.roundButton20.Name = "roundButton20";
-            this.roundButton20.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton20.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton20.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton20.Size = new System.Drawing.Size(115, 40);
-            this.roundButton20.TabIndex = 245;
-            this.roundButton20.Text = "CLEAR";
-            this.roundButton20.TextColor = System.Drawing.Color.White;
-            this.roundButton20.UseVisualStyleBackColor = true;
+            this.btnDeleteClear.BorderColor = System.Drawing.Color.Silver;
+            this.btnDeleteClear.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnDeleteClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteClear.FlatAppearance.BorderSize = 0;
+            this.btnDeleteClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteClear.Location = new System.Drawing.Point(563, 113);
+            this.btnDeleteClear.Name = "btnDeleteClear";
+            this.btnDeleteClear.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDeleteClear.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnDeleteClear.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDeleteClear.Size = new System.Drawing.Size(115, 40);
+            this.btnDeleteClear.TabIndex = 245;
+            this.btnDeleteClear.Text = "CLEAR";
+            this.btnDeleteClear.TextColor = System.Drawing.Color.White;
+            this.btnDeleteClear.UseVisualStyleBackColor = true;
             // 
             // roundButton17
             // 
@@ -1444,6 +1451,7 @@
             this.roundButton17.Text = "DELETE RENTAL";
             this.roundButton17.TextColor = System.Drawing.Color.White;
             this.roundButton17.UseVisualStyleBackColor = true;
+            this.roundButton17.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // errP
             // 
@@ -1573,7 +1581,7 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
-        private RoundButton roundButton2;
+        private RoundButton btnEditClear;
         private RoundButton roundButton17;
         private System.Windows.Forms.TextBox txtDeleteCustTel;
         private System.Windows.Forms.TextBox txtDeleteCustName;
@@ -1590,7 +1598,7 @@
         private System.Windows.Forms.DataGridView dgvDelete;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private RoundButton roundButton20;
+        private RoundButton btnDeleteClear;
         private System.Windows.Forms.DateTimePicker dtpSearchDate;
         private System.Windows.Forms.ErrorProvider errP;
     }
