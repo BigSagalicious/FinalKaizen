@@ -206,8 +206,8 @@ namespace KaizenMain
             dt.Columns.Add("Cost");
 
             //connStr = @"Data Source = C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-            //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-            connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+            connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
+            //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
             sqlEquip = @"select * from Trans where TransType = 'Purchase'";
             daTrans = new SqlDataAdapter(sqlEquip, connStr);
@@ -272,7 +272,7 @@ namespace KaizenMain
 
         void populateEquipNameCmb(ComboBox comboBox)
         {
-            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true "))
             {
                 SqlCommand sqlCmd = new SqlCommand("SELECT * FROM Stock", sqlConnectionEqT);
                 sqlConnectionEqT.Open();
@@ -289,7 +289,7 @@ namespace KaizenMain
 
         private void pbAddSearchEquip_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true "))
             {
                 SqlCommand sqlCmd = new SqlCommand("SELECT * FROM Stock", sqlConnectionEqT);
                 sqlConnectionEqT.Open();
@@ -322,7 +322,7 @@ namespace KaizenMain
 
         void populateOrderSum(TextBox transIDTB, DataGridView dgvDetails)
         {
-            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true "))
             {
                 SqlCommand sqlDetailsCmd = new SqlCommand("select * from TransDetails", sqlConnectionEqT);
                 SqlCommand sqlStockCmd = new SqlCommand("select * from Stock", sqlConnectionEqT);
@@ -623,7 +623,7 @@ namespace KaizenMain
 
         void populateCustName(String CustID, TextBox textBoxN, TextBox textBoxT)
         {
-            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true "))
             {
                 SqlCommand sqlCmd = new SqlCommand("SELECT * FROM Customer", sqlConnectionEqT);
                 sqlConnectionEqT.Open();
@@ -645,7 +645,7 @@ namespace KaizenMain
 
         void getTransDetsnum()
         {
-            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true "))
             {
                 SqlCommand sqlCmd = new SqlCommand("SELECT * FROM TransDetails", sqlConnectionEqT);
                 sqlConnectionEqT.Open();
@@ -665,7 +665,7 @@ namespace KaizenMain
         void addTransDetail()
         {
             bool ok = true;
-            using (SqlConnection connection = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
+            using (SqlConnection connection = new SqlConnection(@"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true "))
             {
                 using (SqlDataAdapter dataAdapter = new SqlDataAdapter())
                     {

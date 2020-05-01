@@ -57,7 +57,6 @@
             this.lblEDTransID = new System.Windows.Forms.Label();
             this.lblEDDuration = new System.Windows.Forms.Label();
             this.lblEDStaffID = new System.Windows.Forms.Label();
-            this.pbEdSearch = new System.Windows.Forms.PictureBox();
             this.dtpEdAppBooked = new System.Windows.Forms.DateTimePicker();
             this.dtpEdAppDate = new System.Windows.Forms.DateTimePicker();
             this.cmbEdDur = new System.Windows.Forms.ComboBox();
@@ -93,7 +92,6 @@
             this.txtSeAppTime = new System.Windows.Forms.TextBox();
             this.txtSeTransID = new System.Windows.Forms.TextBox();
             this.txtSearchID = new System.Windows.Forms.TextBox();
-            this.iconSearchAppID = new System.Windows.Forms.PictureBox();
             this.txtSeAppDate = new System.Windows.Forms.TextBox();
             this.txtSeDBooked = new System.Windows.Forms.TextBox();
             this.tabDisplay = new System.Windows.Forms.TabPage();
@@ -138,10 +136,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.tabDelete.SuspendLayout();
             this.tabEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEdSearch)).BeginInit();
             this.tabAdd.SuspendLayout();
             this.tabSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconSearchAppID)).BeginInit();
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -342,7 +338,6 @@
             this.tabEdit.Controls.Add(this.cmbEdDur);
             this.tabEdit.Controls.Add(this.dtpEdAppDate);
             this.tabEdit.Controls.Add(this.dtpEdAppBooked);
-            this.tabEdit.Controls.Add(this.pbEdSearch);
             this.tabEdit.Controls.Add(this.lblEDStaffID);
             this.tabEdit.Controls.Add(this.lblEDDuration);
             this.tabEdit.Controls.Add(this.lblEDTransID);
@@ -440,18 +435,6 @@
             this.lblEDStaffID.Size = new System.Drawing.Size(73, 20);
             this.lblEDStaffID.TabIndex = 21;
             this.lblEDStaffID.Text = "Staff ID";
-            // 
-            // pbEdSearch
-            // 
-            this.pbEdSearch.BackColor = System.Drawing.Color.Transparent;
-            this.pbEdSearch.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.pbEdSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbEdSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbEdSearch.Location = new System.Drawing.Point(416, 48);
-            this.pbEdSearch.Name = "pbEdSearch";
-            this.pbEdSearch.Size = new System.Drawing.Size(43, 31);
-            this.pbEdSearch.TabIndex = 226;
-            this.pbEdSearch.TabStop = false;
             // 
             // dtpEdAppBooked
             // 
@@ -633,6 +616,7 @@
             this.lblAddAppID.Size = new System.Drawing.Size(15, 20);
             this.lblAddAppID.TabIndex = 7;
             this.lblAddAppID.Text = "-";
+            this.lblAddAppID.ForeColorChanged += new System.EventHandler(this.lblAddAppID_ForeColorChanged);
             this.lblAddAppID.Click += new System.EventHandler(this.lblAddAppID_Click);
             // 
             // dtpAppDate
@@ -696,7 +680,6 @@
             this.tabSearch.Controls.Add(this.txtSeAppTime);
             this.tabSearch.Controls.Add(this.txtSeStaffID);
             this.tabSearch.Controls.Add(this.txtSeDuration);
-            this.tabSearch.Controls.Add(this.iconSearchAppID);
             this.tabSearch.Controls.Add(this.lblSeStaffID);
             this.tabSearch.Controls.Add(this.lblSeDuration);
             this.tabSearch.Controls.Add(this.lblSeTransID);
@@ -826,19 +809,6 @@
             this.txtSearchID.Size = new System.Drawing.Size(110, 26);
             this.txtSearchID.TabIndex = 225;
             // 
-            // iconSearchAppID
-            // 
-            this.iconSearchAppID.BackColor = System.Drawing.Color.Transparent;
-            this.iconSearchAppID.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.iconSearchAppID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.iconSearchAppID.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconSearchAppID.Location = new System.Drawing.Point(368, 49);
-            this.iconSearchAppID.Name = "iconSearchAppID";
-            this.iconSearchAppID.Size = new System.Drawing.Size(43, 31);
-            this.iconSearchAppID.TabIndex = 226;
-            this.iconSearchAppID.TabStop = false;
-            this.iconSearchAppID.Click += new System.EventHandler(this.iconSearchAppID_Click);
-            // 
             // txtSeAppDate
             // 
             this.txtSeAppDate.Location = new System.Drawing.Point(252, 146);
@@ -939,6 +909,7 @@
             this.dgvApp.TabIndex = 0;
             this.dgvApp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvApp_CellClick);
             this.dgvApp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvApp_CellContentClick);
+            this.dgvApp.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvApp_CellFormatting);
             // 
             // Sun
             // 
@@ -1394,12 +1365,10 @@
             this.tabDelete.PerformLayout();
             this.tabEdit.ResumeLayout(false);
             this.tabEdit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEdSearch)).EndInit();
             this.tabAdd.ResumeLayout(false);
             this.tabAdd.PerformLayout();
             this.tabSearch.ResumeLayout(false);
             this.tabSearch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconSearchAppID)).EndInit();
             this.tabDisplay.ResumeLayout(false);
             this.tabDisplay.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApp)).EndInit();
@@ -1467,7 +1436,6 @@
         private System.Windows.Forms.TextBox txtSeAppTime;
         private System.Windows.Forms.TextBox txtSeStaffID;
         private System.Windows.Forms.TextBox txtSeDuration;
-        private System.Windows.Forms.PictureBox iconSearchAppID;
         private System.Windows.Forms.Label lblSeStaffID;
         private System.Windows.Forms.Label lblSeDuration;
         private System.Windows.Forms.Label lblSeTransID;
@@ -1498,7 +1466,6 @@
         private System.Windows.Forms.ComboBox cmbEdDur;
         private System.Windows.Forms.DateTimePicker dtpEdAppDate;
         private System.Windows.Forms.DateTimePicker dtpEdAppBooked;
-        private System.Windows.Forms.PictureBox pbEdSearch;
         private System.Windows.Forms.Label lblEDStaffID;
         private System.Windows.Forms.Label lblEDDuration;
         private System.Windows.Forms.Label lblEDTransID;
