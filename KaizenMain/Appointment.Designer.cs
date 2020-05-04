@@ -29,128 +29,151 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Appointment));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Appointment));
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabDelete = new System.Windows.Forms.TabPage();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtDLDateB = new System.Windows.Forms.TextBox();
-            this.txtDLDuration = new System.Windows.Forms.TextBox();
-            this.txtDLStaffID = new System.Windows.Forms.TextBox();
-            this.txtDlAppTime = new System.Windows.Forms.TextBox();
-            this.txtDLAppDate = new System.Windows.Forms.TextBox();
-            this.txtDLTransID = new System.Windows.Forms.TextBox();
+            this.txtDDesc = new System.Windows.Forms.TextBox();
+            this.lblDDesc = new System.Windows.Forms.Label();
             this.txtDLSearch = new System.Windows.Forms.TextBox();
-            this.btnDelDel = new KaizenMain.RoundButton();
+            this.txtDLTransID = new System.Windows.Forms.TextBox();
+            this.txtDLAppDate = new System.Windows.Forms.TextBox();
+            this.txtDlAppTime = new System.Windows.Forms.TextBox();
+            this.txtDLStaffID = new System.Windows.Forms.TextBox();
+            this.txtDLDuration = new System.Windows.Forms.TextBox();
+            this.txtDLDateB = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.tabEdit = new System.Windows.Forms.TabPage();
-            this.btnEditApp = new KaizenMain.RoundButton();
-            this.lblEdAppID = new System.Windows.Forms.Label();
-            this.lblEdDateB = new System.Windows.Forms.Label();
-            this.lblEDAppDate = new System.Windows.Forms.Label();
-            this.lblEDTransID = new System.Windows.Forms.Label();
-            this.lblEDDuration = new System.Windows.Forms.Label();
-            this.lblEDStaffID = new System.Windows.Forms.Label();
-            this.dtpEdAppBooked = new System.Windows.Forms.DateTimePicker();
-            this.dtpEdAppDate = new System.Windows.Forms.DateTimePicker();
-            this.cmbEdDur = new System.Windows.Forms.ComboBox();
-            this.cmbEdStaffID = new System.Windows.Forms.ComboBox();
-            this.cmbEditTransID = new System.Windows.Forms.ComboBox();
-            this.lblEditAID = new System.Windows.Forms.Label();
+            this.txtEDesc = new System.Windows.Forms.TextBox();
+            this.lblEDesc = new System.Windows.Forms.Label();
             this.cmbEdTimes = new System.Windows.Forms.ComboBox();
+            this.lblEditAID = new System.Windows.Forms.Label();
+            this.cmbEditTransID = new System.Windows.Forms.ComboBox();
+            this.cmbEdStaffID = new System.Windows.Forms.ComboBox();
+            this.cmbEdDur = new System.Windows.Forms.ComboBox();
+            this.dtpEdAppDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpEdAppBooked = new System.Windows.Forms.DateTimePicker();
+            this.lblEDStaffID = new System.Windows.Forms.Label();
+            this.lblEDDuration = new System.Windows.Forms.Label();
+            this.lblEDTransID = new System.Windows.Forms.Label();
+            this.lblEDAppDate = new System.Windows.Forms.Label();
+            this.lblEdDateB = new System.Windows.Forms.Label();
+            this.lblEdAppID = new System.Windows.Forms.Label();
             this.tabAdd = new System.Windows.Forms.TabPage();
-            this.btnAddApp = new KaizenMain.RoundButton();
-            this.lblAppID = new System.Windows.Forms.Label();
-            this.lblDateB = new System.Windows.Forms.Label();
-            this.lblAppDate = new System.Windows.Forms.Label();
-            this.lblTransID = new System.Windows.Forms.Label();
-            this.lblDuration = new System.Windows.Forms.Label();
-            this.lblStaffID = new System.Windows.Forms.Label();
-            this.lblAddAppID = new System.Windows.Forms.Label();
-            this.dtpAppDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpDateBooked = new System.Windows.Forms.DateTimePicker();
-            this.cmbAStaffID = new System.Windows.Forms.ComboBox();
-            this.cmbATransID = new System.Windows.Forms.ComboBox();
-            this.cmbDuration = new System.Windows.Forms.ComboBox();
+            this.txtADesc = new System.Windows.Forms.TextBox();
+            this.lblADesc = new System.Windows.Forms.Label();
             this.cmbAddTime = new System.Windows.Forms.ComboBox();
+            this.cmbDuration = new System.Windows.Forms.ComboBox();
+            this.cmbATransID = new System.Windows.Forms.ComboBox();
+            this.cmbAStaffID = new System.Windows.Forms.ComboBox();
+            this.dtpDateBooked = new System.Windows.Forms.DateTimePicker();
+            this.dtpAppDate = new System.Windows.Forms.DateTimePicker();
+            this.lblAddAppID = new System.Windows.Forms.Label();
+            this.lblStaffID = new System.Windows.Forms.Label();
+            this.lblDuration = new System.Windows.Forms.Label();
+            this.lblTransID = new System.Windows.Forms.Label();
+            this.lblAppDate = new System.Windows.Forms.Label();
+            this.lblDateB = new System.Windows.Forms.Label();
+            this.lblAppID = new System.Windows.Forms.Label();
             this.tabSearch = new System.Windows.Forms.TabPage();
-            this.lblSeAppID = new System.Windows.Forms.Label();
-            this.lblSeDateB = new System.Windows.Forms.Label();
-            this.lblSeAppDate = new System.Windows.Forms.Label();
-            this.lblSeAppTime = new System.Windows.Forms.Label();
-            this.lblSeTransID = new System.Windows.Forms.Label();
-            this.lblSeDuration = new System.Windows.Forms.Label();
-            this.lblSeStaffID = new System.Windows.Forms.Label();
-            this.txtSeDuration = new System.Windows.Forms.TextBox();
-            this.txtSeStaffID = new System.Windows.Forms.TextBox();
-            this.txtSeAppTime = new System.Windows.Forms.TextBox();
-            this.txtSeTransID = new System.Windows.Forms.TextBox();
-            this.txtSearchID = new System.Windows.Forms.TextBox();
-            this.txtSeAppDate = new System.Windows.Forms.TextBox();
+            this.txtSDesc = new System.Windows.Forms.TextBox();
+            this.lblSDesc = new System.Windows.Forms.Label();
             this.txtSeDBooked = new System.Windows.Forms.TextBox();
+            this.txtSeAppDate = new System.Windows.Forms.TextBox();
+            this.txtSearchID = new System.Windows.Forms.TextBox();
+            this.txtSeTransID = new System.Windows.Forms.TextBox();
+            this.txtSeAppTime = new System.Windows.Forms.TextBox();
+            this.txtSeStaffID = new System.Windows.Forms.TextBox();
+            this.txtSeDuration = new System.Windows.Forms.TextBox();
+            this.lblSeStaffID = new System.Windows.Forms.Label();
+            this.lblSeDuration = new System.Windows.Forms.Label();
+            this.lblSeTransID = new System.Windows.Forms.Label();
+            this.lblSeAppTime = new System.Windows.Forms.Label();
+            this.lblSeAppDate = new System.Windows.Forms.Label();
+            this.lblSeDateB = new System.Windows.Forms.Label();
+            this.lblSeAppID = new System.Windows.Forms.Label();
             this.tabDisplay = new System.Windows.Forms.TabPage();
-            this.dgvApp = new System.Windows.Forms.DataGridView();
-            this.Sun = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Friday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thur = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Wed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tues = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtDate = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.btnApp = new KaizenMain.RoundButton();
-            this.btnEdit = new KaizenMain.RoundButton();
-            this.roundButton2 = new KaizenMain.RoundButton();
-            this.roundButton3 = new KaizenMain.RoundButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.DayLabel2 = new System.Windows.Forms.Label();
-            this.DayLabel3 = new System.Windows.Forms.Label();
-            this.DayLabel4 = new System.Windows.Forms.Label();
-            this.DayLabel5 = new System.Windows.Forms.Label();
-            this.DayLabel6 = new System.Windows.Forms.Label();
-            this.DayLabel7 = new System.Windows.Forms.Label();
-            this.txtYear = new System.Windows.Forms.TextBox();
-            this.cmbStaff = new System.Windows.Forms.ComboBox();
-            this.lblStaffSelection = new System.Windows.Forms.Label();
-            this.txtDisFor = new System.Windows.Forms.TextBox();
             this.txtDisSur = new System.Windows.Forms.TextBox();
-            this.btnRefresh = new KaizenMain.RoundButton();
+            this.txtDisFor = new System.Windows.Forms.TextBox();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.txtDate = new System.Windows.Forms.TextBox();
+            this.lblStaffSelection = new System.Windows.Forms.Label();
+            this.cmbStaff = new System.Windows.Forms.ComboBox();
+            this.DayLabel7 = new System.Windows.Forms.Label();
+            this.DayLabel6 = new System.Windows.Forms.Label();
+            this.DayLabel5 = new System.Windows.Forms.Label();
+            this.DayLabel4 = new System.Windows.Forms.Label();
+            this.DayLabel3 = new System.Windows.Forms.Label();
+            this.DayLabel2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.dgvApp = new System.Windows.Forms.DataGridView();
+            this.Monday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tues = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Wed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thur = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Friday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sun = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabApp = new System.Windows.Forms.TabControl();
+            this.pnlAppDetails = new System.Windows.Forms.Panel();
+            this.lblpnDate = new System.Windows.Forms.Label();
+            this.lblpnDur = new System.Windows.Forms.Label();
+            this.txtAppDet = new System.Windows.Forms.TextBox();
+            this.lblpnDetails = new System.Windows.Forms.Label();
+            this.lblpnHeader = new System.Windows.Forms.Label();
+            this.txtpnAppDate = new System.Windows.Forms.TextBox();
+            this.txtpnAppDur = new System.Windows.Forms.TextBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.lblpnStaff = new System.Windows.Forms.Label();
+            this.txtpnStaff = new System.Windows.Forms.TextBox();
+            this.lblpnAppTime = new System.Windows.Forms.Label();
+            this.txtpnAppTime = new System.Windows.Forms.TextBox();
+            this.btnClosePnl = new KaizenMain.RoundButton();
+            this.btnRefresh = new KaizenMain.RoundButton();
+            this.btDelete = new KaizenMain.RoundButton();
+            this.btnSearch = new KaizenMain.RoundButton();
+            this.btnEdit = new KaizenMain.RoundButton();
+            this.btnAddApp = new KaizenMain.RoundButton();
+            this.btnEditApp = new KaizenMain.RoundButton();
+            this.btnDelDel = new KaizenMain.RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.tabDelete.SuspendLayout();
             this.tabEdit.SuspendLayout();
             this.tabAdd.SuspendLayout();
             this.tabSearch.SuspendLayout();
             this.tabDisplay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvApp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvApp)).BeginInit();
             this.tabApp.SuspendLayout();
+            this.pnlAppDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // errP
@@ -161,7 +184,8 @@
             // 
             this.tabDelete.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabDelete.Controls.Add(this.btnDelDel);
+            this.tabDelete.Controls.Add(this.txtDDesc);
+            this.tabDelete.Controls.Add(this.lblDDesc);
             this.tabDelete.Controls.Add(this.txtDLSearch);
             this.tabDelete.Controls.Add(this.txtDLTransID);
             this.tabDelete.Controls.Add(this.txtDLAppDate);
@@ -176,6 +200,7 @@
             this.tabDelete.Controls.Add(this.label14);
             this.tabDelete.Controls.Add(this.label15);
             this.tabDelete.Controls.Add(this.label16);
+            this.tabDelete.Controls.Add(this.btnDelDel);
             this.tabDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabDelete.Location = new System.Drawing.Point(4, 29);
             this.tabDelete.Name = "tabDelete";
@@ -185,65 +210,73 @@
             this.tabDelete.Text = "DELETE";
             this.tabDelete.UseVisualStyleBackColor = true;
             // 
-            // label16
+            // txtDDesc
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(57, 58);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(60, 20);
-            this.label16.TabIndex = 15;
-            this.label16.Text = "AppID";
+            this.txtDDesc.Location = new System.Drawing.Point(256, 375);
+            this.txtDDesc.Multiline = true;
+            this.txtDDesc.Name = "txtDDesc";
+            this.txtDDesc.Size = new System.Drawing.Size(474, 65);
+            this.txtDDesc.TabIndex = 238;
             // 
-            // label15
+            // lblDDesc
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(57, 107);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(114, 20);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "Date Booked";
+            this.lblDDesc.AutoSize = true;
+            this.lblDDesc.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblDDesc.Location = new System.Drawing.Point(43, 391);
+            this.lblDDesc.Name = "lblDDesc";
+            this.lblDDesc.Size = new System.Drawing.Size(207, 20);
+            this.lblDDesc.TabIndex = 237;
+            this.lblDDesc.Text = "Appointment Description";
             // 
-            // label14
+            // txtDLSearch
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(57, 156);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(155, 20);
-            this.label14.TabIndex = 17;
-            this.label14.Text = "Appointment Date";
+            this.txtDLSearch.Location = new System.Drawing.Point(256, 52);
+            this.txtDLSearch.Name = "txtDLSearch";
+            this.txtDLSearch.Size = new System.Drawing.Size(110, 26);
+            this.txtDLSearch.TabIndex = 225;
             // 
-            // label13
+            // txtDLTransID
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(57, 200);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(154, 20);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "Appointment Time";
+            this.txtDLTransID.Location = new System.Drawing.Point(256, 325);
+            this.txtDLTransID.Name = "txtDLTransID";
+            this.txtDLTransID.Size = new System.Drawing.Size(229, 26);
+            this.txtDLTransID.TabIndex = 28;
             // 
-            // label12
+            // txtDLAppDate
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(57, 331);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(73, 20);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "TransID";
+            this.txtDLAppDate.Location = new System.Drawing.Point(256, 150);
+            this.txtDLAppDate.Name = "txtDLAppDate";
+            this.txtDLAppDate.Size = new System.Drawing.Size(229, 26);
+            this.txtDLAppDate.TabIndex = 27;
+            this.txtDLAppDate.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
             // 
-            // label11
+            // txtDlAppTime
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(57, 281);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(78, 20);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Duration";
+            this.txtDlAppTime.Location = new System.Drawing.Point(256, 197);
+            this.txtDlAppTime.Name = "txtDlAppTime";
+            this.txtDlAppTime.Size = new System.Drawing.Size(229, 26);
+            this.txtDlAppTime.TabIndex = 26;
+            // 
+            // txtDLStaffID
+            // 
+            this.txtDLStaffID.Location = new System.Drawing.Point(256, 233);
+            this.txtDLStaffID.Name = "txtDLStaffID";
+            this.txtDLStaffID.Size = new System.Drawing.Size(229, 26);
+            this.txtDLStaffID.TabIndex = 25;
+            // 
+            // txtDLDuration
+            // 
+            this.txtDLDuration.Location = new System.Drawing.Point(256, 275);
+            this.txtDLDuration.Name = "txtDLDuration";
+            this.txtDLDuration.Size = new System.Drawing.Size(229, 26);
+            this.txtDLDuration.TabIndex = 24;
+            // 
+            // txtDLDateB
+            // 
+            this.txtDLDateB.Location = new System.Drawing.Point(256, 101);
+            this.txtDLDateB.Name = "txtDLDateB";
+            this.txtDLDateB.Size = new System.Drawing.Size(229, 26);
+            this.txtDLDateB.TabIndex = 23;
             // 
             // label10
             // 
@@ -255,82 +288,72 @@
             this.label10.TabIndex = 21;
             this.label10.Text = "Staff ID";
             // 
-            // txtDLDateB
+            // label11
             // 
-            this.txtDLDateB.Location = new System.Drawing.Point(256, 101);
-            this.txtDLDateB.Name = "txtDLDateB";
-            this.txtDLDateB.Size = new System.Drawing.Size(229, 26);
-            this.txtDLDateB.TabIndex = 23;
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(57, 281);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(78, 20);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Duration";
             // 
-            // txtDLDuration
+            // label12
             // 
-            this.txtDLDuration.Location = new System.Drawing.Point(256, 275);
-            this.txtDLDuration.Name = "txtDLDuration";
-            this.txtDLDuration.Size = new System.Drawing.Size(229, 26);
-            this.txtDLDuration.TabIndex = 24;
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.Location = new System.Drawing.Point(57, 331);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(73, 20);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "TransID";
             // 
-            // txtDLStaffID
+            // label13
             // 
-            this.txtDLStaffID.Location = new System.Drawing.Point(256, 233);
-            this.txtDLStaffID.Name = "txtDLStaffID";
-            this.txtDLStaffID.Size = new System.Drawing.Size(229, 26);
-            this.txtDLStaffID.TabIndex = 25;
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label13.Location = new System.Drawing.Point(57, 200);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(154, 20);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "Appointment Time";
             // 
-            // txtDlAppTime
+            // label14
             // 
-            this.txtDlAppTime.Location = new System.Drawing.Point(256, 197);
-            this.txtDlAppTime.Name = "txtDlAppTime";
-            this.txtDlAppTime.Size = new System.Drawing.Size(229, 26);
-            this.txtDlAppTime.TabIndex = 26;
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label14.Location = new System.Drawing.Point(57, 156);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(155, 20);
+            this.label14.TabIndex = 17;
+            this.label14.Text = "Appointment Date";
             // 
-            // txtDLAppDate
+            // label15
             // 
-            this.txtDLAppDate.Location = new System.Drawing.Point(256, 150);
-            this.txtDLAppDate.Name = "txtDLAppDate";
-            this.txtDLAppDate.Size = new System.Drawing.Size(229, 26);
-            this.txtDLAppDate.TabIndex = 27;
-            this.txtDLAppDate.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label15.Location = new System.Drawing.Point(57, 107);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(114, 20);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Date Booked";
             // 
-            // txtDLTransID
+            // label16
             // 
-            this.txtDLTransID.Location = new System.Drawing.Point(256, 325);
-            this.txtDLTransID.Name = "txtDLTransID";
-            this.txtDLTransID.Size = new System.Drawing.Size(229, 26);
-            this.txtDLTransID.TabIndex = 28;
-            // 
-            // txtDLSearch
-            // 
-            this.txtDLSearch.Location = new System.Drawing.Point(256, 52);
-            this.txtDLSearch.Name = "txtDLSearch";
-            this.txtDLSearch.Size = new System.Drawing.Size(110, 26);
-            this.txtDLSearch.TabIndex = 225;
-            // 
-            // btnDelDel
-            // 
-            this.btnDelDel.BorderColor = System.Drawing.Color.Silver;
-            this.btnDelDel.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnDelDel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelDel.FlatAppearance.BorderSize = 0;
-            this.btnDelDel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDelDel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDelDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelDel.Location = new System.Drawing.Point(619, 87);
-            this.btnDelDel.Name = "btnDelDel";
-            this.btnDelDel.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDelDel.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnDelDel.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDelDel.Size = new System.Drawing.Size(214, 40);
-            this.btnDelDel.TabIndex = 227;
-            this.btnDelDel.Text = "DELETE";
-            this.btnDelDel.TextColor = System.Drawing.Color.White;
-            this.btnDelDel.UseVisualStyleBackColor = true;
-            this.btnDelDel.Click += new System.EventHandler(this.btnDelDel_Click);
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label16.Location = new System.Drawing.Point(57, 58);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(60, 20);
+            this.label16.TabIndex = 15;
+            this.label16.Text = "AppID";
             // 
             // tabEdit
             // 
             this.tabEdit.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabEdit.Controls.Add(this.txtEDesc);
+            this.tabEdit.Controls.Add(this.lblEDesc);
             this.tabEdit.Controls.Add(this.cmbEdTimes);
             this.tabEdit.Controls.Add(this.lblEditAID);
             this.tabEdit.Controls.Add(this.cmbEditTransID);
@@ -354,125 +377,31 @@
             this.tabEdit.Text = "EDIT";
             this.tabEdit.UseVisualStyleBackColor = true;
             // 
-            // btnEditApp
+            // txtEDesc
             // 
-            this.btnEditApp.BorderColor = System.Drawing.Color.Silver;
-            this.btnEditApp.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnEditApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditApp.FlatAppearance.BorderSize = 0;
-            this.btnEditApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEditApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEditApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditApp.Location = new System.Drawing.Point(640, 41);
-            this.btnEditApp.Name = "btnEditApp";
-            this.btnEditApp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditApp.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnEditApp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditApp.Size = new System.Drawing.Size(214, 40);
-            this.btnEditApp.TabIndex = 227;
-            this.btnEditApp.Text = "EDIT ";
-            this.btnEditApp.TextColor = System.Drawing.Color.White;
-            this.btnEditApp.UseVisualStyleBackColor = true;
-            this.btnEditApp.Click += new System.EventHandler(this.btnEditApp_Click);
+            this.txtEDesc.Location = new System.Drawing.Point(259, 252);
+            this.txtEDesc.Multiline = true;
+            this.txtEDesc.Name = "txtEDesc";
+            this.txtEDesc.Size = new System.Drawing.Size(474, 65);
+            this.txtEDesc.TabIndex = 236;
             // 
-            // lblEdAppID
+            // lblEDesc
             // 
-            this.lblEdAppID.AutoSize = true;
-            this.lblEdAppID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEdAppID.Location = new System.Drawing.Point(53, 54);
-            this.lblEdAppID.Name = "lblEdAppID";
-            this.lblEdAppID.Size = new System.Drawing.Size(60, 20);
-            this.lblEdAppID.TabIndex = 15;
-            this.lblEdAppID.Text = "AppID";
+            this.lblEDesc.AutoSize = true;
+            this.lblEDesc.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblEDesc.Location = new System.Drawing.Point(46, 268);
+            this.lblEDesc.Name = "lblEDesc";
+            this.lblEDesc.Size = new System.Drawing.Size(207, 20);
+            this.lblEDesc.TabIndex = 235;
+            this.lblEDesc.Text = "Appointment Description";
             // 
-            // lblEdDateB
+            // cmbEdTimes
             // 
-            this.lblEdDateB.AutoSize = true;
-            this.lblEdDateB.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEdDateB.Location = new System.Drawing.Point(53, 109);
-            this.lblEdDateB.Name = "lblEdDateB";
-            this.lblEdDateB.Size = new System.Drawing.Size(114, 20);
-            this.lblEdDateB.TabIndex = 16;
-            this.lblEdDateB.Text = "Date Booked";
-            // 
-            // lblEDAppDate
-            // 
-            this.lblEDAppDate.AutoSize = true;
-            this.lblEDAppDate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEDAppDate.Location = new System.Drawing.Point(53, 155);
-            this.lblEDAppDate.Name = "lblEDAppDate";
-            this.lblEDAppDate.Size = new System.Drawing.Size(200, 20);
-            this.lblEDAppDate.TabIndex = 17;
-            this.lblEDAppDate.Text = "Appointment Date/TIme";
-            // 
-            // lblEDTransID
-            // 
-            this.lblEDTransID.AutoSize = true;
-            this.lblEDTransID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEDTransID.Location = new System.Drawing.Point(53, 296);
-            this.lblEDTransID.Name = "lblEDTransID";
-            this.lblEDTransID.Size = new System.Drawing.Size(73, 20);
-            this.lblEDTransID.TabIndex = 19;
-            this.lblEDTransID.Text = "TransID";
-            // 
-            // lblEDDuration
-            // 
-            this.lblEDDuration.AutoSize = true;
-            this.lblEDDuration.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEDDuration.Location = new System.Drawing.Point(53, 201);
-            this.lblEDDuration.Name = "lblEDDuration";
-            this.lblEDDuration.Size = new System.Drawing.Size(78, 20);
-            this.lblEDDuration.TabIndex = 20;
-            this.lblEDDuration.Text = "Duration";
-            // 
-            // lblEDStaffID
-            // 
-            this.lblEDStaffID.AutoSize = true;
-            this.lblEDStaffID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEDStaffID.Location = new System.Drawing.Point(53, 252);
-            this.lblEDStaffID.Name = "lblEDStaffID";
-            this.lblEDStaffID.Size = new System.Drawing.Size(73, 20);
-            this.lblEDStaffID.TabIndex = 21;
-            this.lblEDStaffID.Text = "Staff ID";
-            // 
-            // dtpEdAppBooked
-            // 
-            this.dtpEdAppBooked.Location = new System.Drawing.Point(259, 103);
-            this.dtpEdAppBooked.Name = "dtpEdAppBooked";
-            this.dtpEdAppBooked.Size = new System.Drawing.Size(229, 26);
-            this.dtpEdAppBooked.TabIndex = 228;
-            // 
-            // dtpEdAppDate
-            // 
-            this.dtpEdAppDate.Location = new System.Drawing.Point(259, 155);
-            this.dtpEdAppDate.Name = "dtpEdAppDate";
-            this.dtpEdAppDate.Size = new System.Drawing.Size(229, 26);
-            this.dtpEdAppDate.TabIndex = 229;
-            // 
-            // cmbEdDur
-            // 
-            this.cmbEdDur.FormattingEnabled = true;
-            this.cmbEdDur.Location = new System.Drawing.Point(259, 193);
-            this.cmbEdDur.Name = "cmbEdDur";
-            this.cmbEdDur.Size = new System.Drawing.Size(229, 28);
-            this.cmbEdDur.TabIndex = 230;
-            // 
-            // cmbEdStaffID
-            // 
-            this.cmbEdStaffID.FormattingEnabled = true;
-            this.cmbEdStaffID.Location = new System.Drawing.Point(259, 244);
-            this.cmbEdStaffID.Name = "cmbEdStaffID";
-            this.cmbEdStaffID.Size = new System.Drawing.Size(229, 28);
-            this.cmbEdStaffID.TabIndex = 231;
-            // 
-            // cmbEditTransID
-            // 
-            this.cmbEditTransID.FormattingEnabled = true;
-            this.cmbEditTransID.Location = new System.Drawing.Point(259, 288);
-            this.cmbEditTransID.Name = "cmbEditTransID";
-            this.cmbEditTransID.Size = new System.Drawing.Size(229, 28);
-            this.cmbEditTransID.TabIndex = 232;
+            this.cmbEdTimes.FormattingEnabled = true;
+            this.cmbEdTimes.Location = new System.Drawing.Point(521, 155);
+            this.cmbEdTimes.Name = "cmbEdTimes";
+            this.cmbEdTimes.Size = new System.Drawing.Size(133, 28);
+            this.cmbEdTimes.TabIndex = 234;
             // 
             // lblEditAID
             // 
@@ -484,18 +413,110 @@
             this.lblEditAID.TabIndex = 233;
             this.lblEditAID.Text = "-";
             // 
-            // cmbEdTimes
+            // cmbEditTransID
             // 
-            this.cmbEdTimes.FormattingEnabled = true;
-            this.cmbEdTimes.Location = new System.Drawing.Point(521, 155);
-            this.cmbEdTimes.Name = "cmbEdTimes";
-            this.cmbEdTimes.Size = new System.Drawing.Size(133, 28);
-            this.cmbEdTimes.TabIndex = 234;
+            this.cmbEditTransID.FormattingEnabled = true;
+            this.cmbEditTransID.Location = new System.Drawing.Point(259, 381);
+            this.cmbEditTransID.Name = "cmbEditTransID";
+            this.cmbEditTransID.Size = new System.Drawing.Size(229, 28);
+            this.cmbEditTransID.TabIndex = 232;
+            // 
+            // cmbEdStaffID
+            // 
+            this.cmbEdStaffID.FormattingEnabled = true;
+            this.cmbEdStaffID.Location = new System.Drawing.Point(259, 337);
+            this.cmbEdStaffID.Name = "cmbEdStaffID";
+            this.cmbEdStaffID.Size = new System.Drawing.Size(229, 28);
+            this.cmbEdStaffID.TabIndex = 231;
+            // 
+            // cmbEdDur
+            // 
+            this.cmbEdDur.FormattingEnabled = true;
+            this.cmbEdDur.Location = new System.Drawing.Point(259, 193);
+            this.cmbEdDur.Name = "cmbEdDur";
+            this.cmbEdDur.Size = new System.Drawing.Size(229, 28);
+            this.cmbEdDur.TabIndex = 230;
+            // 
+            // dtpEdAppDate
+            // 
+            this.dtpEdAppDate.Location = new System.Drawing.Point(259, 155);
+            this.dtpEdAppDate.Name = "dtpEdAppDate";
+            this.dtpEdAppDate.Size = new System.Drawing.Size(229, 26);
+            this.dtpEdAppDate.TabIndex = 229;
+            // 
+            // dtpEdAppBooked
+            // 
+            this.dtpEdAppBooked.Location = new System.Drawing.Point(259, 103);
+            this.dtpEdAppBooked.Name = "dtpEdAppBooked";
+            this.dtpEdAppBooked.Size = new System.Drawing.Size(229, 26);
+            this.dtpEdAppBooked.TabIndex = 228;
+            // 
+            // lblEDStaffID
+            // 
+            this.lblEDStaffID.AutoSize = true;
+            this.lblEDStaffID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblEDStaffID.Location = new System.Drawing.Point(53, 345);
+            this.lblEDStaffID.Name = "lblEDStaffID";
+            this.lblEDStaffID.Size = new System.Drawing.Size(73, 20);
+            this.lblEDStaffID.TabIndex = 21;
+            this.lblEDStaffID.Text = "Staff ID";
+            // 
+            // lblEDDuration
+            // 
+            this.lblEDDuration.AutoSize = true;
+            this.lblEDDuration.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblEDDuration.Location = new System.Drawing.Point(53, 201);
+            this.lblEDDuration.Name = "lblEDDuration";
+            this.lblEDDuration.Size = new System.Drawing.Size(78, 20);
+            this.lblEDDuration.TabIndex = 20;
+            this.lblEDDuration.Text = "Duration";
+            // 
+            // lblEDTransID
+            // 
+            this.lblEDTransID.AutoSize = true;
+            this.lblEDTransID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblEDTransID.Location = new System.Drawing.Point(53, 389);
+            this.lblEDTransID.Name = "lblEDTransID";
+            this.lblEDTransID.Size = new System.Drawing.Size(73, 20);
+            this.lblEDTransID.TabIndex = 19;
+            this.lblEDTransID.Text = "TransID";
+            // 
+            // lblEDAppDate
+            // 
+            this.lblEDAppDate.AutoSize = true;
+            this.lblEDAppDate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblEDAppDate.Location = new System.Drawing.Point(53, 155);
+            this.lblEDAppDate.Name = "lblEDAppDate";
+            this.lblEDAppDate.Size = new System.Drawing.Size(200, 20);
+            this.lblEDAppDate.TabIndex = 17;
+            this.lblEDAppDate.Text = "Appointment Date/TIme";
+            // 
+            // lblEdDateB
+            // 
+            this.lblEdDateB.AutoSize = true;
+            this.lblEdDateB.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblEdDateB.Location = new System.Drawing.Point(53, 109);
+            this.lblEdDateB.Name = "lblEdDateB";
+            this.lblEdDateB.Size = new System.Drawing.Size(114, 20);
+            this.lblEdDateB.TabIndex = 16;
+            this.lblEdDateB.Text = "Date Booked";
+            // 
+            // lblEdAppID
+            // 
+            this.lblEdAppID.AutoSize = true;
+            this.lblEdAppID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblEdAppID.Location = new System.Drawing.Point(53, 54);
+            this.lblEdAppID.Name = "lblEdAppID";
+            this.lblEdAppID.Size = new System.Drawing.Size(60, 20);
+            this.lblEdAppID.TabIndex = 15;
+            this.lblEdAppID.Text = "AppID";
             // 
             // tabAdd
             // 
             this.tabAdd.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabAdd.Controls.Add(this.txtADesc);
+            this.tabAdd.Controls.Add(this.lblADesc);
             this.tabAdd.Controls.Add(this.cmbAddTime);
             this.tabAdd.Controls.Add(this.cmbDuration);
             this.tabAdd.Controls.Add(this.cmbATransID);
@@ -519,93 +540,73 @@
             this.tabAdd.Text = "ADD";
             this.tabAdd.UseVisualStyleBackColor = true;
             // 
-            // btnAddApp
+            // txtADesc
             // 
-            this.btnAddApp.BorderColor = System.Drawing.Color.Silver;
-            this.btnAddApp.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnAddApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddApp.FlatAppearance.BorderSize = 0;
-            this.btnAddApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAddApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAddApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddApp.Location = new System.Drawing.Point(633, 77);
-            this.btnAddApp.Name = "btnAddApp";
-            this.btnAddApp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddApp.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnAddApp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddApp.Size = new System.Drawing.Size(214, 40);
-            this.btnAddApp.TabIndex = 223;
-            this.btnAddApp.Text = "ADD APPOINTMENT";
-            this.btnAddApp.TextColor = System.Drawing.Color.White;
-            this.btnAddApp.UseVisualStyleBackColor = true;
-            this.btnAddApp.Click += new System.EventHandler(this.btnAddApp_Click_1);
+            this.txtADesc.Location = new System.Drawing.Point(229, 257);
+            this.txtADesc.Multiline = true;
+            this.txtADesc.Name = "txtADesc";
+            this.txtADesc.Size = new System.Drawing.Size(474, 65);
+            this.txtADesc.TabIndex = 229;
             // 
-            // lblAppID
+            // lblADesc
             // 
-            this.lblAppID.AutoSize = true;
-            this.lblAppID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAppID.Location = new System.Drawing.Point(12, 54);
-            this.lblAppID.Name = "lblAppID";
-            this.lblAppID.Size = new System.Drawing.Size(60, 20);
-            this.lblAppID.TabIndex = 0;
-            this.lblAppID.Text = "AppID";
-            this.lblAppID.Click += new System.EventHandler(this.lblAppID_Click);
+            this.lblADesc.AutoSize = true;
+            this.lblADesc.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblADesc.Location = new System.Drawing.Point(16, 273);
+            this.lblADesc.Name = "lblADesc";
+            this.lblADesc.Size = new System.Drawing.Size(207, 20);
+            this.lblADesc.TabIndex = 228;
+            this.lblADesc.Text = "Appointment Description";
             // 
-            // lblDateB
+            // cmbAddTime
             // 
-            this.lblDateB.AutoSize = true;
-            this.lblDateB.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblDateB.Location = new System.Drawing.Point(12, 97);
-            this.lblDateB.Name = "lblDateB";
-            this.lblDateB.Size = new System.Drawing.Size(114, 20);
-            this.lblDateB.TabIndex = 1;
-            this.lblDateB.Text = "Date Booked";
-            this.lblDateB.Click += new System.EventHandler(this.lblDateB_Click);
+            this.cmbAddTime.FormattingEnabled = true;
+            this.cmbAddTime.Location = new System.Drawing.Point(521, 158);
+            this.cmbAddTime.Name = "cmbAddTime";
+            this.cmbAddTime.Size = new System.Drawing.Size(121, 28);
+            this.cmbAddTime.TabIndex = 227;
             // 
-            // lblAppDate
+            // cmbDuration
             // 
-            this.lblAppDate.AutoSize = true;
-            this.lblAppDate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAppDate.Location = new System.Drawing.Point(12, 158);
-            this.lblAppDate.Name = "lblAppDate";
-            this.lblAppDate.Size = new System.Drawing.Size(198, 20);
-            this.lblAppDate.TabIndex = 2;
-            this.lblAppDate.Text = "Appointment Date/Time";
-            this.lblAppDate.Click += new System.EventHandler(this.lblAppDate_Click);
+            this.cmbDuration.FormattingEnabled = true;
+            this.cmbDuration.Location = new System.Drawing.Point(229, 196);
+            this.cmbDuration.Name = "cmbDuration";
+            this.cmbDuration.Size = new System.Drawing.Size(229, 28);
+            this.cmbDuration.TabIndex = 226;
             // 
-            // lblTransID
+            // cmbATransID
             // 
-            this.lblTransID.AutoSize = true;
-            this.lblTransID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTransID.Location = new System.Drawing.Point(12, 324);
-            this.lblTransID.Name = "lblTransID";
-            this.lblTransID.Size = new System.Drawing.Size(73, 20);
-            this.lblTransID.TabIndex = 4;
-            this.lblTransID.Text = "TransID";
-            this.lblTransID.Click += new System.EventHandler(this.lblTransID_Click);
+            this.cmbATransID.FormattingEnabled = true;
+            this.cmbATransID.Location = new System.Drawing.Point(229, 419);
+            this.cmbATransID.MaxLength = 30;
+            this.cmbATransID.Name = "cmbATransID";
+            this.cmbATransID.Size = new System.Drawing.Size(229, 28);
+            this.cmbATransID.TabIndex = 225;
+            this.cmbATransID.SelectedIndexChanged += new System.EventHandler(this.cmbATransID_SelectedIndexChanged);
             // 
-            // lblDuration
+            // cmbAStaffID
             // 
-            this.lblDuration.AutoSize = true;
-            this.lblDuration.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblDuration.Location = new System.Drawing.Point(12, 199);
-            this.lblDuration.Name = "lblDuration";
-            this.lblDuration.Size = new System.Drawing.Size(78, 20);
-            this.lblDuration.TabIndex = 5;
-            this.lblDuration.Text = "Duration";
-            this.lblDuration.Click += new System.EventHandler(this.lblDuration_Click);
+            this.cmbAStaffID.FormattingEnabled = true;
+            this.cmbAStaffID.Location = new System.Drawing.Point(229, 349);
+            this.cmbAStaffID.Name = "cmbAStaffID";
+            this.cmbAStaffID.Size = new System.Drawing.Size(229, 28);
+            this.cmbAStaffID.TabIndex = 224;
             // 
-            // lblStaffID
+            // dtpDateBooked
             // 
-            this.lblStaffID.AutoSize = true;
-            this.lblStaffID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblStaffID.Location = new System.Drawing.Point(12, 257);
-            this.lblStaffID.Name = "lblStaffID";
-            this.lblStaffID.Size = new System.Drawing.Size(73, 20);
-            this.lblStaffID.TabIndex = 6;
-            this.lblStaffID.Text = "Staff ID";
-            this.lblStaffID.Click += new System.EventHandler(this.lblStaffID_Click);
+            this.dtpDateBooked.Location = new System.Drawing.Point(229, 97);
+            this.dtpDateBooked.Name = "dtpDateBooked";
+            this.dtpDateBooked.Size = new System.Drawing.Size(199, 26);
+            this.dtpDateBooked.TabIndex = 16;
+            this.dtpDateBooked.ValueChanged += new System.EventHandler(this.dtpDateBooked_ValueChanged);
+            // 
+            // dtpAppDate
+            // 
+            this.dtpAppDate.Location = new System.Drawing.Point(229, 156);
+            this.dtpAppDate.Name = "dtpAppDate";
+            this.dtpAppDate.Size = new System.Drawing.Size(199, 26);
+            this.dtpAppDate.TabIndex = 15;
+            this.dtpAppDate.ValueChanged += new System.EventHandler(this.dtpAppDate_ValueChanged);
             // 
             // lblAddAppID
             // 
@@ -619,60 +620,78 @@
             this.lblAddAppID.ForeColorChanged += new System.EventHandler(this.lblAddAppID_ForeColorChanged);
             this.lblAddAppID.Click += new System.EventHandler(this.lblAddAppID_Click);
             // 
-            // dtpAppDate
+            // lblStaffID
             // 
-            this.dtpAppDate.Location = new System.Drawing.Point(214, 158);
-            this.dtpAppDate.Name = "dtpAppDate";
-            this.dtpAppDate.Size = new System.Drawing.Size(199, 26);
-            this.dtpAppDate.TabIndex = 15;
-            this.dtpAppDate.ValueChanged += new System.EventHandler(this.dtpAppDate_ValueChanged);
+            this.lblStaffID.AutoSize = true;
+            this.lblStaffID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblStaffID.Location = new System.Drawing.Point(12, 352);
+            this.lblStaffID.Name = "lblStaffID";
+            this.lblStaffID.Size = new System.Drawing.Size(73, 20);
+            this.lblStaffID.TabIndex = 6;
+            this.lblStaffID.Text = "Staff ID";
+            this.lblStaffID.Click += new System.EventHandler(this.lblStaffID_Click);
             // 
-            // dtpDateBooked
+            // lblDuration
             // 
-            this.dtpDateBooked.Location = new System.Drawing.Point(214, 97);
-            this.dtpDateBooked.Name = "dtpDateBooked";
-            this.dtpDateBooked.Size = new System.Drawing.Size(199, 26);
-            this.dtpDateBooked.TabIndex = 16;
-            this.dtpDateBooked.ValueChanged += new System.EventHandler(this.dtpDateBooked_ValueChanged);
+            this.lblDuration.AutoSize = true;
+            this.lblDuration.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblDuration.Location = new System.Drawing.Point(12, 199);
+            this.lblDuration.Name = "lblDuration";
+            this.lblDuration.Size = new System.Drawing.Size(78, 20);
+            this.lblDuration.TabIndex = 5;
+            this.lblDuration.Text = "Duration";
+            this.lblDuration.Click += new System.EventHandler(this.lblDuration_Click);
             // 
-            // cmbAStaffID
+            // lblTransID
             // 
-            this.cmbAStaffID.FormattingEnabled = true;
-            this.cmbAStaffID.Location = new System.Drawing.Point(214, 249);
-            this.cmbAStaffID.Name = "cmbAStaffID";
-            this.cmbAStaffID.Size = new System.Drawing.Size(229, 28);
-            this.cmbAStaffID.TabIndex = 224;
+            this.lblTransID.AutoSize = true;
+            this.lblTransID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTransID.Location = new System.Drawing.Point(12, 422);
+            this.lblTransID.Name = "lblTransID";
+            this.lblTransID.Size = new System.Drawing.Size(73, 20);
+            this.lblTransID.TabIndex = 4;
+            this.lblTransID.Text = "TransID";
+            this.lblTransID.Click += new System.EventHandler(this.lblTransID_Click);
             // 
-            // cmbATransID
+            // lblAppDate
             // 
-            this.cmbATransID.FormattingEnabled = true;
-            this.cmbATransID.Location = new System.Drawing.Point(214, 324);
-            this.cmbATransID.MaxLength = 30;
-            this.cmbATransID.Name = "cmbATransID";
-            this.cmbATransID.Size = new System.Drawing.Size(229, 28);
-            this.cmbATransID.TabIndex = 225;
-            this.cmbATransID.SelectedIndexChanged += new System.EventHandler(this.cmbATransID_SelectedIndexChanged);
+            this.lblAppDate.AutoSize = true;
+            this.lblAppDate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblAppDate.Location = new System.Drawing.Point(12, 158);
+            this.lblAppDate.Name = "lblAppDate";
+            this.lblAppDate.Size = new System.Drawing.Size(198, 20);
+            this.lblAppDate.TabIndex = 2;
+            this.lblAppDate.Text = "Appointment Date/Time";
+            this.lblAppDate.Click += new System.EventHandler(this.lblAppDate_Click);
             // 
-            // cmbDuration
+            // lblDateB
             // 
-            this.cmbDuration.FormattingEnabled = true;
-            this.cmbDuration.Location = new System.Drawing.Point(214, 196);
-            this.cmbDuration.Name = "cmbDuration";
-            this.cmbDuration.Size = new System.Drawing.Size(229, 28);
-            this.cmbDuration.TabIndex = 226;
+            this.lblDateB.AutoSize = true;
+            this.lblDateB.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblDateB.Location = new System.Drawing.Point(12, 103);
+            this.lblDateB.Name = "lblDateB";
+            this.lblDateB.Size = new System.Drawing.Size(114, 20);
+            this.lblDateB.TabIndex = 1;
+            this.lblDateB.Text = "Date Booked";
+            this.lblDateB.Click += new System.EventHandler(this.lblDateB_Click);
             // 
-            // cmbAddTime
+            // lblAppID
             // 
-            this.cmbAddTime.FormattingEnabled = true;
-            this.cmbAddTime.Location = new System.Drawing.Point(492, 158);
-            this.cmbAddTime.Name = "cmbAddTime";
-            this.cmbAddTime.Size = new System.Drawing.Size(121, 28);
-            this.cmbAddTime.TabIndex = 227;
+            this.lblAppID.AutoSize = true;
+            this.lblAppID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblAppID.Location = new System.Drawing.Point(12, 54);
+            this.lblAppID.Name = "lblAppID";
+            this.lblAppID.Size = new System.Drawing.Size(60, 20);
+            this.lblAppID.TabIndex = 0;
+            this.lblAppID.Text = "AppID";
+            this.lblAppID.Click += new System.EventHandler(this.lblAppID_Click);
             // 
             // tabSearch
             // 
             this.tabSearch.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabSearch.Controls.Add(this.txtSDesc);
+            this.tabSearch.Controls.Add(this.lblSDesc);
             this.tabSearch.Controls.Add(this.txtSeDBooked);
             this.tabSearch.Controls.Add(this.txtSeAppDate);
             this.tabSearch.Controls.Add(this.txtSearchID);
@@ -697,71 +716,72 @@
             this.tabSearch.UseVisualStyleBackColor = true;
             this.tabSearch.Click += new System.EventHandler(this.tabSearch_Click);
             // 
-            // lblSeAppID
+            // txtSDesc
             // 
-            this.lblSeAppID.AutoSize = true;
-            this.lblSeAppID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSeAppID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeAppID.Location = new System.Drawing.Point(53, 54);
-            this.lblSeAppID.Name = "lblSeAppID";
-            this.lblSeAppID.Size = new System.Drawing.Size(60, 20);
-            this.lblSeAppID.TabIndex = 15;
-            this.lblSeAppID.Text = "AppID";
+            this.txtSDesc.Location = new System.Drawing.Point(252, 376);
+            this.txtSDesc.Multiline = true;
+            this.txtSDesc.Name = "txtSDesc";
+            this.txtSDesc.Size = new System.Drawing.Size(474, 65);
+            this.txtSDesc.TabIndex = 238;
             // 
-            // lblSeDateB
+            // lblSDesc
             // 
-            this.lblSeDateB.AutoSize = true;
-            this.lblSeDateB.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSeDateB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeDateB.Location = new System.Drawing.Point(53, 103);
-            this.lblSeDateB.Name = "lblSeDateB";
-            this.lblSeDateB.Size = new System.Drawing.Size(114, 20);
-            this.lblSeDateB.TabIndex = 16;
-            this.lblSeDateB.Text = "Date Booked";
+            this.lblSDesc.AutoSize = true;
+            this.lblSDesc.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSDesc.Location = new System.Drawing.Point(39, 392);
+            this.lblSDesc.Name = "lblSDesc";
+            this.lblSDesc.Size = new System.Drawing.Size(207, 20);
+            this.lblSDesc.TabIndex = 237;
+            this.lblSDesc.Text = "Appointment Description";
             // 
-            // lblSeAppDate
+            // txtSeDBooked
             // 
-            this.lblSeAppDate.AutoSize = true;
-            this.lblSeAppDate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSeAppDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeAppDate.Location = new System.Drawing.Point(53, 152);
-            this.lblSeAppDate.Name = "lblSeAppDate";
-            this.lblSeAppDate.Size = new System.Drawing.Size(155, 20);
-            this.lblSeAppDate.TabIndex = 17;
-            this.lblSeAppDate.Text = "Appointment Date";
+            this.txtSeDBooked.Location = new System.Drawing.Point(252, 100);
+            this.txtSeDBooked.Name = "txtSeDBooked";
+            this.txtSeDBooked.Size = new System.Drawing.Size(229, 26);
+            this.txtSeDBooked.TabIndex = 228;
             // 
-            // lblSeAppTime
+            // txtSeAppDate
             // 
-            this.lblSeAppTime.AutoSize = true;
-            this.lblSeAppTime.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSeAppTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeAppTime.Location = new System.Drawing.Point(53, 196);
-            this.lblSeAppTime.Name = "lblSeAppTime";
-            this.lblSeAppTime.Size = new System.Drawing.Size(154, 20);
-            this.lblSeAppTime.TabIndex = 18;
-            this.lblSeAppTime.Text = "Appointment Time";
+            this.txtSeAppDate.Location = new System.Drawing.Point(252, 146);
+            this.txtSeAppDate.Name = "txtSeAppDate";
+            this.txtSeAppDate.Size = new System.Drawing.Size(229, 26);
+            this.txtSeAppDate.TabIndex = 227;
             // 
-            // lblSeTransID
+            // txtSearchID
             // 
-            this.lblSeTransID.AutoSize = true;
-            this.lblSeTransID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSeTransID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeTransID.Location = new System.Drawing.Point(53, 327);
-            this.lblSeTransID.Name = "lblSeTransID";
-            this.lblSeTransID.Size = new System.Drawing.Size(73, 20);
-            this.lblSeTransID.TabIndex = 19;
-            this.lblSeTransID.Text = "TransID";
+            this.txtSearchID.Location = new System.Drawing.Point(252, 51);
+            this.txtSearchID.Name = "txtSearchID";
+            this.txtSearchID.Size = new System.Drawing.Size(110, 26);
+            this.txtSearchID.TabIndex = 225;
             // 
-            // lblSeDuration
+            // txtSeTransID
             // 
-            this.lblSeDuration.AutoSize = true;
-            this.lblSeDuration.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSeDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeDuration.Location = new System.Drawing.Point(53, 277);
-            this.lblSeDuration.Name = "lblSeDuration";
-            this.lblSeDuration.Size = new System.Drawing.Size(78, 20);
-            this.lblSeDuration.TabIndex = 20;
-            this.lblSeDuration.Text = "Duration";
+            this.txtSeTransID.Location = new System.Drawing.Point(252, 321);
+            this.txtSeTransID.Name = "txtSeTransID";
+            this.txtSeTransID.Size = new System.Drawing.Size(229, 26);
+            this.txtSeTransID.TabIndex = 28;
+            // 
+            // txtSeAppTime
+            // 
+            this.txtSeAppTime.Location = new System.Drawing.Point(252, 193);
+            this.txtSeAppTime.Name = "txtSeAppTime";
+            this.txtSeAppTime.Size = new System.Drawing.Size(229, 26);
+            this.txtSeAppTime.TabIndex = 26;
+            // 
+            // txtSeStaffID
+            // 
+            this.txtSeStaffID.Location = new System.Drawing.Point(252, 229);
+            this.txtSeStaffID.Name = "txtSeStaffID";
+            this.txtSeStaffID.Size = new System.Drawing.Size(229, 26);
+            this.txtSeStaffID.TabIndex = 25;
+            // 
+            // txtSeDuration
+            // 
+            this.txtSeDuration.Location = new System.Drawing.Point(252, 271);
+            this.txtSeDuration.Name = "txtSeDuration";
+            this.txtSeDuration.Size = new System.Drawing.Size(229, 26);
+            this.txtSeDuration.TabIndex = 24;
             // 
             // lblSeStaffID
             // 
@@ -774,60 +794,78 @@
             this.lblSeStaffID.TabIndex = 21;
             this.lblSeStaffID.Text = "Staff ID";
             // 
-            // txtSeDuration
+            // lblSeDuration
             // 
-            this.txtSeDuration.Location = new System.Drawing.Point(252, 271);
-            this.txtSeDuration.Name = "txtSeDuration";
-            this.txtSeDuration.Size = new System.Drawing.Size(229, 26);
-            this.txtSeDuration.TabIndex = 24;
+            this.lblSeDuration.AutoSize = true;
+            this.lblSeDuration.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSeDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeDuration.Location = new System.Drawing.Point(53, 277);
+            this.lblSeDuration.Name = "lblSeDuration";
+            this.lblSeDuration.Size = new System.Drawing.Size(78, 20);
+            this.lblSeDuration.TabIndex = 20;
+            this.lblSeDuration.Text = "Duration";
             // 
-            // txtSeStaffID
+            // lblSeTransID
             // 
-            this.txtSeStaffID.Location = new System.Drawing.Point(252, 229);
-            this.txtSeStaffID.Name = "txtSeStaffID";
-            this.txtSeStaffID.Size = new System.Drawing.Size(229, 26);
-            this.txtSeStaffID.TabIndex = 25;
+            this.lblSeTransID.AutoSize = true;
+            this.lblSeTransID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSeTransID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeTransID.Location = new System.Drawing.Point(53, 327);
+            this.lblSeTransID.Name = "lblSeTransID";
+            this.lblSeTransID.Size = new System.Drawing.Size(73, 20);
+            this.lblSeTransID.TabIndex = 19;
+            this.lblSeTransID.Text = "TransID";
             // 
-            // txtSeAppTime
+            // lblSeAppTime
             // 
-            this.txtSeAppTime.Location = new System.Drawing.Point(252, 193);
-            this.txtSeAppTime.Name = "txtSeAppTime";
-            this.txtSeAppTime.Size = new System.Drawing.Size(229, 26);
-            this.txtSeAppTime.TabIndex = 26;
+            this.lblSeAppTime.AutoSize = true;
+            this.lblSeAppTime.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSeAppTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeAppTime.Location = new System.Drawing.Point(53, 196);
+            this.lblSeAppTime.Name = "lblSeAppTime";
+            this.lblSeAppTime.Size = new System.Drawing.Size(154, 20);
+            this.lblSeAppTime.TabIndex = 18;
+            this.lblSeAppTime.Text = "Appointment Time";
             // 
-            // txtSeTransID
+            // lblSeAppDate
             // 
-            this.txtSeTransID.Location = new System.Drawing.Point(252, 321);
-            this.txtSeTransID.Name = "txtSeTransID";
-            this.txtSeTransID.Size = new System.Drawing.Size(229, 26);
-            this.txtSeTransID.TabIndex = 28;
+            this.lblSeAppDate.AutoSize = true;
+            this.lblSeAppDate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSeAppDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeAppDate.Location = new System.Drawing.Point(53, 152);
+            this.lblSeAppDate.Name = "lblSeAppDate";
+            this.lblSeAppDate.Size = new System.Drawing.Size(155, 20);
+            this.lblSeAppDate.TabIndex = 17;
+            this.lblSeAppDate.Text = "Appointment Date";
             // 
-            // txtSearchID
+            // lblSeDateB
             // 
-            this.txtSearchID.Location = new System.Drawing.Point(252, 51);
-            this.txtSearchID.Name = "txtSearchID";
-            this.txtSearchID.Size = new System.Drawing.Size(110, 26);
-            this.txtSearchID.TabIndex = 225;
+            this.lblSeDateB.AutoSize = true;
+            this.lblSeDateB.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSeDateB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeDateB.Location = new System.Drawing.Point(53, 103);
+            this.lblSeDateB.Name = "lblSeDateB";
+            this.lblSeDateB.Size = new System.Drawing.Size(114, 20);
+            this.lblSeDateB.TabIndex = 16;
+            this.lblSeDateB.Text = "Date Booked";
             // 
-            // txtSeAppDate
+            // lblSeAppID
             // 
-            this.txtSeAppDate.Location = new System.Drawing.Point(252, 146);
-            this.txtSeAppDate.Name = "txtSeAppDate";
-            this.txtSeAppDate.Size = new System.Drawing.Size(229, 26);
-            this.txtSeAppDate.TabIndex = 227;
-            // 
-            // txtSeDBooked
-            // 
-            this.txtSeDBooked.Location = new System.Drawing.Point(252, 100);
-            this.txtSeDBooked.Name = "txtSeDBooked";
-            this.txtSeDBooked.Size = new System.Drawing.Size(229, 26);
-            this.txtSeDBooked.TabIndex = 228;
+            this.lblSeAppID.AutoSize = true;
+            this.lblSeAppID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSeAppID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeAppID.Location = new System.Drawing.Point(53, 54);
+            this.lblSeAppID.Name = "lblSeAppID";
+            this.lblSeAppID.Size = new System.Drawing.Size(60, 20);
+            this.lblSeAppID.TabIndex = 15;
+            this.lblSeAppID.Text = "AppID";
             // 
             // tabDisplay
             // 
             this.tabDisplay.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabDisplay.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabDisplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.tabDisplay.Controls.Add(this.pnlAppDetails);
             this.tabDisplay.Controls.Add(this.btnRefresh);
             this.tabDisplay.Controls.Add(this.txtDisSur);
             this.tabDisplay.Controls.Add(this.txtDisFor);
@@ -843,10 +881,9 @@
             this.tabDisplay.Controls.Add(this.DayLabel2);
             this.tabDisplay.Controls.Add(this.label1);
             this.tabDisplay.Controls.Add(this.dateTimePicker1);
-            this.tabDisplay.Controls.Add(this.roundButton3);
-            this.tabDisplay.Controls.Add(this.roundButton2);
+            this.tabDisplay.Controls.Add(this.btDelete);
+            this.tabDisplay.Controls.Add(this.btnSearch);
             this.tabDisplay.Controls.Add(this.btnEdit);
-            this.tabDisplay.Controls.Add(this.btnApp);
             this.tabDisplay.Controls.Add(this.pictureBox11);
             this.tabDisplay.Controls.Add(this.pictureBox10);
             this.tabDisplay.Controls.Add(this.pictureBox9);
@@ -866,6 +903,248 @@
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "DISPLAY";
             this.tabDisplay.Click += new System.EventHandler(this.tabDisplay_Click);
+            // 
+            // txtDisSur
+            // 
+            this.txtDisSur.Location = new System.Drawing.Point(833, 178);
+            this.txtDisSur.Name = "txtDisSur";
+            this.txtDisSur.Size = new System.Drawing.Size(121, 26);
+            this.txtDisSur.TabIndex = 240;
+            // 
+            // txtDisFor
+            // 
+            this.txtDisFor.Location = new System.Drawing.Point(833, 143);
+            this.txtDisFor.Name = "txtDisFor";
+            this.txtDisFor.Size = new System.Drawing.Size(121, 26);
+            this.txtDisFor.TabIndex = 239;
+            // 
+            // txtYear
+            // 
+            this.txtYear.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtYear.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtYear.Location = new System.Drawing.Point(348, 9);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(239, 42);
+            this.txtYear.TabIndex = 236;
+            // 
+            // txtDate
+            // 
+            this.txtDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDate.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtDate.Location = new System.Drawing.Point(115, 9);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(239, 42);
+            this.txtDate.TabIndex = 2;
+            this.txtDate.TextChanged += new System.EventHandler(this.txtDate_TextChanged);
+            // 
+            // lblStaffSelection
+            // 
+            this.lblStaffSelection.AutoSize = true;
+            this.lblStaffSelection.Location = new System.Drawing.Point(832, 80);
+            this.lblStaffSelection.Name = "lblStaffSelection";
+            this.lblStaffSelection.Size = new System.Drawing.Size(129, 20);
+            this.lblStaffSelection.TabIndex = 238;
+            this.lblStaffSelection.Text = "Staff Selection";
+            // 
+            // cmbStaff
+            // 
+            this.cmbStaff.FormattingEnabled = true;
+            this.cmbStaff.Location = new System.Drawing.Point(833, 108);
+            this.cmbStaff.Name = "cmbStaff";
+            this.cmbStaff.Size = new System.Drawing.Size(121, 28);
+            this.cmbStaff.TabIndex = 237;
+            this.cmbStaff.SelectedIndexChanged += new System.EventHandler(this.cmbStaff_SelectedIndexChanged);
+            this.cmbStaff.DropDownClosed += new System.EventHandler(this.cmbStaff_DropDownClosed);
+            this.cmbStaff.SelectedValueChanged += new System.EventHandler(this.cmbStaff_SelectedValueChanged);
+            // 
+            // DayLabel7
+            // 
+            this.DayLabel7.AutoSize = true;
+            this.DayLabel7.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.DayLabel7.Location = new System.Drawing.Point(700, 57);
+            this.DayLabel7.Name = "DayLabel7";
+            this.DayLabel7.Size = new System.Drawing.Size(15, 20);
+            this.DayLabel7.TabIndex = 235;
+            this.DayLabel7.Text = "-";
+            this.DayLabel7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // DayLabel6
+            // 
+            this.DayLabel6.AutoSize = true;
+            this.DayLabel6.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.DayLabel6.Location = new System.Drawing.Point(598, 57);
+            this.DayLabel6.Name = "DayLabel6";
+            this.DayLabel6.Size = new System.Drawing.Size(15, 20);
+            this.DayLabel6.TabIndex = 234;
+            this.DayLabel6.Text = "-";
+            this.DayLabel6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // DayLabel5
+            // 
+            this.DayLabel5.AutoSize = true;
+            this.DayLabel5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.DayLabel5.Location = new System.Drawing.Point(491, 57);
+            this.DayLabel5.Name = "DayLabel5";
+            this.DayLabel5.Size = new System.Drawing.Size(15, 20);
+            this.DayLabel5.TabIndex = 233;
+            this.DayLabel5.Text = "-";
+            this.DayLabel5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // DayLabel4
+            // 
+            this.DayLabel4.AutoSize = true;
+            this.DayLabel4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.DayLabel4.Location = new System.Drawing.Point(400, 57);
+            this.DayLabel4.Name = "DayLabel4";
+            this.DayLabel4.Size = new System.Drawing.Size(15, 20);
+            this.DayLabel4.TabIndex = 232;
+            this.DayLabel4.Text = "-";
+            this.DayLabel4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // DayLabel3
+            // 
+            this.DayLabel3.AutoSize = true;
+            this.DayLabel3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.DayLabel3.Location = new System.Drawing.Point(296, 57);
+            this.DayLabel3.Name = "DayLabel3";
+            this.DayLabel3.Size = new System.Drawing.Size(15, 20);
+            this.DayLabel3.TabIndex = 231;
+            this.DayLabel3.Text = "-";
+            this.DayLabel3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // DayLabel2
+            // 
+            this.DayLabel2.AutoSize = true;
+            this.DayLabel2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.DayLabel2.Location = new System.Drawing.Point(203, 57);
+            this.DayLabel2.Name = "DayLabel2";
+            this.DayLabel2.Size = new System.Drawing.Size(15, 20);
+            this.DayLabel2.TabIndex = 230;
+            this.DayLabel2.Text = "-";
+            this.DayLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.DayLabel2.Click += new System.EventHandler(this.DayLabel2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(102, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 20);
+            this.label1.TabIndex = 229;
+            this.label1.Text = "-";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click_2);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(621, 23);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.TabIndex = 228;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(0, 348);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(100, 47);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 14;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(0, 396);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(100, 47);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 13;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(0, 446);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(100, 47);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 12;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(0, 494);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(100, 47);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 11;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(0, 157);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(100, 47);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(0, 205);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(100, 47);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 8;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(0, 252);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 47);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 300);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 47);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 108);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::KaizenMain.Properties.Resources._53160265_2410346355864115_4176677497166888960_o;
+            this.pictureBox2.Location = new System.Drawing.Point(-4, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 68);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
             // 
             // dgvApp
             // 
@@ -909,67 +1188,9 @@
             this.dgvApp.TabIndex = 0;
             this.dgvApp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvApp_CellClick);
             this.dgvApp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvApp_CellContentClick);
+            this.dgvApp.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvApp_CellContentDoubleClick);
             this.dgvApp.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvApp_CellFormatting);
-            // 
-            // Sun
-            // 
-            this.Sun.FillWeight = 0.7521151F;
-            this.Sun.HeaderText = "Sun";
-            this.Sun.MinimumWidth = 70;
-            this.Sun.Name = "Sun";
-            this.Sun.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Sun.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Sun.Width = 70;
-            // 
-            // Sat
-            // 
-            this.Sat.FillWeight = 0.7521151F;
-            this.Sat.HeaderText = "Sat";
-            this.Sat.MinimumWidth = 70;
-            this.Sat.Name = "Sat";
-            this.Sat.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Sat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Sat.Width = 70;
-            // 
-            // Friday
-            // 
-            this.Friday.FillWeight = 0.7521151F;
-            this.Friday.HeaderText = "Fri";
-            this.Friday.MinimumWidth = 70;
-            this.Friday.Name = "Friday";
-            this.Friday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Friday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Friday.Width = 70;
-            // 
-            // thur
-            // 
-            this.thur.FillWeight = 0.7521151F;
-            this.thur.HeaderText = "Thur";
-            this.thur.MinimumWidth = 70;
-            this.thur.Name = "thur";
-            this.thur.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.thur.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.thur.Width = 70;
-            // 
-            // Wed
-            // 
-            this.Wed.FillWeight = 0.7521151F;
-            this.Wed.HeaderText = "Wed";
-            this.Wed.MinimumWidth = 70;
-            this.Wed.Name = "Wed";
-            this.Wed.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Wed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Wed.Width = 70;
-            // 
-            // Tues
-            // 
-            this.Tues.FillWeight = 0.7521151F;
-            this.Tues.HeaderText = "Tues";
-            this.Tues.MinimumWidth = 70;
-            this.Tues.Name = "Tues";
-            this.Tues.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Tues.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Tues.Width = 70;
+            this.dgvApp.MouseHover += new System.EventHandler(this.dgvApp_MouseHover);
             // 
             // Monday
             // 
@@ -981,333 +1202,237 @@
             this.Monday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Monday.Width = 70;
             // 
-            // txtDate
+            // Tues
             // 
-            this.txtDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDate.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtDate.Location = new System.Drawing.Point(115, 9);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(239, 42);
-            this.txtDate.TabIndex = 2;
-            this.txtDate.TextChanged += new System.EventHandler(this.txtDate_TextChanged);
+            this.Tues.FillWeight = 0.7521151F;
+            this.Tues.HeaderText = "Tues";
+            this.Tues.MinimumWidth = 70;
+            this.Tues.Name = "Tues";
+            this.Tues.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Tues.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Tues.Width = 70;
             // 
-            // pictureBox2
+            // Wed
             // 
-            this.pictureBox2.Image = global::KaizenMain.Properties.Resources._53160265_2410346355864115_4176677497166888960_o;
-            this.pictureBox2.Location = new System.Drawing.Point(-4, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 68);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.Wed.FillWeight = 0.7521151F;
+            this.Wed.HeaderText = "Wed";
+            this.Wed.MinimumWidth = 70;
+            this.Wed.Name = "Wed";
+            this.Wed.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Wed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Wed.Width = 70;
             // 
-            // pictureBox1
+            // thur
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 108);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.thur.FillWeight = 0.7521151F;
+            this.thur.HeaderText = "Thur";
+            this.thur.MinimumWidth = 70;
+            this.thur.Name = "thur";
+            this.thur.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.thur.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.thur.Width = 70;
             // 
-            // pictureBox3
+            // Friday
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 300);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 47);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
+            this.Friday.FillWeight = 0.7521151F;
+            this.Friday.HeaderText = "Fri";
+            this.Friday.MinimumWidth = 70;
+            this.Friday.Name = "Friday";
+            this.Friday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Friday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Friday.Width = 70;
             // 
-            // pictureBox4
+            // Sat
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(0, 252);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 47);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
+            this.Sat.FillWeight = 0.7521151F;
+            this.Sat.HeaderText = "Sat";
+            this.Sat.MinimumWidth = 70;
+            this.Sat.Name = "Sat";
+            this.Sat.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Sat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Sat.Width = 70;
             // 
-            // pictureBox5
+            // Sun
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(0, 205);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(100, 47);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
+            this.Sun.FillWeight = 0.7521151F;
+            this.Sun.HeaderText = "Sun";
+            this.Sun.MinimumWidth = 70;
+            this.Sun.Name = "Sun";
+            this.Sun.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Sun.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Sun.Width = 70;
             // 
-            // pictureBox6
+            // tabApp
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(0, 157);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(100, 47);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
+            this.tabApp.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.tabApp.Controls.Add(this.tabDisplay);
+            this.tabApp.Controls.Add(this.tabSearch);
+            this.tabApp.Controls.Add(this.tabAdd);
+            this.tabApp.Controls.Add(this.tabEdit);
+            this.tabApp.Controls.Add(this.tabDelete);
+            this.tabApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabApp.ItemSize = new System.Drawing.Size(145, 25);
+            this.tabApp.Location = new System.Drawing.Point(4, 2);
+            this.tabApp.Name = "tabApp";
+            this.tabApp.SelectedIndex = 0;
+            this.tabApp.Size = new System.Drawing.Size(968, 721);
+            this.tabApp.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabApp.TabIndex = 0;
+            this.tabApp.SelectedIndexChanged += new System.EventHandler(this.tabApp_SelectedIndexChanged);
+            this.tabApp.Validated += new System.EventHandler(this.tabApp_Validated);
             // 
-            // pictureBox8
+            // pnlAppDetails
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(0, 494);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(100, 47);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 11;
-            this.pictureBox8.TabStop = false;
+            this.pnlAppDetails.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo3;
+            this.pnlAppDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlAppDetails.Controls.Add(this.txtpnAppTime);
+            this.pnlAppDetails.Controls.Add(this.lblpnAppTime);
+            this.pnlAppDetails.Controls.Add(this.txtpnStaff);
+            this.pnlAppDetails.Controls.Add(this.lblpnStaff);
+            this.pnlAppDetails.Controls.Add(this.pictureBox7);
+            this.pnlAppDetails.Controls.Add(this.btnClosePnl);
+            this.pnlAppDetails.Controls.Add(this.txtpnAppDur);
+            this.pnlAppDetails.Controls.Add(this.txtpnAppDate);
+            this.pnlAppDetails.Controls.Add(this.lblpnHeader);
+            this.pnlAppDetails.Controls.Add(this.lblpnDetails);
+            this.pnlAppDetails.Controls.Add(this.txtAppDet);
+            this.pnlAppDetails.Controls.Add(this.lblpnDur);
+            this.pnlAppDetails.Controls.Add(this.lblpnDate);
+            this.pnlAppDetails.Location = new System.Drawing.Point(184, 143);
+            this.pnlAppDetails.Name = "pnlAppDetails";
+            this.pnlAppDetails.Size = new System.Drawing.Size(557, 312);
+            this.pnlAppDetails.TabIndex = 242;
+            this.pnlAppDetails.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAppDetails_Paint);
             // 
-            // pictureBox9
+            // lblpnDate
             // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(0, 446);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(100, 47);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 12;
-            this.pictureBox9.TabStop = false;
+            this.lblpnDate.AutoSize = true;
+            this.lblpnDate.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblpnDate.Location = new System.Drawing.Point(16, 41);
+            this.lblpnDate.Name = "lblpnDate";
+            this.lblpnDate.Size = new System.Drawing.Size(155, 20);
+            this.lblpnDate.TabIndex = 0;
+            this.lblpnDate.Text = "Appointment Date";
             // 
-            // pictureBox10
+            // lblpnDur
             // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(0, 396);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(100, 47);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 13;
-            this.pictureBox10.TabStop = false;
+            this.lblpnDur.AutoSize = true;
+            this.lblpnDur.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblpnDur.Location = new System.Drawing.Point(16, 117);
+            this.lblpnDur.Name = "lblpnDur";
+            this.lblpnDur.Size = new System.Drawing.Size(185, 20);
+            this.lblpnDur.TabIndex = 1;
+            this.lblpnDur.Text = "Appointment Duration";
             // 
-            // pictureBox11
+            // txtAppDet
             // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(0, 348);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(100, 47);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 14;
-            this.pictureBox11.TabStop = false;
+            this.txtAppDet.Location = new System.Drawing.Point(7, 211);
+            this.txtAppDet.Multiline = true;
+            this.txtAppDet.Name = "txtAppDet";
+            this.txtAppDet.Size = new System.Drawing.Size(360, 86);
+            this.txtAppDet.TabIndex = 2;
             // 
-            // btnApp
+            // lblpnDetails
             // 
-            this.btnApp.BorderColor = System.Drawing.Color.Silver;
-            this.btnApp.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnApp.FlatAppearance.BorderSize = 0;
-            this.btnApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApp.Location = new System.Drawing.Point(839, 221);
-            this.btnApp.Name = "btnApp";
-            this.btnApp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnApp.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnApp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnApp.Size = new System.Drawing.Size(118, 40);
-            this.btnApp.TabIndex = 224;
-            this.btnApp.Text = "ADD ";
-            this.btnApp.TextColor = System.Drawing.Color.White;
-            this.btnApp.UseVisualStyleBackColor = true;
-            this.btnApp.Click += new System.EventHandler(this.btnApp_Click);
+            this.lblpnDetails.AutoSize = true;
+            this.lblpnDetails.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblpnDetails.Location = new System.Drawing.Point(16, 188);
+            this.lblpnDetails.Name = "lblpnDetails";
+            this.lblpnDetails.Size = new System.Drawing.Size(172, 20);
+            this.lblpnDetails.TabIndex = 5;
+            this.lblpnDetails.Text = "Appointment Details";
             // 
-            // btnEdit
+            // lblpnHeader
             // 
-            this.btnEdit.BorderColor = System.Drawing.Color.Silver;
-            this.btnEdit.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(839, 279);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEdit.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnEdit.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEdit.Size = new System.Drawing.Size(118, 40);
-            this.btnEdit.TabIndex = 225;
-            this.btnEdit.Text = "EDIT";
-            this.btnEdit.TextColor = System.Drawing.Color.White;
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.roundButton1_Click_1);
+            this.lblpnHeader.AutoSize = true;
+            this.lblpnHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpnHeader.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblpnHeader.Location = new System.Drawing.Point(151, 4);
+            this.lblpnHeader.Name = "lblpnHeader";
+            this.lblpnHeader.Size = new System.Drawing.Size(275, 25);
+            this.lblpnHeader.TabIndex = 6;
+            this.lblpnHeader.Text = "APPOINTMENT DETAILS";
             // 
-            // roundButton2
+            // txtpnAppDate
             // 
-            this.roundButton2.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton2.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton2.FlatAppearance.BorderSize = 0;
-            this.roundButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton2.Location = new System.Drawing.Point(839, 339);
-            this.roundButton2.Name = "roundButton2";
-            this.roundButton2.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton2.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton2.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton2.Size = new System.Drawing.Size(118, 40);
-            this.roundButton2.TabIndex = 226;
-            this.roundButton2.Text = "SEARCH";
-            this.roundButton2.TextColor = System.Drawing.Color.White;
-            this.roundButton2.UseVisualStyleBackColor = true;
-            this.roundButton2.Click += new System.EventHandler(this.roundButton2_Click);
+            this.txtpnAppDate.Location = new System.Drawing.Point(209, 38);
+            this.txtpnAppDate.Name = "txtpnAppDate";
+            this.txtpnAppDate.Size = new System.Drawing.Size(192, 26);
+            this.txtpnAppDate.TabIndex = 7;
             // 
-            // roundButton3
+            // txtpnAppDur
             // 
-            this.roundButton3.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton3.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton3.FlatAppearance.BorderSize = 0;
-            this.roundButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton3.Location = new System.Drawing.Point(836, 396);
-            this.roundButton3.Name = "roundButton3";
-            this.roundButton3.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton3.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton3.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton3.Size = new System.Drawing.Size(118, 40);
-            this.roundButton3.TabIndex = 227;
-            this.roundButton3.Text = "DELETE";
-            this.roundButton3.TextColor = System.Drawing.Color.White;
-            this.roundButton3.UseVisualStyleBackColor = true;
-            this.roundButton3.Click += new System.EventHandler(this.roundButton3_Click);
+            this.txtpnAppDur.Location = new System.Drawing.Point(209, 114);
+            this.txtpnAppDur.Name = "txtpnAppDur";
+            this.txtpnAppDur.Size = new System.Drawing.Size(192, 26);
+            this.txtpnAppDur.TabIndex = 9;
             // 
-            // dateTimePicker1
+            // pictureBox7
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(621, 23);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker1.TabIndex = 228;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
+            this.pictureBox7.Image = global::KaizenMain.Properties.Resources._53160265_2410346355864115_4176677497166888960_o;
+            this.pictureBox7.Location = new System.Drawing.Point(438, 211);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(116, 98);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 243;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
-            // label1
+            // lblpnStaff
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(102, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 20);
-            this.label1.TabIndex = 229;
-            this.label1.Text = "-";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click_2);
+            this.lblpnStaff.AutoSize = true;
+            this.lblpnStaff.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblpnStaff.Location = new System.Drawing.Point(16, 155);
+            this.lblpnStaff.Name = "lblpnStaff";
+            this.lblpnStaff.Size = new System.Drawing.Size(118, 20);
+            this.lblpnStaff.TabIndex = 244;
+            this.lblpnStaff.Text = "Staff Member";
             // 
-            // DayLabel2
+            // txtpnStaff
             // 
-            this.DayLabel2.AutoSize = true;
-            this.DayLabel2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.DayLabel2.Location = new System.Drawing.Point(203, 57);
-            this.DayLabel2.Name = "DayLabel2";
-            this.DayLabel2.Size = new System.Drawing.Size(15, 20);
-            this.DayLabel2.TabIndex = 230;
-            this.DayLabel2.Text = "-";
-            this.DayLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.DayLabel2.Click += new System.EventHandler(this.DayLabel2_Click);
+            this.txtpnStaff.Location = new System.Drawing.Point(209, 152);
+            this.txtpnStaff.Name = "txtpnStaff";
+            this.txtpnStaff.Size = new System.Drawing.Size(192, 26);
+            this.txtpnStaff.TabIndex = 245;
             // 
-            // DayLabel3
+            // lblpnAppTime
             // 
-            this.DayLabel3.AutoSize = true;
-            this.DayLabel3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.DayLabel3.Location = new System.Drawing.Point(296, 57);
-            this.DayLabel3.Name = "DayLabel3";
-            this.DayLabel3.Size = new System.Drawing.Size(15, 20);
-            this.DayLabel3.TabIndex = 231;
-            this.DayLabel3.Text = "-";
-            this.DayLabel3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblpnAppTime.AutoSize = true;
+            this.lblpnAppTime.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblpnAppTime.Location = new System.Drawing.Point(16, 81);
+            this.lblpnAppTime.Name = "lblpnAppTime";
+            this.lblpnAppTime.Size = new System.Drawing.Size(154, 20);
+            this.lblpnAppTime.TabIndex = 246;
+            this.lblpnAppTime.Text = "Appointment Time";
             // 
-            // DayLabel4
+            // txtpnAppTime
             // 
-            this.DayLabel4.AutoSize = true;
-            this.DayLabel4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.DayLabel4.Location = new System.Drawing.Point(400, 57);
-            this.DayLabel4.Name = "DayLabel4";
-            this.DayLabel4.Size = new System.Drawing.Size(15, 20);
-            this.DayLabel4.TabIndex = 232;
-            this.DayLabel4.Text = "-";
-            this.DayLabel4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.txtpnAppTime.Location = new System.Drawing.Point(209, 78);
+            this.txtpnAppTime.Name = "txtpnAppTime";
+            this.txtpnAppTime.Size = new System.Drawing.Size(192, 26);
+            this.txtpnAppTime.TabIndex = 247;
             // 
-            // DayLabel5
+            // btnClosePnl
             // 
-            this.DayLabel5.AutoSize = true;
-            this.DayLabel5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.DayLabel5.Location = new System.Drawing.Point(491, 57);
-            this.DayLabel5.Name = "DayLabel5";
-            this.DayLabel5.Size = new System.Drawing.Size(15, 20);
-            this.DayLabel5.TabIndex = 233;
-            this.DayLabel5.Text = "-";
-            this.DayLabel5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // DayLabel6
-            // 
-            this.DayLabel6.AutoSize = true;
-            this.DayLabel6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.DayLabel6.Location = new System.Drawing.Point(598, 57);
-            this.DayLabel6.Name = "DayLabel6";
-            this.DayLabel6.Size = new System.Drawing.Size(15, 20);
-            this.DayLabel6.TabIndex = 234;
-            this.DayLabel6.Text = "-";
-            this.DayLabel6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // DayLabel7
-            // 
-            this.DayLabel7.AutoSize = true;
-            this.DayLabel7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.DayLabel7.Location = new System.Drawing.Point(700, 57);
-            this.DayLabel7.Name = "DayLabel7";
-            this.DayLabel7.Size = new System.Drawing.Size(15, 20);
-            this.DayLabel7.TabIndex = 235;
-            this.DayLabel7.Text = "-";
-            this.DayLabel7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtYear
-            // 
-            this.txtYear.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtYear.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtYear.Location = new System.Drawing.Point(348, 9);
-            this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(239, 42);
-            this.txtYear.TabIndex = 236;
-            // 
-            // cmbStaff
-            // 
-            this.cmbStaff.FormattingEnabled = true;
-            this.cmbStaff.Location = new System.Drawing.Point(833, 108);
-            this.cmbStaff.Name = "cmbStaff";
-            this.cmbStaff.Size = new System.Drawing.Size(121, 28);
-            this.cmbStaff.TabIndex = 237;
-            this.cmbStaff.SelectedIndexChanged += new System.EventHandler(this.cmbStaff_SelectedIndexChanged);
-            // 
-            // lblStaffSelection
-            // 
-            this.lblStaffSelection.AutoSize = true;
-            this.lblStaffSelection.Location = new System.Drawing.Point(832, 80);
-            this.lblStaffSelection.Name = "lblStaffSelection";
-            this.lblStaffSelection.Size = new System.Drawing.Size(129, 20);
-            this.lblStaffSelection.TabIndex = 238;
-            this.lblStaffSelection.Text = "Staff Selection";
-            // 
-            // txtDisFor
-            // 
-            this.txtDisFor.Location = new System.Drawing.Point(833, 143);
-            this.txtDisFor.Name = "txtDisFor";
-            this.txtDisFor.Size = new System.Drawing.Size(121, 26);
-            this.txtDisFor.TabIndex = 239;
-            // 
-            // txtDisSur
-            // 
-            this.txtDisSur.Location = new System.Drawing.Point(833, 178);
-            this.txtDisSur.Name = "txtDisSur";
-            this.txtDisSur.Size = new System.Drawing.Size(121, 26);
-            this.txtDisSur.TabIndex = 240;
+            this.btnClosePnl.BorderColor = System.Drawing.Color.Silver;
+            this.btnClosePnl.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnClosePnl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClosePnl.FlatAppearance.BorderSize = 0;
+            this.btnClosePnl.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnClosePnl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnClosePnl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClosePnl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClosePnl.Location = new System.Drawing.Point(507, 3);
+            this.btnClosePnl.Name = "btnClosePnl";
+            this.btnClosePnl.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnClosePnl.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnClosePnl.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnClosePnl.Size = new System.Drawing.Size(47, 40);
+            this.btnClosePnl.TabIndex = 225;
+            this.btnClosePnl.Text = "X";
+            this.btnClosePnl.TextColor = System.Drawing.Color.White;
+            this.btnClosePnl.UseVisualStyleBackColor = true;
+            this.btnClosePnl.Click += new System.EventHandler(this.btnClosePnl_Click);
             // 
             // btnRefresh
             // 
@@ -1331,24 +1456,137 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // tabApp
+            // btDelete
             // 
-            this.tabApp.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabApp.Controls.Add(this.tabDisplay);
-            this.tabApp.Controls.Add(this.tabSearch);
-            this.tabApp.Controls.Add(this.tabAdd);
-            this.tabApp.Controls.Add(this.tabEdit);
-            this.tabApp.Controls.Add(this.tabDelete);
-            this.tabApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabApp.ItemSize = new System.Drawing.Size(145, 25);
-            this.tabApp.Location = new System.Drawing.Point(4, 2);
-            this.tabApp.Name = "tabApp";
-            this.tabApp.SelectedIndex = 0;
-            this.tabApp.Size = new System.Drawing.Size(968, 721);
-            this.tabApp.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabApp.TabIndex = 0;
-            this.tabApp.SelectedIndexChanged += new System.EventHandler(this.tabApp_SelectedIndexChanged);
-            this.tabApp.Validated += new System.EventHandler(this.tabApp_Validated);
+            this.btDelete.BorderColor = System.Drawing.Color.Silver;
+            this.btDelete.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btDelete.FlatAppearance.BorderSize = 0;
+            this.btDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDelete.Location = new System.Drawing.Point(833, 335);
+            this.btDelete.Name = "btDelete";
+            this.btDelete.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btDelete.onHoverButtonColor = System.Drawing.Color.White;
+            this.btDelete.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btDelete.Size = new System.Drawing.Size(118, 40);
+            this.btDelete.TabIndex = 227;
+            this.btDelete.Text = "DELETE";
+            this.btDelete.TextColor = System.Drawing.Color.White;
+            this.btDelete.UseVisualStyleBackColor = true;
+            this.btDelete.Click += new System.EventHandler(this.roundButton3_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BorderColor = System.Drawing.Color.Silver;
+            this.btnSearch.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(833, 277);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnSearch.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnSearch.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnSearch.Size = new System.Drawing.Size(118, 40);
+            this.btnSearch.TabIndex = 226;
+            this.btnSearch.Text = "SEARCH";
+            this.btnSearch.TextColor = System.Drawing.Color.White;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.roundButton2_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BorderColor = System.Drawing.Color.Silver;
+            this.btnEdit.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(833, 221);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEdit.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEdit.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEdit.Size = new System.Drawing.Size(118, 40);
+            this.btnEdit.TabIndex = 225;
+            this.btnEdit.Text = "EDIT";
+            this.btnEdit.TextColor = System.Drawing.Color.White;
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.roundButton1_Click_1);
+            // 
+            // btnAddApp
+            // 
+            this.btnAddApp.BorderColor = System.Drawing.Color.Silver;
+            this.btnAddApp.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnAddApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddApp.FlatAppearance.BorderSize = 0;
+            this.btnAddApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAddApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAddApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddApp.Location = new System.Drawing.Point(633, 77);
+            this.btnAddApp.Name = "btnAddApp";
+            this.btnAddApp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddApp.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnAddApp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddApp.Size = new System.Drawing.Size(214, 40);
+            this.btnAddApp.TabIndex = 223;
+            this.btnAddApp.Text = "ADD APPOINTMENT";
+            this.btnAddApp.TextColor = System.Drawing.Color.White;
+            this.btnAddApp.UseVisualStyleBackColor = true;
+            this.btnAddApp.Click += new System.EventHandler(this.btnAddApp_Click_1);
+            // 
+            // btnEditApp
+            // 
+            this.btnEditApp.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditApp.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEditApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditApp.FlatAppearance.BorderSize = 0;
+            this.btnEditApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditApp.Location = new System.Drawing.Point(640, 41);
+            this.btnEditApp.Name = "btnEditApp";
+            this.btnEditApp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditApp.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEditApp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditApp.Size = new System.Drawing.Size(214, 40);
+            this.btnEditApp.TabIndex = 227;
+            this.btnEditApp.Text = "EDIT ";
+            this.btnEditApp.TextColor = System.Drawing.Color.White;
+            this.btnEditApp.UseVisualStyleBackColor = true;
+            this.btnEditApp.Click += new System.EventHandler(this.btnEditApp_Click);
+            // 
+            // btnDelDel
+            // 
+            this.btnDelDel.BorderColor = System.Drawing.Color.Silver;
+            this.btnDelDel.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnDelDel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelDel.FlatAppearance.BorderSize = 0;
+            this.btnDelDel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDelDel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDelDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelDel.Location = new System.Drawing.Point(619, 87);
+            this.btnDelDel.Name = "btnDelDel";
+            this.btnDelDel.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDelDel.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnDelDel.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDelDel.Size = new System.Drawing.Size(214, 40);
+            this.btnDelDel.TabIndex = 227;
+            this.btnDelDel.Text = "DELETE";
+            this.btnDelDel.TextColor = System.Drawing.Color.White;
+            this.btnDelDel.UseVisualStyleBackColor = true;
+            this.btnDelDel.Click += new System.EventHandler(this.btnDelDel_Click);
             // 
             // Appointment
             // 
@@ -1371,18 +1609,21 @@
             this.tabSearch.PerformLayout();
             this.tabDisplay.ResumeLayout(false);
             this.tabDisplay.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvApp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvApp)).EndInit();
             this.tabApp.ResumeLayout(false);
+            this.pnlAppDetails.ResumeLayout(false);
+            this.pnlAppDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1406,10 +1647,9 @@
         private System.Windows.Forms.Label DayLabel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private RoundButton roundButton3;
-        private RoundButton roundButton2;
+        private RoundButton btDelete;
+        private RoundButton btnSearch;
         private RoundButton btnEdit;
-        private RoundButton btnApp;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox9;
@@ -1489,5 +1729,27 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtADesc;
+        private System.Windows.Forms.Label lblADesc;
+        private System.Windows.Forms.TextBox txtEDesc;
+        private System.Windows.Forms.Label lblEDesc;
+        private System.Windows.Forms.TextBox txtDDesc;
+        private System.Windows.Forms.Label lblDDesc;
+        private System.Windows.Forms.TextBox txtSDesc;
+        private System.Windows.Forms.Label lblSDesc;
+        private System.Windows.Forms.Panel pnlAppDetails;
+        private System.Windows.Forms.TextBox txtpnAppDur;
+        private System.Windows.Forms.TextBox txtpnAppDate;
+        private System.Windows.Forms.Label lblpnHeader;
+        private System.Windows.Forms.Label lblpnDetails;
+        private System.Windows.Forms.TextBox txtAppDet;
+        private System.Windows.Forms.Label lblpnDur;
+        private System.Windows.Forms.Label lblpnDate;
+        private RoundButton btnClosePnl;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.TextBox txtpnStaff;
+        private System.Windows.Forms.Label lblpnStaff;
+        private System.Windows.Forms.TextBox txtpnAppTime;
+        private System.Windows.Forms.Label lblpnAppTime;
     }
 }

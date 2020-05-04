@@ -410,13 +410,13 @@ namespace KaizenMain
             }
             
             DisplayApps();
-            
-           
 
 
 
 
-            
+
+
+            pnlAppDetails.Visible = false;
 
 
 
@@ -464,7 +464,7 @@ namespace KaizenMain
                                 txtSeDuration.Text = drAppointment["Duration"].ToString();
                                 txtSeStaffID.Text = drAppointment["StaffID"].ToString();
                                 txtSeTransID.Text = drAppointment["TransID"].ToString();
-
+                                txtSDesc.Text = drAppointment["AppDesc"].ToString();
                             }
                             break;
 
@@ -479,6 +479,8 @@ namespace KaizenMain
                                lblAddAppID.Text = "AP-6000";
                             else
                             {
+                                dtpAppDate.Enabled = true;
+                                cmbAddTime.Enabled = true;
                                 getAppID(noRows);
                             }
 
@@ -510,8 +512,8 @@ namespace KaizenMain
                                 cmbEditTransID.Text = drAppointment["TransID"].ToString();
                                 cmbEdStaffID.Text = drAppointment["StaffID"].ToString();
                                 cmbEdTimes.Text = drAppointment["AppTime"].ToString();
+                                txtEDesc.Text = drAppointment["AppDesc"].ToString();
 
-                               
 
 
 
@@ -547,7 +549,7 @@ namespace KaizenMain
                             txtDLDuration.Text = drAppointment["Duration"].ToString();
                             txtDLStaffID.Text = drAppointment["StaffID"].ToString();
                             txtDLTransID.Text = drAppointment["TransID"].ToString();
-
+                            txtDDesc.Text = drAppointment["AppDesc"].ToString();
 
 
                             break;
@@ -652,7 +654,16 @@ namespace KaizenMain
                 ok = false;
                 errP.SetError(cmbAStaffID, MyEx.toString());
             }
+            try
+            {
+                myAppointment.AppDesc = txtADesc.Text.Trim();
+            }
 
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(txtADesc, MyEx.toString());
+            }
             try
                 {
                 if (ok)
@@ -670,6 +681,7 @@ namespace KaizenMain
                             drAppointment["Duration"] = Convert.ToInt32(cmbDuration.Text);
                             drAppointment["StaffID"] = myAppointment.StaffID;
                             drAppointment["TransID"] = myAppointment.TransID;
+                            drAppointment["AppDesc"] = myAppointment.AppDesc;
 
 
 
@@ -690,17 +702,21 @@ namespace KaizenMain
                                 getAppID(dsKaizen.Tables["Appointment"].Rows.Count);
                             }
                             else
-                                tabApp.SelectedIndex = 0;
+                            {
+                                        tabApp.SelectedIndex = 0;
+                                        DisplayApps();
+
+
+                            }
 
 
 
 
 
 
-                        
 
 
-                    
+
                 }
 
 
@@ -734,7 +750,7 @@ namespace KaizenMain
         private void btnApp_Click(object sender, EventArgs e)
         {
 
-            tabApp.SelectedIndex = 2;
+            
 
         }
 
@@ -757,9 +773,13 @@ namespace KaizenMain
                     {
                         if (dgvApp.CurrentCell != null && dgvApp.CurrentCell.Value != null)
                         {
+
                             lblEditAID.Text = dgvApp.CurrentCell.Value.ToString();
                             txtSearchID.Text = dgvApp.CurrentCell.Value.ToString();
                             txtDLSearch.Text = dgvApp.CurrentCell.Value.ToString();
+                            btnEdit.Enabled = true;
+                            btDelete.Enabled = true;
+                            btnSearch.Enabled = true;
                         }
                         else
                         {
@@ -767,6 +787,124 @@ namespace KaizenMain
                             lblEditAID.Text = "AP-6000";
                             txtSearchID.Text = "AP-6000";
                             txtDLSearch.Text = "AP-6000";
+                            btnEdit.Enabled = false;
+                            btDelete.Enabled = false;
+                            btnSearch.Enabled = false;
+                          
+                            
+                            
+                            if(dgvApp.CurrentCell.RowIndex.Equals(0))
+                            {
+                                cmbAddTime.SelectedIndex = 0;
+                                cmbAddTime.Enabled = false;
+                            }
+                            else if(dgvApp.CurrentCell.RowIndex.Equals(1))
+                            {
+                               
+                                cmbAddTime.SelectedIndex=1;
+                                cmbAddTime.Enabled = false;
+                            }
+
+                            else if (dgvApp.CurrentCell.RowIndex.Equals(2))
+                            {
+
+                                cmbAddTime.SelectedIndex = 2;
+                                cmbAddTime.Enabled = false;
+                            }
+                            else if (dgvApp.CurrentCell.RowIndex.Equals(3))
+                            {
+
+                                cmbAddTime.SelectedIndex = 3;
+                                cmbAddTime.Enabled = false;
+                            }
+                            else if (dgvApp.CurrentCell.RowIndex.Equals(4))
+                            {
+
+                                cmbAddTime.SelectedIndex = 4;
+                                cmbAddTime.Enabled = false;
+                            }
+                            else if (dgvApp.CurrentCell.RowIndex.Equals(5))
+                            {
+
+                                cmbAddTime.SelectedIndex = 5;
+                                cmbAddTime.Enabled = false;
+                            }
+                            else if (dgvApp.CurrentCell.RowIndex.Equals(6))
+                            {
+
+                                cmbAddTime.SelectedIndex = 6;
+                                cmbAddTime.Enabled = false;
+                            }
+                            else if (dgvApp.CurrentCell.RowIndex.Equals(7))
+                            {
+
+                                cmbAddTime.SelectedIndex = 7;
+                                cmbAddTime.Enabled = false;
+                            }
+                            else if (dgvApp.CurrentCell.RowIndex.Equals(8))
+                            {
+
+                                cmbAddTime.SelectedIndex = 8;
+                                cmbAddTime.Enabled = false;
+                            }
+
+                            if(dgvApp.CurrentCell.ColumnIndex.Equals(0))
+                            {
+                               
+                                DateTime dt13 = this.dateTimePicker1.Value.Date;
+                                dtpAppDate.Value = dt13.AddDays(0);
+
+                            }
+                            else if (dgvApp.CurrentCell.ColumnIndex.Equals(1))
+                            {
+
+                                DateTime dt13 = this.dateTimePicker1.Value.Date;
+                                dtpAppDate.Value = dt13.AddDays(1);
+                                dtpAppDate.Enabled = false;
+
+                            }
+                            else if (dgvApp.CurrentCell.ColumnIndex.Equals(2))
+                            {
+
+                                DateTime dt13 = this.dateTimePicker1.Value.Date;
+                                dtpAppDate.Value = dt13.AddDays(2);
+                                dtpAppDate.Enabled = false;
+
+                            }
+                            else if (dgvApp.CurrentCell.ColumnIndex.Equals(3))
+                            {
+
+                                DateTime dt13 = this.dateTimePicker1.Value.Date;
+                                dtpAppDate.Value = dt13.AddDays(3);
+                                dtpAppDate.Enabled = false;
+
+                            }
+                            else if (dgvApp.CurrentCell.ColumnIndex.Equals(4))
+                            {
+
+                                DateTime dt13 = this.dateTimePicker1.Value.Date;
+                                dtpAppDate.Value = dt13.AddDays(4);
+                                dtpAppDate.Enabled = false;
+
+                            }
+                            else if (dgvApp.CurrentCell.ColumnIndex.Equals(5))
+                            {
+
+                                DateTime dt13 = this.dateTimePicker1.Value.Date;
+                                dtpAppDate.Value = dt13.AddDays(5);
+                                dtpAppDate.Enabled = false;
+
+                            }
+                            else if (dgvApp.CurrentCell.ColumnIndex.Equals(6))
+                            {
+
+                                DateTime dt13 = this.dateTimePicker1.Value.Date;
+                                dtpAppDate.Value = dt13.AddDays(6);
+                                dtpAppDate.Enabled = false;
+
+                            }
+
+                            tabApp.SelectedIndex = 2;
                         }
                            
                    
@@ -781,7 +919,7 @@ namespace KaizenMain
                                 cmbEdDur.Text = dr["Duration"].ToString();
                                 cmbEdStaffID.Text = dr["StaffID"].ToString();
                                 cmbEditTransID.Text = dr["TransID"].ToString();
-
+                                txtEDesc.Text = dr["AppDesc"].ToString();
                                // DisplayApps();
                             }
 
@@ -798,8 +936,14 @@ namespace KaizenMain
                                 txtSeDuration.Text = dr["Duration"].ToString();
                                 txtSeStaffID.Text = dr["StaffID"].ToString();
                                 txtSeTransID.Text = dr["TransID"].ToString();
+                                txtSDesc.Text = dr["AppDesc"].ToString();
 
-                                
+                                txtpnAppDate.Text = dr["AppDate"].ToString();
+                                txtpnAppDur.Text = dr["Duration"].ToString();
+                                txtAppDet.Text = dr["AppDesc"].ToString();
+                                txtpnStaff.Text = dr["StaffID"].ToString();
+                                txtpnAppTime.Text = dr["AppTime"].ToString();
+
                             }
 
 
@@ -815,8 +959,8 @@ namespace KaizenMain
                                 txtDLDuration.Text = dr["Duration"].ToString();
                                 txtDLStaffID.Text = dr["StaffID"].ToString();
                                 txtDLTransID.Text = dr["TransID"].ToString();
+                                txtDDesc.Text = dr["AppDesc"].ToString();
 
-                                
                             }
 
 
@@ -876,8 +1020,7 @@ namespace KaizenMain
 
         private void cmbStaff_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
-
+             
 
         }
 
@@ -914,8 +1057,8 @@ namespace KaizenMain
                         txtSeDuration.Text = dr["Duration"].ToString();
                         txtSeStaffID.Text = dr["StaffID"].ToString();
                         txtSeTransID.Text = dr["TransID"].ToString();
+                        txtSDesc.Text = dr["AppDesc"].ToString();
 
-                        
                     }
 
                     break;
@@ -939,7 +1082,7 @@ namespace KaizenMain
                     cmbEditTransID.Enabled = true;
                     cmbEdStaffID.Enabled = true;
                     cmbEdDur.Enabled = true;
-
+                    txtEDesc.Enabled = true;
                 
                 
 
@@ -1035,7 +1178,16 @@ namespace KaizenMain
                     ok = false;
                     errP.SetError(cmbEdStaffID, MyEx.toString());
                 }
+                try
+                {
+                    myAppointment.AppDesc = txtEDesc.Text.Trim();
+                }
 
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(txtEDesc, MyEx.toString());
+                }
 
                 try
                 {
@@ -1052,7 +1204,7 @@ namespace KaizenMain
                         drAppointment["Duration"] = Convert.ToInt32(cmbEdDur.Text);
                         drAppointment["StaffID"] = myAppointment.StaffID;
                         drAppointment["TransID"] = myAppointment.TransID;
-
+                        drAppointment["AppDesc"] = myAppointment.AppDesc;
                         drAppointment.EndEdit();
                         SqlCommandBuilder daAppoinment = new SqlCommandBuilder(daAppointment);
                         daAppointment.UpdateCommand = daAppoinment.GetUpdateCommand();
@@ -1108,6 +1260,59 @@ namespace KaizenMain
         private void dgvApp_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             
+        }
+
+        private void cmbStaff_SelectedValueChanged(object sender, EventArgs e)
+        {
+            
+
+           
+        }
+
+        private void cmbStaff_DropDownClosed(object sender, EventArgs e)
+        {
+            //drStaff = dsKaizen.Tables["Staff"].Rows.Find(cmbAStaffID.SelectedValue);
+            //if (cmbAStaffID.SelectedValue.Equals(drStaff["StaffID"]))
+            //{
+            //    txtDisFor.Text = drStaff["StaffFName"].ToString();
+            //    txtDisSur.Text = drStaff["StaffSName"].ToString();
+
+
+            //}
+            //btnRefresh(btnRefresh, EventArgs.e);
+            btnRefresh_Click(sender, e);
+            //DisplayApps();
+
+        }
+
+        private void btnClosePnl_Click(object sender, EventArgs e)
+        {
+            pnlAppDetails.Visible = false;
+        }
+
+        private void dgvApp_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+           pnlAppDetails.Visible = true;
+            txtpnAppDate.Enabled = false;
+            txtpnStaff.Enabled = false;
+            txtpnAppDur.Enabled = false;
+            txtAppDet.Enabled = false;
+            txtpnAppTime.Enabled = false;
+        }
+
+        private void dgvApp_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pnlAppDetails_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
         }
 
         void AddTabValidate(object sender, CancelEventArgs e)
@@ -1189,6 +1394,12 @@ namespace KaizenMain
             dgvApp.Columns[5].HeaderText = dt12.AddDays(5).ToShortDateString();
             dgvApp.Columns[6].HeaderText = dt12.AddDays(6).ToShortDateString();
 
+            for(int p=0;p<7;p++)
+            {
+                dtpAppDate.Value = dt12;
+
+
+            }
 
             dgvApp.Rows.Add(9);
 
@@ -1218,15 +1429,21 @@ namespace KaizenMain
             cmdAppointment.Parameters["@FrmDt"].Value = weekStart;
             cmdAppointment.Parameters["@ToDt"].Value = weekEnd.AddDays(6);
             drStaff = dsKaizen.Tables["Staff"].Rows.Find(cmbAStaffID.SelectedValue);
-
-            if (cmbAStaffID.SelectedValue.Equals(drStaff["StaffID"]))
+           // if (cmbAStaffID.SelectedValue.Equals(drStaff["StaffID"]))
+            
+                
+            if (cmbAStaffID.SelectedItem != null)
             {
                 txtDisFor.Text = drStaff["StaffFName"].ToString();
                 txtDisSur.Text = drStaff["StaffSName"].ToString();
-                
             }
 
-            daAppointment.Fill(dsKaizen, "Appointment");
+            
+
+
+
+
+                daAppointment.Fill(dsKaizen, "Appointment");
 
            
 
@@ -1246,35 +1463,64 @@ namespace KaizenMain
 
                             if (ATime[j].Equals(startTime))
                             {
-                                dgvApp.Rows[j].Cells[i].Style.BackColor = Color.Blue;
+                                dgvApp.Rows[j].Cells[i].Style.BackColor = Color.DarkBlue;
+                                dgvApp.Rows[j].Cells[i].ReadOnly=true;
                                 dgvApp.Rows[j].Cells[i].Value = dr["AppID"].ToString();
                                 booked = true;
 
 
 
 
-                                for (int k = 1; k <= Convert.ToInt32(dr["Duration"]); k++)
+                                for (int k = 1; k <= Convert.ToInt32(dr["Duration"])-1; k++)
                                 {
 
-                                    dgvApp.Rows[j + k].Cells[i].Style.BackColor = Color.MediumBlue;
+                                    dgvApp.Rows[j + k].Cells[i].Style.BackColor = Color.Red;
 
                                     if (k.Equals(1))
                                     {
-                                        dgvApp.Rows[j + k].Cells[i].Value = dr["StaffID"].ToString();
-
+                                        
+                                        dgvApp.Rows[j + k].Cells[i].Value = "";
                                     }
                                     else if (k.Equals(2))
                                     {
-                                        dgvApp.Rows[j + k].Cells[i].Value = dr["TransID"].ToString();
+                                        dgvApp.Rows[j + k].Cells[i].Value = "";
 
                                     }
                                     else if (k.Equals(3))
                                     {
-                                        dgvApp.Rows[j + k].Cells[i].Value = dr["AppDate"].ToString();
+                                        dgvApp.Rows[j + k].Cells[i].Value = "";
 
                                     }
-                                   
+                                    else if (k.Equals(4))
+                                    {
+                                        dgvApp.Rows[j + k].Cells[i].Value = "";
 
+                                    }
+                                    else if (k.Equals(5))
+                                    {
+                                        dgvApp.Rows[j + k].Cells[i].Value = "";
+
+                                    }
+                                    else if (k.Equals(6))
+                                    {
+                                        dgvApp.Rows[j + k].Cells[i].Value = "";
+
+                                    }
+                                    else if (k.Equals(7))
+                                    {
+                                        dgvApp.Rows[j + k].Cells[i].Value = "";
+
+                                    }
+                                    else if (k.Equals(8))
+                                    {
+                                        dgvApp.Rows[j + k].Cells[i].Value = "";
+
+                                    }
+                                    else if (k.Equals(9))
+                                    {
+                                        dgvApp.Rows[j + k].Cells[i].Value = "";
+
+                                    }
                                 }
                             }
 
