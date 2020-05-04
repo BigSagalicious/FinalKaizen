@@ -489,17 +489,7 @@ namespace KaizenMain
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(lblAddTransID, MyEx.toString());
-            }
-
-            try
-            {
-                myTrans.CustID = txtAddCustID.Text.Trim();
-            }
-            catch (MyException MyEx)
-            {
-                ok = false;
-                errP.SetError(lblAddTransID, MyEx.toString());
+                errP.SetError(txtAddCustID, MyEx.toString());
             }
 
             try
@@ -527,7 +517,7 @@ namespace KaizenMain
                 MessageBox.Show("Please Input Order Details Before Adding", "Order");
             }
 
-            try
+         //   try
             {
                 if (ok)
                 {
@@ -629,10 +619,10 @@ namespace KaizenMain
                 }
 
             }
-            catch (Exception ex)
+           // catch (Exception ex)
             {
-                MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Error !", MessageBoxButtons.AbortRetryIgnore,
-                    MessageBoxIcon.Error);
+               // MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Error !", MessageBoxButtons.AbortRetryIgnore,
+                 //   MessageBoxIcon.Error);
             }
         }
 
@@ -1122,11 +1112,6 @@ namespace KaizenMain
             }
         }
 
-        private void txtAddCustID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox7_Click(object sender, EventArgs e)
         {
             dt.Clear();
@@ -1212,86 +1197,6 @@ namespace KaizenMain
             }
         }
 
-        void addTransDetail()
-        {
-            bool ok = true;
-            using (SqlConnection connection = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
-            {
-                using (SqlDataAdapter dataAdapter = new SqlDataAdapter())
-                    {
-                    dataAdapter.SelectCommand = new SqlCommand("SELECT * FROM TransDetails", connection);
-                    dataAdapter.InsertCommand = new SqlCommand("insert into TransDetails", connection);
-
-                    getTransDetsnum();
-
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        MyTransDetails myTransDetails = new MyTransDetails();
-
-                        TansDIDString = "TD-" + (IDNumber + 1).ToString();
-
-                        try
-                        {
-                            myTransDetails.TransDetsID = TansDIDString;
-
-                        }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                        }
-
-                        try
-                        {
-                            myTransDetails.TransID = lblAddTransID.Text.Trim();
-
-                        }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                        }
-
-                        try
-                        {
-                            myTransDetails.StockID = dr["StockID"].ToString();
-
-                        }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                        }
-
-                        try
-                        {
-                            myTransDetails.Qty = Convert.ToInt32(dr["Qty"]);
-
-                        }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                        }
-
-                        if (ok)
-                        {
-                            drTransDets = dsKaizen.Tables["TransDetails"].NewRow();
-
-                            drTransDets["TransDetsID"] = myTransDetails.TransDetsID;
-                            drTransDets["TransID"] = myTransDetails.TransID;
-                            drTransDets["StockID"] = myTransDetails.StockID;
-                            drTransDets["Qty"] = myTransDetails.Qty;
-                            drTransDets["StartDate"] = DBNull.Value;
-                            drTransDets["EndDate"] = DBNull.Value;
-
-                            dsKaizen.Tables["TransDetails"].Rows.Add(drTransDets);
-
-                            new SqlCommandBuilder(dataAdapter);
-                            dataAdapter.Update(dsKaizen, "TransDetails");
-                            
-                        }
-                    }
-                }
-
-            }
-        }
 
         private void clearAddForm()
         {

@@ -125,7 +125,7 @@ namespace KaizenMain
 
                                 populateCustName(drTrans["CustID"].ToString(), txtEditCustName, txtEditCustTel);
 
-                                populateOrderSum(txtEditOrderID, dgvService);
+                                populateOrderSum(txtEditOrderID, dgvEdit);
 
                                 lblEditTCost.Text = drTrans["TransTotal"].ToString();
                                 lblEditOutstanding.Text = drTrans["BalanceOwed"].ToString();
@@ -249,16 +249,23 @@ namespace KaizenMain
         {
             dt.Clear();
             drTrans = dsKaizen.Tables["Trans"].Rows.Find(txtSearchOrderID.Text);
+            if (drTrans == null)
+            {
+                MessageBox.Show("ID not found", "Input", MessageBoxButtons.OK);
+            }
+            else
+            {
 
-            dtpSearchDate.Value = (DateTime)drTrans["TransDate"];
-            txtSearchCustID.Text = drTrans["CustID"].ToString();
+                dtpSearchDate.Value = (DateTime)drTrans["TransDate"];
+                txtSearchCustID.Text = drTrans["CustID"].ToString();
 
-            populateCustName(drTrans["CustID"].ToString(), txtSearchCustName, txtSearchCustTel);
+                populateCustName(drTrans["CustID"].ToString(), txtSearchCustName, txtSearchCustTel);
 
-            populateOrderSum(txtSearchOrderID, dgvSearch);
+                populateOrderSum(txtSearchOrderID, dgvSearch);
 
-            lblSearchTCost.Text = drTrans["TransTotal"].ToString();
-            lblSearchOutstanding.Text = drTrans["BalanceOwed"].ToString();
+                lblSearchTCost.Text = drTrans["TransTotal"].ToString();
+                lblSearchOutstanding.Text = drTrans["BalanceOwed"].ToString();
+            }
         }
 
         private void btnSearchClear_Click(object sender, EventArgs e)
@@ -277,7 +284,7 @@ namespace KaizenMain
 
         private void iconAddSearchCustomer_Click(object sender, EventArgs e)
         {
-
+            populateCustName(txtAddCustID.Text, txtAddCustName, txtAddCustTel);
         }
 
         void populateEquipNameCmb(ComboBox comboBox)
@@ -298,11 +305,39 @@ namespace KaizenMain
         }
         private void editgridview_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            int ind = e.RowIndex;
+            DataGridViewRow selectedRows = dgvEdit.Rows[ind];
+            txtEditEquipID.Text = selectedRows.Cells[0].Value.ToString();
+            cmbEditEquipName.Text = selectedRows.Cells[1].Value.ToString();
+            txtEditPPItem.Text = selectedRows.Cells[2].Value.ToString();
+            txtEditQty.Text = selectedRows.Cells[3].Value.ToString();
         }
         private void pbAddSearchEquip_Click(object sender, EventArgs e)
         {
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
+            {
+                SqlCommand sqlCmd = new SqlCommand("SELECT * FROM Stock", sqlConnectionEqT);
+                sqlConnectionEqT.Open();
+                SqlDataReader sqlReader = sqlCmd.ExecuteReader();
 
+                while (sqlReader.Read())
+                {
+                    if (sqlReader["StockID"].ToString().Equals(txtEquipIDAdd.Text))
+                    {
+                        cmbAddEquipName.Text = sqlReader["StockDescription"].ToString();
+                        txtAddPPU.Text = sqlReader["ServPrice"].ToString();
+                        txtAddQty.Text = "  -Please Enter-";
+                    }
+                    else if (sqlReader["StockDescription"].ToString().Equals(cmbAddEquipName.Text.Trim()))
+                    {
+                        txtEquipIDAdd.Text = sqlReader["StockID"].ToString();
+                        txtAddPPU.Text = sqlReader["ServPrice"].ToString();
+                        txtAddQty.Text = "-Please Enter-";
+                    }
+                }
+
+                sqlReader.Close();
+            }
         }
 
         void populateOrderSum(TextBox transIDTB, DataGridView dgvDetails)
@@ -338,7 +373,7 @@ namespace KaizenMain
                         if (row["StockID"].Equals(sqlReader2["StockID"].ToString()))
                         {
                             row["StockDesc"] = sqlReader2["StockDescription"];
-                            row["PPU"] = sqlReader2["PurPrice"];
+                            row["PPU"] = sqlReader2["ServPrice"];
                         }
                     }
 
@@ -395,7 +430,37 @@ namespace KaizenMain
 
         private void btnAddAddEquip_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+                DataRow row = dt.NewRow();
+
+                row["StockID"] = txtEquipIDAdd.Text;
+                row["StockDesc"] = cmbAddEquipName.Text.Trim();
+                row["PPU"] = txtAddPPU.Text;
+                row["Qty"] = txtAddQty.Text;
+                row["Cost"] = Convert.ToDouble(row["PPU"]) * Convert.ToDouble(row["Qty"]);
+
+
+                dt.Rows.Add(row);
+
+                dgvAddOrder.DataSource = dt;
+
+                double orderTotal = 0.00;
+
+                foreach (DataRow dr in dt.Rows)
+                {
+                    orderTotal += System.Convert.ToDouble(dr["Cost"]);
+                }
+
+                lblAddTCost.Text = orderTotal.ToString();
+
+                AddClearEquip();
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("Please input correct Equipment details?", "Input", MessageBoxButtons.OK);
+            }
         }
 
         private void btnAddCompleteOrder_Click(object sender, EventArgs e)
@@ -461,7 +526,7 @@ namespace KaizenMain
                 {
                     drTrans = dsKaizen.Tables["Trans"].NewRow();
                     drTrans["TransID"] = myTrans.TransID;
-                    drTrans["TransType"] = "Purchase";
+                    drTrans["TransType"] = "Service";
                     drTrans["CustID"] = myTrans.CustID;
                     drTrans["TransDate"] = myTrans.TransOn;
                     drTrans["TransTotal"] = myTrans.TransTotal;
@@ -854,7 +919,7 @@ namespace KaizenMain
 
                         disableEdittxtB();
 
-                        btnEditService.Text = "EDIT ORDER";
+                        btnEditService.Text = "EDIT SERVICE";
                         tabService.SelectedIndex = 0;
                     }
 
@@ -915,6 +980,157 @@ namespace KaizenMain
             }
         }
 
+        private void btnAddTransD_Click(object sender, EventArgs e)
+        {
+            {
+                DataRow row = dt.NewRow();
+                try
+                {
+                    row["StockID"] = txtEditEquipID.Text;
+                    row["StockDesc"] = cmbEditEquipName.Text.Trim();
+                    row["PPU"] = txtEditPPItem.Text;
+                    row["Qty"] = txtEditQty.Text;
+                    row["Cost"] = Convert.ToDouble(row["PPU"]) * Convert.ToDouble(row["Qty"]);
+
+
+                    lblEditOutstanding.Text = (System.Convert.ToDouble(lblEditOutstanding.Text) + System.Convert.ToDouble(row["Cost"])).ToString();
+
+                    dt.Rows.Add(row);
+
+                    dgvEdit.DataSource = dt;
+
+                    double orderTotal = 0.00;
+
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        orderTotal += System.Convert.ToDouble(dr["Cost"]);
+                    }
+
+                    lblEditTCost.Text = orderTotal.ToString();
+
+                    AddClearEquip();
+                }
+                catch (FormatException ex)
+                {
+                    MessageBox.Show("Please input correct Equipment details?", "Input", MessageBoxButtons.OK);
+                }
+            }
+        }
+
+        private void btnEditEditTransD_Click(object sender, EventArgs e)
+        {
+            double tempBalOwed = Convert.ToDouble(lblEditOutstanding.Text), tempTcost = Convert.ToDouble(lblEditTCost.Text);
+
+            if (dgvEdit.CurrentCell == dgvEdit.Rows[0].Cells[0])
+            {
+                MessageBox.Show("Please select an item to edit?", "Edit Item", MessageBoxButtons.OK);
+            }
+            else
+            {
+                foreach (DataRow row in dt.Rows)
+                {
+                    if (dt.Rows.IndexOf(row) == dgvEdit.CurrentCell.RowIndex)
+                    {
+                        row["StockID"] = txtEditEquipID.Text;
+                        row["StockDesc"] = cmbEditEquipName.Text.Trim();
+                        row["PPU"] = txtEditPPItem.Text;
+                        row["Qty"] = txtEditQty.Text;
+                        row["Cost"] = Convert.ToDouble(row["PPU"]) * Convert.ToDouble(row["Qty"]);
+                    }
+                }
+                dgvEdit.DataSource = dt;
+
+
+                double orderTotal = 0.00;
+
+                foreach (DataRow dr in dt.Rows)
+                {
+                    orderTotal += System.Convert.ToDouble(dr["Cost"]);
+                }
+
+                lblEditTCost.Text = orderTotal.ToString();
+                lblEditOutstanding.Text = ((orderTotal - tempTcost) + tempBalOwed).ToString();
+
+            }
+        }
+
+        private void btnEditDeleteTransD_Click(object sender, EventArgs e)
+        {
+            double tempBalOwed = Convert.ToDouble(lblEditOutstanding.Text), tempTcost = Convert.ToDouble(lblEditTCost.Text);
+
+            if (dgvEdit.CurrentCell == dgvEdit.Rows[0].Cells[0])
+            {
+                MessageBox.Show("Please select an item to edit?", "Edit Item", MessageBoxButtons.OK);
+            }
+            else
+            {
+                foreach (DataRow row in dt.Rows)
+                {
+                    if (dt.Rows.IndexOf(row) == dgvEdit.CurrentCell.RowIndex)
+                    {
+                        row["StockID"] = "Deleted";
+                        row["StockDesc"] = "Deleted";
+                        row["PPU"] = 0;
+                        row["Qty"] = 0;
+                        row["Cost"] = Convert.ToDouble(row["PPU"]) * Convert.ToDouble(row["Qty"]);
+                    }
+                }
+                dgvEdit.DataSource = dt;
+
+
+                double orderTotal = 0.00;
+
+                foreach (DataRow dr in dt.Rows)
+                {
+                    orderTotal += System.Convert.ToDouble(dr["Cost"]);
+                }
+
+                lblEditTCost.Text = orderTotal.ToString();
+                lblEditOutstanding.Text = ((orderTotal - tempTcost) + tempBalOwed).ToString();
+
+            }
+        }
+
+        private void btnEditTransDClear_Click_1(object sender, EventArgs e)
+        {
+            {
+                txtEditEquipID.Text = "EQ-";
+                cmbEditEquipName.Text = "";
+                txtEditPPItem.Text = "";
+                txtEditQty.Text = "  -Please Enter-";
+            }
+        }
+
+        private void pbEditSearchEquip_Click_1(object sender, EventArgs e)
+        {
+            {
+                using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
+                {
+                    SqlCommand sqlCmd = new SqlCommand("SELECT * FROM Stock", sqlConnectionEqT);
+                    sqlConnectionEqT.Open();
+                    SqlDataReader sqlReader = sqlCmd.ExecuteReader();
+
+                    while (sqlReader.Read())
+                    {
+                        if (sqlReader["StockID"].ToString().Equals(txtEditEquipID.Text))
+                        {
+                            cmbEditEquipName.Text = sqlReader["StockDescription"].ToString();
+                            txtEditPPItem.Text = sqlReader["PurPrice"].ToString();
+                            txtEditQty.Text = "  -Please Enter-";
+                        }
+                        else if (sqlReader["StockDescription"].ToString().Equals(cmbEditEquipName.Text.Trim()))
+                        {
+                            txtEditEquipID.Text = sqlReader["StockID"].ToString();
+                            txtEditPPItem.Text = sqlReader["PurPrice"].ToString();
+                            txtEditQty.Text = "  -Please Enter-";
+                        }
+                    }
+
+                    sqlReader.Close();
+                }
+            }
+        }
+
         private void tabAdd_Click(object sender, EventArgs e)
         {
 
@@ -936,87 +1152,6 @@ namespace KaizenMain
                 }
 
                 seperateNumber(findTransID);
-            }
-        }
-
-        void addTransDetail()
-        {
-            bool ok = true;
-            using (SqlConnection connection = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
-            {
-                using (SqlDataAdapter dataAdapter = new SqlDataAdapter())
-                {
-                    dataAdapter.SelectCommand = new SqlCommand("SELECT * FROM TransDetails", connection);
-                    dataAdapter.InsertCommand = new SqlCommand("insert into TransDetails", connection);
-
-                    getTransDetsnum();
-
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        MyTransDetails myTransDetails = new MyTransDetails();
-
-                        TansDIDString = "TD-" + (IDNumber + 1).ToString();
-
-                        try
-                        {
-                            myTransDetails.TransDetsID = TansDIDString;
-
-                        }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                        }
-
-                        try
-                        {
-                            myTransDetails.TransID = lblAddTransID.Text.Trim();
-
-                        }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                        }
-
-                        try
-                        {
-                            myTransDetails.StockID = dr["StockID"].ToString();
-
-                        }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                        }
-
-                        try
-                        {
-                            myTransDetails.Qty = Convert.ToInt32(dr["Qty"]);
-
-                        }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                        }
-
-                        if (ok)
-                        {
-                            drTransDets = dsKaizen.Tables["TransDetails"].NewRow();
-
-                            drTransDets["TransDetsID"] = myTransDetails.TransDetsID;
-                            drTransDets["TransID"] = myTransDetails.TransID;
-                            drTransDets["StockID"] = myTransDetails.StockID;
-                            drTransDets["Qty"] = myTransDetails.Qty;
-                            drTransDets["StartDate"] = DBNull.Value;
-                            drTransDets["EndDate"] = DBNull.Value;
-
-                            dsKaizen.Tables["TransDetails"].Rows.Add(drTransDets);
-
-                            new SqlCommandBuilder(dataAdapter);
-                            dataAdapter.Update(dsKaizen, "TransDetails");
-
-                        }
-                    }
-                }
-
             }
         }
 

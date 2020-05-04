@@ -42,8 +42,8 @@ namespace KaizenMain
         private void Staff_load(object sender, EventArgs e)
         {
             //connStr = @"Data Source = .\ADAM-PC; Initial Catalog = Kaizen;Integrated Security = true ";
-            connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-            //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+            //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
+            connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
             sqlStaffDetails = @"Select StaffID,StaffSName, StaffFName,StaffSName+','+StaffFName as name,Job, JobDesc, StaffTel, StaffEmail from staff where StaffSName LIKE @Name Order by StaffID";
             conn = new SqlConnection(connStr);
