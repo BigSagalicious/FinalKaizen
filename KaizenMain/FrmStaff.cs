@@ -61,6 +61,8 @@ namespace KaizenMain
             dgvStaff.DataSource = dsKaizen.Tables["Staff"];
             dgvStaff.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
+            
+
             tabStaff.SelectedIndex = 1;
             tabStaff.SelectedIndex = 0;
         }
@@ -204,7 +206,7 @@ namespace KaizenMain
                                 txtEdEmail.Text = drStaff["StaffEmail"].ToString();
                                 txtEdTel.Text = drStaff["StaffTel"].ToString();
 
-                                //disableEditTxtboxes();
+                                disableEditTxtboxes();
 
                                 break;
 
@@ -504,16 +506,18 @@ namespace KaizenMain
 
                         drStaff.EndEdit();
                         daStaff.Update(dsKaizen, "Staff");
-                        
+
+                        btnEdEdit.Text = "EDIT ";
+                        disableEditTxtboxes();
                         MessageBox.Show("Employee Details Updated", "Staff");
 
                         
 
-                        btnEdEdit.Text = "EDIT EMPLOYEE";
+                        
                         tabStaff.SelectedIndex = 0;
 
 
-
+                        
                     }
 
                 }
@@ -584,6 +588,27 @@ namespace KaizenMain
             dsKaizen.Tables["Staff"].Clear();
             fillListboxStaff(str);
             fillListboxID(str);
+        }
+
+        private void btnDisSearch_Click(object sender, EventArgs e)
+        {
+            tabStaff.SelectedIndex = 1;
+        }
+
+        private void btnDisAdd_Click(object sender, EventArgs e)
+        {
+            tabStaff.SelectedIndex = 2;
+        }
+
+        private void btnDisEdit_Click(object sender, EventArgs e)
+        {
+            tabStaff.SelectedIndex = 3;
+            disableEditTxtboxes();
+        }
+
+        private void btnDisDel_Click(object sender, EventArgs e)
+        {
+            tabStaff.SelectedIndex = 4;
         }
 
         private void enableEditTxtboxes()
