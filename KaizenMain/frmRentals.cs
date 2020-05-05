@@ -202,8 +202,11 @@ namespace KaizenMain
         {
             dt.Columns.Add("StockID");
             dt.Columns.Add("StockDesc");
-            dt.Columns.Add("PPU");
+            dt.Columns.Add("RPU");
             dt.Columns.Add("Qty");
+            dt.Columns.Add("Months");
+            dt.Columns.Add("StartDate");
+            dt.Columns.Add("EndDate");
             dt.Columns.Add("Cost");
 
             //connStr = @"Data Source = C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
@@ -235,6 +238,7 @@ namespace KaizenMain
             populateEquipNameCmb(cmbEditEquipName);
 
         }
+
 
         void populateEquipNameCmb(ComboBox comboBox)
         {
@@ -275,6 +279,247 @@ namespace KaizenMain
             }
         }
 
+        private void btnClearAdd_Click(object sender, EventArgs e)
+        {
+            clearAddForm();
+        }
+
+        private void btnAddEquipTrans_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                DataRow row = dt.NewRow();
+
+                row["StockID"] = txtEquipIDAdd.Text;
+                row["StockDesc"] = cmbAddEquipName.Text.Trim();
+                row["PPU"] = txtAddPPU.Text;
+                row["Qty"] = txtAddQty.Text;
+                row["Cost"] = Convert.ToDouble(row["PPU"]) * Convert.ToDouble(row["Qty"]);
+
+
+                dt.Rows.Add(row);
+
+                dgvAddOrder.DataSource = dt;
+
+                double orderTotal = 0.00;
+
+                foreach (DataRow dr in dt.Rows)
+                {
+                    orderTotal += System.Convert.ToDouble(dr["Cost"]);
+                }
+
+                lblAddTCost.Text = orderTotal.ToString();
+
+                AddClearEquip();
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("Please input correct Equipment details?", "Input", MessageBoxButtons.OK);
+            }
+        }
+
+        private void roundButton9_Click(object sender, EventArgs e)
+        {
+            AddClearEquip();
+        }
+
+        private void btnCompleteAdd_Click(object sender, EventArgs e)
+        {
+            MyTrans myTrans = new MyTrans();
+            bool ok = true;
+            errP.Clear();
+
+            try
+            {
+                myTrans.TransID = lblAddTransID.Text.Trim();
+
+            }
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(lblAddTransID, MyEx.toString());
+            }
+
+            try
+            {
+                myTrans.CustID = txtAddCustID.Text.Trim();
+            }
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(txtAddCustID, MyEx.toString());
+            }
+
+
+            try
+            {
+                myTrans.TransOn = dTPAdd.Value;
+            }
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(dTPAdd, MyEx.toString());
+            }
+
+            try
+            {
+                myTrans.TransTotal = Convert.ToDouble(lblAddTCost.Text.Trim());
+            }
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(lblAddTCost, MyEx.toString());
+            }
+            catch (FormatException frmex)
+            {
+                ok = false;
+                MessageBox.Show("Please Input Order Details Before Adding", "Order");
+            }
+
+            //   try
+            {
+                if (ok)
+                {
+                    drTrans = dsKaizen.Tables["Trans"].NewRow();
+                    drTrans["TransID"] = myTrans.TransID;
+                    drTrans["TransType"] = "Purchase";
+                    drTrans["CustID"] = myTrans.CustID;
+                    drTrans["TransDate"] = myTrans.TransOn;
+                    drTrans["TransTotal"] = myTrans.TransTotal;
+                    drTrans["BalanceOwed"] = myTrans.TransTotal;
+                    drTrans["Paid"] = 'N';
+
+                    dsKaizen.Tables["Trans"].Rows.Add(drTrans);
+                    daTrans.Update(dsKaizen, "Trans");
+
+                    //                  getTransDetailsID(dsKaizen.Tables["TransDetails"].Rows.Count);
+                    getTransDetsnum();
+                    int utdDetsNumber = seperateNumber(findTransID);
+
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        MyTransDetails myTransDetails = new MyTransDetails();
+
+                        utdDetsNumber += 1;
+
+                        TansDIDString = "TD-" + utdDetsNumber;
+
+                        try
+                        {
+                            myTransDetails.TransDetsID = TansDIDString;
+
+                        }
+                        catch (MyException MyEx)
+                        {
+                            ok = false;
+                        }
+
+                        try
+                        {
+                            myTransDetails.TransID = lblAddTransID.Text.Trim();
+
+                        }
+                        catch (MyException MyEx)
+                        {
+                            ok = false;
+                        }
+
+                        try
+                        {
+                            myTransDetails.StockID = dr["StockID"].ToString();
+
+                        }
+                        catch (MyException MyEx)
+                        {
+                            ok = false;
+                        }
+
+                        try
+                        {
+                            myTransDetails.Qty = Convert.ToInt32(dr["Qty"]);
+
+                        }
+                        catch (MyException MyEx)
+                        {
+                            ok = false;
+                        }
+
+                        try
+                        {
+                            myTransDetails.EndDate = dtpAddEnd.Value;
+                        }
+                        catch (MyException MyEx)
+                        {
+                            ok = false;
+                            errP.SetError(dtpAddEnd, MyEx.toString());
+                        }
+
+                        try
+                        {
+                            myTransDetails.StartDate = dtpAddStart.Value;
+                        }
+                        catch (MyException MyEx)
+                        {
+                            ok = false;
+                            errP.SetError(dtpAddStart, MyEx.toString());
+                        }
+
+                        if (ok)
+                        {
+                            drTransDets = dsKaizen.Tables["TransDetails"].NewRow();
+
+                            drTransDets["TransDetsID"] = myTransDetails.TransDetsID;
+                            drTransDets["TransID"] = myTransDetails.TransID;
+                            drTransDets["StockID"] = myTransDetails.StockID;
+                            drTransDets["Qty"] = myTransDetails.Qty;
+                            drTransDets["StartDate"] = myTransDetails.StartDate;
+                            drTransDets["EndDate"] = myTransDetails.EndDate;
+
+                            dsKaizen.Tables["TransDetails"].Rows.Add(drTransDets);
+
+                            new SqlCommandBuilder(daTransD);
+                            daTransD.Update(dsKaizen, "TransDetails");
+
+                        }
+                    }
+
+
+                    MessageBox.Show("Purchase Order Added");
+
+                    if (MessageBox.Show("Do you wish to Make another Order?", "Add Stock", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                    {
+                        clearAddForm();
+
+                        getTransID(dsKaizen.Tables["Trans"].Rows.Count);
+                    }
+                    else
+                        tabRentals.SelectedIndex = 0;
+                
+
+                }
+
+            }
+            // catch (Exception ex)
+            {
+                // MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Error !", MessageBoxButtons.AbortRetryIgnore,
+                //   MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnClearSearch_Click(object sender, EventArgs e)
+        {
+            txtSearchOrderID.Text = "TR-";
+            dtpSearchDate.Value = DateTime.Today;
+            txtSearchCustID.Clear();
+            txtSearchCustName.Clear();
+            txtSearchCustTel.Clear();
+            dt.Clear();
+            dgvSearch.DataSource = dt;
+            lblSearchTCost.Text = "£";
+            lblSearchTCost.Text = "£";
+        }
+
         void populateOrderSum(TextBox transIDTB, DataGridView dgvDetails)
         {
             using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
@@ -292,6 +537,8 @@ namespace KaizenMain
                         DataRow row = dt.NewRow();
                         row["StockID"] = sqlReader1["StockID"];
                         row["Qty"] = sqlReader1["Qty"];
+                        row["StartDate"] = sqlReader1["StartDate"];
+                        row["EndDate"] = sqlReader1["EndDate"];
                         dt.Rows.Add(row);
                     }
                 }
@@ -307,7 +554,7 @@ namespace KaizenMain
                         if (row["StockID"].Equals(sqlReader2["StockID"].ToString()))
                         {
                             row["StockDesc"] = sqlReader2["StockDescription"];
-                            row["PPU"] = sqlReader2["PurPrice"];
+                            row["RPU"] = sqlReader2["RentPrice"];
                         }
                     }
 
@@ -316,7 +563,9 @@ namespace KaizenMain
 
                 foreach (DataRow row in dt.Rows)
                 {
-                    row["Cost"] = Convert.ToDouble(row["PPU"]) * Convert.ToDouble(row["Qty"]);
+
+                    row["Months"] = ((DateTime.Parse(row["EndDate"].ToString()).Year - DateTime.Parse(row["StartDate"].ToString()).Year) * 12) + DateTime.Parse(row["EndDate"].ToString()).Month - DateTime.Parse(row["StartDate"].ToString()).Month;
+                    row["Cost"] = Convert.ToDouble(row["RPU"]) * Convert.ToDouble(row["Qty"]) * Convert.ToDouble(row["Months"]);
                 }
 
 
@@ -355,19 +604,36 @@ namespace KaizenMain
 
         }
 
-        private void textBox9_TextChanged(object sender, EventArgs e)
+        private void clearAddForm()
         {
+            lblAddTransID.Text = "";
+            dTPAdd.Value = DateTime.Today;
+            txtAddCustID.Text = "";
+            txtAddCustName.Text = "";
+            txtAddCustTel.Text = "";
+            AddClearEquip();
+            lblAddTCost.Text = "-";
+            dtpAddEnd.Value = DateTime.Today;
+            dtpAddStart.Value = DateTime.Today;
+            dt.Clear();
+            int noRows = dsKaizen.Tables["Trans"].Rows.Count;
 
+            if (noRows == 0)
+                lblAddTransID.Text = "TR-9000";
+            else
+            {
+                getTransID(noRows);
+            }
+
+            errP.Clear();
         }
 
-        private void textBox11_TextChanged(object sender, EventArgs e)
+        void AddClearEquip()
         {
-
-        }
-
-        private void tabDelete_Click(object sender, EventArgs e)
-        {
-
+            txtEquipIDAdd.Text = "EQ-";
+            cmbAddEquipName.Text = "";
+            txtAddPPU.Text = "";
+            txtAddQty.Text = "  -Enter-";
         }
 
         void getTransDetsnum()
@@ -389,34 +655,5 @@ namespace KaizenMain
             }
         }
 
-        private void label38_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox23_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tabAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

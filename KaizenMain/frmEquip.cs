@@ -21,7 +21,7 @@ namespace KaizenMain
         int selectedTab = 0;
         bool equipSelected = false;
         int equipIDSelected = 0, ogTransDrows = 0;
-        int IDNumber = 0;
+        int IDNumber = 0 ,newTransDeatilsadded = -1;
 
         DataTable dt = new DataTable(), EditTransDTable = new DataTable();
 
@@ -106,6 +106,7 @@ namespace KaizenMain
                         }
                     case 3:
                         {
+                            ogTransDrows = 0;
                             dt.Clear();
                             if (equipIDSelected == 0)
                             {
@@ -125,6 +126,7 @@ namespace KaizenMain
 
                                 populateCustName(drTrans["CustID"].ToString(), txtEditCustName, txtEditCustTel);
 
+                                
                                 populateOrderSum(txtEditOrderID, dgvEdit);
 
                                 lblEditTCost.Text = drTrans["TransTotal"].ToString();
@@ -663,7 +665,7 @@ namespace KaizenMain
             txtEquipIDAdd.Text = "EQ-";
             cmbAddEquipName.Text = "";
             txtAddPPU.Text = "";
-            txtAddQty.Text = "  -Please Enter-";
+            txtAddQty.Text = "  -Enter-";
         }
 
         private void btnEditTransD_Click(object sender, EventArgs e)
@@ -712,18 +714,32 @@ namespace KaizenMain
         {
             {
                 DataRow row = dt.NewRow();
+                DataRow rw = EditTransDTable.NewRow();
                 try
                 {
+                    rw["TransDetsID"] = "Temp";
+                    rw["TransID"] = "Temp";
+                    
+
+
                     row["StockID"] = txtEditEquipID.Text;
+                    rw["StockID"] = txtEditEquipID.Text;
+
                     row["StockDesc"] = cmbEditEquipName.Text.Trim();
-                    row["PPU"] = txtEditPPItem.Text;
+                    
+
+                    row["PPU"] = txtEditPPItem.Text;                   
+
                     row["Qty"] = txtEditQty.Text;
+                    rw["Qty"] = txtEditQty.Text;
+
                     row["Cost"] = Convert.ToDouble(row["PPU"]) * Convert.ToDouble(row["Qty"]);
+                    
 
-
-                lblEditOutstanding.Text = (System.Convert.ToDouble(lblEditOutstanding.Text) + System.Convert.ToDouble(row["Cost"])).ToString();
+                    lblEditOutstanding.Text = (System.Convert.ToDouble(lblEditOutstanding.Text) + System.Convert.ToDouble(row["Cost"])).ToString();
 
                 dt.Rows.Add(row);
+                    EditTransDTable.Rows.Add(rw);
 
                 dgvEdit.DataSource = dt;
 
@@ -737,6 +753,9 @@ namespace KaizenMain
                 lblEditTCost.Text = orderTotal.ToString();
 
                 AddClearEquip();
+
+
+                    newTransDeatilsadded += 1;
                 }
                 catch (FormatException ex)
                 {
@@ -793,6 +812,7 @@ namespace KaizenMain
         private void btnEditTrans_Click(object sender, EventArgs e)
         {
             daTransD.Update(dsKaizen, "TransDetails");
+
             if (btnEditTrans.Text == "EDIT ORDER")
             {
                 enableEdittxtB();
@@ -805,8 +825,8 @@ namespace KaizenMain
 
                 gatherTransDForEdit(txtEditOrderID.Text);
                 bool ok = true;
-      
-          for (int i = 0; i < ogTransDrows; i++)
+
+                for (int i = 0; i < ogTransDrows; i++)
                 {
 
                     if (string.Equals(dt.Rows[i][1].ToString(), "Deleted"))
@@ -822,7 +842,7 @@ namespace KaizenMain
                         drTransDets = dsKaizen.Tables["TransDetails"].Rows.Find(EditTransDTable.Rows[i][0].ToString());
 
                         MyTransDetails myTransDetails = new MyTransDetails();
-                        
+
                         errP.Clear();
 
                         try
@@ -867,6 +887,7 @@ namespace KaizenMain
                         }
 
                     }
+                }
                     if (ogTransDrows < dt.Rows.Count)
                     {
                         getTransDetsnum();
@@ -899,7 +920,7 @@ namespace KaizenMain
 
                             try
                             {
-                                myTransDetails.TransID = lblAddTransID.Text.Trim();
+                                myTransDetails.TransID = txtEditOrderID.Text.Trim();
 
                             }
                             catch (MyException MyEx)
@@ -943,7 +964,7 @@ namespace KaizenMain
                                     new SqlCommandBuilder(daTransD);
                                     daTransD.Update(dsKaizen, "TransDetails");
                                 }
-                            }
+                            
                         }
                     }
                 }
@@ -1166,6 +1187,11 @@ namespace KaizenMain
         private void roundButton3_Click(object sender, EventArgs e)
         {
             Appointment frm = new Appointment();
+        }
+
+        private void dtpAddDate_ValueChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void btnAddBookDel_Click(object sender, EventArgs e)

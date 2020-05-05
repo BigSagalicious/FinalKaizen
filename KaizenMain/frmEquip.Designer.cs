@@ -505,6 +505,7 @@
             this.dtpAddDate.Name = "dtpAddDate";
             this.dtpAddDate.Size = new System.Drawing.Size(200, 29);
             this.dtpAddDate.TabIndex = 231;
+            this.dtpAddDate.ValueChanged += new System.EventHandler(this.dtpAddDate_ValueChanged);
             // 
             // label30
             // 

@@ -211,7 +211,7 @@ namespace KaizenMain
         {
             dt.Columns.Add("StockID");
             dt.Columns.Add("StockDesc");
-            dt.Columns.Add("PPU");
+            dt.Columns.Add("PPS");
             dt.Columns.Add("Qty");
             dt.Columns.Add("Cost");
 
@@ -373,7 +373,7 @@ namespace KaizenMain
                         if (row["StockID"].Equals(sqlReader2["StockID"].ToString()))
                         {
                             row["StockDesc"] = sqlReader2["StockDescription"];
-                            row["PPU"] = sqlReader2["ServPrice"];
+                            row["PPS"] = sqlReader2["ServPrice"];
                         }
                     }
 
@@ -382,7 +382,7 @@ namespace KaizenMain
 
                 foreach (DataRow row in dt.Rows)
                 {
-                    row["Cost"] = Convert.ToDouble(row["PPU"]) * Convert.ToDouble(row["Qty"]);
+                    row["Cost"] = Convert.ToDouble(row["PPS"]) * Convert.ToDouble(row["Qty"]);
                     ogTransDrows += 1;
 
                 }
@@ -437,9 +437,9 @@ namespace KaizenMain
 
                 row["StockID"] = txtEquipIDAdd.Text;
                 row["StockDesc"] = cmbAddEquipName.Text.Trim();
-                row["PPU"] = txtAddPPU.Text;
+                row["PPS"] = txtAddPPU.Text;
                 row["Qty"] = txtAddQty.Text;
-                row["Cost"] = Convert.ToDouble(row["PPU"]) * Convert.ToDouble(row["Qty"]);
+                row["Cost"] = Convert.ToDouble(row["PPS"]) * Convert.ToDouble(row["Qty"]);
 
 
                 dt.Rows.Add(row);
@@ -772,6 +772,7 @@ namespace KaizenMain
                         }
 
                     }
+                }
                     if (ogTransDrows < dt.Rows.Count)
                     {
                         getTransDetsnum();
@@ -850,7 +851,7 @@ namespace KaizenMain
                                 }
                             }
                         }
-                    }
+                    
                 }
                 MyTrans myTrans = new MyTrans();
 
@@ -988,9 +989,9 @@ namespace KaizenMain
                 {
                     row["StockID"] = txtEditEquipID.Text;
                     row["StockDesc"] = cmbEditEquipName.Text.Trim();
-                    row["PPU"] = txtEditPPItem.Text;
+                    row["PPS"] = txtEditPPItem.Text;
                     row["Qty"] = txtEditQty.Text;
-                    row["Cost"] = Convert.ToDouble(row["PPU"]) * Convert.ToDouble(row["Qty"]);
+                    row["Cost"] = Convert.ToDouble(row["PPS"]) * Convert.ToDouble(row["Qty"]);
 
 
                     lblEditOutstanding.Text = (System.Convert.ToDouble(lblEditOutstanding.Text) + System.Convert.ToDouble(row["Cost"])).ToString();
@@ -1033,9 +1034,9 @@ namespace KaizenMain
                     {
                         row["StockID"] = txtEditEquipID.Text;
                         row["StockDesc"] = cmbEditEquipName.Text.Trim();
-                        row["PPU"] = txtEditPPItem.Text;
+                        row["PPS"] = txtEditPPItem.Text;
                         row["Qty"] = txtEditQty.Text;
-                        row["Cost"] = Convert.ToDouble(row["PPU"]) * Convert.ToDouble(row["Qty"]);
+                        row["Cost"] = Convert.ToDouble(row["PPS"]) * Convert.ToDouble(row["Qty"]);
                     }
                 }
                 dgvEdit.DataSource = dt;
@@ -1070,9 +1071,9 @@ namespace KaizenMain
                     {
                         row["StockID"] = "Deleted";
                         row["StockDesc"] = "Deleted";
-                        row["PPU"] = 0;
+                        row["PPS"] = 0;
                         row["Qty"] = 0;
-                        row["Cost"] = Convert.ToDouble(row["PPU"]) * Convert.ToDouble(row["Qty"]);
+                        row["Cost"] = Convert.ToDouble(row["PPS"]) * Convert.ToDouble(row["Qty"]);
                     }
                 }
                 dgvEdit.DataSource = dt;
@@ -1115,13 +1116,13 @@ namespace KaizenMain
                         if (sqlReader["StockID"].ToString().Equals(txtEditEquipID.Text))
                         {
                             cmbEditEquipName.Text = sqlReader["StockDescription"].ToString();
-                            txtEditPPItem.Text = sqlReader["PurPrice"].ToString();
+                            txtEditPPItem.Text = sqlReader["ServPrice"].ToString();
                             txtEditQty.Text = "  -Please Enter-";
                         }
                         else if (sqlReader["StockDescription"].ToString().Equals(cmbEditEquipName.Text.Trim()))
                         {
                             txtEditEquipID.Text = sqlReader["StockID"].ToString();
-                            txtEditPPItem.Text = sqlReader["PurPrice"].ToString();
+                            txtEditPPItem.Text = sqlReader["ServPrice"].ToString();
                             txtEditQty.Text = "  -Please Enter-";
                         }
                     }
