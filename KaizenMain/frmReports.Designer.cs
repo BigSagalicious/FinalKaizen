@@ -38,16 +38,6 @@
             this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.roundButton1 = new KaizenMain.RoundButton();
             this.tabRentals = new System.Windows.Forms.TabPage();
-            this.roundButton7 = new KaizenMain.RoundButton();
-            this.roundButton8 = new KaizenMain.RoundButton();
-            this.roundButton9 = new KaizenMain.RoundButton();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.tabStock = new System.Windows.Forms.TabPage();
             this.roundButton14 = new KaizenMain.RoundButton();
             this.roundButton13 = new KaizenMain.RoundButton();
@@ -74,12 +64,13 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.lblAppReport = new System.Windows.Forms.Label();
+            this.btnCustPayments = new KaizenMain.RoundButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.crystalReportViewer3 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tabControl1.SuspendLayout();
             this.tabSales.SuspendLayout();
             this.tabService.SuspendLayout();
             this.tabRentals.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.tabStock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -227,158 +218,16 @@
             this.tabRentals.BackColor = System.Drawing.Color.White;
             this.tabRentals.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabRentals.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabRentals.Controls.Add(this.roundButton7);
-            this.tabRentals.Controls.Add(this.roundButton8);
-            this.tabRentals.Controls.Add(this.roundButton9);
-            this.tabRentals.Controls.Add(this.pictureBox5);
-            this.tabRentals.Controls.Add(this.pictureBox6);
-            this.tabRentals.Controls.Add(this.textBox1);
+            this.tabRentals.Controls.Add(this.crystalReportViewer3);
             this.tabRentals.Controls.Add(this.label1);
-            this.tabRentals.Controls.Add(this.label2);
-            this.tabRentals.Controls.Add(this.textBox2);
-            this.tabRentals.Controls.Add(this.label12);
+            this.tabRentals.Controls.Add(this.btnCustPayments);
             this.tabRentals.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabRentals.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabRentals.Location = new System.Drawing.Point(4, 29);
             this.tabRentals.Name = "tabRentals";
             this.tabRentals.Size = new System.Drawing.Size(734, 688);
             this.tabRentals.TabIndex = 2;
-            this.tabRentals.Text = "RENTALS";
-            // 
-            // roundButton7
-            // 
-            this.roundButton7.BackColor = System.Drawing.Color.Transparent;
-            this.roundButton7.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton7.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton7.FlatAppearance.BorderSize = 0;
-            this.roundButton7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton7.Location = new System.Drawing.Point(401, 108);
-            this.roundButton7.Name = "roundButton7";
-            this.roundButton7.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton7.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton7.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton7.Size = new System.Drawing.Size(275, 62);
-            this.roundButton7.TabIndex = 204;
-            this.roundButton7.Text = "YEAR TO DATE";
-            this.roundButton7.TextColor = System.Drawing.Color.White;
-            this.roundButton7.UseVisualStyleBackColor = false;
-            // 
-            // roundButton8
-            // 
-            this.roundButton8.BackColor = System.Drawing.Color.Transparent;
-            this.roundButton8.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton8.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton8.FlatAppearance.BorderSize = 0;
-            this.roundButton8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton8.Location = new System.Drawing.Point(60, 108);
-            this.roundButton8.Name = "roundButton8";
-            this.roundButton8.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton8.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton8.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton8.Size = new System.Drawing.Size(275, 62);
-            this.roundButton8.TabIndex = 203;
-            this.roundButton8.Text = "MONTH TO DATE";
-            this.roundButton8.TextColor = System.Drawing.Color.White;
-            this.roundButton8.UseVisualStyleBackColor = false;
-            // 
-            // roundButton9
-            // 
-            this.roundButton9.BackColor = System.Drawing.Color.Transparent;
-            this.roundButton9.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton9.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton9.FlatAppearance.BorderSize = 0;
-            this.roundButton9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton9.Location = new System.Drawing.Point(401, 218);
-            this.roundButton9.Name = "roundButton9";
-            this.roundButton9.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton9.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton9.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton9.Size = new System.Drawing.Size(275, 62);
-            this.roundButton9.TabIndex = 202;
-            this.roundButton9.Text = "FROM SELECTED DATE";
-            this.roundButton9.TextColor = System.Drawing.Color.White;
-            this.roundButton9.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Location = new System.Drawing.Point(293, 267);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox5.TabIndex = 201;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Location = new System.Drawing.Point(293, 202);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox6.TabIndex = 200;
-            this.pictureBox6.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(168, 269);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(111, 29);
-            this.textBox1.TabIndex = 199;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(57, 276);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 24);
-            this.label1.TabIndex = 198;
-            this.label1.Text = "End Date";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(49, 207);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 24);
-            this.label2.TabIndex = 197;
-            this.label2.Text = "Start Date";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(168, 204);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(111, 29);
-            this.textBox2.TabIndex = 196;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(45, 53);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(321, 17);
-            this.label12.TabIndex = 195;
-            this.label12.Text = "Please select the time frame for the report:";
+            this.tabRentals.Text = "PAYMENTS";
             // 
             // tabStock
             // 
@@ -767,6 +616,51 @@
             this.lblAppReport.TabIndex = 188;
             this.lblAppReport.Text = "APPOINTMENT DETAIL REPORT";
             // 
+            // btnCustPayments
+            // 
+            this.btnCustPayments.BackColor = System.Drawing.Color.Transparent;
+            this.btnCustPayments.BorderColor = System.Drawing.Color.Silver;
+            this.btnCustPayments.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnCustPayments.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCustPayments.FlatAppearance.BorderSize = 0;
+            this.btnCustPayments.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCustPayments.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCustPayments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustPayments.Location = new System.Drawing.Point(456, 3);
+            this.btnCustPayments.Name = "btnCustPayments";
+            this.btnCustPayments.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnCustPayments.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnCustPayments.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnCustPayments.Size = new System.Drawing.Size(275, 42);
+            this.btnCustPayments.TabIndex = 187;
+            this.btnCustPayments.Text = "VIEW CUSTOMER PAYMENTS";
+            this.btnCustPayments.TextColor = System.Drawing.Color.White;
+            this.btnCustPayments.UseVisualStyleBackColor = false;
+            this.btnCustPayments.Click += new System.EventHandler(this.btnCustPayments_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(5, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(404, 29);
+            this.label1.TabIndex = 189;
+            this.label1.Text = "CUSTOMER PAYMENT REPORT";
+            // 
+            // crystalReportViewer3
+            // 
+            this.crystalReportViewer3.ActiveViewIndex = -1;
+            this.crystalReportViewer3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer3.Location = new System.Drawing.Point(10, 51);
+            this.crystalReportViewer3.Name = "crystalReportViewer3";
+            this.crystalReportViewer3.Size = new System.Drawing.Size(714, 634);
+            this.crystalReportViewer3.TabIndex = 190;
+            // 
             // frmReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -782,8 +676,6 @@
             this.tabService.PerformLayout();
             this.tabRentals.ResumeLayout(false);
             this.tabRentals.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.tabStock.ResumeLayout(false);
             this.tabStock.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -804,16 +696,6 @@
         private System.Windows.Forms.TabPage tabRentals;
         private System.Windows.Forms.TabPage tabStock;
         private System.Windows.Forms.TabPage tabCompTot;
-        private RoundButton roundButton7;
-        private RoundButton roundButton8;
-        private RoundButton roundButton9;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label12;
         private RoundButton roundButton14;
         private RoundButton roundButton13;
         private RoundButton roundButton10;
@@ -843,5 +725,8 @@
         private RoundButton roundButton1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer2;
         private System.Windows.Forms.Label lblAppReport;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer3;
+        private System.Windows.Forms.Label label1;
+        private RoundButton btnCustPayments;
     }
 }

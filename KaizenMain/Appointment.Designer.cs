@@ -635,6 +635,7 @@
             this.cmbAStaffID.Name = "cmbAStaffID";
             this.cmbAStaffID.Size = new System.Drawing.Size(229, 28);
             this.cmbAStaffID.TabIndex = 224;
+            this.cmbAStaffID.SelectedIndexChanged += new System.EventHandler(this.cmbAStaffID_SelectedIndexChanged);
             // 
             // dtpDateBooked
             // 

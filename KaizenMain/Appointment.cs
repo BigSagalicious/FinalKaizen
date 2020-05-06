@@ -809,6 +809,7 @@ namespace KaizenMain
                             btnEdit.Enabled = true;
                             btDelete.Enabled = true;
                             btnSearch.Enabled = true;
+                           
                         }
                         else
                         {
@@ -819,10 +820,10 @@ namespace KaizenMain
                             btnEdit.Enabled = false;
                             btDelete.Enabled = false;
                             btnSearch.Enabled = false;
-                          
+
                             
-                            
-                            if(dgvApp.CurrentCell.RowIndex.Equals(0))
+
+                            if (dgvApp.CurrentCell.RowIndex.Equals(0))
                             {
                                 cmbAddTime.SelectedIndex = 0;
                                 //cmbAddTime.Enabled = false;
@@ -831,50 +832,50 @@ namespace KaizenMain
                             {
                                
                                 cmbAddTime.SelectedIndex=1;
-                                //cmbAddTime.Enabled = false;
+                                
                             }
 
                             else if (dgvApp.CurrentCell.RowIndex.Equals(2))
                             {
 
                                 cmbAddTime.SelectedIndex = 2;
-                                //cmbAddTime.Enabled = false;
+                                
                             }
                             else if (dgvApp.CurrentCell.RowIndex.Equals(3))
                             {
 
                                 cmbAddTime.SelectedIndex = 3;
-                                //cmbAddTime.Enabled = false;
+                                
                             }
                             else if (dgvApp.CurrentCell.RowIndex.Equals(4))
                             {
 
                                 cmbAddTime.SelectedIndex = 4;
-                                //cmbAddTime.Enabled = false;
+                                
                             }
                             else if (dgvApp.CurrentCell.RowIndex.Equals(5))
                             {
 
                                 cmbAddTime.SelectedIndex = 5;
-                               // cmbAddTime.Enabled = false;
+                               
                             }
                             else if (dgvApp.CurrentCell.RowIndex.Equals(6))
                             {
 
                                 cmbAddTime.SelectedIndex = 6;
-                                //cmbAddTime.Enabled = false;
+                                
                             }
                             else if (dgvApp.CurrentCell.RowIndex.Equals(7))
                             {
 
                                 cmbAddTime.SelectedIndex = 7;
-                                //cmbAddTime.Enabled = false;
+                                
                             }
                             else if (dgvApp.CurrentCell.RowIndex.Equals(8))
                             {
 
                                 cmbAddTime.SelectedIndex = 8;
-                                //cmbAddTime.Enabled = false;
+                                
                             }
 
                             if(dgvApp.CurrentCell.ColumnIndex.Equals(0))
@@ -889,7 +890,7 @@ namespace KaizenMain
 
                                 DateTime dt13 = this.dateTimePicker1.Value.Date;
                                 dtpAppDate.Value = dt13.AddDays(1);
-                                //dtpAppDate.Enabled = false;
+                               
 
                             }
                             else if (dgvApp.CurrentCell.ColumnIndex.Equals(2))
@@ -897,7 +898,7 @@ namespace KaizenMain
 
                                 DateTime dt13 = this.dateTimePicker1.Value.Date;
                                 dtpAppDate.Value = dt13.AddDays(2);
-                                //dtpAppDate.Enabled = false;
+                                
 
                             }
                             else if (dgvApp.CurrentCell.ColumnIndex.Equals(3))
@@ -905,23 +906,21 @@ namespace KaizenMain
 
                                 DateTime dt13 = this.dateTimePicker1.Value.Date;
                                 dtpAppDate.Value = dt13.AddDays(3);
-                                //dtpAppDate.Enabled = false;
-
+                                
                             }
                             else if (dgvApp.CurrentCell.ColumnIndex.Equals(4))
                             {
 
                                 DateTime dt13 = this.dateTimePicker1.Value.Date;
                                 dtpAppDate.Value = dt13.AddDays(4);
-                                //dtpAppDate.Enabled = false;
-
+                                
                             }
                             else if (dgvApp.CurrentCell.ColumnIndex.Equals(5))
                             {
 
                                 DateTime dt13 = this.dateTimePicker1.Value.Date;
                                 dtpAppDate.Value = dt13.AddDays(5);
-                                //dtpAppDate.Enabled = false;
+                                
 
                             }
                             else if (dgvApp.CurrentCell.ColumnIndex.Equals(6))
@@ -929,11 +928,12 @@ namespace KaizenMain
 
                                 DateTime dt13 = this.dateTimePicker1.Value.Date;
                                 dtpAppDate.Value = dt13.AddDays(6);
-                                //dtpAppDate.Enabled = false;
+                                
 
                             }
-
+                            
                             tabApp.SelectedIndex = 2;
+                            
                         }
                            
                    
@@ -1031,7 +1031,7 @@ namespace KaizenMain
             dtpDateBooked.Value=DateTime.Today;
             cmbAddTime.SelectedIndex=0;
             cmbATransID.SelectedIndex=0;
-            cmbATransID.SelectedIndex = 0;
+            cmbAStaffID.SelectedIndex = 0;
             cmbDuration.SelectedIndex=0;
         
 
@@ -1049,8 +1049,7 @@ namespace KaizenMain
 
         private void cmbStaff_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            //btnRefresh_Click(sender, e);
+            
         }
 
         private void roundButton1_Click_1(object sender, EventArgs e)
@@ -1070,35 +1069,7 @@ namespace KaizenMain
             tabApp.SelectedIndex = 1;
         }
 
-        private void iconSearchAppID_Click(object sender, EventArgs e)
-        {
-            
-            drAppointment = dsKaizen.Tables["Appointment"].Rows.Find(txtSearchID.Text);
-            try
-            {
-                foreach (DataRow dr in dsKaizen.Tables["Appointment"].Rows)
-                {
-                    if ((dr["AppID"].Equals(txtDLSearch.Text)))
-                    {
-                        txtSeDBooked.Text = dr["DateBooked"].ToString();
-                        txtSeAppDate.Text = dr["AppDate"].ToString();
-                        txtSeAppTime.Text = dr["AppTime"].ToString();
-                        txtSeDuration.Text = dr["Duration"].ToString();
-                        txtSeStaffID.Text = dr["StaffID"].ToString();
-                        txtSeTransID.Text = dr["TransID"].ToString();
-                        txtSDesc.Text = dr["AppDesc"].ToString();
-
-                    }
-
-                    break;
-                }
-            }
-            catch (MyException ex)
-            {
-                MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Not Found!");
-            }
-        }
-
+        
         private void btnEditApp_Click(object sender, EventArgs e)
         {
             if (btnEditApp.Text == "EDIT")
@@ -1333,8 +1304,12 @@ namespace KaizenMain
 
         private void cmbStaff_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            DisplayApps();
-            btnRefresh_Click(sender, e);
+
+        }
+
+        private void cmbAStaffID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
@@ -1483,7 +1458,7 @@ namespace KaizenMain
                     if ((dr["AppDate"]).Equals(thisWeek[i]) && dr["StaffID"].Equals(cmbStaff.SelectedValue))
                     {
 
-
+                       
                         for (int j = 0; j < 9; j++)
                         {
 
@@ -1501,7 +1476,7 @@ namespace KaizenMain
                                 for (int k = 1; k <= Convert.ToInt32(dr["Duration"])-1; k++)
                                 {
 
-                                    dgvApp.Rows[j + k].Cells[i].Style.BackColor = Color.Red;
+                                    dgvApp.Rows[j + k].Cells[i].Style.BackColor = Color.Gray;
 
                                     if (k.Equals(1))
                                     {

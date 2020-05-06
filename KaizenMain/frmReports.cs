@@ -88,5 +88,13 @@ namespace KaizenMain
             crystalReportViewer2.ReportSource = cryRpt;
             crystalReportViewer2.Refresh();
         }
+
+        private void btnCustPayments_Click(object sender, EventArgs e)
+        {
+            var cryRpt = new ReportDocument();
+            cryRpt.Load(@"C:\Users\gareth\Source\Repos\BigSagalicious\FinalKaizen\KaizenMain\CustomerPayments.rpt");
+            crystalReportViewer3.ReportSource = cryRpt;
+            crystalReportViewer3.Refresh();
+        }
     }
 }
