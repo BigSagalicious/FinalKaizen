@@ -50,6 +50,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.btnDelDel = new KaizenMain.RoundButton();
             this.tabEdit = new System.Windows.Forms.TabPage();
             this.txtEDesc = new System.Windows.Forms.TextBox();
             this.lblEDesc = new System.Windows.Forms.Label();
@@ -66,6 +67,7 @@
             this.lblEDAppDate = new System.Windows.Forms.Label();
             this.lblEdDateB = new System.Windows.Forms.Label();
             this.lblEdAppID = new System.Windows.Forms.Label();
+            this.btnEditApp = new KaizenMain.RoundButton();
             this.tabAdd = new System.Windows.Forms.TabPage();
             this.txtADesc = new System.Windows.Forms.TextBox();
             this.lblADesc = new System.Windows.Forms.Label();
@@ -82,6 +84,7 @@
             this.lblAppDate = new System.Windows.Forms.Label();
             this.lblDateB = new System.Windows.Forms.Label();
             this.lblAppID = new System.Windows.Forms.Label();
+            this.btnAddApp = new KaizenMain.RoundButton();
             this.tabSearch = new System.Windows.Forms.TabPage();
             this.txtSDesc = new System.Windows.Forms.TextBox();
             this.lblSDesc = new System.Windows.Forms.Label();
@@ -100,6 +103,21 @@
             this.lblSeDateB = new System.Windows.Forms.Label();
             this.lblSeAppID = new System.Windows.Forms.Label();
             this.tabDisplay = new System.Windows.Forms.TabPage();
+            this.pnlAppDetails = new System.Windows.Forms.Panel();
+            this.txtpnAppTime = new System.Windows.Forms.TextBox();
+            this.lblpnAppTime = new System.Windows.Forms.Label();
+            this.txtpnStaff = new System.Windows.Forms.TextBox();
+            this.lblpnStaff = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.btnClosePnl = new KaizenMain.RoundButton();
+            this.txtpnAppDur = new System.Windows.Forms.TextBox();
+            this.txtpnAppDate = new System.Windows.Forms.TextBox();
+            this.lblpnHeader = new System.Windows.Forms.Label();
+            this.lblpnDetails = new System.Windows.Forms.Label();
+            this.txtAppDet = new System.Windows.Forms.TextBox();
+            this.lblpnDur = new System.Windows.Forms.Label();
+            this.lblpnDate = new System.Windows.Forms.Label();
+            this.btnRefresh = new KaizenMain.RoundButton();
             this.txtDisSur = new System.Windows.Forms.TextBox();
             this.txtDisFor = new System.Windows.Forms.TextBox();
             this.txtYear = new System.Windows.Forms.TextBox();
@@ -114,6 +132,9 @@
             this.DayLabel2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btDelete = new KaizenMain.RoundButton();
+            this.btnSearch = new KaizenMain.RoundButton();
+            this.btnEdit = new KaizenMain.RoundButton();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -133,33 +154,14 @@
             this.Sat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sun = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabApp = new System.Windows.Forms.TabControl();
-            this.pnlAppDetails = new System.Windows.Forms.Panel();
-            this.lblpnDate = new System.Windows.Forms.Label();
-            this.lblpnDur = new System.Windows.Forms.Label();
-            this.txtAppDet = new System.Windows.Forms.TextBox();
-            this.lblpnDetails = new System.Windows.Forms.Label();
-            this.lblpnHeader = new System.Windows.Forms.Label();
-            this.txtpnAppDate = new System.Windows.Forms.TextBox();
-            this.txtpnAppDur = new System.Windows.Forms.TextBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.lblpnStaff = new System.Windows.Forms.Label();
-            this.txtpnStaff = new System.Windows.Forms.TextBox();
-            this.lblpnAppTime = new System.Windows.Forms.Label();
-            this.txtpnAppTime = new System.Windows.Forms.TextBox();
-            this.btnClosePnl = new KaizenMain.RoundButton();
-            this.btnRefresh = new KaizenMain.RoundButton();
-            this.btDelete = new KaizenMain.RoundButton();
-            this.btnSearch = new KaizenMain.RoundButton();
-            this.btnEdit = new KaizenMain.RoundButton();
-            this.btnAddApp = new KaizenMain.RoundButton();
-            this.btnEditApp = new KaizenMain.RoundButton();
-            this.btnDelDel = new KaizenMain.RoundButton();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.tabDelete.SuspendLayout();
             this.tabEdit.SuspendLayout();
             this.tabAdd.SuspendLayout();
             this.tabSearch.SuspendLayout();
             this.tabDisplay.SuspendLayout();
+            this.pnlAppDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -172,8 +174,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApp)).BeginInit();
             this.tabApp.SuspendLayout();
-            this.pnlAppDetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // errP
@@ -348,6 +348,28 @@
             this.label16.TabIndex = 15;
             this.label16.Text = "AppID";
             // 
+            // btnDelDel
+            // 
+            this.btnDelDel.BorderColor = System.Drawing.Color.Silver;
+            this.btnDelDel.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnDelDel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelDel.FlatAppearance.BorderSize = 0;
+            this.btnDelDel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDelDel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDelDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelDel.Location = new System.Drawing.Point(619, 87);
+            this.btnDelDel.Name = "btnDelDel";
+            this.btnDelDel.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDelDel.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnDelDel.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDelDel.Size = new System.Drawing.Size(214, 40);
+            this.btnDelDel.TabIndex = 227;
+            this.btnDelDel.Text = "DELETE";
+            this.btnDelDel.TextColor = System.Drawing.Color.White;
+            this.btnDelDel.UseVisualStyleBackColor = true;
+            this.btnDelDel.Click += new System.EventHandler(this.btnDelDel_Click);
+            // 
             // tabEdit
             // 
             this.tabEdit.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
@@ -511,6 +533,28 @@
             this.lblEdAppID.TabIndex = 15;
             this.lblEdAppID.Text = "AppID";
             // 
+            // btnEditApp
+            // 
+            this.btnEditApp.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditApp.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEditApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditApp.FlatAppearance.BorderSize = 0;
+            this.btnEditApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditApp.Location = new System.Drawing.Point(640, 41);
+            this.btnEditApp.Name = "btnEditApp";
+            this.btnEditApp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditApp.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEditApp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditApp.Size = new System.Drawing.Size(214, 40);
+            this.btnEditApp.TabIndex = 227;
+            this.btnEditApp.Text = "EDIT ";
+            this.btnEditApp.TextColor = System.Drawing.Color.White;
+            this.btnEditApp.UseVisualStyleBackColor = true;
+            this.btnEditApp.Click += new System.EventHandler(this.btnEditApp_Click);
+            // 
             // tabAdd
             // 
             this.tabAdd.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
@@ -591,6 +635,7 @@
             this.cmbAStaffID.Name = "cmbAStaffID";
             this.cmbAStaffID.Size = new System.Drawing.Size(229, 28);
             this.cmbAStaffID.TabIndex = 224;
+            this.cmbAStaffID.SelectedIndexChanged += new System.EventHandler(this.cmbAStaffID_SelectedIndexChanged);
             // 
             // dtpDateBooked
             // 
@@ -685,6 +730,28 @@
             this.lblAppID.TabIndex = 0;
             this.lblAppID.Text = "AppID";
             this.lblAppID.Click += new System.EventHandler(this.lblAppID_Click);
+            // 
+            // btnAddApp
+            // 
+            this.btnAddApp.BorderColor = System.Drawing.Color.Silver;
+            this.btnAddApp.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnAddApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddApp.FlatAppearance.BorderSize = 0;
+            this.btnAddApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAddApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAddApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddApp.Location = new System.Drawing.Point(633, 77);
+            this.btnAddApp.Name = "btnAddApp";
+            this.btnAddApp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddApp.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnAddApp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddApp.Size = new System.Drawing.Size(214, 40);
+            this.btnAddApp.TabIndex = 223;
+            this.btnAddApp.Text = "ADD APPOINTMENT";
+            this.btnAddApp.TextColor = System.Drawing.Color.White;
+            this.btnAddApp.UseVisualStyleBackColor = true;
+            this.btnAddApp.Click += new System.EventHandler(this.btnAddApp_Click_1);
             // 
             // tabSearch
             // 
@@ -904,6 +971,181 @@
             this.tabDisplay.Text = "DISPLAY";
             this.tabDisplay.Click += new System.EventHandler(this.tabDisplay_Click);
             // 
+            // pnlAppDetails
+            // 
+            this.pnlAppDetails.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo3;
+            this.pnlAppDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlAppDetails.Controls.Add(this.txtpnAppTime);
+            this.pnlAppDetails.Controls.Add(this.lblpnAppTime);
+            this.pnlAppDetails.Controls.Add(this.txtpnStaff);
+            this.pnlAppDetails.Controls.Add(this.lblpnStaff);
+            this.pnlAppDetails.Controls.Add(this.pictureBox7);
+            this.pnlAppDetails.Controls.Add(this.btnClosePnl);
+            this.pnlAppDetails.Controls.Add(this.txtpnAppDur);
+            this.pnlAppDetails.Controls.Add(this.txtpnAppDate);
+            this.pnlAppDetails.Controls.Add(this.lblpnHeader);
+            this.pnlAppDetails.Controls.Add(this.lblpnDetails);
+            this.pnlAppDetails.Controls.Add(this.txtAppDet);
+            this.pnlAppDetails.Controls.Add(this.lblpnDur);
+            this.pnlAppDetails.Controls.Add(this.lblpnDate);
+            this.pnlAppDetails.Location = new System.Drawing.Point(184, 143);
+            this.pnlAppDetails.Name = "pnlAppDetails";
+            this.pnlAppDetails.Size = new System.Drawing.Size(557, 312);
+            this.pnlAppDetails.TabIndex = 242;
+            this.pnlAppDetails.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAppDetails_Paint);
+            // 
+            // txtpnAppTime
+            // 
+            this.txtpnAppTime.Location = new System.Drawing.Point(209, 78);
+            this.txtpnAppTime.Name = "txtpnAppTime";
+            this.txtpnAppTime.Size = new System.Drawing.Size(192, 26);
+            this.txtpnAppTime.TabIndex = 247;
+            // 
+            // lblpnAppTime
+            // 
+            this.lblpnAppTime.AutoSize = true;
+            this.lblpnAppTime.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblpnAppTime.Location = new System.Drawing.Point(16, 81);
+            this.lblpnAppTime.Name = "lblpnAppTime";
+            this.lblpnAppTime.Size = new System.Drawing.Size(154, 20);
+            this.lblpnAppTime.TabIndex = 246;
+            this.lblpnAppTime.Text = "Appointment Time";
+            // 
+            // txtpnStaff
+            // 
+            this.txtpnStaff.Location = new System.Drawing.Point(209, 152);
+            this.txtpnStaff.Name = "txtpnStaff";
+            this.txtpnStaff.Size = new System.Drawing.Size(192, 26);
+            this.txtpnStaff.TabIndex = 245;
+            // 
+            // lblpnStaff
+            // 
+            this.lblpnStaff.AutoSize = true;
+            this.lblpnStaff.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblpnStaff.Location = new System.Drawing.Point(16, 155);
+            this.lblpnStaff.Name = "lblpnStaff";
+            this.lblpnStaff.Size = new System.Drawing.Size(118, 20);
+            this.lblpnStaff.TabIndex = 244;
+            this.lblpnStaff.Text = "Staff Member";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::KaizenMain.Properties.Resources._53160265_2410346355864115_4176677497166888960_o;
+            this.pictureBox7.Location = new System.Drawing.Point(438, 211);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(116, 98);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 243;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
+            // btnClosePnl
+            // 
+            this.btnClosePnl.BorderColor = System.Drawing.Color.Silver;
+            this.btnClosePnl.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnClosePnl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClosePnl.FlatAppearance.BorderSize = 0;
+            this.btnClosePnl.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnClosePnl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnClosePnl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClosePnl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClosePnl.Location = new System.Drawing.Point(507, 3);
+            this.btnClosePnl.Name = "btnClosePnl";
+            this.btnClosePnl.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnClosePnl.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnClosePnl.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnClosePnl.Size = new System.Drawing.Size(47, 40);
+            this.btnClosePnl.TabIndex = 225;
+            this.btnClosePnl.Text = "X";
+            this.btnClosePnl.TextColor = System.Drawing.Color.White;
+            this.btnClosePnl.UseVisualStyleBackColor = true;
+            this.btnClosePnl.Click += new System.EventHandler(this.btnClosePnl_Click);
+            // 
+            // txtpnAppDur
+            // 
+            this.txtpnAppDur.Location = new System.Drawing.Point(209, 114);
+            this.txtpnAppDur.Name = "txtpnAppDur";
+            this.txtpnAppDur.Size = new System.Drawing.Size(192, 26);
+            this.txtpnAppDur.TabIndex = 9;
+            // 
+            // txtpnAppDate
+            // 
+            this.txtpnAppDate.Location = new System.Drawing.Point(209, 38);
+            this.txtpnAppDate.Name = "txtpnAppDate";
+            this.txtpnAppDate.Size = new System.Drawing.Size(192, 26);
+            this.txtpnAppDate.TabIndex = 7;
+            // 
+            // lblpnHeader
+            // 
+            this.lblpnHeader.AutoSize = true;
+            this.lblpnHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpnHeader.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblpnHeader.Location = new System.Drawing.Point(151, 4);
+            this.lblpnHeader.Name = "lblpnHeader";
+            this.lblpnHeader.Size = new System.Drawing.Size(275, 25);
+            this.lblpnHeader.TabIndex = 6;
+            this.lblpnHeader.Text = "APPOINTMENT DETAILS";
+            // 
+            // lblpnDetails
+            // 
+            this.lblpnDetails.AutoSize = true;
+            this.lblpnDetails.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblpnDetails.Location = new System.Drawing.Point(16, 188);
+            this.lblpnDetails.Name = "lblpnDetails";
+            this.lblpnDetails.Size = new System.Drawing.Size(172, 20);
+            this.lblpnDetails.TabIndex = 5;
+            this.lblpnDetails.Text = "Appointment Details";
+            // 
+            // txtAppDet
+            // 
+            this.txtAppDet.Location = new System.Drawing.Point(7, 211);
+            this.txtAppDet.Multiline = true;
+            this.txtAppDet.Name = "txtAppDet";
+            this.txtAppDet.Size = new System.Drawing.Size(360, 86);
+            this.txtAppDet.TabIndex = 2;
+            // 
+            // lblpnDur
+            // 
+            this.lblpnDur.AutoSize = true;
+            this.lblpnDur.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblpnDur.Location = new System.Drawing.Point(16, 117);
+            this.lblpnDur.Name = "lblpnDur";
+            this.lblpnDur.Size = new System.Drawing.Size(185, 20);
+            this.lblpnDur.TabIndex = 1;
+            this.lblpnDur.Text = "Appointment Duration";
+            // 
+            // lblpnDate
+            // 
+            this.lblpnDate.AutoSize = true;
+            this.lblpnDate.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblpnDate.Location = new System.Drawing.Point(16, 41);
+            this.lblpnDate.Name = "lblpnDate";
+            this.lblpnDate.Size = new System.Drawing.Size(155, 20);
+            this.lblpnDate.TabIndex = 0;
+            this.lblpnDate.Text = "Appointment Date";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BorderColor = System.Drawing.Color.Silver;
+            this.btnRefresh.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(833, 18);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnRefresh.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnRefresh.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnRefresh.Size = new System.Drawing.Size(118, 40);
+            this.btnRefresh.TabIndex = 241;
+            this.btnRefresh.Text = "REFRESH";
+            this.btnRefresh.TextColor = System.Drawing.Color.White;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // txtDisSur
             // 
             this.txtDisSur.Location = new System.Drawing.Point(833, 178);
@@ -956,6 +1198,7 @@
             this.cmbStaff.Size = new System.Drawing.Size(121, 28);
             this.cmbStaff.TabIndex = 237;
             this.cmbStaff.SelectedIndexChanged += new System.EventHandler(this.cmbStaff_SelectedIndexChanged);
+            this.cmbStaff.SelectionChangeCommitted += new System.EventHandler(this.cmbStaff_SelectionChangeCommitted);
             this.cmbStaff.DropDownClosed += new System.EventHandler(this.cmbStaff_DropDownClosed);
             this.cmbStaff.SelectedValueChanged += new System.EventHandler(this.cmbStaff_SelectedValueChanged);
             // 
@@ -1045,6 +1288,72 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
             this.dateTimePicker1.TabIndex = 228;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
+            // 
+            // btDelete
+            // 
+            this.btDelete.BorderColor = System.Drawing.Color.Silver;
+            this.btDelete.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btDelete.FlatAppearance.BorderSize = 0;
+            this.btDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDelete.Location = new System.Drawing.Point(833, 335);
+            this.btDelete.Name = "btDelete";
+            this.btDelete.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btDelete.onHoverButtonColor = System.Drawing.Color.White;
+            this.btDelete.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btDelete.Size = new System.Drawing.Size(118, 40);
+            this.btDelete.TabIndex = 227;
+            this.btDelete.Text = "DELETE";
+            this.btDelete.TextColor = System.Drawing.Color.White;
+            this.btDelete.UseVisualStyleBackColor = true;
+            this.btDelete.Click += new System.EventHandler(this.roundButton3_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BorderColor = System.Drawing.Color.Silver;
+            this.btnSearch.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(833, 277);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnSearch.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnSearch.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnSearch.Size = new System.Drawing.Size(118, 40);
+            this.btnSearch.TabIndex = 226;
+            this.btnSearch.Text = "SEARCH";
+            this.btnSearch.TextColor = System.Drawing.Color.White;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.roundButton2_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BorderColor = System.Drawing.Color.Silver;
+            this.btnEdit.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(833, 221);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEdit.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEdit.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEdit.Size = new System.Drawing.Size(118, 40);
+            this.btnEdit.TabIndex = 225;
+            this.btnEdit.Text = "EDIT";
+            this.btnEdit.TextColor = System.Drawing.Color.White;
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.roundButton1_Click_1);
             // 
             // pictureBox11
             // 
@@ -1281,313 +1590,6 @@
             this.tabApp.SelectedIndexChanged += new System.EventHandler(this.tabApp_SelectedIndexChanged);
             this.tabApp.Validated += new System.EventHandler(this.tabApp_Validated);
             // 
-            // pnlAppDetails
-            // 
-            this.pnlAppDetails.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo3;
-            this.pnlAppDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlAppDetails.Controls.Add(this.txtpnAppTime);
-            this.pnlAppDetails.Controls.Add(this.lblpnAppTime);
-            this.pnlAppDetails.Controls.Add(this.txtpnStaff);
-            this.pnlAppDetails.Controls.Add(this.lblpnStaff);
-            this.pnlAppDetails.Controls.Add(this.pictureBox7);
-            this.pnlAppDetails.Controls.Add(this.btnClosePnl);
-            this.pnlAppDetails.Controls.Add(this.txtpnAppDur);
-            this.pnlAppDetails.Controls.Add(this.txtpnAppDate);
-            this.pnlAppDetails.Controls.Add(this.lblpnHeader);
-            this.pnlAppDetails.Controls.Add(this.lblpnDetails);
-            this.pnlAppDetails.Controls.Add(this.txtAppDet);
-            this.pnlAppDetails.Controls.Add(this.lblpnDur);
-            this.pnlAppDetails.Controls.Add(this.lblpnDate);
-            this.pnlAppDetails.Location = new System.Drawing.Point(184, 143);
-            this.pnlAppDetails.Name = "pnlAppDetails";
-            this.pnlAppDetails.Size = new System.Drawing.Size(557, 312);
-            this.pnlAppDetails.TabIndex = 242;
-            this.pnlAppDetails.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAppDetails_Paint);
-            // 
-            // lblpnDate
-            // 
-            this.lblpnDate.AutoSize = true;
-            this.lblpnDate.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblpnDate.Location = new System.Drawing.Point(16, 41);
-            this.lblpnDate.Name = "lblpnDate";
-            this.lblpnDate.Size = new System.Drawing.Size(155, 20);
-            this.lblpnDate.TabIndex = 0;
-            this.lblpnDate.Text = "Appointment Date";
-            // 
-            // lblpnDur
-            // 
-            this.lblpnDur.AutoSize = true;
-            this.lblpnDur.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblpnDur.Location = new System.Drawing.Point(16, 117);
-            this.lblpnDur.Name = "lblpnDur";
-            this.lblpnDur.Size = new System.Drawing.Size(185, 20);
-            this.lblpnDur.TabIndex = 1;
-            this.lblpnDur.Text = "Appointment Duration";
-            // 
-            // txtAppDet
-            // 
-            this.txtAppDet.Location = new System.Drawing.Point(7, 211);
-            this.txtAppDet.Multiline = true;
-            this.txtAppDet.Name = "txtAppDet";
-            this.txtAppDet.Size = new System.Drawing.Size(360, 86);
-            this.txtAppDet.TabIndex = 2;
-            // 
-            // lblpnDetails
-            // 
-            this.lblpnDetails.AutoSize = true;
-            this.lblpnDetails.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblpnDetails.Location = new System.Drawing.Point(16, 188);
-            this.lblpnDetails.Name = "lblpnDetails";
-            this.lblpnDetails.Size = new System.Drawing.Size(172, 20);
-            this.lblpnDetails.TabIndex = 5;
-            this.lblpnDetails.Text = "Appointment Details";
-            // 
-            // lblpnHeader
-            // 
-            this.lblpnHeader.AutoSize = true;
-            this.lblpnHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpnHeader.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblpnHeader.Location = new System.Drawing.Point(151, 4);
-            this.lblpnHeader.Name = "lblpnHeader";
-            this.lblpnHeader.Size = new System.Drawing.Size(275, 25);
-            this.lblpnHeader.TabIndex = 6;
-            this.lblpnHeader.Text = "APPOINTMENT DETAILS";
-            // 
-            // txtpnAppDate
-            // 
-            this.txtpnAppDate.Location = new System.Drawing.Point(209, 38);
-            this.txtpnAppDate.Name = "txtpnAppDate";
-            this.txtpnAppDate.Size = new System.Drawing.Size(192, 26);
-            this.txtpnAppDate.TabIndex = 7;
-            // 
-            // txtpnAppDur
-            // 
-            this.txtpnAppDur.Location = new System.Drawing.Point(209, 114);
-            this.txtpnAppDur.Name = "txtpnAppDur";
-            this.txtpnAppDur.Size = new System.Drawing.Size(192, 26);
-            this.txtpnAppDur.TabIndex = 9;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::KaizenMain.Properties.Resources._53160265_2410346355864115_4176677497166888960_o;
-            this.pictureBox7.Location = new System.Drawing.Point(438, 211);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(116, 98);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 243;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
-            // 
-            // lblpnStaff
-            // 
-            this.lblpnStaff.AutoSize = true;
-            this.lblpnStaff.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblpnStaff.Location = new System.Drawing.Point(16, 155);
-            this.lblpnStaff.Name = "lblpnStaff";
-            this.lblpnStaff.Size = new System.Drawing.Size(118, 20);
-            this.lblpnStaff.TabIndex = 244;
-            this.lblpnStaff.Text = "Staff Member";
-            // 
-            // txtpnStaff
-            // 
-            this.txtpnStaff.Location = new System.Drawing.Point(209, 152);
-            this.txtpnStaff.Name = "txtpnStaff";
-            this.txtpnStaff.Size = new System.Drawing.Size(192, 26);
-            this.txtpnStaff.TabIndex = 245;
-            // 
-            // lblpnAppTime
-            // 
-            this.lblpnAppTime.AutoSize = true;
-            this.lblpnAppTime.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblpnAppTime.Location = new System.Drawing.Point(16, 81);
-            this.lblpnAppTime.Name = "lblpnAppTime";
-            this.lblpnAppTime.Size = new System.Drawing.Size(154, 20);
-            this.lblpnAppTime.TabIndex = 246;
-            this.lblpnAppTime.Text = "Appointment Time";
-            // 
-            // txtpnAppTime
-            // 
-            this.txtpnAppTime.Location = new System.Drawing.Point(209, 78);
-            this.txtpnAppTime.Name = "txtpnAppTime";
-            this.txtpnAppTime.Size = new System.Drawing.Size(192, 26);
-            this.txtpnAppTime.TabIndex = 247;
-            // 
-            // btnClosePnl
-            // 
-            this.btnClosePnl.BorderColor = System.Drawing.Color.Silver;
-            this.btnClosePnl.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnClosePnl.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClosePnl.FlatAppearance.BorderSize = 0;
-            this.btnClosePnl.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnClosePnl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnClosePnl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClosePnl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClosePnl.Location = new System.Drawing.Point(507, 3);
-            this.btnClosePnl.Name = "btnClosePnl";
-            this.btnClosePnl.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnClosePnl.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnClosePnl.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnClosePnl.Size = new System.Drawing.Size(47, 40);
-            this.btnClosePnl.TabIndex = 225;
-            this.btnClosePnl.Text = "X";
-            this.btnClosePnl.TextColor = System.Drawing.Color.White;
-            this.btnClosePnl.UseVisualStyleBackColor = true;
-            this.btnClosePnl.Click += new System.EventHandler(this.btnClosePnl_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BorderColor = System.Drawing.Color.Silver;
-            this.btnRefresh.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRefresh.FlatAppearance.BorderSize = 0;
-            this.btnRefresh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(833, 18);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnRefresh.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnRefresh.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnRefresh.Size = new System.Drawing.Size(118, 40);
-            this.btnRefresh.TabIndex = 241;
-            this.btnRefresh.Text = "REFRESH";
-            this.btnRefresh.TextColor = System.Drawing.Color.White;
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // btDelete
-            // 
-            this.btDelete.BorderColor = System.Drawing.Color.Silver;
-            this.btDelete.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btDelete.FlatAppearance.BorderSize = 0;
-            this.btDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDelete.Location = new System.Drawing.Point(833, 335);
-            this.btDelete.Name = "btDelete";
-            this.btDelete.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btDelete.onHoverButtonColor = System.Drawing.Color.White;
-            this.btDelete.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btDelete.Size = new System.Drawing.Size(118, 40);
-            this.btDelete.TabIndex = 227;
-            this.btDelete.Text = "DELETE";
-            this.btDelete.TextColor = System.Drawing.Color.White;
-            this.btDelete.UseVisualStyleBackColor = true;
-            this.btDelete.Click += new System.EventHandler(this.roundButton3_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BorderColor = System.Drawing.Color.Silver;
-            this.btnSearch.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(833, 277);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnSearch.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnSearch.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnSearch.Size = new System.Drawing.Size(118, 40);
-            this.btnSearch.TabIndex = 226;
-            this.btnSearch.Text = "SEARCH";
-            this.btnSearch.TextColor = System.Drawing.Color.White;
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.roundButton2_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BorderColor = System.Drawing.Color.Silver;
-            this.btnEdit.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(833, 221);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEdit.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnEdit.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEdit.Size = new System.Drawing.Size(118, 40);
-            this.btnEdit.TabIndex = 225;
-            this.btnEdit.Text = "EDIT";
-            this.btnEdit.TextColor = System.Drawing.Color.White;
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.roundButton1_Click_1);
-            // 
-            // btnAddApp
-            // 
-            this.btnAddApp.BorderColor = System.Drawing.Color.Silver;
-            this.btnAddApp.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnAddApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddApp.FlatAppearance.BorderSize = 0;
-            this.btnAddApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAddApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAddApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddApp.Location = new System.Drawing.Point(633, 77);
-            this.btnAddApp.Name = "btnAddApp";
-            this.btnAddApp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddApp.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnAddApp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddApp.Size = new System.Drawing.Size(214, 40);
-            this.btnAddApp.TabIndex = 223;
-            this.btnAddApp.Text = "ADD APPOINTMENT";
-            this.btnAddApp.TextColor = System.Drawing.Color.White;
-            this.btnAddApp.UseVisualStyleBackColor = true;
-            this.btnAddApp.Click += new System.EventHandler(this.btnAddApp_Click_1);
-            // 
-            // btnEditApp
-            // 
-            this.btnEditApp.BorderColor = System.Drawing.Color.Silver;
-            this.btnEditApp.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnEditApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditApp.FlatAppearance.BorderSize = 0;
-            this.btnEditApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEditApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEditApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditApp.Location = new System.Drawing.Point(640, 41);
-            this.btnEditApp.Name = "btnEditApp";
-            this.btnEditApp.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditApp.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnEditApp.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditApp.Size = new System.Drawing.Size(214, 40);
-            this.btnEditApp.TabIndex = 227;
-            this.btnEditApp.Text = "EDIT ";
-            this.btnEditApp.TextColor = System.Drawing.Color.White;
-            this.btnEditApp.UseVisualStyleBackColor = true;
-            this.btnEditApp.Click += new System.EventHandler(this.btnEditApp_Click);
-            // 
-            // btnDelDel
-            // 
-            this.btnDelDel.BorderColor = System.Drawing.Color.Silver;
-            this.btnDelDel.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnDelDel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelDel.FlatAppearance.BorderSize = 0;
-            this.btnDelDel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDelDel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDelDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelDel.Location = new System.Drawing.Point(619, 87);
-            this.btnDelDel.Name = "btnDelDel";
-            this.btnDelDel.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDelDel.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnDelDel.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDelDel.Size = new System.Drawing.Size(214, 40);
-            this.btnDelDel.TabIndex = 227;
-            this.btnDelDel.Text = "DELETE";
-            this.btnDelDel.TextColor = System.Drawing.Color.White;
-            this.btnDelDel.UseVisualStyleBackColor = true;
-            this.btnDelDel.Click += new System.EventHandler(this.btnDelDel_Click);
-            // 
             // Appointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1609,6 +1611,9 @@
             this.tabSearch.PerformLayout();
             this.tabDisplay.ResumeLayout(false);
             this.tabDisplay.PerformLayout();
+            this.pnlAppDetails.ResumeLayout(false);
+            this.pnlAppDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -1621,9 +1626,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApp)).EndInit();
             this.tabApp.ResumeLayout(false);
-            this.pnlAppDetails.ResumeLayout(false);
-            this.pnlAppDetails.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
