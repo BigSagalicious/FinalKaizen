@@ -75,5 +75,18 @@ namespace KaizenMain
         {
 
         }
+
+        private void crystalReportViewer2_Load(object sender, EventArgs e)
+        {
+
+        }
+        //VIEW APPOINTMENT REPORT
+        private void roundButton1_Click(object sender, EventArgs e)
+        {
+            var cryRpt = new ReportDocument();
+            cryRpt.Load(@"C:\Users\gareth\Source\Repos\BigSagalicious\FinalKaizen\KaizenMain\Appointment.rpt");
+            crystalReportViewer2.ReportSource = cryRpt;
+            crystalReportViewer2.Refresh();
+        }
     }
 }
