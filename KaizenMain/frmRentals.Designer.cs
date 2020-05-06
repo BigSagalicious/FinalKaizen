@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRentals));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabRentals = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
             this.dgvRentals = new System.Windows.Forms.DataGridView();
             this.tabSearch = new System.Windows.Forms.TabPage();
-            this.lblSearchOutstanding = new System.Windows.Forms.Label();
+            this.lblSearchBalOwed = new System.Windows.Forms.Label();
             this.lblSearchTCost = new System.Windows.Forms.Label();
-            this.lbl4354 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.txtSearchCustTel = new System.Windows.Forms.TextBox();
             this.txtSearchCustName = new System.Windows.Forms.TextBox();
@@ -86,7 +85,7 @@
             this.roundButton11 = new KaizenMain.RoundButton();
             this.btnClearAdd = new KaizenMain.RoundButton();
             this.tabEdit = new System.Windows.Forms.TabPage();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpEditDate = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.txtEditCustTel = new System.Windows.Forms.TextBox();
             this.txtEditCustName = new System.Windows.Forms.TextBox();
@@ -96,30 +95,27 @@
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.roundButton16 = new KaizenMain.RoundButton();
-            this.roundButton17 = new KaizenMain.RoundButton();
-            this.roundButton15 = new KaizenMain.RoundButton();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnEditClear = new KaizenMain.RoundButton();
+            this.pbEdittransSearch = new System.Windows.Forms.PictureBox();
             this.dgvEdit = new System.Windows.Forms.DataGridView();
             this.txtEditCustID = new System.Windows.Forms.TextBox();
             this.txtEditOrderID = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpEditStartD = new System.Windows.Forms.DateTimePicker();
+            this.dtpEditEndD = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btnEditDeleteTransD = new KaizenMain.RoundButton();
+            this.btnAddTransD = new KaizenMain.RoundButton();
             this.cmbEditEquipName = new System.Windows.Forms.ComboBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.roundButton13 = new KaizenMain.RoundButton();
-            this.roundButton14 = new KaizenMain.RoundButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
+            this.pbEditTDSearch = new System.Windows.Forms.PictureBox();
+            this.btnEditEditTransD = new KaizenMain.RoundButton();
+            this.btnEditClearTransD = new KaizenMain.RoundButton();
+            this.txtEditQty = new System.Windows.Forms.TextBox();
+            this.txtEditRPItem = new System.Windows.Forms.TextBox();
+            this.txtEditEquipID = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
@@ -145,6 +141,9 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnEditTrans = new KaizenMain.RoundButton();
+            this.roundButton2 = new KaizenMain.RoundButton();
+            this.roundButton5 = new KaizenMain.RoundButton();
             this.tabRentals.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRentals)).BeginInit();
@@ -157,13 +156,10 @@
             this.endDateAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbIconSearchEquip)).BeginInit();
             this.tabEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEdittransSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEdit)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEditTDSearch)).BeginInit();
             this.tabDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
@@ -221,9 +217,8 @@
             this.tabSearch.BackColor = System.Drawing.Color.White;
             this.tabSearch.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabSearch.Controls.Add(this.lblSearchOutstanding);
+            this.tabSearch.Controls.Add(this.lblSearchBalOwed);
             this.tabSearch.Controls.Add(this.lblSearchTCost);
-            this.tabSearch.Controls.Add(this.lbl4354);
             this.tabSearch.Controls.Add(this.label26);
             this.tabSearch.Controls.Add(this.txtSearchCustTel);
             this.tabSearch.Controls.Add(this.txtSearchCustName);
@@ -248,17 +243,14 @@
             this.tabSearch.TabIndex = 1;
             this.tabSearch.Text = "SEARCH";
             // 
-            // lblSearchOutstanding
+            // lblSearchBalOwed
             // 
-            this.lblSearchOutstanding.AutoSize = true;
-            this.lblSearchOutstanding.BackColor = System.Drawing.Color.White;
-            this.lblSearchOutstanding.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblSearchOutstanding.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSearchOutstanding.Location = new System.Drawing.Point(431, 584);
-            this.lblSearchOutstanding.Name = "lblSearchOutstanding";
-            this.lblSearchOutstanding.Size = new System.Drawing.Size(17, 24);
-            this.lblSearchOutstanding.TabIndex = 239;
-            this.lblSearchOutstanding.Text = "-";
+            this.lblSearchBalOwed.AutoSize = true;
+            this.lblSearchBalOwed.Location = new System.Drawing.Point(422, 586);
+            this.lblSearchBalOwed.Name = "lblSearchBalOwed";
+            this.lblSearchBalOwed.Size = new System.Drawing.Size(17, 24);
+            this.lblSearchBalOwed.TabIndex = 239;
+            this.lblSearchBalOwed.Text = "-";
             // 
             // lblSearchTCost
             // 
@@ -272,27 +264,16 @@
             this.lblSearchTCost.TabIndex = 238;
             this.lblSearchTCost.Text = "-";
             // 
-            // lbl4354
-            // 
-            this.lbl4354.AutoSize = true;
-            this.lbl4354.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lbl4354.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl4354.Location = new System.Drawing.Point(404, 584);
-            this.lbl4354.Name = "lbl4354";
-            this.lbl4354.Size = new System.Drawing.Size(21, 24);
-            this.lbl4354.TabIndex = 237;
-            this.lbl4354.Text = "£";
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.label26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label26.Location = new System.Drawing.Point(279, 584);
+            this.label26.Location = new System.Drawing.Point(279, 586);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(128, 24);
+            this.label26.Size = new System.Drawing.Size(145, 24);
             this.label26.TabIndex = 236;
-            this.label26.Text = "Outstanding:";
+            this.label26.Text = "Outstanding: £";
             // 
             // txtSearchCustTel
             // 
@@ -346,7 +327,10 @@
             this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSearch.Location = new System.Drawing.Point(14, 196);
             this.dgvSearch.Name = "dgvSearch";
-            this.dgvSearch.Size = new System.Drawing.Size(680, 274);
+            this.dgvSearch.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvSearch.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvSearch.Size = new System.Drawing.Size(680, 291);
             this.dgvSearch.TabIndex = 164;
             // 
             // label9
@@ -582,6 +566,7 @@
             this.pbAddSearchCustID.Size = new System.Drawing.Size(43, 31);
             this.pbAddSearchCustID.TabIndex = 153;
             this.pbAddSearchCustID.TabStop = false;
+            this.pbAddSearchCustID.Click += new System.EventHandler(this.pbAddSearchCustID_Click);
             // 
             // txtAddCustID
             // 
@@ -639,7 +624,7 @@
             // dtpAddStart
             // 
             this.dtpAddStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpAddStart.Location = new System.Drawing.Point(497, 158);
+            this.dtpAddStart.Location = new System.Drawing.Point(497, 161);
             this.dtpAddStart.Name = "dtpAddStart";
             this.dtpAddStart.Size = new System.Drawing.Size(157, 29);
             this.dtpAddStart.TabIndex = 169;
@@ -647,7 +632,7 @@
             // dtpAddEnd
             // 
             this.dtpAddEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpAddEnd.Location = new System.Drawing.Point(203, 158);
+            this.dtpAddEnd.Location = new System.Drawing.Point(200, 161);
             this.dtpAddEnd.Name = "dtpAddEnd";
             this.dtpAddEnd.Size = new System.Drawing.Size(161, 29);
             this.dtpAddEnd.TabIndex = 168;
@@ -668,9 +653,10 @@
             this.pbIconSearchEquip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbIconSearchEquip.Location = new System.Drawing.Point(376, 17);
             this.pbIconSearchEquip.Name = "pbIconSearchEquip";
-            this.pbIconSearchEquip.Size = new System.Drawing.Size(43, 31);
+            this.pbIconSearchEquip.Size = new System.Drawing.Size(87, 83);
             this.pbIconSearchEquip.TabIndex = 166;
             this.pbIconSearchEquip.TabStop = false;
+            this.pbIconSearchEquip.Click += new System.EventHandler(this.pbIconSearchEquip_Click);
             // 
             // btnAddEquipTrans
             // 
@@ -820,7 +806,7 @@
             this.btnCompleteAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCompleteAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompleteAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompleteAdd.Location = new System.Drawing.Point(158, 636);
+            this.btnCompleteAdd.Location = new System.Drawing.Point(144, 636);
             this.btnCompleteAdd.Name = "btnCompleteAdd";
             this.btnCompleteAdd.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
             this.btnCompleteAdd.onHoverButtonColor = System.Drawing.Color.White;
@@ -882,7 +868,10 @@
             this.tabEdit.BackColor = System.Drawing.Color.White;
             this.tabEdit.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabEdit.Controls.Add(this.dateTimePicker2);
+            this.tabEdit.Controls.Add(this.btnEditTrans);
+            this.tabEdit.Controls.Add(this.roundButton2);
+            this.tabEdit.Controls.Add(this.roundButton5);
+            this.tabEdit.Controls.Add(this.dtpEditDate);
             this.tabEdit.Controls.Add(this.label13);
             this.tabEdit.Controls.Add(this.txtEditCustTel);
             this.tabEdit.Controls.Add(this.txtEditCustName);
@@ -892,11 +881,8 @@
             this.tabEdit.Controls.Add(this.label42);
             this.tabEdit.Controls.Add(this.label43);
             this.tabEdit.Controls.Add(this.label44);
-            this.tabEdit.Controls.Add(this.roundButton16);
-            this.tabEdit.Controls.Add(this.roundButton17);
-            this.tabEdit.Controls.Add(this.roundButton15);
-            this.tabEdit.Controls.Add(this.pictureBox4);
-            this.tabEdit.Controls.Add(this.pictureBox3);
+            this.tabEdit.Controls.Add(this.btnEditClear);
+            this.tabEdit.Controls.Add(this.pbEdittransSearch);
             this.tabEdit.Controls.Add(this.dgvEdit);
             this.tabEdit.Controls.Add(this.txtEditCustID);
             this.tabEdit.Controls.Add(this.txtEditOrderID);
@@ -911,12 +897,12 @@
             this.tabEdit.TabIndex = 3;
             this.tabEdit.Text = "EDIT";
             // 
-            // dateTimePicker2
+            // dtpEditDate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(483, 22);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 29);
-            this.dateTimePicker2.TabIndex = 249;
+            this.dtpEditDate.Location = new System.Drawing.Point(483, 22);
+            this.dtpEditDate.Name = "dtpEditDate";
+            this.dtpEditDate.Size = new System.Drawing.Size(200, 29);
+            this.dtpEditDate.TabIndex = 249;
             // 
             // label13
             // 
@@ -1014,94 +1000,39 @@
             this.label44.TabIndex = 240;
             this.label44.Text = "Total cost:";
             // 
-            // roundButton16
+            // btnEditClear
             // 
-            this.roundButton16.BackColor = System.Drawing.Color.White;
-            this.roundButton16.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton16.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton16.FlatAppearance.BorderSize = 0;
-            this.roundButton16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton16.Location = new System.Drawing.Point(163, 636);
-            this.roundButton16.Name = "roundButton16";
-            this.roundButton16.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton16.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton16.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton16.Size = new System.Drawing.Size(189, 40);
-            this.roundButton16.TabIndex = 169;
-            this.roundButton16.Text = "EDIT RENTAL";
-            this.roundButton16.TextColor = System.Drawing.Color.White;
-            this.roundButton16.UseVisualStyleBackColor = false;
+            this.btnEditClear.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditClear.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEditClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditClear.FlatAppearance.BorderSize = 0;
+            this.btnEditClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditClear.Location = new System.Drawing.Point(568, 75);
+            this.btnEditClear.Name = "btnEditClear";
+            this.btnEditClear.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditClear.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEditClear.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditClear.Size = new System.Drawing.Size(115, 40);
+            this.btnEditClear.TabIndex = 167;
+            this.btnEditClear.Text = "CLEAR";
+            this.btnEditClear.TextColor = System.Drawing.Color.White;
+            this.btnEditClear.UseVisualStyleBackColor = true;
             // 
-            // roundButton17
+            // pbEdittransSearch
             // 
-            this.roundButton17.BackColor = System.Drawing.Color.White;
-            this.roundButton17.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton17.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton17.FlatAppearance.BorderSize = 0;
-            this.roundButton17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton17.Location = new System.Drawing.Point(380, 636);
-            this.roundButton17.Name = "roundButton17";
-            this.roundButton17.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton17.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton17.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton17.Size = new System.Drawing.Size(189, 40);
-            this.roundButton17.TabIndex = 168;
-            this.roundButton17.Text = "E-MAIL RENTAL";
-            this.roundButton17.TextColor = System.Drawing.Color.White;
-            this.roundButton17.UseVisualStyleBackColor = false;
-            // 
-            // roundButton15
-            // 
-            this.roundButton15.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton15.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton15.FlatAppearance.BorderSize = 0;
-            this.roundButton15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton15.Location = new System.Drawing.Point(568, 75);
-            this.roundButton15.Name = "roundButton15";
-            this.roundButton15.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton15.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton15.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton15.Size = new System.Drawing.Size(115, 40);
-            this.roundButton15.TabIndex = 167;
-            this.roundButton15.Text = "CLEAR";
-            this.roundButton15.TextColor = System.Drawing.Color.White;
-            this.roundButton15.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Location = new System.Drawing.Point(358, 77);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox4.TabIndex = 166;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Location = new System.Drawing.Point(358, 19);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox3.TabIndex = 165;
-            this.pictureBox3.TabStop = false;
+            this.pbEdittransSearch.BackColor = System.Drawing.Color.Transparent;
+            this.pbEdittransSearch.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.pbEdittransSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbEdittransSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbEdittransSearch.Location = new System.Drawing.Point(358, 19);
+            this.pbEdittransSearch.Name = "pbEdittransSearch";
+            this.pbEdittransSearch.Size = new System.Drawing.Size(43, 31);
+            this.pbEdittransSearch.TabIndex = 165;
+            this.pbEdittransSearch.TabStop = false;
+            this.pbEdittransSearch.Click += new System.EventHandler(this.pbEdittransSearch_Click);
             // 
             // dgvEdit
             // 
@@ -1110,8 +1041,10 @@
             this.dgvEdit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEdit.Location = new System.Drawing.Point(27, 402);
             this.dgvEdit.Name = "dgvEdit";
+            this.dgvEdit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEdit.Size = new System.Drawing.Size(680, 204);
             this.dgvEdit.TabIndex = 158;
+            this.dgvEdit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.editgridview_CellClick);
             // 
             // txtEditCustID
             // 
@@ -1153,19 +1086,19 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.dtpEditStartD);
+            this.panel1.Controls.Add(this.dtpEditEndD);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.btnEditDeleteTransD);
+            this.panel1.Controls.Add(this.btnAddTransD);
             this.panel1.Controls.Add(this.cmbEditEquipName);
-            this.panel1.Controls.Add(this.pictureBox10);
-            this.panel1.Controls.Add(this.roundButton13);
-            this.panel1.Controls.Add(this.roundButton14);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.textBox13);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.textBox14);
-            this.panel1.Controls.Add(this.textBox15);
-            this.panel1.Controls.Add(this.textBox16);
-            this.panel1.Controls.Add(this.textBox18);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label28);
+            this.panel1.Controls.Add(this.pbEditTDSearch);
+            this.panel1.Controls.Add(this.btnEditEditTransD);
+            this.panel1.Controls.Add(this.btnEditClearTransD);
+            this.panel1.Controls.Add(this.txtEditQty);
+            this.panel1.Controls.Add(this.txtEditRPItem);
+            this.panel1.Controls.Add(this.txtEditEquipID);
             this.panel1.Controls.Add(this.label30);
             this.panel1.Controls.Add(this.label31);
             this.panel1.Controls.Add(this.label37);
@@ -1175,6 +1108,89 @@
             this.panel1.Size = new System.Drawing.Size(680, 207);
             this.panel1.TabIndex = 147;
             // 
+            // dtpEditStartD
+            // 
+            this.dtpEditStartD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEditStartD.Location = new System.Drawing.Point(497, 161);
+            this.dtpEditStartD.Name = "dtpEditStartD";
+            this.dtpEditStartD.Size = new System.Drawing.Size(157, 29);
+            this.dtpEditStartD.TabIndex = 181;
+            // 
+            // dtpEditEndD
+            // 
+            this.dtpEditEndD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEditEndD.Location = new System.Drawing.Point(200, 161);
+            this.dtpEditEndD.Name = "dtpEditEndD";
+            this.dtpEditEndD.Size = new System.Drawing.Size(161, 29);
+            this.dtpEditEndD.TabIndex = 180;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label12.Location = new System.Drawing.Point(24, 165);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(96, 24);
+            this.label12.TabIndex = 179;
+            this.label12.Text = "End Date";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.White;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label15.Location = new System.Drawing.Point(383, 163);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(99, 24);
+            this.label15.TabIndex = 178;
+            this.label15.Text = "Start Date";
+            // 
+            // btnEditDeleteTransD
+            // 
+            this.btnEditDeleteTransD.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditDeleteTransD.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEditDeleteTransD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditDeleteTransD.FlatAppearance.BorderSize = 0;
+            this.btnEditDeleteTransD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditDeleteTransD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditDeleteTransD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditDeleteTransD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditDeleteTransD.Location = new System.Drawing.Point(422, 60);
+            this.btnEditDeleteTransD.Name = "btnEditDeleteTransD";
+            this.btnEditDeleteTransD.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditDeleteTransD.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEditDeleteTransD.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditDeleteTransD.Size = new System.Drawing.Size(115, 40);
+            this.btnEditDeleteTransD.TabIndex = 177;
+            this.btnEditDeleteTransD.Text = "DELETE";
+            this.btnEditDeleteTransD.TextColor = System.Drawing.Color.White;
+            this.btnEditDeleteTransD.UseVisualStyleBackColor = true;
+            // 
+            // btnAddTransD
+            // 
+            this.btnAddTransD.BorderColor = System.Drawing.Color.Silver;
+            this.btnAddTransD.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnAddTransD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddTransD.FlatAppearance.BorderSize = 0;
+            this.btnAddTransD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAddTransD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAddTransD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTransD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTransD.Location = new System.Drawing.Point(422, 15);
+            this.btnAddTransD.Name = "btnAddTransD";
+            this.btnAddTransD.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddTransD.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnAddTransD.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnAddTransD.Size = new System.Drawing.Size(115, 40);
+            this.btnAddTransD.TabIndex = 176;
+            this.btnAddTransD.Text = "ADD";
+            this.btnAddTransD.TextColor = System.Drawing.Color.White;
+            this.btnAddTransD.UseVisualStyleBackColor = true;
+            this.btnAddTransD.Click += new System.EventHandler(this.btnAddTransD_Click);
+            // 
             // cmbEditEquipName
             // 
             this.cmbEditEquipName.FormattingEnabled = true;
@@ -1183,142 +1199,81 @@
             this.cmbEditEquipName.Size = new System.Drawing.Size(156, 32);
             this.cmbEditEquipName.TabIndex = 169;
             // 
-            // pictureBox10
+            // pbEditTDSearch
             // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox10.Location = new System.Drawing.Point(376, 17);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox10.TabIndex = 168;
-            this.pictureBox10.TabStop = false;
+            this.pbEditTDSearch.BackColor = System.Drawing.Color.Transparent;
+            this.pbEditTDSearch.BackgroundImage = global::KaizenMain.Properties.Resources.search_icon_512;
+            this.pbEditTDSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbEditTDSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbEditTDSearch.Location = new System.Drawing.Point(376, 17);
+            this.pbEditTDSearch.Name = "pbEditTDSearch";
+            this.pbEditTDSearch.Size = new System.Drawing.Size(43, 31);
+            this.pbEditTDSearch.TabIndex = 168;
+            this.pbEditTDSearch.TabStop = false;
             // 
-            // roundButton13
+            // btnEditEditTransD
             // 
-            this.roundButton13.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton13.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton13.FlatAppearance.BorderSize = 0;
-            this.roundButton13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton13.Location = new System.Drawing.Point(539, 15);
-            this.roundButton13.Name = "roundButton13";
-            this.roundButton13.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton13.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton13.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton13.Size = new System.Drawing.Size(115, 40);
-            this.roundButton13.TabIndex = 167;
-            this.roundButton13.Text = "EDIT";
-            this.roundButton13.TextColor = System.Drawing.Color.White;
-            this.roundButton13.UseVisualStyleBackColor = true;
+            this.btnEditEditTransD.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditEditTransD.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEditEditTransD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditEditTransD.FlatAppearance.BorderSize = 0;
+            this.btnEditEditTransD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditEditTransD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditEditTransD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditEditTransD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditEditTransD.Location = new System.Drawing.Point(539, 15);
+            this.btnEditEditTransD.Name = "btnEditEditTransD";
+            this.btnEditEditTransD.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditEditTransD.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEditEditTransD.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditEditTransD.Size = new System.Drawing.Size(115, 40);
+            this.btnEditEditTransD.TabIndex = 167;
+            this.btnEditEditTransD.Text = "EDIT";
+            this.btnEditEditTransD.TextColor = System.Drawing.Color.White;
+            this.btnEditEditTransD.UseVisualStyleBackColor = true;
+            this.btnEditEditTransD.Click += new System.EventHandler(this.btnEditEditTransD_Click);
             // 
-            // roundButton14
+            // btnEditClearTransD
             // 
-            this.roundButton14.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton14.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton14.FlatAppearance.BorderSize = 0;
-            this.roundButton14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton14.Location = new System.Drawing.Point(539, 60);
-            this.roundButton14.Name = "roundButton14";
-            this.roundButton14.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton14.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton14.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton14.Size = new System.Drawing.Size(115, 40);
-            this.roundButton14.TabIndex = 166;
-            this.roundButton14.Text = "CLEAR";
-            this.roundButton14.TextColor = System.Drawing.Color.White;
-            this.roundButton14.UseVisualStyleBackColor = true;
+            this.btnEditClearTransD.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditClearTransD.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEditClearTransD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditClearTransD.FlatAppearance.BorderSize = 0;
+            this.btnEditClearTransD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditClearTransD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditClearTransD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditClearTransD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditClearTransD.Location = new System.Drawing.Point(539, 60);
+            this.btnEditClearTransD.Name = "btnEditClearTransD";
+            this.btnEditClearTransD.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditClearTransD.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEditClearTransD.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditClearTransD.Size = new System.Drawing.Size(115, 40);
+            this.btnEditClearTransD.TabIndex = 166;
+            this.btnEditClearTransD.Text = "CLEAR";
+            this.btnEditClearTransD.TextColor = System.Drawing.Color.White;
+            this.btnEditClearTransD.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // txtEditQty
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(611, 160);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox1.TabIndex = 164;
-            this.pictureBox1.TabStop = false;
+            this.txtEditQty.Location = new System.Drawing.Point(497, 117);
+            this.txtEditQty.Name = "txtEditQty";
+            this.txtEditQty.Size = new System.Drawing.Size(157, 29);
+            this.txtEditQty.TabIndex = 123;
             // 
-            // textBox13
+            // txtEditRPItem
             // 
-            this.textBox13.Location = new System.Drawing.Point(497, 160);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(106, 29);
-            this.textBox13.TabIndex = 124;
+            this.txtEditRPItem.Location = new System.Drawing.Point(204, 115);
+            this.txtEditRPItem.Name = "txtEditRPItem";
+            this.txtEditRPItem.Size = new System.Drawing.Size(157, 29);
+            this.txtEditRPItem.TabIndex = 121;
             // 
-            // pictureBox2
+            // txtEditEquipID
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(329, 160);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox2.TabIndex = 163;
-            this.pictureBox2.TabStop = false;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(497, 117);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(157, 29);
-            this.textBox14.TabIndex = 123;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(204, 160);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(112, 29);
-            this.textBox15.TabIndex = 122;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(204, 115);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(157, 29);
-            this.textBox16.TabIndex = 121;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(203, 19);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(157, 29);
-            this.textBox18.TabIndex = 119;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.White;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Location = new System.Drawing.Point(24, 165);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(96, 24);
-            this.label18.TabIndex = 47;
-            this.label18.Text = "End Date";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.White;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label28.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label28.Location = new System.Drawing.Point(383, 163);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(99, 24);
-            this.label28.TabIndex = 46;
-            this.label28.Text = "Start Date";
+            this.txtEditEquipID.Location = new System.Drawing.Point(203, 19);
+            this.txtEditEquipID.Name = "txtEditEquipID";
+            this.txtEditEquipID.Size = new System.Drawing.Size(157, 29);
+            this.txtEditEquipID.TabIndex = 119;
             // 
             // label30
             // 
@@ -1619,6 +1574,73 @@
             // 
             this.errP.ContainerControl = this;
             // 
+            // btnEditTrans
+            // 
+            this.btnEditTrans.BackColor = System.Drawing.Color.White;
+            this.btnEditTrans.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditTrans.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnEditTrans.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditTrans.FlatAppearance.BorderSize = 0;
+            this.btnEditTrans.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEditTrans.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditTrans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditTrans.Location = new System.Drawing.Point(58, 636);
+            this.btnEditTrans.Name = "btnEditTrans";
+            this.btnEditTrans.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditTrans.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnEditTrans.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnEditTrans.Size = new System.Drawing.Size(189, 40);
+            this.btnEditTrans.TabIndex = 252;
+            this.btnEditTrans.Text = "EDIT RENTAL";
+            this.btnEditTrans.TextColor = System.Drawing.Color.White;
+            this.btnEditTrans.UseVisualStyleBackColor = false;
+            this.btnEditTrans.Click += new System.EventHandler(this.btnEditTrans_Click);
+            // 
+            // roundButton2
+            // 
+            this.roundButton2.BackColor = System.Drawing.Color.White;
+            this.roundButton2.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton2.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton2.FlatAppearance.BorderSize = 0;
+            this.roundButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton2.Location = new System.Drawing.Point(264, 636);
+            this.roundButton2.Name = "roundButton2";
+            this.roundButton2.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton2.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton2.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton2.Size = new System.Drawing.Size(189, 40);
+            this.roundButton2.TabIndex = 251;
+            this.roundButton2.Text = "BOOK DELIVERY";
+            this.roundButton2.TextColor = System.Drawing.Color.White;
+            this.roundButton2.UseVisualStyleBackColor = false;
+            // 
+            // roundButton5
+            // 
+            this.roundButton5.BackColor = System.Drawing.Color.White;
+            this.roundButton5.BorderColor = System.Drawing.Color.Silver;
+            this.roundButton5.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.roundButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton5.FlatAppearance.BorderSize = 0;
+            this.roundButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.roundButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.roundButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundButton5.Location = new System.Drawing.Point(475, 636);
+            this.roundButton5.Name = "roundButton5";
+            this.roundButton5.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton5.onHoverButtonColor = System.Drawing.Color.White;
+            this.roundButton5.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.roundButton5.Size = new System.Drawing.Size(189, 40);
+            this.roundButton5.TabIndex = 250;
+            this.roundButton5.Text = "MAKE PAYMENT";
+            this.roundButton5.TextColor = System.Drawing.Color.White;
+            this.roundButton5.UseVisualStyleBackColor = false;
+            // 
             // frmRentals
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1646,14 +1668,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbIconSearchEquip)).EndInit();
             this.tabEdit.ResumeLayout(false);
             this.tabEdit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEdittransSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEdit)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEditTDSearch)).EndInit();
             this.tabDelete.ResumeLayout(false);
             this.tabDelete.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
@@ -1696,13 +1715,9 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox txtEditQty;
+        private System.Windows.Forms.TextBox txtEditRPItem;
+        private System.Windows.Forms.TextBox txtEditEquipID;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label37;
@@ -1721,17 +1736,12 @@
         private RoundButton roundButton9;
         private RoundButton btnCompleteAdd;
         private RoundButton roundButton11;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbEdittransSearch;
         private System.Windows.Forms.PictureBox pbIconSearchEquip;
-        private RoundButton roundButton16;
-        private RoundButton roundButton17;
-        private RoundButton roundButton15;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private RoundButton roundButton13;
-        private RoundButton roundButton14;
+        private RoundButton btnEditClear;
+        private System.Windows.Forms.PictureBox pbEditTDSearch;
+        private RoundButton btnEditEditTransD;
+        private RoundButton btnEditClearTransD;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvAddOrder;
@@ -1746,10 +1756,7 @@
         private System.Windows.Forms.TextBox txtSearchCustTel;
         private System.Windows.Forms.TextBox txtSearchCustName;
         private System.Windows.Forms.Label lblAddTransID;
-        private System.Windows.Forms.Label lblSearchOutstanding;
         private System.Windows.Forms.Label lblSearchTCost;
-        private System.Windows.Forms.Label lbl4354;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox txtAddCustTel;
         private System.Windows.Forms.TextBox txtAddCustName;
         private System.Windows.Forms.Label lblEditOutstanding;
@@ -1771,7 +1778,7 @@
         private System.Windows.Forms.ErrorProvider errP;
         private System.Windows.Forms.DateTimePicker dTPAdd;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpEditDate;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker dtpDeleteDate;
         private System.Windows.Forms.Label label14;
@@ -1780,5 +1787,16 @@
         private System.Windows.Forms.DateTimePicker dtpAddStart;
         private System.Windows.Forms.DateTimePicker dtpAddEnd;
         private System.Windows.Forms.Label lblAddTCost;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label lblSearchBalOwed;
+        private RoundButton btnEditDeleteTransD;
+        private RoundButton btnAddTransD;
+        private System.Windows.Forms.DateTimePicker dtpEditStartD;
+        private System.Windows.Forms.DateTimePicker dtpEditEndD;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label15;
+        private RoundButton btnEditTrans;
+        private RoundButton roundButton2;
+        private RoundButton roundButton5;
     }
 }

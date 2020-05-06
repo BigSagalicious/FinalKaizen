@@ -133,9 +133,7 @@ namespace KaizenMain
                                 lblEditOutstanding.Text = drTrans["BalanceOwed"].ToString();
 
                                 dgvEdit.ClearSelection();
-                                //disableEditTxtboxes();
-                                
-
+                                                                
                                 break;
 
                             }
@@ -1187,11 +1185,6 @@ namespace KaizenMain
         private void roundButton3_Click(object sender, EventArgs e)
         {
             Appointment frm = new Appointment();
-        }
-
-        private void dtpAddDate_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnAddBookDel_Click(object sender, EventArgs e)

@@ -60,6 +60,7 @@
     <Compile Include="Appointment.Designer.cs">
       <DependentUpon>Appointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyPayment.cs" />
     <Compile Include="controls.xaml.cs">
       <DependentUpon>controls.xaml</DependentUpon>
     </Compile>
