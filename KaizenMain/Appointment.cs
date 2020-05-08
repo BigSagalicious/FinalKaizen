@@ -523,17 +523,23 @@ namespace KaizenMain
                                 txtEDesc.Text = drAppointment["AppDesc"].ToString();
 
 
-
+                                
 
                             }
 
 
-                                
+                            dtpEdAppBooked.Enabled = false;
+                            dtpEdAppDate.Enabled = false;
+                            cmbEdTimes.Enabled = false;
+                            cmbEditTransID.Enabled = false;
+                            cmbEdStaffID.Enabled = false;
+                            cmbEdDur.Enabled = false;
+                            txtEDesc.Enabled = false;
 
-                                // disableEditTxtboxes();
-                              
+                            // disableEditTxtboxes();
 
-                                    break;
+
+                            break;
 
                             
                         }
@@ -1049,12 +1055,19 @@ namespace KaizenMain
 
         private void cmbStaff_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void roundButton1_Click_1(object sender, EventArgs e)
         {
             tabApp.SelectedIndex = 3;
+            dtpEdAppBooked.Enabled = false;
+            dtpEdAppDate.Enabled = false;
+            cmbEdTimes.Enabled = false;
+            cmbEditTransID.Enabled = false;
+            cmbEdStaffID.Enabled = false;
+            cmbEdDur.Enabled = false;
+            txtEDesc.Enabled = false;
 
 
         }
@@ -1062,6 +1075,15 @@ namespace KaizenMain
         private void roundButton3_Click(object sender, EventArgs e)
         {
             tabApp.SelectedIndex = 4;
+            txtDLAppDate.Enabled = false;
+            txtDLDateB.Enabled = false;
+            txtDlAppTime.Enabled = false;
+            txtDLTransID.Enabled = false;
+            txtDLStaffID.Enabled = false;
+            txtDLDuration.Enabled = false;
+            txtDDesc.Enabled = false;
+            txtDLSearch.Enabled = false;
+            
         }
 
         private void roundButton2_Click(object sender, EventArgs e)
@@ -1072,10 +1094,10 @@ namespace KaizenMain
         
         private void btnEditApp_Click(object sender, EventArgs e)
         {
-            if (btnEditApp.Text == "EDIT")
+            if (btnEditApp.Text.TrimEnd()=="EDIT")
             {
-               
 
+               
                     dtpEdAppBooked.Enabled=false;
                     dtpEdAppDate.Enabled = true;
                     cmbEdTimes.Enabled = true;
@@ -1087,7 +1109,7 @@ namespace KaizenMain
                 
 
 
-                btnEditApp.Text = "SAVE";
+                btnEditApp.Text= "SAVE";
             }
             else
             {
@@ -1210,8 +1232,10 @@ namespace KaizenMain
                         daAppointment.UpdateCommand = daAppoinment.GetUpdateCommand();
                         daAppointment.Update(dsKaizen, "Appointment");
                         MessageBox.Show("Appointment Updated");
+                        btnEditApp.Text = "EDIT";
 
                         tabApp.SelectedIndex = 0;
+                        DisplayApps();
 
                     }
                 }
@@ -1227,7 +1251,7 @@ namespace KaizenMain
         private void btnDelDel_Click(object sender, EventArgs e)
         {
 
- 
+            
             drAppointment = dsKaizen.Tables["Appointment"].Rows.Find(txtDLSearch.Text);
 
             string tempName = drAppointment["AppID"].ToString() + "\'s";
@@ -1239,7 +1263,8 @@ namespace KaizenMain
                      daAppointment.UpdateCommand = daAppoinment.GetUpdateCommand();
                      daAppointment.Update(dsKaizen, "Appointment");
                      MessageBox.Show("Details Removed for " + tempName);
-                     tabApp.SelectedIndex = 0; 
+                     tabApp.SelectedIndex = 0;
+                     DisplayApps();
                     //clearDeleteForm();
 
                 }
@@ -1264,16 +1289,29 @@ namespace KaizenMain
 
         private void cmbStaff_SelectedValueChanged(object sender, EventArgs e)
         {
-            //btnRefresh_Click(sender, e);
+           
 
 
         }
 
         private void cmbStaff_DropDownClosed(object sender, EventArgs e)
         {
+            //if (cmbAStaffID.SelectedIndex > 0)
+            //{
+            //    txtDisFor.Text = drStaff["StaffFName"].ToString();
+            //    txtDisSur.Text = drStaff["StaffSName"].ToString();
+            //    DisplayApps();
+            //}
+            drStaff = dsKaizen.Tables["Staff"].Rows.Find(cmbAStaffID.SelectedValue);
+            if (cmbAStaffID.SelectedValue.Equals(drStaff["StaffID"]))
+            {
+                txtDisFor.Text = drStaff["StaffFName"].ToString();
+                txtDisSur.Text = drStaff["StaffSName"].ToString();
+
+            }
             DisplayApps();
-            //btnRefresh_Click(sender, e);
-            
+
+            btnRefresh_Click(sender, e);
 
         }
 
@@ -1431,13 +1469,11 @@ namespace KaizenMain
             cmdAppointment.Parameters["@FrmDt"].Value = weekStart;
             cmdAppointment.Parameters["@ToDt"].Value = weekEnd.AddDays(6);
             drStaff = dsKaizen.Tables["Staff"].Rows.Find(cmbAStaffID.SelectedValue);
-           // if (cmbAStaffID.SelectedValue.Equals(drStaff["StaffID"]))
-            
-                
-            if (cmbAStaffID.SelectedItem != null)
+           if (cmbAStaffID.SelectedValue.Equals(drStaff["StaffID"]))
             {
                 txtDisFor.Text = drStaff["StaffFName"].ToString();
                 txtDisSur.Text = drStaff["StaffSName"].ToString();
+                
             }
 
             
@@ -1445,7 +1481,10 @@ namespace KaizenMain
 
 
 
-                daAppointment.Fill(dsKaizen, "Appointment");
+
+
+
+            daAppointment.Fill(dsKaizen, "Appointment");
 
            
 

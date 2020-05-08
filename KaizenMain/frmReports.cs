@@ -84,7 +84,7 @@ namespace KaizenMain
         private void roundButton1_Click(object sender, EventArgs e)
         {
             var cryRpt = new ReportDocument();
-            cryRpt.Load(@"C:\Users\gareth\Source\Repos\BigSagalicious\FinalKaizen\KaizenMain\Appointment.rpt");
+            cryRpt.Load(@"C:\Users\gareth\Source\Repos\BigSagalicious\FinalKaizen\KaizenMain\AppsByMonth.rpt");
             crystalReportViewer2.ReportSource = cryRpt;
             crystalReportViewer2.Refresh();
         }

@@ -31,8 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.tabStaff = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
+            this.btnDisEdit = new KaizenMain.RoundButton();
+            this.btnDisSearch = new KaizenMain.RoundButton();
+            this.btnDisAdd = new KaizenMain.RoundButton();
+            this.btnDisDel = new KaizenMain.RoundButton();
             this.dgvStaff = new System.Windows.Forms.DataGridView();
             this.tabSearch = new System.Windows.Forms.TabPage();
+            this.lbTel = new System.Windows.Forms.ListBox();
+            this.lbEmail = new System.Windows.Forms.ListBox();
+            this.lbJobDesc = new System.Windows.Forms.ListBox();
+            this.lbJob = new System.Windows.Forms.ListBox();
             this.lbID = new System.Windows.Forms.ListBox();
             this.lblSID = new System.Windows.Forms.Label();
             this.txtSeName = new System.Windows.Forms.TextBox();
@@ -93,14 +101,6 @@
             this.lblDeStaffID = new System.Windows.Forms.Label();
             this.btnDeDelete = new KaizenMain.RoundButton();
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lbTel = new System.Windows.Forms.ListBox();
-            this.lbEmail = new System.Windows.Forms.ListBox();
-            this.lbJobDesc = new System.Windows.Forms.ListBox();
-            this.lbJob = new System.Windows.Forms.ListBox();
-            this.btnDisDel = new KaizenMain.RoundButton();
-            this.btnDisAdd = new KaizenMain.RoundButton();
-            this.btnDisSearch = new KaizenMain.RoundButton();
-            this.btnDisEdit = new KaizenMain.RoundButton();
             this.tabStaff.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
@@ -152,6 +152,98 @@
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "DISPLAY";
             // 
+            // btnDisEdit
+            // 
+            this.btnDisEdit.BackColor = System.Drawing.Color.White;
+            this.btnDisEdit.BorderColor = System.Drawing.Color.Silver;
+            this.btnDisEdit.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnDisEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDisEdit.FlatAppearance.BorderSize = 0;
+            this.btnDisEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDisEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDisEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDisEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisEdit.Location = new System.Drawing.Point(368, 344);
+            this.btnDisEdit.Name = "btnDisEdit";
+            this.btnDisEdit.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDisEdit.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnDisEdit.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDisEdit.Size = new System.Drawing.Size(135, 40);
+            this.btnDisEdit.TabIndex = 248;
+            this.btnDisEdit.Text = "EDIT";
+            this.btnDisEdit.TextColor = System.Drawing.Color.White;
+            this.btnDisEdit.UseVisualStyleBackColor = false;
+            this.btnDisEdit.Click += new System.EventHandler(this.btnDisEdit_Click);
+            // 
+            // btnDisSearch
+            // 
+            this.btnDisSearch.BackColor = System.Drawing.Color.White;
+            this.btnDisSearch.BorderColor = System.Drawing.Color.Silver;
+            this.btnDisSearch.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnDisSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDisSearch.FlatAppearance.BorderSize = 0;
+            this.btnDisSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDisSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDisSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDisSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisSearch.Location = new System.Drawing.Point(8, 344);
+            this.btnDisSearch.Name = "btnDisSearch";
+            this.btnDisSearch.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDisSearch.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnDisSearch.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDisSearch.Size = new System.Drawing.Size(126, 40);
+            this.btnDisSearch.TabIndex = 247;
+            this.btnDisSearch.Text = "SEARCH";
+            this.btnDisSearch.TextColor = System.Drawing.Color.White;
+            this.btnDisSearch.UseVisualStyleBackColor = false;
+            this.btnDisSearch.Click += new System.EventHandler(this.btnDisSearch_Click);
+            // 
+            // btnDisAdd
+            // 
+            this.btnDisAdd.BackColor = System.Drawing.Color.White;
+            this.btnDisAdd.BorderColor = System.Drawing.Color.Silver;
+            this.btnDisAdd.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnDisAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDisAdd.FlatAppearance.BorderSize = 0;
+            this.btnDisAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDisAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDisAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDisAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisAdd.Location = new System.Drawing.Point(186, 344);
+            this.btnDisAdd.Name = "btnDisAdd";
+            this.btnDisAdd.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDisAdd.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnDisAdd.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDisAdd.Size = new System.Drawing.Size(126, 40);
+            this.btnDisAdd.TabIndex = 246;
+            this.btnDisAdd.Text = "ADD";
+            this.btnDisAdd.TextColor = System.Drawing.Color.White;
+            this.btnDisAdd.UseVisualStyleBackColor = false;
+            this.btnDisAdd.Click += new System.EventHandler(this.btnDisAdd_Click);
+            // 
+            // btnDisDel
+            // 
+            this.btnDisDel.BackColor = System.Drawing.Color.White;
+            this.btnDisDel.BorderColor = System.Drawing.Color.Silver;
+            this.btnDisDel.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.btnDisDel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDisDel.FlatAppearance.BorderSize = 0;
+            this.btnDisDel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDisDel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDisDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDisDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisDel.Location = new System.Drawing.Point(555, 344);
+            this.btnDisDel.Name = "btnDisDel";
+            this.btnDisDel.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDisDel.onHoverButtonColor = System.Drawing.Color.White;
+            this.btnDisDel.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
+            this.btnDisDel.Size = new System.Drawing.Size(125, 40);
+            this.btnDisDel.TabIndex = 245;
+            this.btnDisDel.Text = "DELETE";
+            this.btnDisDel.TextColor = System.Drawing.Color.White;
+            this.btnDisDel.UseVisualStyleBackColor = false;
+            this.btnDisDel.Click += new System.EventHandler(this.btnDisDel_Click);
+            // 
             // dgvStaff
             // 
             this.dgvStaff.AllowUserToAddRows = false;
@@ -159,7 +251,7 @@
             this.dgvStaff.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStaff.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dgvStaff.Location = new System.Drawing.Point(6, 6);
+            this.dgvStaff.Location = new System.Drawing.Point(8, 49);
             this.dgvStaff.MultiSelect = false;
             this.dgvStaff.Name = "dgvStaff";
             this.dgvStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -195,6 +287,42 @@
             this.tabSearch.TabIndex = 1;
             this.tabSearch.Text = "SEARCH";
             this.tabSearch.Click += new System.EventHandler(this.tabSearch_Click);
+            // 
+            // lbTel
+            // 
+            this.lbTel.FormattingEnabled = true;
+            this.lbTel.ItemHeight = 24;
+            this.lbTel.Location = new System.Drawing.Point(166, 437);
+            this.lbTel.Name = "lbTel";
+            this.lbTel.Size = new System.Drawing.Size(342, 28);
+            this.lbTel.TabIndex = 257;
+            // 
+            // lbEmail
+            // 
+            this.lbEmail.FormattingEnabled = true;
+            this.lbEmail.ItemHeight = 24;
+            this.lbEmail.Location = new System.Drawing.Point(166, 392);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(342, 28);
+            this.lbEmail.TabIndex = 256;
+            // 
+            // lbJobDesc
+            // 
+            this.lbJobDesc.FormattingEnabled = true;
+            this.lbJobDesc.ItemHeight = 24;
+            this.lbJobDesc.Location = new System.Drawing.Point(168, 299);
+            this.lbJobDesc.Name = "lbJobDesc";
+            this.lbJobDesc.Size = new System.Drawing.Size(539, 28);
+            this.lbJobDesc.TabIndex = 255;
+            // 
+            // lbJob
+            // 
+            this.lbJob.FormattingEnabled = true;
+            this.lbJob.ItemHeight = 24;
+            this.lbJob.Location = new System.Drawing.Point(166, 228);
+            this.lbJob.Name = "lbJob";
+            this.lbJob.Size = new System.Drawing.Size(293, 28);
+            this.lbJob.TabIndex = 254;
             // 
             // lbID
             // 
@@ -840,134 +968,6 @@
             // errP
             // 
             this.errP.ContainerControl = this;
-            // 
-            // lbTel
-            // 
-            this.lbTel.FormattingEnabled = true;
-            this.lbTel.ItemHeight = 24;
-            this.lbTel.Location = new System.Drawing.Point(166, 437);
-            this.lbTel.Name = "lbTel";
-            this.lbTel.Size = new System.Drawing.Size(342, 28);
-            this.lbTel.TabIndex = 257;
-            // 
-            // lbEmail
-            // 
-            this.lbEmail.FormattingEnabled = true;
-            this.lbEmail.ItemHeight = 24;
-            this.lbEmail.Location = new System.Drawing.Point(166, 392);
-            this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(342, 28);
-            this.lbEmail.TabIndex = 256;
-            // 
-            // lbJobDesc
-            // 
-            this.lbJobDesc.FormattingEnabled = true;
-            this.lbJobDesc.ItemHeight = 24;
-            this.lbJobDesc.Location = new System.Drawing.Point(168, 299);
-            this.lbJobDesc.Name = "lbJobDesc";
-            this.lbJobDesc.Size = new System.Drawing.Size(539, 28);
-            this.lbJobDesc.TabIndex = 255;
-            // 
-            // lbJob
-            // 
-            this.lbJob.FormattingEnabled = true;
-            this.lbJob.ItemHeight = 24;
-            this.lbJob.Location = new System.Drawing.Point(166, 228);
-            this.lbJob.Name = "lbJob";
-            this.lbJob.Size = new System.Drawing.Size(293, 28);
-            this.lbJob.TabIndex = 254;
-            // 
-            // btnDisDel
-            // 
-            this.btnDisDel.BackColor = System.Drawing.Color.White;
-            this.btnDisDel.BorderColor = System.Drawing.Color.Silver;
-            this.btnDisDel.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnDisDel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDisDel.FlatAppearance.BorderSize = 0;
-            this.btnDisDel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDisDel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDisDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDisDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisDel.Location = new System.Drawing.Point(558, 293);
-            this.btnDisDel.Name = "btnDisDel";
-            this.btnDisDel.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDisDel.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnDisDel.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDisDel.Size = new System.Drawing.Size(125, 40);
-            this.btnDisDel.TabIndex = 245;
-            this.btnDisDel.Text = "DELETE";
-            this.btnDisDel.TextColor = System.Drawing.Color.White;
-            this.btnDisDel.UseVisualStyleBackColor = false;
-            this.btnDisDel.Click += new System.EventHandler(this.btnDisDel_Click);
-            // 
-            // btnDisAdd
-            // 
-            this.btnDisAdd.BackColor = System.Drawing.Color.White;
-            this.btnDisAdd.BorderColor = System.Drawing.Color.Silver;
-            this.btnDisAdd.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnDisAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDisAdd.FlatAppearance.BorderSize = 0;
-            this.btnDisAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDisAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDisAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDisAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisAdd.Location = new System.Drawing.Point(186, 293);
-            this.btnDisAdd.Name = "btnDisAdd";
-            this.btnDisAdd.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDisAdd.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnDisAdd.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDisAdd.Size = new System.Drawing.Size(126, 40);
-            this.btnDisAdd.TabIndex = 246;
-            this.btnDisAdd.Text = "ADD";
-            this.btnDisAdd.TextColor = System.Drawing.Color.White;
-            this.btnDisAdd.UseVisualStyleBackColor = false;
-            this.btnDisAdd.Click += new System.EventHandler(this.btnDisAdd_Click);
-            // 
-            // btnDisSearch
-            // 
-            this.btnDisSearch.BackColor = System.Drawing.Color.White;
-            this.btnDisSearch.BorderColor = System.Drawing.Color.Silver;
-            this.btnDisSearch.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnDisSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDisSearch.FlatAppearance.BorderSize = 0;
-            this.btnDisSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDisSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDisSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDisSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisSearch.Location = new System.Drawing.Point(8, 293);
-            this.btnDisSearch.Name = "btnDisSearch";
-            this.btnDisSearch.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDisSearch.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnDisSearch.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDisSearch.Size = new System.Drawing.Size(126, 40);
-            this.btnDisSearch.TabIndex = 247;
-            this.btnDisSearch.Text = "SEARCH";
-            this.btnDisSearch.TextColor = System.Drawing.Color.White;
-            this.btnDisSearch.UseVisualStyleBackColor = false;
-            this.btnDisSearch.Click += new System.EventHandler(this.btnDisSearch_Click);
-            // 
-            // btnDisEdit
-            // 
-            this.btnDisEdit.BackColor = System.Drawing.Color.White;
-            this.btnDisEdit.BorderColor = System.Drawing.Color.Silver;
-            this.btnDisEdit.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnDisEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDisEdit.FlatAppearance.BorderSize = 0;
-            this.btnDisEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDisEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDisEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDisEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisEdit.Location = new System.Drawing.Point(372, 293);
-            this.btnDisEdit.Name = "btnDisEdit";
-            this.btnDisEdit.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDisEdit.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnDisEdit.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnDisEdit.Size = new System.Drawing.Size(135, 40);
-            this.btnDisEdit.TabIndex = 248;
-            this.btnDisEdit.Text = "EDIT";
-            this.btnDisEdit.TextColor = System.Drawing.Color.White;
-            this.btnDisEdit.UseVisualStyleBackColor = false;
-            this.btnDisEdit.Click += new System.EventHandler(this.btnDisEdit_Click);
             // 
             // FrmStaff
             // 

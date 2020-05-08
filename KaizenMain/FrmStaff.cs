@@ -42,8 +42,8 @@ namespace KaizenMain
         private void Staff_load(object sender, EventArgs e)
         {
             //connStr = @"Data Source = .\ADAM-PC; Initial Catalog = Kaizen;Integrated Security = true ";
-            //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-            connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+            connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
+            //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
             sqlStaffDetails = @"Select StaffID,StaffSName, StaffFName,StaffSName+','+StaffFName as name,Job, JobDesc, StaffTel, StaffEmail from staff where StaffSName LIKE @Name Order by StaffID";
             conn = new SqlConnection(connStr);
@@ -403,7 +403,7 @@ namespace KaizenMain
 
         private void btnEdEdit_Click(object sender, EventArgs e)
         {
-            if (btnEdEdit.Text == "EDIT")
+            if (btnEdEdit.Text.Trim() == "EDIT")
             {
 
                 enableEditTxtboxes();
@@ -507,8 +507,8 @@ namespace KaizenMain
                         drStaff.EndEdit();
                         daStaff.Update(dsKaizen, "Staff");
 
-                        btnEdEdit.Text = "EDIT ";
-                        disableEditTxtboxes();
+                        btnEdEdit.Text = "EDIT";
+                        
                         MessageBox.Show("Employee Details Updated", "Staff");
 
                         
@@ -516,8 +516,8 @@ namespace KaizenMain
                         
                         tabStaff.SelectedIndex = 0;
 
+                        disableEditTxtboxes();
 
-                        
                     }
 
                 }
@@ -609,6 +609,18 @@ namespace KaizenMain
         private void btnDisDel_Click(object sender, EventArgs e)
         {
             tabStaff.SelectedIndex = 4;
+            txtDeEmail.Enabled = false;
+            txtDeForeN.Enabled = false;
+            txtDeJobR.Enabled = false;
+            txtDeStaffID.Enabled = false;
+            txtDeSurN.Enabled = false;
+            txtDeTel.Enabled = false;
+            txtDeJobDesc.Enabled = false;
+        }
+
+        private void txtSearchDisStaff_TextChanged(object sender, EventArgs e)
+        {
+            
         }
 
         private void enableEditTxtboxes()

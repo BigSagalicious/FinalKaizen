@@ -67,6 +67,12 @@
     <Compile Include="Appointment.Designer.cs">
       <DependentUpon>Appointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppsByMonth.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppsByMonth.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="MyPayment.cs" />
     <Compile Include="controls.xaml.cs">
       <DependentUpon>controls.xaml</DependentUpon>
@@ -190,9 +196,9 @@
     <EmbeddedResource Include="Appointment.resx">
       <DependentUpon>Appointment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Appointment.rpt">
+    <EmbeddedResource Include="AppsByMonth.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Appointment1.cs</LastGenOutput>
+      <LastGenOutput>AppsByMonth.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
