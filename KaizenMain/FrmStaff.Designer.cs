@@ -56,7 +56,6 @@
             this.lblAddStaffID = new System.Windows.Forms.Label();
             this.lblAJobDesc = new System.Windows.Forms.Label();
             this.txtAJobDesc = new System.Windows.Forms.TextBox();
-            this.txtAJobR = new System.Windows.Forms.TextBox();
             this.lblAJobR = new System.Windows.Forms.Label();
             this.txtATel = new System.Windows.Forms.TextBox();
             this.txtAEmail = new System.Windows.Forms.TextBox();
@@ -101,6 +100,7 @@
             this.lblDeStaffID = new System.Windows.Forms.Label();
             this.btnDeDelete = new KaizenMain.RoundButton();
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cmbAJr = new System.Windows.Forms.ComboBox();
             this.tabStaff.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
@@ -426,11 +426,11 @@
             this.tabAdd.BackColor = System.Drawing.Color.White;
             this.tabAdd.BackgroundImage = global::KaizenMain.Properties.Resources.Faded_logo2;
             this.tabAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabAdd.Controls.Add(this.cmbAJr);
             this.tabAdd.Controls.Add(this.btnClearAdd);
             this.tabAdd.Controls.Add(this.lblAddStaffID);
             this.tabAdd.Controls.Add(this.lblAJobDesc);
             this.tabAdd.Controls.Add(this.txtAJobDesc);
-            this.tabAdd.Controls.Add(this.txtAJobR);
             this.tabAdd.Controls.Add(this.lblAJobR);
             this.tabAdd.Controls.Add(this.txtATel);
             this.tabAdd.Controls.Add(this.txtAEmail);
@@ -497,13 +497,6 @@
             this.txtAJobDesc.Name = "txtAJobDesc";
             this.txtAJobDesc.Size = new System.Drawing.Size(291, 104);
             this.txtAJobDesc.TabIndex = 241;
-            // 
-            // txtAJobR
-            // 
-            this.txtAJobR.Location = new System.Drawing.Point(198, 155);
-            this.txtAJobR.Name = "txtAJobR";
-            this.txtAJobR.Size = new System.Drawing.Size(291, 29);
-            this.txtAJobR.TabIndex = 240;
             // 
             // lblAJobR
             // 
@@ -969,6 +962,14 @@
             // 
             this.errP.ContainerControl = this;
             // 
+            // cmbAJr
+            // 
+            this.cmbAJr.FormattingEnabled = true;
+            this.cmbAJr.Location = new System.Drawing.Point(197, 162);
+            this.cmbAJr.Name = "cmbAJr";
+            this.cmbAJr.Size = new System.Drawing.Size(291, 32);
+            this.cmbAJr.TabIndex = 245;
+            // 
             // FrmStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1006,7 +1007,6 @@
         private System.Windows.Forms.Label lblAddStaffID;
         private System.Windows.Forms.Label lblAJobDesc;
         private System.Windows.Forms.TextBox txtAJobDesc;
-        private System.Windows.Forms.TextBox txtAJobR;
         private System.Windows.Forms.Label lblAJobR;
         private System.Windows.Forms.TextBox txtATel;
         private System.Windows.Forms.TextBox txtAEmail;
@@ -1070,5 +1070,6 @@
         private RoundButton btnDisSearch;
         private RoundButton btnDisAdd;
         private RoundButton btnDisDel;
+        private System.Windows.Forms.ComboBox cmbAJr;
     }
 }

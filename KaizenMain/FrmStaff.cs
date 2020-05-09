@@ -13,14 +13,16 @@ namespace KaizenMain
 {
     public partial class FrmStaff : Form
     {
-        SqlDataAdapter daStaff,daStaffDetails;
+        SqlDataAdapter daStaff,daStaffDetails,daJr;
         DataSet dsKaizen = new DataSet();
         SqlCommandBuilder cmdBStaff;
         SqlCommand cmbStaffDetails;
+        SqlCommandBuilder cmdJr;
         DataRow drStaff;
+        DataRow drJr;
         DataRow drStaffDetails;
         SqlConnection conn;
-        String connStr, sqlStaff,sqlStaffDetails;
+        String connStr, sqlStaff,sqlStaffDetails,sqlJr;
         int selectedTab = 0;
         bool staffSelected = false;
         int staffIDSelected = 0;
@@ -61,7 +63,14 @@ namespace KaizenMain
             dgvStaff.DataSource = dsKaizen.Tables["Staff"];
             dgvStaff.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
-            
+            sqlJr = @"select * from JobRole";
+            daJr = new SqlDataAdapter(sqlJr, connStr);
+            cmdJr = new SqlCommandBuilder(daStaff);
+            daJr.FillSchema(dsKaizen, SchemaType.Source, "JobRole");
+            daJr.Fill(dsKaizen, "JobRole");
+            cmbAJr.DataSource = dsKaizen.Tables["JobRole"];
+            cmbAJr.ValueMember = "Job";
+            cmbAJr.DisplayMember = "Job";
 
             tabStaff.SelectedIndex = 1;
             tabStaff.SelectedIndex = 0;
@@ -333,13 +342,13 @@ namespace KaizenMain
 
             try
             {
-                myStaff.Job = txtAJobR.Text.Trim();
+                myStaff.Job = cmbAJr.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtAJobR, MyEx.toString());
+                errP.SetError(cmbAJr, MyEx.toString());
             }
 
             try
@@ -537,7 +546,7 @@ namespace KaizenMain
             txtAEmail.Clear();
             txtAForeN.Clear();
             txtAJobDesc.Clear();
-            txtAJobR.Clear();
+            cmbAJr.SelectedIndex=0;
             txtASurN.Clear();
             txtATel.Clear();
 
@@ -563,9 +572,10 @@ namespace KaizenMain
                     daStaff.Update(dsKaizen, "Staff");
                     MessageBox.Show("Details Removed for " + tempName);
                     //clearDeleteForm();
-
+                    IDNumber += 1;
+                    tabStaff.SelectedIndex = 0;
                 }
-
+                
             }
         }
 
