@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabService = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
             this.dgvService = new System.Windows.Forms.DataGridView();
@@ -44,7 +45,6 @@
             this.txtSearchCustID = new System.Windows.Forms.TextBox();
             this.dgvSearch = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
-            this.roundButton7 = new KaizenMain.RoundButton();
             this.btnSearchClear = new KaizenMain.RoundButton();
             this.pbSearchSearh = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -77,7 +77,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.roundButton1 = new KaizenMain.RoundButton();
             this.btnAddService = new KaizenMain.RoundButton();
-            this.roundButton9 = new KaizenMain.RoundButton();
             this.tabEdit = new System.Windows.Forms.TabPage();
             this.lblEditOutstanding = new System.Windows.Forms.Label();
             this.lblEditTCost = new System.Windows.Forms.Label();
@@ -111,7 +110,6 @@
             this.label31 = new System.Windows.Forms.Label();
             this.btnEditClear = new KaizenMain.RoundButton();
             this.btnEditService = new KaizenMain.RoundButton();
-            this.roundButton14 = new KaizenMain.RoundButton();
             this.tabDelete = new System.Windows.Forms.TabPage();
             this.txtDeleteCustTel = new System.Windows.Forms.TextBox();
             this.txtDeleteCustName = new System.Windows.Forms.TextBox();
@@ -191,6 +189,14 @@
             // 
             this.dgvService.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvService.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvService.Location = new System.Drawing.Point(6, 9);
             this.dgvService.Name = "dgvService";
             this.dgvService.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -213,7 +219,6 @@
             this.tabSearch.Controls.Add(this.txtSearchCustID);
             this.tabSearch.Controls.Add(this.dgvSearch);
             this.tabSearch.Controls.Add(this.label11);
-            this.tabSearch.Controls.Add(this.roundButton7);
             this.tabSearch.Controls.Add(this.btnSearchClear);
             this.tabSearch.Controls.Add(this.pbSearchSearh);
             this.tabSearch.Controls.Add(this.label9);
@@ -331,27 +336,6 @@
             this.label11.TabIndex = 234;
             this.label11.Text = "Customer ID";
             // 
-            // roundButton7
-            // 
-            this.roundButton7.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton7.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton7.FlatAppearance.BorderSize = 0;
-            this.roundButton7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton7.Location = new System.Drawing.Point(270, 636);
-            this.roundButton7.Name = "roundButton7";
-            this.roundButton7.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton7.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton7.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton7.Size = new System.Drawing.Size(189, 40);
-            this.roundButton7.TabIndex = 187;
-            this.roundButton7.Text = "E-MAIL SERVICE";
-            this.roundButton7.TextColor = System.Drawing.Color.White;
-            this.roundButton7.UseVisualStyleBackColor = true;
-            // 
             // btnSearchClear
             // 
             this.btnSearchClear.BorderColor = System.Drawing.Color.Silver;
@@ -435,7 +419,6 @@
             this.tabAdd.Controls.Add(this.panel1);
             this.tabAdd.Controls.Add(this.roundButton1);
             this.tabAdd.Controls.Add(this.btnAddService);
-            this.tabAdd.Controls.Add(this.roundButton9);
             this.tabAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabAdd.Location = new System.Drawing.Point(4, 29);
             this.tabAdd.Name = "tabAdd";
@@ -745,7 +728,7 @@
             this.btnAddService.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAddService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddService.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddService.Location = new System.Drawing.Point(156, 631);
+            this.btnAddService.Location = new System.Drawing.Point(288, 626);
             this.btnAddService.Name = "btnAddService";
             this.btnAddService.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
             this.btnAddService.onHoverButtonColor = System.Drawing.Color.White;
@@ -756,27 +739,6 @@
             this.btnAddService.TextColor = System.Drawing.Color.White;
             this.btnAddService.UseVisualStyleBackColor = true;
             this.btnAddService.Click += new System.EventHandler(this.btnAddCompleteOrder_Click);
-            // 
-            // roundButton9
-            // 
-            this.roundButton9.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton9.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton9.FlatAppearance.BorderSize = 0;
-            this.roundButton9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton9.Location = new System.Drawing.Point(356, 631);
-            this.roundButton9.Name = "roundButton9";
-            this.roundButton9.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton9.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton9.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton9.Size = new System.Drawing.Size(189, 40);
-            this.roundButton9.TabIndex = 164;
-            this.roundButton9.Text = "E-MAIL SERVICE";
-            this.roundButton9.TextColor = System.Drawing.Color.White;
-            this.roundButton9.UseVisualStyleBackColor = true;
             // 
             // tabEdit
             // 
@@ -802,7 +764,6 @@
             this.tabEdit.Controls.Add(this.panel2);
             this.tabEdit.Controls.Add(this.btnEditClear);
             this.tabEdit.Controls.Add(this.btnEditService);
-            this.tabEdit.Controls.Add(this.roundButton14);
             this.tabEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabEdit.Location = new System.Drawing.Point(4, 29);
             this.tabEdit.Name = "tabEdit";
@@ -1203,7 +1164,7 @@
             this.btnEditService.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEditService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditService.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditService.Location = new System.Drawing.Point(156, 629);
+            this.btnEditService.Location = new System.Drawing.Point(277, 636);
             this.btnEditService.Name = "btnEditService";
             this.btnEditService.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
             this.btnEditService.onHoverButtonColor = System.Drawing.Color.White;
@@ -1214,27 +1175,6 @@
             this.btnEditService.TextColor = System.Drawing.Color.White;
             this.btnEditService.UseVisualStyleBackColor = true;
             this.btnEditService.Click += new System.EventHandler(this.btnEditTrans_Click);
-            // 
-            // roundButton14
-            // 
-            this.roundButton14.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton14.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton14.FlatAppearance.BorderSize = 0;
-            this.roundButton14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton14.Location = new System.Drawing.Point(369, 629);
-            this.roundButton14.Name = "roundButton14";
-            this.roundButton14.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton14.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton14.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton14.Size = new System.Drawing.Size(189, 40);
-            this.roundButton14.TabIndex = 164;
-            this.roundButton14.Text = "E-MAIL SERVICE";
-            this.roundButton14.TextColor = System.Drawing.Color.White;
-            this.roundButton14.UseVisualStyleBackColor = true;
             // 
             // tabDelete
             // 
@@ -1510,11 +1450,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pbSearchSearh;
         private RoundButton btnSearchClear;
-        private RoundButton roundButton7;
         private RoundButton btnAddService;
-        private RoundButton roundButton9;
         private RoundButton btnEditService;
-        private RoundButton roundButton14;
         private System.Windows.Forms.DataGridView dgvService;
         private System.Windows.Forms.TextBox txtSearchCustTel;
         private System.Windows.Forms.TextBox txtSearchCustName;

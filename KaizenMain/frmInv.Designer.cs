@@ -29,10 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInv));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabInv = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
             this.dgvPayTrans = new System.Windows.Forms.DataGridView();
+            this.tabPastPayments = new System.Windows.Forms.TabPage();
+            this.dgvPayments = new System.Windows.Forms.DataGridView();
+            this.errP = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabMakePay = new System.Windows.Forms.TabPage();
             this.dtpPPay = new System.Windows.Forms.DateTimePicker();
             this.lblPPayOut = new System.Windows.Forms.Label();
@@ -56,6 +63,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabAddCreditAcc = new System.Windows.Forms.TabPage();
+            this.lblSICustName = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblPayTodayTot = new System.Windows.Forms.Label();
             this.lblMultiOutstanding = new System.Windows.Forms.Label();
@@ -70,13 +78,12 @@
             this.btnMultiClear = new KaizenMain.RoundButton();
             this.txtCustID = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.tabPastPayments = new System.Windows.Forms.TabPage();
-            this.errP = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblSICustName = new System.Windows.Forms.Label();
-            this.dgvPayments = new System.Windows.Forms.DataGridView();
             this.tabInv.SuspendLayout();
             this.tabDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayTrans)).BeginInit();
+            this.tabPastPayments.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
             this.tabMakePay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBPPayTransSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPPay)).BeginInit();
@@ -86,9 +93,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMultiPay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoadTrans)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearchCustomer)).BeginInit();
-            this.tabPastPayments.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).BeginInit();
             this.SuspendLayout();
             // 
             // tabInv
@@ -127,11 +131,51 @@
             // 
             this.dgvPayTrans.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvPayTrans.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPayTrans.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvPayTrans.Location = new System.Drawing.Point(6, 9);
             this.dgvPayTrans.Name = "dgvPayTrans";
             this.dgvPayTrans.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPayTrans.Size = new System.Drawing.Size(722, 670);
             this.dgvPayTrans.TabIndex = 1;
+            // 
+            // tabPastPayments
+            // 
+            this.tabPastPayments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.tabPastPayments.Controls.Add(this.dgvPayments);
+            this.tabPastPayments.Location = new System.Drawing.Point(4, 29);
+            this.tabPastPayments.Name = "tabPastPayments";
+            this.tabPastPayments.Size = new System.Drawing.Size(734, 688);
+            this.tabPastPayments.TabIndex = 3;
+            this.tabPastPayments.Text = "PAST PAYMENTS";
+            // 
+            // dgvPayments
+            // 
+            this.dgvPayments.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPayments.DefaultCellStyle = dataGridViewCellStyle16;
+            this.dgvPayments.Location = new System.Drawing.Point(6, 9);
+            this.dgvPayments.Name = "dgvPayments";
+            this.dgvPayments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPayments.Size = new System.Drawing.Size(722, 670);
+            this.dgvPayments.TabIndex = 2;
+            // 
+            // errP
+            // 
+            this.errP.ContainerControl = this;
             // 
             // tabMakePay
             // 
@@ -298,6 +342,7 @@
             this.pBPPayTransSearch.Size = new System.Drawing.Size(43, 31);
             this.pBPPayTransSearch.TabIndex = 169;
             this.pBPPayTransSearch.TabStop = false;
+            this.pBPPayTransSearch.Click += new System.EventHandler(this.pBPPayTransSearch_Click);
             // 
             // roundButton15
             // 
@@ -319,6 +364,7 @@
             this.roundButton15.Text = "CLEAR";
             this.roundButton15.TextColor = System.Drawing.Color.White;
             this.roundButton15.UseVisualStyleBackColor = true;
+            this.roundButton15.Click += new System.EventHandler(this.roundButton15_Click);
             // 
             // dgvPPay
             // 
@@ -421,6 +467,16 @@
             this.tabAddCreditAcc.TabIndex = 2;
             this.tabAddCreditAcc.Text = "SETTLE INVOICE";
             // 
+            // lblSICustName
+            // 
+            this.lblSICustName.AutoSize = true;
+            this.lblSICustName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblSICustName.Location = new System.Drawing.Point(148, 83);
+            this.lblSICustName.Name = "lblSICustName";
+            this.lblSICustName.Size = new System.Drawing.Size(160, 24);
+            this.lblSICustName.TabIndex = 209;
+            this.lblSICustName.Text = "Customer Name";
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -497,6 +553,14 @@
             // 
             this.dgvMultiPay.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvMultiPay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMultiPay.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvMultiPay.Location = new System.Drawing.Point(412, 127);
             this.dgvMultiPay.Name = "dgvMultiPay";
             this.dgvMultiPay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -507,6 +571,14 @@
             // 
             this.dgvLoadTrans.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvLoadTrans.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLoadTrans.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvLoadTrans.Location = new System.Drawing.Point(50, 127);
             this.dgvLoadTrans.Name = "dgvLoadTrans";
             this.dgvLoadTrans.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -569,6 +641,7 @@
             this.btnMultiClear.Text = "CLEAR";
             this.btnMultiClear.TextColor = System.Drawing.Color.White;
             this.btnMultiClear.UseVisualStyleBackColor = true;
+            this.btnMultiClear.Click += new System.EventHandler(this.btnMultiClear_Click);
             // 
             // txtCustID
             // 
@@ -588,40 +661,6 @@
             this.label28.TabIndex = 175;
             this.label28.Text = "Customer ID";
             // 
-            // tabPastPayments
-            // 
-            this.tabPastPayments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
-            this.tabPastPayments.Controls.Add(this.dgvPayments);
-            this.tabPastPayments.Location = new System.Drawing.Point(4, 29);
-            this.tabPastPayments.Name = "tabPastPayments";
-            this.tabPastPayments.Size = new System.Drawing.Size(734, 688);
-            this.tabPastPayments.TabIndex = 3;
-            this.tabPastPayments.Text = "PAST PAYMENTS";
-            // 
-            // errP
-            // 
-            this.errP.ContainerControl = this;
-            // 
-            // lblSICustName
-            // 
-            this.lblSICustName.AutoSize = true;
-            this.lblSICustName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblSICustName.Location = new System.Drawing.Point(148, 83);
-            this.lblSICustName.Name = "lblSICustName";
-            this.lblSICustName.Size = new System.Drawing.Size(160, 24);
-            this.lblSICustName.TabIndex = 209;
-            this.lblSICustName.Text = "Customer Name";
-            // 
-            // dgvPayments
-            // 
-            this.dgvPayments.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPayments.Location = new System.Drawing.Point(6, 9);
-            this.dgvPayments.Name = "dgvPayments";
-            this.dgvPayments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPayments.Size = new System.Drawing.Size(722, 670);
-            this.dgvPayments.TabIndex = 2;
-            // 
             // frmInv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -635,6 +674,9 @@
             this.tabInv.ResumeLayout(false);
             this.tabDisplay.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayTrans)).EndInit();
+            this.tabPastPayments.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errP)).EndInit();
             this.tabMakePay.ResumeLayout(false);
             this.tabMakePay.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBPPayTransSearch)).EndInit();
@@ -646,9 +688,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMultiPay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoadTrans)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearchCustomer)).EndInit();
-            this.tabPastPayments.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).EndInit();
             this.ResumeLayout(false);
 
         }

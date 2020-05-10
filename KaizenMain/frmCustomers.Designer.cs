@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.errP = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabDelete = new System.Windows.Forms.TabPage();
             this.cmbDeleteTitle = new System.Windows.Forms.ComboBox();
@@ -76,8 +75,6 @@
             this.txtEditID = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.btnEditEditCust = new KaizenMain.RoundButton();
-            this.btnEditEmailCust = new KaizenMain.RoundButton();
-            this.btnEditPrintCust = new KaizenMain.RoundButton();
             this.btnEditClearForm = new KaizenMain.RoundButton();
             this.tabAdd = new System.Windows.Forms.TabPage();
             this.cmbAddTitle = new System.Windows.Forms.ComboBox();
@@ -100,8 +97,6 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.btnAddAddCust = new KaizenMain.RoundButton();
-            this.btnAddEmailCust = new KaizenMain.RoundButton();
-            this.btnAddPrintCust = new KaizenMain.RoundButton();
             this.btnAddClearForm = new KaizenMain.RoundButton();
             this.tabSearch = new System.Windows.Forms.TabPage();
             this.cmbSearchTitle = new System.Windows.Forms.ComboBox();
@@ -124,10 +119,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnSearchEmailCust = new KaizenMain.RoundButton();
-            this.btnSearchPrintCust = new KaizenMain.RoundButton();
             this.btnSearchClearForm = new KaizenMain.RoundButton();
             this.tabDisplay = new System.Windows.Forms.TabPage();
+            this.txtSurNameFilter = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.tabCustomer = new System.Windows.Forms.TabControl();
             ((System.ComponentModel.ISupportInitialize)(this.errP)).BeginInit();
@@ -441,8 +436,6 @@
             this.tabEdit.Controls.Add(this.txtEditID);
             this.tabEdit.Controls.Add(this.label37);
             this.tabEdit.Controls.Add(this.btnEditEditCust);
-            this.tabEdit.Controls.Add(this.btnEditEmailCust);
-            this.tabEdit.Controls.Add(this.btnEditPrintCust);
             this.tabEdit.Controls.Add(this.btnEditClearForm);
             this.tabEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabEdit.Location = new System.Drawing.Point(4, 29);
@@ -652,7 +645,7 @@
             this.btnEditEditCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEditEditCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditEditCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditEditCust.Location = new System.Drawing.Point(74, 558);
+            this.btnEditEditCust.Location = new System.Drawing.Point(291, 570);
             this.btnEditEditCust.Name = "btnEditEditCust";
             this.btnEditEditCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
             this.btnEditEditCust.onHoverButtonColor = System.Drawing.Color.White;
@@ -663,50 +656,6 @@
             this.btnEditEditCust.TextColor = System.Drawing.Color.White;
             this.btnEditEditCust.UseVisualStyleBackColor = false;
             this.btnEditEditCust.Click += new System.EventHandler(this.btnEditEdit_Click);
-            // 
-            // btnEditEmailCust
-            // 
-            this.btnEditEmailCust.BackColor = System.Drawing.Color.White;
-            this.btnEditEmailCust.BorderColor = System.Drawing.Color.Silver;
-            this.btnEditEmailCust.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnEditEmailCust.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditEmailCust.FlatAppearance.BorderSize = 0;
-            this.btnEditEmailCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEditEmailCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEditEmailCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditEmailCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditEmailCust.Location = new System.Drawing.Point(280, 558);
-            this.btnEditEmailCust.Name = "btnEditEmailCust";
-            this.btnEditEmailCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditEmailCust.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnEditEmailCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditEmailCust.Size = new System.Drawing.Size(189, 40);
-            this.btnEditEmailCust.TabIndex = 226;
-            this.btnEditEmailCust.Text = "E-MAIL CUSTOMER";
-            this.btnEditEmailCust.TextColor = System.Drawing.Color.White;
-            this.btnEditEmailCust.UseVisualStyleBackColor = false;
-            // 
-            // btnEditPrintCust
-            // 
-            this.btnEditPrintCust.BackColor = System.Drawing.Color.White;
-            this.btnEditPrintCust.BorderColor = System.Drawing.Color.Silver;
-            this.btnEditPrintCust.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnEditPrintCust.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditPrintCust.FlatAppearance.BorderSize = 0;
-            this.btnEditPrintCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEditPrintCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEditPrintCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditPrintCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditPrintCust.Location = new System.Drawing.Point(491, 558);
-            this.btnEditPrintCust.Name = "btnEditPrintCust";
-            this.btnEditPrintCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditPrintCust.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnEditPrintCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnEditPrintCust.Size = new System.Drawing.Size(189, 40);
-            this.btnEditPrintCust.TabIndex = 225;
-            this.btnEditPrintCust.Text = "PRINT CUSTOMER";
-            this.btnEditPrintCust.TextColor = System.Drawing.Color.White;
-            this.btnEditPrintCust.UseVisualStyleBackColor = false;
             // 
             // btnEditClearForm
             // 
@@ -755,8 +704,6 @@
             this.tabAdd.Controls.Add(this.label29);
             this.tabAdd.Controls.Add(this.label30);
             this.tabAdd.Controls.Add(this.btnAddAddCust);
-            this.tabAdd.Controls.Add(this.btnAddEmailCust);
-            this.tabAdd.Controls.Add(this.btnAddPrintCust);
             this.tabAdd.Controls.Add(this.btnAddClearForm);
             this.tabAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -765,7 +712,6 @@
             this.tabAdd.Size = new System.Drawing.Size(734, 688);
             this.tabAdd.TabIndex = 2;
             this.tabAdd.Text = "ADD";
-            this.tabAdd.Click += new System.EventHandler(this.tabAdd_Click);
             // 
             // cmbAddTitle
             // 
@@ -958,7 +904,7 @@
             this.btnAddAddCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAddAddCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAddCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAddCust.Location = new System.Drawing.Point(78, 560);
+            this.btnAddAddCust.Location = new System.Drawing.Point(311, 564);
             this.btnAddAddCust.Name = "btnAddAddCust";
             this.btnAddAddCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
             this.btnAddAddCust.onHoverButtonColor = System.Drawing.Color.White;
@@ -969,50 +915,6 @@
             this.btnAddAddCust.TextColor = System.Drawing.Color.White;
             this.btnAddAddCust.UseVisualStyleBackColor = false;
             this.btnAddAddCust.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnAddEmailCust
-            // 
-            this.btnAddEmailCust.BackColor = System.Drawing.Color.White;
-            this.btnAddEmailCust.BorderColor = System.Drawing.Color.Silver;
-            this.btnAddEmailCust.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnAddEmailCust.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddEmailCust.FlatAppearance.BorderSize = 0;
-            this.btnAddEmailCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAddEmailCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAddEmailCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddEmailCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEmailCust.Location = new System.Drawing.Point(284, 560);
-            this.btnAddEmailCust.Name = "btnAddEmailCust";
-            this.btnAddEmailCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddEmailCust.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnAddEmailCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddEmailCust.Size = new System.Drawing.Size(189, 40);
-            this.btnAddEmailCust.TabIndex = 226;
-            this.btnAddEmailCust.Text = "E-MAIL CUSTOMER";
-            this.btnAddEmailCust.TextColor = System.Drawing.Color.White;
-            this.btnAddEmailCust.UseVisualStyleBackColor = false;
-            // 
-            // btnAddPrintCust
-            // 
-            this.btnAddPrintCust.BackColor = System.Drawing.Color.White;
-            this.btnAddPrintCust.BorderColor = System.Drawing.Color.Silver;
-            this.btnAddPrintCust.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnAddPrintCust.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddPrintCust.FlatAppearance.BorderSize = 0;
-            this.btnAddPrintCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAddPrintCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAddPrintCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddPrintCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPrintCust.Location = new System.Drawing.Point(495, 560);
-            this.btnAddPrintCust.Name = "btnAddPrintCust";
-            this.btnAddPrintCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddPrintCust.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnAddPrintCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnAddPrintCust.Size = new System.Drawing.Size(189, 40);
-            this.btnAddPrintCust.TabIndex = 225;
-            this.btnAddPrintCust.Text = "PRINT CUSTOMER";
-            this.btnAddPrintCust.TextColor = System.Drawing.Color.White;
-            this.btnAddPrintCust.UseVisualStyleBackColor = false;
             // 
             // btnAddClearForm
             // 
@@ -1062,8 +964,6 @@
             this.tabSearch.Controls.Add(this.label10);
             this.tabSearch.Controls.Add(this.label11);
             this.tabSearch.Controls.Add(this.label12);
-            this.tabSearch.Controls.Add(this.btnSearchEmailCust);
-            this.tabSearch.Controls.Add(this.btnSearchPrintCust);
             this.tabSearch.Controls.Add(this.btnSearchClearForm);
             this.tabSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.tabSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -1263,50 +1163,6 @@
             this.label12.TabIndex = 202;
             this.label12.Text = "Customer ID";
             // 
-            // btnSearchEmailCust
-            // 
-            this.btnSearchEmailCust.BackColor = System.Drawing.Color.White;
-            this.btnSearchEmailCust.BorderColor = System.Drawing.Color.Silver;
-            this.btnSearchEmailCust.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnSearchEmailCust.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearchEmailCust.FlatAppearance.BorderSize = 0;
-            this.btnSearchEmailCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnSearchEmailCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnSearchEmailCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchEmailCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchEmailCust.Location = new System.Drawing.Point(177, 555);
-            this.btnSearchEmailCust.Name = "btnSearchEmailCust";
-            this.btnSearchEmailCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnSearchEmailCust.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnSearchEmailCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnSearchEmailCust.Size = new System.Drawing.Size(189, 40);
-            this.btnSearchEmailCust.TabIndex = 223;
-            this.btnSearchEmailCust.Text = "E-MAIL CUSTOMER";
-            this.btnSearchEmailCust.TextColor = System.Drawing.Color.White;
-            this.btnSearchEmailCust.UseVisualStyleBackColor = false;
-            // 
-            // btnSearchPrintCust
-            // 
-            this.btnSearchPrintCust.BackColor = System.Drawing.Color.White;
-            this.btnSearchPrintCust.BorderColor = System.Drawing.Color.Silver;
-            this.btnSearchPrintCust.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.btnSearchPrintCust.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearchPrintCust.FlatAppearance.BorderSize = 0;
-            this.btnSearchPrintCust.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnSearchPrintCust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnSearchPrintCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchPrintCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchPrintCust.Location = new System.Drawing.Point(388, 555);
-            this.btnSearchPrintCust.Name = "btnSearchPrintCust";
-            this.btnSearchPrintCust.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnSearchPrintCust.onHoverButtonColor = System.Drawing.Color.White;
-            this.btnSearchPrintCust.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.btnSearchPrintCust.Size = new System.Drawing.Size(189, 40);
-            this.btnSearchPrintCust.TabIndex = 222;
-            this.btnSearchPrintCust.Text = "PRINT CUSTOMER";
-            this.btnSearchPrintCust.TextColor = System.Drawing.Color.White;
-            this.btnSearchPrintCust.UseVisualStyleBackColor = false;
-            // 
             // btnSearchClearForm
             // 
             this.btnSearchClearForm.BorderColor = System.Drawing.Color.Silver;
@@ -1332,6 +1188,8 @@
             // tabDisplay
             // 
             this.tabDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(119)))), ((int)(((byte)(159)))));
+            this.tabDisplay.Controls.Add(this.txtSurNameFilter);
+            this.tabDisplay.Controls.Add(this.label36);
             this.tabDisplay.Controls.Add(this.dgvCustomers);
             this.tabDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabDisplay.Location = new System.Drawing.Point(4, 29);
@@ -1341,24 +1199,35 @@
             this.tabDisplay.TabIndex = 0;
             this.tabDisplay.Text = "DISPLAY";
             // 
+            // txtSurNameFilter
+            // 
+            this.txtSurNameFilter.Location = new System.Drawing.Point(266, 19);
+            this.txtSurNameFilter.Name = "txtSurNameFilter";
+            this.txtSurNameFilter.Size = new System.Drawing.Size(291, 24);
+            this.txtSurNameFilter.TabIndex = 209;
+            this.txtSurNameFilter.TextChanged += new System.EventHandler(this.txtSurNameFilter_TextChanged);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label36.Location = new System.Drawing.Point(144, 19);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(94, 24);
+            this.label36.TabIndex = 208;
+            this.label36.Text = "Surname";
+            // 
             // dgvCustomers
             // 
             this.dgvCustomers.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Yu Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCustomers.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCustomers.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCustomers.Location = new System.Drawing.Point(6, 6);
+            this.dgvCustomers.Location = new System.Drawing.Point(6, 49);
             this.dgvCustomers.MultiSelect = false;
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomers.Size = new System.Drawing.Size(718, 637);
+            this.dgvCustomers.Size = new System.Drawing.Size(718, 594);
             this.dgvCustomers.TabIndex = 19;
             this.dgvCustomers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellContentClick);
             // 
@@ -1407,6 +1276,7 @@
             this.tabSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconSearchCustID)).EndInit();
             this.tabDisplay.ResumeLayout(false);
+            this.tabDisplay.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.tabCustomer.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1419,8 +1289,6 @@
         private System.Windows.Forms.TabPage tabDisplay;
         private System.Windows.Forms.DataGridView dgvCustomers;
         private System.Windows.Forms.TabPage tabSearch;
-        private RoundButton btnSearchEmailCust;
-        private RoundButton btnSearchPrintCust;
         private RoundButton btnSearchClearForm;
         private System.Windows.Forms.TextBox txtSearchTel;
         private System.Windows.Forms.TextBox txtSearchEmail;
@@ -1442,8 +1310,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TabPage tabAdd;
         private RoundButton btnAddAddCust;
-        private RoundButton btnAddEmailCust;
-        private RoundButton btnAddPrintCust;
         private RoundButton btnAddClearForm;
         private System.Windows.Forms.TextBox txtAddTel;
         private System.Windows.Forms.TextBox txtAddEmail;
@@ -1464,8 +1330,6 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TabPage tabEdit;
         private RoundButton btnEditEditCust;
-        private RoundButton btnEditEmailCust;
-        private RoundButton btnEditPrintCust;
         private RoundButton btnEditClearForm;
         private System.Windows.Forms.TextBox txtEditTel;
         private System.Windows.Forms.Label label13;
@@ -1514,5 +1378,7 @@
         private System.Windows.Forms.ComboBox cmbAddTitle;
         private System.Windows.Forms.ComboBox cmbEditTitle;
         private System.Windows.Forms.ComboBox cmbDeleteTitle;
+        private System.Windows.Forms.TextBox txtSurNameFilter;
+        private System.Windows.Forms.Label label36;
     }
 }

@@ -34,7 +34,7 @@ namespace KaizenMain
         {
 
             bool ok = true;
-            if (number >= 0)
+            if (number <= 0)
             {
                 ok = false;
             }
