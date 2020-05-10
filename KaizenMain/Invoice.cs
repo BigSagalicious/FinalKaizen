@@ -16,14 +16,14 @@ namespace KaizenMain {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport2 : ReportClass {
+    public class Invoice : ReportClass {
         
-        public CrystalReport2() {
+        public Invoice() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport2.rpt";
+                return "Invoice.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace KaizenMain {
         
         public override string FullResourceName {
             get {
-                return "KaizenMain.CrystalReport2.rpt";
+                return "KaizenMain.Invoice.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace KaizenMain {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport2 : Component, ICachedReport {
+    public class CachedInvoice : Component, ICachedReport {
         
-        public CachedCrystalReport2() {
+        public CachedInvoice() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace KaizenMain {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport2 rpt = new CrystalReport2();
+            Invoice rpt = new Invoice();
             rpt.Site = this.Site;
             return rpt;
         }

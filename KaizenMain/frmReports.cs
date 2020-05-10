@@ -66,9 +66,10 @@ namespace KaizenMain
         private void btnCustDets_Click(object sender, EventArgs e)
         {
             var cryRpt = new ReportDocument();
-            cryRpt.Load(@"C:\Users\gareth\Source\Repos\BigSagalicious\FinalKaizen\KaizenMain\CustomerContacts.rpt");
+            cryRpt.Load(@"C:\Users\Adam\Source\Repos\BigSagalicious\FinalKaizen\KaizenMain\CustomerContacts.rpt");
             crystalReportViewer1.ReportSource = cryRpt;
             crystalReportViewer1.Refresh();
+
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -84,7 +85,7 @@ namespace KaizenMain
         private void roundButton1_Click(object sender, EventArgs e)
         {
             var cryRpt = new ReportDocument();
-            cryRpt.Load(@"C:\Users\gareth\Source\Repos\BigSagalicious\FinalKaizen\KaizenMain\Appointment.rpt");
+            cryRpt.Load(@"C:\Users\Adam\Source\Repos\BigSagalicious\FinalKaizen\KaizenMain\Appointment.rpt");
             crystalReportViewer2.ReportSource = cryRpt;
             crystalReportViewer2.Refresh();
         }
@@ -92,9 +93,14 @@ namespace KaizenMain
         private void btnCustPayments_Click(object sender, EventArgs e)
         {
             var cryRpt = new ReportDocument();
-            cryRpt.Load(@"C:\Users\gareth\Source\Repos\BigSagalicious\FinalKaizen\KaizenMain\CustomerPayments.rpt");
+            cryRpt.Load(@"C:\Users\Adam\Source\Repos\BigSagalicious\FinalKaizen\KaizenMain\CustomerPayments.rpt");
             crystalReportViewer3.ReportSource = cryRpt;
             crystalReportViewer3.Refresh();
+        }
+
+        private void crystalReportInvoice_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
