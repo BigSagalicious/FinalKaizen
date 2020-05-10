@@ -75,7 +75,14 @@ namespace KaizenMain
         public int Duration
         {
             get { return duration; }
-            set { duration = value; }
+            set
+            {
+                if (MyValidation.validIntNumber(value))
+                {
+                    duration = value;
+                }
+
+            }
         }
 
         public string AppDesc

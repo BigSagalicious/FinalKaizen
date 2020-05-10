@@ -131,9 +131,13 @@ namespace KaizenMain
                             txtDlSuppAddress.Text = drSupplier["SuppAddress"].ToString();
                             txtDlSuppEmail.Text = drSupplier["SuppEmail"].ToString();
                             txtDlSuppTel.Text = drSupplier["SuppTel"].ToString();
-                            
+                            txtDlCompName.Enabled = false;
+                            txtDlContact.Enabled = false;
+                            txtDlSuppAddress.Enabled = false;
+                            txtDlSuppTel.Enabled = false;
+                            txtDlSuppEmail.Enabled = false;
 
-                   
+
                             break;
                         }
 
@@ -788,6 +792,26 @@ namespace KaizenMain
         private void btnSeSuppClear_Click(object sender, EventArgs e)
         {
             clearSearchForm();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            tabSupplier.SelectedIndex = 4;
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            tabSupplier.SelectedIndex = 3;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            tabSupplier.SelectedIndex = 2;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            tabSupplier.SelectedIndex = 1;
         }
 
         void clearAddForm()
