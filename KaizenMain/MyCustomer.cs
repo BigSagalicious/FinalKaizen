@@ -51,12 +51,12 @@ namespace KaizenMain
             get { return forename; }
             set
             {
-                if (MyValidation.validLength(value, 2, 15) && MyValidation.validForename(value))
+                if (MyValidation.validLength(value, 2, 20) && MyValidation.validForename(value))
                 {
                     forename = MyValidation.firstLetterEachWordToUpper(value);
                 }
                 else
-                    throw new MyException("Forename must be 2-15 letters");
+                    throw new MyException("Forename must be 2-20 letters");
 
             }
 
@@ -67,12 +67,12 @@ namespace KaizenMain
             get { return surname; }
             set
             {
-                if (MyValidation.validLength(value, 2, 15) && MyValidation.validSurname(value))
+                if (MyValidation.validLength(value, 2, 25) && MyValidation.validSurname(value))
                 {
                     surname = MyValidation.firstLetterEachWordToUpper(value);
                 }
                 else
-                    throw new MyException("Forename must be 2-15 letters");
+                    throw new MyException("Surname must be 2-25 letters");
 
             }
 

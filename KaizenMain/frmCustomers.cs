@@ -25,7 +25,24 @@ namespace KaizenMain
             InitializeComponent();
         }
 
+        private void txtSurNameFilter_TextChanged(object sender, EventArgs e)
+        {
+            if(txtSurNameFilter.Text != "")
+            {
 
+                connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+
+                sqlCustomer = @"SELECT* FROM Customer WHERE CustSName like '%" + txtSurNameFilter + "%'";
+                daCustomer = new SqlDataAdapter(sqlCustomer, connStr);
+                cmdBCustomer = new SqlCommandBuilder(daCustomer);
+
+                daCustomer.FillSchema(dsKaizen, SchemaType.Source, "Customer");
+                daCustomer.Fill(dsKaizen, "Customer");
+                dgvCustomers.DataSource = dsKaizen.Tables["Customer"];
+                dgvCustomers.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+                dgvCustomers.Refresh();
+            }
+        }
         private void tabCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedTab = tabCustomer.SelectedIndex;
@@ -237,24 +254,24 @@ namespace KaizenMain
 
             try
             {
-                myCustomer.Surname = txtAddForename.Text.Trim();
-            }
-
-            catch (MyException MyEx)
-            {
-                ok = false;
-                errP.SetError(txtAddForename, MyEx.toString());
-            }
-
-            try
-            {
-                myCustomer.Forename = txtAddSurname.Text.Trim();
+                myCustomer.Surname = txtAddSurname.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
                 errP.SetError(txtAddSurname, MyEx.toString());
+            }
+
+            try
+            {
+                myCustomer.Forename = txtAddForename.Text.Trim();
+            }
+
+            catch (MyException MyEx)
+            {
+                ok = false;
+                errP.SetError(txtAddForename, MyEx.toString());
             }
 
             try
@@ -391,24 +408,24 @@ namespace KaizenMain
 
                 try
                 {
-                    myCustomer.Surname = txtEditForename.Text.Trim();
-                }
-
-                catch (MyException MyEx)
-                {
-                    ok = false;
-                    errP.SetError(txtEditForename, MyEx.toString());
-                }
-
-                try
-                {
-                    myCustomer.Forename = txtEditSurname.Text.Trim();
+                    myCustomer.Surname = txtEditSurname.Text.Trim();
                 }
 
                 catch (MyException MyEx)
                 {
                     ok = false;
                     errP.SetError(txtEditSurname, MyEx.toString());
+                }
+
+                try
+                {
+                    myCustomer.Forename = txtEditForename.Text.Trim();
+                }
+
+                catch (MyException MyEx)
+                {
+                    ok = false;
+                    errP.SetError(txtEditForename, MyEx.toString());
                 }
 
                 try
@@ -770,11 +787,6 @@ namespace KaizenMain
             {
                 MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Not Found!");
             }
-        }
-
-        private void tabAdd_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnDeleteIconSearch_Click(object sender, EventArgs e)

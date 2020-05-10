@@ -239,6 +239,7 @@ namespace KaizenMain
                    
                 }
                 MessageBox.Show("Payment Taken", "Order");
+                populateCustOutStandingTrans(txtCustID, dgvLoadTrans);
             }
         }
         private void tabPayment_SelectedIndexChanged(object sender, EventArgs e)
@@ -295,11 +296,37 @@ namespace KaizenMain
 
                     case 2:
                         {
+
+                            clearMultiPayfrm();
                             break;
 
                         }
                 }
             }
+        }
+
+        private void roundButton15_Click(object sender, EventArgs e)
+        {
+            clearPartPayfrm();
+        }
+
+        private void pBPPayTransSearch_Click(object sender, EventArgs e)
+        {
+            lblPPayInvID.Text = "PY-" + (seperateNumber(findPayID) + 1).ToString();
+            
+            drTrans = dsKaizen.Tables["Trans"].Rows.Find(txtPPayTransID.Text);
+
+            lblPPayTranType.Text = drTrans["TransType"].ToString();
+
+            lblPPayCustNo.Text = drTrans["CustID"].ToString();
+
+            populateCustName(drTrans["CustID"].ToString(), lblPPayCustName);
+
+            lblPPayTot.Text = drTrans["TransTotal"].ToString();
+
+            lblPPayOut.Text = drTrans["BalanceOwed"].ToString();
+
+            populateOrderSum(txtPPayTransID, dgvPPay);
         }
 
         private void btnPPay_Click(object sender, EventArgs e)
@@ -339,6 +366,11 @@ namespace KaizenMain
             {
                 ok = false;
                 errP.SetError(txtBPayTo, MyEx.toString());
+            }
+            catch (FormatException Formex)
+            {
+                ok = false;
+                errP.SetError(txtBPayTo, "Please Enter a vaild number");
             }
 
 
@@ -421,7 +453,7 @@ namespace KaizenMain
                         daTrans.Update(dsKaizen, "Trans");
 
                         MessageBox.Show("Payment Taken", "Order");
-
+                        clearMultiPayfrm();
                     }
                 }
                 catch (Exception ex)
@@ -430,6 +462,11 @@ namespace KaizenMain
                         MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnMultiClear_Click(object sender, EventArgs e)
+        {
+            clearMultiPayfrm();
         }
 
         private void Payments_Load(object sender, EventArgs e)
@@ -525,6 +562,38 @@ namespace KaizenMain
 
                 sqlReader.Close();
             }
+        }
+
+        private void clearPartPayfrm()
+        {
+            lblPPayInvID.Text = "-";
+            txtPPayTransID.Text = "";
+            lblPPayTranType.Text = "-";
+            lblPPayCustNo.Text = "-";
+            lblPPayCustName.Text = "-";
+            lblPPayTot.Text = "-";
+            lblPPayOut.Text = "-";
+            dt.Clear();
+            dgvPPay.DataSource = dt;
+            
+        }
+
+        private void clearMultiPayfrm()
+        {
+            txtCustID.Text = "-";
+
+            lblPayTodayTot.Text = "-";
+
+            lblMultiOutstanding.Text = "-";
+
+            dtOutstanding.Clear();
+
+            dgvLoadTrans.DataSource = dtOutstanding;
+
+            dtPayToday.Clear();
+
+            dgvMultiPay.DataSource = dtPayToday;
+
         }
 
         void getPaysnum()

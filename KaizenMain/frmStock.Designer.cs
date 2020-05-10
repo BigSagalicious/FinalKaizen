@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabStock = new System.Windows.Forms.TabControl();
             this.tabDisplay = new System.Windows.Forms.TabPage();
             this.dgvStock = new System.Windows.Forms.DataGridView();
@@ -43,7 +43,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.cmbSearchProdType = new System.Windows.Forms.ComboBox();
-            this.roundButton17 = new KaizenMain.RoundButton();
             this.btnSearchClear = new KaizenMain.RoundButton();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.txtSearchProdSupplierName = new System.Windows.Forms.TextBox();
@@ -181,14 +180,14 @@
             // 
             this.dgvStock.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Yu Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStock.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStock.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvStock.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvStock.Location = new System.Drawing.Point(6, 6);
             this.dgvStock.MultiSelect = false;
@@ -211,7 +210,6 @@
             this.tabSearch.Controls.Add(this.label6);
             this.tabSearch.Controls.Add(this.label30);
             this.tabSearch.Controls.Add(this.cmbSearchProdType);
-            this.tabSearch.Controls.Add(this.roundButton17);
             this.tabSearch.Controls.Add(this.btnSearchClear);
             this.tabSearch.Controls.Add(this.pictureBox5);
             this.tabSearch.Controls.Add(this.txtSearchProdSupplierName);
@@ -315,27 +313,6 @@
             this.cmbSearchProdType.Name = "cmbSearchProdType";
             this.cmbSearchProdType.Size = new System.Drawing.Size(234, 32);
             this.cmbSearchProdType.TabIndex = 223;
-            // 
-            // roundButton17
-            // 
-            this.roundButton17.BorderColor = System.Drawing.Color.Silver;
-            this.roundButton17.ButtonColor = System.Drawing.Color.SteelBlue;
-            this.roundButton17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton17.FlatAppearance.BorderSize = 0;
-            this.roundButton17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.roundButton17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.roundButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundButton17.Location = new System.Drawing.Point(296, 590);
-            this.roundButton17.Name = "roundButton17";
-            this.roundButton17.onHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton17.onHoverButtonColor = System.Drawing.Color.White;
-            this.roundButton17.onHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(46)))), ((int)(((byte)(65)))));
-            this.roundButton17.Size = new System.Drawing.Size(189, 40);
-            this.roundButton17.TabIndex = 222;
-            this.roundButton17.Text = "PRINT STOCK";
-            this.roundButton17.TextColor = System.Drawing.Color.White;
-            this.roundButton17.UseVisualStyleBackColor = true;
             // 
             // btnSearchClear
             // 
@@ -1305,7 +1282,6 @@
         private System.Windows.Forms.TabPage tabAdd;
         private System.Windows.Forms.TabPage tabEdit;
         private System.Windows.Forms.TabPage tabDelete;
-        private RoundButton roundButton17;
         private RoundButton btnSearchClear;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TextBox txtSearchProdSupplierName;

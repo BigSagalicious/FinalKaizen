@@ -20,7 +20,7 @@ namespace KaizenMain
         String connStr, sqlEquip, sqlTransDQuery, TansDIDString, findTransID, findTrans;
         int selectedTab = 0, ogTransDrows = 0;
         bool equipSelected = false;
-        int equipIDSelected = 0,newTransDeatilsadded = -1;
+        int equipIDSelected = 0,newTransDeatilsadded = -1, currentQty, newQty;
         int IDNumber = 0;
 
         DataTable dt = new DataTable(), EditTransDTable = new DataTable();
@@ -485,10 +485,21 @@ namespace KaizenMain
                             drTransDets["TransID"] = myTransDetails.TransID;
                             drTransDets["StockID"] = myTransDetails.StockID;
                             drTransDets["Qty"] = myTransDetails.Qty;
+                            GetCurrentStock(myTransDetails.StockID);
                             drTransDets["StartDate"] = myTransDetails.StartDate;
                             drTransDets["EndDate"] = myTransDetails.EndDate;
 
                             dsKaizen.Tables["TransDetails"].Rows.Add(drTransDets);
+
+                            newQty = currentQty - myTransDetails.Qty;
+
+                            string constr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+                            SqlConnection con = new SqlConnection(constr);
+                            DataSet ds = new DataSet();
+                            con.Open();
+                            SqlCommand cmd = new SqlCommand(" UPDATE Stock SET QtyInStock = " + newQty + " WHERE StockID ='" + myTransDetails.StockID + "'", con);
+                            cmd.ExecuteNonQuery();
+                            con.Close();
 
                             new SqlCommandBuilder(daTransD);
                             daTransD.Update(dsKaizen, "TransDetails");
@@ -1103,6 +1114,26 @@ namespace KaizenMain
                 }
 
                 seperateNumber(findTransID);
+            }
+        }
+
+        private void GetCurrentStock(string stockID)
+        {
+            using (SqlConnection sqlConnectionEqT = new SqlConnection(@"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true "))
+            {
+                SqlCommand sqlCmd = new SqlCommand("SELECT * FROM Stock", sqlConnectionEqT);
+                sqlConnectionEqT.Open();
+                SqlDataReader sqlReader = sqlCmd.ExecuteReader();
+
+                while (sqlReader.Read())
+                {
+                    if (sqlReader["StockID"].ToString().Equals(stockID))
+                    {
+                        currentQty = (int)sqlReader["QtyInStock"];
+                    }
+                }
+
+                sqlReader.Close();
             }
         }
 

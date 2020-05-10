@@ -16,15 +16,14 @@ namespace KaizenMain {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CustomerPayments : ReportClass
-    {
-
-        public CustomerPayments() {
+    public class Stock : ReportClass {
+        
+        public Stock() {
         }
         
         public override string ResourceName {
             get {
-                return "CustomerPayments.rpt";
+                return "Stock.rpt";
             }
             set {
                 // Do nothing
@@ -42,7 +41,7 @@ namespace KaizenMain {
         
         public override string FullResourceName {
             get {
-                return "KaizenMain.CustomerPayments.rpt";
+                return "KaizenMain.Stock.rpt";
             }
             set {
                 // Do nothing
@@ -59,7 +58,7 @@ namespace KaizenMain {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section PageHeaderSection1 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section2 {
             get {
                 return this.ReportDefinition.Sections[1];
             }
@@ -67,7 +66,7 @@ namespace KaizenMain {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section2 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection1 {
             get {
                 return this.ReportDefinition.Sections[2];
             }
@@ -75,7 +74,7 @@ namespace KaizenMain {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection1 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection2 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -91,7 +90,7 @@ namespace KaizenMain {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection2 {
             get {
                 return this.ReportDefinition.Sections[5];
             }
@@ -99,7 +98,7 @@ namespace KaizenMain {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
             get {
                 return this.ReportDefinition.Sections[6];
             }
@@ -107,22 +106,25 @@ namespace KaizenMain {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
             get {
                 return this.ReportDefinition.Sections[7];
             }
         }
-
-        private void InitializeComponent()
-        {
-
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+            get {
+                return this.ReportDefinition.Sections[8];
+            }
         }
     }
-
+    
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCustomerPayments : Component, ICachedReport {
+    public class CachedStock : Component, ICachedReport {
         
-        public CachedCustomerPayments() {
+        public CachedStock() {
         }
         
         [Browsable(false)]
@@ -159,7 +161,7 @@ namespace KaizenMain {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CustomerPayments rpt = new CustomerPayments();
+            Stock rpt = new Stock();
             rpt.Site = this.Site;
             return rpt;
         }
