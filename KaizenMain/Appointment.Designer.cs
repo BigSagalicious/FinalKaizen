@@ -294,9 +294,9 @@
             this.label11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label11.Location = new System.Drawing.Point(57, 281);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(78, 20);
+            this.label11.Size = new System.Drawing.Size(123, 20);
             this.label11.TabIndex = 20;
-            this.label11.Text = "Duration";
+            this.label11.Text = "Duration (Hrs)";
             // 
             // label12
             // 
@@ -489,9 +489,9 @@
             this.lblEDDuration.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblEDDuration.Location = new System.Drawing.Point(53, 201);
             this.lblEDDuration.Name = "lblEDDuration";
-            this.lblEDDuration.Size = new System.Drawing.Size(78, 20);
+            this.lblEDDuration.Size = new System.Drawing.Size(123, 20);
             this.lblEDDuration.TabIndex = 20;
-            this.lblEDDuration.Text = "Duration";
+            this.lblEDDuration.Text = "Duration (Hrs)";
             // 
             // lblEDTransID
             // 
@@ -631,6 +631,8 @@
             // cmbAStaffID
             // 
             this.cmbAStaffID.FormattingEnabled = true;
+            this.cmbAStaffID.Items.AddRange(new object[] {
+            "Please Choose"});
             this.cmbAStaffID.Location = new System.Drawing.Point(229, 349);
             this.cmbAStaffID.Name = "cmbAStaffID";
             this.cmbAStaffID.Size = new System.Drawing.Size(229, 28);
@@ -682,9 +684,9 @@
             this.lblDuration.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDuration.Location = new System.Drawing.Point(12, 199);
             this.lblDuration.Name = "lblDuration";
-            this.lblDuration.Size = new System.Drawing.Size(78, 20);
+            this.lblDuration.Size = new System.Drawing.Size(123, 20);
             this.lblDuration.TabIndex = 5;
-            this.lblDuration.Text = "Duration";
+            this.lblDuration.Text = "Duration (Hrs)";
             this.lblDuration.Click += new System.EventHandler(this.lblDuration_Click);
             // 
             // lblTransID
@@ -868,9 +870,9 @@
             this.lblSeDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeDuration.Location = new System.Drawing.Point(53, 277);
             this.lblSeDuration.Name = "lblSeDuration";
-            this.lblSeDuration.Size = new System.Drawing.Size(78, 20);
+            this.lblSeDuration.Size = new System.Drawing.Size(118, 20);
             this.lblSeDuration.TabIndex = 20;
-            this.lblSeDuration.Text = "Duration";
+            this.lblSeDuration.Text = "Duration(Hrs)";
             // 
             // lblSeTransID
             // 

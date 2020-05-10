@@ -13,14 +13,16 @@ namespace KaizenMain
 {
     public partial class FrmStaff : Form
     {
-        SqlDataAdapter daStaff,daStaffDetails;
+        SqlDataAdapter daStaff,daStaffDetails,daJr;
         DataSet dsKaizen = new DataSet();
         SqlCommandBuilder cmdBStaff;
         SqlCommand cmbStaffDetails;
+        SqlCommandBuilder cmdJr;
         DataRow drStaff;
+        DataRow drJr;
         DataRow drStaffDetails;
         SqlConnection conn;
-        String connStr, sqlStaff,sqlStaffDetails;
+        String connStr, sqlStaff,sqlStaffDetails,sqlJr;
         int selectedTab = 0;
         bool staffSelected = false;
         int staffIDSelected = 0;
@@ -42,8 +44,8 @@ namespace KaizenMain
         private void Staff_load(object sender, EventArgs e)
         {
             //connStr = @"Data Source = .\ADAM-PC; Initial Catalog = Kaizen;Integrated Security = true ";
-            //connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
-            connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
+            connStr = @"Data Source = .\GARETHSSQL; Initial Catalog = Kaizen;Integrated Security = true ";
+            //connStr = @"Data Source = .; Initial Catalog = Kaizen;Integrated Security = true ";
 
             sqlStaffDetails = @"Select StaffID,StaffSName, StaffFName,StaffSName+','+StaffFName as name,Job, JobDesc, StaffTel, StaffEmail from staff where StaffSName LIKE @Name Order by StaffID";
             conn = new SqlConnection(connStr);
@@ -61,7 +63,14 @@ namespace KaizenMain
             dgvStaff.DataSource = dsKaizen.Tables["Staff"];
             dgvStaff.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
 
-            
+            sqlJr = @"select * from JobRole";
+            daJr = new SqlDataAdapter(sqlJr, connStr);
+            cmdJr = new SqlCommandBuilder(daStaff);
+            daJr.FillSchema(dsKaizen, SchemaType.Source, "JobRole");
+            daJr.Fill(dsKaizen, "JobRole");
+            cmbAJr.DataSource = dsKaizen.Tables["JobRole"];
+            cmbAJr.ValueMember = "Job";
+            cmbAJr.DisplayMember = "Job";
 
             tabStaff.SelectedIndex = 1;
             tabStaff.SelectedIndex = 0;
@@ -333,13 +342,13 @@ namespace KaizenMain
 
             try
             {
-                myStaff.Job = txtAJobR.Text.Trim();
+                myStaff.Job = cmbAJr.Text.Trim();
             }
 
             catch (MyException MyEx)
             {
                 ok = false;
-                errP.SetError(txtAJobR, MyEx.toString());
+                errP.SetError(cmbAJr, MyEx.toString());
             }
 
             try
@@ -403,7 +412,7 @@ namespace KaizenMain
 
         private void btnEdEdit_Click(object sender, EventArgs e)
         {
-            if (btnEdEdit.Text == "EDIT")
+            if (btnEdEdit.Text.Trim() == "EDIT")
             {
 
                 enableEditTxtboxes();
@@ -507,8 +516,8 @@ namespace KaizenMain
                         drStaff.EndEdit();
                         daStaff.Update(dsKaizen, "Staff");
 
-                        btnEdEdit.Text = "EDIT ";
-                        disableEditTxtboxes();
+                        btnEdEdit.Text = "EDIT";
+                        
                         MessageBox.Show("Employee Details Updated", "Staff");
 
                         
@@ -516,8 +525,8 @@ namespace KaizenMain
                         
                         tabStaff.SelectedIndex = 0;
 
+                        disableEditTxtboxes();
 
-                        
                     }
 
                 }
@@ -537,7 +546,7 @@ namespace KaizenMain
             txtAEmail.Clear();
             txtAForeN.Clear();
             txtAJobDesc.Clear();
-            txtAJobR.Clear();
+            cmbAJr.SelectedIndex=0;
             txtASurN.Clear();
             txtATel.Clear();
 
@@ -563,9 +572,10 @@ namespace KaizenMain
                     daStaff.Update(dsKaizen, "Staff");
                     MessageBox.Show("Details Removed for " + tempName);
                     //clearDeleteForm();
-
+                    IDNumber += 1;
+                    tabStaff.SelectedIndex = 0;
                 }
-
+                
             }
         }
 
@@ -609,6 +619,18 @@ namespace KaizenMain
         private void btnDisDel_Click(object sender, EventArgs e)
         {
             tabStaff.SelectedIndex = 4;
+            txtDeEmail.Enabled = false;
+            txtDeForeN.Enabled = false;
+            txtDeJobR.Enabled = false;
+            txtDeStaffID.Enabled = false;
+            txtDeSurN.Enabled = false;
+            txtDeTel.Enabled = false;
+            txtDeJobDesc.Enabled = false;
+        }
+
+        private void txtSearchDisStaff_TextChanged(object sender, EventArgs e)
+        {
+            
         }
 
         private void enableEditTxtboxes()

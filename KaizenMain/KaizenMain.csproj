@@ -67,10 +67,10 @@
     <Compile Include="Appointment.Designer.cs">
       <DependentUpon>Appointment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Invoice.cs">
+    <Compile Include="AppsByMonth.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Invoice.rpt</DependentUpon>
+      <DependentUpon>AppsByMonth.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="MyPayment.cs" />
@@ -193,18 +193,12 @@
     <Compile Include="RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Stock.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Stock.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <EmbeddedResource Include="Appointment.resx">
       <DependentUpon>Appointment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Appointment.rpt">
+    <EmbeddedResource Include="AppsByMonth.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Appointment1.cs</LastGenOutput>
+      <LastGenOutput>AppsByMonth.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -213,9 +207,6 @@
     <EmbeddedResource Include="CustomerContacts.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CustomerContacts.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomerPayments.resx">
-      <DependentUpon>CustomerPayments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerPayments.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -254,10 +245,6 @@
     <EmbeddedResource Include="frmSuppliers.resx">
       <DependentUpon>frmSuppliers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Invoice.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Invoice.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Payment.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Payment.cs</LastGenOutput>
@@ -279,10 +266,6 @@
     <EmbeddedResource Include="Purchase.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Purchase.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Stock.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Stock.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
