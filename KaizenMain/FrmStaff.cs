@@ -157,13 +157,9 @@ namespace KaizenMain
 
                                 try
                                 {
-                                    
                                    
 
                                     dsKaizen.Tables["Staff"].Clear();
-                                    
-
-                                   
 
 
                                 }
@@ -455,8 +451,6 @@ namespace KaizenMain
                     ok = false;
                     errP.SetError(txtEdForeN, MyEx.toString());
                 }
-
-
                 try
                 {
                     myStaff.TelNo = txtEdTel.Text.Trim();
@@ -467,7 +461,6 @@ namespace KaizenMain
                     ok = false;
                     errP.SetError(txtEdTel, MyEx.toString());
                 }
-
                 try
                 {
                     myStaff.Job = txtEdJobR.Text.Trim();
